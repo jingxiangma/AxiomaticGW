@@ -46,9 +46,9 @@ theorem tracePairing_apply {R A : Type*} [CommRing R] [CommRing A]
 /-- A commutative Frobenius algebra, presented by its Frobenius functional.
 
 There are only two fields: the functional and perfectness of its trace
-pairing.  Notice that finite-freeness is not built into this structure.  It is
-required later only for constructions, such as the copairing, that use a
-finite tensor--Hom equivalence. -/
+pairing.  Notice that the assumption that `A` is finite free over `R` is not
+built into this structure.  It is required later only for constructions, such
+as the copairing, that use a finite tensor--Hom equivalence. -/
 structure CommFrobeniusAlgebra (R A : Type*) [CommRing R] [CommRing A]
     [Algebra R A] where
   counit : A →ₗ[R] R
