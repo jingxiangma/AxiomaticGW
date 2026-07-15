@@ -1,36 +1,22 @@
 # AxiomaticGW
 
-Lean formalization of the algebraic foundations of axiomatic Gromov--Witten
-theory.
+Lean formalization of the algebraic foundations of axiomatic Gromov--Witten theory.
 
-The repository is the home of the full project, but development proceeds in
-small verified milestones.  The current milestone is the finite-free,
-commutative Frobenius-algebra layer needed for topological field theories and
-CohFT gluing.
+The repository is the home of the full project, but development proceeds in small verified milestones. The current milestone is the finite-free, commutative Frobenius-algebra layer needed for topological field theories and CohFT gluing.
 
 ## Final scope
 
-The endpoint is an **all-genus axiomatic Gromov--Witten theory**, resolved by
-curve class and equipped with the complete descendant package.  In particular,
-the final theory is intended to support
+The endpoint is an **all-genus axiomatic Gromov--Witten theory**, resolved by curve class and equipped with the complete descendant package. In particular, the final theory is intended to support
 
 - primary GW classes for every stable `(g, S)` and every effective curve class;
-- separating and nonseparating gluing, the flat unit, grading, virtual
-  dimension, effectivity, and the divisor axiom;
-- descendant insertions indexed by arbitrary powers of stable-map
-  `psi`-classes;
-- ancestor insertions using stable-curve `psi`-classes, together with the
-  descendant--ancestor comparison;
+- separating and nonseparating gluing, the flat unit, grading, virtual dimension, effectivity, and the divisor axiom;
+- descendant insertions indexed by arbitrary powers of stable-map `psi`-classes;
+- ancestor insertions using stable-curve `psi`-classes, together with the descendant--ancestor comparison;
 - Novikov completion and genus expansion;
 - all-genus descendant and ancestor potentials;
-- string, dilaton, divisor, splitting, genus-reduction, and tautological
-  relations whenever the required abstract geometric operations are present.
+- string, dilaton, divisor, splitting, genus-reduction, and tautological relations whenever the required abstract geometric operations are present.
 
-A bare CohFT already contains all stable genera.  The genus-zero API is only a
-derived restriction used to prove associativity and WDVV.  Descendants are not
-fields of the minimal CohFT structure: they require `psi`-classes,
-pushforwards, integration, and projection formulas.  Moreover, stable-map
-descendants and stable-curve ancestors are kept distinct.
+A bare CohFT already contains all stable genera. The genus-zero API is only a derived restriction used to prove associativity and WDVV. Descendants are not fields of the minimal CohFT structure: they require `psi`-classes, pushforwards, integration, and projection formulas. Moreover, stable-map descendants and stable-curve ancestors are kept distinct.
 
 ## Architecture
 
@@ -117,9 +103,7 @@ AxiomaticGW/
     ProjectiveLine.lean
 ```
 
-Only modules with implemented content are created.  The tree above records
-ownership and dependency boundaries without committing prematurely to Lean
-interfaces that have not yet been tested.
+Only modules with implemented content are created. The tree above records ownership and dependency boundaries without committing prematurely to Lean interfaces that have not yet been tested.
 
 The essential formalization chain is
 
@@ -141,9 +125,7 @@ The current public API follows the chain
 counit -> trace pairing -> perfect duality -> copairing -> handle element.
 ```
 
-The core definitions are basis-free.  `CommFrobeniusAlgebra` is an explicit
-object rather than a typeclass, since a fixed algebra can admit more than one
-Frobenius functional.
+The core definitions are basis-free. `CommFrobeniusAlgebra` is an explicit object rather than a typeclass, since a fixed algebra can admit more than one Frobenius functional.
 
 ## Notes
 
