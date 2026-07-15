@@ -145,6 +145,10 @@ The core definitions are basis-free.  `CommFrobeniusAlgebra` is an explicit
 object rather than a typeclass, since a fixed algebra can admit more than one
 Frobenius functional.
 
+## Notes
+
+- [Frobenius algebras, 2D TFTs, and CohFTs](notes/FrobeniusAlgebra.md)
+
 Build the project with:
 
 ```bash
