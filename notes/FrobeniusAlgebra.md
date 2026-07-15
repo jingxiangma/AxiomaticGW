@@ -387,22 +387,82 @@ Novikov-valued CohFT. Descendants require additional $\psi$-class and
 integration data and are not part of the minimal Frobenius or CohFT
 definitions.
 
-## 9. Correspondence with the current Lean code
+## 9. Current formalization status
 
-| Mathematics | Lean declaration |
-| --- | --- |
-| symmetric perfect metric | `AxiomaticGW.SymmetricPerfectPairing` |
-| $\eta^\sharp:V\simeq V^\vee$ | `SymmetricPerfectPairing.toDual` |
-| $V\otimes V\simeq\operatorname{End}(V)$ | `SymmetricPerfectPairing.tensorEndEquiv` |
-| inverse metric $C_\eta$ | `SymmetricPerfectPairing.copairing` |
-| contraction identity | `SymmetricPerfectPairing.copairing_contract` |
-| trace pairing $\epsilon(ab)$ | `AxiomaticGW.tracePairing` |
-| commutative Frobenius algebra | `AxiomaticGW.CommFrobeniusAlgebra` |
-| invariant-pairing constructor | `CommFrobeniusAlgebra.ofInvariantPairing` |
-| Casimir tensor | `CommFrobeniusAlgebra.casimir` |
-| handle element | `CommFrobeniusAlgebra.handleElement` |
+The mathematical discussion above is broader than the Lean development that
+currently exists. This section records the exact boundary. A declaration is
+listed as formalized only when it is present in the repository, compiles, and
+contains no `sorry`.
 
-The next algebraic additions should be symmetry of the copairing,
-comultiplication, the coalgebra laws, and the Frobenius relation. After that,
-the first TFT milestone can formalize the correlators
-$\epsilon((\prod_i a_i)E^g)$ and their gluing identities.
+### 9.1 Formalized now
+
+| Mathematical content | Lean declaration | Status |
+| --- | --- | --- |
+| bundled symmetric perfect pairing | `AxiomaticGW.SymmetricPerfectPairing` | defined |
+| metric map $\eta^\sharp:V\simeq V^\vee$ | `SymmetricPerfectPairing.toDual` | defined |
+| evaluation formula for $\eta^\sharp$ | `SymmetricPerfectPairing.toDual_apply` | proved |
+| canonical equivalence $V\otimes V\simeq\operatorname{End}(V)$ | `SymmetricPerfectPairing.tensorEndEquiv` | defined |
+| pure-tensor contraction formula | `SymmetricPerfectPairing.tensorEndEquiv_tmul` | proved |
+| basis-free copairing $C_\eta$ | `SymmetricPerfectPairing.copairing` | defined |
+| $C_\eta$ contracts to the identity | `SymmetricPerfectPairing.tensorEndEquiv_copairing` | proved |
+| pointwise contraction identity | `SymmetricPerfectPairing.copairing_contract` | proved |
+| trace pairing $\eta(a,b)=\epsilon(ab)$ | `AxiomaticGW.tracePairing` | defined and evaluated |
+| commutative Frobenius algebra via a counit and perfect trace pairing | `AxiomaticGW.CommFrobeniusAlgebra` | defined |
+| equality determined by the counit | `CommFrobeniusAlgebra.ext` | proved |
+| derived symmetric perfect pairing | `CommFrobeniusAlgebra.pairing` | defined |
+| symmetry and Frobenius invariance of the trace pairing | `pairing_isSymm`, `pairing_assoc` | proved |
+| construction from an invariant perfect pairing | `CommFrobeniusAlgebra.ofInvariantPairing` | defined |
+| recovery of the supplied invariant pairing | `pairing_ofInvariantPairing` | proved |
+| Casimir tensor of a Frobenius algebra | `CommFrobeniusAlgebra.casimir` | defined |
+| contraction characterization of the Casimir tensor | `tensorEndEquiv_casimir` | proved |
+| handle element $E=\mu(C_\eta)$ | `CommFrobeniusAlgebra.handleElement` | defined |
+| base-ring example $A=R$ | `CommFrobeniusAlgebra.baseRing` | constructed |
+| $C_\eta=1\otimes1$ and $E=1$ for the base ring | `baseRing_casimir`, `baseRing_handleElement` | proved |
+
+The current implementation works over a commutative ring, with a commutative
+algebra. Finite-free hypotheses are introduced only for the tensor--endomorphism
+equivalence, copairing, Casimir tensor, and handle element.
+
+### 9.2 Discussed here but not yet formalized
+
+The following statements and constructions appear in these notes as
+mathematical motivation, but they do **not** yet have completed Lean proofs in
+this repository:
+
+- symmetry of the copairing,
+  $\tau(C_\eta)=C_\eta$;
+- the comultiplication
+  $\Delta(a)=(a\otimes1)C_\eta$;
+- coassociativity, cocommutativity, and the two counit identities;
+- the Frobenius relation between multiplication and comultiplication;
+- interoperability with mathlib's `Coalgebra` structure;
+- the product-algebra and dual-number examples;
+- morphisms, isomorphisms, transport, tensor products, and base change of
+  Frobenius algebras;
+- finite-projective modules without a chosen finite-free instance;
+- graded, super, or noncommutative Frobenius algebras;
+- the oriented bordism category and the classification of oriented 2D TFTs;
+- a bundled 2D TFT or topological CohFT;
+- the correlator formula
+  $\omega_{g,n}(a_1,\ldots,a_n)=\epsilon(a_1\cdots a_nE^g)$ and its gluing
+  proofs;
+- the extraction of a Frobenius algebra from an all-genus CohFT;
+- moduli-of-curves interfaces, stable graphs, general CohFTs, descendants,
+  Novikov coefficients, or axiomatic Gromov--Witten theory.
+
+### 9.3 Next formalization boundary
+
+The next algebraic milestone is
+
+$$
+\text{copairing symmetry}
+\longrightarrow
+\text{comultiplication}
+\longrightarrow
+\text{coalgebra laws}
+\longrightarrow
+\text{Frobenius relation}.
+$$
+
+Only after that layer is stable will the project define the associated
+topological field theory and prove the genus-$g$ correlator gluing identities.
