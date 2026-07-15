@@ -1,25 +1,15 @@
 # Frobenius algebras, 2D topological field theory, and CohFTs
 
-These notes record the mathematical conventions behind the first
-formalization milestone.  They also separate two related statements:
+These notes record the mathematical conventions behind the first formalization milestone.  They also separate two related statements:
 
-1. commutative Frobenius algebras are equivalent to oriented two-dimensional
-   topological field theories;
-2. a commutative Frobenius algebra determines a topological, degree-zero
-   CohFT, while a general CohFT contains strictly more information.
+1. commutative Frobenius algebras are equivalent to oriented two-dimensional topological field theories;
+2. a commutative Frobenius algebra determines a topological, degree-zero CohFT, while a general CohFT contains strictly more information.
 
-The abbreviation **2D TFT** is standard.  The phrase "2D CohFT" is less
-standard: a CohFT is already indexed by moduli spaces of curves of every
-genus.  When the CohFT takes values only in cohomological degree zero, we call
-it a **topological CohFT**.
+The abbreviation **2D TFT** is standard.  The phrase "2D CohFT" is less standard: a CohFT is already indexed by moduli spaces of curves of every genus.  When the CohFT takes values only in cohomological degree zero, we call it a **topological CohFT**.
 
 ## 1. Algebraic setting
 
-Let $R$ be a commutative ring and let $A$ be a commutative, associative,
-unital $R$-algebra. For the constructions involving duals and tensor
-products, we assume that $A$ is finite free over $R$. More generally, finite
-projective modules are the natural setting, but finite free modules have a
-better-supported initial Lean API.
+Let $R$ be a commutative ring and let $A$ be a commutative, associative, unital $R$-algebra. For the constructions involving duals and tensor products, we assume that $A$ is finite free over $R$. More generally, finite projective modules are the natural setting, but finite free modules have a better-supported initial Lean API.
 
 Write
 
@@ -41,8 +31,7 @@ $$
 
 is perfect.
 
-The map $\epsilon$ is variously called the Frobenius functional, trace, or
-counit.  We use **counit**, anticipating the associated coalgebra structure.
+The map $\epsilon$ is variously called the Frobenius functional, trace, or counit.  We use **counit**, anticipating the associated coalgebra structure.
 
 ## 2. Perfectness
 
@@ -54,20 +43,15 @@ $$
 \eta^\sharp(a)(b)=\eta(a,b).
 $$
 
-Perfectness means that this map is an isomorphism.  In the symmetric setting,
-the map induced from the other argument is then the same up to the canonical
-flip.  Mathlib's `LinearMap.IsPerfPair` records bijectivity in both arguments.
+Perfectness means that this map is an isomorphism.  In the symmetric setting, the map induced from the other argument is then the same up to the canonical flip.  Mathlib's `LinearMap.IsPerfPair` records bijectivity in both arguments.
 
-Over a field, for a finite-dimensional vector space, perfectness is equivalent
-to ordinary nondegeneracy:
+Over a field, for a finite-dimensional vector space, perfectness is equivalent to ordinary nondegeneracy:
 
 $$
 \eta(a,b)=0\ \text{for every }b \quad\Longrightarrow\quad a=0.
 $$
 
-Over a general commutative ring, injectivity is not sufficient.  The gluing
-formulas used later require an actual inverse to $\eta^\sharp$, so perfectness is
-the correct integral notion.
+Over a general commutative ring, injectivity is not sufficient.  The gluing formulas used later require an actual inverse to $\eta^\sharp$, so perfectness is the correct integral notion.
 
 ## 3. Symmetry and Frobenius invariance
 
@@ -85,15 +69,13 @@ $$
 =\eta(a,bc).
 $$
 
-Equivalently, multiplication by any element is self-adjoint with respect to
-$\eta$:
+Equivalently, multiplication by any element is self-adjoint with respect to $\eta$:
 
 $$
 \eta(ab,c)=\eta(b,ac).
 $$
 
-One can instead begin with a perfect invariant bilinear form $\eta$ and recover
-the counit by
+One can instead begin with a perfect invariant bilinear form $\eta$ and recover the counit by
 
 $$
 \epsilon(a)=\eta(a,1).
@@ -105,8 +87,7 @@ $$
 \epsilon(ab)=\eta(ab,1)=\eta(a,b).
 $$
 
-Thus the counit formulation and the invariant-pairing formulation are
-equivalent.
+Thus the counit formulation and the invariant-pairing formulation are equivalent.
 
 ## 4. The copairing or Casimir tensor
 
@@ -120,8 +101,7 @@ A^\vee\otimes_R A
 \operatorname{End}_R(A).
 $$
 
-The **copairing**, **inverse metric**, or **Casimir tensor** is the inverse image
-of the identity endomorphism:
+The **copairing**, **inverse metric**, or **Casimir tensor** is the inverse image of the identity endomorphism:
 
 $$
 C_\eta\in A\otimes_R A,
@@ -149,13 +129,11 @@ $$
 \tau(a\otimes b)=b\otimes a.
 $$
 
-This identity will later ensure that contracting an internal edge does not
-depend on an ordering of its two half-edges.
+This identity will later ensure that contracting an internal edge does not depend on an ordering of its two half-edges.
 
 ## 5. Comultiplication and the handle element
 
-The Frobenius pairing makes multiplication and comultiplication adjoint.  The
-comultiplication may be written using the Casimir tensor as
+The Frobenius pairing makes multiplication and comultiplication adjoint.  The comultiplication may be written using the Casimir tensor as
 
 $$
 \Delta(a)=(a\otimes 1)C_\eta=(1\otimes a)C_\eta.
@@ -169,8 +147,7 @@ $$
 (\mathrm{id}\otimes\epsilon)\Delta=\mathrm{id},
 $$
 
-and is coassociative.  In the commutative case it is cocommutative.  The
-Frobenius relation can be expressed as
+and is coassociative.  In the commutative case it is cocommutative.  The Frobenius relation can be expressed as
 
 $$
 \Delta(ab)
@@ -184,8 +161,7 @@ $$
 E=\mu(C_\eta)=\sum_i u_iv_i.
 $$
 
-Adding one handle to a surface corresponds algebraically to multiplication by
-$E$.
+Adding one handle to a surface corresponds algebraically to multiplication by $E$.
 
 ## 6. Examples
 
@@ -258,8 +234,7 @@ Z:\operatorname{Bord}^{\mathrm{or}}_2
 \longrightarrow R\text{-}\operatorname{Mod},
 $$
 
-where objects are closed oriented one-manifolds and morphisms are oriented
-two-dimensional bordisms.
+where objects are closed oriented one-manifolds and morphisms are oriented two-dimensional bordisms.
 
 The value of the TFT on the positively oriented circle is the state space
 
@@ -277,10 +252,7 @@ Basic bordisms give the Frobenius operations:
 | reversed pair of pants | comultiplication $\Delta:A\to A\otimes A$ |
 | cylinder | identity of $A$ |
 
-The relations between decompositions of surfaces give associativity,
-commutativity, the unit and counit identities, and the Frobenius relation.
-Conversely, these algebraic identities imply that the value assigned using a
-pair-of-pants decomposition is independent of the chosen decomposition.
+The relations between decompositions of surfaces give associativity, commutativity, the unit and counit identities, and the Frobenius relation. Conversely, these algebraic identities imply that the value assigned using a pair-of-pants decomposition is independent of the chosen decomposition.
 
 This yields the classification theorem:
 
@@ -292,8 +264,7 @@ $$
 }
 $$
 
-At the level of correlators, a connected genus-$g$ surface with $n$ incoming
-circles defines
+At the level of correlators, a connected genus-$g$ surface with $n$ incoming circles defines
 
 $$
 \omega_{g,n}(a_1,\ldots,a_n)
@@ -309,8 +280,7 @@ $$
 
 ## 8. Relationship with CohFTs
 
-A unital CohFT consists of a state space $(V,\eta,\mathbf 1)$ and, for every stable
-pair
+A unital CohFT consists of a state space $(V,\eta,\mathbf 1)$ and, for every stable pair
 
 $$
 2g-2+n>0,
@@ -324,9 +294,7 @@ $$
 H^\bullet(\overline{\mathcal M}_{g,n};R).
 $$
 
-These maps satisfy symmetric-group equivariance, separating and
-nonseparating gluing, and the flat-unit axiom.  At every node, the two new
-marked points are contracted using the inverse metric $C_\eta$.
+These maps satisfy symmetric-group equivariance, separating and nonseparating gluing, and the flat-unit axiom.  At every node, the two new marked points are contracted using the inverse metric $C_\eta$.
 
 Because
 
@@ -340,10 +308,7 @@ $$
 \eta(a*b,c)=\Omega_{0,3}(a,b,c).
 $$
 
-The CohFT axioms imply that this product is commutative, unital, and invariant.
-Associativity follows from the two boundary decompositions of
-$\overline{\mathcal M}_{0,4}$. Thus every unital CohFT has an underlying commutative Frobenius
-algebra.
+The CohFT axioms imply that this product is commutative, unital, and invariant. Associativity follows from the two boundary decompositions of $\overline{\mathcal M}_{0,4}$. Thus every unital CohFT has an underlying commutative Frobenius algebra.
 
 Conversely, a commutative Frobenius algebra defines a topological CohFT by
 
@@ -354,9 +319,7 @@ $$
 \in H^0(\overline{\mathcal M}_{g,n};R).
 $$
 
-This is the CohFT version of the associated 2D TFT.  However, a general CohFT
-can have positive-cohomological-degree classes, and these are not determined
-by the Frobenius algebra.  The precise relationship is therefore
+This is the CohFT version of the associated 2D TFT.  However, a general CohFT can have positive-cohomological-degree classes, and these are not determined by the Frobenius algebra.  The precise relationship is therefore
 
 $$
 \boxed{
@@ -380,19 +343,11 @@ $$
 
 is not reversible without discarding the higher-degree information.
 
-For Gromov--Witten theory there is one further distinction.  The individual
-curve-class terms $\Omega_{g,n,\beta}$ form a curve-class-resolved theory. Only
-after summing them with Novikov weights does one obtain an ordinary
-Novikov-valued CohFT. Descendants require additional $\psi$-class and
-integration data and are not part of the minimal Frobenius or CohFT
-definitions.
+For Gromov--Witten theory there is one further distinction.  The individual curve-class terms $\Omega_{g,n,\beta}$ form a curve-class-resolved theory. Only after summing them with Novikov weights does one obtain an ordinary Novikov-valued CohFT. Descendants require additional $\psi$-class and integration data and are not part of the minimal Frobenius or CohFT definitions.
 
 ## 9. Current formalization status
 
-The mathematical discussion above is broader than the Lean development that
-currently exists. This section records the exact boundary. A declaration is
-listed as formalized only when it is present in the repository, compiles, and
-contains no `sorry`.
+The mathematical discussion above is broader than the Lean development that currently exists. This section records the exact boundary. A declaration is listed as formalized only when it is present in the repository, compiles, and contains no `sorry`.
 
 ### 9.1 Formalized now
 
@@ -419,36 +374,26 @@ contains no `sorry`.
 | base-ring example $A=R$ | `CommFrobeniusAlgebra.baseRing` | constructed |
 | $C_\eta=1\otimes1$ and $E=1$ for the base ring | `baseRing_casimir`, `baseRing_handleElement` | proved |
 
-The current implementation works over a commutative ring, with a commutative
-algebra. Finite-free hypotheses are introduced only for the tensor--endomorphism
-equivalence, copairing, Casimir tensor, and handle element.
+The current implementation works over a commutative ring, with a commutative algebra. Finite-free hypotheses are introduced only for the tensor--endomorphism equivalence, copairing, Casimir tensor, and handle element.
 
 ### 9.2 Discussed here but not yet formalized
 
-The following statements and constructions appear in these notes as
-mathematical motivation, but they do **not** yet have completed Lean proofs in
-this repository:
+The following statements and constructions appear in these notes as mathematical motivation, but they do **not** yet have completed Lean proofs in this repository:
 
-- symmetry of the copairing,
-  $\tau(C_\eta)=C_\eta$;
-- the comultiplication
-  $\Delta(a)=(a\otimes1)C_\eta$;
+- symmetry of the copairing, $\tau(C_\eta)=C_\eta$;
+- the comultiplication $\Delta(a)=(a\otimes1)C_\eta$;
 - coassociativity, cocommutativity, and the two counit identities;
 - the Frobenius relation between multiplication and comultiplication;
 - interoperability with mathlib's `Coalgebra` structure;
 - the product-algebra and dual-number examples;
-- morphisms, isomorphisms, transport, tensor products, and base change of
-  Frobenius algebras;
+- morphisms, isomorphisms, transport, tensor products, and base change of Frobenius algebras;
 - finite-projective modules without a chosen finite-free instance;
 - graded, super, or noncommutative Frobenius algebras;
 - the oriented bordism category and the classification of oriented 2D TFTs;
 - a bundled 2D TFT or topological CohFT;
-- the correlator formula
-  $\omega_{g,n}(a_1,\ldots,a_n)=\epsilon(a_1\cdots a_nE^g)$ and its gluing
-  proofs;
+- the correlator formula $\omega_{g,n}(a_1,\ldots,a_n)=\epsilon(a_1\cdots a_nE^g)$ and its gluing proofs;
 - the extraction of a Frobenius algebra from an all-genus CohFT;
-- moduli-of-curves interfaces, stable graphs, general CohFTs, descendants,
-  Novikov coefficients, or axiomatic Gromov--Witten theory.
+- moduli-of-curves interfaces, stable graphs, general CohFTs, descendants, Novikov coefficients, or axiomatic Gromov--Witten theory.
 
 ### 9.3 Next formalization boundary
 
@@ -464,5 +409,4 @@ $$
 \text{Frobenius relation}.
 $$
 
-Only after that layer is stable will the project define the associated
-topological field theory and prove the genus-$g$ correlator gluing identities.
+Only after that layer is stable will the project define the associated topological field theory and prove the genus-$g$ correlator gluing identities.
