@@ -6,4 +6,10 @@ Authors: JMA
 import AxiomaticGW.Frobenius.Constructions
 import AxiomaticGW.Frobenius.Examples
 
-/-! Public imports for the AxiomaticGW project. -/
+/-!
+# Public entry point
+
+Importing `AxiomaticGW` makes the currently implemented public API available.
+The individual files remain separately importable, which is useful when a
+later module needs only a small part of the project.
+-/
