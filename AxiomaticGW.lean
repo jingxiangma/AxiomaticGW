@@ -6,6 +6,13 @@ Authors: JMA
 module
 
 public import AxiomaticGW.Frobenius.Examples
+public import AxiomaticGW.CohFT.Topological
+public import AxiomaticGW.Linear.Contraction
+public import AxiomaticGW.TFT.Correlator
+public import AxiomaticGW.TFT.Classification
+public import AxiomaticGW.TFT.Examples
+public import AxiomaticGW.TFT.Frobenius
+public import AxiomaticGW.TFT.Sewing
 
 /-!
 # Public entry point

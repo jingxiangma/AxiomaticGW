@@ -383,6 +383,21 @@ The mathematical discussion above is broader than the Lean development that curr
 | $C_\eta=1\otimes1$ and $E=1$ for the base ring | `baseRing_casimir`, `baseRing_handleElement` | proved |
 | product example $A=R\times R$ | `CommFrobeniusAlgebra.productAlgebra` | constructed |
 | pairing, Casimir, comultiplication, and handle element for $R\times R$ | `productAlgebra_pairing_apply`, `productAlgebra_casimir`, `productAlgebra_comul`, `productAlgebra_handleElement` | proved |
+| finite-labelled multilinear multiplication | `TFT.finiteProduct` | defined with relabelling and disjoint-union laws |
+| all-genus Frobenius correlators | `CommFrobeniusAlgebra.correlator` | defined and normalized in arities zero through three |
+| named self- and pair-contraction | `SymmetricPerfectPairing.selfContract`, `pairContract` | defined basis-free |
+| independence of node ordering | `contractTwo_domDomCongr_swap` | proved |
+| Frobenius sewing identity | `CommFrobeniusAlgebra.sewing_identity` | proved |
+| nonseparating gluing | `selfContract_correlator` | proved |
+| separating gluing | `pairContract_correlator` | proved |
+| bundled algebraic 2D TFT correlators | `TopologicalCorrelatorTheory` | defined |
+| Frobenius algebra to correlator theory | `toTopologicalCorrelatorTheory` | constructed |
+| stable arity predicate | `StableArity` | defined with gluing lemmas |
+| scalar-valued topological CohFT | `TopologicalCohFT` | defined |
+| stable restriction of a correlator theory | `TopologicalCorrelatorTheory.toTopologicalCohFT` | constructed |
+| counit and three-point product extraction | `TopologicalCorrelatorTheory.counit`, `product` | defined |
+| recovery of the original Frobenius product | `toTopologicalCorrelatorTheory_product` | proved |
+| fixed-algebra Frobenius round trip | `toCommFrobeniusAlgebra_toTopologicalCorrelatorTheory` | proved |
 
 The current implementation works over a commutative ring, with a commutative algebra. Finite-free hypotheses are introduced for the tensor--endomorphism equivalence and therefore for the copairing, Casimir tensor, comultiplication, coalgebra laws, and handle element.
 
@@ -394,24 +409,23 @@ The following statements and constructions appear in these notes as mathematical
 - morphisms, isomorphisms, transport, tensor products, and base change of Frobenius algebras;
 - finite-projective modules without a chosen finite-free instance;
 - graded, super, or noncommutative Frobenius algebras;
-- the oriented bordism category and the classification of oriented 2D TFTs;
-- a bundled 2D TFT or topological CohFT;
-- the correlator formula $\omega_{g,n}(a_1,\ldots,a_n)=\epsilon(a_1\cdots a_nE^g)$ and its gluing proofs;
+- the geometric oriented bordism category and its symmetric-monoidal-functor formulation of 2D TFTs;
+- a full classification theorem that installs the extracted three-point product as a new ring structure on a bare module;
 - the extraction of a Frobenius algebra from an all-genus CohFT;
 - moduli-of-curves interfaces, stable graphs, general CohFTs, descendants, Novikov coefficients, or axiomatic Gromov--Witten theory.
 
 ### 9.3 Next formalization boundary
 
-The next project milestone is the topological theory associated to the completed Frobenius package:
+The next project milestone is the stable-curve cohomology interface and the passage from the scalar topological theory to a general CohFT:
 
 $$
-\text{Frobenius algebra and cocommutative coalgebra}
+\text{stable arities and finite labels}
 \longrightarrow
-\text{genus-$g$ correlators}
+\text{abstract stable-curve cohomology and gluing}
 \longrightarrow
-\text{separating and nonseparating gluing}
+\text{full all-genus unital CohFT}
 \longrightarrow
-\text{topological CohFT / oriented 2D TFT}.
+\text{recovery of its topological part}.
 $$
 
-Morphisms and transport are useful extensions of the Frobenius layer, but they are not prerequisites for defining and verifying the associated topological theory.
+Morphisms and transport remain useful extensions of the Frobenius layer, but they are not prerequisites for the abstract stable-curve and full CohFT interfaces.

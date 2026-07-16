@@ -2,7 +2,7 @@
 
 Lean formalization of the algebraic foundations of axiomatic Gromov--Witten theory.
 
-The repository is the home of the full project, but development proceeds in small verified milestones. The first completed milestone is the finite-free, commutative Frobenius-algebra and coalgebra layer needed for topological field theories and CohFT gluing; the next milestone is its associated two-dimensional topological field theory.
+The repository is the home of the full project, but development proceeds in small verified milestones. The finite-free commutative Frobenius-algebra and coalgebra layer, its finite-labelled topological correlator theory, and its scalar-valued topological CohFT restriction are now implemented. The next major phase is the abstract stable-curve cohomology and full CohFT interface.
 
 ## Final scope
 
@@ -48,8 +48,13 @@ AxiomaticGW/
     Examples.lean
 
   TFT/
+    FiniteProduct.lean
+    Correlator.lean
+    Sewing.lean
     Basic.lean
     Frobenius.lean
+    Classification.lean
+    Examples.lean
 
   Combinatorics/
     StableArity.lean
@@ -70,6 +75,7 @@ AxiomaticGW/
     Integration.lean
 
   CohFT/
+    Topological.lean           # implemented scalar-valued stable theory
     Basic.lean                 # full all-genus CohFT
     Unit.lean
     GenusZero.lean             # restriction of the all-genus theory
@@ -117,7 +123,7 @@ perfect duality and contractions
   -> realization from an abstract virtual stable-map package
 ```
 
-## Current milestone
+## Completed foundations
 
 The completed Frobenius API now follows the chain
 
@@ -127,11 +133,26 @@ counit -> trace pairing -> perfect duality -> symmetric copairing
        -> handle element.
 ```
 
-The core definitions and proofs are basis-free. `CommFrobeniusAlgebra` is an explicit object rather than a typeclass, since a fixed algebra can admit more than one Frobenius functional. Its canonical coalgebra can be installed as a local mathlib instance when needed. The next project milestone is the associated two-dimensional topological field theory.
+The core definitions and proofs are basis-free. `CommFrobeniusAlgebra` is an explicit object rather than a typeclass, since a fixed algebra can admit more than one Frobenius functional. Its canonical coalgebra can be installed as a local mathlib instance when needed.
+
+The completed topological-theory layer follows the chain
+
+```text
+finite-labelled multiplication
+  -> all-genus Frobenius correlators
+  -> basis-free named-slot contraction
+  -> separating and nonseparating sewing
+  -> bundled topological correlator theory
+  -> stable scalar-valued topological CohFT
+  -> recovery of the counit and three-point product.
+```
+
+The geometric oriented bordism category is not formalized: `TopologicalCorrelatorTheory` is its algebraic correlator presentation. Likewise, `TopologicalCohFT` is currently scalar-valued and models degree-zero classes. The next major milestone replaces those scalars with an abstract cohomology system for stable curves and then defines a full all-genus CohFT.
 
 ## Notes
 
 - [Frobenius algebras, 2D TFTs, and CohFTs](notes/FrobeniusAlgebra.md)
+- [Completed topological field theory milestones](notes/TopologicalTFTMilestones.md)
 
 Build the project with:
 

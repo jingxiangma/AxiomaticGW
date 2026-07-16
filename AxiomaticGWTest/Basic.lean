@@ -43,6 +43,45 @@ example (R : Type*) [CommRing R] :
     (AxiomaticGW.CommFrobeniusAlgebra.productAlgebra R).handleElement = 1 := by
   simp
 
+/-- The bundled correlator theory exposes the nonseparating gluing law. -/
+example {R A : Type*} [CommRing R] [CommRing A] [Algebra R A]
+    [Module.Free R A] [Module.Finite R A]
+    (F : AxiomaticGW.CommFrobeniusAlgebra R A) (g : ℕ) :
+    F.pairing.selfContract (F.correlator g (Fin 1 ⊕ Fin 2)) =
+      F.correlator (g + 1) (Fin 1) := by
+  exact (F.toTopologicalCorrelatorTheory.nonseparating g (Fin 1))
+
+/-- The bundled correlator theory exposes the separating gluing law. -/
+example {R A : Type*} [CommRing R] [CommRing A] [Algebra R A]
+    [Module.Free R A] [Module.Finite R A]
+    (F : AxiomaticGW.CommFrobeniusAlgebra R A) (g₁ g₂ : ℕ) :
+    F.pairing.pairContract (F.correlator g₁ (Option (Fin 1)))
+        (F.correlator g₂ (Option (Fin 1))) =
+      F.correlator (g₁ + g₂) (Fin 1 ⊕ Fin 1) := by
+  exact (F.toTopologicalCorrelatorTheory.separating g₁ g₂ (Fin 1) (Fin 1))
+
+/-- The base-ring example computes every genus and finite arity. -/
+example (R : Type*) [CommRing R] (g : ℕ) (a : Fin 3 → R) :
+    (AxiomaticGW.CommFrobeniusAlgebra.baseRing R).correlator g (Fin 3) a =
+      ∏ i, a i := by
+  simp
+
+/-- Restriction to stable arities preserves the underlying correlator. -/
+example {R A : Type*} [CommRing R] [CommRing A] [Algebra R A]
+    [Module.Free R A] [Module.Finite R A]
+    (F : AxiomaticGW.CommFrobeniusAlgebra R A) :
+    F.toTopologicalCohFT.omega 0 (Fin 3) AxiomaticGW.StableArity.zero_fin_three =
+      F.correlator 0 (Fin 3) := by
+  rfl
+
+/-- The three-point product extracted from the forward theory is the original
+algebra multiplication. -/
+example {R A : Type*} [CommRing R] [CommRing A] [Algebra R A]
+    [Module.Free R A] [Module.Finite R A]
+    (F : AxiomaticGW.CommFrobeniusAlgebra R A) (x y : A) :
+    F.toTopologicalCorrelatorTheory.product x y = x * y := by
+  exact F.toTopologicalCorrelatorTheory_product x y
+
 end CommFrobeniusAlgebra
 
 end AxiomaticGWTest
