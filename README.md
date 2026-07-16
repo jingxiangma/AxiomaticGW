@@ -8,6 +8,8 @@ The repository is the home of the full project, but development proceeds in smal
 > foundations compile without `sorry` or `admit`; planned APIs may still change
 > before a stable release.
 
+> **Scope:** The planned stable-curve target is restricted to even cohomology.
+
 ## Getting started
 
 Install Lean with [elan](https://github.com/leanprover/elan), clone the
