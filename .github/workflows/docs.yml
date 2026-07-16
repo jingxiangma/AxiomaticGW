@@ -32,5 +32,3 @@ jobs:
 
       - name: Build and deploy API documentation
         uses: leanprover-community/docgen-action@v1
-        with:
-          build-page: false
