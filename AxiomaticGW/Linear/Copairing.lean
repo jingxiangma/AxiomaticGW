@@ -77,6 +77,52 @@ theorem copairing_contract (P : SymmetricPerfectPairing R V) (x : V) :
     P.tensorEndEquiv P.copairing x = x := by
   simp
 
+/-- Swapping a tensor before contracting exchanges the two vectors tested by
+the pairing.
+
+This technical lemma lets us prove symmetry of the copairing without choosing
+a basis.  On a pure tensor `u ⊗ v`, both sides reduce to a product of the two
+scalars `P.form u y` and `P.form v x`; the general result follows by linearity. -/
+theorem form_tensorEndEquiv_comm (P : SymmetricPerfectPairing R V)
+    (t : V ⊗[R] V) (x y : V) :
+    P.form (P.tensorEndEquiv (TensorProduct.comm R V V t) x) y =
+      P.form (P.tensorEndEquiv t y) x := by
+  induction t using TensorProduct.induction_on with
+  | zero => simp
+  | tmul u v =>
+      simp [smul_eq_mul, P.isSymm.eq, mul_comm]
+  | add t₁ t₂ h₁ h₂ =>
+      simpa only [map_add, LinearMap.add_apply] using congrArg₂ (· + ·) h₁ h₂
+
+/-- The inverse metric is symmetric: exchanging its two tensor factors does
+not change it.
+
+This is the basis-free version of the familiar identity
+`ηⁱʲ = ηʲⁱ`.  Later, it says that an internal edge of a TFT or CohFT does not
+depend on an arbitrary orientation of that edge. -/
+@[simp]
+theorem copairing_comm (P : SymmetricPerfectPairing R V) :
+    TensorProduct.comm R V V P.copairing = P.copairing := by
+  apply P.tensorEndEquiv.injective
+  apply LinearMap.ext
+  intro x
+  apply P.toDual.injective
+  apply LinearMap.ext
+  intro y
+  simp only [toDual_apply]
+  rw [form_tensorEndEquiv_comm]
+  simp only [copairing_contract]
+  exact P.isSymm.eq y x
+
+/-- Contracting after first swapping the two legs also gives the identity.
+Together with `copairing_contract`, this records the two snake identities in
+the tensor convention used by this project. -/
+@[simp]
+theorem copairing_contract_swapped (P : SymmetricPerfectPairing R V) (x : V) :
+    P.tensorEndEquiv (TensorProduct.comm R V V P.copairing) x = x := by
+  rw [copairing_comm]
+  exact P.copairing_contract x
+
 end SymmetricPerfectPairing
 
 end AxiomaticGW

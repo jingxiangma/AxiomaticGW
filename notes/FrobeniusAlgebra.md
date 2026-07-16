@@ -361,6 +361,7 @@ The mathematical discussion above is broader than the Lean development that curr
 | basis-free copairing $C_\eta$ | `SymmetricPerfectPairing.copairing` | defined |
 | $C_\eta$ contracts to the identity | `SymmetricPerfectPairing.tensorEndEquiv_copairing` | proved |
 | pointwise contraction identity | `SymmetricPerfectPairing.copairing_contract` | proved |
+| symmetry $\tau(C_\eta)=C_\eta$ | `SymmetricPerfectPairing.copairing_comm` | proved |
 | trace pairing $\eta(a,b)=\epsilon(ab)$ | `AxiomaticGW.tracePairing` | defined and evaluated |
 | commutative Frobenius algebra via a counit and perfect trace pairing | `AxiomaticGW.CommFrobeniusAlgebra` | defined |
 | equality determined by the counit | `CommFrobeniusAlgebra.ext` | proved |
@@ -371,21 +372,25 @@ The mathematical discussion above is broader than the Lean development that curr
 | Casimir tensor of a Frobenius algebra | `CommFrobeniusAlgebra.casimir` | defined |
 | contraction characterization of the Casimir tensor | `tensorEndEquiv_casimir` | proved |
 | handle element $E=\mu(C_\eta)$ | `CommFrobeniusAlgebra.handleElement` | defined |
+| Casimir balancing $(a\otimes1)C_\eta=(1\otimes a)C_\eta$ | `includeLeft_mul_casimir_eq_includeRight_mul_casimir` | proved |
+| comultiplication $\Delta(a)=(a\otimes1)C_\eta$ | `CommFrobeniusAlgebra.comul` | defined |
+| Frobenius left- and right-linearity | `comul_mul`, `comul_mul_right` | proved |
+| two counit identities | `rTensor_counit_comul`, `lTensor_counit_comul` | proved |
+| coassociativity and cocommutativity | `coassoc`, `comm_comul` | proved |
+| interoperability with mathlib coalgebras | `toCoalgebra`, `toIsCocomm` | defined and proved |
+| handle identity $\mu(\Delta(a))=aE$ | `mul'_comul` | proved |
 | base-ring example $A=R$ | `CommFrobeniusAlgebra.baseRing` | constructed |
 | $C_\eta=1\otimes1$ and $E=1$ for the base ring | `baseRing_casimir`, `baseRing_handleElement` | proved |
+| product example $A=R\times R$ | `CommFrobeniusAlgebra.productAlgebra` | constructed |
+| pairing, Casimir, comultiplication, and handle element for $R\times R$ | `productAlgebra_pairing_apply`, `productAlgebra_casimir`, `productAlgebra_comul`, `productAlgebra_handleElement` | proved |
 
-The current implementation works over a commutative ring, with a commutative algebra. Finite-free hypotheses are introduced only for the tensor--endomorphism equivalence, copairing, Casimir tensor, and handle element.
+The current implementation works over a commutative ring, with a commutative algebra. Finite-free hypotheses are introduced for the tensor--endomorphism equivalence and therefore for the copairing, Casimir tensor, comultiplication, coalgebra laws, and handle element.
 
 ### 9.2 Discussed here but not yet formalized
 
 The following statements and constructions appear in these notes as mathematical motivation, but they do **not** yet have completed Lean proofs in this repository:
 
-- symmetry of the copairing, $\tau(C_\eta)=C_\eta$;
-- the comultiplication $\Delta(a)=(a\otimes1)C_\eta$;
-- coassociativity, cocommutativity, and the two counit identities;
-- the Frobenius relation between multiplication and comultiplication;
-- interoperability with mathlib's `Coalgebra` structure;
-- the product-algebra and dual-number examples;
+- the dual-number example;
 - morphisms, isomorphisms, transport, tensor products, and base change of Frobenius algebras;
 - finite-projective modules without a chosen finite-free instance;
 - graded, super, or noncommutative Frobenius algebras;
@@ -397,16 +402,16 @@ The following statements and constructions appear in these notes as mathematical
 
 ### 9.3 Next formalization boundary
 
-The next algebraic milestone is
+The next project milestone is the topological theory associated to the completed Frobenius package:
 
 $$
-\text{copairing symmetry}
+\text{Frobenius algebra and cocommutative coalgebra}
 \longrightarrow
-\text{comultiplication}
+\text{genus-$g$ correlators}
 \longrightarrow
-\text{coalgebra laws}
+\text{separating and nonseparating gluing}
 \longrightarrow
-\text{Frobenius relation}.
+\text{topological CohFT / oriented 2D TFT}.
 $$
 
-Only after that layer is stable will the project define the associated topological field theory and prove the genus-$g$ correlator gluing identities.
+Morphisms and transport are useful extensions of the Frobenius layer, but they are not prerequisites for defining and verifying the associated topological theory.

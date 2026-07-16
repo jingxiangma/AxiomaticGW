@@ -4,6 +4,7 @@ Released under Apache 2.0 license as described in the file LICENSE.
 Authors: JMA
 -/
 import AxiomaticGW.Frobenius.Constructions
+import AxiomaticGW.Frobenius.Coalgebra
 import AxiomaticGW.Frobenius.Examples
 
 /-!

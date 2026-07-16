@@ -2,7 +2,7 @@
 
 Lean formalization of the algebraic foundations of axiomatic Gromov--Witten theory.
 
-The repository is the home of the full project, but development proceeds in small verified milestones. The current milestone is the finite-free, commutative Frobenius-algebra layer needed for topological field theories and CohFT gluing.
+The repository is the home of the full project, but development proceeds in small verified milestones. The first completed milestone is the finite-free, commutative Frobenius-algebra and coalgebra layer needed for topological field theories and CohFT gluing; the next milestone is its associated two-dimensional topological field theory.
 
 ## Final scope
 
@@ -119,13 +119,15 @@ perfect duality and contractions
 
 ## Current milestone
 
-The current public API follows the chain
+The completed Frobenius API now follows the chain
 
 ```text
-counit -> trace pairing -> perfect duality -> copairing -> handle element.
+counit -> trace pairing -> perfect duality -> symmetric copairing
+       -> comultiplication -> cocommutative coalgebra -> Frobenius relation
+       -> handle element.
 ```
 
-The core definitions are basis-free. `CommFrobeniusAlgebra` is an explicit object rather than a typeclass, since a fixed algebra can admit more than one Frobenius functional.
+The core definitions and proofs are basis-free. `CommFrobeniusAlgebra` is an explicit object rather than a typeclass, since a fixed algebra can admit more than one Frobenius functional. Its canonical coalgebra can be installed as a local mathlib instance when needed. The next project milestone is the associated two-dimensional topological field theory.
 
 ## Notes
 
