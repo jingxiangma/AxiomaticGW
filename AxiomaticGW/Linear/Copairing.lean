@@ -3,8 +3,10 @@ Copyright (c) 2026 JMA. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: JMA
 -/
-import AxiomaticGW.Linear.PerfectPairing
-import Mathlib.LinearAlgebra.Contraction
+module
+
+public import AxiomaticGW.Linear.PerfectPairing
+public import Mathlib.LinearAlgebra.Contraction
 
 /-!
 # Canonical copairings
@@ -21,6 +23,8 @@ equivalence `V tensor V ~= End(V)` induced by a symmetric perfect pairing.
 * The hypotheses `Module.Free` and `Module.Finite` provide the finite-free
   duality needed for `Vᵛ ⊗ V ≃ End(V)`.
 -/
+
+@[expose] public section
 
 namespace AxiomaticGW
 
@@ -72,7 +76,6 @@ theorem tensorEndEquiv_copairing (P : SymmetricPerfectPairing R V) :
 /-- The preceding endomorphism equality evaluated at a vector `x`.  In basis
 notation, if `copairing = ∑ᵢ uᵢ ⊗ vᵢ`, this says
 `∑ᵢ P.form uᵢ x • vᵢ = x`. -/
-@[simp]
 theorem copairing_contract (P : SymmetricPerfectPairing R V) (x : V) :
     P.tensorEndEquiv P.copairing x = x := by
   simp
@@ -117,7 +120,6 @@ theorem copairing_comm (P : SymmetricPerfectPairing R V) :
 /-- Contracting after first swapping the two legs also gives the identity.
 Together with `copairing_contract`, this records the two snake identities in
 the tensor convention used by this project. -/
-@[simp]
 theorem copairing_contract_swapped (P : SymmetricPerfectPairing R V) (x : V) :
     P.tensorEndEquiv (TensorProduct.comm R V V P.copairing) x = x := by
   rw [copairing_comm]

@@ -3,9 +3,11 @@ Copyright (c) 2026 JMA. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: JMA
 -/
-import AxiomaticGW.Frobenius.Constructions
-import Mathlib.RingTheory.Coalgebra.Basic
-import Mathlib.RingTheory.TensorProduct.Basic
+module
+
+public import AxiomaticGW.Frobenius.Constructions
+public import Mathlib.RingTheory.Coalgebra.Basic
+public import Mathlib.RingTheory.TensorProduct.Basic
 
 /-!
 # The coalgebra carried by a commutative Frobenius algebra
@@ -30,6 +32,8 @@ functionals.
 * `f.comp g` means first apply `g`, then apply `f`.
 * The tensor associator appears explicitly in mathlib's coassociativity law.
 -/
+
+@[expose] public section
 
 namespace AxiomaticGW
 
@@ -60,7 +64,8 @@ theorem tensorEndEquiv_includeRight_mul (F : CommFrobeniusAlgebra R A)
   induction t using TensorProduct.induction_on with
   | zero => simp
   | tmul u v => simp [mul_comm a]
-  | add t₁ t₂ h₁ h₂ => simp only [mul_add, map_add, LinearMap.add_apply, h₁, h₂, mul_add]
+  | add t₁ t₂ h₁ h₂ =>
+      simp only [mul_add, map_add, LinearMap.add_apply, h₁, h₂, mul_add]
 
 /-- The Casimir tensor is balanced over the algebra:
 `(a ⊗ 1)C = (1 ⊗ a)C`.
@@ -83,7 +88,6 @@ noncomputable def comul (F : CommFrobeniusAlgebra R A) :
     (Algebra.TensorProduct.includeLeft : A →ₐ[R] A ⊗[R] A).toLinearMap
 
 /-- Evaluation formula using the first leg of the Casimir tensor. -/
-@[simp]
 theorem comul_apply (F : CommFrobeniusAlgebra R A) (a : A) :
     F.comul a = (a ⊗ₜ[R] 1) * F.casimir := rfl
 

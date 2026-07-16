@@ -3,8 +3,10 @@ Copyright (c) 2026 JMA. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: JMA
 -/
-import AxiomaticGW.Linear.PerfectPairing
-import Mathlib.Algebra.Algebra.Bilinear
+module
+
+public import AxiomaticGW.Linear.PerfectPairing
+public import Mathlib.Algebra.Algebra.Bilinear
 
 /-!
 # Commutative Frobenius algebras
@@ -24,6 +26,8 @@ The notation `A →ₗ[R] R` means an `R`-linear functional.  The notation
 `LinearMap.BilinForm R A` means an `R`-bilinear form `A × A → R`, represented
 in Lean as a linear map returning another linear map.
 -/
+
+@[expose] public section
 
 namespace AxiomaticGW
 
@@ -51,7 +55,9 @@ built into this structure.  It is required later only for constructions, such
 as the copairing, that use a finite tensor--Hom equivalence. -/
 structure CommFrobeniusAlgebra (R A : Type*) [CommRing R] [CommRing A]
     [Algebra R A] where
+  /-- The Frobenius functional, also used as the coalgebra counit. -/
   counit : A →ₗ[R] R
+  /-- A proof that the trace pairing induced by `counit` is perfect. -/
   isPerfPair : (tracePairing counit).IsPerfPair
 
 namespace CommFrobeniusAlgebra
@@ -77,7 +83,7 @@ The `where` block constructs the three fields of
 the proof stored in `F`. -/
 def pairing (F : CommFrobeniusAlgebra R A) : SymmetricPerfectPairing R A where
   form := tracePairing F.counit
-  isSymm := ⟨fun a b => by simp [mul_comm]⟩
+  isSymm := ⟨fun a b ↦ by simp [mul_comm]⟩
   isPerfPair := F.isPerfPair
 
 /-- Evaluation formula for the pairing derived from a Frobenius algebra. -/

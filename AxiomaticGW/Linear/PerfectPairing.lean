@@ -3,8 +3,10 @@ Copyright (c) 2026 JMA. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: JMA
 -/
-import Mathlib.LinearAlgebra.BilinearForm.Properties
-import Mathlib.LinearAlgebra.PerfectPairing.Basic
+module
+
+public import Mathlib.LinearAlgebra.BilinearForm.Properties
+public import Mathlib.LinearAlgebra.PerfectPairing.Basic
 
 /-!
 # Symmetric perfect pairings
@@ -30,6 +32,8 @@ This file is a good starting point for readers new to Lean.
   Lean does not claim that it can execute the construction as a program.
 -/
 
+@[expose] public section
+
 namespace AxiomaticGW
 
 open Module
@@ -46,8 +50,11 @@ The three fields say:
    its dual. -/
 structure SymmetricPerfectPairing (R V : Type*) [CommRing R] [AddCommGroup V]
     [Module R V] where
+  /-- The underlying bilinear form. -/
   form : LinearMap.BilinForm R V
+  /-- A proof that the bilinear form is symmetric. -/
   isSymm : form.IsSymm
+  /-- A proof that contraction with the form identifies the module with its dual. -/
   isPerfPair : form.IsPerfPair
 
 namespace SymmetricPerfectPairing

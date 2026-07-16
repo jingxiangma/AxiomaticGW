@@ -3,8 +3,10 @@ Copyright (c) 2026 JMA. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: JMA
 -/
-import AxiomaticGW.Frobenius.Coalgebra
-import Mathlib.RingTheory.Finiteness.Prod
+module
+
+public import AxiomaticGW.Frobenius.Coalgebra
+public import Mathlib.RingTheory.Finiteness.Prod
 
 /-!
 # Frobenius algebra examples
@@ -16,6 +18,8 @@ the shape of the definitions.  `LinearMap.IsPerfPair` asks for bijectivity in
 both arguments.  Lean's `constructor` tactic splits a conjunction-like goal
 into its fields, while `intro` introduces variables and hypotheses.
 -/
+
+@[expose] public section
 
 namespace AxiomaticGW
 
@@ -142,7 +146,6 @@ def productAlgebra (R : Type*) [CommRing R] :
         simpa only [map_add, map_smul, smul_eq_mul] using hfy.symm
 
 /-- The product pairing is diagonal. -/
-@[simp]
 theorem productAlgebra_pairing_apply (R : Type*) [CommRing R]
     (x y : R × R) :
     (productAlgebra R).pairing.form x y = x.1 * y.1 + x.2 * y.2 := rfl
@@ -174,17 +177,6 @@ theorem productAlgebra_comul (R : Type*) [CommRing R] (x : R × R) :
 theorem productAlgebra_handleElement (R : Type*) [CommRing R] :
     (productAlgebra R).handleElement = 1 := by
   simp [handleElement]
-
-/-- Regression test for the intended local use of the derived mathlib
-coalgebra and cocommutativity structures. -/
-example {R A : Type*} [CommRing R] [CommRing A] [Algebra R A]
-    [Module.Free R A] [Module.Finite R A]
-    (F : CommFrobeniusAlgebra R A) : True := by
-  letI : Coalgebra R A := F.toCoalgebra
-  letI : Coalgebra.IsCocomm R A := F.toIsCocomm
-  have _ := Coalgebra.coassoc_apply (R := R) (A := A)
-  have _ := Coalgebra.comm_comul (R := R) (A := A)
-  trivial
 
 end CommFrobeniusAlgebra
 

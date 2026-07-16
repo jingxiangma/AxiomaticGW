@@ -138,3 +138,15 @@ Build the project with:
 ```bash
 lake build
 ```
+
+## Local development
+
+The repository currently remains local: no publishing or remote Git operation is part of the workflow. The source follows mathlib-oriented conventions so that later Frobenius, TFT, CohFT, and GW modules can use the same style.
+
+The detailed conventions are in [CONTRIBUTING.md](CONTRIBUTING.md). Before a local commit, run:
+
+```bash
+lake build
+lake lint
+lake test
+```

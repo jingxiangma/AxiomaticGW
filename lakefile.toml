@@ -2,6 +2,8 @@ name = "axiomatic_gw"
 version = "0.1.0"
 keywords = ["math"]
 defaultTargets = ["AxiomaticGW"]
+lintDriver = "batteries/runLinter"
+testDriver = "AxiomaticGWTest"
 
 [leanOptions]
 pp.unicode.fun = true # pretty-prints `fun a ↦ b`
@@ -16,3 +18,7 @@ rev = "v4.32.0"
 
 [[lean_lib]]
 name = "AxiomaticGW"
+
+[[lean_lib]]
+name = "AxiomaticGWTest"
+globs = ["AxiomaticGWTest.+"]

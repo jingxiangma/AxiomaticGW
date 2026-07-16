@@ -3,8 +3,10 @@ Copyright (c) 2026 JMA. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: JMA
 -/
-import AxiomaticGW.Frobenius.Basic
-import AxiomaticGW.Linear.Copairing
+module
+
+public import AxiomaticGW.Frobenius.Basic
+public import AxiomaticGW.Linear.Copairing
 
 /-!
 # Constructions from commutative Frobenius algebras
@@ -16,6 +18,8 @@ In a theorem statement, `∀ a b c : A, ...` means "for every `a`, `b`, and
 `c` in `A`".  A proof introduced by `by` is tactic-style Lean code: each line
 transforms the current goal until no goals remain.
 -/
+
+@[expose] public section
 
 namespace AxiomaticGW
 

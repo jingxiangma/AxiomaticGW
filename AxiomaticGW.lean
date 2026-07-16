@@ -3,9 +3,9 @@ Copyright (c) 2026 JMA. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
 Authors: JMA
 -/
-import AxiomaticGW.Frobenius.Constructions
-import AxiomaticGW.Frobenius.Coalgebra
-import AxiomaticGW.Frobenius.Examples
+module
+
+public import AxiomaticGW.Frobenius.Examples
 
 /-!
 # Public entry point
