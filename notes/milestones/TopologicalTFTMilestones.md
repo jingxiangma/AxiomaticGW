@@ -2,6 +2,10 @@
 
 This note records the next formalization phase after the completed commutative Frobenius-algebra and coalgebra layer. The first target is the algebraic correlator model of a closed oriented two-dimensional topological field theory. The geometric bordism category will not be formalized at this stage.
 
+For the underlying definitions and mathematical explanations, see
+[M1: perfect pairings and Frobenius algebras](../mathematics/M01PerfectPairingsAndFrobeniusAlgebras.md)
+and [M2: two-dimensional topological field theory](../mathematics/M02TwoDimensionalTFT.md).
+
 For a commutative Frobenius algebra $(A,\epsilon)$ with handle element $E$, the central construction is the finite-labelled correlator
 
 $$

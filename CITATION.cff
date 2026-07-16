@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: If you use AxiomaticGW, please cite the repository and the specific revision used.
+title: AxiomaticGW
+type: software
+authors:
+  - name: JMA
+version: 0.1.0
+license: Apache-2.0
+keywords:
+  - Lean 4
+  - formalized mathematics
+  - Gromov-Witten theory
+  - cohomological field theory
+  - Frobenius algebra
+abstract: >-
+  A Lean formalization of the algebraic foundations and axiomatic structure of
+  Gromov-Witten theory.

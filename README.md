@@ -4,6 +4,31 @@ Lean formalization of the algebraic foundations of axiomatic Gromov--Witten theo
 
 The repository is the home of the full project, but development proceeds in small verified milestones. The finite-free commutative Frobenius-algebra and coalgebra layer, its finite-labelled topological correlator theory, and its scalar-valued topological CohFT restriction are now implemented. The next major phase is the abstract stable-curve cohomology and full CohFT interface.
 
+> **Project status:** active, research-stage development. The implemented
+> foundations compile without `sorry` or `admit`; planned APIs may still change
+> before a stable release.
+
+## Getting started
+
+Install Lean with [elan](https://github.com/leanprover/elan), clone the
+repository, and run:
+
+```bash
+lake exe cache get
+lake build
+lake test
+```
+
+The project pins Lean and mathlib to `v4.32.0`. Import the current public API
+with:
+
+```lean
+import AxiomaticGW
+```
+
+Run `lake lint` before submitting changes. CI performs the build, test, and
+lint steps on every pull request to `main`.
+
 ## Final scope
 
 The endpoint is an **all-genus axiomatic Gromov--Witten theory**, resolved by curve class and equipped with the complete descendant package. In particular, the final theory is intended to support
@@ -151,8 +176,11 @@ The geometric oriented bordism category is not formalized: `TopologicalCorrelato
 
 ## Notes
 
-- [Frobenius algebras, 2D TFTs, and CohFTs](notes/FrobeniusAlgebra.md)
-- [Completed topological field theory milestones](notes/TopologicalTFTMilestones.md)
+- [Notes index](notes/README.md)
+- [The mathematics and goals of AxiomaticGW](notes/mathematics/ProjectMathematicsAndGoals.md)
+- [Mathematics notes for M1--M10](notes/mathematics/README.md)
+- [Roadmap to axiomatic Gromov--Witten theory](notes/milestones/AxiomaticGWRoadmap.md)
+- [Completed topological field theory milestones](notes/milestones/TopologicalTFTMilestones.md)
 
 Build the project with:
 
@@ -160,14 +188,27 @@ Build the project with:
 lake build
 ```
 
-## Local development
+## Contributing
 
-The repository currently remains local: no publishing or remote Git operation is part of the workflow. The source follows mathlib-oriented conventions so that later Frobenius, TFT, CohFT, and GW modules can use the same style.
+Contributions to definitions, proofs, examples, documentation, and API design
+are welcome. Please read [CONTRIBUTING.md](CONTRIBUTING.md) and consult the
+[design-decision ledger](notes/milestones/CohFTDesignDecisions.md) before
+changing an unsettled architectural convention.
 
-The detailed conventions are in [CONTRIBUTING.md](CONTRIBUTING.md). Before a local commit, run:
+Before opening a pull request, run:
 
 ```bash
 lake build
 lake lint
 lake test
+git diff --check
 ```
+
+Please report ordinary bugs and mathematical issues through GitHub Issues.
+Sensitive security reports should follow [SECURITY.md](SECURITY.md).
+
+## License
+
+AxiomaticGW is released under the [Apache License 2.0](LICENSE). Citation
+metadata is available in [CITATION.cff](CITATION.cff), and notable changes are
+recorded in [CHANGELOG.md](CHANGELOG.md).

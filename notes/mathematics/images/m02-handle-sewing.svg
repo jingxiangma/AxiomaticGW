@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="330" viewBox="0 0 900 330" role="img" aria-labelledby="title desc">
+  <title id="title">Feynman diagram for the handle operator</title>
+  <desc id="desc">A dotted incoming leg labelled a splits at an unmarked trivalent junction, travels along two internal legs, and merges at a second unmarked trivalent junction. The dotted outgoing leg carries a times E.</desc>
+  <style>
+    :root { color: #111827; }
+    .edge { fill: none; stroke: currentColor; stroke-width: 2.7; stroke-linecap: round; stroke-linejoin: round; }
+    .external { fill: currentColor; }
+    .label { fill: currentColor; font: 18px ui-sans-serif, system-ui, sans-serif; }
+    .small { fill: #4b5563; font: 15px ui-sans-serif, system-ui, sans-serif; }
+    .math { fill: currentColor; font: italic 21px Georgia, serif; }
+    @media (prefers-color-scheme: dark) {
+      :root { color: #e5e7eb; }
+      .small { fill: #cbd5e1; }
+    }
+  </style>
+
+  <text x="450" y="30" text-anchor="middle" class="label">one-handle operator  H = μ ∘ Δ</text>
+
+  <path d="M85 165 H270" class="edge"/>
+  <path d="M270 165 L375 85 H525 L630 165" class="edge"/>
+  <path d="M270 165 L375 245 H525 L630 165" class="edge"/>
+  <path d="M630 165 H815" class="edge"/>
+
+  <circle cx="85" cy="165" r="4.8" class="external"/>
+  <circle cx="815" cy="165" r="4.8" class="external"/>
+
+  <text x="65" y="172" text-anchor="end" class="math">a</text>
+  <text x="835" y="172" class="math">aE</text>
+  <text x="450" y="76" text-anchor="middle" class="math">auᵢ</text>
+  <text x="450" y="274" text-anchor="middle" class="math">vᵢ</text>
+  <text x="450" y="161" text-anchor="middle" class="math">Σᵢ</text>
+
+  <text x="450" y="315" text-anchor="middle" class="small">Δ(a) = Σᵢ auᵢ ⊗ vᵢ, then μΔ(a) = aE</text>
+</svg>

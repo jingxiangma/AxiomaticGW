@@ -1,21 +1,30 @@
-name: Lean Action CI
+name: CI
 
 on:
   push:
+    branches: [main]
   pull_request:
+    branches: [main]
   workflow_dispatch:
 
-# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
-  contents: read # Read access to repository contents
-  pages: write # Write access to GitHub Pages
-  id-token: write # Write access to ID tokens
+  contents: read
+
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
-      - uses: actions/checkout@v5
-      - uses: leanprover/lean-action@v1
-      - uses: leanprover-community/docgen-action@v1
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Build, test, and lint
+        uses: leanprover/lean-action@v1
+        with:
+          build: true
+          test: true
+          lint: true
+          build-args: --wfail

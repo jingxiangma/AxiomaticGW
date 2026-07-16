@@ -1,0 +1,30 @@
+name: Mathematics or API proposal
+description: Propose a definition, theorem, example, or architectural change.
+title: "[Proposal]: "
+labels:
+  - enhancement
+body:
+  - type: textarea
+    id: objective
+    attributes:
+      label: Objective
+      description: State the mathematical result or API capability being proposed.
+    validations:
+      required: true
+  - type: textarea
+    id: formulation
+    attributes:
+      label: Mathematical formulation
+      description: Give precise definitions, hypotheses, conventions, and references when available.
+    validations:
+      required: true
+  - type: textarea
+    id: dependencies
+    attributes:
+      label: Dependencies and milestone
+      description: Identify prerequisite declarations and the relevant roadmap milestone.
+  - type: textarea
+    id: design
+    attributes:
+      label: Proposed Lean design
+      description: Sketch names or types if you have a concrete API in mind.

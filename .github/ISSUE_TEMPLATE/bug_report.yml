@@ -1,0 +1,43 @@
+name: Bug report
+description: Report a build failure, incorrect theorem statement, or API problem.
+title: "[Bug]: "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: Thank you for helping improve AxiomaticGW.
+  - type: textarea
+    id: description
+    attributes:
+      label: Problem
+      description: Describe the incorrect behavior or mathematical/API issue.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Minimal reproduction
+      description: Include a small Lean example, command, or link to the affected declaration.
+      render: lean
+    validations:
+      required: true
+  - type: input
+    id: revision
+    attributes:
+      label: Revision
+      description: Commit hash or branch where the problem occurs.
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Include your operating system and the output of `lake --version` when relevant.
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checks
+      options:
+        - label: I searched existing issues for the same problem.
+          required: true
+        - label: I verified that the issue occurs with the repository's pinned toolchain.
+          required: true

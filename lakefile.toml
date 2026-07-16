@@ -1,6 +1,6 @@
 name = "axiomatic_gw"
 version = "0.1.0"
-keywords = ["math"]
+keywords = ["mathematics", "lean", "formalization", "gromov-witten-theory", "cohft"]
 defaultTargets = ["AxiomaticGW"]
 lintDriver = "batteries/runLinter"
 testDriver = "AxiomaticGWTest"

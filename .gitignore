@@ -1,2 +1,17 @@
-/.lake
+/.lake/
+/tmp/
+
+# Local reference copies and rendered research material are not redistributed.
+/notes/references/online/*.pdf
+
+# Editor, operating-system, and environment files.
 .DS_Store
+.idea/
+.vscode/
+.env
+.env.*
+!.env.example
+
+# Lean build products should remain under `.lake`, but ignore accidental copies.
+*.ilean
+*.olean

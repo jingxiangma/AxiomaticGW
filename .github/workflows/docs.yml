@@ -1,0 +1,36 @@
+name: API documentation
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  id-token: write
+  pages: write
+
+concurrency:
+  group: github-pages
+  cancel-in-progress: false
+
+jobs:
+  docs:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Build project
+        uses: leanprover/lean-action@v1
+        with:
+          build: true
+          test: false
+          lint: false
+
+      - name: Build and deploy API documentation
+        uses: leanprover-community/docgen-action@v1
+        with:
+          build-page: false

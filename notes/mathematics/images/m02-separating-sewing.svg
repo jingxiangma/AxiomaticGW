@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="340" viewBox="0 0 1000 340" role="img" aria-labelledby="title desc">
+  <title id="title">Separating sewing as an edge between two vertices</title>
+  <desc id="desc">One distinguished leg on a genus g one correlator and one distinguished leg on a genus g two correlator are contracted with the copairing. Sewing creates an internal edge joining the two components without creating a graph cycle, so the total genus is g one plus g two.</desc>
+  <style>
+    :root { color: #111827; }
+    .wire { fill: none; stroke: currentColor; stroke-width: 2.7; stroke-linecap: round; stroke-linejoin: round; }
+    .node { fill: #dbeafe; stroke: currentColor; stroke-width: 2.2; }
+    .dot { fill: currentColor; }
+    .arrow { fill: none; stroke: #64748b; stroke-width: 1.8; marker-end: url(#arrowhead); }
+    .label { fill: currentColor; font: 18px ui-sans-serif, system-ui, sans-serif; }
+    .small { fill: #4b5563; font: 15px ui-sans-serif, system-ui, sans-serif; }
+    .math { fill: currentColor; font: italic 21px Georgia, serif; }
+    @media (prefers-color-scheme: dark) {
+      :root { color: #e5e7eb; }
+      .node { fill: #172554; }
+      .small { fill: #cbd5e1; }
+      .arrow { stroke: #94a3b8; }
+    }
+  </style>
+  <defs>
+    <marker id="arrowhead" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <text x="240" y="32" text-anchor="middle" class="label">one leg on each component</text>
+  <circle cx="135" cy="170" r="40" class="node"/>
+  <circle cx="335" cy="170" r="40" class="node"/>
+  <text x="135" y="177" text-anchor="middle" class="math">g₁</text>
+  <text x="335" y="177" text-anchor="middle" class="math">g₂</text>
+  <path d="M55 170 H95" class="wire"/>
+  <circle cx="55" cy="170" r="4.8" class="dot"/>
+  <text x="43" y="177" text-anchor="end" class="math">(aₛ)</text>
+  <path d="M175 170 H220" class="wire"/>
+  <path d="M250 170 H295" class="wire"/>
+  <circle cx="220" cy="170" r="4.8" class="dot"/>
+  <circle cx="250" cy="170" r="4.8" class="dot"/>
+  <text x="215" y="145" text-anchor="middle" class="math">uᵢ</text>
+  <text x="255" y="145" text-anchor="middle" class="math">vᵢ</text>
+  <path d="M375 170 H415" class="wire"/>
+  <circle cx="415" cy="170" r="4.8" class="dot"/>
+  <text x="428" y="177" class="math">(bₜ)</text>
+
+  <path d="M465 170 H555" class="arrow"/>
+  <text x="510" y="142" text-anchor="middle" class="small">contract with Cη</text>
+
+  <text x="770" y="32" text-anchor="middle" class="label">one connecting edge</text>
+  <circle cx="665" cy="170" r="40" class="node"/>
+  <circle cx="865" cy="170" r="40" class="node"/>
+  <text x="665" y="177" text-anchor="middle" class="math">g₁</text>
+  <text x="865" y="177" text-anchor="middle" class="math">g₂</text>
+  <path d="M585 170 H625" class="wire"/>
+  <circle cx="585" cy="170" r="4.8" class="dot"/>
+  <text x="573" y="177" text-anchor="end" class="math">(aₛ)</text>
+  <path d="M705 170 H825" class="wire"/>
+  <text x="765" y="150" text-anchor="middle" class="math">Cη</text>
+  <path d="M905 170 H945" class="wire"/>
+  <circle cx="945" cy="170" r="4.8" class="dot"/>
+  <text x="957" y="177" class="math">(bₜ)</text>
+  <text x="765" y="300" text-anchor="middle" class="math">g₁ + g₂ + b₁(tree) = g₁ + g₂</text>
+</svg>
