@@ -46,7 +46,13 @@ Relabelling and the flat-unit axiom are imposed coefficientwise in $\beta$.
 
 ## 3. Grading and virtual dimension
 
-The state space and stable-curve cohomology are graded. For a target $X$ of complex dimension $d$, the expected complex dimension of the stable-map space is
+The state space and stable-curve cohomology are graded. Abstractly, a
+`GradedCohFT` extends the bare CohFT by recording this state-space grading, the
+homogeneous unit, and degree compatibility of the pairing. The
+curve-class-resolved GW theory extends that graded CohFT and adds the
+$\beta$-dependent degree constraint below.
+
+For a target $X$ of complex dimension $d$, the expected complex dimension of the stable-map space is
 
 $$
 \operatorname{vdim}_{\mathbb C}
@@ -59,7 +65,7 @@ The degree assigned to $\Omega_{g,S,\beta}$ must agree with this dimension after
 
 ## 4. Divisors and degree zero
 
-For a divisor class $D\in V^2$, the primary divisor axiom has the stable form
+For a divisor class $D\in V^1$ in codimension grading, the primary divisor axiom has the stable form
 
 $$
 \pi_*\Omega_{g,S\sqcup\{*\},\beta}((v_s),D)

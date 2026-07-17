@@ -48,10 +48,14 @@ Introduce an abstract even-cohomology system for stable-curve moduli spaces,
 modeled by ordinary commutative algebras graded by half cohomological degree.
 Include finite-label relabelling, forgetful maps, separating gluing,
 nonseparating gluing, and the compatibility identities needed by CohFTs.
-Stable graphs and graph contraction can then package iterated gluing. Odd
-cohomology and Koszul signs are outside the project scope.
+Add optional `GenusZeroGeometry` and `ConnectedDegreeZero` extensions for the
+special low-genus relations and the identifications
+$H^0(\overline{\mathcal M}_{g,S})\cong R$. Stable graphs and graph contraction
+can then package iterated gluing. Odd cohomology and Koszul signs are outside
+the project scope.
 
-**Status:** Next major phase.
+**Status:** Initial interface complete. Stable graphs and arbitrary iterated
+gluing remain deferred as decided in D9.
 
 ## M4. Full unital CohFT
 
@@ -60,9 +64,18 @@ cohomology and Koszul signs are outside the project scope.
 Define a CohFT simultaneously for every stable genus and label set. Prove that
 its three-point genus-zero part gives a Frobenius algebra, define its
 topological part, and derive the genus-zero restriction, associativity, and
-WDVV from the all-genus theory.
+WDVV from the all-genus theory. Frobenius extraction and WDVV use
+`GenusZeroGeometry`; scalar-valued topological truncation uses
+`ConnectedDegreeZero`.
 
-**Status:** Planned.
+M3/M4 are accepted only after the constant degree-zero cohomology system is
+implemented, contraction works with arbitrary target modules, the existing
+`TopologicalCohFT` converts to the full CohFT over that system, and
+representative relabelling, unit, separating, nonseparating, and topological
+truncation tests pass.
+
+**Status:** Core interface and D12 constant-target acceptance tests complete.
+Frobenius extraction, general topological truncation, and WDVV remain planned.
 
 ## M5. Tautological classes and ancestors
 
@@ -89,6 +102,12 @@ $$
 Formalize symmetry, the flat unit, splitting, genus reduction, grading, virtual
 dimension, effectivity, divisor data, and the appropriate degree-zero
 normalizations.
+
+First introduce `GradedCohFT` as an extension of the ungraded M4 structure,
+adding the state-space grading, homogeneous unit, and degree compatibility of
+the pairing. The curve-class-resolved GW structure then extends
+`GradedCohFT`; its `beta`-dependent virtual-dimension law belongs specifically
+to the GW layer.
 
 **Status:** Planned.
 

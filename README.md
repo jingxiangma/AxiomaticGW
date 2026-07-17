@@ -2,7 +2,13 @@
 
 Lean formalization of the algebraic foundations of axiomatic Gromov--Witten theory.
 
-The repository is the home of the full project, but development proceeds in small verified milestones. The finite-free commutative Frobenius-algebra and coalgebra layer, its finite-labelled topological correlator theory, and its scalar-valued topological CohFT restriction are now implemented. The next major phase is the abstract stable-curve cohomology and full CohFT interface.
+The repository is the home of the full project, but development proceeds in
+small verified milestones. The Frobenius/TFT layer, the abstract internally
+graded even-cohomology targets for stable curves, and the full all-genus CohFT
+interface are implemented. The constant degree-zero target gives an
+end-to-end conversion between the existing scalar `TopologicalCohFT` and the
+new cohomology-valued theory. Derived Frobenius/WDVV results and tautological
+classes are the next phase.
 
 > **Project status:** active, research-stage development. The implemented
 > foundations compile without `sorry` or `admit`; planned APIs may still change
@@ -103,7 +109,9 @@ AxiomaticGW/
 
   CohFT/
     Topological.lean           # implemented scalar-valued stable theory
-    Basic.lean                 # full all-genus CohFT
+    StableCurve.lean           # implemented abstract even-cohomology targets
+    Basic.lean                 # implemented full all-genus CohFT
+    Constant.lean              # implemented degree-zero model and conversion
     Unit.lean
     GenusZero.lean             # restriction of the all-genus theory
     Frobenius.lean
@@ -174,7 +182,11 @@ finite-labelled multiplication
   -> recovery of the counit and three-point product.
 ```
 
-The geometric oriented bordism category is not formalized: `TopologicalCorrelatorTheory` is its algebraic correlator presentation. Likewise, `TopologicalCohFT` is currently scalar-valued and models degree-zero classes. The next major milestone replaces those scalars with an abstract cohomology system for stable curves and then defines a full all-genus CohFT.
+The geometric oriented bordism category is not formalized:
+`TopologicalCorrelatorTheory` is its algebraic correlator presentation.
+`TopologicalCohFT` remains the scalar-valued degree-zero theory, while `CohFT`
+is valued in an abstract `StableCurveCohomology`. The constant target connects
+the two interfaces and serves as their regression model.
 
 ## Notes
 

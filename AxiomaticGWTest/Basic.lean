@@ -84,4 +84,88 @@ example {R A : Type*} [CommRing R] [CommRing A] [Algebra R A]
 
 end CommFrobeniusAlgebra
 
+namespace FullCohFT
+
+/-- The constant stable-curve system is concentrated in codimension zero. -/
+example (r : ℚ) : r ∈ AxiomaticGW.constantDegree ℚ 0 := by
+  simp [AxiomaticGW.constantDegree]
+
+/-- Scalar topological correlators become the classes of the full CohFT over
+the constant target. -/
+example {V : Type*} [AddCommGroup V] [Module ℚ V]
+    [Module.Free ℚ V] [Module.Finite ℚ V]
+    (T : AxiomaticGW.TopologicalCohFT ℚ V) :
+    T.toConstantCohFT.omega 0 (Fin 3) AxiomaticGW.StableArity.zero_fin_three =
+      T.omega 0 (Fin 3) AxiomaticGW.StableArity.zero_fin_three := by
+  rfl
+
+/-- Relabelling is exposed by the converted full CohFT. -/
+example {V : Type*} [AddCommGroup V] [Module ℚ V]
+    [Module.Free ℚ V] [Module.Finite ℚ V]
+    (T : AxiomaticGW.TopologicalCohFT ℚ V) (e : Fin 3 ≃ Fin 3) :
+    ((AxiomaticGW.constantStableCurveCohomology ℚ).rename 0
+      (Fin 3) (Fin 3) AxiomaticGW.StableArity.zero_fin_three
+      AxiomaticGW.StableArity.zero_fin_three e).toLinearMap.compMultilinearMap
+        ((T.toConstantCohFT.omega 0 (Fin 3)
+          AxiomaticGW.StableArity.zero_fin_three).domDomCongr e) =
+      T.toConstantCohFT.omega 0 (Fin 3)
+        AxiomaticGW.StableArity.zero_fin_three := by
+  exact T.toConstantCohFT.relabel 0 (Fin 3) (Fin 3)
+    AxiomaticGW.StableArity.zero_fin_three
+    AxiomaticGW.StableArity.zero_fin_three e
+
+/-- The converted full CohFT exposes nonseparating gluing with a
+cohomology-valued target. -/
+example {V : Type*} [AddCommGroup V] [Module ℚ V]
+    [Module.Free ℚ V] [Module.Finite ℚ V]
+    (T : AxiomaticGW.TopologicalCohFT ℚ V) (g : ℕ) (S : Type) [Fintype S]
+    (h : AxiomaticGW.StableArity (g + 1) S) :
+    T.pairing.selfContractTarget
+        ((T.toConstantCohFT.omega g (Option (Option S))
+          (AxiomaticGW.StableArity.double_option_iff.mpr h)).domDomCongr
+            (AxiomaticGW.doubleOptionEquiv S)) =
+      LinearMap.compMultilinearMap
+        ((AxiomaticGW.constantStableCurveCohomology ℚ).nonseparating g S h).toLinearMap
+        (T.toConstantCohFT.omega (g + 1) S h) := by
+  exact T.toConstantCohFT.nonseparating g S h
+
+/-- Flat-unit insertion survives conversion to the full CohFT. -/
+example {V : Type*} [AddCommGroup V] [Module ℚ V]
+    [Module.Free ℚ V] [Module.Finite ℚ V]
+    (T : AxiomaticGW.TopologicalCohFT ℚ V) (g : ℕ) (S : Type) [Fintype S]
+    (h : AxiomaticGW.StableArity g S) (a : S → V) :
+    T.toConstantCohFT.omega g (Option S) (AxiomaticGW.StableArity.option h)
+        (fun | none => T.unit | some s => a s) =
+      (AxiomaticGW.constantStableCurveCohomology ℚ).forget g S h
+        (T.toConstantCohFT.omega g S h a) := by
+  exact T.toConstantCohFT.unit_insert g S h a
+
+/-- Separating gluing survives conversion to the tensor-valued full CohFT. -/
+example {V : Type*} [AddCommGroup V] [Module ℚ V]
+    [Module.Free ℚ V] [Module.Finite ℚ V]
+    (T : AxiomaticGW.TopologicalCohFT ℚ V) (g₁ g₂ : ℕ)
+    (S U : Type) [Fintype S] [Fintype U]
+    (h₁ : AxiomaticGW.StableArity g₁ (Option S))
+    (h₂ : AxiomaticGW.StableArity g₂ (Option U)) :
+    T.pairing.pairContractTarget
+        (T.toConstantCohFT.omega g₁ (Option S) h₁)
+        (T.toConstantCohFT.omega g₂ (Option U) h₂) =
+      LinearMap.compMultilinearMap
+        ((AxiomaticGW.constantStableCurveCohomology ℚ).separating
+          g₁ g₂ S U h₁ h₂).toLinearMap
+        (T.toConstantCohFT.omega (g₁ + g₂) (S ⊕ U)
+          (AxiomaticGW.StableArity.separating h₁ h₂)) := by
+  exact T.toConstantCohFT.separating g₁ g₂ S U h₁ h₂
+
+/-- Conversion to the full constant model and back preserves all scalar
+correlators. -/
+example {V : Type*} [AddCommGroup V] [Module ℚ V]
+    [Module.Free ℚ V] [Module.Finite ℚ V]
+    (T : AxiomaticGW.TopologicalCohFT ℚ V) (g : ℕ) (S : Type) [Fintype S]
+    (h : AxiomaticGW.StableArity g S) :
+    T.toConstantCohFT.toTopologicalCohFT.omega g S h = T.omega g S h := by
+  simp
+
+end FullCohFT
+
 end AxiomaticGWTest

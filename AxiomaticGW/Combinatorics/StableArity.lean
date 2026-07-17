@@ -27,6 +27,12 @@ def StableArity (g : ℕ) (S : Type*) [Fintype S] : Prop :=
 
 namespace StableArity
 
+/-- Stability is invariant under an equivalence of finite label types. -/
+theorem equiv {g : ℕ} {S T : Type*} [Fintype S] [Fintype T]
+    (e : S ≃ T) : StableArity g S ↔ StableArity g T := by
+  simp only [StableArity]
+  rw [Fintype.card_congr e]
+
 /-- Three genus-zero markings form a stable arity. -/
 theorem zero_fin_three : StableArity 0 (Fin 3) := by
   simp [StableArity]
@@ -42,6 +48,13 @@ condition. -/
 theorem sum_fin_two_iff {g : ℕ} {S : Type*} [Fintype S] :
     StableArity g (S ⊕ Fin 2) ↔ StableArity (g + 1) S := by
   simp only [StableArity, Fintype.card_sum, Fintype.card_fin]
+  omega
+
+/-- Two nested optional markings give the same stability condition as adding a
+handle and retaining the original labels. -/
+theorem double_option_iff {g : ℕ} {S : Type*} [Fintype S] :
+    StableArity g (Option (Option S)) ↔ StableArity (g + 1) S := by
+  simp only [StableArity, Fintype.card_option]
   omega
 
 /-- Stable component arities give a stable arity after separating gluing. -/
