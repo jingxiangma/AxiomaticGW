@@ -19,4 +19,6 @@ The numbering agrees with the phases in the [project-wide milestone roadmap](../
 | M9 | [All-genus potentials and equations](M09PotentialsAndEquations.md) |
 | M10 | [Geometric realization](M10GeometricRealization.md) |
 
+The focused note [The point target and stable-curve intersection theory](PointTargetAndStableCurves.md) gives the first universal regression case beyond the constant degree-zero model and records the all-genus DVV formula.
+
 The canonical mapping from mathematical sections to Lean modules is maintained in the [mathematics-to-Lean map](../MathematicsToLean.md). Dated implementation status and verification evidence belong in the [`implementation progress record`](../milestones/ImplementationProgress.md), not in these mathematical notes.

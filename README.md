@@ -4,9 +4,9 @@ Lean formalization of the algebraic foundations of axiomatic Gromov--Witten theo
 
 The repository is the home of the full project, developed in verified layers. The Frobenius/TFT and full CohFT foundations are implemented, as are the axiomatic GW interfaces for tautological ancestors, positive effective curve classes, beta-resolved primary classes, Novikov coefficients, quantum-product laws, stable-map descendants, descendant--ancestor comparison, formal potentials, Laurent total free energies, and the abstract virtual-realization boundary.
 
-> **Project status:** active, research-stage development. The axiomatic interfaces compile without `sorry` or `admit`. Concrete geometric stable-map instances, automatic construction of a big quantum family from a particular GW theory, and differential forms of all potential equations remain future theorem and realization work.
+> **Project status:** active, research-stage development. The axiomatic interfaces compile without `sorry` or `admit`. Coefficientwise small WDVV and associativity, invariant-defined potentials, the formal big product with its small specialization, and the point-target stable-curve block are implemented. Concrete geometric stable-map and stable-curve instances remain future realization work.
 
-> **Scope:** The planned stable-curve target is restricted to even cohomology.
+> **Scope:** Stable-curve targets are abstract even graded cohomology algebras and are not assumed finite free. Novikov completion is therefore coefficientwise for cohomology-valued classes; numerical coefficients and the finite-free state space carry the completed convolution operations.
 
 ## Project progress
 
@@ -102,12 +102,17 @@ AxiomaticGW/
 
   GW/
     Basic.lean                 # beta-resolved, full all-genus primary theory
-    QuantumProduct.lean
+    QuantumProduct.lean        # derived small WDVV and associativity
     Constant.lean              # beta-zero reference model
+    FormalQuantumProduct.lean  # formal big product and small specialization
     Descendants/
       Basic.lean               # stable-map descendant classes
       Comparison.lean          # descendants versus ancestors
       Equations.lean           # string, dilaton, divisor law package
+      Potentials.lean          # invariant-defined descendant/ancestor series
+
+  Point/
+    Descendants.lean           # stable-curve intersections and DVV relation
 
   Geometry/
     VirtualGWPackage.lean
@@ -160,6 +165,7 @@ The geometric oriented bordism category is not formalized: `TopologicalCorrelato
 - [Mathematics-to-Lean map](notes/MathematicsToLean.md)
 - [Implementation progress record](notes/milestones/ImplementationProgress.md)
 - [The mathematics and goals of AxiomaticGW](notes/mathematics/ProjectMathematicsAndGoals.md)
+- [The point target and stable-curve intersection theory](notes/mathematics/PointTargetAndStableCurves.md)
 - [Mathematics notes for M1--M10](notes/mathematics/README.md)
 - [Roadmap to axiomatic Gromov--Witten theory](notes/milestones/AxiomaticGWRoadmap.md)
 - [Completed topological field theory milestones](notes/milestones/TopologicalTFTMilestones.md)

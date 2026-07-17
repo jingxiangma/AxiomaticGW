@@ -6,14 +6,15 @@ Authors: JMA
 module
 
 public import AxiomaticGW.Coefficients.Novikov
+public import AxiomaticGW.CohFT.Frobenius
 public import AxiomaticGW.GW.Basic
 
 /-!
 # Quantum products
 
 The curve-class theory determines one three-point product coefficient for each
-effective class. A quantum-product family packages the resulting small product
-and its big deformations; its WDVV identity implies associativity.
+effective class. Separating gluing and the four-point boundary relation imply
+coefficientwise WDVV and associativity of the resulting small quantum product.
 -/
 
 @[expose] public section
@@ -28,6 +29,9 @@ variable {R V B : Type u} [CommRing R] [Algebra ℚ R]
   [AddCommGroup V] [Module R V] [Module.Free R V] [Module.Finite R V]
   [AddCancelCommMonoid B] {D : EffectiveCurveMonoid B}
   {C : StableCurveCohomology R}
+
+private def optionFinTwoEquivFinThree : Option (Fin 2) ≃ Fin 3 :=
+  (finSuccEquiv 2).symm
 
 /-- The scalar genus-zero three-point class in curve class `beta`. -/
 noncomputable def threePoint (Omega : CurveClassGW R V B D C)
@@ -67,75 +71,431 @@ theorem smallProductSeries_apply (Omega : CurveClassGW R V B D C)
     Omega.smallProductSeries G x y beta =
       Omega.smallProductCoefficient G beta x y := rfl
 
-end CurveClassGW
+/-- The two four-point boundary presentations agree after summing over all
+splittings of a fixed curve class. This is coefficientwise, cohomology-valued
+WDVV. -/
+theorem pairContractTarget_wdvv (Omega : CurveClassGW R V B D C)
+    (G : GenusZeroGeometry C) (beta : B) :
+    ((∑ split ∈ D.splittings beta,
+        Omega.pairing.pairContractTarget
+          (Omega.omega 0 (Option (Fin 2))
+            StableArity.zero_option_fin_two split.1)
+          (Omega.omega 0 (Option (Fin 2))
+            StableArity.zero_option_fin_two split.2)).domDomCongr
+      wdvvPermutation) =
+      ∑ split ∈ D.splittings beta,
+        Omega.pairing.pairContractTarget
+          (Omega.omega 0 (Option (Fin 2))
+            StableArity.zero_option_fin_two split.1)
+          (Omega.omega 0 (Option (Fin 2))
+            StableArity.zero_option_fin_two split.2) := by
+  ext a
+  simp only [MultilinearMap.domDomCongr_apply]
+  rw [Omega.separating]
+  simp only [LinearMap.compMultilinearMap_apply]
+  have hrel := congrArg (fun f ↦ f a)
+    (Omega.relabel 0 (Fin 2 ⊕ Fin 2) (Fin 2 ⊕ Fin 2)
+      (StableArity.separating StableArity.zero_option_fin_two
+        StableArity.zero_option_fin_two)
+      (StableArity.separating StableArity.zero_option_fin_two
+        StableArity.zero_option_fin_two) wdvvPermutation beta)
+  change C.rename 0 (Fin 2 ⊕ Fin 2) (Fin 2 ⊕ Fin 2)
+      (StableArity.separating StableArity.zero_option_fin_two
+        StableArity.zero_option_fin_two)
+      (StableArity.separating StableArity.zero_option_fin_two
+        StableArity.zero_option_fin_two) wdvvPermutation
+        (Omega.omega 0 (Fin 2 ⊕ Fin 2)
+          (StableArity.separating StableArity.zero_option_fin_two
+            StableArity.zero_option_fin_two) beta (a ∘ wdvvPermutation)) =
+    Omega.omega 0 (Fin 2 ⊕ Fin 2)
+      (StableArity.separating StableArity.zero_option_fin_two
+        StableArity.zero_option_fin_two) beta a at hrel
+  have hboundary := congrArg
+    (fun f ↦ f (Omega.omega 0 (Fin 2 ⊕ Fin 2)
+      (StableArity.separating StableArity.zero_option_fin_two
+        StableArity.zero_option_fin_two) beta (a ∘ wdvvPermutation)))
+    G.mbarZeroFourBoundary
+  exact hboundary.symm.trans
+    (congrArg (C.separating 0 0 (Fin 2) (Fin 2)
+      StableArity.zero_option_fin_two StableArity.zero_option_fin_two) hrel)
 
-/-- A small quantum product and its big deformations, expressed over any
-coefficient ring. WDVV is kept in its four-input metric form. -/
-structure QuantumProductFamily (Lambda W : Type*) [CommRing Lambda]
-    [AddCommGroup W] [Module Lambda W]
-    (pairing : SymmetricPerfectPairing Lambda W) where
-  /-- Product at the deformation point `t`; `t = 0` is the small product. -/
-  product : W → W →ₗ[Lambda] W →ₗ[Lambda] W
-  /-- Flat identity. -/
-  unit : W
-  /-- Quantum products are commutative. -/
-  product_comm : ∀ t x y, product t x y = product t y x
-  /-- The flat identity remains a unit at every deformation point. -/
-  unit_product : ∀ t x, product t unit x = x
-  /-- Invariance of the metric. -/
-  pairing_product : ∀ t x y z,
-    pairing.form (product t x y) z = pairing.form x (product t y z)
-  /-- WDVV in the two boundary presentations of the four-point function. -/
-  wdvv : ∀ t x y z w,
-    pairing.form (product t x y) (product t z w) =
-      pairing.form (product t x z) (product t y w)
+/-- The scalar three-point coefficient is invariant under relabelling. -/
+theorem threePoint_relabel (Omega : CurveClassGW R V B D C)
+    (G : GenusZeroGeometry C) (beta : B) (e : Equiv.Perm (Fin 3)) :
+    (Omega.threePoint G beta).domDomCongr e = Omega.threePoint G beta := by
+  ext a
+  have h := congrArg (fun f ↦ f a)
+    (Omega.relabel 0 (Fin 3) (Fin 3) StableArity.zero_fin_three
+      StableArity.zero_fin_three e beta)
+  change C.rename 0 (Fin 3) (Fin 3) StableArity.zero_fin_three
+      StableArity.zero_fin_three e
+        (Omega.omega 0 (Fin 3) StableArity.zero_fin_three beta (a ∘ e)) =
+    Omega.omega 0 (Fin 3) StableArity.zero_fin_three beta a at h
+  change G.mbarZeroThree
+      (Omega.omega 0 (Fin 3) StableArity.zero_fin_three beta (a ∘ e)) =
+    G.mbarZeroThree
+      (Omega.omega 0 (Fin 3) StableArity.zero_fin_three beta a)
+  exact (G.mbarZeroThree_rename e _).symm.trans
+    (congrArg G.mbarZeroThree h)
 
-namespace QuantumProductFamily
+/-- Symmetry of the first two inputs of a three-point GW coefficient. -/
+theorem threePoint_swap_first (Omega : CurveClassGW R V B D C)
+    (G : GenusZeroGeometry C) (beta : B) (x y z : V) :
+    Omega.threePoint G beta (Fin.cons x (Fin.cons y fun _ ↦ z)) =
+      Omega.threePoint G beta (Fin.cons y (Fin.cons x fun _ ↦ z)) := by
+  let a : Fin 3 → V := Fin.cons x (Fin.cons y fun _ ↦ z)
+  have h := congrArg (fun f ↦ f a)
+    (Omega.threePoint_relabel G beta (Equiv.swap 0 1))
+  change Omega.threePoint G beta (a ∘ Equiv.swap 0 1) =
+    Omega.threePoint G beta a at h
+  rw [← h]
+  congr 1
+  funext i
+  fin_cases i <;> rfl
 
-variable {Lambda W : Type*} [CommRing Lambda]
-  [AddCommGroup W] [Module Lambda W]
-  {pairing : SymmetricPerfectPairing Lambda W}
+/-- Symmetry of the last two inputs of a three-point GW coefficient. -/
+theorem threePoint_swap_last (Omega : CurveClassGW R V B D C)
+    (G : GenusZeroGeometry C) (beta : B) (x y z : V) :
+    Omega.threePoint G beta (Fin.cons x (Fin.cons y fun _ ↦ z)) =
+      Omega.threePoint G beta (Fin.cons x (Fin.cons z fun _ ↦ y)) := by
+  let a : Fin 3 → V := Fin.cons x (Fin.cons y fun _ ↦ z)
+  have h := congrArg (fun f ↦ f a)
+    (Omega.threePoint_relabel G beta (Equiv.swap 1 2))
+  change Omega.threePoint G beta (a ∘ Equiv.swap 1 2) =
+    Omega.threePoint G beta a at h
+  rw [← h]
+  congr 1
+  funext i
+  fin_cases i <;> rfl
 
-/-- The flat identity is also a right identity by commutativity. -/
-theorem product_unit (Q : QuantumProductFamily Lambda W pairing)
-    (t x : W) : Q.product t x Q.unit = x := by
-  rw [Q.product_comm t x Q.unit, Q.unit_product t x]
+/-- Every fixed curve-class product coefficient is commutative. -/
+theorem smallProductCoefficient_comm
+    (Omega : CurveClassGW R V B D C) (G : GenusZeroGeometry C)
+    (beta : B) (x y : V) :
+    Omega.smallProductCoefficient G beta x y =
+      Omega.smallProductCoefficient G beta y x := by
+  apply Omega.pairing.toDual.injective
+  ext z
+  simp only [Omega.pairing.toDual_apply,
+    Omega.pairing_smallProductCoefficient]
+  exact Omega.threePoint_swap_first G beta x y z
 
-/-- WDVV and metric nondegeneracy imply associativity at every big quantum
-deformation point. -/
-theorem product_assoc (Q : QuantumProductFamily Lambda W pairing)
-    (t x y z : W) :
-    Q.product t (Q.product t x y) z =
-      Q.product t x (Q.product t y z) := by
-  apply pairing.toDual.injective
+/-- Frobenius invariance holds coefficientwise. -/
+theorem pairing_smallProductCoefficient_assoc
+    (Omega : CurveClassGW R V B D C) (G : GenusZeroGeometry C)
+    (beta : B) (x y z : V) :
+    Omega.pairing.form (Omega.smallProductCoefficient G beta x y) z =
+      Omega.pairing.form x (Omega.smallProductCoefficient G beta y z) := by
+  rw [Omega.pairing_smallProductCoefficient]
+  rw [Omega.pairing.isSymm.eq]
+  rw [Omega.pairing_smallProductCoefficient]
+  exact (Omega.threePoint_swap_first G beta x y z).trans
+    (Omega.threePoint_swap_last G beta y x z)
+
+/-- The beta-zero three-point coefficient with a unit insertion is the
+metric. -/
+theorem threePoint_unit_zero (Omega : CurveClassGW R V B D C)
+    (G : GenusZeroGeometry C) (x y : V) :
+    Omega.threePoint G 0
+        (Fin.cons Omega.unit (Fin.cons x fun _ ↦ y)) =
+      Omega.pairing.form x y := by
+  let a : Fin 3 → V := Fin.cons Omega.unit (Fin.cons x fun _ ↦ y)
+  have h := congrArg (fun f ↦ f a)
+    (Omega.relabel 0 (Option (Fin 2)) (Fin 3)
+      StableArity.zero_option_fin_two StableArity.zero_fin_three
+      optionFinTwoEquivFinThree 0)
+  simp only [threePoint, LinearMap.compMultilinearMap_apply]
+  change G.mbarZeroThree
+      (Omega.omega 0 (Fin 3) StableArity.zero_fin_three 0 a) = _
+  have hG := congrArg G.mbarZeroThree h
+  rw [← hG]
+  have ha : a ∘ optionFinTwoEquivFinThree =
+      (fun | none => Omega.unit | some i => ![x, y] i) := by
+    funext i
+    rcases i with _ | i
+    · rfl
+    · fin_cases i <;> rfl
+  simp only [LinearMap.compMultilinearMap_apply,
+    MultilinearMap.domDomCongr_apply]
+  rw [show (fun i ↦ a (optionFinTwoEquivFinThree i)) =
+    (fun | none => Omega.unit | some i => ![x, y] i) by exact ha]
+  exact (congrArg
+    (fun q ↦ G.mbarZeroThree
+      (C.rename 0 (Option (Fin 2)) (Fin 3)
+        StableArity.zero_option_fin_two StableArity.zero_fin_three
+        optionFinTwoEquivFinThree q))
+    (Omega.normalization_zero ![x, y])).trans (by simp)
+
+/-- Positive curve-class three-point coefficients vanish after a unit
+insertion. -/
+theorem threePoint_unit_of_ne (Omega : CurveClassGW R V B D C)
+    (G : GenusZeroGeometry C) {beta : B} (hbeta : beta ≠ 0)
+    (x y : V) :
+    Omega.threePoint G beta
+        (Fin.cons Omega.unit (Fin.cons x fun _ ↦ y)) = 0 := by
+  let a : Fin 3 → V := Fin.cons Omega.unit (Fin.cons x fun _ ↦ y)
+  have h := congrArg (fun f ↦ f a)
+    (Omega.relabel 0 (Option (Fin 2)) (Fin 3)
+      StableArity.zero_option_fin_two StableArity.zero_fin_three
+      optionFinTwoEquivFinThree beta)
+  simp only [threePoint, LinearMap.compMultilinearMap_apply]
+  change G.mbarZeroThree
+      (Omega.omega 0 (Fin 3) StableArity.zero_fin_three beta a) = 0
+  have hG := congrArg G.mbarZeroThree h
+  rw [← hG]
+  have ha : a ∘ optionFinTwoEquivFinThree =
+      (fun | none => Omega.unit | some i => ![x, y] i) := by
+    funext i
+    rcases i with _ | i
+    · rfl
+    · fin_cases i <;> rfl
+  simp only [LinearMap.compMultilinearMap_apply,
+    MultilinearMap.domDomCongr_apply]
+  rw [show (fun i ↦ a (optionFinTwoEquivFinThree i)) =
+    (fun | none => Omega.unit | some i => ![x, y] i) by exact ha]
+  exact (congrArg
+    (fun q ↦ G.mbarZeroThree
+      (C.rename 0 (Option (Fin 2)) (Fin 3)
+        StableArity.zero_option_fin_two StableArity.zero_fin_three
+        optionFinTwoEquivFinThree q))
+    (Omega.normalization_nonzero beta hbeta ![x, y])).trans (by simp)
+
+/-- The beta-zero product coefficient has the flat identity. -/
+theorem unit_smallProductCoefficient_zero
+    (Omega : CurveClassGW R V B D C) (G : GenusZeroGeometry C)
+    (x : V) : Omega.smallProductCoefficient G 0 Omega.unit x = x := by
+  apply Omega.pairing.toDual.injective
+  ext y
+  rw [Omega.pairing.toDual_apply, Omega.pairing.toDual_apply,
+    Omega.pairing_smallProductCoefficient]
+  exact Omega.threePoint_unit_zero G x y
+
+/-- Positive product coefficients vanish after inserting the flat identity. -/
+theorem unit_smallProductCoefficient_of_ne
+    (Omega : CurveClassGW R V B D C) (G : GenusZeroGeometry C)
+    {beta : B} (hbeta : beta ≠ 0) (x : V) :
+    Omega.smallProductCoefficient G beta Omega.unit x = 0 := by
+  apply Omega.pairing.toDual.injective
+  ext y
+  rw [Omega.pairing.toDual_apply, Omega.pairing.toDual_apply,
+    Omega.pairing_smallProductCoefficient, map_zero]
+  exact Omega.threePoint_unit_of_ne G hbeta x y
+
+/-- The completed small-product series has only its classical coefficient
+after inserting the flat identity. -/
+theorem smallProductSeries_unit
+    (Omega : CurveClassGW R V B D C) (G : GenusZeroGeometry C)
+    [DecidableEq B] (x : V) (beta : B) :
+    Omega.smallProductSeries G Omega.unit x beta =
+      if beta = 0 then x else 0 := by
+  classical
+  by_cases hbeta : beta = 0
+  · subst beta
+    rw [if_pos rfl, Omega.smallProductSeries_apply,
+      Omega.unit_smallProductCoefficient_zero G]
+  · rw [if_neg hbeta, Omega.smallProductSeries_apply,
+      Omega.unit_smallProductCoefficient_of_ne G hbeta]
+
+private noncomputable def threePointScalar (G : GenusZeroGeometry C) :
+    C.H 0 (Option (Fin 2)) →ₐ[R] R :=
+  G.mbarZeroThree.toAlgHom.comp
+    (C.rename 0 (Option (Fin 2)) (Fin 3) StableArity.zero_option_fin_two
+      StableArity.zero_fin_three optionFinTwoEquivFinThree).toAlgHom
+
+private theorem threePointScalar_omega_apply
+    (Omega : CurveClassGW R V B D C) (G : GenusZeroGeometry C)
+    (beta : B) (u x y : V) :
+    threePointScalar G
+        (Omega.omega 0 (Option (Fin 2)) StableArity.zero_option_fin_two beta
+          (fun | none => u | some i => ![x, y] i)) =
+      Omega.threePoint G beta (Fin.cons u (Fin.cons x fun _ ↦ y)) := by
+  let a : Fin 3 → V := Fin.cons u (Fin.cons x fun _ ↦ y)
+  have h := congrArg (fun f ↦ f a)
+    (Omega.relabel 0 (Option (Fin 2)) (Fin 3)
+      StableArity.zero_option_fin_two StableArity.zero_fin_three
+      optionFinTwoEquivFinThree beta)
+  simp only [threePointScalar, threePoint, AlgHom.comp_apply,
+    LinearMap.compMultilinearMap_apply]
+  change G.mbarZeroThree
+      (C.rename 0 (Option (Fin 2)) (Fin 3) StableArity.zero_option_fin_two
+        StableArity.zero_fin_three optionFinTwoEquivFinThree
+        (Omega.omega 0 (Option (Fin 2)) StableArity.zero_option_fin_two beta
+          (fun | none => u | some i => ![x, y] i))) =
+    G.mbarZeroThree
+      (Omega.omega 0 (Fin 3) StableArity.zero_fin_three beta a)
+  change C.rename 0 (Option (Fin 2)) (Fin 3)
+      StableArity.zero_option_fin_two StableArity.zero_fin_three
+      optionFinTwoEquivFinThree
+        (Omega.omega 0 (Option (Fin 2)) StableArity.zero_option_fin_two beta
+          (a ∘ optionFinTwoEquivFinThree)) =
+    Omega.omega 0 (Fin 3) StableArity.zero_fin_three beta a at h
+  have ha : a ∘ optionFinTwoEquivFinThree =
+      (fun | none => u | some i => ![x, y] i) := by
+    funext i
+    rcases i with _ | i
+    · rfl
+    · fin_cases i <;> rfl
+  rw [ha] at h
+  exact congrArg G.mbarZeroThree h
+
+private theorem scalarized_pairContract_products
+    (Omega : CurveClassGW R V B D C) (G : GenusZeroGeometry C)
+    (beta₁ beta₂ : B) (x y z w : V) :
+    (Algebra.TensorProduct.lift (threePointScalar G) (threePointScalar G)
+      (fun _ _ ↦ .all _ _))
+        (Omega.pairing.pairContractTarget
+          (Omega.omega 0 (Option (Fin 2))
+            StableArity.zero_option_fin_two beta₁)
+          (Omega.omega 0 (Option (Fin 2))
+            StableArity.zero_option_fin_two beta₂)
+          (Sum.elim ![x, y] ![z, w])) =
+      Omega.pairing.form
+        (Omega.smallProductCoefficient G beta₁ x y)
+        (Omega.smallProductCoefficient G beta₂ z w) := by
+  change ((Algebra.TensorProduct.lift (threePointScalar G) (threePointScalar G)
+      (fun _ _ ↦ .all _ _)).toLinearMap.compMultilinearMap
+        (Omega.pairing.pairContractTarget
+          (Omega.omega 0 (Option (Fin 2))
+            StableArity.zero_option_fin_two beta₁)
+          (Omega.omega 0 (Option (Fin 2))
+            StableArity.zero_option_fin_two beta₂)))
+      (Sum.elim ![x, y] ![z, w]) = _
+  rw [Omega.pairing.pairContractTarget_comp_lift]
+  rw [SymmetricPerfectPairing.pairContract_apply,
+    SymmetricPerfectPairing.contractTwo_apply]
+  rw [← Omega.pairing.contract_toDual_mul_toDual
+    (Omega.smallProductCoefficient G beta₁ x y)
+    (Omega.smallProductCoefficient G beta₂ z w)]
+  congr 1
+  ext u v
+  simp only [TensorProduct.AlgebraTensorModule.curry_apply,
+    TensorProduct.curry_apply, LinearMap.restrictScalars_apply,
+    TensorProduct.lift.tmul,
+    SymmetricPerfectPairing.finTwoToBilin_apply,
+    MultilinearMap.currySum_apply, MultilinearMap.domDomCongr_apply,
+    MultilinearMap.domCoprod_apply, LinearMap.compMultilinearMap_apply,
+    LinearMap.compl₂_apply, LinearMap.mul'_apply, LinearMap.comp_apply,
+    Omega.pairing.toDual_apply]
+  have hleft :
+      (fun i₁ ↦ Sum.rec (Sum.elim ![x, y] ![z, w])
+        (Fin.cons u fun _ ↦ v)
+          (SymmetricPerfectPairing.separatingLabelsEquiv (Fin 2) (Fin 2)
+            (.inl i₁))) =
+        (fun | none => u | some i => ![x, y] i) := by
+    funext i
+    rcases i with _ | i
+    · rfl
+    · fin_cases i <;> rfl
+  have hright :
+      (fun i₂ ↦ Sum.rec (Sum.elim ![x, y] ![z, w])
+        (Fin.cons u fun _ ↦ v)
+          (SymmetricPerfectPairing.separatingLabelsEquiv (Fin 2) (Fin 2)
+            (.inr i₂))) =
+        (fun | none => v | some i => ![z, w] i) := by
+    funext i
+    rcases i with _ | i
+    · rfl
+    · fin_cases i <;> rfl
+  rw [hleft, hright]
+  change threePointScalar G
+        (Omega.omega 0 (Option (Fin 2)) StableArity.zero_option_fin_two beta₁
+          (fun | none => u | some i => ![x, y] i)) *
+      threePointScalar G
+        (Omega.omega 0 (Option (Fin 2)) StableArity.zero_option_fin_two beta₂
+          (fun | none => v | some i => ![z, w] i)) =
+    Omega.pairing.form (Omega.smallProductCoefficient G beta₁ x y) u *
+      Omega.pairing.form (Omega.smallProductCoefficient G beta₂ z w) v
+  rw [threePointScalar_omega_apply, threePointScalar_omega_apply]
+  rw [Omega.threePoint_swap_first G beta₁ u x y,
+    Omega.threePoint_swap_last G beta₁ x u y,
+    ← Omega.pairing_smallProductCoefficient]
+  rw [Omega.threePoint_swap_first G beta₂ v z w,
+    Omega.threePoint_swap_last G beta₂ z v w,
+    ← Omega.pairing_smallProductCoefficient]
+
+/-- Scalar coefficientwise WDVV. The finite sums are exactly the coefficient
+of the two Novikov products at `beta`. -/
+theorem smallProductCoefficient_wdvv
+    (Omega : CurveClassGW R V B D C) (G : GenusZeroGeometry C)
+    (beta : B) (x y z w : V) :
+    (∑ split ∈ D.splittings beta,
+      Omega.pairing.form
+        (Omega.smallProductCoefficient G split.1 x y)
+        (Omega.smallProductCoefficient G split.2 z w)) =
+      ∑ split ∈ D.splittings beta,
+        Omega.pairing.form
+          (Omega.smallProductCoefficient G split.1 x z)
+          (Omega.smallProductCoefficient G split.2 y w) := by
+  let a : Fin 2 ⊕ Fin 2 → V := Sum.elim ![x, y] ![z, w]
+  have h := congrArg (fun f ↦ f a) (Omega.pairContractTarget_wdvv G beta)
+  have hscalar := congrArg
+    (Algebra.TensorProduct.lift (threePointScalar G) (threePointScalar G)
+      (fun _ _ ↦ .all _ _)) h
+  have ha : a ∘ wdvvPermutation = Sum.elim ![x, z] ![y, w] := by
+    funext i
+    rcases i with i | i <;> fin_cases i <;> rfl
+  simp only [MultilinearMap.domDomCongr_apply] at hscalar
+  rw [show (fun i ↦ a (wdvvPermutation i)) =
+    Sum.elim ![x, z] ![y, w] by exact ha] at hscalar
+  simp only [_root_.sum_apply] at hscalar
+  dsimp only [a] at hscalar
+  simpa only [map_sum, scalarized_pairContract_products] using hscalar.symm
+
+/-- Associativity of the small quantum product, stated at every Novikov
+coefficient. The two finite sums are the coefficients of `(x * y) * z` and
+`x * (y * z)`. -/
+theorem smallProductCoefficient_assoc
+    (Omega : CurveClassGW R V B D C) (G : GenusZeroGeometry C)
+    (beta : B) (x y z : V) :
+    (∑ split ∈ D.splittings beta,
+      Omega.smallProductCoefficient G split.2
+        (Omega.smallProductCoefficient G split.1 x y) z) =
+      ∑ split ∈ D.splittings beta,
+        Omega.smallProductCoefficient G split.2 x
+          (Omega.smallProductCoefficient G split.1 y z) := by
+  apply Omega.pairing.toDual.injective
   ext w
-  simp only [pairing.toDual_apply]
+  rw [Omega.pairing.toDual_apply, Omega.pairing.toDual_apply]
+  simp only [map_sum, LinearMap.sum_apply]
   calc
-    pairing.form (Q.product t (Q.product t x y) z) w =
-        pairing.form (Q.product t x y) (Q.product t z w) :=
-      Q.pairing_product t (Q.product t x y) z w
-    _ = pairing.form (Q.product t x y) (Q.product t w z) := by
-      rw [Q.product_comm t z w]
-    _ = pairing.form (Q.product t x w) (Q.product t y z) :=
-      Q.wdvv t x y w z
-    _ = pairing.form (Q.product t y z) (Q.product t x w) :=
-      by simpa using pairing.isSymm.eq (Q.product t x w) (Q.product t y z)
-    _ = pairing.form (Q.product t (Q.product t y z) x) w :=
-      (Q.pairing_product t (Q.product t y z) x w).symm
-    _ = pairing.form (Q.product t x (Q.product t y z)) w := by
-      rw [Q.product_comm t (Q.product t y z) x]
+    (∑ split ∈ D.splittings beta,
+        Omega.pairing.form
+          (Omega.smallProductCoefficient G split.2
+            (Omega.smallProductCoefficient G split.1 x y) z) w) =
+      ∑ split ∈ D.splittings beta,
+        Omega.pairing.form
+          (Omega.smallProductCoefficient G split.1 x y)
+          (Omega.smallProductCoefficient G split.2 z w) := by
+        apply Finset.sum_congr rfl
+        intro split _
+        exact Omega.pairing_smallProductCoefficient_assoc G split.2
+          (Omega.smallProductCoefficient G split.1 x y) z w
+    _ = ∑ split ∈ D.splittings beta,
+        Omega.pairing.form
+          (Omega.smallProductCoefficient G split.1 y z)
+          (Omega.smallProductCoefficient G split.2 x w) := by
+        rw [Omega.smallProductCoefficient_wdvv G beta y z x w]
+        apply Finset.sum_congr rfl
+        intro split _
+        rw [Omega.smallProductCoefficient_comm G split.1 y x]
+    _ = ∑ split ∈ D.splittings beta,
+        Omega.pairing.form
+          (Omega.smallProductCoefficient G split.2 x
+            (Omega.smallProductCoefficient G split.1 y z)) w := by
+        apply Finset.sum_congr rfl
+        intro split _
+        let q := Omega.smallProductCoefficient G split.1 y z
+        calc
+          Omega.pairing.form q
+              (Omega.smallProductCoefficient G split.2 x w) =
+              Omega.pairing.form
+                (Omega.smallProductCoefficient G split.2 q x) w :=
+            (Omega.pairing_smallProductCoefficient_assoc G split.2
+              q x w).symm
+          _ = Omega.pairing.form
+              (Omega.smallProductCoefficient G split.2 x q) w := by
+            rw [Omega.smallProductCoefficient_comm G split.2 q x]
 
-/-- The small quantum product is the family member at the origin. -/
-def smallProduct (Q : QuantumProductFamily Lambda W pairing) : W →ₗ[Lambda] W →ₗ[Lambda] W :=
-  Q.product 0
-
-/-- The small quantum product is associative. -/
-theorem smallProduct_assoc (Q : QuantumProductFamily Lambda W pairing)
-    (x y z : W) :
-    Q.smallProduct (Q.smallProduct x y) z =
-      Q.smallProduct x (Q.smallProduct y z) :=
-  Q.product_assoc 0 x y z
-
-end QuantumProductFamily
+end CurveClassGW
 
 end AxiomaticGW

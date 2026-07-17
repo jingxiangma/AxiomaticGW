@@ -25,8 +25,11 @@ The project is research-stage and follows the pinned Lean/mathlib version in `le
 - Positive locally finite effective curve monoids and finite curve-class splitting sets.
 - Graded, beta-resolved primary GW theories with virtual-degree, normalization, gluing, and optional divisor axioms, plus a beta-zero reference model.
 - The beta-preserving Novikov completion with proven convolution ring laws, monomials, and an injective finite monoid-algebra inclusion.
-- Fixed-beta three-point products and a small/big quantum-product family whose WDVV law implies associativity.
+- Fixed-beta three-point products with derived coefficientwise small WDVV, associativity, commutativity, and unit laws.
 - Distinct stable-map descendant and stable-curve ancestor classes with explicit boundary-corrected comparison.
 - Novikov-valued formal potentials, commuting formal partial derivatives, Laurent total free energies, and stable string, dilaton, and descendant divisor law interfaces.
+- Descendant and ancestor potentials constructed from invariants, stable-sector and directional differential operators, and the potential-level descendant--ancestor comparison.
+- The invariant-defined formal big quantum product and its proved zero-background specialization to the small product.
+- A point-target stable-curve block with psi intersection numbers, dimension vanishing, initial values, a WDVV check, and the all-genus DVV relation.
 - The abstract virtual-GW output package connecting future geometric constructions to the primary and descendant axiomatic layers.
 - Mathematical notes and a roadmap toward axiomatic Gromov--Witten theory.

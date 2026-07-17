@@ -11,9 +11,9 @@ public import AxiomaticGW.CohFT.Ancestors
 /-!
 # Curve-class-resolved primary Gromov--Witten theories
 
-The class family is coefficientwise in an effective curve class. It is not an
-ordinary CohFT until the Novikov-valued summation constructed in the next
-layer.
+The class family is coefficientwise in an effective curve class. Numerical
+and finite-free state-valued operations support Novikov completion, while an
+arbitrary cohomology target remains coefficientwise as specified by D14.
 -/
 
 @[expose] public section

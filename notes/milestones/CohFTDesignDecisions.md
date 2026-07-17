@@ -19,6 +19,7 @@ This document records the architectural decisions that should be settled before 
 | D11 | Is `H^0 = R` part of every cohomology system? | Use an optional `ConnectedDegreeZero` extension | **Settled** |
 | D12 | What validates the initial architecture? | End-to-end constant-system conversion and regression tests | **Settled** |
 | D13 | Which effective curve classes and Novikov completion are in scope? | A positive locally finite cancellative effective monoid with an additive energy | **Settled** |
+| D14 | How are cohomology-valued Novikov families completed? | Keep them coefficientwise; complete numerical coefficients and finite-free state spaces only | **Settled** |
 
 Here `Q`, `tensor`, and `H^(2d)` in the table denote `ℚ`, `⊗[R]`, and ordinary degree-`2d` cohomology respectively; ASCII is used in the table to keep its source readable.
 
@@ -116,7 +117,7 @@ The bare CohFT interface uses an ungraded finite-free module `V`, representing o
 
 An explicit `GradedStateSpace` equips the same `V` with a grading, together with homogeneity of the unit and degree compatibility of the pairing. `GradedCohFT` combines that reusable state-space data with a bare CohFT. In codimension grading, the Poincare pairing for a complex `m`-fold pairs complementary degrees whose sum is `m`.
 
-The curve-class-resolved GW structure reuses `GradedStateSpace` and adds the virtual-dimension rule on homogeneous insertions; this rule remains in the GW layer because its degree depends on the curve class `beta`. It does not extend `GradedCohFT`, because a fixed-beta family has convolutional separating gluing and becomes an ordinary CohFT only after Novikov summation. This distinction prevents Lean from asserting a mathematically false coefficientwise CohFT instance.
+The curve-class-resolved GW structure reuses `GradedStateSpace` and adds the virtual-dimension rule on homogeneous insertions; this rule remains in the GW layer because its degree depends on the curve class `beta`. It does not extend `GradedCohFT`, because a fixed-beta family has convolutional separating gluing. Decision D14 specifies the precise completed object obtained after Novikov packaging.
 
 ### D9. Initial coherence boundary
 
@@ -172,6 +173,12 @@ This hypothesis does not require `B` to be finite, finitely generated, free, or 
 
 The Lean package must expose only the energy map, positivity, and bounded-energy finiteness. Finite antidiagonals, truncations, the filtration, and convolution finiteness are derived theorems rather than additional fields. The finite-support monoid algebra embeds into the completed coefficient ring but is not the final coefficient type.
 
+### D14. Coefficientwise cohomology and completed states
+
+For `Lambda = NovikovSeries D R`, D13 makes convolution on `Lambda` and on coefficient families `B → V` finite in every fixed curve class. It does not identify an arbitrary family `B → H` with the algebraic scalar extension `Lambda tensor[R] H`: the latter contains only finite sums of pure tensors unless `H` satisfies an additional finiteness hypothesis. The separating target has the analogous mismatch between `B → (H1 tensor[R] H2)` and `(Lambda tensor[R] H1) tensor[Lambda] (Lambda tensor[R] H2)`.
+
+The project therefore keeps cohomology-valued GW classes coefficientwise in `CurveClassGW`. It completes numerical coefficients and the finite-free state space, where convolution is canonical, and derives quantum products and equations coefficientwise. It does not claim that every abstract stable-curve target produces an ordinary `CohFT` over `Lambda`. A future geometric target may add finite-free or completed-tensor hypotheses and prove that stronger construction separately.
+
 ## Decision status
 
-All pre-implementation decisions D1--D13 are settled. Reopen a decision only if implementation or an acceptance test exposes a concrete incompatibility.
+Decisions D1--D14 are settled. Reopen a decision only if implementation or an acceptance test exposes a concrete incompatibility.

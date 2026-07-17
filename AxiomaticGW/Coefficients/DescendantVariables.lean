@@ -87,6 +87,37 @@ theorem pderiv_comm {v w : Vars} (h : v ≠ w)
     Finsupp.single_eq_of_ne (Ne.symm h), add_zero, nsmul_eq_mul]
   ring
 
+/-- Formal partial derivatives commute for all pairs of variables. -/
+theorem pderiv_commute (v w : Vars) (f : MvPowerSeries Vars R) :
+    pderiv v (pderiv w f) = pderiv w (pderiv v f) := by
+  by_cases h : v = w
+  · subst w
+    rfl
+  · exact pderiv_comm h f
+
+/-- Apply formal partial derivatives in the order listed. -/
+noncomputable def iteratedPDeriv :
+    List Vars → MvPowerSeries Vars R →ₗ[R] MvPowerSeries Vars R
+  | [] => LinearMap.id
+  | v :: derivatives => (pderiv v).comp (iteratedPDeriv derivatives)
+
+@[simp]
+theorem iteratedPDeriv_nil (f : MvPowerSeries Vars R) :
+    iteratedPDeriv ([] : List Vars) f = f := rfl
+
+@[simp]
+theorem iteratedPDeriv_cons (v : Vars) (derivatives : List Vars)
+    (f : MvPowerSeries Vars R) :
+    iteratedPDeriv (v :: derivatives) f =
+      pderiv v (iteratedPDeriv derivatives f) := rfl
+
+/-- Adjacent formal derivatives may be exchanged. -/
+theorem iteratedPDeriv_swap (v w : Vars) (derivatives : List Vars)
+    (f : MvPowerSeries Vars R) :
+    iteratedPDeriv (v :: w :: derivatives) f =
+      iteratedPDeriv (w :: v :: derivatives) f :=
+  pderiv_commute v w (iteratedPDeriv derivatives f)
+
 end MvPowerSeries
 
 end AxiomaticGW

@@ -69,7 +69,7 @@ $$
 
 Formalize symmetry, the flat unit, splitting, genus reduction, grading, virtual dimension, effectivity, divisor data, and the appropriate degree-zero normalizations.
 
-`GradedStateSpace` factors the state-space grading, homogeneous unit, and degree compatibility of the pairing out of `GradedCohFT`. The coefficientwise `CurveClassGW` structure reuses that data without pretending to be an ordinary CohFT before Novikov summation; its `beta`-dependent virtual-dimension law belongs specifically to the GW layer.
+`GradedStateSpace` factors the state-space grading, homogeneous unit, and degree compatibility of the pairing out of `GradedCohFT`. The coefficientwise `CurveClassGW` structure reuses that data without pretending that an arbitrary cohomology target admits an algebraic Novikov scalar extension; its `beta`-dependent virtual-dimension law belongs specifically to the GW layer.
 
 **Status:** Complete for the primary axiomatic core. Positive locally finite effective classes, finite splittings, graded primary classes, relabelling, unit, separating and nonseparating gluing, normalization, virtual degree, negative-degree vanishing, and the optional primary divisor axiom are implemented. The beta-zero base-ring theory is the regression model.
 
@@ -79,7 +79,7 @@ Formalize symmetry, the flat unit, splitting, genus reduction, grading, virtual 
 
 Package the coefficientwise curve-class theory using the beta-preserving completed monoid ring fixed by D13. Define small and big quantum products and prove associativity and WDVV.
 
-**Status:** Core coefficient and product interfaces complete. `NovikovSeries` is the beta-preserving completed monoid ring, with proven commutative-ring laws, monomial multiplication, and an injective finite monoid-algebra map. Fixed-beta three-point products and Novikov-valued small-product coefficients are implemented. `QuantumProductFamily` packages small and big products and proves associativity from WDVV and metric invariance. Constructing a full big quantum family automatically from a particular `CurveClassGW` still requires the chosen insertion-variable potential and its WDVV theorem.
+**Status:** Complete for the coefficientwise scope fixed by D14. `NovikovSeries` is the beta-preserving completed monoid ring, with proven commutative-ring laws, monomial multiplication, and an injective finite monoid-algebra map. Fixed-beta products, scalar coefficientwise WDVV, and coefficientwise small-product associativity are derived directly from `CurveClassGW` gluing. The invariant-defined formal big product is implemented and specializes to the small product at zero background. Big WDVV and associativity at nonzero background remain a deliberate higher-point boundary extension rather than an unproved field of an abstract product structure.
 
 ## M8. Descendants and descendant--ancestor comparison
 
@@ -95,7 +95,7 @@ Introduce stable-map `psi`-classes separately from stable-curve `psi`-classes. D
 
 Define genus expansions, descendant and ancestor genus potentials, and their total free energies. Prove string, dilaton, divisor, splitting, genus-reduction, and tautological relations from the corresponding abstract axioms. The exponential total potential is deferred until a theorem requires a mixed completion supporting its unbounded negative `hbar` powers.
 
-**Status:** Axiomatic interface complete. Novikov-valued multivariable formal potentials, commuting formal partial derivatives, descendant and ancestor genus potentials, honest Laurent-series total free energies, and their exact genus-coefficient theorems are implemented. Optional stable string, dilaton, and descendant divisor laws are bundled at correlator level; primary splitting and genus reduction remain the theorems already stored in `CurveClassGW`. Translating every law into a differential identity for a concrete potential is future theorem work. The exponential total potential remains deliberately deferred.
+**Status:** Complete for the stable-sector axiomatic scope. Novikov-valued descendant and ancestor potentials are constructed from invariants with canonical occurrence labels and multiplicity-factorial normalization. Formal partial and iterated derivatives, stable-sector projection, directional insertion derivatives, honest Laurent-series total free energies, and the potential-level descendant--ancestor comparison are implemented. Optional stable string, dilaton, and descendant divisor laws remain bundled at correlator level because global PDEs require additional unstable conventions. The point-target block identifies descendants with stable-curve psi intersections and states the all-genus DVV relation explicitly. The exponential total potential remains deliberately deferred.
 
 ## M10. Geometric realization
 
@@ -115,7 +115,7 @@ project setup
   -> full all-genus CohFT
   -> tautological and ancestor theory
   -> curve-class-resolved GW axioms
-  -> Novikov CohFT and quantum products
+  -> Novikov coefficients and quantum products
   -> descendants and descendant--ancestor comparison
   -> all-genus potentials and equations
   -> optional geometric realization

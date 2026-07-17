@@ -9,9 +9,11 @@ public import AxiomaticGW.Frobenius.Examples
 public import AxiomaticGW.CohFT.Ancestors
 public import AxiomaticGW.CohFT.Classification
 public import AxiomaticGW.GW.Constant
-public import AxiomaticGW.GW.QuantumProduct
+public import AxiomaticGW.GW.Descendants.Equations
+public import AxiomaticGW.GW.FormalQuantumProduct
 public import AxiomaticGW.Geometry.VirtualGWPackage
 public import AxiomaticGW.Linear.Contraction
+public import AxiomaticGW.Point.Descendants
 public import AxiomaticGW.TFT.Correlator
 public import AxiomaticGW.TFT.Classification
 public import AxiomaticGW.TFT.Examples

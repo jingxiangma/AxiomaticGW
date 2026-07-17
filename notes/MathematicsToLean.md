@@ -61,8 +61,8 @@ The [implementation progress record](milestones/ImplementationProgress.md) conta
 **Mathematical note:** [M7. Novikov coefficients and quantum products](mathematics/M07NovikovAndQuantumProducts.md).
 
 - The beta-preserving completion, finite-antidiagonal convolution, monomials, and finite-support inclusion correspond to [`Coefficients/Novikov.lean`](../AxiomaticGW/Coefficients/Novikov.lean), principally `NovikovSeries`, `coeff_mul`, `monomial_mul_monomial`, and `ofMonoidAlgebra`.
-- Fixed-beta three-point products and the small/big WDVV interface correspond to [`GW/QuantumProduct.lean`](../AxiomaticGW/GW/QuantumProduct.lean), principally `CurveClassGW.smallProductCoefficient`, `smallProductSeries`, `QuantumProductFamily`, and `QuantumProductFamily.product_assoc`.
-- The automatic construction of a full big quantum family from a concrete insertion-variable potential remains downstream theorem work.
+- Fixed-beta three-point products and derived coefficientwise WDVV and associativity correspond to [`GW/QuantumProduct.lean`](../AxiomaticGW/GW/QuantumProduct.lean), principally `CurveClassGW.smallProductCoefficient`, `smallProductSeries`, `smallProductCoefficient_wdvv`, and `smallProductCoefficient_assoc`.
+- The primary-background series and formal big product correspond to [`GW/FormalQuantumProduct.lean`](../AxiomaticGW/GW/FormalQuantumProduct.lean), principally `primaryThreePointSeriesCoefficient`, `formalBigProduct`, and `formalBigProduct_zero`. Big WDVV and associativity at nonzero background remain deferred until the higher-point genus-zero boundary relation is available.
 
 ## M8. Descendants and ancestor comparison
 
@@ -75,9 +75,17 @@ The [implementation progress record](milestones/ImplementationProgress.md) conta
 
 **Mathematical note:** [M9. All-genus potentials and equations](mathematics/M09PotentialsAndEquations.md).
 
-- Descendant-variable indexing, Novikov-valued formal potentials, and commuting partial derivatives correspond to [`Coefficients/DescendantVariables.lean`](../AxiomaticGW/Coefficients/DescendantVariables.lean), principally `DescendantVariable`, `FormalPotential`, and `MvPowerSeries.pderiv`.
+- Descendant-variable indexing, Novikov-valued formal potentials, and commuting partial derivatives correspond to [`Coefficients/DescendantVariables.lean`](../AxiomaticGW/Coefficients/DescendantVariables.lean), principally `DescendantVariable`, `FormalPotential`, `MvPowerSeries.pderiv`, and `iteratedPDeriv`.
 - Genus potentials and Laurent-series total free energies correspond to [`Coefficients/GenusExpansion.lean`](../AxiomaticGW/Coefficients/GenusExpansion.lean), principally `GWPotentials`, `totalFreeEnergy`, and `totalFreeEnergy_coeff`.
+- Potentials constructed from descendant and ancestor invariants correspond to [`GW/Descendants/Potentials.lean`](../AxiomaticGW/GW/Descendants/Potentials.lean), principally `profileWeight`, `CurveClassGW.descendantPotential`, `ancestorPotential`, `stablePart`, `insertionDerivative`, and `descendantPotential_eq_ancestor_add_boundary`.
 - Optional stable string, dilaton, and descendant divisor laws correspond to [`GW/Descendants/Equations.lean`](../AxiomaticGW/GW/Descendants/Equations.lean), principally `DescendantEquationLaws`. The exponential total potential is deliberately not represented by this Laurent completion.
+
+## Point-target stable-curve block
+
+**Mathematical note:** [The point target and stable-curve intersection theory](mathematics/PointTargetAndStableCurves.md).
+
+- The point primary class, psi intersection numbers, point ancestors, dimension vanishing, initial values, and unit-class WDVV test correspond to [`Point/Descendants.lean`](../AxiomaticGW/Point/Descendants.lean), principally `PointTarget.primaryClass`, `intersectionNumber`, `ancestor`, `intersectionNumber_eq_zero_of_degree_ne`, `intersectionNumber_zero_three`, `intersectionNumber_one_one`, and `unitClass_wdvv`.
+- The labelled all-genus DVV formula corresponds to `PointTarget.DVVRecursion`. It is an explicit higher tautological hypothesis on a geometric stable-curve model, not a theorem of the primitive `PsiClasses` interface.
 
 ## M10. Abstract realization boundary
 

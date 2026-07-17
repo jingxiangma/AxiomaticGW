@@ -312,7 +312,7 @@ $$
 
 Its associativity follows from separating gluing on $\overline{\mathcal M}_{0,4}$. Adding a formal point $t\in V$ gives the big quantum product and the genus-zero primary potential; WDVV is the corresponding associativity equation.
 
-The project will first prove identities coefficientwise and only then pass to the chosen completion. This keeps finiteness and summability hypotheses visible.
+The project proves cohomology-valued identities coefficientwise. Numerical invariants and the finite-free state space pass to the chosen Novikov completion, where fixed coefficients use only finite antidiagonals. An arbitrary cohomology family $B\to H$ is not identified with the algebraic tensor product $(B\to R)\otimes_R H$ without an additional target-finiteness or completed-tensor hypothesis.
 
 ## 10. Descendants and ancestors are different
 
@@ -393,9 +393,9 @@ M1  perfect pairings and Frobenius algebras                 complete
   -> M4  full unital all-genus CohFT                       complete
   -> M5  tautological classes, integration, and ancestors complete core
   -> M6  curve-class-resolved GW axioms                    complete core
-  -> M7  Novikov coefficients and quantum products         interface complete
+  -> M7  Novikov coefficients and quantum products         coefficientwise core complete
   -> M8  descendants and descendant--ancestor comparison   interface complete
-  -> M9  all-genus potentials and equations                interface complete
+  -> M9  all-genus potentials and equations                stable-sector core complete
   -> M10 abstract geometric realization                    output boundary complete
 ```
 
@@ -420,14 +420,15 @@ The repository currently contains:
 - coherent degree-zero scalarization and full stable-arity classification of topological CohFTs by commutative Frobenius algebras;
 - stable-curve psi classes, integration, forgetful pushforward, kappa classes, and ancestors;
 - positive locally finite effective curve classes and beta-resolved primary GW axioms;
-- the beta-preserving Novikov ring and fixed-beta quantum-product coefficients;
-- a small/big quantum-product family with associativity derived from WDVV;
+- the beta-preserving Novikov ring, fixed-beta quantum-product coefficients, and derived coefficientwise small WDVV and associativity;
+- the invariant-defined formal big product and its proved zero-background specialization to the small product;
 - distinct stable-map descendants and stable-curve ancestors with an explicit comparison term;
-- Novikov-valued multivariable genus potentials and Laurent total free energies;
+- invariant-defined Novikov-valued descendant and ancestor potentials, their comparison, and Laurent total free energies;
 - optional stable string, dilaton, and descendant divisor law packages;
+- a self-contained point-target block identifying descendants with psi intersections on stable curves and stating the all-genus DVV relation;
 - the abstract virtual-GW algebraic output boundary.
 
-The next development phase is theorem integration rather than another speculative structure layer: construct completed CohFT and quantum-family objects from coefficientwise GW data, translate correlator equations into formal differential identities, and build concrete target or geometric instances. The settled architectural choices are recorded in the design-decision ledger.
+The next theorem boundary is either the higher-point genus-zero relation needed for big WDVV and formal big-product associativity, or a concrete stable-curve cohomology model proving the point initial values and DVV. Global string and dilaton PDEs also remain gated by an explicit choice of unstable conventions. The settled architectural choices are recorded in the design-decision ledger.
 
 ## 15. Criteria for success
 
@@ -435,7 +436,7 @@ The project succeeds when the main endpoint is expressed by Lean structures and 
 
 1. construct a full CohFT from its abstract classes and verify its axioms;
 2. recover the associated Frobenius algebra and prove associativity and WDVV;
-3. construct a Novikov-valued CohFT from coefficientwise GW data;
+3. construct Novikov-valued numerical invariants and quantum products from coefficientwise GW data;
 4. define primary, ancestor, and descendant invariants without conflating their cotangent-line classes;
 5. derive the standard equations from named abstract hypotheses;
 6. construct the axiomatic GW theory from an abstract virtual realization package;

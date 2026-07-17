@@ -120,6 +120,23 @@ theorem monomial_zero {R : Type u} [CommRing R] [Algebra ℚ R]
     P.monomial g S h (fun _ ↦ 0) = 1 := by
   simp [monomial]
 
+/-- A psi monomial has codimension equal to the sum of its exponents. -/
+theorem monomial_degree {R : Type u} [CommRing R] [Algebra ℚ R]
+    {C : StableCurveCohomology R} (P : PsiClasses C)
+    (g : ℕ) (S : Type) [Fintype S] (h : StableArity g S)
+    (k : S → ℕ) :
+    P.monomial g S h k ∈ (C.H g S).degree (∑ s, k s) := by
+  classical
+  unfold monomial
+  induction (Finset.univ : Finset S) using Finset.induction with
+  | empty =>
+      exact SetLike.GradedOne.one_mem
+  | @insert s markings hs ih =>
+      rw [Finset.prod_insert hs, Finset.sum_insert hs]
+      apply SetLike.mul_mem_graded
+      · simpa using SetLike.pow_mem_graded (k s) (P.psi_degree g S h s)
+      · exact ih
+
 /-- Relabelling transports a `psi` monomial by reindexing its powers. -/
 theorem rename_monomial {R : Type u} [CommRing R] [Algebra ℚ R]
     {C : StableCurveCohomology R} (P : PsiClasses C)

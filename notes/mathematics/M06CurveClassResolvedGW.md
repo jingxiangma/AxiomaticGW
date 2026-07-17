@@ -50,7 +50,7 @@ The positive local-finiteness hypothesis makes the separating sum finite: if $\b
 
 ## 3. Grading and virtual dimension
 
-The state space and stable-curve cohomology are graded. `GradedStateSpace` records the state-space grading, the homogeneous unit, and degree compatibility of the pairing, and `GradedCohFT` combines it with an ordinary CohFT. The coefficientwise curve-class theory reuses `GradedStateSpace` directly: before Novikov summation it is not an ordinary CohFT and therefore should not be represented as an extension of one.
+The state space and stable-curve cohomology are graded. `GradedStateSpace` records the state-space grading, the homogeneous unit, and degree compatibility of the pairing, and `GradedCohFT` combines it with an ordinary CohFT. The coefficientwise curve-class theory reuses `GradedStateSpace` directly. It is not represented as an extension of an ordinary CohFT because an arbitrary cohomology target need not admit the required algebraic Novikov scalar extension.
 
 For a target $X$ of complex dimension $d$, the expected complex dimension of the stable-map space is
 
@@ -82,7 +82,7 @@ Degree-zero normalization connects the theory to classical intersection theory. 
 
 The first GW structure should separate a curve-class-resolved CohFT core from optional target-dependent properties such as deformation invariance or mapping-to-a-point formulas. This keeps the algebraic gluing theory reusable while allowing stronger packages to extend it.
 
-The coefficientwise theory becomes an ordinary CohFT only after summation over $\beta$. See [M7: Novikov coefficients and quantum products](M07NovikovAndQuantumProducts.md).
+Numerical invariants and finite-free state-valued products admit Novikov summation. Cohomology-valued classes remain coefficientwise unless a particular target supplies a compatible completed scalar-extension theorem. See [M7: Novikov coefficients and quantum products](M07NovikovAndQuantumProducts.md).
 
 ## 6. Implemented boundary
 

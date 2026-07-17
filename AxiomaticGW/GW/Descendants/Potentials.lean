@@ -1,0 +1,284 @@
+/-
+Copyright (c) 2026 JMA. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: JMA
+-/
+module
+
+public import AxiomaticGW.Coefficients.GenusExpansion
+public import AxiomaticGW.GW.Descendants.Comparison
+public import Mathlib.Data.Nat.Factorial.Basic
+
+/-!
+# Potentials constructed from GW invariants
+
+A finitely supported monomial determines a canonical finite label type: one
+label for every occurrence of every descendant variable. This removes all
+ordering choices and makes the usual multiplicity-factorial normalization
+literal in the coefficient definition.
+-/
+
+@[expose] public section
+
+namespace AxiomaticGW
+
+open Module
+
+universe u
+
+/-- Product of the factorials of all variable multiplicities. -/
+def profileFactorial {Vars : Type*} (n : Vars →₀ ℕ) : ℕ :=
+  n.prod fun _ multiplicity ↦ Nat.factorial multiplicity
+
+/-- The reciprocal multiplicity factorial in a rational coefficient ring. -/
+noncomputable def profileWeight (R : Type*) [CommRing R] [Algebra ℚ R]
+    {Vars : Type*} (n : Vars →₀ ℕ) : R :=
+  algebraMap ℚ R ((profileFactorial n : ℚ)⁻¹)
+
+/-- One label for each occurrence recorded by a finite multiplicity profile. -/
+abbrev InsertionLabel {Vars : Type*} (n : Vars →₀ ℕ) :=
+  Σ v : n.support, Fin (n v.1)
+
+namespace InsertionLabel
+
+variable {Vars : Type*} {ι : Type*} {n : DescendantVariable ι →₀ ℕ}
+
+/-- Formal variable attached to an occurrence label. -/
+def formalVariable {m : Vars →₀ ℕ} (s : InsertionLabel m) : Vars :=
+  s.1.1
+
+/-- Descendant variable attached to an occurrence label. -/
+def descendantVar (s : InsertionLabel n) : DescendantVariable ι :=
+  s.1.1
+
+/-- Cotangent power attached to an occurrence label. -/
+def power (s : InsertionLabel n) : ℕ :=
+  (descendantVar s).1
+
+/-- State-space basis index attached to an occurrence label. -/
+def basisIndex (s : InsertionLabel n) : ι :=
+  (descendantVar s).2
+
+/-- Basis state inserted at an occurrence label. -/
+noncomputable def state {R V : Type*} [CommRing R] [AddCommGroup V]
+    [Module R V]
+    (b : Basis ι R V) (s : InsertionLabel n) : V :=
+  b (basisIndex s)
+
+/-- Basis state attached to an occurrence of a primary variable. -/
+noncomputable def primaryState {R V : Type*} [CommRing R]
+    [AddCommGroup V] [Module R V] {m : ι →₀ ℕ}
+    (b : Basis ι R V) (s : InsertionLabel m) : V :=
+  b (formalVariable s)
+
+end InsertionLabel
+
+/-- Retain exactly the monomials belonging to stable genus-`g` arities. -/
+noncomputable def stablePart {B Vars R : Type*} [AddCancelCommMonoid B]
+    (D : EffectiveCurveMonoid B) [CommRing R] (g : ℕ) :
+    FormalPotential D Vars R →ₗ[NovikovSeries D R]
+      FormalPotential D Vars R := by
+  classical
+  exact
+    { toFun := fun f n ↦
+        if StableArity g (InsertionLabel n) then f n else 0
+      map_add' := by
+        intro f h
+        funext n
+        change (if StableArity g (InsertionLabel n) then (f + h) n else 0) =
+          (if StableArity g (InsertionLabel n) then f n else 0) +
+            if StableArity g (InsertionLabel n) then h n else 0
+        by_cases hn : StableArity g (InsertionLabel n)
+        · simp only [hn, if_pos]
+          rfl
+        · simp [hn]
+      map_smul' := by
+        intro q f
+        funext n
+        change (if StableArity g (InsertionLabel n) then (q • f) n else 0) =
+          q • if StableArity g (InsertionLabel n) then f n else 0
+        by_cases hn : StableArity g (InsertionLabel n)
+        · simp only [hn, if_pos]
+          rfl
+        · simp [hn] }
+
+@[simp]
+theorem stablePart_apply_of_stable {B Vars R : Type*}
+    [AddCancelCommMonoid B] (D : EffectiveCurveMonoid B) [CommRing R]
+    (g : ℕ) (f : FormalPotential D Vars R) (n : Vars →₀ ℕ)
+    (h : StableArity g (InsertionLabel n)) :
+    stablePart D g f n = f n := by
+  simp [stablePart, h]
+
+@[simp]
+theorem stablePart_apply_of_unstable {B Vars R : Type*}
+    [AddCancelCommMonoid B] (D : EffectiveCurveMonoid B) [CommRing R]
+    (g : ℕ) (f : FormalPotential D Vars R) (n : Vars →₀ ℕ)
+    (h : ¬StableArity g (InsertionLabel n)) :
+    stablePart D g f n = 0 := by
+  simp [stablePart, h]
+
+/-- Differentiate a descendant potential by inserting `x` with cotangent
+power `k`. The finite support of `b.repr x` makes the directional derivative
+a finite sum even when the basis index type is infinite. -/
+noncomputable def insertionDerivative
+    {R V B : Type*} {ι : Type*} [CommRing R]
+    [AddCommGroup V] [Module R V] [AddCancelCommMonoid B]
+    (D : EffectiveCurveMonoid B) (b : Basis ι R V) (k : ℕ) (x : V) :
+    FormalPotential D (DescendantVariable ι) R →
+      FormalPotential D (DescendantVariable ι) R := fun f ↦
+  (b.repr x).sum fun i r ↦ r •
+    MvPowerSeries.pderiv (R := NovikovSeries D R) (k, i) f
+
+@[simp]
+theorem insertionDerivative_basis
+    {R V B : Type*} {ι : Type*} [CommRing R]
+    [AddCommGroup V] [Module R V] [AddCancelCommMonoid B]
+    (D : EffectiveCurveMonoid B) (b : Basis ι R V) (k : ℕ) (i : ι)
+    (f : FormalPotential D (DescendantVariable ι) R) :
+    insertionDerivative D b k (b i) f =
+      MvPowerSeries.pderiv (R := NovikovSeries D R) (k, i) f := by
+  classical
+  simp only [insertionDerivative, Basis.repr_self]
+  rw [Finsupp.sum_single_index (by
+    rw [Algebra.smul_def, map_zero, zero_mul])]
+  rw [Algebra.smul_def, map_one, one_mul]
+
+namespace CurveClassGW
+
+variable {R V B : Type u} {ι : Type} [CommRing R] [Algebra ℚ R]
+  [AddCommGroup V] [Module R V] [Module.Free R V] [Module.Finite R V]
+  [AddCancelCommMonoid B] {D : EffectiveCurveMonoid B}
+  {C : StableCurveCohomology R}
+
+/-- Genus-`g` descendant potential constructed from stabilized descendant
+invariants in a chosen state-space basis. -/
+noncomputable def descendantPotential (Omega : CurveClassGW R V B D C)
+    (M : StableMapDescendants Omega) (I : StableCurveIntegration C)
+    (b : Basis ι R V) (g : ℕ) :
+    FormalPotential D (DescendantVariable ι) R := by
+  classical
+  intro n beta
+  exact if h : StableArity g (InsertionLabel n) then
+    profileWeight R n *
+      M.invariant I g (InsertionLabel n) h beta
+        (InsertionLabel.power (n := n)) (InsertionLabel.state (n := n) b)
+    else 0
+
+/-- Genus-`g` ancestor potential constructed from stable-curve psi classes. -/
+noncomputable def ancestorPotential (Omega : CurveClassGW R V B D C)
+    (P : PsiClasses C) (I : StableCurveIntegration C)
+    (b : Basis ι R V) (g : ℕ) :
+    FormalPotential D (DescendantVariable ι) R := by
+  classical
+  intro n beta
+  exact if h : StableArity g (InsertionLabel n) then
+    profileWeight R n *
+      Omega.ancestorInvariant P I g (InsertionLabel n) h beta
+        (InsertionLabel.power (n := n)) (InsertionLabel.state (n := n) b)
+    else 0
+
+/-- Descendant and ancestor potentials produced by one GW theory. -/
+noncomputable def potentials (Omega : CurveClassGW R V B D C)
+    (M : StableMapDescendants Omega) (P : PsiClasses C)
+    (I : StableCurveIntegration C) (b : Basis ι R V) :
+    GWPotentials D (DescendantVariable ι) R where
+  descendant := Omega.descendantPotential M I b
+  ancestor := Omega.ancestorPotential P I b
+
+theorem descendantPotential_coeff_of_stable
+    (Omega : CurveClassGW R V B D C)
+    (M : StableMapDescendants Omega) (I : StableCurveIntegration C)
+    (b : Basis ι R V) (g : ℕ) (n : DescendantVariable ι →₀ ℕ)
+    (beta : B) (h : StableArity g (InsertionLabel n)) :
+    Omega.descendantPotential M I b g n beta =
+      profileWeight R n *
+        M.invariant I g (InsertionLabel n) h beta
+          (InsertionLabel.power (n := n))
+          (InsertionLabel.state (n := n) b) := by
+  classical
+  simp [descendantPotential, h]
+
+theorem descendantPotential_coeff_of_unstable
+    (Omega : CurveClassGW R V B D C)
+    (M : StableMapDescendants Omega) (I : StableCurveIntegration C)
+    (b : Basis ι R V) (g : ℕ) (n : DescendantVariable ι →₀ ℕ)
+    (beta : B) (h : ¬StableArity g (InsertionLabel n)) :
+    Omega.descendantPotential M I b g n beta = 0 := by
+  classical
+  simp [descendantPotential, h]
+
+theorem ancestorPotential_coeff_of_stable
+    (Omega : CurveClassGW R V B D C)
+    (P : PsiClasses C) (I : StableCurveIntegration C)
+    (b : Basis ι R V) (g : ℕ) (n : DescendantVariable ι →₀ ℕ)
+    (beta : B) (h : StableArity g (InsertionLabel n)) :
+    Omega.ancestorPotential P I b g n beta =
+      profileWeight R n *
+        Omega.ancestorInvariant P I g (InsertionLabel n) h beta
+          (InsertionLabel.power (n := n))
+          (InsertionLabel.state (n := n) b) := by
+  classical
+  simp [ancestorPotential, h]
+
+theorem ancestorPotential_coeff_of_unstable
+    (Omega : CurveClassGW R V B D C)
+    (P : PsiClasses C) (I : StableCurveIntegration C)
+    (b : Basis ι R V) (g : ℕ) (n : DescendantVariable ι →₀ ℕ)
+    (beta : B) (h : ¬StableArity g (InsertionLabel n)) :
+    Omega.ancestorPotential P I b g n beta = 0 := by
+  classical
+  simp [ancestorPotential, h]
+
+end CurveClassGW
+
+namespace DescendantAncestorComparison
+
+variable {R V B : Type u} {ι : Type} [CommRing R] [Algebra ℚ R]
+  [AddCommGroup V] [Module R V] [Module.Free R V] [Module.Finite R V]
+  [AddCancelCommMonoid B] {D : EffectiveCurveMonoid B}
+  {C : StableCurveCohomology R} {Omega : CurveClassGW R V B D C}
+  {P : PsiClasses C} {M : StableMapDescendants Omega}
+
+/-- Generating series of stabilization-boundary corrections. -/
+noncomputable def boundaryPotential (X : DescendantAncestorComparison P M)
+    (I : StableCurveIntegration C) (b : Basis ι R V) (g : ℕ) :
+    FormalPotential D (DescendantVariable ι) R := by
+  classical
+  intro n beta
+  exact if h : StableArity g (InsertionLabel n) then
+    profileWeight R n * I.integrate g (InsertionLabel n) h
+      (X.boundaryCorrection g (InsertionLabel n) h beta
+        (InsertionLabel.power (n := n))
+        (InsertionLabel.state (n := n) b))
+    else 0
+
+/-- Descendant potentials equal ancestor potentials plus their explicit
+stabilization-boundary series. -/
+theorem descendantPotential_eq_ancestor_add_boundary
+    (X : DescendantAncestorComparison P M) (I : StableCurveIntegration C)
+    (b : Basis ι R V) (g : ℕ) :
+    Omega.descendantPotential M I b g =
+      Omega.ancestorPotential P I b g + X.boundaryPotential I b g := by
+  classical
+  funext n beta
+  change Omega.descendantPotential M I b g n beta =
+    Omega.ancestorPotential P I b g n beta +
+      X.boundaryPotential I b g n beta
+  by_cases h : StableArity g (InsertionLabel n)
+  · rw [CurveClassGW.descendantPotential_coeff_of_stable _ _ _ _ _ _ _ h,
+      CurveClassGW.ancestorPotential_coeff_of_stable _ _ _ _ _ _ _ h]
+    simp only [boundaryPotential, h, dite_true]
+    have hcomparison := congrArg
+      (fun f ↦ f (InsertionLabel.state (n := n) b))
+      (X.invariant_eq_ancestor_add_boundary I g (InsertionLabel n) h beta
+        (InsertionLabel.power (n := n)))
+    simp only [add_apply, LinearMap.compMultilinearMap_apply] at hcomparison
+    rw [hcomparison, mul_add]
+  · rw [CurveClassGW.descendantPotential_coeff_of_unstable _ _ _ _ _ _ _ h,
+      CurveClassGW.ancestorPotential_coeff_of_unstable _ _ _ _ _ _ _ h]
+    simp [boundaryPotential, h]
+
+end DescendantAncestorComparison
+
+end AxiomaticGW

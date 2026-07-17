@@ -4,6 +4,54 @@ This file is the durable implementation record for AxiomaticGW. The [roadmap](Ax
 
 Each entry records the accepted scope, implementation commit, a link to the canonical mathematics-to-Lean map, principal API, verification evidence, deliberately deferred work, and the next gate. Git history remains the authoritative source for the exact diff.
 
+## 2026-07-17: Core theorem integration and point-target stable-curve block
+
+**Status:** Implemented and locally verified.
+
+**Implementation commit:** This entry is delivered in the same commit as the implementation.
+
+### Accepted scope
+
+- Keep cohomology-valued GW classes coefficientwise under D14 and derive completed numerical and finite-free state operations without adding unused completed-tensor structures.
+- Remove the abstract `QuantumProductFamily`; derive small WDVV and associativity directly from `CurveClassGW` gluing.
+- Construct descendant and ancestor potentials from invariants with canonical occurrence labels and reciprocal multiplicity-factorial weights.
+- Construct the formal big product from genus-zero primary invariants and prove its zero-background specialization; defer nonzero-background associativity until the higher-point boundary relation is formalized.
+- Isolate the point target as stable-curve intersection theory and state the full labelled DVV recursion as an explicit higher tautological hypothesis.
+
+### Delivered API
+
+- `CurveClassGW.smallProductCoefficient_wdvv`, `smallProductCoefficient_assoc`, and the coefficientwise unit and commutativity theorems.
+- `MvPowerSeries.pderiv_commute`, `iteratedPDeriv`, `stablePart`, and `insertionDerivative`.
+- `CurveClassGW.descendantPotential`, `ancestorPotential`, `potentials`, and `DescendantAncestorComparison.descendantPotential_eq_ancestor_add_boundary`.
+- `CurveClassGW.formalBigProduct`, its metric characterization, and `formalBigProduct_zero`.
+- `PsiClasses.monomial_degree` and the `PointTarget` primary, ancestor, intersection, WDVV, initial-value, and `DVVRecursion` declarations.
+
+### Verification
+
+The implementation passed:
+
+```bash
+lake build
+lake test
+lake lint
+git diff --check
+rg -n '\b(sorry|admit)\b' AxiomaticGW AxiomaticGWTest
+```
+
+Public regression examples exercise derived small associativity, the formal-big-to-small specialization, point-target normalization and dimension vanishing, and the DVV double-factorial coefficient.
+
+The placeholder scan returned no matches. The Markdown audit also found no unbalanced standalone display-math delimiters or display delimiters attached to prose, preserving Typora-compatible math blocks.
+
+### Deferred by design
+
+- Big WDVV and formal big-product associativity require the genus-zero boundary relation with arbitrary background markings.
+- Global string and dilaton PDEs require an explicit choice of unstable zero-, one-, and two-point conventions; the implemented equations remain honest stable-sector laws.
+- A concrete cohomology model of `Mbar`, a proof of `PointTarget.DVVRecursion`, and actual stable-map moduli and virtual classes remain geometric realization work.
+
+### Next gate
+
+Formalize the higher-point genus-zero boundary relation needed for big WDVV, or construct a concrete stable-curve cohomology realization that proves the point initial values and DVV. Either direction now extends a theorem boundary rather than adding a speculative carrier structure.
+
 ## 2026-07-17: M5--M9 axiomatic interfaces and M10 realization boundary
 
 **Status:** Implemented and locally verified. The core axiomatic data types are present through total free energies; the remaining work is theorem integration and concrete realization rather than another speculative structure layer.
@@ -14,7 +62,7 @@ Each entry records the accepted scope, implementation commit, a link to the cano
 
 - Add exactly the stable-curve tautological operations consumed by ancestors: psi classes, integration, forgetful pushforward, projection, rational-tail correction, and kappa classes.
 - Add positive locally finite effective curve classes and a coefficientwise primary GW theory with grading, normalization, gluing, negative-degree vanishing, and optional divisor data.
-- Implement the beta-preserving completed Novikov ring, fixed-beta quantum products, and an abstract small/big product family whose WDVV law implies associativity.
+- Implement the beta-preserving completed Novikov ring and the first fixed-beta quantum-product interface.
 - Keep stable-map descendants distinct from stable-curve ancestors and expose the stabilization boundary correction explicitly.
 - Use mathlib multivariable power series and Laurent series for formal variables, genus potentials, and the total free energy.
 - Stop the geometric layer at an algebraic output package; do not invent unused stack, obstruction-theory, or virtual-cycle carriers.
@@ -23,7 +71,7 @@ Each entry records the accepted scope, implementation commit, a link to the cano
 
 - `PsiClasses`, `StableCurveIntegration`, `ForgetfulPushforward`, `PsiForgetFormula`, `CohFT.ancestor`, and the constant tautological model.
 - `EffectiveCurveMonoid`, `GradedStateSpace`, `CurveClassGW`, `GWDivisorAxiom`, and `constantCurveClassGW.theory`.
-- `NovikovSeries`, its convolution ring, monomials, `ofMonoidAlgebra`, `CurveClassGW.smallProductCoefficient`, and `QuantumProductFamily.product_assoc`.
+- `NovikovSeries`, its convolution ring, monomials, `ofMonoidAlgebra`, and `CurveClassGW.smallProductCoefficient`.
 - `StableMapDescendants`, `DescendantAncestorComparison`, and the integrated descendant--ancestor theorem.
 - `MvPowerSeries.pderiv`, `GWPotentials`, `totalFreeEnergy`, exact genus-coefficient theorems, and `DescendantEquationLaws`.
 - `VirtualGWPackage` and its projections to the realized primary, descendant, and comparison layers.
@@ -48,14 +96,14 @@ The placeholder scan returned no matches. Public regression examples cover ances
 
 ### Deferred by design
 
-- The construction of an ordinary Novikov-valued CohFT by scalar extension from `CurveClassGW`, and the automatic construction of the full big quantum family from a concrete potential, remain theorem work.
+- The construction of an ordinary Novikov-valued CohFT by scalar extension from `CurveClassGW` remains outside the coefficientwise scope, and big associativity still requires the higher-point boundary theorem.
 - Hodge classes, general decorated stable graphs, and arbitrary tautological relations remain theorem-driven extensions.
 - Differential forms of every correlator equation and the exponential total potential require additional formal-series theorems or a stronger mixed completion.
 - Actual moduli stacks, virtual fundamental classes, and concrete projective-target packages remain outside the current mathematical foundations.
 
 ### Next gate
 
-Prove the coefficientwise-to-Novikov CohFT construction and derive GW WDVV for it, then connect `DescendantEquationLaws` to formal differential equations on a concretely constructed `GWPotentials` value. A point-target descendant package is the preferred next regression instance.
+Derive GW WDVV coefficientwise, construct concrete potentials without imposing a false algebraic scalar extension on arbitrary cohomology targets, and use the point target as the preferred stable-curve regression instance.
 
 ## 2026-07-17: M3 and M4 completed
 

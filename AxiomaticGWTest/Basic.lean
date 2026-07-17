@@ -230,7 +230,82 @@ example (g : ℕ) (S : Type) [Fintype S] (h : AxiomaticGW.StableArity g S) :
   exact AxiomaticGW.constantCurveClassGW.theory_omega_zero ℚ
     AxiomaticGW.EffectiveCurveMonoid.nat g S h
 
+/-- Small quantum associativity is derived directly from coefficientwise
+gluing and WDVV. -/
+example (beta : ℕ) (x y z : ℚ) :
+    (∑ split ∈ AxiomaticGW.EffectiveCurveMonoid.nat.splittings beta,
+      (AxiomaticGW.constantCurveClassGW.theory ℚ
+        AxiomaticGW.EffectiveCurveMonoid.nat).smallProductCoefficient
+          (AxiomaticGW.constantStableCurveCohomology.genusZeroGeometry ℚ)
+          split.2
+          ((AxiomaticGW.constantCurveClassGW.theory ℚ
+            AxiomaticGW.EffectiveCurveMonoid.nat).smallProductCoefficient
+              (AxiomaticGW.constantStableCurveCohomology.genusZeroGeometry ℚ)
+              split.1 x y) z) =
+      ∑ split ∈ AxiomaticGW.EffectiveCurveMonoid.nat.splittings beta,
+        (AxiomaticGW.constantCurveClassGW.theory ℚ
+          AxiomaticGW.EffectiveCurveMonoid.nat).smallProductCoefficient
+            (AxiomaticGW.constantStableCurveCohomology.genusZeroGeometry ℚ)
+            split.2 x
+            ((AxiomaticGW.constantCurveClassGW.theory ℚ
+              AxiomaticGW.EffectiveCurveMonoid.nat).smallProductCoefficient
+                (AxiomaticGW.constantStableCurveCohomology.genusZeroGeometry ℚ)
+                split.1 y z) := by
+  exact (AxiomaticGW.constantCurveClassGW.theory ℚ
+    AxiomaticGW.EffectiveCurveMonoid.nat).smallProductCoefficient_assoc
+      (AxiomaticGW.constantStableCurveCohomology.genusZeroGeometry ℚ)
+      beta x y z
+
+/-- The formal big product specializes to the small product at zero primary
+background. -/
+example (x y : ℚ) (beta : ℕ) :
+    (AxiomaticGW.constantCurveClassGW.theory ℚ
+      AxiomaticGW.EffectiveCurveMonoid.nat).formalBigProduct
+        (AxiomaticGW.constantStableCurveCohomology.integration ℚ)
+        (Module.Basis.singleton Unit ℚ) x y 0 beta =
+      (AxiomaticGW.constantCurveClassGW.theory ℚ
+        AxiomaticGW.EffectiveCurveMonoid.nat).smallProductCoefficient
+          (AxiomaticGW.constantStableCurveCohomology.genusZeroGeometry ℚ)
+          beta x y := by
+  apply (AxiomaticGW.constantCurveClassGW.theory ℚ
+    AxiomaticGW.EffectiveCurveMonoid.nat).formalBigProduct_zero
+      (AxiomaticGW.constantStableCurveCohomology.integration ℚ)
+      (AxiomaticGW.constantStableCurveCohomology.genusZeroGeometry ℚ)
+      (Module.Basis.singleton Unit ℚ)
+  change AxiomaticGW.constantStableCurveCohomology.integrate ℚ 0 (Fin 3) =
+    LinearMap.id
+  simp
+
 end CurveClassGW
+
+namespace PointTarget
+
+/-- Point descendants recover the normalized zero-dimensional intersection
+on `Mbar(0,3)`. -/
+example :
+    AxiomaticGW.PointTarget.intersectionNumber
+        (AxiomaticGW.constantStableCurveCohomology.psiClasses ℚ)
+        (AxiomaticGW.constantStableCurveCohomology.integration ℚ)
+        0 (Fin 3) (fun _ ↦ 0) = 1 := by
+  apply AxiomaticGW.PointTarget.intersectionNumber_zero_three
+  rfl
+
+/-- The dimension rule kills a degree-zero integrand on `Mbar(0,4)`. -/
+example :
+    AxiomaticGW.PointTarget.intersectionNumber
+        (AxiomaticGW.constantStableCurveCohomology.psiClasses ℚ)
+        (AxiomaticGW.constantStableCurveCohomology.integration ℚ)
+        0 (Fin 4) (fun _ ↦ 0) = 0 := by
+  apply AxiomaticGW.PointTarget.intersectionNumber_eq_zero_of_degree_ne
+    (h := by simp [AxiomaticGW.StableArity])
+  simp [AxiomaticGW.StableArity.dimension]
+
+/-- The DVV normalization uses `(2 * 1 + 1)!! = 3`. -/
+example : AxiomaticGW.PointTarget.oddDoubleFactorial 1 = 3 := by
+  norm_num [AxiomaticGW.PointTarget.oddDoubleFactorial,
+    Finset.prod_range_succ]
+
+end PointTarget
 
 namespace CompletedCoefficients
 

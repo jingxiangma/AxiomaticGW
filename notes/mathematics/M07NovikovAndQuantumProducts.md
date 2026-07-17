@@ -1,6 +1,6 @@
 # M7. Novikov coefficients and quantum products
 
-Curve-class-resolved GW classes form a family indexed by $\beta$. Novikov coefficients package that family into a single CohFT while controlling the generally infinite sum over effective classes.
+Curve-class-resolved GW classes form a family indexed by $\beta$. Novikov coefficients package numerical invariants and finite-free state-valued operations while controlling the generally infinite sum over effective classes. Cohomology-valued classes remain coefficientwise unless the target carries an additional completed scalar-extension theorem.
 
 ## 1. Why completion is needed
 
@@ -20,7 +20,7 @@ The monoid algebra permits only finite support, which is often too small for GW 
 
 The Novikov coefficient ring is the completed monoid ring of all coefficient functions $B\to R$. Addition is pointwise and multiplication is convolution over the finite antidiagonal $\beta_1+\beta_2=\beta$. This completion preserves distinct curve classes of equal energy. The finite-support additive monoid algebra embeds as a subring and remains useful for finite regression examples, but it is not the final coefficient type.
 
-## 2. Novikov-valued CohFT
+## 2. Coefficientwise completion boundary
 
 Define
 
@@ -30,14 +30,14 @@ $$
 \sum_{\beta\in B}Q^\beta\Omega_{g,S,\beta}.
 $$
 
-Coefficientwise separating gluing becomes ordinary CohFT gluing because the coefficient of $Q^\beta$ in a product is
+Coefficientwise separating gluing has the same convolution formula as ordinary CohFT gluing because the coefficient of $Q^\beta$ in a product is
 
 $$
 \sum_{\beta_1+\beta_2=\beta}
 \Omega_{\beta_1}\Omega_{\beta_2}.
 $$
 
-Thus, once all sums are well-defined, the curve-class-resolved axioms produce a CohFT over the Novikov coefficient ring. Proving identities coefficientwise before passing to the completion keeps the summability issues explicit.
+This identity always makes sense coefficientwise. It gives convolution on numerical coefficients and on the finite-free state space. For an arbitrary stable-curve target $H$, however, a coefficient family $B\to H$ need not be the algebraic tensor product of the Novikov ring with $H$. The project therefore does not claim that every `CurveClassGW` automatically produces an ordinary Novikov-valued `CohFT`. It proves the geometric identities coefficientwise and completes only the targets for which convolution is canonical.
 
 ## 3. Small quantum product
 
@@ -81,4 +81,6 @@ Descendant theory requires a second distinction, between cotangent lines on stab
 
 ## 5. Implemented boundary
 
-`NovikovSeries D R` is implemented as the full coefficient function type with finite-antidiagonal convolution. Its semiring, ring, and commutative-ring laws are proved by finite reindexing; monomial multiplication and the injective map from `AddMonoidAlgebra` are part of the public API. A `CurveClassGW` determines each fixed-beta three-point product coefficient and hence a state-valued Novikov coefficient family for ordinary inputs. `QuantumProductFamily` is the abstract small/big product interface and proves associativity from metric invariance and WDVV. A construction of the entire big family from one particular GW theory awaits its concrete insertion-variable potential.
+`NovikovSeries D R` is implemented as the full coefficient function type with finite-antidiagonal convolution. Its semiring, ring, and commutative-ring laws are proved by finite reindexing; monomial multiplication and the injective map from `AddMonoidAlgebra` are part of the public API. A `CurveClassGW` determines each fixed-beta three-point product coefficient. Separating gluing and `GenusZeroGeometry` now derive scalar coefficientwise WDVV and associativity of the small product directly, without an abstract product-family structure.
+
+`CurveClassGW.formalBigProduct` is the state-valued power series obtained from genus-zero primary invariants with three distinguished insertions. Its zero-background coefficient is proved to equal `smallProductCoefficient` when stable-curve integration on $\overline{\mathcal M}_{0,3}$ agrees with the scalar identification in `GenusZeroGeometry`. Associativity at a nonzero background is not asserted: it requires the higher-point genus-zero boundary relation that is deliberately deferred.
