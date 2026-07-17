@@ -46,11 +46,7 @@ Relabelling and the flat-unit axiom are imposed coefficientwise in $\beta$.
 
 ## 3. Grading and virtual dimension
 
-The state space and stable-curve cohomology are graded. Abstractly, a
-`GradedCohFT` extends the bare CohFT by recording this state-space grading, the
-homogeneous unit, and degree compatibility of the pairing. The
-curve-class-resolved GW theory extends that graded CohFT and adds the
-$\beta$-dependent degree constraint below.
+The state space and stable-curve cohomology are graded. Abstractly, a `GradedCohFT` extends the bare CohFT by recording this state-space grading, the homogeneous unit, and degree compatibility of the pairing. The curve-class-resolved GW theory extends that graded CohFT and adds the $\beta$-dependent degree constraint below.
 
 For a target $X$ of complex dimension $d$, the expected complex dimension of the stable-map space is
 

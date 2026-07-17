@@ -58,32 +58,19 @@ $$
 H_{g,S}
 $$
 
-equipped with relabelling pullbacks, forgetful pullbacks, gluing pullbacks,
-external products, and their compatibility laws. The first interface includes
-functoriality of relabelling, naturality of primitive gluing, compatibility of
-forgetting with gluing, and node/component symmetries. Coherence for arbitrary
-iterated gluings is deferred to the stable-graph layer.
+equipped with relabelling pullbacks, forgetful pullbacks, gluing pullbacks, external products, and their compatibility laws. The first interface includes functoriality of relabelling, naturality of primitive gluing, compatibility of forgetting with gluing, and node/component symmetries. Coherence for arbitrary iterated gluings is deferred to the stable-graph layer.
 
-The Lean grading is half the ordinary cohomological degree: its degree-$d$
-piece models $H^{2d}(\overline{\mathcal M}_{g,S})$. Consequently `psi` and
-divisor classes have degree one, top degree is the complex dimension, and no
-Koszul signs occur in products or gluing. Odd cohomology is deliberately
-outside the scope of the interface.
+The Lean grading is half the ordinary cohomological degree: its degree-$d$ piece models $H^{2d}(\overline{\mathcal M}_{g,S})$. Consequently `psi` and divisor classes have degree one, top degree is the complex dimension, and no Koszul signs occur in products or gluing. Odd cohomology is deliberately outside the scope of the interface.
 
 This interface isolates the part of stable-curve geometry actually used by CohFT axioms.
 
-Two optional extensions record geometric facts not forced by this abstract
-interface. `GenusZeroGeometry` contains the point identification for
-$\overline{\mathcal M}_{0,3}$ and the relevant four-point boundary relation.
-`ConnectedDegreeZero` supplies coherent identifications
+Two optional extensions record geometric facts not forced by this abstract interface. `GenusZeroGeometry` contains the point identification for $\overline{\mathcal M}_{0,3}$ and the relevant four-point boundary relation. `ConnectedDegreeZero` supplies coherent identifications
 
 $$
 H^0_{g,S}\cong R
 $$
 
-for every stable pair. The latter is automatic for the actual connected moduli
-spaces but is kept separate for abstract targets; it is exactly what turns the
-degree-zero projection of a CohFT into an $R$-valued topological CohFT.
+for every stable pair. The latter is automatic for the actual connected moduli spaces but is kept separate for abstract targets; it is exactly what turns the degree-zero projection of a CohFT into an $R$-valued topological CohFT.
 
 ## 4. Stable graphs
 

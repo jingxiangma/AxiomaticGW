@@ -1,14 +1,10 @@
 # Mathematics notes
 
-This folder contains the mathematical background for the formalization. A note
-here should explain the mathematics independently of the order in which the
-Lean code is implemented.
+This folder contains the mathematical background for the formalization. A note here should explain the mathematics independently of the order in which the Lean code is implemented.
 
-For a single self-contained introduction, see
-[The mathematics and goals of AxiomaticGW](ProjectMathematicsAndGoals.md).
+For a single self-contained introduction, see [The mathematics and goals of AxiomaticGW](ProjectMathematicsAndGoals.md).
 
-The numbering agrees with the phases in the
-[project-wide milestone roadmap](../milestones/AxiomaticGWRoadmap.md).
+The numbering agrees with the phases in the [project-wide milestone roadmap](../milestones/AxiomaticGWRoadmap.md).
 
 | Phase | Mathematical note |
 | --- | --- |
@@ -23,5 +19,4 @@ The numbering agrees with the phases in the
 | M9 | [All-genus potentials and equations](M09PotentialsAndEquations.md) |
 | M10 | [Geometric realization](M10GeometricRealization.md) |
 
-Implementation status and completion criteria belong in
-[`notes/milestones`](../milestones/), not in these mathematical notes.
+The canonical mapping from mathematical sections to Lean modules is maintained in the [mathematics-to-Lean map](../MathematicsToLean.md). Dated implementation status and verification evidence belong in the [`implementation progress record`](../milestones/ImplementationProgress.md), not in these mathematical notes.

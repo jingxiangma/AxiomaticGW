@@ -114,10 +114,7 @@ $$
 E=\mu(C_\eta)=\sum_i u_iv_i.
 $$
 
-To see why, regard a surface with one additional handle as the composite of a
-pair of pants that splits one circle into two and a pair of pants that merges
-those two circles again. A two-dimensional TFT assigns $\Delta$ to the first
-bordism and $\mu$ to the second. Hence the operator assigned to the handle is
+To see why, regard a surface with one additional handle as the composite of a pair of pants that splits one circle into two and a pair of pants that merges those two circles again. A two-dimensional TFT assigns $\Delta$ to the first bordism and $\mu$ to the second. Hence the operator assigned to the handle is
 
 $$
 (\mu\circ\Delta)(a)
@@ -126,10 +123,7 @@ $$
 =aE.
 $$
 
-Thus multiplication by $E$ represents the addition of one handle to a
-surface. Equivalently, cutting open a handle produces two boundary circles;
-sewing them back together inserts the two legs of $C_\eta$, and merging those
-legs turns the insertion into $\mu(C_\eta)=E$.
+Thus multiplication by $E$ represents the addition of one handle to a surface. Equivalently, cutting open a handle produces two boundary circles; sewing them back together inserts the two legs of $C_\eta$, and merging those legs turns the insertion into $\mu(C_\eta)=E$.
 
 ## 5. Examples
 

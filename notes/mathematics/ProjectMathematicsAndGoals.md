@@ -2,12 +2,7 @@
 
 ## 1. Purpose of the project
 
-AxiomaticGW is a Lean formalization of the algebraic and axiomatic structure of
-Gromov--Witten theory. Its purpose is not initially to construct moduli stacks
-or virtual fundamental classes from first principles. Instead, it isolates the
-operations and identities that make Gromov--Witten invariants behave as a
-cohomological field theory and proves their consequences in a reusable formal
-system.
+AxiomaticGW is a Lean formalization of the algebraic and axiomatic structure of Gromov--Witten theory. Its purpose is not initially to construct moduli stacks or virtual fundamental classes from first principles. Instead, it isolates the operations and identities that make Gromov--Witten invariants behave as a cohomological field theory and proves their consequences in a reusable formal system.
 
 The intended endpoint is an all-genus, curve-class-resolved theory containing:
 
@@ -19,29 +14,21 @@ The intended endpoint is an all-genus, curve-class-resolved theory containing:
 - stable-map descendants and their comparison with ancestors;
 - Novikov coefficients and quantum products;
 - genus expansions and total potentials;
-- string, dilaton, divisor, splitting, genus-reduction, WDVV, and
-  tautological equations under the corresponding abstract hypotheses.
+- string, dilaton, divisor, splitting, genus-reduction, WDVV, and tautological equations under the corresponding abstract hypotheses.
 
-The project proceeds from elementary multilinear algebra to this endpoint in
-small independently checked layers.
+The project proceeds from elementary multilinear algebra to this endpoint in small independently checked layers.
 
-The notation uses a coefficient ring $R$. The principal numerical
-specialization is rational GW theory, with $R=\mathbb Q$ before adjoining
-Novikov or formal variables. The exact Lean-level generality of the new CohFT
-interfaces is an architectural decision tracked separately; it does not
-change the mathematical endpoint described here.
+The notation uses a coefficient ring $R$. The principal numerical specialization is rational GW theory, with $R=\mathbb Q$ before adjoining Novikov or formal variables. The exact Lean-level generality of the new CohFT interfaces is an architectural decision tracked separately; it does not change the mathematical endpoint described here.
 
 ## 2. The geometric source of Gromov--Witten theory
 
-Let $X$ be a smooth projective variety and let $\beta$ be an effective curve
-class. The moduli space
+Let $X$ be a smooth projective variety and let $\beta$ be an effective curve class. The moduli space
 
 \[
 \overline{\mathcal M}_{g,S}(X,\beta)
 \]
 
-parametrizes stable maps to $X$ from genus-$g$ nodal curves whose marked
-points are labelled by a finite set $S$. It has evaluation maps
+parametrizes stable maps to $X$ from genus-$g$ nodal curves whose marked points are labelled by a finite set $S$. It has evaluation maps
 
 \[
 \operatorname{ev}_i:
@@ -58,9 +45,7 @@ and, in the stable range, a stabilization map
 \overline{\mathcal M}_{g,S}.
 \]
 
-The stable-map space generally has the wrong ordinary dimension. A virtual
-fundamental class supplies the expected intersection theory. Given insertions
-$\gamma_i\in H^*(X)$, the associated primary GW class is schematically
+The stable-map space generally has the wrong ordinary dimension. A virtual fundamental class supplies the expected intersection theory. Given insertions $\gamma_i\in H^*(X)$, the associated primary GW class is schematically
 
 \[
 \Omega^X_{g,S,\beta}((\gamma_i))
@@ -73,41 +58,31 @@ $\gamma_i\in H^*(X)$, the associated primary GW class is schematically
 \right).
 \]
 
-This class lies on the moduli space of stable curves. The symmetries,
-forgetful maps, and boundary gluings of stable curves turn the collection of
-all such classes into a highly structured object.
+This class lies on the moduli space of stable curves. The symmetries, forgetful maps, and boundary gluings of stable curves turn the collection of all such classes into a highly structured object.
 
-The formalization begins with that structure. It first assumes abstract
-cohomology and gluing operations satisfying their geometric identities, then
-derives the algebraic consequences. A later realization theorem will state
-which abstract virtual-stable-map data are sufficient to construct the
-axiomatic theory.
+The formalization begins with that structure. It first assumes abstract cohomology and gluing operations satisfying their geometric identities, then derives the algebraic consequences. A later realization theorem will state which abstract virtual-stable-map data are sufficient to construct the axiomatic theory.
 
 ## 3. Algebraic foundations
 
 ### 3.1 Perfect pairings
 
-The state space $V$ is finite free over the coefficient ring and has a
-symmetric perfect pairing
+The state space $V$ is finite free over the coefficient ring and has a symmetric perfect pairing
 
 \[
 \eta:V\otimes V\longrightarrow R.
 \]
 
-Perfectness identifies $V$ with its dual. Equivalently, it produces a
-canonical copairing, or inverse metric,
+Perfectness identifies $V$ with its dual. Equivalently, it produces a canonical copairing, or inverse metric,
 
 \[
 C_\eta\in V\otimes V.
 \]
 
-Contracting node insertions against $C_\eta$ is the algebraic form of gluing
-two branches of a curve.
+Contracting node insertions against $C_\eta$ is the algebraic form of gluing two branches of a curve.
 
 ### 3.2 Frobenius algebras
 
-A commutative Frobenius algebra consists of a commutative algebra $A$ and a
-counit
+A commutative Frobenius algebra consists of a commutative algebra $A$ and a counit
 
 \[
 \epsilon:A\longrightarrow R
@@ -119,8 +94,7 @@ such that
 \eta(a,b)=\epsilon(ab)
 \]
 
-is a perfect pairing. The inverse metric determines the Casimir tensor,
-comultiplication, and handle element $E$.
+is a perfect pairing. The inverse metric determines the Casimir tensor, comultiplication, and handle element $E$.
 
 The associated finite-labelled topological correlators are
 
@@ -130,14 +104,11 @@ The associated finite-labelled topological correlators are
 \epsilon\left(\prod_{s\in S}a_s\,E^g\right).
 \]
 
-Their contraction identities encode separating and nonseparating sewing of
-closed oriented surfaces. This Frobenius-to-TFT layer is the completed
-foundation of the repository.
+Their contraction identities encode separating and nonseparating sewing of closed oriented surfaces. This Frobenius-to-TFT layer is the completed foundation of the repository.
 
 ## 4. Stable curves and the cohomology convention
 
-The moduli space of stable curves with genus $g$ and finite label set $S$
-is denoted
+The moduli space of stable curves with genus $g$ and finite label set $S$ is denoted
 
 \[
 \overline{\mathcal M}_{g,S}.
@@ -155,8 +126,7 @@ represented in Lean without natural-number subtraction as
 3\leq 2g+|S|.
 \]
 
-The project uses only even stable-curve cohomology. For each stable pair it
-models an abstract commutative graded algebra
+The project uses only even stable-curve cohomology. For each stable pair it models an abstract commutative graded algebra
 
 \[
 H_{g,S}=H^{\mathrm{even}}(\overline{\mathcal M}_{g,S};R).
@@ -169,13 +139,9 @@ H_{g,S}^{d}\quad\text{models}\quad
 H^{2d}(\overline{\mathcal M}_{g,S};R).
 \]
 
-Thus divisors and psi classes have degree one, multiplication adds degrees,
-and top degree equals the complex dimension $3g-3+|S|$. Odd cohomology and
-Koszul signs are outside the project scope.
+Thus divisors and psi classes have degree one, multiplication adds degrees, and top degree equals the complex dimension $3g-3+|S|$. Odd cohomology and Koszul signs are outside the project scope.
 
-The grading is internal: $H_{g,S}$ is one total algebra equipped with degree
-submodules and a finite homogeneous decomposition. This lets general CohFT
-classes live in the total ring while retaining typed homogeneous pieces.
+The grading is internal: $H_{g,S}$ is one total algebra equipped with degree submodules and a finite homogeneous decomposition. This lets general CohFT classes live in the total ring while retaining typed homogeneous pieces.
 
 The abstract stable-curve system supplies pullbacks for:
 
@@ -184,8 +150,7 @@ The abstract stable-curve system supplies pullbacks for:
 - separating gluing of two curves at distinguished markings;
 - nonseparating gluing of two markings on one curve.
 
-It also records the functoriality, naturality, and coherence identities used by
-CohFT axioms. Stable graphs later package iterated boundary gluings.
+It also records the functoriality, naturality, and coherence identities used by CohFT axioms. Stable graphs later package iterated boundary gluings.
 
 ## 5. Cohomological field theories
 
@@ -199,15 +164,11 @@ The defining properties are the following.
 
 ### 5.1 Relabelling
 
-The classes are natural under bijections of finite label sets. The project uses
-finite types rather than only ordered sets `Fin n` so this symmetry is present
-in the indexing itself.
+The classes are natural under bijections of finite label sets. The project uses finite types rather than only ordered sets `Fin n` so this symmetry is present in the indexing itself.
 
 ### 5.2 Separating gluing
 
-When a curve splits into components of genera $g_1$ and $g_2$, restriction
-to the corresponding boundary equals the external product of the component
-classes with the two new state-space inputs contracted against $C_\eta$:
+When a curve splits into components of genera $g_1$ and $g_2$, restriction to the corresponding boundary equals the external product of the component classes with the two new state-space inputs contracted against $C_\eta$:
 
 \[
 \xi^*\Omega_{g_1+g_2,S\sqcup T}
@@ -233,8 +194,7 @@ Identifying two markings on one curve raises the genus by one:
 
 ### 5.4 Flat unit
 
-There is a distinguished vector $\mathbf 1\in V$. Inserting it at a new
-marking agrees with pullback along the forgetful map:
+There is a distinguished vector $\mathbf 1\in V$. Inserting it at a new marking agrees with pullback along the forgetful map:
 
 \[
 \Omega_{g,S\sqcup\{*\}}((v_s),\mathbf 1)
@@ -246,25 +206,17 @@ The three-point normalization identifies the unit insertion with the metric.
 
 ## 6. Frobenius algebra and WDVV from a CohFT
 
-Because $\overline{\mathcal M}_{0,3}$ is a point, the three-point class defines
-a multiplication on $V$ by
+Because $\overline{\mathcal M}_{0,3}$ is a point, the three-point class defines a multiplication on $V$ by
 
 \[
 \eta(a*b,c)=\Omega_{0,3}(a,b,c).
 \]
 
-Relabelling gives commutativity, the flat-unit axiom gives the identity, and
-the two boundary presentations of $\overline{\mathcal M}_{0,4}$ give
-associativity. The same boundary relation, written for a varying insertion,
-is the WDVV equation.
+Relabelling gives commutativity, the flat-unit axiom gives the identity, and the two boundary presentations of $\overline{\mathcal M}_{0,4}$ give associativity. The same boundary relation, written for a varying insertion, is the WDVV equation.
 
-Consequently the genus-zero Frobenius algebra is derived from the full
-all-genus CohFT. It is not a replacement for the higher-genus theory.
+Consequently the genus-zero Frobenius algebra is derived from the full all-genus CohFT. It is not a replacement for the higher-genus theory.
 
-Projecting to codimension zero gives the topological part when the degree-zero
-cohomology is identified with the coefficient ring. The existing
-scalar-valued `TopologicalCohFT` is the model and regression test for this
-construction.
+Projecting to codimension zero gives the topological part when the degree-zero cohomology is identified with the coefficient ring. The existing scalar-valued `TopologicalCohFT` is the model and regression test for this construction.
 
 ## 7. Tautological classes and ancestors
 
@@ -294,15 +246,11 @@ Using integration on the stable-curve space, ancestor correlators are
 \prod_{i\in S}\psi_i^{k_i}.
 \]
 
-To formalize this expression, the stable-curve system must be extended with
-proper pushforward, integration, external products, projection formulas,
-base-change identities, top-degree rules, and the relevant tautological
-relations.
+To formalize this expression, the stable-curve system must be extended with proper pushforward, integration, external products, projection formulas, base-change identities, top-degree rules, and the relevant tautological relations.
 
 ## 8. Curve-class-resolved GW theory
 
-Let $B$ be a monoid of effective curve classes. A GW theory refines a CohFT
-to classes
+Let $B$ be a monoid of effective curve classes. A GW theory refines a CohFT to classes
 
 \[
 \Omega_{g,S,\beta}:V^{\otimes S}\longrightarrow H_{g,S},
@@ -323,8 +271,7 @@ At a separating node the total class is distributed over the two components:
 \right).
 \]
 
-The formal system must state a finiteness condition making this coefficient
-sum meaningful. Nonseparating gluing preserves $\beta$.
+The formal system must state a finiteness condition making this coefficient sum meaningful. Nonseparating gluing preserves $\beta$.
 
 Additional GW data and axioms include:
 
@@ -354,8 +301,7 @@ The coefficientwise theory is assembled as
 \Omega_{g,S}=\sum_{\beta\in B}Q^\beta\Omega_{g,S,\beta}.
 \]
 
-A Novikov support condition controls the infinite sum. The small quantum
-product is characterized by
+A Novikov support condition controls the infinite sum. The small quantum product is characterized by
 
 \[
 \eta(a*_Q b,c)
@@ -364,19 +310,13 @@ product is characterized by
 \langle a,b,c\rangle_{0,3,\beta}.
 \]
 
-Its associativity follows from separating gluing on
-$\overline{\mathcal M}_{0,4}$. Adding a formal point $t\in V$ gives the big
-quantum product and the genus-zero primary potential; WDVV is the corresponding
-associativity equation.
+Its associativity follows from separating gluing on $\overline{\mathcal M}_{0,4}$. Adding a formal point $t\in V$ gives the big quantum product and the genus-zero primary potential; WDVV is the corresponding associativity equation.
 
-The project will first prove identities coefficientwise and only then pass to
-the chosen completion. This keeps finiteness and summability hypotheses
-visible.
+The project will first prove identities coefficientwise and only then pass to the chosen completion. This keeps finiteness and summability hypotheses visible.
 
 ## 10. Descendants and ancestors are different
 
-Stable-map descendant classes live on
-$\overline{\mathcal M}_{g,S}(X,\beta)$:
+Stable-map descendant classes live on $\overline{\mathcal M}_{g,S}(X,\beta)$:
 
 \[
 \psi_i^{\mathrm{map}}=c_1(L_i^{\mathrm{map}}).
@@ -388,8 +328,7 @@ Ancestor classes are pulled back from the stable-curve space:
 \bar\psi_i=\operatorname{st}^*(\psi_i^{\mathrm{curve}}).
 \]
 
-They are not definitionally equal. Stabilization can contract a rational
-component, producing boundary corrections of the schematic form
+They are not definitionally equal. Stabilization can contract a rational component, producing boundary corrections of the schematic form
 
 \[
 \psi_i^{\mathrm{map}}
@@ -397,15 +336,11 @@ component, producing boundary corrections of the schematic form
 \bar\psi_i+\text{boundary terms}.
 \]
 
-Descendant invariants integrate powers of $\psi_i^{\mathrm{map}}$ against the
-virtual class. Ancestor invariants use powers of $\bar\psi_i$. The project
-keeps these classes in distinct interfaces and derives their comparison only
-from explicit stabilization and boundary hypotheses.
+Descendant invariants integrate powers of $\psi_i^{\mathrm{map}}$ against the virtual class. Ancestor invariants use powers of $\bar\psi_i$. The project keeps these classes in distinct interfaces and derives their comparison only from explicit stabilization and boundary hypotheses.
 
 ## 11. All-genus potentials
 
-With descendant variables $t_k^\alpha$, the genus-$g$ potential is
-schematically
+With descendant variables $t_k^\alpha$, the genus-$g$ potential is schematically
 
 \[
 \mathcal F_g
@@ -416,8 +351,7 @@ schematically
 \right\rangle_{g,n,\beta}.
 \]
 
-Introducing a genus parameter $\hbar$, the free energy and total descendant
-potential are formally
+Introducing a genus parameter $\hbar$, the free energy and total descendant potential are formally
 
 \[
 \mathcal F=\sum_{g\geq 0}\hbar^{g-1}\mathcal F_g,
@@ -425,24 +359,16 @@ potential are formally
 \mathcal D=\exp(\mathcal F).
 \]
 
-These expressions require a completion simultaneously controlling curve
-classes, insertion variables, descendant degree, and genus. In particular,
-although $\mathcal F$ is bounded below by $\hbar^{-1}$, its exponential can
-contain arbitrarily negative powers of $\hbar$. The project must therefore use
-a filtered mixed completion or retain the exponential symbolically; ordinary
-Laurent series alone are insufficient.
+These expressions require a completion simultaneously controlling curve classes, insertion variables, descendant degree, and genus. In particular, although $\mathcal F$ is bounded below by $\hbar^{-1}$, its exponential can contain arbitrarily negative powers of $\hbar$. The project must therefore use a filtered mixed completion or retain the exponential symbolically; ordinary Laurent series alone are insufficient.
 
-Once the coefficient ring is defined, geometric axioms become formal
-differential equations: string, dilaton, divisor, splitting, genus reduction,
-WDVV, topological recursion, and higher tautological relations.
+Once the coefficient ring is defined, geometric axioms become formal differential equations: string, dilaton, divisor, splitting, genus reduction, WDVV, topological recursion, and higher tautological relations.
 
 ## 12. Formalization boundary
 
 ### Included in the main project
 
 - Abstract even cohomology of stable-curve spaces.
-- Pullbacks, external products, gluing, pushforwards, and integration as
-  explicitly axiomatized operations.
+- Pullbacks, external products, gluing, pushforwards, and integration as explicitly axiomatized operations.
 - Full unital CohFTs and their Frobenius/topological/genus-zero consequences.
 - Effective-curve-class refinements and Novikov packaging.
 - Ancestor and descendant theories with a formal comparison theorem.
@@ -458,8 +384,7 @@ WDVV, topological recursion, and higher tautological relations.
 - Construction of virtual fundamental classes.
 - Proof that a particular projective variety supplies all geometric data.
 
-These are important longer-term geometric projects, but requiring them first
-would prevent development of the reusable axiomatic theory.
+These are important longer-term geometric projects, but requiring them first would prevent development of the reusable axiomatic theory.
 
 ## 13. Milestone chain
 
@@ -476,8 +401,7 @@ M1  perfect pairings and Frobenius algebras                 complete
   -> M10 abstract geometric realization                    optional extension
 ```
 
-Each phase is intended to compile independently and expose a stable API before
-the next phase begins.
+Each phase is intended to compile independently and expose a stable API before the next phase begins.
 
 ## 14. Current status
 
@@ -490,34 +414,25 @@ The repository currently contains:
 - separating and nonseparating sewing;
 - a bundled topological correlator theory;
 - its scalar-valued stable topological CohFT restriction;
-- recovery of the counit and three-point product in the current fixed-algebra
-  API;
+- recovery of the counit and three-point product in the current fixed-algebra API;
 - internally graded even-cohomology targets with primitive stable-curve maps;
-- the full cohomology-valued CohFT interface and optional graded/geometric
-  extensions;
-- the constant degree-zero target and conversion to and from the existing
-  topological CohFT;
+- the full cohomology-valued CohFT interface and optional graded/geometric extensions;
+- the constant degree-zero target and conversion to and from the existing topological CohFT;
 - genus-zero restriction, Frobenius extraction, WDVV, and associativity;
-- coherent degree-zero scalarization and full stable-arity classification of
-  topological CohFTs by commutative Frobenius algebras.
+- coherent degree-zero scalarization and full stable-arity classification of topological CohFTs by commutative Frobenius algebras.
 
-The next implementation phase is the M5 tautological and ancestor layer. The
-settled architectural choices are recorded in the design-decision ledger.
+The next implementation phase is the M5 tautological and ancestor layer. The settled architectural choices are recorded in the design-decision ledger.
 
 ## 15. Criteria for success
 
-The project succeeds when the main endpoint is expressed by Lean structures
-and theorems rather than only mathematical prose. In particular, it should be
-possible to:
+The project succeeds when the main endpoint is expressed by Lean structures and theorems rather than only mathematical prose. In particular, it should be possible to:
 
 1. construct a full CohFT from its abstract classes and verify its axioms;
 2. recover the associated Frobenius algebra and prove associativity and WDVV;
 3. construct a Novikov-valued CohFT from coefficientwise GW data;
-4. define primary, ancestor, and descendant invariants without conflating
-   their cotangent-line classes;
+4. define primary, ancestor, and descendant invariants without conflating their cotangent-line classes;
 5. derive the standard equations from named abstract hypotheses;
-6. construct the axiomatic GW theory from an abstract virtual realization
-   package;
+6. construct the axiomatic GW theory from an abstract virtual realization package;
 7. verify every implemented milestone with no `sorry` or `admit`.
 
 ## Further reading within the repository

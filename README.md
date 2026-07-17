@@ -2,24 +2,19 @@
 
 Lean formalization of the algebraic foundations of axiomatic Gromov--Witten theory.
 
-The repository is the home of the full project, but development proceeds in
-small verified milestones. The Frobenius/TFT layer, the abstract internally
-graded even-cohomology targets for stable curves, and the full all-genus CohFT
-interface are implemented. The genus-zero restriction now extracts a
-commutative Frobenius algebra, proves WDVV and associativity, and classifies the
-degree-zero topological part in every stable arity. The project is ready for
-the tautological-class and ancestor layer.
+The repository is the home of the full project, but development proceeds in small verified milestones. The Frobenius/TFT layer, the abstract internally graded even-cohomology targets for stable curves, and the full all-genus CohFT interface are implemented. The genus-zero restriction now extracts a commutative Frobenius algebra, proves WDVV and associativity, and classifies the degree-zero topological part in every stable arity. The project is ready for the tautological-class and ancestor layer.
 
-> **Project status:** active, research-stage development. The implemented
-> foundations compile without `sorry` or `admit`; planned APIs may still change
-> before a stable release.
+> **Project status:** active, research-stage development. The implemented foundations compile without `sorry` or `admit`; planned APIs may still change before a stable release.
 
 > **Scope:** The planned stable-curve target is restricted to even cohomology.
 
+## Project progress
+
+The [mathematics-to-Lean map](notes/MathematicsToLean.md) connects the mathematical notes to source modules and principal declarations. The [implementation progress record](notes/milestones/ImplementationProgress.md) provides dated milestone scope, verification evidence, implementation commits, deferred work, and the next development gate. The [roadmap](notes/milestones/AxiomaticGWRoadmap.md) remains the source of truth for current milestone status and ordering.
+
 ## Getting started
 
-Install Lean with [elan](https://github.com/leanprover/elan), clone the
-repository, and run:
+Install Lean with [elan](https://github.com/leanprover/elan), clone the repository, and run:
 
 ```bash
 lake exe cache get
@@ -27,15 +22,13 @@ lake build
 lake test
 ```
 
-The project pins Lean and mathlib to `v4.32.0`. Import the current public API
-with:
+The project pins Lean and mathlib to `v4.32.0`. Import the current public API with:
 
 ```lean
 import AxiomaticGW
 ```
 
-Run `lake lint` before submitting changes. CI performs the build, test, and
-lint steps on every pull request to `main`.
+Run `lake lint` before submitting changes. CI performs the build, test, and lint steps on every pull request to `main`.
 
 ## Final scope
 
@@ -184,18 +177,13 @@ finite-labelled multiplication
   -> full stable-arity Frobenius classification.
 ```
 
-The geometric oriented bordism category is not formalized:
-`TopologicalCorrelatorTheory` is its algebraic correlator presentation.
-`TopologicalCohFT` remains the scalar-valued degree-zero theory, while `CohFT`
-is valued in an abstract `StableCurveCohomology`. The constant target connects
-the two interfaces and serves as their regression model. For a general CohFT,
-`ConnectedDegreeZero` produces its topological part, while
-`GenusZeroGeometry` supplies the low-genus facts used for Frobenius extraction
-and WDVV.
+The geometric oriented bordism category is not formalized: `TopologicalCorrelatorTheory` is its algebraic correlator presentation. `TopologicalCohFT` remains the scalar-valued degree-zero theory, while `CohFT` is valued in an abstract `StableCurveCohomology`. The constant target connects the two interfaces and serves as their regression model. For a general CohFT, `ConnectedDegreeZero` produces its topological part, while `GenusZeroGeometry` supplies the low-genus facts used for Frobenius extraction and WDVV.
 
 ## Notes
 
 - [Notes index](notes/README.md)
+- [Mathematics-to-Lean map](notes/MathematicsToLean.md)
+- [Implementation progress record](notes/milestones/ImplementationProgress.md)
 - [The mathematics and goals of AxiomaticGW](notes/mathematics/ProjectMathematicsAndGoals.md)
 - [Mathematics notes for M1--M10](notes/mathematics/README.md)
 - [Roadmap to axiomatic Gromov--Witten theory](notes/milestones/AxiomaticGWRoadmap.md)
@@ -209,10 +197,7 @@ lake build
 
 ## Contributing
 
-Contributions to definitions, proofs, examples, documentation, and API design
-are welcome. Please read [CONTRIBUTING.md](CONTRIBUTING.md) and consult the
-[design-decision ledger](notes/milestones/CohFTDesignDecisions.md) before
-changing an unsettled architectural convention.
+Contributions to definitions, proofs, examples, documentation, and API design are welcome. Please read [CONTRIBUTING.md](CONTRIBUTING.md) and consult the [design-decision ledger](notes/milestones/CohFTDesignDecisions.md) before changing an unsettled architectural convention.
 
 Before opening a pull request, run:
 
@@ -223,11 +208,8 @@ lake test
 git diff --check
 ```
 
-Please report ordinary bugs and mathematical issues through GitHub Issues.
-Sensitive security reports should follow [SECURITY.md](SECURITY.md).
+Please report ordinary bugs and mathematical issues through GitHub Issues. Sensitive security reports should follow [SECURITY.md](SECURITY.md).
 
 ## License
 
-AxiomaticGW is released under the [Apache License 2.0](LICENSE). Citation
-metadata is available in [CITATION.cff](CITATION.cff), and notable changes are
-recorded in [CHANGELOG.md](CHANGELOG.md).
+AxiomaticGW is released under the [Apache License 2.0](LICENSE). Citation metadata is available in [CITATION.cff](CITATION.cff), and notable changes are recorded in [CHANGELOG.md](CHANGELOG.md).

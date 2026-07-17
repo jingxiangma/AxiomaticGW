@@ -12,17 +12,13 @@ $$
 
 The word **full** means that the theory includes every stable genus, not only genus zero. The genus-zero theory is a restriction of this all-genus object.
 
-The basic CohFT does not require a grading on $V$. A later **graded CohFT**
-equips the same state space with a decomposition
+The basic CohFT does not require a grading on $V$. A later **graded CohFT** equips the same state space with a decomposition
 
 $$
 V=\bigoplus_{p\geq 0}V^p,
 $$
 
-requires the unit to lie in $V^0$, and records the degree compatibility of the
-pairing. It extends rather than replaces the ungraded CohFT, so all CohFT maps
-and gluing axioms are inherited unchanged. Curve-class-resolved GW theory then
-extends the graded CohFT and supplies its curve-class-dependent dimension law.
+requires the unit to lie in $V^0$, and records the degree compatibility of the pairing. It extends rather than replaces the ungraded CohFT, so all CohFT maps and gluing axioms are inherited unchanged. Curve-class-resolved GW theory then extends the graded CohFT and supplies its curve-class-dependent dimension law.
 
 ## 2. Relabelling and gluing
 
@@ -75,12 +71,7 @@ Relabelling gives commutativity, the unit axiom makes $\mathbf 1$ the identity, 
 
 ## 5. Topological part and genus zero
 
-Projecting every class to cohomological degree zero gives a class valued in
-$H^0_{g,S}$. A `ConnectedDegreeZero` extension coherently identifies this
-module with $R$ for every stable pair. Under that explicit hypothesis, the
-projection gives the scalar-valued **topological part** of a CohFT, determined
-by the underlying Frobenius algebra. For actual stable-curve moduli spaces this
-extension expresses their usual connectedness property.
+Projecting every class to cohomological degree zero gives a class valued in $H^0_{g,S}$. A `ConnectedDegreeZero` extension coherently identifies this module with $R$ for every stable pair. Under that explicit hypothesis, the projection gives the scalar-valued **topological part** of a CohFT, determined by the underlying Frobenius algebra. For actual stable-curve moduli spaces this extension expresses their usual connectedness property.
 
 Restricting to genus zero yields a genus-zero CohFT. Integrating its primary classes produces a formal potential whose boundary factorization gives WDVV and hence the formal big product. These are derived constructions, not replacements for the full all-genus definition.
 
@@ -88,9 +79,4 @@ Additional intersection-theoretic data are required before inserting tautologica
 
 ## 6. Implementation status
 
-This milestone is complete. The Lean API contains the all-genus CohFT and its
-genus-zero restriction, extracts the product from the three-point class, and
-derives commutativity, the unit laws, metric invariance, WDVV, and
-associativity. Coherent `ConnectedDegreeZero` data define the topological part.
-For scalar-valued topological CohFTs, the extracted Frobenius theory agrees
-with the original correlators in every stable genus and arity.
+This milestone is complete. The Lean API contains the all-genus CohFT and its genus-zero restriction, extracts the product from the three-point class, and derives commutativity, the unit laws, metric invariance, WDVV, and associativity. Coherent `ConnectedDegreeZero` data define the topological part. For scalar-valued topological CohFTs, the extracted Frobenius theory agrees with the original correlators in every stable genus and arity.
