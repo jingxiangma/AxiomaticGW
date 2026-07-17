@@ -69,3 +69,14 @@ $$
 The bar emphasizes that these are ancestor insertions. Forgetful-map and boundary formulas lead to the string equation, dilaton equation, and topological recursion relations, once the corresponding unstable conventions are fixed.
 
 The next stage enriches the theory by effective curve classes and the additional axioms special to Gromov--Witten theory. See [M6: curve-class-resolved GW axioms](M06CurveClassResolvedGW.md).
+
+## 5. Implementation readiness
+
+M3 and M4 now supply the prerequisites for this phase: internally graded
+stable-curve targets, degree-preserving relabelling and primitive pullbacks,
+their immediate coherence laws, and full CohFT classes. The first M5
+implementation should therefore add only the tautological data used by an
+initial theorem: marked `psi`-classes and their relabelling/pullback behavior,
+followed by integration and pushforward once a concrete ancestor construction
+needs them. Stable graphs, kappa classes, and Hodge classes should be added in
+the tranche that first consumes them rather than as unused fields.

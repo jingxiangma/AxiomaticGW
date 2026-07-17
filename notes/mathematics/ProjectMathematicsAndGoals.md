@@ -466,9 +466,9 @@ would prevent development of the reusable axiomatic theory.
 ```text
 M1  perfect pairings and Frobenius algebras                 complete
   -> M2  finite-labelled two-dimensional TFT               complete
-  -> M3  even cohomology of stable curves and gluing       next
-  -> M4  full unital all-genus CohFT
-  -> M5  tautological classes, integration, and ancestors
+  -> M3  even cohomology of stable curves and gluing       complete
+  -> M4  full unital all-genus CohFT                       complete
+  -> M5  tautological classes, integration, and ancestors next
   -> M6  curve-class-resolved GW axioms
   -> M7  Novikov coefficients and quantum products
   -> M8  descendants and descendant--ancestor comparison
@@ -496,12 +496,13 @@ The repository currently contains:
 - the full cohomology-valued CohFT interface and optional graded/geometric
   extensions;
 - the constant degree-zero target and conversion to and from the existing
-  topological CohFT.
+  topological CohFT;
+- genus-zero restriction, Frobenius extraction, WDVV, and associativity;
+- coherent degree-zero scalarization and full stable-arity classification of
+  topological CohFTs by commutative Frobenius algebras.
 
-The next implementation phase derives the Frobenius algebra, general
-topological truncation, and WDVV from the new CohFT interface, then proceeds to
-the M5 tautological and ancestor layer. The settled architectural choices are
-recorded in the design-decision ledger.
+The next implementation phase is the M5 tautological and ancestor layer. The
+settled architectural choices are recorded in the design-decision ledger.
 
 ## 15. Criteria for success
 

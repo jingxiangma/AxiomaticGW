@@ -5,10 +5,10 @@ Lean formalization of the algebraic foundations of axiomatic Gromov--Witten theo
 The repository is the home of the full project, but development proceeds in
 small verified milestones. The Frobenius/TFT layer, the abstract internally
 graded even-cohomology targets for stable curves, and the full all-genus CohFT
-interface are implemented. The constant degree-zero target gives an
-end-to-end conversion between the existing scalar `TopologicalCohFT` and the
-new cohomology-valued theory. Derived Frobenius/WDVV results and tautological
-classes are the next phase.
+interface are implemented. The genus-zero restriction now extracts a
+commutative Frobenius algebra, proves WDVV and associativity, and classifies the
+degree-zero topological part in every stable arity. The project is ready for
+the tautological-class and ancestor layer.
 
 > **Project status:** active, research-stage development. The implemented
 > foundations compile without `sorry` or `admit`; planned APIs may still change
@@ -113,9 +113,10 @@ AxiomaticGW/
     Basic.lean                 # implemented full all-genus CohFT
     Constant.lean              # implemented degree-zero model and conversion
     Unit.lean
-    GenusZero.lean             # restriction of the all-genus theory
-    Frobenius.lean
-    TopologicalPart.lean
+    GenusZero.lean             # implemented genus-zero restriction
+    Frobenius.lean             # implemented extraction, WDVV, associativity
+    TopologicalPart.lean       # implemented degree-zero scalarization
+    Classification.lean       # implemented stable-arity Frobenius round trip
     Ancestors.lean             # stable-curve psi-classes
     Potential.lean
 
@@ -179,14 +180,18 @@ finite-labelled multiplication
   -> separating and nonseparating sewing
   -> bundled topological correlator theory
   -> stable scalar-valued topological CohFT
-  -> recovery of the counit and three-point product.
+  -> recovery of the counit and three-point product
+  -> full stable-arity Frobenius classification.
 ```
 
 The geometric oriented bordism category is not formalized:
 `TopologicalCorrelatorTheory` is its algebraic correlator presentation.
 `TopologicalCohFT` remains the scalar-valued degree-zero theory, while `CohFT`
 is valued in an abstract `StableCurveCohomology`. The constant target connects
-the two interfaces and serves as their regression model.
+the two interfaces and serves as their regression model. For a general CohFT,
+`ConnectedDegreeZero` produces its topological part, while
+`GenusZeroGeometry` supplies the low-genus facts used for Frobenius extraction
+and WDVV.
 
 ## Notes
 

@@ -85,3 +85,12 @@ extension expresses their usual connectedness property.
 Restricting to genus zero yields a genus-zero CohFT. Integrating its primary classes produces a formal potential whose boundary factorization gives WDVV and hence the formal big product. These are derived constructions, not replacements for the full all-genus definition.
 
 Additional intersection-theoretic data are required before inserting tautological classes. See [M5: tautological classes and ancestors](M05TautologicalClassesAndAncestors.md).
+
+## 6. Implementation status
+
+This milestone is complete. The Lean API contains the all-genus CohFT and its
+genus-zero restriction, extracts the product from the three-point class, and
+derives commutativity, the unit laws, metric invariance, WDVV, and
+associativity. Coherent `ConnectedDegreeZero` data define the topological part.
+For scalar-valued topological CohFTs, the extracted Frobenius theory agrees
+with the original correlators in every stable genus and arity.

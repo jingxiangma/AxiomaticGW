@@ -315,13 +315,13 @@ remain explicitly out of scope until those external foundations exist.
 
 ## Recommended implementation gates
 
-1. **M3a:** implement the even-cohomology targets, graded by half
+1. **M3a (complete):** implement the even-cohomology targets, graded by half
    cohomological degree, and the primitive stable-curve pullbacks with
    coherence.
-2. **M4a:** generalize contraction to arbitrary codomains and define full
-   CohFT; use the existing topological theory as the first instance.
-3. **M3b/M4b:** add only the `Mbar(0,3)` and `Mbar(0,4)` facts needed for the
-   Frobenius/WDVV theorems; defer general stable graphs.
+2. **M4a (complete):** generalize contraction to arbitrary codomains and define
+   full CohFT; use the existing topological theory as the first instance.
+3. **M3b/M4b (complete):** add only the `Mbar(0,3)` and `Mbar(0,4)` facts needed
+   for the Frobenius/WDVV theorems; defer general stable graphs.
 4. **M5:** add abstract intersection operations and tautological data.
 5. **M6:** require finite class antidiagonals and settle grading conventions.
 6. **M7a:** implement the finite monoid-algebra theory first.

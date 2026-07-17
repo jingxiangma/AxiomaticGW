@@ -8,6 +8,7 @@ module
 public import AxiomaticGW.Linear.Copairing
 public import Mathlib.LinearAlgebra.Multilinear.Curry
 public import Mathlib.LinearAlgebra.Multilinear.TensorProduct
+public import Mathlib.RingTheory.TensorProduct.Maps
 
 /-!
 # Contraction of named multilinear slots
@@ -288,6 +289,44 @@ theorem pairContract_apply (P : SymmetricPerfectPairing R V)
       P.contractTwo
         ((((LinearMap.mul' R R).compMultilinearMap (f.domCoprod g)).domDomCongr
           (separatingLabelsEquiv S T)).currySum a) := rfl
+
+/-- Applying a linear map after target-valued self-contraction is the same as
+applying it to the target before contraction. -/
+theorem selfContractTarget_comp {W : Type*} [AddCommGroup W] [Module R W]
+    (P : SymmetricPerfectPairing R V) {S : Type*}
+    (f : MultilinearMap R (fun _ : S ⊕ Fin 2 ↦ V) W) (φ : W →ₗ[R] R) :
+    φ.compMultilinearMap (P.selfContractTarget f) =
+      P.selfContract (φ.compMultilinearMap f) := by
+  ext a
+  simp only [LinearMap.compMultilinearMap_apply, selfContractTarget_apply,
+    selfContract_apply, contractTwoTarget_apply, contractTwo_apply]
+  induction P.copairing using TensorProduct.induction_on with
+  | zero => simp
+  | tmul x y =>
+      simp [finTwoToLinearTarget_apply, finTwoToBilin_apply]
+  | add x y hx hy => simp only [map_add, hx, hy]
+
+/-- Scalarizing both targets after separating contraction agrees with first
+scalarizing the two component maps and then using scalar contraction. -/
+theorem pairContractTarget_comp_lift
+    {W₁ W₂ : Type*} [CommRing W₁] [Algebra R W₁]
+    [CommRing W₂] [Algebra R W₂]
+    (P : SymmetricPerfectPairing R V) {S T : Type*}
+    (f : MultilinearMap R (fun _ : Option S ↦ V) W₁)
+    (g : MultilinearMap R (fun _ : Option T ↦ V) W₂)
+    (φ : W₁ →ₐ[R] R) (ψ : W₂ →ₐ[R] R) :
+    (Algebra.TensorProduct.lift φ ψ (fun _ _ ↦ .all _ _)).toLinearMap.compMultilinearMap
+        (P.pairContractTarget f g) =
+      P.pairContract (φ.toLinearMap.compMultilinearMap f)
+        (ψ.toLinearMap.compMultilinearMap g) := by
+  ext a
+  simp only [LinearMap.compMultilinearMap_apply, pairContractTarget_apply,
+    pairContract_apply, contractTwoTarget_apply, contractTwo_apply]
+  induction P.copairing using TensorProduct.induction_on with
+  | zero => simp
+  | tmul x y =>
+      simp [finTwoToLinearTarget_apply, finTwoToBilin_apply]
+  | add x y hx hy => simp only [map_add, hx, hy]
 
 /-- Contracting two metric functionals against the copairing recovers the
 metric. This is the abstract sewing identity used by separating gluing. -/

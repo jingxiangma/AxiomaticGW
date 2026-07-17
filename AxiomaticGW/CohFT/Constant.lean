@@ -94,6 +94,23 @@ noncomputable abbrev constantEvenGradedAlgebra (R : Type*) [CommRing R] :
   carrier := R
   degree := constantDegree R
 
+private theorem constantSeparatingDegree (R : Type*) [CommRing R]
+    (d : ℕ) (x : R) (hx : x ∈ constantDegree R d) :
+    (Algebra.TensorProduct.includeLeft : R →ₐ[R] R ⊗[R] R) x ∈
+      tensorDegree (constantEvenGradedAlgebra R) (constantEvenGradedAlgebra R) d := by
+  by_cases hd : d = 0
+  · subst d
+    change x ⊗ₜ[R] 1 ∈ tensorDegree (constantEvenGradedAlgebra R)
+      (constantEvenGradedAlgebra R) 0
+    apply Submodule.subset_span
+    exact ⟨0, 0, x, 1, rfl, hx, by simp [constantDegree], rfl⟩
+  · have hx0 : x = 0 := by
+      simpa [constantDegree, hd] using hx
+    subst x
+    rw [map_zero]
+    exact (tensorDegree (constantEvenGradedAlgebra R)
+      (constantEvenGradedAlgebra R) d).zero_mem
+
 /-- The constant stable-curve cohomology system. -/
 noncomputable abbrev constantStableCurveCohomology (R : Type*) [CommRing R]
     [Algebra ℚ R] : StableCurveCohomology R where
@@ -102,6 +119,18 @@ noncomputable abbrev constantStableCurveCohomology (R : Type*) [CommRing R]
   forget := fun _ _ _ _ ↦ AlgHom.id R R
   nonseparating := fun _ _ _ _ ↦ AlgHom.id R R
   separating := fun _ _ _ _ _ _ _ _ ↦ Algebra.TensorProduct.includeLeft
+  rename_degree := by
+    intros
+    assumption
+  forget_degree := by
+    intros
+    assumption
+  nonseparating_degree := by
+    intros
+    assumption
+  separating_degree := by
+    intro _ _ _ _ _ _ _ _ d x hx
+    exact constantSeparatingDegree R d x hx
   rename_refl := by intros; rfl
   rename_trans := by intros; rfl
   forget_natural := by intros; rfl
@@ -113,6 +142,11 @@ noncomputable abbrev constantStableCurveCohomology (R : Type*) [CommRing R]
     intros
     ext
   nonseparating_swap := by intros; rfl
+  forget_forget := by intros; rfl
+  forget_nonseparating := by intros; rfl
+  forget_separating_left := by
+    intros
+    ext
 
 namespace constantStableCurveCohomology
 
@@ -137,6 +171,12 @@ noncomputable def connectedDegreeZero :
         map_mul' := fun _ _ ↦ rfl
         map_add' := fun _ _ ↦ rfl
         commutes' := fun _ ↦ rfl }
+  rename_scalar := by intros; rfl
+  forget_scalar := by intros; rfl
+  nonseparating_scalar := by intros; rfl
+  separating_scalar := by
+    intros
+    simp [EvenGradedAlgebra.projZeroAlgHom]
 
 end constantStableCurveCohomology
 

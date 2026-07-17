@@ -166,6 +166,40 @@ example {V : Type*} [AddCommGroup V] [Module ℚ V]
     T.toConstantCohFT.toTopologicalCohFT.omega g S h = T.omega g S h := by
   simp
 
+/-- The generic degree-zero construction specializes to the original
+topological theory on the constant target. -/
+example {V : Type*} [AddCommGroup V] [Module ℚ V]
+    [Module.Free ℚ V] [Module.Finite ℚ V]
+    (T : AxiomaticGW.TopologicalCohFT ℚ V) (g : ℕ) (S : Type) [Fintype S]
+    (h : AxiomaticGW.StableArity g S) :
+    (T.toConstantCohFT.topologicalPart
+      (AxiomaticGW.constantStableCurveCohomology.connectedDegreeZero ℚ)).omega
+        g S h = T.omega g S h := by
+  simp
+
+/-- The genus-zero product extracted from a topological CohFT is associative. -/
+example {V : Type*} [AddCommGroup V] [Module ℚ V]
+    [Module.Free ℚ V] [Module.Finite ℚ V]
+    (T : AxiomaticGW.TopologicalCohFT ℚ V) (x y z : V) :
+    let T₀ := T.toConstantCohFT.toGenusZeroCohFT
+    let G := AxiomaticGW.constantStableCurveCohomology.genusZeroGeometry ℚ
+    T₀.product G (T₀.product G x y) z = T₀.product G x (T₀.product G y z) := by
+  exact T.toConstantCohFT.toGenusZeroCohFT.product_assoc
+    (AxiomaticGW.constantStableCurveCohomology.genusZeroGeometry ℚ) x y z
+
+/-- Frobenius reconstruction agrees with every stable correlator, in every
+genus and finite label type. -/
+example {V : Type*} [AddCommGroup V] [Module ℚ V]
+    [Module.Free ℚ V] [Module.Finite ℚ V]
+    (T : AxiomaticGW.TopologicalCohFT ℚ V) (g : ℕ) (S : Type) [Fintype S]
+    (h : AxiomaticGW.StableArity g S) :
+    ((T.toCommFrobeniusAlgebra.toTopologicalCohFT.omega g S h).compLinearMap
+      (fun _ ↦ (AxiomaticGW.GenusZeroCohFT.FrobeniusCarrier.toStateSpace
+        T.toConstantCohFT.toGenusZeroCohFT
+        (AxiomaticGW.constantStableCurveCohomology.genusZeroGeometry ℚ)).symm.toLinearMap)) =
+      T.omega g S h := by
+  exact T.classification g S h
+
 end FullCohFT
 
 end AxiomaticGWTest

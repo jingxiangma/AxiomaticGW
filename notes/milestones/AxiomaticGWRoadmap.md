@@ -54,8 +54,11 @@ $H^0(\overline{\mathcal M}_{g,S})\cong R$. Stable graphs and graph contraction
 can then package iterated gluing. Odd cohomology and Koszul signs are outside
 the project scope.
 
-**Status:** Initial interface complete. Stable graphs and arbitrary iterated
-gluing remain deferred as decided in D9.
+**Status:** Complete for the primitive-map interface fixed by D9. All maps are
+degree-preserving, the immediate forget/glue coherence laws are present, and
+the constant model validates the interface. Stable graphs and arbitrary
+iterated gluing remain a separately deferred layer rather than unfinished M3
+work.
 
 ## M4. Full unital CohFT
 
@@ -74,8 +77,11 @@ implemented, contraction works with arbitrary target modules, the existing
 representative relabelling, unit, separating, nonseparating, and topological
 truncation tests pass.
 
-**Status:** Core interface and D12 constant-target acceptance tests complete.
-Frobenius extraction, general topological truncation, and WDVV remain planned.
+**Status:** Complete. The implementation includes the genus-zero restriction,
+Frobenius extraction, metric invariance, WDVV, commutativity, unit and
+associativity, general degree-zero topological truncation, and the full
+stable-arity classification of topological CohFTs by the extracted Frobenius
+algebra.
 
 ## M5. Tautological classes and ancestors
 
@@ -86,7 +92,9 @@ needed, together with integration, pushforward, and projection formulas. Use
 stable-curve `psi`-classes to define ancestor correlators and their basic
 relations.
 
-**Status:** Planned.
+**Status:** Ready to start. M3/M4 now provide the graded targets, coherent
+pullbacks, full CohFT classes, and degree-zero/Frobenius regression model needed
+to test the first tautological extensions.
 
 ## M6. Curve-class-resolved GW axioms
 
