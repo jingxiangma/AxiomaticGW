@@ -24,30 +24,30 @@ The notation uses a coefficient ring $R$. The principal numerical specialization
 
 Let $X$ be a smooth projective variety and let $\beta$ be an effective curve class. The moduli space
 
-\[
+$$
 \overline{\mathcal M}_{g,S}(X,\beta)
-\]
+$$
 
 parametrizes stable maps to $X$ from genus-$g$ nodal curves whose marked points are labelled by a finite set $S$. It has evaluation maps
 
-\[
+$$
 \operatorname{ev}_i:
 \overline{\mathcal M}_{g,S}(X,\beta)\longrightarrow X
 \qquad (i\in S)
-\]
+$$
 
 and, in the stable range, a stabilization map
 
-\[
+$$
 \operatorname{st}:
 \overline{\mathcal M}_{g,S}(X,\beta)
 \longrightarrow
 \overline{\mathcal M}_{g,S}.
-\]
+$$
 
 The stable-map space generally has the wrong ordinary dimension. A virtual fundamental class supplies the expected intersection theory. Given insertions $\gamma_i\in H^*(X)$, the associated primary GW class is schematically
 
-\[
+$$
 \Omega^X_{g,S,\beta}((\gamma_i))
 =
 \operatorname{st}_*
@@ -56,7 +56,7 @@ The stable-map space generally has the wrong ordinary dimension. A virtual funda
   \cap
   [\overline{\mathcal M}_{g,S}(X,\beta)]^{\mathrm{vir}}
 \right).
-\]
+$$
 
 This class lies on the moduli space of stable curves. The symmetries, forgetful maps, and boundary gluings of stable curves turn the collection of all such classes into a highly structured object.
 
@@ -68,15 +68,15 @@ The formalization begins with that structure. It first assumes abstract cohomolo
 
 The state space $V$ is finite free over the coefficient ring and has a symmetric perfect pairing
 
-\[
+$$
 \eta:V\otimes V\longrightarrow R.
-\]
+$$
 
 Perfectness identifies $V$ with its dual. Equivalently, it produces a canonical copairing, or inverse metric,
 
-\[
+$$
 C_\eta\in V\otimes V.
-\]
+$$
 
 Contracting node insertions against $C_\eta$ is the algebraic form of gluing two branches of a curve.
 
@@ -84,25 +84,25 @@ Contracting node insertions against $C_\eta$ is the algebraic form of gluing two
 
 A commutative Frobenius algebra consists of a commutative algebra $A$ and a counit
 
-\[
+$$
 \epsilon:A\longrightarrow R
-\]
+$$
 
 such that
 
-\[
+$$
 \eta(a,b)=\epsilon(ab)
-\]
+$$
 
 is a perfect pairing. The inverse metric determines the Casimir tensor, comultiplication, and handle element $E$.
 
 The associated finite-labelled topological correlators are
 
-\[
+$$
 \omega_{g,S}((a_s))
 =
 \epsilon\left(\prod_{s\in S}a_s\,E^g\right).
-\]
+$$
 
 Their contraction identities encode separating and nonseparating sewing of closed oriented surfaces. This Frobenius-to-TFT layer is the completed foundation of the repository.
 
@@ -110,34 +110,34 @@ Their contraction identities encode separating and nonseparating sewing of close
 
 The moduli space of stable curves with genus $g$ and finite label set $S$ is denoted
 
-\[
+$$
 \overline{\mathcal M}_{g,S}.
-\]
+$$
 
 Its numerical stability condition is
 
-\[
+$$
 2g-2+|S|>0,
-\]
+$$
 
 represented in Lean without natural-number subtraction as
 
-\[
+$$
 3\leq 2g+|S|.
-\]
+$$
 
 The project uses only even stable-curve cohomology. For each stable pair it models an abstract commutative graded algebra
 
-\[
+$$
 H_{g,S}=H^{\mathrm{even}}(\overline{\mathcal M}_{g,S};R).
-\]
+$$
 
 The grading uses the algebraic-geometric codimension convention:
 
-\[
+$$
 H_{g,S}^{d}\quad\text{models}\quad
 H^{2d}(\overline{\mathcal M}_{g,S};R).
-\]
+$$
 
 Thus divisors and psi classes have degree one, multiplication adds degrees, and top degree equals the complex dimension $3g-3+|S|$. Odd cohomology and Koszul signs are outside the project scope.
 
@@ -156,9 +156,9 @@ It also records the functoriality, naturality, and coherence identities used by 
 
 A unital CohFT assigns to every stable pair $(g,S)$ a multilinear map
 
-\[
+$$
 \Omega_{g,S}:V^{\otimes S}\longrightarrow H_{g,S}.
-\]
+$$
 
 The defining properties are the following.
 
@@ -170,7 +170,7 @@ The classes are natural under bijections of finite label sets. The project uses 
 
 When a curve splits into components of genera $g_1$ and $g_2$, restriction to the corresponding boundary equals the external product of the component classes with the two new state-space inputs contracted against $C_\eta$:
 
-\[
+$$
 \xi^*\Omega_{g_1+g_2,S\sqcup T}
 =
 \operatorname{Contr}_{C_\eta}
@@ -179,28 +179,28 @@ When a curve splits into components of genera $g_1$ and $g_2$, restriction to th
   \boxtimes
   \Omega_{g_2,T\sqcup\{*\}}
 \right).
-\]
+$$
 
 ### 5.3 Nonseparating gluing
 
 Identifying two markings on one curve raises the genus by one:
 
-\[
+$$
 \iota^*\Omega_{g+1,S}
 =
 \operatorname{Contr}_{C_\eta}
 \left(\Omega_{g,S\sqcup\{+,-\}}\right).
-\]
+$$
 
 ### 5.4 Flat unit
 
 There is a distinguished vector $\mathbf 1\in V$. Inserting it at a new marking agrees with pullback along the forgetful map:
 
-\[
+$$
 \Omega_{g,S\sqcup\{*\}}((v_s),\mathbf 1)
 =
 \pi^*\Omega_{g,S}((v_s)).
-\]
+$$
 
 The three-point normalization identifies the unit insertion with the metric.
 
@@ -208,9 +208,9 @@ The three-point normalization identifies the unit insertion with the metric.
 
 Because $\overline{\mathcal M}_{0,3}$ is a point, the three-point class defines a multiplication on $V$ by
 
-\[
+$$
 \eta(a*b,c)=\Omega_{0,3}(a,b,c).
-\]
+$$
 
 Relabelling gives commutativity, the flat-unit axiom gives the identity, and the two boundary presentations of $\overline{\mathcal M}_{0,4}$ give associativity. The same boundary relation, written for a varying insertion, is the WDVV equation.
 
@@ -222,21 +222,21 @@ Projecting to codimension zero gives the topological part when the degree-zero c
 
 For a marking $i$, the stable-curve cotangent line has first Chern class
 
-\[
+$$
 \psi_i\in H^2(\overline{\mathcal M}_{g,S}),
-\]
+$$
 
 which has project degree one. Other distinguished classes include
 
-\[
+$$
 \kappa_m=\pi_*(\psi_*^{m+1})
 \qquad\text{and}\qquad
 \lambda_j=c_j(\mathbb E).
-\]
+$$
 
 Using integration on the stable-curve space, ancestor correlators are
 
-\[
+$$
 \left\langle
 \prod_{i\in S}\bar\tau_{k_i}(v_i)
 \right\rangle_g
@@ -244,7 +244,7 @@ Using integration on the stable-curve space, ancestor correlators are
 \int_{\overline{\mathcal M}_{g,S}}
 \Omega_{g,S}((v_i))
 \prod_{i\in S}\psi_i^{k_i}.
-\]
+$$
 
 To formalize this expression, the stable-curve system must be extended with proper pushforward, integration, external products, projection formulas, base-change identities, top-degree rules, and the relevant tautological relations.
 
@@ -252,14 +252,14 @@ To formalize this expression, the stable-curve system must be extended with prop
 
 Let $B$ be a monoid of effective curve classes. A GW theory refines a CohFT to classes
 
-\[
+$$
 \Omega_{g,S,\beta}:V^{\otimes S}\longrightarrow H_{g,S},
 \qquad \beta\in B.
-\]
+$$
 
 At a separating node the total class is distributed over the two components:
 
-\[
+$$
 \xi^*\Omega_{g_1+g_2,S\sqcup T,\beta}
 =
 \sum_{\beta_1+\beta_2=\beta}
@@ -269,7 +269,7 @@ At a separating node the total class is distributed over the two components:
   \boxtimes
   \Omega_{g_2,T\sqcup\{*\},\beta_2}
 \right).
-\]
+$$
 
 The formal system must state a finiteness condition making this coefficient sum meaningful. Nonseparating gluing preserves $\beta$.
 
@@ -277,9 +277,9 @@ Additional GW data and axioms include:
 
 - effectivity of curve classes;
 - the virtual complex dimension
-  \[
+  $$
   (1-g)(\dim_\mathbb C X-3)+|S|+\int_\beta c_1(TX);
-  \]
+  $$
 - grading compatibility;
 - the divisor--curve pairing and divisor equation;
 - degree-zero normalization recovering classical multiplication;
@@ -291,24 +291,24 @@ These properties are not consequences of a bare CohFT.
 
 Introduce formal monomials $Q^\beta$ satisfying
 
-\[
+$$
 Q^{\beta_1}Q^{\beta_2}=Q^{\beta_1+\beta_2}.
-\]
+$$
 
 The coefficientwise theory is assembled as
 
-\[
+$$
 \Omega_{g,S}=\sum_{\beta\in B}Q^\beta\Omega_{g,S,\beta}.
-\]
+$$
 
 A Novikov support condition controls the infinite sum. The small quantum product is characterized by
 
-\[
+$$
 \eta(a*_Q b,c)
 =
 \sum_{\beta\in B}Q^\beta
 \langle a,b,c\rangle_{0,3,\beta}.
-\]
+$$
 
 Its associativity follows from separating gluing on $\overline{\mathcal M}_{0,4}$. Adding a formal point $t\in V$ gives the big quantum product and the genus-zero primary potential; WDVV is the corresponding associativity equation.
 
@@ -318,23 +318,23 @@ The project will first prove identities coefficientwise and only then pass to th
 
 Stable-map descendant classes live on $\overline{\mathcal M}_{g,S}(X,\beta)$:
 
-\[
+$$
 \psi_i^{\mathrm{map}}=c_1(L_i^{\mathrm{map}}).
-\]
+$$
 
 Ancestor classes are pulled back from the stable-curve space:
 
-\[
+$$
 \bar\psi_i=\operatorname{st}^*(\psi_i^{\mathrm{curve}}).
-\]
+$$
 
 They are not definitionally equal. Stabilization can contract a rational component, producing boundary corrections of the schematic form
 
-\[
+$$
 \psi_i^{\mathrm{map}}
 =
 \bar\psi_i+\text{boundary terms}.
-\]
+$$
 
 Descendant invariants integrate powers of $\psi_i^{\mathrm{map}}$ against the virtual class. Ancestor invariants use powers of $\bar\psi_i$. The project keeps these classes in distinct interfaces and derives their comparison only from explicit stabilization and boundary hypotheses.
 
@@ -342,22 +342,22 @@ Descendant invariants integrate powers of $\psi_i^{\mathrm{map}}$ against the vi
 
 With descendant variables $t_k^\alpha$, the genus-$g$ potential is schematically
 
-\[
+$$
 \mathcal F_g
 =
 \sum_{\beta}\sum_{n\geq 0}\frac{Q^\beta}{n!}
 \left\langle
 \mathbf t(\psi),\ldots,\mathbf t(\psi)
 \right\rangle_{g,n,\beta}.
-\]
+$$
 
 Introducing a genus parameter $\hbar$, the free energy and total descendant potential are formally
 
-\[
+$$
 \mathcal F=\sum_{g\geq 0}\hbar^{g-1}\mathcal F_g,
 \qquad
 \mathcal D=\exp(\mathcal F).
-\]
+$$
 
 These expressions require a completion simultaneously controlling curve classes, insertion variables, descendant degree, and genus. In particular, although $\mathcal F$ is bounded below by $\hbar^{-1}$, its exponential can contain arbitrarily negative powers of $\hbar$. The project must therefore use a filtered mixed completion or retain the exponential symbolically; ordinary Laurent series alone are insufficient.
 
