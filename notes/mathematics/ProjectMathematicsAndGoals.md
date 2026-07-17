@@ -491,12 +491,17 @@ The repository currently contains:
 - a bundled topological correlator theory;
 - its scalar-valued stable topological CohFT restriction;
 - recovery of the counit and three-point product in the current fixed-algebra
-  API.
+  API;
+- internally graded even-cohomology targets with primitive stable-curve maps;
+- the full cohomology-valued CohFT interface and optional graded/geometric
+  extensions;
+- the constant degree-zero target and conversion to and from the existing
+  topological CohFT.
 
-The next implementation phase is M3: packaging internally graded even
-cohomology targets and the primitive stable-curve operations. Architectural
-choices that must be fixed before this code is written are tracked separately
-in the design-decision ledger.
+The next implementation phase derives the Frobenius algebra, general
+topological truncation, and WDVV from the new CohFT interface, then proceeds to
+the M5 tautological and ancestor layer. The settled architectural choices are
+recorded in the design-decision ledger.
 
 ## 15. Criteria for success
 

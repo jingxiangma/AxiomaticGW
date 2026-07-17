@@ -7,6 +7,7 @@ module
 
 public import AxiomaticGW.Frobenius.Examples
 public import AxiomaticGW.CohFT.Topological
+public import AxiomaticGW.CohFT.Constant
 public import AxiomaticGW.Linear.Contraction
 public import AxiomaticGW.TFT.Correlator
 public import AxiomaticGW.TFT.Classification

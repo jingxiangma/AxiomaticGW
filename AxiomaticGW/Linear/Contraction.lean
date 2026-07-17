@@ -108,6 +108,90 @@ theorem selfContract_smul (P : SymmetricPerfectPairing R V) {S : Type*}
     P.selfContract (r • f) = r • P.selfContract f := by
   simp [selfContract]
 
+section Target
+
+variable {W : Type*} [AddCommGroup W] [Module R W]
+
+/-- A one-input multilinear map with arbitrary target is canonically a linear
+map. This is the target-generic counterpart of `finOneToLinear`. -/
+noncomputable def finOneToLinearTarget :
+    MultilinearMap R (fun _ : Fin 1 ↦ V) W →ₗ[R] (V →ₗ[R] W) :=
+  (LinearMap.compRight R
+    (MultilinearMap.constLinearEquivOfIsEmpty R R (fun _ : Fin 0 ↦ V) W).symm.toLinearMap).comp
+    (multilinearCurryLeftEquiv R (fun _ : Fin 1 ↦ V) W).toLinearMap
+
+omit [Module.Free R V] [Module.Finite R V] in
+/-- Evaluation of the target-generic one-input identification. -/
+@[simp]
+theorem finOneToLinearTarget_apply
+    (f : MultilinearMap R (fun _ : Fin 1 ↦ V) W) (x : V) :
+    finOneToLinearTarget f x = f (fun _ ↦ x) := by
+  simp only [finOneToLinearTarget, LinearMap.coe_comp, LinearEquiv.coe_coe,
+    Function.comp_apply, multilinearCurryLeftEquiv_apply,
+    LinearMap.compRight_apply, MultilinearMap.constLinearEquivOfIsEmpty_symm_apply,
+    MultilinearMap.curryLeft_apply]
+  congr 1
+  funext i
+  fin_cases i
+  rfl
+
+/-- A two-input multilinear map with arbitrary target is canonically a
+curried bilinear map. -/
+noncomputable def finTwoToLinearTarget :
+    MultilinearMap R (fun _ : Fin 2 ↦ V) W →ₗ[R] (V →ₗ[R] V →ₗ[R] W) :=
+  (LinearMap.compRight R (finOneToLinearTarget (R := R) (V := V) (W := W))).comp
+    (multilinearCurryLeftEquiv R (fun _ : Fin 2 ↦ V) W).toLinearMap
+
+omit [Module.Free R V] [Module.Finite R V] in
+/-- Evaluation of the target-generic two-input identification. -/
+@[simp]
+theorem finTwoToLinearTarget_apply
+    (f : MultilinearMap R (fun _ : Fin 2 ↦ V) W) (x y : V) :
+    finTwoToLinearTarget f x y = f (Fin.cons x fun _ ↦ y) := by
+  simp [finTwoToLinearTarget]
+
+/-- Contract a two-input multilinear map with arbitrary target against the
+copairing. -/
+noncomputable def contractTwoTarget (P : SymmetricPerfectPairing R V) :
+    MultilinearMap R (fun _ : Fin 2 ↦ V) W →ₗ[R] W :=
+  (LinearMap.applyₗ P.copairing).comp
+    ((TensorProduct.uncurry (RingHom.id R) V V W).comp finTwoToLinearTarget)
+
+/-- Target-generic contraction evaluates the associated bilinear map on the
+copairing tensor. -/
+theorem contractTwoTarget_apply (P : SymmetricPerfectPairing R V)
+    (f : MultilinearMap R (fun _ : Fin 2 ↦ V) W) :
+    P.contractTwoTarget f = TensorProduct.lift (finTwoToLinearTarget f) P.copairing := rfl
+
+/-- For scalar target, target-generic contraction is the original scalar
+contraction. -/
+theorem contractTwoTarget_eq_contractTwo (P : SymmetricPerfectPairing R V)
+    (f : MultilinearMap R (fun _ : Fin 2 ↦ V) R) :
+    P.contractTwoTarget f = P.contractTwo f := by
+  rfl
+
+/-- Contract two distinguished inputs while retaining an arbitrary target. -/
+noncomputable def selfContractTarget (P : SymmetricPerfectPairing R V)
+    {S : Type*} (f : MultilinearMap R (fun _ : S ⊕ Fin 2 ↦ V) W) :
+    MultilinearMap R (fun _ : S ↦ V) W :=
+  P.contractTwoTarget.compMultilinearMap f.currySum
+
+/-- Pointwise evaluation of target-generic self-contraction. -/
+@[simp]
+theorem selfContractTarget_apply (P : SymmetricPerfectPairing R V)
+    {S : Type*} (f : MultilinearMap R (fun _ : S ⊕ Fin 2 ↦ V) W)
+    (a : S → V) :
+    P.selfContractTarget f a = P.contractTwoTarget (f.currySum a) := rfl
+
+/-- For scalar target, target-generic self-contraction is the original
+self-contraction. -/
+theorem selfContractTarget_eq_selfContract (P : SymmetricPerfectPairing R V)
+    {S : Type*} (f : MultilinearMap R (fun _ : S ⊕ Fin 2 ↦ V) R) :
+    P.selfContractTarget f = P.selfContract f := by
+  rfl
+
+end Target
+
 /-- The transposition of the two distinguished node labels. -/
 def swapFinTwo : Equiv.Perm (Fin 2) := Equiv.swap 0 1
 
@@ -161,6 +245,28 @@ def separatingLabelsEquiv (S T : Type*) :
     · rfl
     · rfl
     · fin_cases i <;> rfl
+
+/-- Contract the distinguished node of each of two multilinear maps, retaining
+the tensor product of their targets. -/
+noncomputable def pairContractTarget (P : SymmetricPerfectPairing R V)
+    {W₁ W₂ : Type*} [AddCommGroup W₁] [Module R W₁]
+    [AddCommGroup W₂] [Module R W₂] {S T : Type*}
+    (f : MultilinearMap R (fun _ : Option S ↦ V) W₁)
+    (g : MultilinearMap R (fun _ : Option T ↦ V) W₂) :
+    MultilinearMap R (fun _ : S ⊕ T ↦ V) (W₁ ⊗[R] W₂) :=
+  P.selfContractTarget
+    ((f.domCoprod g).domDomCongr (separatingLabelsEquiv S T))
+
+/-- Pointwise evaluation of target-generic separating contraction. -/
+@[simp]
+theorem pairContractTarget_apply (P : SymmetricPerfectPairing R V)
+    {W₁ W₂ : Type*} [AddCommGroup W₁] [Module R W₁]
+    [AddCommGroup W₂] [Module R W₂] {S T : Type*}
+    (f : MultilinearMap R (fun _ : Option S ↦ V) W₁)
+    (g : MultilinearMap R (fun _ : Option T ↦ V) W₂) (a : S ⊕ T → V) :
+    P.pairContractTarget f g a =
+      P.contractTwoTarget
+        (((f.domCoprod g).domDomCongr (separatingLabelsEquiv S T)).currySum a) := rfl
 
 /-- Contract the distinguished node of each of two scalar-valued multilinear
 maps. The remaining labels are the disjoint union `S ⊕ T`. -/

@@ -1,0 +1,216 @@
+/-
+Copyright (c) 2026 JMA. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: JMA
+-/
+module
+
+public import AxiomaticGW.Combinatorics.StableArity
+public import Mathlib.RingTheory.GradedAlgebra.Basic
+public import Mathlib.RingTheory.TensorProduct.Maps
+
+/-!
+# Abstract even cohomology of stable curves
+
+This file packages the target-side data used by a cohomological field theory.
+Degree `d` models ordinary cohomological degree `2d`; consequently all rings
+and all geometric maps are ordinary, without Koszul signs.
+-/
+
+@[expose] public section
+
+namespace AxiomaticGW
+
+open TensorProduct
+
+universe u
+
+/-- An ordinary commutative algebra with an internal grading by codimension.
+The grading is data so that different geometric models can choose different
+decompositions of the same underlying algebra. -/
+structure EvenGradedAlgebra (R : Type u) [CommRing R] where
+  /-- The total cohomology algebra. -/
+  carrier : Type u
+  /-- Ring structure on total cohomology. -/
+  [commRing : CommRing carrier]
+  /-- Coefficient-algebra structure. -/
+  [algebra : Algebra R carrier]
+  /-- The codimension-`d` summand, representing ordinary degree `2d`. -/
+  degree : ℕ → Submodule R carrier
+  /-- The summands form an internal graded algebra. -/
+  [graded : GradedAlgebra degree]
+
+namespace EvenGradedAlgebra
+
+instance {R : Type u} [CommRing R] : CoeSort (EvenGradedAlgebra R) (Type u) :=
+  ⟨EvenGradedAlgebra.carrier⟩
+
+instance {R : Type u} [CommRing R] (A : EvenGradedAlgebra R) : CommRing A :=
+  A.commRing
+
+instance {R : Type u} [CommRing R] (A : EvenGradedAlgebra R) : Algebra R A :=
+  A.algebra
+
+instance {R : Type u} [CommRing R] (A : EvenGradedAlgebra R) :
+    GradedAlgebra A.degree :=
+  A.graded
+
+/-- Projection to codimension degree `d`. -/
+noncomputable def proj {R : Type u} [CommRing R] (A : EvenGradedAlgebra R)
+    (d : ℕ) : A →ₗ[R] A :=
+  GradedAlgebra.proj A.degree d
+
+/-- Equal packaged graded algebras have canonically equivalent carriers. -/
+def congr {R : Type u} [CommRing R] {A B : EvenGradedAlgebra R} (h : A = B) :
+    A ≃ₐ[R] B := by
+  subst B
+  exact AlgEquiv.refl
+
+end EvenGradedAlgebra
+
+/-- The two successive optional markings used for a nonseparating node are
+equivalent to two ordered node labels adjoined to the original labels. -/
+def doubleOptionEquiv (S : Type*) : Option (Option S) ≃ S ⊕ Fin 2 where
+  toFun
+    | none => .inr 0
+    | some none => .inr 1
+    | some (some s) => .inl s
+  invFun
+    | .inl s => some (some s)
+    | .inr i => Fin.cases none (fun _ ↦ some none) i
+  left_inv x := by
+    rcases x with _ | (_ | s)
+    · rfl
+    · rfl
+    · rfl
+  right_inv x := by
+    rcases x with s | i
+    · rfl
+    · fin_cases i <;> rfl
+
+/-- Exchange the two node markings in `Option (Option S)`, fixing the original
+labels. -/
+def swapDoubleOption (S : Type*) : Equiv.Perm (Option (Option S)) :=
+  (doubleOptionEquiv S).trans
+    ((Equiv.refl S).sumCongr (Equiv.swap 0 1)) |>.trans
+      (doubleOptionEquiv S).symm
+
+/-- The permutation of four labels comparing the `12|34` and `13|24`
+boundary presentations in WDVV notation. -/
+def wdvvPermutation : Equiv.Perm (Fin 2 ⊕ Fin 2) :=
+  Equiv.swap (.inl 1) (.inr 0)
+
+/-- Abstract even cohomology of stable-curve moduli spaces. Geometric maps are
+written contravariantly; relabelling equivalences are written in the visible
+covariant direction. -/
+structure StableCurveCohomology (R : Type u) [CommRing R] [Algebra ℚ R] where
+  /-- Cohomology target for a genus and finite label type. -/
+  H : (g : ℕ) → (S : Type) → [Fintype S] → EvenGradedAlgebra R
+  /-- Covariant notation for transport along a label equivalence. -/
+  rename : ∀ (g : ℕ) (S T : Type) [Fintype S] [Fintype T]
+      (_hS : StableArity g S) (_hT : StableArity g T), S ≃ T →
+      H g S ≃ₐ[R] H g T
+  /-- Pullback along the map forgetting one marking. -/
+  forget : ∀ (g : ℕ) (S : Type) [Fintype S] (_h : StableArity g S),
+      H g S →ₐ[R] H g (Option S)
+  /-- Pullback along nonseparating gluing. -/
+  nonseparating : ∀ (g : ℕ) (S : Type) [Fintype S]
+      (_h : StableArity (g + 1) S),
+      H (g + 1) S →ₐ[R] H g (Option (Option S))
+  /-- Pullback along separating gluing, with the even-even Kunneth target. -/
+  separating : ∀ (g₁ g₂ : ℕ) (S T : Type) [Fintype S] [Fintype T]
+      (_h₁ : StableArity g₁ (Option S)) (_h₂ : StableArity g₂ (Option T)),
+      H (g₁ + g₂) (S ⊕ T) →ₐ[R]
+        (H g₁ (Option S) ⊗[R] H g₂ (Option T))
+  /-- Identity relabelling acts as the identity. -/
+  rename_refl : ∀ (g : ℕ) (S : Type) [Fintype S] (h : StableArity g S),
+      rename g S S h h (Equiv.refl S) = AlgEquiv.refl
+  /-- Relabelling is functorial. -/
+  rename_trans : ∀ (g : ℕ) (S T U : Type)
+      [Fintype S] [Fintype T] [Fintype U]
+      (hS : StableArity g S) (hT : StableArity g T)
+      (hU : StableArity g U) (e : S ≃ T) (f : T ≃ U),
+      rename g S U hS hU (e.trans f) =
+        (rename g S T hS hT e).trans (rename g T U hT hU f)
+  /-- Forgetful pullback is natural under relabelling. -/
+  forget_natural : ∀ (g : ℕ) (S T : Type) [Fintype S] [Fintype T]
+      (hS : StableArity g S) (hT : StableArity g T) (e : S ≃ T),
+      (forget g T hT).comp (rename g S T hS hT e).toAlgHom =
+        (rename g (Option S) (Option T) (StableArity.option hS)
+          (StableArity.option hT) e.optionCongr).toAlgHom.comp (forget g S hS)
+  /-- Nonseparating pullback is natural under relabelling. -/
+  nonseparating_natural : ∀ (g : ℕ) (S T : Type)
+      [Fintype S] [Fintype T] (hS : StableArity (g + 1) S)
+      (hT : StableArity (g + 1) T) (e : S ≃ T),
+      (nonseparating g T hT).comp (rename (g + 1) S T hS hT e).toAlgHom =
+        (rename g (Option (Option S)) (Option (Option T))
+          (StableArity.double_option_iff.mpr hS)
+          (StableArity.double_option_iff.mpr hT)
+          e.optionCongr.optionCongr).toAlgHom.comp (nonseparating g S hS)
+  /-- Separating pullback is natural under independent relabelling of the two
+  components. -/
+  separating_natural : ∀ (g₁ g₂ : ℕ) (S T U W : Type)
+      [Fintype S] [Fintype T] [Fintype U] [Fintype W]
+      (hS : StableArity g₁ (Option S)) (hT : StableArity g₂ (Option T))
+      (hU : StableArity g₁ (Option U)) (hW : StableArity g₂ (Option W))
+      (e : S ≃ U) (f : T ≃ W),
+      (Algebra.TensorProduct.map
+        (rename g₁ (Option S) (Option U) hS hU e.optionCongr).toAlgHom
+        (rename g₂ (Option T) (Option W) hT hW f.optionCongr).toAlgHom).comp
+          (separating g₁ g₂ S T hS hT) =
+        (separating g₁ g₂ U W hU hW).comp
+          (rename (g₁ + g₂) (S ⊕ T) (U ⊕ W)
+            (StableArity.separating hS hT) (StableArity.separating hU hW)
+            (e.sumCongr f)).toAlgHom
+  /-- Exchanging the two components of a separating node agrees with swapping
+  the two Kunneth tensor factors. -/
+  separating_swap : ∀ (g₁ g₂ : ℕ) (S T : Type)
+      [Fintype S] [Fintype T]
+      (hS : StableArity g₁ (Option S)) (hT : StableArity g₂ (Option T)),
+      (Algebra.TensorProduct.comm R (H g₁ (Option S))
+        (H g₂ (Option T))).toAlgHom.comp
+            (separating g₁ g₂ S T hS hT) =
+        (separating g₂ g₁ T S hT hS).comp
+          ((rename (g₂ + g₁) (S ⊕ T) (T ⊕ S)
+            ((Nat.add_comm g₁ g₂) ▸ StableArity.separating hS hT)
+            (StableArity.separating hT hS) (Equiv.sumComm S T)).toAlgHom.comp
+              (EvenGradedAlgebra.congr
+                (congrArg (fun k ↦ H k (S ⊕ T)) (Nat.add_comm g₁ g₂))).toAlgHom)
+  /-- The nonseparating pullback does not depend on ordering its two node
+  branches. -/
+  nonseparating_swap : ∀ (g : ℕ) (S : Type) [Fintype S]
+      (h : StableArity (g + 1) S),
+      (rename g (Option (Option S)) (Option (Option S))
+        (StableArity.double_option_iff.mpr h)
+        (StableArity.double_option_iff.mpr h)
+        (swapDoubleOption S)).toAlgHom.comp (nonseparating g S h) =
+          nonseparating g S h
+
+/-- Optional low-genus facts used to extract a Frobenius algebra and WDVV. -/
+structure GenusZeroGeometry {R : Type u} [CommRing R] [Algebra ℚ R]
+    (C : StableCurveCohomology R) where
+  /-- The cohomology of `Mbar(0,3)` is the coefficient ring. -/
+  mbarZeroThree : C.H 0 (Fin 3) ≃ₐ[R] R
+  /-- The two boundary restrictions of `Mbar(0,4)` used by WDVV agree after
+  transporting the four labels from `12|34` to `13|24`. -/
+  mbarZeroFourBoundary :
+    (C.separating 0 0 (Fin 2) (Fin 2)
+      StableArity.zero_option_fin_two StableArity.zero_option_fin_two).comp
+        (C.rename 0 (Fin 2 ⊕ Fin 2) (Fin 2 ⊕ Fin 2)
+          (StableArity.separating StableArity.zero_option_fin_two
+            StableArity.zero_option_fin_two)
+          (StableArity.separating StableArity.zero_option_fin_two
+            StableArity.zero_option_fin_two)
+          wdvvPermutation).toAlgHom =
+      C.separating 0 0 (Fin 2) (Fin 2)
+        StableArity.zero_option_fin_two StableArity.zero_option_fin_two
+
+/-- Optional connectedness data identifying every degree-zero summand with
+the coefficient ring. -/
+structure ConnectedDegreeZero {R : Type u} [CommRing R] [Algebra ℚ R]
+    (C : StableCurveCohomology R) where
+  /-- Coherent scalar interpretation of degree-zero classes. -/
+  degreeZeroEquiv : ∀ (g : ℕ) (S : Type) [Fintype S]
+      (_h : StableArity g S), C.H g S |>.degree 0 ≃ₐ[R] R
+
+end AxiomaticGW

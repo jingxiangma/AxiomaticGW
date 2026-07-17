@@ -12,6 +12,18 @@ $$
 
 The word **full** means that the theory includes every stable genus, not only genus zero. The genus-zero theory is a restriction of this all-genus object.
 
+The basic CohFT does not require a grading on $V$. A later **graded CohFT**
+equips the same state space with a decomposition
+
+$$
+V=\bigoplus_{p\geq 0}V^p,
+$$
+
+requires the unit to lie in $V^0$, and records the degree compatibility of the
+pairing. It extends rather than replaces the ungraded CohFT, so all CohFT maps
+and gluing axioms are inherited unchanged. Curve-class-resolved GW theory then
+extends the graded CohFT and supplies its curve-class-dependent dimension law.
+
 ## 2. Relabelling and gluing
 
 The maps $\Omega_{g,S}$ are natural under bijections of label sets. For separating gluing, pulling back a class to the boundary equals the product of the two component classes with the two new state-space inputs contracted by the copairing $C_\eta$:
@@ -63,7 +75,12 @@ Relabelling gives commutativity, the unit axiom makes $\mathbf 1$ the identity, 
 
 ## 5. Topological part and genus zero
 
-Projecting every class to cohomological degree zero gives the **topological part** of a CohFT. Under the usual connectedness assumptions for $\overline{\mathcal M}_{g,S}$, this part is the topological CohFT determined by the underlying Frobenius algebra.
+Projecting every class to cohomological degree zero gives a class valued in
+$H^0_{g,S}$. A `ConnectedDegreeZero` extension coherently identifies this
+module with $R$ for every stable pair. Under that explicit hypothesis, the
+projection gives the scalar-valued **topological part** of a CohFT, determined
+by the underlying Frobenius algebra. For actual stable-curve moduli spaces this
+extension expresses their usual connectedness property.
 
 Restricting to genus zero yields a genus-zero CohFT. Integrating its primary classes produces a formal potential whose boundary factorization gives WDVV and hence the formal big product. These are derived constructions, not replacements for the full all-genus definition.
 
