@@ -18,6 +18,7 @@ This document records the architectural decisions that should be settled before 
 | D10 | Where do low-genus geometric facts live? | Separate `GenusZeroGeometry` extension containing the `Mbar(0,3)` and `Mbar(0,4)` facts | **Settled** |
 | D11 | Is `H^0 = R` part of every cohomology system? | Use an optional `ConnectedDegreeZero` extension | **Settled** |
 | D12 | What validates the initial architecture? | End-to-end constant-system conversion and regression tests | **Settled** |
+| D13 | Which effective curve classes and Novikov completion are in scope? | A positive locally finite cancellative effective monoid with an additive energy | **Settled** |
 
 Here `Q`, `tensor`, and `H^(2d)` in the table denote `ℚ`, `⊗[R]`, and ordinary degree-`2d` cohomology respectively; ASCII is used in the table to keep its source readable.
 
@@ -113,9 +114,9 @@ It satisfies `rename (f ∘ e) = rename f ∘ rename e`. This matches `Multiline
 
 The bare CohFT interface uses an ungraded finite-free module `V`, representing only the even state space. Its multilinear CohFT maps accept arbitrary elements of `V`; state-space degrees are not part of the M4 input types.
 
-An explicit `GradedCohFT` extension equips the same `V` with a graded-state-space structure, together with homogeneity of the unit and degree compatibility of the pairing. In codimension grading, the Poincare pairing for a complex `m`-fold pairs complementary degrees whose sum is `m`.
+An explicit `GradedStateSpace` equips the same `V` with a grading, together with homogeneity of the unit and degree compatibility of the pairing. `GradedCohFT` combines that reusable state-space data with a bare CohFT. In codimension grading, the Poincare pairing for a complex `m`-fold pairs complementary degrees whose sum is `m`.
 
-The curve-class-resolved GW structure extends `GradedCohFT` and adds the virtual-dimension rule on homogeneous insertions; this rule remains in the GW layer because its degree depends on the curve class `beta`. Thus the intended hierarchy is `CohFT -> GradedCohFT -> CurveClassGWCohFT`. The layered design allows the underlying CohFT maps, gluing axioms, and their proofs to be reused unchanged.
+The curve-class-resolved GW structure reuses `GradedStateSpace` and adds the virtual-dimension rule on homogeneous insertions; this rule remains in the GW layer because its degree depends on the curve class `beta`. It does not extend `GradedCohFT`, because a fixed-beta family has convolutional separating gluing and becomes an ordinary CohFT only after Novikov summation. This distinction prevents Lean from asserting a mathematically false coefficientwise CohFT instance.
 
 ### D9. Initial coherence boundary
 
@@ -163,6 +164,14 @@ Before building tautological, stable-graph, or GW layers, the M3/M4 architecture
 
 If these examples require excessive instance plumbing or repeated direct-sum unfolding, the M3 package should be revised before proceeding to M5.
 
+### D13. Effective curve classes and Novikov completion
+
+Curve classes are indexed by a cancellative additive commutative monoid `B` of effective numerical classes. The monoid is equipped with an additive energy `energy : B →+ ℕ`, geometrically modeled by intersection with a chosen ample divisor, such that `energy beta = 0` exactly when `beta = 0` and the set of classes of energy at most any fixed bound is finite.
+
+This hypothesis does not require `B` to be finite, finitely generated, free, or ordered. It implies that every antidiagonal `{(beta1, beta2) | beta1 + beta2 = beta}` is finite and that every coefficient family can be truncated to a finite sum below a fixed energy. The project will therefore use coefficient functions `B → R` with finite-antidiagonal convolution as its beta-preserving Novikov completion. Distinct curve classes with the same energy remain distinct.
+
+The Lean package must expose only the energy map, positivity, and bounded-energy finiteness. Finite antidiagonals, truncations, the filtration, and convolution finiteness are derived theorems rather than additional fields. The finite-support monoid algebra embeds into the completed coefficient ring but is not the final coefficient type.
+
 ## Decision status
 
-All pre-implementation decisions D1--D12 are settled. Reopen a decision only if implementation or an acceptance test exposes a concrete incompatibility.
+All pre-implementation decisions D1--D13 are settled. Reopen a decision only if implementation or an acceptance test exposes a concrete incompatibility.

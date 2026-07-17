@@ -2,9 +2,9 @@
 
 Lean formalization of the algebraic foundations of axiomatic Gromov--Witten theory.
 
-The repository is the home of the full project, but development proceeds in small verified milestones. The Frobenius/TFT layer, the abstract internally graded even-cohomology targets for stable curves, and the full all-genus CohFT interface are implemented. The genus-zero restriction now extracts a commutative Frobenius algebra, proves WDVV and associativity, and classifies the degree-zero topological part in every stable arity. The project is ready for the tautological-class and ancestor layer.
+The repository is the home of the full project, developed in verified layers. The Frobenius/TFT and full CohFT foundations are implemented, as are the axiomatic GW interfaces for tautological ancestors, positive effective curve classes, beta-resolved primary classes, Novikov coefficients, quantum-product laws, stable-map descendants, descendant--ancestor comparison, formal potentials, Laurent total free energies, and the abstract virtual-realization boundary.
 
-> **Project status:** active, research-stage development. The implemented foundations compile without `sorry` or `admit`; planned APIs may still change before a stable release.
+> **Project status:** active, research-stage development. The axiomatic interfaces compile without `sorry` or `admit`. Concrete geometric stable-map instances, automatic construction of a big quantum family from a particular GW theory, and differential forms of all potential equations remain future theorem and realization work.
 
 > **Scope:** The planned stable-curve target is restricted to even cohomology.
 
@@ -38,8 +38,8 @@ The endpoint is an **all-genus axiomatic Gromov--Witten theory**, resolved by cu
 - separating and nonseparating gluing, the flat unit, grading, virtual dimension, effectivity, and the divisor axiom;
 - descendant insertions indexed by arbitrary powers of stable-map `psi`-classes;
 - ancestor insertions using stable-curve `psi`-classes, together with the descendant--ancestor comparison;
-- Novikov completion and genus expansion;
-- all-genus descendant and ancestor potentials;
+- a beta-preserving Novikov completion over a positive locally finite effective curve-class monoid;
+- all-genus descendant and ancestor genus potentials and total free energies;
 - string, dilaton, divisor, splitting, genus-reduction, and tautological relations whenever the required abstract geometric operations are present.
 
 A bare CohFT already contains all stable genera. The genus-zero API is only a derived restriction used to prove associativity and WDVV. Descendants are not fields of the minimal CohFT structure: they require `psi`-classes, pushforwards, integration, and projection formulas. Moreover, stable-map descendants and stable-curve ancestors are kept distinct.
@@ -49,16 +49,13 @@ A bare CohFT already contains all stable genera. The genus-zero API is only a de
 The intended dependency direction is
 
 ```text
-                         Combinatorics
-                        /             \
-Mathlib -> Linear -> Frobenius -> TFT  \
-                \                       -> CohFT -> GW -> Geometry
-                 -> Coefficients       /
-                \                     /
-                 -> Moduli -----------
+Mathlib -> Linear -> Frobenius -> TFT
+              \                    \
+               -> Combinatorics -> CohFT -> GW -> Geometry
+               -> Coefficients ------------/
 ```
 
-The planned source layout is:
+The implemented source layout is:
 
 ```text
 AxiomaticGW/
@@ -84,9 +81,6 @@ AxiomaticGW/
 
   Combinatorics/
     StableArity.lean
-    FiniteLabels.lean
-    StableGraph.lean
-    GraphContraction.lean
 
   Coefficients/
     EffectiveCurveClass.lean
@@ -94,51 +88,32 @@ AxiomaticGW/
     GenusExpansion.lean
     DescendantVariables.lean
 
-  Moduli/
-    StableCurveSystem.lean
-    Gluing.lean
-    TautologicalSystem.lean
-    Integration.lean
-
   CohFT/
     Topological.lean           # implemented scalar-valued stable theory
     StableCurve.lean           # implemented abstract even-cohomology targets
     Basic.lean                 # implemented full all-genus CohFT
     Constant.lean              # implemented degree-zero model and conversion
-    Unit.lean
     GenusZero.lean             # implemented genus-zero restriction
     Frobenius.lean             # implemented extraction, WDVV, associativity
     TopologicalPart.lean       # implemented degree-zero scalarization
     Classification.lean       # implemented stable-arity Frobenius round trip
-    Ancestors.lean             # stable-curve psi-classes
-    Potential.lean
+    Tautological.lean          # psi, integration, pushforward, kappa
+    Ancestors.lean             # stable-curve ancestor correlators
 
   GW/
-    CurveClass.lean
     Basic.lean                 # beta-resolved, full all-genus primary theory
-    Grading.lean
-    Divisor.lean
-    Novikov.lean
     QuantumProduct.lean
-    Ancestors.lean
+    Constant.lean              # beta-zero reference model
     Descendants/
-      Basic.lean               # stable-map psi insertions
-      Axioms.lean
+      Basic.lean               # stable-map descendant classes
       Comparison.lean          # descendants versus ancestors
-      Potential.lean           # all-genus total descendant potential
+      Equations.lean           # string, dilaton, divisor law package
 
   Geometry/
-    StableMapSystem.lean
     VirtualGWPackage.lean
-    Realization.lean
-
-  Examples/
-    Point.lean
-    FrobeniusTFT.lean
-    ProjectiveLine.lean
 ```
 
-Only modules with implemented content are created. The tree above records ownership and dependency boundaries without committing prematurely to Lean interfaces that have not yet been tested.
+Only modules with implemented content are created. Future concrete targets and geometric realizations will be added when they carry proofs rather than placeholder declarations.
 
 The essential formalization chain is
 
@@ -147,9 +122,9 @@ perfect duality and contractions
   -> Frobenius algebra and topological CohFT
   -> full all-genus CohFT
   -> beta-resolved all-genus primary GW theory
-  -> Novikov-valued CohFT and quantum products
-  -> full descendants, ancestors, comparison, and total potentials
-  -> realization from an abstract virtual stable-map package
+  -> Novikov coefficients and quantum-product WDVV
+  -> descendants, ancestors, comparison, and total free energies
+  -> abstract output boundary for virtual stable-map geometry
 ```
 
 ## Completed foundations

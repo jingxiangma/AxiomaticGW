@@ -1,6 +1,6 @@
 # Mathlib inventory for future milestones
 
-This note records which parts of M3--M10 are supplied by the pinned mathlib dependency and which parts must be implemented in this project. It was checked against the source tree for mathlib `v4.32.0`, the revision in `lakefile.toml`, on 2026-07-16.
+This note records which parts of M3--M10 are supplied by the pinned mathlib dependency and which parts belong to this project. It was checked against the source tree for mathlib `v4.32.0`, the revision in `lakefile.toml`, on 2026-07-16. The “must be built here” column is an ownership statement, not a current-status statement; the roadmap and mathematics-to-Lean map record which items have since been implemented.
 
 The distinction matters: a nearby general-purpose definition is not counted as an implementation of a GW-theoretic object. In particular, mathlib contains schemes, algebraic cycles, formal series, and graphs, but no stable-curve moduli spaces, CohFTs, or Gromov--Witten invariants.
 
@@ -123,7 +123,7 @@ Mathlib `v4.32.0` has no general Chow ring, rational equivalence, cup/cap produc
 - The Chern-number/energy homomorphism on curve classes and the divisor--curve pairing as additional data.
 - Flat unit, divisor pushforward, effectivity (if indexing a group), and separate genus-zero and higher-genus degree-zero normalizations.
 
-The current state space is ungraded, so M6 requires either a graded state-space extension or an explicit degree predicate on homogeneous insertions.
+The M6 implementation now supplies `GradedStateSpace` and reuses it in both `GradedCohFT` and `CurveClassGW`.
 
 ## M7. Novikov coefficients and quantum products
 
@@ -134,14 +134,9 @@ The current state space is ungraded, so M6 requires either a graded state-space 
 - Coefficient maps, monomials, finite-support embeddings, and summable-family tools exist for Hahn series.
 - `PowerSeries` and `MvPowerSeries` can handle later formal insertions after a coefficient ring has been fixed.
 
-### Required implementation and choice
+### Required implementation and settled choice
 
-The project must first state its Novikov convention. Two viable stages are:
-
-1. Prove all constructions over `AddMonoidAlgebra B R` under finite total support. This isolates CohFT algebra from completion issues.
-2. Use `HahnSeries B R` under explicit order/cancellation hypotheses, proving that the chosen energy-local-finiteness condition implies its PWO support; or define a custom energy-filtered `NovikovSeries B R E` subtype.
-
-Using `HahnSeries (range E) R` alone is generally wrong because distinct curve classes with the same energy would be merged. Indexing Hahn series by `B` preserves coefficients but requires an appropriate compatible order on `B`.
+Decision D13 fixes a positive locally finite cancellative effective monoid `B` with additive energy in `ℕ`. The final coefficient type is the beta-preserving completed monoid ring of coefficient functions `B → R`, whose convolution is finite because bounded-energy sets and hence fixed antidiagonals are finite. `AddMonoidAlgebra B R` remains the finite-support subring and a useful regression backend. `HahnSeries` is not used because it would add a noncanonical order and PWO support obligations that the energy hypothesis makes unnecessary.
 
 Beyond the coefficient ring, build:
 
@@ -175,13 +170,7 @@ The generating-function `S`-operator should wait until the coefficient and forma
 - Encode factorial denominators with assumptions such as `Algebra ℚ R`, or use divided-power coefficients to support more general base rings.
 - Formalize stable/unstable conventions and prove string, dilaton, divisor, splitting, genus-reduction, WDVV, and tautological equations at the coefficient level before translating them to differential equations.
 
-Most importantly, `F = sum_g hbar^(g-1) F_g` is Laurent-bounded below by `-1`, but `exp(F)` generally contains arbitrarily negative powers of `hbar` because of powers of the genus-zero term. Thus the total descendant potential is not, in general, an ordinary `LaurentSeries` in `hbar`. M9 must either:
-
-- keep `D = exp(F)` as a symbolic exponential;
-- impose an additional filtration in the insertion/Novikov variables and use a two-dimensional completion; or
-- define the total potential coefficientwise in that filtration.
-
-This completion decision should be made before implementing big quantum products, not postponed to the end of M9.
+Most importantly, `F = sum_g hbar^(g-1) F_g` is Laurent-bounded below by `-1`, but `exp(F)` generally contains arbitrarily negative powers of `hbar` because of powers of the genus-zero term. Decision D13 therefore leaves `exp(F)` outside the first axiomatic endpoint. M9 implements genus potentials and the honest Laurent-series total free energy; a mixed completion for the exponential will be introduced only when a concrete theorem consumes it.
 
 ## M10. Geometric realization
 
@@ -206,9 +195,9 @@ Constructing a concrete instance from moduli stacks and virtual classes should r
 1. **M3a (complete):** implement the even-cohomology targets, graded by half cohomological degree, and the primitive stable-curve pullbacks with coherence.
 2. **M4a (complete):** generalize contraction to arbitrary codomains and define full CohFT; use the existing topological theory as the first instance.
 3. **M3b/M4b (complete):** add only the `Mbar(0,3)` and `Mbar(0,4)` facts needed for the Frobenius/WDVV theorems; defer general stable graphs.
-4. **M5:** add abstract intersection operations and tautological data.
-5. **M6:** require finite class antidiagonals and settle grading conventions.
-6. **M7a:** implement the finite monoid-algebra theory first.
-7. **M7b/M9a:** choose and prove the Novikov and mixed formal completions.
-8. **M8/M9:** add descendants and equations coefficientwise, then package generating functions.
-9. **M10:** define only the abstract realization interface unless mathlib's geometric foundations change substantially.
+4. **M5 (complete core):** add abstract intersection operations and tautological data.
+5. **M6 (complete core):** require finite class antidiagonals and settle grading conventions.
+6. **M7a (complete):** implement the finite-support inclusion and completed Novikov coefficient ring.
+7. **M7b/M9a (complete for the current endpoint):** prove the beta-preserving convolution ring and the Laurent-bounded total free energy.
+8. **M8/M9 (complete interfaces):** add descendants and equations coefficientwise, then package generating functions.
+9. **M10 (complete abstract boundary):** define only the abstract realization interface unless mathlib's geometric foundations change substantially.

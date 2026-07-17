@@ -70,6 +70,6 @@ The bar emphasizes that these are ancestor insertions. Forgetful-map and boundar
 
 The next stage enriches the theory by effective curve classes and the additional axioms special to Gromov--Witten theory. See [M6: curve-class-resolved GW axioms](M06CurveClassResolvedGW.md).
 
-## 5. Implementation readiness
+## 5. Implemented boundary
 
-M3 and M4 now supply the prerequisites for this phase: internally graded stable-curve targets, degree-preserving relabelling and primitive pullbacks, their immediate coherence laws, and full CohFT classes. The first M5 implementation should therefore add only the tautological data used by an initial theorem: marked `psi`-classes and their relabelling/pullback behavior, followed by integration and pushforward once a concrete ancestor construction needs them. Stable graphs, kappa classes, and Hodge classes should be added in the tranche that first consumes them rather than as unused fields.
+The Lean ancestor layer now contains marked `psi`-classes with relabelling and primitive gluing pullbacks, top-degree integration, forgetful pushforward with its degree shift and projection formula, rational-tail correction data, kappa classes defined by pushforward, and numerical ancestor correlators. The constant stable-curve target validates these operations. Hodge classes and general decorated boundary strata are still omitted because no implemented theorem consumes them; they belong in the extension that first needs them.

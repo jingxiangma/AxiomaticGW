@@ -26,15 +26,13 @@ The analogous expression with ancestor classes $\bar\psi$ defines the ancestor p
 
 ## 2. Genus expansion
 
-Introduce a formal genus parameter $\hbar$. The total free energy and total descendant potential are
+Introduce a formal genus parameter $\hbar$. The total free energy is
 
 $$
-\mathcal F=\sum_{g\ge0}\hbar^{g-1}\mathcal F_g,
-\qquad
-\mathcal D=\exp(\mathcal F).
+\mathcal F=\sum_{g\ge0}\hbar^{g-1}\mathcal F_g.
 $$
 
-Negative powers occur because the genus-zero term is weighted by $\hbar^{-1}$. The coefficient ring must therefore support Laurent behavior in $\hbar$ together with power-series behavior in the remaining variables.
+Negative powers occur because the genus-zero term is weighted by $\hbar^{-1}$. The coefficient ring must therefore support Laurent behavior in $\hbar$ together with power-series behavior in the remaining variables. The exponential $\mathcal D=\exp(\mathcal F)$ can contain arbitrarily negative powers of $\hbar$ and is deferred until a concrete theorem requires the corresponding mixed completion.
 
 ## 3. Basic equations
 
@@ -56,6 +54,10 @@ A formal theorem should distinguish clearly between an equation that follows fro
 
 ## 5. Axiomatic endpoint
 
-At this stage the project has an all-genus, curve-class-resolved theory with primary classes, descendants, ancestors, Novikov coefficients, comparison theorems, and total potentials. This is the main axiomatic Gromov--Witten endpoint.
+At this stage the project has an all-genus, curve-class-resolved theory with primary classes, descendants, ancestors, Novikov coefficients, comparison theorems, genus potentials, and total free energies. This is the main axiomatic Gromov--Witten endpoint.
 
 The remaining question is why geometric GW invariants satisfy these axioms. See [M10: geometric realization](M10GeometricRealization.md).
+
+## 6. Implemented boundary
+
+Formal descendant variables are represented by `MvPowerSeries`, with a project-owned coefficientwise partial derivative and a proof that derivatives in distinct variables commute. `GWPotentials` stores Novikov-valued descendant and ancestor genus potentials. `totalFreeEnergy` is an actual `LaurentSeries`, defined as $\hbar^{-1}$ times the corresponding power series, and its coefficient at $\hbar^{g-1}$ is proved to be the genus-$g$ potential. `DescendantEquationLaws` records the optional stable string, dilaton, and descendant divisor equations at correlator level. Differential reformulations for a concrete constructed potential remain downstream theorems, and $\exp(\mathcal F)$ remains outside this completion.

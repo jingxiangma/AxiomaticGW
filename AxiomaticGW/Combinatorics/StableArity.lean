@@ -27,6 +27,43 @@ def StableArity (g : ℕ) (S : Type*) [Fintype S] : Prop :=
 
 namespace StableArity
 
+/-- Complex dimension of the stable-curve moduli space in a stable arity. -/
+def dimension (g : ℕ) (S : Type*) [Fintype S] : ℕ :=
+  3 * g + Fintype.card S - 3
+
+@[simp]
+theorem dimension_zero_fin_three : dimension 0 (Fin 3) = 0 := by
+  simp [dimension]
+
+/-- Relabelling does not change the complex dimension. -/
+theorem dimension_equiv {g : ℕ} {S T : Type*} [Fintype S] [Fintype T]
+    (e : S ≃ T) : dimension g S = dimension g T := by
+  simp only [dimension]
+  rw [Fintype.card_congr e]
+
+/-- Forgetting one marking lowers the dimension by one. -/
+theorem dimension_option {g : ℕ} {S : Type*} [Fintype S]
+    (h : StableArity g S) :
+    dimension g (Option S) = dimension g S + 1 := by
+  simp only [dimension, Fintype.card_option, StableArity] at h ⊢
+  omega
+
+/-- A nonseparating boundary has codimension one. -/
+theorem dimension_nonseparating {g : ℕ} {S : Type*} [Fintype S]
+    (h : StableArity (g + 1) S) :
+    dimension g (Option (Option S)) + 1 = dimension (g + 1) S := by
+  simp only [dimension, Fintype.card_option, StableArity] at h ⊢
+  omega
+
+/-- A separating boundary has codimension one. -/
+theorem dimension_separating {g₁ g₂ : ℕ} {S T : Type*}
+    [Fintype S] [Fintype T]
+    (h₁ : StableArity g₁ (Option S)) (h₂ : StableArity g₂ (Option T)) :
+    dimension g₁ (Option S) + dimension g₂ (Option T) + 1 =
+      dimension (g₁ + g₂) (S ⊕ T) := by
+  simp only [dimension, Fintype.card_option, Fintype.card_sum, StableArity] at h₁ h₂ ⊢
+  omega
+
 /-- Stability is invariant under an equivalence of finite label types. -/
 theorem equiv {g : ℕ} {S T : Type*} [Fintype S] [Fintype T]
     (e : S ≃ T) : StableArity g S ↔ StableArity g T := by

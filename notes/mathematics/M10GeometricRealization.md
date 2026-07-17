@@ -60,7 +60,7 @@ The divisor equation uses the compatibility of evaluation classes with the unive
 
 ## 4. Abstract virtual GW package
 
-The first realization theorem should assume a package containing stable-map objects, evaluation and stabilization maps, virtual classes, pullback and proper pushforward, external products, refined pullback along diagonals, and all required compatibility theorems. From these assumptions one proves
+The first realization boundary is represented algebraically by a package containing the stabilized primary theory, stable-map descendants, and the boundary-corrected comparison with ancestors. A future geometric construction must produce those fields from stable-map objects, evaluation and stabilization maps, virtual classes, pullback and proper pushforward, external products, refined pullback along diagonals, and all required compatibility theorems. The resulting implication is
 
 $$
 \text{virtual GW package}
@@ -69,6 +69,8 @@ $$
 $$
 
 This theorem marks a precise boundary between axiomatic formalization and virtual intersection theory.
+
+In Lean, `VirtualGWPackage` is deliberately the algebraic output side of this boundary. It does not introduce placeholder types for stacks or virtual cycles that no theorem can use; instead it exposes projections to the realized `CurveClassGW`, `StableMapDescendants`, and `DescendantAncestorComparison` structures.
 
 ## 5. Longer-term geometry
 

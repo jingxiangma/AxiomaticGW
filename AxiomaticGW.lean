@@ -6,7 +6,11 @@ Authors: JMA
 module
 
 public import AxiomaticGW.Frobenius.Examples
+public import AxiomaticGW.CohFT.Ancestors
 public import AxiomaticGW.CohFT.Classification
+public import AxiomaticGW.GW.Constant
+public import AxiomaticGW.GW.QuantumProduct
+public import AxiomaticGW.Geometry.VirtualGWPackage
 public import AxiomaticGW.Linear.Contraction
 public import AxiomaticGW.TFT.Correlator
 public import AxiomaticGW.TFT.Classification

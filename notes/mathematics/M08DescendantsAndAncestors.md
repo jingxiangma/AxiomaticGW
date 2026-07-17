@@ -60,3 +60,7 @@ The formalization should therefore maintain distinct types or names for stable-m
 An axiomatic descendant extension needs stable-map psi classes, evaluation insertions, integration against a virtual class, and formulas for forgetting markings and restricting to boundary strata. String, dilaton, divisor, and topological recursion equations follow only after these properties are supplied.
 
 Once primary, ancestor, and descendant correlators are defined with suitable completions, they can be assembled into all-genus generating functions. See [M9: all-genus potentials and equations](M09PotentialsAndEquations.md).
+
+## 5. Implemented boundary
+
+`CurveClassGW.ancestorClass` uses stable-curve `PsiClasses`, while `StableMapDescendants.descendantClass` is a distinct stabilized stable-map family with zero-power, relabelling, and degree laws. `DescendantAncestorComparison` carries an explicit boundary correction and proves both its zero-power vanishing and the integrated numerical comparison. No definitional identification between the two cotangent-line theories is used.

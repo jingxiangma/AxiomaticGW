@@ -6,6 +6,8 @@ Gromov--Witten theory refines a CohFT by remembering the homology class of the c
 
 Let $B$ be a commutative monoid of effective curve classes. For a smooth projective target one has in mind the effective part of $H_2(X,\mathbb Z)$, but the axiomatic theory can begin with an abstract monoid.
 
+For the completed theory, $B$ is assumed cancellative and **positive locally finite**. It carries an additive energy $E:B\to\mathbb N$ such that $E(\beta)=0$ exactly for $\beta=0$, and for every $d$ there are only finitely many classes with $E(\beta)\le d$. Geometrically, $E$ is modeled by intersection with a chosen ample divisor on the target. No choice of free generators or total order on $B$ is required.
+
 The primary GW classes are multilinear maps
 
 $$
@@ -44,9 +46,11 @@ $$
 
 Relabelling and the flat-unit axiom are imposed coefficientwise in $\beta$.
 
+The positive local-finiteness hypothesis makes the separating sum finite: if $\beta_1+\beta_2=\beta$, additivity and nonnegativity give $E(\beta_i)\le E(\beta)$, so both classes lie in finite bounded-energy sets.
+
 ## 3. Grading and virtual dimension
 
-The state space and stable-curve cohomology are graded. Abstractly, a `GradedCohFT` extends the bare CohFT by recording this state-space grading, the homogeneous unit, and degree compatibility of the pairing. The curve-class-resolved GW theory extends that graded CohFT and adds the $\beta$-dependent degree constraint below.
+The state space and stable-curve cohomology are graded. `GradedStateSpace` records the state-space grading, the homogeneous unit, and degree compatibility of the pairing, and `GradedCohFT` combines it with an ordinary CohFT. The coefficientwise curve-class theory reuses `GradedStateSpace` directly: before Novikov summation it is not an ordinary CohFT and therefore should not be represented as an extension of one.
 
 For a target $X$ of complex dimension $d$, the expected complex dimension of the stable-map space is
 
@@ -79,3 +83,7 @@ Degree-zero normalization connects the theory to classical intersection theory. 
 The first GW structure should separate a curve-class-resolved CohFT core from optional target-dependent properties such as deformation invariance or mapping-to-a-point formulas. This keeps the algebraic gluing theory reusable while allowing stronger packages to extend it.
 
 The coefficientwise theory becomes an ordinary CohFT only after summation over $\beta$. See [M7: Novikov coefficients and quantum products](M07NovikovAndQuantumProducts.md).
+
+## 6. Implemented boundary
+
+The Lean core consists of `EffectiveCurveMonoid`, its derived finite splitting sets, `GradedStateSpace`, `CurveClassGW`, and the optional `GWDivisorAxiom`. It includes coefficientwise relabelling, flat unit, both gluing formulas, beta-zero and positive-beta normalization, the virtual output-degree rule, and negative-degree vanishing. The base-ring theory supported at beta zero provides a compiled reference instance.

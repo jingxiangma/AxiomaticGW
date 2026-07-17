@@ -68,22 +68,29 @@ structure CohFT (R V : Type*) [CommRing R] [Algebra ℚ R]
         (fun | none => unit | some i => a i) =
       algebraMap R (C.H 0 (Option (Fin 2))) (pairing.form (a 0) (a 1))
 
-/-- State-space grading data that can be attached to a bare CohFT. The pairing
-has complementary codimension degree `dimension`, as for Poincare duality on a
-complex manifold. -/
-structure GradedCohFT {R V : Type*} [CommRing R] [Algebra ℚ R]
-    [AddCommGroup V] [Module R V] [Module.Free R V] [Module.Finite R V]
-    {C : StableCurveCohomology R} (Ω : CohFT R V C) where
+/-- Reusable grading data for a state space with a fixed metric and unit. The
+pairing has complementary codimension degree `dimension`, as for Poincare
+duality on a complex manifold. -/
+structure GradedStateSpace (R V : Type*) [CommRing R]
+    [AddCommGroup V] [Module R V]
+    (pairing : SymmetricPerfectPairing R V) (unit : V) where
   /-- Complex dimension governing complementary degrees. -/
   dimension : ℕ
   /-- Codimension grading of the state space. -/
   degree : ℕ → Submodule R V
   /-- Every state has a finite homogeneous decomposition. -/
   [decomposition : DirectSum.Decomposition degree]
-  /-- The flat unit has codimension degree zero. -/
-  unit_mem_degree_zero : Ω.unit ∈ degree 0
+  /-- The distinguished unit has codimension degree zero. -/
+  unit_mem_degree_zero : unit ∈ degree 0
   /-- The metric vanishes unless the two codimensions are complementary. -/
   pairing_vanishes : ∀ {p q : ℕ} {x y : V},
-    x ∈ degree p → y ∈ degree q → p + q ≠ dimension → Ω.pairing.form x y = 0
+    x ∈ degree p → y ∈ degree q → p + q ≠ dimension → pairing.form x y = 0
+
+/-- State-space grading attached to a bare CohFT without changing its class
+maps or axioms. -/
+structure GradedCohFT {R V : Type*} [CommRing R] [Algebra ℚ R]
+    [AddCommGroup V] [Module R V] [Module.Free R V] [Module.Finite R V]
+    {C : StableCurveCohomology R} (Ω : CohFT R V C) extends
+      GradedStateSpace R V Ω.pairing Ω.unit
 
 end AxiomaticGW

@@ -13,7 +13,7 @@ The intended endpoint is an all-genus, curve-class-resolved theory containing:
 - tautological classes and ancestor invariants;
 - stable-map descendants and their comparison with ancestors;
 - Novikov coefficients and quantum products;
-- genus expansions and total potentials;
+- genus expansions, genus potentials, and total free energies;
 - string, dilaton, divisor, splitting, genus-reduction, WDVV, and tautological equations under the corresponding abstract hypotheses.
 
 The project proceeds from elementary multilinear algebra to this endpoint in small independently checked layers.
@@ -351,15 +351,13 @@ $$
 \right\rangle_{g,n,\beta}.
 $$
 
-Introducing a genus parameter $\hbar$, the free energy and total descendant potential are formally
+Introducing a genus parameter $\hbar$, the total free energy is formally
 
 $$
-\mathcal F=\sum_{g\geq 0}\hbar^{g-1}\mathcal F_g,
-\qquad
-\mathcal D=\exp(\mathcal F).
+\mathcal F=\sum_{g\geq 0}\hbar^{g-1}\mathcal F_g.
 $$
 
-These expressions require a completion simultaneously controlling curve classes, insertion variables, descendant degree, and genus. In particular, although $\mathcal F$ is bounded below by $\hbar^{-1}$, its exponential can contain arbitrarily negative powers of $\hbar$. The project must therefore use a filtered mixed completion or retain the exponential symbolically; ordinary Laurent series alone are insufficient.
+This expression requires a completion simultaneously controlling curve classes, insertion variables, descendant degree, and genus. It is bounded below by $\hbar^{-1}$ and therefore fits an ordinary Laurent-series genus expansion. Its exponential can contain arbitrarily negative powers of $\hbar$ and is deferred until a concrete theorem requires a filtered mixed completion.
 
 Once the coefficient ring is defined, geometric axioms become formal differential equations: string, dilaton, divisor, splitting, genus reduction, WDVV, topological recursion, and higher tautological relations.
 
@@ -373,7 +371,7 @@ Once the coefficient ring is defined, geometric axioms become formal differentia
 - Effective-curve-class refinements and Novikov packaging.
 - Ancestor and descendant theories with a formal comparison theorem.
 - Quantum products, potentials, and equations.
-- A realization theorem from an abstract virtual GW package.
+- An abstract algebraic output boundary for future virtual GW realizations.
 
 ### Not required for the axiomatic endpoint
 
@@ -393,12 +391,12 @@ M1  perfect pairings and Frobenius algebras                 complete
   -> M2  finite-labelled two-dimensional TFT               complete
   -> M3  even cohomology of stable curves and gluing       complete
   -> M4  full unital all-genus CohFT                       complete
-  -> M5  tautological classes, integration, and ancestors next
-  -> M6  curve-class-resolved GW axioms
-  -> M7  Novikov coefficients and quantum products
-  -> M8  descendants and descendant--ancestor comparison
-  -> M9  all-genus potentials and equations
-  -> M10 abstract geometric realization                    optional extension
+  -> M5  tautological classes, integration, and ancestors complete core
+  -> M6  curve-class-resolved GW axioms                    complete core
+  -> M7  Novikov coefficients and quantum products         interface complete
+  -> M8  descendants and descendant--ancestor comparison   interface complete
+  -> M9  all-genus potentials and equations                interface complete
+  -> M10 abstract geometric realization                    output boundary complete
 ```
 
 Each phase is intended to compile independently and expose a stable API before the next phase begins.
@@ -419,9 +417,17 @@ The repository currently contains:
 - the full cohomology-valued CohFT interface and optional graded/geometric extensions;
 - the constant degree-zero target and conversion to and from the existing topological CohFT;
 - genus-zero restriction, Frobenius extraction, WDVV, and associativity;
-- coherent degree-zero scalarization and full stable-arity classification of topological CohFTs by commutative Frobenius algebras.
+- coherent degree-zero scalarization and full stable-arity classification of topological CohFTs by commutative Frobenius algebras;
+- stable-curve psi classes, integration, forgetful pushforward, kappa classes, and ancestors;
+- positive locally finite effective curve classes and beta-resolved primary GW axioms;
+- the beta-preserving Novikov ring and fixed-beta quantum-product coefficients;
+- a small/big quantum-product family with associativity derived from WDVV;
+- distinct stable-map descendants and stable-curve ancestors with an explicit comparison term;
+- Novikov-valued multivariable genus potentials and Laurent total free energies;
+- optional stable string, dilaton, and descendant divisor law packages;
+- the abstract virtual-GW algebraic output boundary.
 
-The next implementation phase is the M5 tautological and ancestor layer. The settled architectural choices are recorded in the design-decision ledger.
+The next development phase is theorem integration rather than another speculative structure layer: construct completed CohFT and quantum-family objects from coefficientwise GW data, translate correlator equations into formal differential identities, and build concrete target or geometric instances. The settled architectural choices are recorded in the design-decision ledger.
 
 ## 15. Criteria for success
 

@@ -200,6 +200,63 @@ example {V : Type*} [AddCommGroup V] [Module ℚ V]
       T.omega g S h := by
   exact T.classification g S h
 
+/-- The first tautological extension is usable through the public import: in
+the constant target, a zero-power three-point ancestor is the original
+topological correlator. -/
+example {V : Type} [AddCommGroup V] [Module ℚ V]
+    [Module.Free ℚ V] [Module.Finite ℚ V]
+    (T : AxiomaticGW.TopologicalCohFT ℚ V) (a : Fin 3 → V) :
+    T.toConstantCohFT.ancestor
+        (AxiomaticGW.constantStableCurveCohomology.psiClasses ℚ)
+        (AxiomaticGW.constantStableCurveCohomology.integration ℚ)
+        0 (Fin 3) AxiomaticGW.StableArity.zero_fin_three (fun _ ↦ 0) a =
+      T.omega 0 (Fin 3) AxiomaticGW.StableArity.zero_fin_three a := by
+  exact T.toConstantCohFT_ancestor_zero_three a
+
 end FullCohFT
+
+namespace CurveClassGW
+
+/-- The natural-number model exposes exactly the additive curve-class
+splittings used by coefficientwise gluing. -/
+example : (1, 2) ∈ (AxiomaticGW.EffectiveCurveMonoid.nat).splittings 3 := by
+  simp
+
+/-- The beta-zero reference theory recovers its underlying CohFT class. -/
+example (g : ℕ) (S : Type) [Fintype S] (h : AxiomaticGW.StableArity g S) :
+    (AxiomaticGW.constantCurveClassGW.theory ℚ
+      AxiomaticGW.EffectiveCurveMonoid.nat).omega g S h 0 =
+      (AxiomaticGW.constantCurveClassGW.cohft ℚ).omega g S h := by
+  exact AxiomaticGW.constantCurveClassGW.theory_omega_zero ℚ
+    AxiomaticGW.EffectiveCurveMonoid.nat g S h
+
+end CurveClassGW
+
+namespace CompletedCoefficients
+
+/-- Novikov monomials retain the full curve class under multiplication. -/
+example :
+    AxiomaticGW.NovikovSeries.monomial
+        AxiomaticGW.EffectiveCurveMonoid.nat 2 (3 : ℚ) *
+      AxiomaticGW.NovikovSeries.monomial
+        AxiomaticGW.EffectiveCurveMonoid.nat 5 (7 : ℚ) =
+    AxiomaticGW.NovikovSeries.monomial
+      AxiomaticGW.EffectiveCurveMonoid.nat 7 (21 : ℚ) := by
+  norm_num
+
+/-- The Laurent total free energy exposes the original genus coefficient. -/
+example (F : AxiomaticGW.GenusPotential ℚ) (g : ℕ) :
+    (AxiomaticGW.totalFreeEnergy F).coeff ((g : ℤ) - 1) = F g := by
+  simp
+
+/-- Formal partial derivatives in distinct variables commute. -/
+example (f : MvPowerSeries (Fin 2) ℚ) :
+    AxiomaticGW.MvPowerSeries.pderiv 0
+        (AxiomaticGW.MvPowerSeries.pderiv 1 f) =
+      AxiomaticGW.MvPowerSeries.pderiv 1
+        (AxiomaticGW.MvPowerSeries.pderiv 0 f) := by
+  exact AxiomaticGW.MvPowerSeries.pderiv_comm (by decide) f
+
+end CompletedCoefficients
 
 end AxiomaticGWTest

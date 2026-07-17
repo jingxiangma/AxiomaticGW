@@ -6,7 +6,7 @@ For an audit of reusable APIs in the pinned mathlib revision and the structures 
 
 The [mathematics-to-Lean map](../MathematicsToLean.md) records the correspondence between mathematical sections and implemented modules. Completed scope, verification evidence, and commit provenance are recorded in the [implementation progress record](ImplementationProgress.md).
 
-The intended endpoint is an all-genus, curve-class-resolved axiomatic Gromov--Witten theory with primary classes, descendants, ancestors, Novikov coefficients, and total potentials.
+The intended endpoint is an all-genus, curve-class-resolved axiomatic Gromov--Witten theory with primary classes, descendants, ancestors, Novikov coefficients, genus potentials, and total free energies.
 
 ## M0. Project foundations
 
@@ -54,13 +54,13 @@ M3/M4 are accepted only after the constant degree-zero cohomology system is impl
 
 Extend the stable-curve system with `psi`, `kappa`, and Hodge classes where needed, together with integration, pushforward, and projection formulas. Use stable-curve `psi`-classes to define ancestor correlators and their basic relations.
 
-**Status:** Ready to start. M3/M4 now provide the graded targets, coherent pullbacks, full CohFT classes, and degree-zero/Frobenius regression model needed to test the first tautological extensions.
+**Status:** Complete for the ancestor layer. `PsiClasses`, top-degree integration, forgetful pushforward, the projection formula, the rational-tail forgetful correction, kappa classes, and numerical ancestors are implemented, with a constant-target regression model. Hodge and general boundary-stratum classes remain theorem-driven extensions rather than unused fields of the core interface.
 
 ## M6. Curve-class-resolved GW axioms
 
 [Mathematical background](../mathematics/M06CurveClassResolvedGW.md)
 
-Add an effective curve-class monoid and classes
+Add a positive locally finite cancellative effective curve-class monoid and classes
 
 $$
 \Omega_{g,S,\beta}:V^{\otimes S}\longrightarrow
@@ -69,17 +69,17 @@ $$
 
 Formalize symmetry, the flat unit, splitting, genus reduction, grading, virtual dimension, effectivity, divisor data, and the appropriate degree-zero normalizations.
 
-First introduce `GradedCohFT` as an extension of the ungraded M4 structure, adding the state-space grading, homogeneous unit, and degree compatibility of the pairing. The curve-class-resolved GW structure then extends `GradedCohFT`; its `beta`-dependent virtual-dimension law belongs specifically to the GW layer.
+`GradedStateSpace` factors the state-space grading, homogeneous unit, and degree compatibility of the pairing out of `GradedCohFT`. The coefficientwise `CurveClassGW` structure reuses that data without pretending to be an ordinary CohFT before Novikov summation; its `beta`-dependent virtual-dimension law belongs specifically to the GW layer.
 
-**Status:** Planned.
+**Status:** Complete for the primary axiomatic core. Positive locally finite effective classes, finite splittings, graded primary classes, relabelling, unit, separating and nonseparating gluing, normalization, virtual degree, negative-degree vanishing, and the optional primary divisor axiom are implemented. The beta-zero base-ring theory is the regression model.
 
 ## M7. Novikov coefficients and quantum products
 
 [Mathematical background](../mathematics/M07NovikovAndQuantumProducts.md)
 
-Package the coefficientwise curve-class theory as a Novikov-valued CohFT under the required finiteness or completion hypotheses. Define small and big quantum products and prove associativity and WDVV.
+Package the coefficientwise curve-class theory using the beta-preserving completed monoid ring fixed by D13. Define small and big quantum products and prove associativity and WDVV.
 
-**Status:** Planned.
+**Status:** Core coefficient and product interfaces complete. `NovikovSeries` is the beta-preserving completed monoid ring, with proven commutative-ring laws, monomial multiplication, and an injective finite monoid-algebra map. Fixed-beta three-point products and Novikov-valued small-product coefficients are implemented. `QuantumProductFamily` packages small and big products and proves associativity from WDVV and metric invariance. Constructing a full big quantum family automatically from a particular `CurveClassGW` still requires the chosen insertion-variable potential and its WDVV theorem.
 
 ## M8. Descendants and descendant--ancestor comparison
 
@@ -87,23 +87,23 @@ Package the coefficientwise curve-class theory as a Novikov-valued CohFT under t
 
 Introduce stable-map `psi`-classes separately from stable-curve `psi`-classes. Define descendant correlators and prove the comparison with ancestors once the necessary stabilization and boundary formulas are available.
 
-**Status:** Planned.
+**Status:** Complete as an axiomatic descendant extension. Stable-map descendant classes are a separate family from stable-curve `PsiClasses`; zero powers, relabelling, degree, numerical invariants, explicit boundary corrections, and the integrated descendant--ancestor comparison are implemented. Concrete geometric stable-map instances remain M10 realization work.
 
 ## M9. All-genus potentials and equations
 
 [Mathematical background](../mathematics/M09PotentialsAndEquations.md)
 
-Define genus expansions and the total descendant and ancestor potentials. Prove string, dilaton, divisor, splitting, genus-reduction, and tautological relations from the corresponding abstract axioms.
+Define genus expansions, descendant and ancestor genus potentials, and their total free energies. Prove string, dilaton, divisor, splitting, genus-reduction, and tautological relations from the corresponding abstract axioms. The exponential total potential is deferred until a theorem requires a mixed completion supporting its unbounded negative `hbar` powers.
 
-**Status:** Planned. Completion of this phase is the main axiomatic GW endpoint.
+**Status:** Axiomatic interface complete. Novikov-valued multivariable formal potentials, commuting formal partial derivatives, descendant and ancestor genus potentials, honest Laurent-series total free energies, and their exact genus-coefficient theorems are implemented. Optional stable string, dilaton, and descendant divisor laws are bundled at correlator level; primary splitting and genus reduction remain the theorems already stored in `CurveClassGW`. Translating every law into a differential identity for a concrete potential is future theorem work. The exponential total potential remains deliberately deferred.
 
 ## M10. Geometric realization
 
 [Mathematical background](../mathematics/M10GeometricRealization.md)
 
-Specify an abstract virtual stable-map package with evaluation maps, stabilization, virtual classes, pullbacks, pushforwards, and virtual gluing. Prove that every such package produces the axiomatic GW theory developed above. Constructing actual moduli stacks and virtual fundamental classes is a later, substantially larger geometric project.
+Expose the algebraic output boundary that a virtual stable-map construction must satisfy: the primary theory, stabilized descendants, and their boundary-corrected comparison with ancestors. A future geometric refinement will construct this package from evaluation maps, stabilization, virtual classes, pullbacks, pushforwards, and virtual gluing. Constructing actual moduli stacks and virtual fundamental classes is a later, substantially larger geometric project.
 
-**Status:** Optional extension beyond the first axiomatic endpoint.
+**Status:** Abstract boundary implemented; concrete geometry remains optional. `VirtualGWPackage` bundles precisely the realized primary theory, stable-map descendants, and boundary-corrected ancestor comparison. Constructing such a package from actual moduli stacks and virtual fundamental classes remains a separate geometric formalization project.
 
 ## Dependency summary
 

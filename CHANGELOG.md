@@ -21,4 +21,12 @@ The project is research-stage and follows the pinned Lean/mathlib version in `le
 - Genus-zero restriction, Frobenius extraction, metric invariance, WDVV, commutativity, unit laws, and associativity for full CohFTs.
 - Coherent degree-zero scalarization and classification of every stable topological CohFT correlator by its extracted commutative Frobenius algebra.
 - README-linked mathematics-to-Lean and implementation-progress records covering conceptual correspondence, milestone scope, verification evidence, and commit provenance.
+- Stable-curve psi classes, integration, forgetful pushforward, kappa classes, and numerical ancestor correlators.
+- Positive locally finite effective curve monoids and finite curve-class splitting sets.
+- Graded, beta-resolved primary GW theories with virtual-degree, normalization, gluing, and optional divisor axioms, plus a beta-zero reference model.
+- The beta-preserving Novikov completion with proven convolution ring laws, monomials, and an injective finite monoid-algebra inclusion.
+- Fixed-beta three-point products and a small/big quantum-product family whose WDVV law implies associativity.
+- Distinct stable-map descendant and stable-curve ancestor classes with explicit boundary-corrected comparison.
+- Novikov-valued formal potentials, commuting formal partial derivatives, Laurent total free energies, and stable string, dilaton, and descendant divisor law interfaces.
+- The abstract virtual-GW output package connecting future geometric constructions to the primary and descendant axiomatic layers.
 - Mathematical notes and a roadmap toward axiomatic Gromov--Witten theory.
