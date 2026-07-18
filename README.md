@@ -2,9 +2,9 @@
 
 Lean formalization of the algebraic foundations of axiomatic Gromov--Witten theory.
 
-The repository is the home of the full project, developed in verified layers. The Frobenius/TFT and full CohFT foundations are implemented, as are the axiomatic GW interfaces for tautological ancestors, positive effective curve classes, beta-resolved primary classes, Novikov coefficients, quantum-product laws, stable-map descendants, descendant--ancestor comparison, formal potentials, Laurent total free energies, and the abstract virtual-realization boundary.
+The repository is the home of the full project, developed in verified layers. The Frobenius/TFT and full CohFT foundations are implemented, as are the axiomatic GW interfaces for tautological ancestors, positive effective curve classes, beta-resolved primary classes, Novikov coefficients, quantum-product laws, stable-map descendants, a descendant--ancestor residual decomposition, stable-sector formal potentials, Laurent total free energies, and an algebraic output carrier for future virtual geometry.
 
-> **Project status:** active, research-stage development. The axiomatic interfaces compile without `sorry` or `admit`. Coefficientwise small WDVV and associativity, invariant-defined potentials, the formal big product with its small specialization, and the point-target stable-curve block are implemented. Concrete geometric stable-map and stable-curve instances remain future realization work.
+> **Project status:** active, research-stage development. The axiomatic interfaces compile without `sorry` or `admit`. Optional packages now expose stable-graph pullbacks, higher-background WDVV and formal big-product associativity, rational-tail descendant--ancestor factorization with its two-point calibration, and explicit unstable conventions with global string/dilaton laws. These packages state their independent geometric inputs explicitly; concrete stable-map moduli, virtual classes, and proofs that geometric theories instantiate them remain future work.
 
 > **Scope:** Stable-curve targets are abstract even graded cohomology algebras and are not assumed finite free. Novikov completion is therefore coefficientwise for cohomology-valued classes; numerical coefficients and the finite-free state space carry the completed convolution operations.
 
@@ -81,6 +81,7 @@ AxiomaticGW/
 
   Combinatorics/
     StableArity.lean
+    StableGraph.lean            # finite stable graphs and optional graph pullbacks
 
   Coefficients/
     EffectiveCurveClass.lean
@@ -104,18 +105,21 @@ AxiomaticGW/
     Basic.lean                 # beta-resolved, full all-genus primary theory
     QuantumProduct.lean        # derived small WDVV and associativity
     Constant.lean              # beta-zero reference model
-    FormalQuantumProduct.lean  # formal big product and small specialization
+    FormalQuantumProduct.lean  # commutative formal big product and small specialization
+    BigQuantumProduct.lean     # higher WDVV and formal associativity
     Descendants/
       Basic.lean               # stable-map descendant classes
-      Comparison.lean          # descendants versus ancestors
+      Comparison.lean          # descendant--ancestor residual decomposition
+      Stabilization.lean       # rational tails, calibration, quantized comparison
       Equations.lean           # string, dilaton, divisor law package
       Potentials.lean          # invariant-defined descendant/ancestor series
+      FullPotential.lean       # unstable conventions and global equations
 
   Point/
-    Descendants.lean           # stable-curve intersections and DVV relation
+    Descendants.lean           # stable-curve intersections and DVV hypothesis
 
   Geometry/
-    VirtualGWPackage.lean
+    VirtualGWPackage.lean      # algebraic output carrier, not a realization proof
 ```
 
 Only modules with implemented content are created. Future concrete targets and geometric realizations will be added when they carry proofs rather than placeholder declarations.
@@ -128,8 +132,8 @@ perfect duality and contractions
   -> full all-genus CohFT
   -> beta-resolved all-genus primary GW theory
   -> Novikov coefficients and quantum-product WDVV
-  -> descendants, ancestors, comparison, and total free energies
-  -> abstract output boundary for virtual stable-map geometry
+  -> descendants, ancestors, residual identities, and total free energies
+  -> algebraic output carrier for future virtual stable-map geometry
 ```
 
 ## Completed foundations

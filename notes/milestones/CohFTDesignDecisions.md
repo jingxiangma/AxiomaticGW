@@ -73,6 +73,11 @@ variable (R : Type*) [CommRing R] [Algebra ℚ R]
 
 Ordinary rational GW theory is obtained by taking `R = ℚ`. This retains the usual rational-valued interpretation while permitting scalar extension, Novikov and formal-series coefficients, and equivariant parameters. The already completed Frobenius/TFT layer remains generic over an arbitrary commutative ring.
 
+The stable-arity classification theorem currently passes through the full
+CohFT layer, so `TopologicalCohFT.classification` also carries the
+`Algebra ℚ R` hypothesis even though the lower Frobenius/TFT constructions do
+not intrinsically require it.
+
 ### D5. Separating pullback and the even-even Kunneth sector
 
 For separating gluing, the pullback lands directly in
@@ -90,10 +95,10 @@ This convention makes the separating CohFT axiom and state-space contraction lan
 Stable-curve cohomology remains indexed by separate parameters
 
 ```lean
-(g : ℕ) (S : Type u) [Fintype S] (h : StableArity g S),
+(g : ℕ) (S : Type) [Fintype S] (h : StableArity g S),
 ```
 
-rather than by a bundled stable-index type. This keeps `Option S`, `S ⊕ T`, and equivalences of label types easy to use. Stability proofs are proposition-valued and do not affect the data. Label types live in `Type u`, while the cohomology targets may live in an independent universe `Type v`.
+rather than by a bundled stable-index type. This keeps `Option S`, `S ⊕ T`, and equivalences of label types easy to use. Stability proofs are proposition-valued and do not affect the data. The current bundled stable-curve API restricts label types to `Type 0`, and `EvenGradedAlgebra R` lives in the same universe as `R`; independent higher-universe labels and targets are a possible future generalization, not a current feature.
 
 ### D7. Pullback and relabelling directions
 
@@ -131,7 +136,7 @@ The first stable-curve system contains primitive operations together with the co
 - invariance of nonseparating gluing under exchange of its two node labels;
 - compatibility of separating gluing with exchanging the two components and applying the tensor-factor swap.
 
-General stable graphs, arbitrary iterated gluing, graph contraction, and independence of edge-contraction order belong to a later stable-graph or modular-operad layer rather than the first M3 structure.
+General stable graphs and order-coherent graph pullbacks belong to the separate `StableGraph`/`StableGraphPullbacks` layer now implemented; they are intentionally not fields of the first M3 structure. Concrete contraction maps and their geometric compatibility remain obligations of an instance of that optional layer.
 
 ### D10. Low-genus geometry
 
@@ -171,7 +176,7 @@ Curve classes are indexed by a cancellative additive commutative monoid `B` of e
 
 This hypothesis does not require `B` to be finite, finitely generated, free, or ordered. It implies that every antidiagonal `{(beta1, beta2) | beta1 + beta2 = beta}` is finite and that every coefficient family can be truncated to a finite sum below a fixed energy. The project will therefore use coefficient functions `B → R` with finite-antidiagonal convolution as its beta-preserving Novikov completion. Distinct curve classes with the same energy remain distinct.
 
-The Lean package must expose only the energy map, positivity, and bounded-energy finiteness. Finite antidiagonals, truncations, the filtration, and convolution finiteness are derived theorems rather than additional fields. The finite-support monoid algebra embeds into the completed coefficient ring but is not the final coefficient type.
+The Lean package exposes the energy map, positivity, and bounded-energy finiteness as primitive data. Finite antidiagonals and convolution finiteness are derived and implemented. Energy truncation and filtration APIs should likewise be derived rather than added as fields, but they remain deferred until an implemented theorem consumes them. The finite-support monoid algebra embeds into the completed coefficient ring but is not the final coefficient type.
 
 ### D14. Coefficientwise cohomology and completed states
 

@@ -76,7 +76,7 @@ $$
 
 where $\pi$ forgets the divisor marking, with unstable and degree-zero exceptional cases handled explicitly. This pushforward formula should be kept distinct from the flat-unit axiom, which uses pullback along $\pi$. The pairing $\langle D,\beta\rangle=\int_\beta D$ is extra GW data and cannot be recovered from a bare CohFT.
 
-Degree-zero normalization connects the theory to classical intersection theory. In genus zero it ensures that the coefficient of the zero curve class recovers the classical cup product. Higher-genus degree-zero terms can involve obstruction and Hodge data, so they should not be confused with the cohomological degree-zero, or topological, part of a CohFT.
+For a geometric target, a mapping-to-degree-zero theorem connects the theory to classical intersection theory and identifies the genus-zero zero-class coefficient with the cup product. The current abstract `CurveClassGW` interface has no pre-existing cup product on `V`; its beta-zero normalization fixes the unit/metric three-point value and therefore defines an intrinsic beta-zero product. Identifying that product with a separately supplied classical cup product requires additional target data. Higher-genus degree-zero terms can involve obstruction and Hodge data, so they should not be confused with the cohomological degree-zero, or topological, part of a CohFT.
 
 ## 5. Axiomatic core
 
@@ -86,4 +86,4 @@ Numerical invariants and finite-free state-valued products admit Novikov summati
 
 ## 6. Implemented boundary
 
-The Lean core consists of `EffectiveCurveMonoid`, its derived finite splitting sets, `GradedStateSpace`, `CurveClassGW`, and the optional `GWDivisorAxiom`. It includes coefficientwise relabelling, flat unit, both gluing formulas, beta-zero and positive-beta normalization, the virtual output-degree rule, and negative-degree vanishing. The base-ring theory supported at beta zero provides a compiled reference instance.
+The Lean core consists of `EffectiveCurveMonoid`, its derived finite splitting sets, `GradedStateSpace`, `CurveClassGW`, and the optional `GWDivisorAxiom`. It includes coefficientwise relabelling, flat unit, both gluing formulas, beta-zero and positive-beta normalization, the virtual output-degree rule, and negative-degree vanishing. It does not encode a mapping-to-point formula identifying beta zero with an external classical algebra. The base-ring theory supported at beta zero provides a compiled reference instance.

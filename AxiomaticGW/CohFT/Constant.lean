@@ -7,6 +7,7 @@ module
 
 public import AxiomaticGW.CohFT.Basic
 public import AxiomaticGW.CohFT.Topological
+public import AxiomaticGW.Combinatorics.StableGraph
 public import Mathlib.RingTheory.TensorProduct.Maps
 
 /-!
@@ -115,6 +116,13 @@ private theorem constantSeparatingDegree (R : Type*) [CommRing R]
 noncomputable abbrev constantStableCurveCohomology (R : Type*) [CommRing R]
     [Algebra ℚ R] : StableCurveCohomology R where
   H := fun _ _ _ ↦ constantEvenGradedAlgebra R
+  degree_eq_bot_of_dimension_lt := by
+    intro g S _ h d hd
+    have hd0 : d ≠ 0 := by
+      intro hd0
+      subst d
+      exact (Nat.not_lt_zero _ hd)
+    simp [constantDegree, hd0]
   rename := fun _ _ _ _ _ _ _ _ ↦ AlgEquiv.refl
   forget := fun _ _ _ _ ↦ AlgHom.id R R
   nonseparating := fun _ _ _ _ ↦ AlgHom.id R R
@@ -177,6 +185,19 @@ noncomputable def connectedDegreeZero :
   separating_scalar := by
     intros
     simp [EvenGradedAlgebra.projZeroAlgHom]
+
+/-- Canonical stable-graph pullbacks for the constant target. Every vertex
+factor is the base ring, so graph pullback is the inverse of multiplication
+on the finite heterogeneous tensor product and is independent of edge order. -/
+noncomputable def stableGraphPullbacks :
+    StableGraphPullbacks (constantStableCurveCohomology R) where
+  orderedPullback := by
+    intro S _ G _order
+    change R →ₐ[R] PiTensorProduct R (fun _ : G.Vertex ↦ R)
+    exact (PiTensorProduct.constantBaseRingEquiv G.Vertex R).symm.toAlgHom
+  orderedPullback_perm := by
+    intros
+    rfl
 
 end constantStableCurveCohomology
 

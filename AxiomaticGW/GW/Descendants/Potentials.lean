@@ -15,7 +15,9 @@ public import Mathlib.Data.Nat.Factorial.Basic
 A finitely supported monomial determines a canonical finite label type: one
 label for every occurrence of every descendant variable. This removes all
 ordering choices and makes the usual multiplicity-factorial normalization
-literal in the coefficient definition.
+literal in the coefficient definition. The constructed genus potentials
+retain only stable curve arities; unstable coefficients are set to zero by
+definition and are not claims about positive-degree stable-map invariants.
 -/
 
 @[expose] public section
@@ -240,7 +242,7 @@ variable {R V B : Type u} {ι : Type} [CommRing R] [Algebra ℚ R]
   {C : StableCurveCohomology R} {Omega : CurveClassGW R V B D C}
   {P : PsiClasses C} {M : StableMapDescendants Omega}
 
-/-- Generating series of stabilization-boundary corrections. -/
+/-- Generating series of the recorded descendant--ancestor residuals. -/
 noncomputable def boundaryPotential (X : DescendantAncestorComparison P M)
     (I : StableCurveIntegration C) (b : Basis ι R V) (g : ℕ) :
     FormalPotential D (DescendantVariable ι) R := by
@@ -253,8 +255,8 @@ noncomputable def boundaryPotential (X : DescendantAncestorComparison P M)
         (InsertionLabel.state (n := n) b))
     else 0
 
-/-- Descendant potentials equal ancestor potentials plus their explicit
-stabilization-boundary series. -/
+/-- Descendant potentials equal ancestor potentials plus their recorded
+residual series. This identity does not establish geometric boundary support. -/
 theorem descendantPotential_eq_ancestor_add_boundary
     (X : DescendantAncestorComparison P M) (I : StableCurveIntegration C)
     (b : Basis ι R V) (g : ℕ) :

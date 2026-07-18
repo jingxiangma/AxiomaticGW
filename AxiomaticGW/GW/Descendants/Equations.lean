@@ -31,17 +31,14 @@ def replaceInput {S V : Type*} [DecidableEq S]
     (a : S → V) (s : S) (x : V) : S → V :=
   Function.update a s x
 
-/-- Optional stable descendant equations. The primary divisor axiom supplies
-the divisor--curve pairing; `divisorAction` supplies cup product on states. -/
-structure DescendantEquationLaws
+/-- Optional stable string and dilaton equations. These laws require descendant
+invariants and integration, but no divisor-specific data. -/
+structure DescendantStringDilatonLaws
     {R V B : Type u} [CommRing R] [Algebra ℚ R]
     [AddCommGroup V] [Module R V] [Module.Free R V] [Module.Finite R V]
     [AddCancelCommMonoid B] {D : EffectiveCurveMonoid B}
     {C : StableCurveCohomology R} {Omega : CurveClassGW R V B D C}
-    (M : StableMapDescendants Omega) (I : StableCurveIntegration C)
-    {F : ForgetfulPushforward C I} (A : GWDivisorAxiom Omega F) where
-  /-- Cup product by a divisor state. -/
-  divisorAction : Omega.graded.degree 1 → V →ₗ[R] V
+    (M : StableMapDescendants Omega) (I : StableCurveIntegration C) where
   /-- Stable string equation. -/
   string : ∀ (g : ℕ) (S : Type) [Fintype S] [DecidableEq S]
       (h : StableArity g S) (beta : B) (k : S → ℕ) (a : S → V),
@@ -58,6 +55,19 @@ structure DescendantEquationLaws
         (fun | none => Omega.unit | some s => a s) =
       ((2 * g + Fintype.card S - 2 : ℕ) : R) *
         M.invariant I g S h beta k a
+
+/-- Optional stable descendant divisor equation. The primary divisor axiom
+supplies the divisor--curve pairing, while `divisorAction` is a bilinear
+choice of cup product by divisor states. -/
+structure DescendantDivisorLaw
+    {R V B : Type u} [CommRing R] [Algebra ℚ R]
+    [AddCommGroup V] [Module R V] [Module.Free R V] [Module.Finite R V]
+    [AddCancelCommMonoid B] {D : EffectiveCurveMonoid B}
+    {C : StableCurveCohomology R} {Omega : CurveClassGW R V B D C}
+    (M : StableMapDescendants Omega) (I : StableCurveIntegration C)
+    {F : ForgetfulPushforward C I} (A : GWDivisorAxiom Omega F) where
+  /-- Cup product by a divisor state, linear in both the divisor and the state. -/
+  divisorAction : Omega.graded.degree 1 →ₗ[R] Module.End R V
   /-- Descendant divisor equation, including the terms that lower a positive
   cotangent power. -/
   divisor : ∀ (g : ℕ) (S : Type) [Fintype S] [DecidableEq S]
@@ -70,5 +80,15 @@ structure DescendantEquationLaws
         ∑ s, if k s = 0 then 0 else
           M.invariant I g S h beta (lowerPower k s)
             (replaceInput a s (divisorAction divisorState (a s)))
+
+/-- The full optional package of stable string, dilaton, and divisor laws. -/
+structure DescendantEquationLaws
+    {R V B : Type u} [CommRing R] [Algebra ℚ R]
+    [AddCommGroup V] [Module R V] [Module.Free R V] [Module.Finite R V]
+    [AddCancelCommMonoid B] {D : EffectiveCurveMonoid B}
+    {C : StableCurveCohomology R} {Omega : CurveClassGW R V B D C}
+    (M : StableMapDescendants Omega) (I : StableCurveIntegration C)
+    {F : ForgetfulPushforward C I} (A : GWDivisorAxiom Omega F) extends
+      DescendantStringDilatonLaws M I, DescendantDivisorLaw M I A
 
 end AxiomaticGW

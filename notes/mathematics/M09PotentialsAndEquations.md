@@ -24,6 +24,12 @@ $$
 
 The analogous expression with ancestor classes $\bar\psi$ defines the ancestor potential.
 
+This is the conventional full formula. In the current Lean construction,
+coefficients whose occurrence-label type is not a stable curve arity are set
+to zero. That stable-sector convention is narrower: for positive curve class,
+a stable-map invariant can exist even when the stabilized curve arity is
+unstable, so the omitted coefficients are not proved to vanish geometrically.
+
 ## 2. Genus expansion
 
 Introduce a formal genus parameter $\hbar$. The total free energy is
@@ -54,14 +60,14 @@ A formal theorem should distinguish clearly between an equation that follows fro
 
 ## 5. Axiomatic endpoint
 
-At this stage the project has an all-genus, curve-class-resolved theory with primary classes, descendants, ancestors, Novikov coefficients, comparison theorems, genus potentials, and total free energies. This is the main axiomatic Gromov--Witten endpoint.
+At this stage the intended project has an all-genus, curve-class-resolved theory with primary classes, descendants, ancestors, Novikov coefficients, genuine comparison theorems, genus potentials, and total free energies. The implemented endpoint is narrower in the ways stated below.
 
 The remaining question is why geometric GW invariants satisfy these axioms. See [M10: geometric realization](M10GeometricRealization.md).
 
 ## 6. Implemented boundary
 
-Formal descendant variables are represented by `MvPowerSeries`, with project-owned partial derivatives, commuting iterated derivatives, stable-sector projection, and basis-direction insertion derivatives. `CurveClassGW.descendantPotential` and `ancestorPotential` construct the genus potentials coefficientwise from invariants using a canonical finite occurrence-label type and the reciprocal multiplicity factorial. `DescendantAncestorComparison.descendantPotential_eq_ancestor_add_boundary` lifts the numerical comparison to these constructed series.
+Formal descendant variables are represented by `MvPowerSeries`, with project-owned partial derivatives, their Leibniz and commutation laws, commuting iterated derivatives, stable-sector projection, and basis-direction insertion derivatives. `CurveClassGW.descendantPotential` and `ancestorPotential` construct stable-sector genus potentials coefficientwise from invariants using a canonical finite occurrence-label type and the reciprocal multiplicity factorial. `DescendantAncestorComparison.descendantPotential_eq_ancestor_add_boundary` lifts the recorded residual identity to these constructed series; despite the retained declaration name, it does not prove geometric boundary support.
 
-`GWPotentials` stores the resulting Novikov-valued genus potentials. `totalFreeEnergy` is an actual `LaurentSeries`, defined as $\hbar^{-1}$ times the corresponding power series, and its coefficient at $\hbar^{g-1}$ is proved to be the genus-$g$ potential. `DescendantEquationLaws` records the optional stable string, dilaton, and descendant divisor equations at correlator level. A global string or dilaton PDE also needs explicit unstable conventions, so the current API keeps those laws in the stable sector rather than silently adding correction terms. The exponential $\exp(\mathcal F)$ remains outside this completion.
+`GWPotentials` stores the resulting Novikov-valued genus potentials. `totalFreeEnergy` is an actual `LaurentSeries`, defined as $\hbar^{-1}$ times the corresponding power series, and its coefficient at $\hbar^{g-1}$ is proved to be the genus-$g$ potential. `DescendantStringDilatonLaws` records the stable equations, while `UnstableDescendantConventions` supplies only the missing numerical arities, including the genus-zero two-point metric term. Their combination gives `global_string`, `global_dilaton`, and `fullDescendantPotential`. These are correlator/coefficient equations; a packaged vector-field PDE syntax is not claimed. The unrestricted exponential $\exp(\mathcal F)$ remains outside the Laurent completion; `CompletedFockPotential` is instead a coefficientwise carrier used only with an explicit quantized action.
 
 The point-target specialization is developed separately in [The point target and stable-curve intersection theory](PointTargetAndStableCurves.md). It identifies point ancestors with psi intersections and states the higher tautological DVV recursion as an additional geometric hypothesis.

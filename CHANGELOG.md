@@ -26,10 +26,22 @@ The project is research-stage and follows the pinned Lean/mathlib version in `le
 - Graded, beta-resolved primary GW theories with virtual-degree, normalization, gluing, and optional divisor axioms, plus a beta-zero reference model.
 - The beta-preserving Novikov completion with proven convolution ring laws, monomials, and an injective finite monoid-algebra inclusion.
 - Fixed-beta three-point products with derived coefficientwise small WDVV, associativity, commutativity, and unit laws.
-- Distinct stable-map descendant and stable-curve ancestor classes with explicit boundary-corrected comparison.
-- Novikov-valued formal potentials, commuting formal partial derivatives, Laurent total free energies, and stable string, dilaton, and descendant divisor law interfaces.
-- Descendant and ancestor potentials constructed from invariants, stable-sector and directional differential operators, and the potential-level descendant--ancestor comparison.
-- The invariant-defined formal big quantum product and its proved zero-background specialization to the small product.
-- A point-target stable-curve block with psi intersection numbers, dimension vanishing, initial values, a WDVV check, and the all-genus DVV relation.
-- The abstract virtual-GW output package connecting future geometric constructions to the primary and descendant axiomatic layers.
+- Distinct stable-map descendant and stable-curve ancestor classes with a weak residual decomposition and an optional positive-degree rational-tail factorization package.
+- Novikov-valued formal potentials, commuting formal partial derivatives with a Leibniz rule, Laurent total free energies, and separately usable stable string/dilaton and descendant divisor law interfaces.
+- Descendant and ancestor potentials constructed from invariants, stable-sector and directional differential operators, and the potential-level descendant--ancestor residual identity.
+- The invariant-defined commutative formal big quantum product and its proved zero-background specialization to the small product.
+- Finite stable graphs with vertex stability, arithmetic genus, complete edge orders, and optional order-independent graph pullbacks.
+- An explicit higher-background WDVV package deriving coefficientwise associativity of the formal big quantum product, together with the stable primary potential.
+- Rational-tail stabilization data, a two-point calibration with a separately justified symplectic identity, and explicit coefficientwise Fock/quantized comparison carriers.
+- Explicit unstable descendant conventions, a full descendant potential, and global correlator-level string and dilaton equations.
+- A point-target stable-curve block with psi intersection numbers, dimension vanishing, initial values, a WDVV check, and the all-genus DVV proposition as an explicit geometric hypothesis.
+- An abstract virtual-GW algebraic output carrier connecting future geometric constructions to the primary and descendant axiomatic layers; the carrier itself is not a realization theorem.
 - Mathematical notes and a roadmap toward axiomatic Gromov--Witten theory.
+
+### Fixed
+
+- Corrected the forget/nonseparating and left forget/separating label transports in the stable-curve coherence axioms.
+- Added the stable-curve top-degree bound, forgetful-pushforward relabelling and degree-zero laws, and derived kappa naturality and degree theorems.
+- Corrected the stable-map descendant grading so cotangent powers contribute before testing whether the expected output degree is nonnegative.
+- Added relabelling and total-degree theorems for ancestors and descendants, and derived the residual subtraction, relabelling, and homogeneity API.
+- Replaced documentation claims of geometric boundary support and virtual realization with the weaker residual and carrier properties actually represented by the public API.

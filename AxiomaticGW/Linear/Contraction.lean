@@ -191,7 +191,36 @@ theorem selfContractTarget_eq_selfContract (P : SymmetricPerfectPairing R V)
     P.selfContractTarget f = P.selfContract f := by
   rfl
 
+/-- Relabelling the uncontracted inputs commutes with target-valued
+self-contraction. The two distinguished `Fin 2` inputs retain their order. -/
+theorem selfContractTarget_domDomCongr (P : SymmetricPerfectPairing R V)
+    {S T : Type*} (f : MultilinearMap R (fun _ : S ⊕ Fin 2 ↦ V) W)
+    (e : S ≃ T) :
+    (P.selfContractTarget f).domDomCongr e =
+      P.selfContractTarget
+        (f.domDomCongr (Equiv.sumCongr e (Equiv.refl (Fin 2)))) := by
+  ext a
+  rw [MultilinearMap.domDomCongr_apply]
+  simp only [selfContractTarget_apply]
+  congr 1
+  ext b
+  simp only [MultilinearMap.currySum_apply', MultilinearMap.domDomCongr_apply]
+  congr 1
+  funext i
+  rcases i with i | i <;> rfl
+
 end Target
+
+/-- Relabelling the uncontracted inputs commutes with scalar-valued
+self-contraction. The two distinguished `Fin 2` inputs retain their order. -/
+theorem selfContract_domDomCongr (P : SymmetricPerfectPairing R V)
+    {S T : Type*} (f : MultilinearMap R (fun _ : S ⊕ Fin 2 ↦ V) R)
+    (e : S ≃ T) :
+    (P.selfContract f).domDomCongr e =
+      P.selfContract
+        (f.domDomCongr (Equiv.sumCongr e (Equiv.refl (Fin 2)))) := by
+  simpa only [selfContractTarget_eq_selfContract] using
+    P.selfContractTarget_domDomCongr (W := R) f e
 
 /-- The transposition of the two distinguished node labels. -/
 def swapFinTwo : Equiv.Perm (Fin 2) := Equiv.swap 0 1

@@ -8,12 +8,14 @@ module
 public import AxiomaticGW.GW.Descendants.Equations
 
 /-!
-# Abstract virtual GW realization
+# Algebraic output package for a future virtual GW realization
 
 This is the boundary between the axiomatic theory and future geometry. A
 geometric construction must supply a primary curve-class theory, stabilized
-stable-map descendants, and their boundary-corrected ancestor comparison.
-Actual moduli stacks and virtual fundamental classes are not constructed here.
+stable-map descendants, and a descendant--ancestor residual decomposition.
+The package is only a carrier for those algebraic outputs: it neither
+constructs actual moduli stacks or virtual fundamental classes nor certifies
+that its residual is supported on stabilization boundary strata.
 -/
 
 @[expose] public section
@@ -22,18 +24,19 @@ namespace AxiomaticGW
 
 universe u
 
-/-- Algebraic output required from an abstract virtual stable-map
-construction. Every field is consumed by the axiomatic GW endpoint. -/
+/-- Algebraic output carrier for a future virtual stable-map construction.
+Every field is consumed by the axiomatic GW endpoint, but inhabiting this
+structure is not itself evidence of a geometric realization. -/
 structure VirtualGWPackage
     {R V B : Type u} [CommRing R] [Algebra ℚ R]
     [AddCommGroup V] [Module R V] [Module.Free R V] [Module.Finite R V]
     [AddCancelCommMonoid B] (D : EffectiveCurveMonoid B)
     (C : StableCurveCohomology R) (P : PsiClasses C) where
-  /-- Stabilized primary virtual classes and their gluing laws. -/
+  /-- Stored stabilized primary classes and their gluing laws. -/
   primary : CurveClassGW R V B D C
   /-- Stable-map cotangent insertions pushed to stable curves. -/
   descendants : StableMapDescendants primary
-  /-- Stabilization-boundary comparison with stable-curve ancestors. -/
+  /-- Residual decomposition against stable-curve ancestors. -/
   comparison : DescendantAncestorComparison P descendants
 
 namespace VirtualGWPackage
@@ -43,21 +46,19 @@ variable {R V B : Type u} [CommRing R] [Algebra ℚ R]
   [AddCancelCommMonoid B] {D : EffectiveCurveMonoid B}
   {C : StableCurveCohomology R} {P : PsiClasses C}
 
-/-- A virtual package realizes the primary axiomatic GW theory. -/
+/-- Project the primary axiomatic GW theory stored in the package. -/
 def toCurveClassGW
     (G : VirtualGWPackage (R := R) (V := V) (B := B) D C P) :
     CurveClassGW R V B D C :=
   G.primary
 
-/-- A virtual package realizes the stable-map descendant extension of its
-primary theory. -/
+/-- Project the stable-map descendant extension stored in the package. -/
 def toStableMapDescendants
     (G : VirtualGWPackage (R := R) (V := V) (B := B) D C P) :
     StableMapDescendants G.toCurveClassGW :=
   G.descendants
 
-/-- The realized descendants satisfy the boundary-corrected ancestor
-comparison. -/
+/-- Project the recorded descendant--ancestor residual decomposition. -/
 def toDescendantAncestorComparison
     (G : VirtualGWPackage (R := R) (V := V) (B := B) D C P) :
     DescendantAncestorComparison P G.toStableMapDescendants :=

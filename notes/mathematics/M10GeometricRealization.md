@@ -60,20 +60,20 @@ The divisor equation uses the compatibility of evaluation classes with the unive
 
 ## 4. Abstract virtual GW package
 
-The first realization boundary is represented algebraically by a package containing the stabilized primary theory, stable-map descendants, and the boundary-corrected comparison with ancestors. A future geometric construction must produce those fields from stable-map objects, evaluation and stabilization maps, virtual classes, pullback and proper pushforward, external products, refined pullback along diagonals, and all required compatibility theorems. The resulting implication is
+The first implementation boundary is represented algebraically by a package containing the stabilized primary theory, stable-map descendants, and a descendant--ancestor residual decomposition. A future geometric construction must produce stronger evidence from stable-map objects, evaluation and stabilization maps, virtual classes, pullback and proper pushforward, external products, refined pullback along diagonals, and all required compatibility theorems. In particular, the current residual field does not encode boundary support. The intended future implication is
 
 $$
-\text{virtual GW package}
+\text{genuine virtual-geometric construction}
 \Longrightarrow
 \text{curve-class-resolved axiomatic GW theory}.
 $$
 
-This theorem marks a precise boundary between axiomatic formalization and virtual intersection theory.
+Such a construction theorem would mark a precise boundary between axiomatic formalization and virtual intersection theory; it is not currently present.
 
-In Lean, `VirtualGWPackage` is deliberately the algebraic output side of this boundary. It does not introduce placeholder types for stacks or virtual cycles that no theorem can use; instead it exposes projections to the realized `CurveClassGW`, `StableMapDescendants`, and `DescendantAncestorComparison` structures.
+In Lean, `VirtualGWPackage` is deliberately only an algebraic output carrier. It does not introduce placeholder types for stacks or virtual cycles that no theorem can use; instead it exposes projections to stored `CurveClassGW`, `StableMapDescendants`, and `DescendantAncestorComparison` structures. Inhabiting the carrier does not certify that these fields arise from geometry.
 
 ## 5. Longer-term geometry
 
 Constructing the package from first principles would require a theory of Deligne--Mumford or derived stacks, Chow or homology groups, proper pushforward, refined Gysin maps, perfect obstruction theories, intrinsic normal cones, and virtual pullback compatibility. That is a substantial independent project and is not a prerequisite for completing the axiomatic development.
 
-This phase closes the roadmap by connecting the abstract structures back to geometric Gromov--Witten invariants.
+This phase will close the roadmap only when a genuine geometric construction connects the abstract structures back to Gromov--Witten invariants.

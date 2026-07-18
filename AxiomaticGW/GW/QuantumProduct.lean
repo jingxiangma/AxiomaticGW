@@ -281,8 +281,8 @@ theorem unit_smallProductCoefficient_of_ne
     Omega.pairing_smallProductCoefficient, map_zero]
   exact Omega.threePoint_unit_of_ne G hbeta x y
 
-/-- The completed small-product series has only its classical coefficient
-after inserting the flat identity. -/
+/-- The completed small-product series has only its zero curve-class
+coefficient after inserting the flat identity. -/
 theorem smallProductSeries_unit
     (Omega : CurveClassGW R V B D C) (G : GenusZeroGeometry C)
     [DecidableEq B] (x : V) (beta : B) :

@@ -4,6 +4,118 @@ This file is the durable implementation record for AxiomaticGW. The [roadmap](Ax
 
 Each entry records the accepted scope, implementation commit, a link to the canonical mathematics-to-Lean map, principal API, verification evidence, deliberately deferred work, and the next gate. Git history remains the authoritative source for the exact diff.
 
+## 2026-07-18: Optional stabilization, stable-graph, and full-potential extensions
+
+**Status:** Implemented and locally verified.
+
+### Delivered API
+
+- `StableGraph` with loop-aware valence, arithmetic genus, complete edge
+  orders, `StableGraphPullbacks.orderedPullback_eq`, and the canonical
+  constant-target graph pullback.
+- `GenusZeroHigherBoundary`, the stable primary potential, and derived
+  coefficientwise associativity of the formal big quantum product.
+- `StabilizationBoundaryComparison`, positive-tail splittings, the
+  tail-derived `TwoPointCalibration`, separately justified coefficientwise
+  symplecticity, and explicit completed-Fock/quantized comparison carriers.
+- `UnstableDescendantConventions`, stable/unstable agreement theorems,
+  `global_string`, `global_dilaton`, and `fullDescendantPotential`.
+
+### Logical boundary
+
+All new geometry is optional hypothesis data. The weak residual does not
+imply boundary support, a calibration does not imply symplecticity without its
+boundary relation, and a quantized partition identity is not inferred from an
+arbitrary additive action. Concrete virtual stable-map geometry remains
+outside the repository foundations.
+
+### Verification
+
+The revision passed direct elaboration of every new Lean module and the public
+entry point, followed by:
+
+```bash
+lake build
+lake test
+lake lint
+git diff --check
+git diff --cached --check
+rg -n '\b(sorry|admit)\b|^\s*(axiom|unsafe|opaque)\b|sorryAx|admitAx' AxiomaticGW AxiomaticGWTest
+```
+
+Public regression examples cover graph loops and edge orders,
+higher-WDVV associativity, global string, and positive-tail support.
+`#print axioms` on the main derived theorem in each new layer reported only
+`propext`, `Classical.choice`, and `Quot.sound`.
+
+### Next gate
+
+Prove the primary-potential third-derivative characterization and construct a
+nontrivial geometric instance of one optional package; the concrete virtual
+geometry foundation remains the larger external dependency.
+
+## 2026-07-18: Dependency-order mathematical audit and conservative repairs
+
+**Status:** Implemented and locally verified.
+
+### Review evidence
+
+The review followed the dependency order from contractions through the M10
+carrier. Formula and convention checks used the arXiv TeX sources for
+Kontsevich--Manin's CohFT/GW axioms, Mulase--Safnuk's DVV normalization, and
+Givental's calibrated ancestor--descendant transformation, recorded in the
+[online reference ledger](../references/online/README.md).
+
+### Findings and revisions
+
+- Corrected missing label transports in forget/nonseparating and
+  forget/separating coherence, and added contraction relabelling lemmas.
+- Enforced stable-curve vanishing above `3g - 3 + |S|`; added forgetful
+  pushforward relabelling and degree-zero laws and derived kappa naturality
+  and degree.
+- Corrected stable-map descendant grading so psi powers participate in the
+  virtual-dimension equation before nonnegativity is tested. The former
+  natural-primary-degree theorem remains as a derived compatibility result.
+- Split string/dilaton laws from divisor-dependent data and made divisor
+  action linear in the divisor state.
+- Added the multivariable power-series Leibniz rule and proved commutativity of
+  the formal big quantum product from relabelling and integration naturality.
+- Isolated a foundational limitation: `DescendantAncestorComparison` is an
+  unconstrained residual decomposition, and `VirtualGWPackage` is only an
+  algebraic carrier. Documentation and milestone status now avoid claiming
+  boundary support or geometric realization.
+- Derived ancestor and stable-map-invariant relabelling, ancestor total
+  homogeneity, and the residual subtraction, relabelling, and degree theorems.
+  These make the weak layer coherent without pretending to supply geometric
+  boundary support.
+- Clarified the stable-sector potential convention, the absence of an
+  external classical-cup identification, the point-target DVV hypothesis,
+  current universe restrictions, and deferred truncation/base-change APIs.
+
+### Verification
+
+The final patch passed direct elaboration of every changed Lean file and:
+
+```bash
+lake build
+lake test
+lake lint
+git diff --check
+rg -n '\b(sorry|admit)\b' AxiomaticGW AxiomaticGWTest
+rg -n '^\s*(axiom|unsafe|opaque)\b|sorryAx|admitAx' AxiomaticGW AxiomaticGWTest
+```
+
+Both scans returned no matches. `#print axioms` on the new top-degree, kappa,
+descendant-degree, Leibniz, and formal-product commutativity theorems reported
+only `propext`, `Classical.choice`, and `Quot.sound`.
+
+### Next gate
+
+Replace the unconstrained descendant--ancestor residual with a stabilization
+comparison carrying boundary support and factorization. This is the most
+important remaining correctness boundary before treating M8 or M10 as a
+geometric interface.
+
 ## 2026-07-17: Core theorem integration and point-target stable-curve block
 
 **Status:** Implemented and locally verified.
@@ -22,7 +134,7 @@ Each entry records the accepted scope, implementation commit, a link to the cano
 
 - `CurveClassGW.smallProductCoefficient_wdvv`, `smallProductCoefficient_assoc`, and the coefficientwise unit and commutativity theorems.
 - `MvPowerSeries.pderiv_commute`, `iteratedPDeriv`, `stablePart`, and `insertionDerivative`.
-- `CurveClassGW.descendantPotential`, `ancestorPotential`, `potentials`, and `DescendantAncestorComparison.descendantPotential_eq_ancestor_add_boundary`.
+- `CurveClassGW.descendantPotential`, `ancestorPotential`, `potentials`, and the residual identity `DescendantAncestorComparison.descendantPotential_eq_ancestor_add_boundary`.
 - `CurveClassGW.formalBigProduct`, its metric characterization, and `formalBigProduct_zero`.
 - `PsiClasses.monomial_degree` and the `PointTarget` primary, ancestor, intersection, WDVV, initial-value, and `DVVRecursion` declarations.
 
@@ -52,7 +164,7 @@ The placeholder scan returned no matches. The Markdown audit also found no unbal
 
 Formalize the higher-point genus-zero boundary relation needed for big WDVV, or construct a concrete stable-curve cohomology realization that proves the point initial values and DVV. Either direction now extends a theorem boundary rather than adding a speculative carrier structure.
 
-## 2026-07-17: M5--M9 axiomatic interfaces and M10 realization boundary
+## 2026-07-17: M5--M9 axiomatic interfaces and M10 algebraic carrier
 
 **Status:** Implemented and locally verified. The core axiomatic data types are present through total free energies; the remaining work is theorem integration and concrete realization rather than another speculative structure layer.
 
@@ -63,7 +175,7 @@ Formalize the higher-point genus-zero boundary relation needed for big WDVV, or 
 - Add exactly the stable-curve tautological operations consumed by ancestors: psi classes, integration, forgetful pushforward, projection, rational-tail correction, and kappa classes.
 - Add positive locally finite effective curve classes and a coefficientwise primary GW theory with grading, normalization, gluing, negative-degree vanishing, and optional divisor data.
 - Implement the beta-preserving completed Novikov ring and the first fixed-beta quantum-product interface.
-- Keep stable-map descendants distinct from stable-curve ancestors and expose the stabilization boundary correction explicitly.
+- Keep stable-map descendants distinct from stable-curve ancestors and expose their residual difference explicitly. The 2026-07-18 audit clarified that this field does not encode geometric boundary support.
 - Use mathlib multivariable power series and Laurent series for formal variables, genus potentials, and the total free energy.
 - Stop the geometric layer at an algebraic output package; do not invent unused stack, obstruction-theory, or virtual-cycle carriers.
 
@@ -72,9 +184,9 @@ Formalize the higher-point genus-zero boundary relation needed for big WDVV, or 
 - `PsiClasses`, `StableCurveIntegration`, `ForgetfulPushforward`, `PsiForgetFormula`, `CohFT.ancestor`, and the constant tautological model.
 - `EffectiveCurveMonoid`, `GradedStateSpace`, `CurveClassGW`, `GWDivisorAxiom`, and `constantCurveClassGW.theory`.
 - `NovikovSeries`, its convolution ring, monomials, `ofMonoidAlgebra`, and `CurveClassGW.smallProductCoefficient`.
-- `StableMapDescendants`, `DescendantAncestorComparison`, and the integrated descendant--ancestor theorem.
+- `StableMapDescendants`, `DescendantAncestorComparison`, and the integrated descendant--ancestor residual identity.
 - `MvPowerSeries.pderiv`, `GWPotentials`, `totalFreeEnergy`, exact genus-coefficient theorems, and `DescendantEquationLaws`.
-- `VirtualGWPackage` and its projections to the realized primary, descendant, and comparison layers.
+- `VirtualGWPackage` and its projections to the stored primary, descendant, and residual layers; this carrier is not a realization theorem.
 
 ### Mathematics-to-Lean map
 

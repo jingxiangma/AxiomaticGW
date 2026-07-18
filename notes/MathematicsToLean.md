@@ -29,8 +29,8 @@ The [implementation progress record](milestones/ImplementationProgress.md) conta
 
 - [Stable marked curves](mathematics/M03StableCurvesAndGluing.md#1-stable-marked-curves) are represented only through their numerical stable range in [`Combinatorics/StableArity.lean`](../AxiomaticGW/Combinatorics/StableArity.lean). The moduli stacks themselves are not constructed.
 - [Primitive maps](mathematics/M03StableCurvesAndGluing.md#2-primitive-maps) and the [abstract cohomology system](mathematics/M03StableCurvesAndGluing.md#3-abstract-cohomology-system) correspond to [`CohFT/StableCurve.lean`](../AxiomaticGW/CohFT/StableCurve.lean), principally `EvenGradedAlgebra`, `StableCurveCohomology`, `GenusZeroGeometry`, `ConnectedDegreeZero`, and their degree and coherence fields.
-- The constant degree-zero realization and acceptance path are implemented in [`CohFT/Constant.lean`](../AxiomaticGW/CohFT/Constant.lean) and exercised through [`AxiomaticGWTest/Basic.lean`](../AxiomaticGWTest/Basic.lean).
-- [Stable graphs](mathematics/M03StableCurvesAndGluing.md#4-stable-graphs), arbitrary iterated gluing, and independence of contraction order are deferred by design decision D9 and do not yet have source modules.
+- The constant degree-zero realization, including its canonical stable-graph pullback, is implemented in [`CohFT/Constant.lean`](../AxiomaticGW/CohFT/Constant.lean) and exercised through [`AxiomaticGWTest/Basic.lean`](../AxiomaticGWTest/Basic.lean).
+- [Stable graphs](mathematics/M03StableCurvesAndGluing.md#4-stable-graphs) correspond to [`Combinatorics/StableGraph.lean`](../AxiomaticGW/Combinatorics/StableGraph.lean), principally `StableGraph`, `VertexLabel`, `totalGenus`, `ContractionOrder`, and the optional `StableGraphPullbacks`. Complete edge orders are proved permutation-equivalent, and an order-coherent pullback package yields a canonical order-independent graph pullback. Concrete geometric graph pullbacks remain instance data.
 
 ## M4. Full unital CohFT
 
@@ -38,13 +38,13 @@ The [implementation progress record](milestones/ImplementationProgress.md) conta
 
 - [State space and classes](mathematics/M04FullUnitalCohFT.md#1-state-space-and-classes), [relabelling and gluing](mathematics/M04FullUnitalCohFT.md#2-relabelling-and-gluing), and [unit and normalization](mathematics/M04FullUnitalCohFT.md#3-unit-and-normalization) correspond to [`CohFT/Basic.lean`](../AxiomaticGW/CohFT/Basic.lean), principally `CohFT` and `GradedCohFT`.
 - [Underlying Frobenius algebra](mathematics/M04FullUnitalCohFT.md#4-underlying-frobenius-algebra) corresponds to [`CohFT/GenusZero.lean`](../AxiomaticGW/CohFT/GenusZero.lean) and [`CohFT/Frobenius.lean`](../AxiomaticGW/CohFT/Frobenius.lean), principally `CohFT.toGenusZeroCohFT`, `GenusZeroCohFT.product`, `pairing_products_wdvv`, `product_assoc`, and `toCommFrobeniusAlgebra`.
-- [Topological part and genus zero](mathematics/M04FullUnitalCohFT.md#5-topological-part-and-genus-zero) correspond to [`CohFT/TopologicalPart.lean`](../AxiomaticGW/CohFT/TopologicalPart.lean) and [`CohFT/Classification.lean`](../AxiomaticGW/CohFT/Classification.lean), principally `CohFT.topologicalPart` and `TopologicalCohFT.classification`.
+- [Topological part and genus zero](mathematics/M04FullUnitalCohFT.md#5-topological-part-and-genus-zero) correspond to [`CohFT/TopologicalPart.lean`](../AxiomaticGW/CohFT/TopologicalPart.lean) and [`CohFT/Classification.lean`](../AxiomaticGW/CohFT/Classification.lean), principally `CohFT.topologicalPart` and `TopologicalCohFT.classification`. The latter currently inherits an `Algebra ℚ R` hypothesis from the full CohFT route.
 
 ## M5. Tautological classes and ancestors
 
 **Mathematical note:** [M5. Tautological classes and ancestors](mathematics/M05TautologicalClassesAndAncestors.md).
 
-- Stable-curve cotangent classes, top-degree integration, forgetful pushforward, the projection formula, rational-tail correction, and kappa classes correspond to [`CohFT/Tautological.lean`](../AxiomaticGW/CohFT/Tautological.lean), principally `PsiClasses`, `StableCurveIntegration`, `ForgetfulPushforward`, `PsiForgetFormula`, `PsiClasses.monomial`, and `PsiClasses.kappa`.
+- Stable-curve cotangent classes, top-degree integration, forgetful pushforward with relabelling naturality, degree shift, degree-zero vanishing and projection formula, rational-tail correction, and kappa classes correspond to [`CohFT/Tautological.lean`](../AxiomaticGW/CohFT/Tautological.lean), principally `PsiClasses`, `StableCurveIntegration`, `ForgetfulPushforward`, `PsiForgetFormula`, `PsiClasses.monomial`, and `PsiClasses.kappa`. General pushforward composition and base-change are not encoded.
 - Numerical ancestor correlators and the constant-target model correspond to [`CohFT/Ancestors.lean`](../AxiomaticGW/CohFT/Ancestors.lean), principally `CohFT.ancestor`, `constantStableCurveCohomology.psiClasses`, `integration`, and `forgetfulPushforward`.
 - Hodge classes and general decorated boundary strata remain intentionally unimplemented until a theorem consumes them.
 
@@ -62,23 +62,25 @@ The [implementation progress record](milestones/ImplementationProgress.md) conta
 
 - The beta-preserving completion, finite-antidiagonal convolution, monomials, and finite-support inclusion correspond to [`Coefficients/Novikov.lean`](../AxiomaticGW/Coefficients/Novikov.lean), principally `NovikovSeries`, `coeff_mul`, `monomial_mul_monomial`, and `ofMonoidAlgebra`.
 - Fixed-beta three-point products and derived coefficientwise WDVV and associativity correspond to [`GW/QuantumProduct.lean`](../AxiomaticGW/GW/QuantumProduct.lean), principally `CurveClassGW.smallProductCoefficient`, `smallProductSeries`, `smallProductCoefficient_wdvv`, and `smallProductCoefficient_assoc`.
-- The primary-background series and formal big product correspond to [`GW/FormalQuantumProduct.lean`](../AxiomaticGW/GW/FormalQuantumProduct.lean), principally `primaryThreePointSeriesCoefficient`, `formalBigProduct`, and `formalBigProduct_zero`. Big WDVV and associativity at nonzero background remain deferred until the higher-point genus-zero boundary relation is available.
+- The primary-background series and formal big product correspond to [`GW/FormalQuantumProduct.lean`](../AxiomaticGW/GW/FormalQuantumProduct.lean), principally `primaryThreePointSeriesCoefficient`, `formalBigProduct`, `formalBigProduct_comm`, and `formalBigProduct_zero`. [`GW/BigQuantumProduct.lean`](../AxiomaticGW/GW/BigQuantumProduct.lean) adds the stable primary potential, the explicit `GenusZeroHigherBoundary` hypothesis, and derives coefficientwise nonzero-background associativity from scalar higher WDVV. A full formal third-derivative identification is not yet asserted.
 
 ## M8. Descendants and ancestor comparison
 
 **Mathematical note:** [M8. Descendants and descendant--ancestor comparison](mathematics/M08DescendantsAndAncestors.md).
 
-- Beta-resolved ancestor classes and the distinct stabilized stable-map descendant family correspond to [`GW/Descendants/Basic.lean`](../AxiomaticGW/GW/Descendants/Basic.lean), principally `CurveClassGW.ancestorClass`, `ancestorInvariant`, `StableMapDescendants`, and `StableMapDescendants.invariant`.
-- The explicit boundary correction and integrated comparison correspond to [`GW/Descendants/Comparison.lean`](../AxiomaticGW/GW/Descendants/Comparison.lean), principally `DescendantAncestorComparison`, `boundaryCorrection_zero`, and `invariant_eq_ancestor_add_boundary`.
+- Beta-resolved ancestor classes and the distinct stabilized stable-map descendant family correspond to [`GW/Descendants/Basic.lean`](../AxiomaticGW/GW/Descendants/Basic.lean), principally `CurveClassGW.ancestorClass`, `ancestorClass_relabel`, `ancestorClass_total_degree`, `ancestorInvariant`, `StableMapDescendants`, and the two invariant relabelling theorems.
+- The recorded residual and integrated identity correspond to [`GW/Descendants/Comparison.lean`](../AxiomaticGW/GW/Descendants/Comparison.lean), principally `DescendantAncestorComparison`, `boundaryCorrection_eq_sub`, `boundaryCorrection_relabel`, `boundaryCorrection_degree`, and `invariant_eq_ancestor_add_boundary`. These derived theorems make the weak residual coherent and homogeneous, but the interface still does not encode geometric boundary support or a stabilization theorem.
+- The optional geometric strengthening corresponds to [`GW/Descendants/Stabilization.lean`](../AxiomaticGW/GW/Descendants/Stabilization.lean). `StabilizationBoundaryComparison` exhibits the residual as a finite sum over positive-degree rational-tail splittings, using explicit boundary pushforward and two-point tail-operator data. The same operators define `TwoPointCalibration`; `CalibrationBoundaryRelation` derives coefficientwise symplecticity, and `GiventalComparison` records the additional quantized partition identity without treating it as a consequence of the weak residual.
 
 ## M9. Potentials and equations
 
 **Mathematical note:** [M9. All-genus potentials and equations](mathematics/M09PotentialsAndEquations.md).
 
-- Descendant-variable indexing, Novikov-valued formal potentials, and commuting partial derivatives correspond to [`Coefficients/DescendantVariables.lean`](../AxiomaticGW/Coefficients/DescendantVariables.lean), principally `DescendantVariable`, `FormalPotential`, `MvPowerSeries.pderiv`, and `iteratedPDeriv`.
+- Descendant-variable indexing, Novikov-valued formal potentials, and partial derivatives with Leibniz and commutation laws correspond to [`Coefficients/DescendantVariables.lean`](../AxiomaticGW/Coefficients/DescendantVariables.lean), principally `DescendantVariable`, `FormalPotential`, `MvPowerSeries.pderiv`, `pderiv_mul`, and `iteratedPDeriv`.
 - Genus potentials and Laurent-series total free energies correspond to [`Coefficients/GenusExpansion.lean`](../AxiomaticGW/Coefficients/GenusExpansion.lean), principally `GWPotentials`, `totalFreeEnergy`, and `totalFreeEnergy_coeff`.
-- Potentials constructed from descendant and ancestor invariants correspond to [`GW/Descendants/Potentials.lean`](../AxiomaticGW/GW/Descendants/Potentials.lean), principally `profileWeight`, `CurveClassGW.descendantPotential`, `ancestorPotential`, `stablePart`, `insertionDerivative`, and `descendantPotential_eq_ancestor_add_boundary`.
-- Optional stable string, dilaton, and descendant divisor laws correspond to [`GW/Descendants/Equations.lean`](../AxiomaticGW/GW/Descendants/Equations.lean), principally `DescendantEquationLaws`. The exponential total potential is deliberately not represented by this Laurent completion.
+- Stable-sector potentials constructed from descendant and ancestor invariants correspond to [`GW/Descendants/Potentials.lean`](../AxiomaticGW/GW/Descendants/Potentials.lean), principally `profileWeight`, `CurveClassGW.descendantPotential`, `ancestorPotential`, `stablePart`, `insertionDerivative`, and the residual identity `descendantPotential_eq_ancestor_add_boundary`. Profiles outside stable curve arities are set to zero by convention, not by a geometric vanishing theorem.
+- Optional stable string and dilaton laws and the separately divisor-dependent law correspond to [`GW/Descendants/Equations.lean`](../AxiomaticGW/GW/Descendants/Equations.lean), principally `DescendantStringDilatonLaws`, `DescendantDivisorLaw`, and their compatibility package `DescendantEquationLaws`. The exponential total potential is deliberately not represented by this Laurent completion.
+- Explicit unstable numerical data correspond to [`GW/Descendants/FullPotential.lean`](../AxiomaticGW/GW/Descendants/FullPotential.lean), principally `UnstableDescendantConventions`, `invariant`, `global_string`, `global_dilaton`, and `fullDescendantPotential`. Positive-degree unstable values are supplied data, never inferred from the stable-curve carrier.
 
 ## Point-target stable-curve block
 
@@ -87,11 +89,11 @@ The [implementation progress record](milestones/ImplementationProgress.md) conta
 - The point primary class, psi intersection numbers, point ancestors, dimension vanishing, initial values, and unit-class WDVV test correspond to [`Point/Descendants.lean`](../AxiomaticGW/Point/Descendants.lean), principally `PointTarget.primaryClass`, `intersectionNumber`, `ancestor`, `intersectionNumber_eq_zero_of_degree_ne`, `intersectionNumber_zero_three`, `intersectionNumber_one_one`, and `unitClass_wdvv`.
 - The labelled all-genus DVV formula corresponds to `PointTarget.DVVRecursion`. It is an explicit higher tautological hypothesis on a geometric stable-curve model, not a theorem of the primitive `PsiClasses` interface.
 
-## M10. Abstract realization boundary
+## M10. Algebraic output carrier
 
 **Mathematical note:** [M10. Geometric realization](mathematics/M10GeometricRealization.md).
 
-- The algebraic output required from future virtual intersection theory corresponds to [`Geometry/VirtualGWPackage.lean`](../AxiomaticGW/Geometry/VirtualGWPackage.lean), principally `VirtualGWPackage` and its projections to the primary theory, descendants, and comparison.
+- The algebraic output carrier for future virtual intersection theory corresponds to [`Geometry/VirtualGWPackage.lean`](../AxiomaticGW/Geometry/VirtualGWPackage.lean), principally `VirtualGWPackage` and its projections to the primary theory, descendants, and residual decomposition. The carrier does not prove that these fields arise from geometry.
 - Actual moduli stacks, obstruction theories, and virtual fundamental classes are outside the implemented repository foundations.
 
 ## Maintenance rule

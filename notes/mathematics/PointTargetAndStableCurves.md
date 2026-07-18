@@ -109,4 +109,8 @@ DVV is not a consequence of the primitive pullback rules in `PsiClasses`. It is 
 
 [`Point/Descendants.lean`](../../AxiomaticGW/Point/Descendants.lean) implements `PointTarget.primaryClass`, `intersectionNumber`, the point ancestor map, relabelling and dimension-vanishing theorems, the two initial-value interfaces, and the unit-class WDVV check. `PointTarget.DVVRecursion` states the full labelled all-genus formula above using finite subsets for the splitting sum.
 
+The module does not currently construct a `StableMapDescendants` instance for
+the point, so the geometric equality of point descendants and ancestors is
+mathematical context rather than an implemented identification theorem.
+
 The module deliberately does not manufacture a concrete cohomology ring for $\overline{\mathcal M}_{g,S}$. A future geometric stable-curve model should instantiate `StableCurveCohomology`, `PsiClasses`, and `StableCurveIntegration`, prove the initial intersections and `DVVRecursion`, and then obtain the numerical point theory from these existing definitions.

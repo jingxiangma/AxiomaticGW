@@ -36,7 +36,7 @@ Construct finite-labelled all-genus correlators, prove separating and nonseparat
 
 Introduce an abstract even-cohomology system for stable-curve moduli spaces, modeled by ordinary commutative algebras graded by half cohomological degree. Include finite-label relabelling, forgetful maps, separating gluing, nonseparating gluing, and the compatibility identities needed by CohFTs. Add optional `GenusZeroGeometry` and `ConnectedDegreeZero` extensions for the special low-genus relations and the identifications $H^0(\overline{\mathcal M}_{g,S})\cong R$. Stable graphs and graph contraction can then package iterated gluing. Odd cohomology and Koszul signs are outside the project scope.
 
-**Status:** Complete for the primitive-map interface fixed by D9. All maps are degree-preserving, the immediate forget/glue coherence laws are present, and the constant model validates the interface. Stable graphs and arbitrary iterated gluing remain a separately deferred layer rather than unfinished M3 work.
+**Status:** Complete for the primitive-map interface fixed by D9. All maps are degree-preserving, the immediate forget/glue coherence laws are present, and the constant model validates the interface. The separate stable-graph layer now provides finite stable graphs, vertex factors, arithmetic genus, complete edge orders, and optional order-independent graph pullbacks without strengthening `StableCurveCohomology`.
 
 ## M4. Full unital CohFT
 
@@ -54,7 +54,7 @@ M3/M4 are accepted only after the constant degree-zero cohomology system is impl
 
 Extend the stable-curve system with `psi`, `kappa`, and Hodge classes where needed, together with integration, pushforward, and projection formulas. Use stable-curve `psi`-classes to define ancestor correlators and their basic relations.
 
-**Status:** Complete for the ancestor layer. `PsiClasses`, top-degree integration, forgetful pushforward, the projection formula, the rational-tail forgetful correction, kappa classes, and numerical ancestors are implemented, with a constant-target regression model. Hodge and general boundary-stratum classes remain theorem-driven extensions rather than unused fields of the core interface.
+**Status:** Complete for the current ancestor layer. `PsiClasses`, top-degree integration, forgetful pushforward with relabelling naturality, degree shift, degree-zero vanishing and projection formula, the rational-tail forgetful correction, kappa degree/naturality, and numerical ancestors are implemented, with a constant-target regression model. General pushforward composition and base-change, Hodge classes, and general boundary-stratum classes remain theorem-driven extensions rather than unused fields of the core interface.
 
 ## M6. Curve-class-resolved GW axioms
 
@@ -79,7 +79,7 @@ Formalize symmetry, the flat unit, splitting, genus reduction, grading, virtual 
 
 Package the coefficientwise curve-class theory using the beta-preserving completed monoid ring fixed by D13. Define small and big quantum products and prove associativity and WDVV.
 
-**Status:** Complete for the coefficientwise scope fixed by D14. `NovikovSeries` is the beta-preserving completed monoid ring, with proven commutative-ring laws, monomial multiplication, and an injective finite monoid-algebra map. Fixed-beta products, scalar coefficientwise WDVV, and coefficientwise small-product associativity are derived directly from `CurveClassGW` gluing. The invariant-defined formal big product is implemented and specializes to the small product at zero background. Big WDVV and associativity at nonzero background remain a deliberate higher-point boundary extension rather than an unproved field of an abstract product structure.
+**Status:** Complete for the coefficientwise scope fixed by D14. `NovikovSeries` is the beta-preserving completed monoid ring, with proven commutative-ring laws, monomial multiplication, and an injective finite monoid-algebra map. Fixed-beta products and small associativity are derived directly from `CurveClassGW` gluing. The formal big product is commutative and specializes to the small product; the optional `GenusZeroHigherBoundary` supplies scalar higher WDVV and yields coefficientwise associativity at arbitrary primary background. The stable primary potential is defined, while its full formal third-derivative characterization remains open.
 
 ## M8. Descendants and descendant--ancestor comparison
 
@@ -87,7 +87,7 @@ Package the coefficientwise curve-class theory using the beta-preserving complet
 
 Introduce stable-map `psi`-classes separately from stable-curve `psi`-classes. Define descendant correlators and prove the comparison with ancestors once the necessary stabilization and boundary formulas are available.
 
-**Status:** Complete as an axiomatic descendant extension. Stable-map descendant classes are a separate family from stable-curve `PsiClasses`; zero powers, relabelling, degree, numerical invariants, explicit boundary corrections, and the integrated descendant--ancestor comparison are implemented. Concrete geometric stable-map instances remain M10 realization work.
+**Status:** Complete as an optional axiomatic comparison. Stable-map descendant classes remain separate from stable-curve `PsiClasses`. `DescendantAncestorComparison` is the weak residual API; `StabilizationBoundaryComparison` adds explicit positive-degree rational-tail support, factorized boundary data, and the two-point tail operators used by the calibration. Symplecticity and the quantized partition identity require separately named optional boundary/Fock hypotheses. Concrete stable-map geometry has not yet constructed these packages.
 
 ## M9. All-genus potentials and equations
 
@@ -95,15 +95,15 @@ Introduce stable-map `psi`-classes separately from stable-curve `psi`-classes. D
 
 Define genus expansions, descendant and ancestor genus potentials, and their total free energies. Prove string, dilaton, divisor, splitting, genus-reduction, and tautological relations from the corresponding abstract axioms. The exponential total potential is deferred until a theorem requires a mixed completion supporting its unbounded negative `hbar` powers.
 
-**Status:** Complete for the stable-sector axiomatic scope. Novikov-valued descendant and ancestor potentials are constructed from invariants with canonical occurrence labels and multiplicity-factorial normalization. Formal partial and iterated derivatives, stable-sector projection, directional insertion derivatives, honest Laurent-series total free energies, and the potential-level descendant--ancestor comparison are implemented. Optional stable string, dilaton, and descendant divisor laws remain bundled at correlator level because global PDEs require additional unstable conventions. The point-target block identifies descendants with stable-curve psi intersections and states the all-genus DVV relation explicitly. The exponential total potential remains deliberately deferred.
+**Status:** Complete for stable potentials and explicit unstable extensions. Stable-sector descendant and ancestor potentials, formal derivatives, Laurent total free energies, and the residual identity are implemented. `UnstableDescendantConventions` supplies the missing arities without asserting geometric vanishing, and stable plus exceptional recurrences derive global correlator-level string and dilaton equations and `fullDescendantPotential`. A vector-field PDE presentation and unrestricted exponential total potential remain deliberately deferred.
 
 ## M10. Geometric realization
 
 [Mathematical background](../mathematics/M10GeometricRealization.md)
 
-Expose the algebraic output boundary that a virtual stable-map construction must satisfy: the primary theory, stabilized descendants, and their boundary-corrected comparison with ancestors. A future geometric refinement will construct this package from evaluation maps, stabilization, virtual classes, pullbacks, pushforwards, and virtual gluing. Constructing actual moduli stacks and virtual fundamental classes is a later, substantially larger geometric project.
+Expose an algebraic output carrier for a future virtual stable-map construction: the primary theory, stabilized descendants, and their residual decomposition against ancestors. A future geometric refinement must strengthen and construct this data from evaluation maps, stabilization, virtual classes, pullbacks, pushforwards, and virtual gluing. Constructing actual moduli stacks and virtual fundamental classes is a later, substantially larger geometric project.
 
-**Status:** Abstract boundary implemented; concrete geometry remains optional. `VirtualGWPackage` bundles precisely the realized primary theory, stable-map descendants, and boundary-corrected ancestor comparison. Constructing such a package from actual moduli stacks and virtual fundamental classes remains a separate geometric formalization project.
+**Status:** Algebraic carrier implemented; realization not implemented. `VirtualGWPackage` bundles already axiomatized primary, descendant, and residual data. Its projections do not certify a virtual-geometric origin or boundary support. Constructing and validating such data from actual moduli stacks and virtual fundamental classes remains a separate geometric formalization project.
 
 ## Dependency summary
 

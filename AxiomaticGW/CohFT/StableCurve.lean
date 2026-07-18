@@ -122,6 +122,24 @@ def swapDoubleOption (S : Type*) : Equiv.Perm (Option (Option S)) :=
     ((Equiv.refl S).sumCongr (Equiv.swap 0 1)) |>.trans
       (doubleOptionEquiv S).symm
 
+/-- Transport from the label order obtained by gluing after forgetting to the
+order obtained by forgetting after gluing. It cycles the forgotten marking and
+the two node markings while fixing the original labels. -/
+def forgetNonseparatingEquiv (S : Type*) :
+    Equiv.Perm (Option (Option (Option S))) where
+  toFun
+    | none => some none
+    | some none => some (some none)
+    | some (some none) => none
+    | some (some (some s)) => some (some (some s))
+  invFun
+    | none => some (some none)
+    | some none => none
+    | some (some none) => some none
+    | some (some (some s)) => some (some (some s))
+  left_inv x := by rcases x with _ | (_ | (_ | s)) <;> rfl
+  right_inv x := by rcases x with _ | (_ | (_ | s)) <;> rfl
+
 /-- Move a newly adjoined label to the left component of a disjoint union. -/
 def optionSumEquivLeft (S T : Type*) : Option (S ⊕ T) ≃ Option S ⊕ T where
   toFun
@@ -146,6 +164,11 @@ covariant direction. -/
 structure StableCurveCohomology (R : Type u) [CommRing R] [Algebra ℚ R] where
   /-- Cohomology target for a genus and finite label type. -/
   H : (g : ℕ) → (S : Type) → [Fintype S] → EvenGradedAlgebra R
+  /-- Cohomology vanishes in codimensions above the dimension of the stable
+  curve space. -/
+  degree_eq_bot_of_dimension_lt : ∀ (g : ℕ) (S : Type) [Fintype S]
+      (_h : StableArity g S) (d : ℕ),
+    StableArity.dimension g S < d → (H g S).degree d = ⊥
   /-- Covariant notation for transport along a label equivalence. -/
   rename : ∀ (g : ℕ) (S T : Type) [Fintype S] [Fintype T]
       (_hS : StableArity g S) (_hT : StableArity g T), S ≃ T →
@@ -261,8 +284,12 @@ structure StableCurveCohomology (R : Type u) [CommRing R] [Algebra ℚ R] where
       (h : StableArity (g + 1) S),
       (forget g (Option (Option S)) (StableArity.double_option_iff.mpr h)).comp
           (nonseparating g S h) =
-        (nonseparating g (Option S) (StableArity.option h)).comp
-          (forget (g + 1) S h)
+        (rename g (Option (Option (Option S))) (Option (Option (Option S)))
+          (StableArity.double_option_iff.mpr (StableArity.option h))
+          (StableArity.option (StableArity.double_option_iff.mpr h))
+          (forgetNonseparatingEquiv S)).toAlgHom.comp
+            ((nonseparating g (Option S) (StableArity.option h)).comp
+              (forget (g + 1) S h))
   /-- Forgetting a marking on the left component commutes with separating
   gluing, after the visible label transport. -/
   forget_separating_left : ∀ (g₁ g₂ : ℕ) (S T : Type)
@@ -272,12 +299,31 @@ structure StableCurveCohomology (R : Type u) [CommRing R] [Algebra ℚ R] where
         (forget g₁ (Option S) h₁)
         (AlgHom.id R (H g₂ (Option T)))).comp
           (separating g₁ g₂ S T h₁ h₂) =
-        (separating g₁ g₂ (Option S) T (StableArity.option h₁) h₂).comp
-          ((rename (g₁ + g₂) (Option (S ⊕ T)) (Option S ⊕ T)
-            (StableArity.option (StableArity.separating h₁ h₂))
-            (StableArity.separating (StableArity.option h₁) h₂)
-            (optionSumEquivLeft S T)).toAlgHom.comp
-              (forget (g₁ + g₂) (S ⊕ T) (StableArity.separating h₁ h₂)))
+        (Algebra.TensorProduct.map
+          (rename g₁ (Option (Option S)) (Option (Option S))
+            (StableArity.option h₁) (StableArity.option h₁)
+            (swapDoubleOption S)).toAlgHom
+          (AlgHom.id R (H g₂ (Option T)))).comp
+            ((separating g₁ g₂ (Option S) T (StableArity.option h₁) h₂).comp
+              ((rename (g₁ + g₂) (Option (S ⊕ T)) (Option S ⊕ T)
+                (StableArity.option (StableArity.separating h₁ h₂))
+                (StableArity.separating (StableArity.option h₁) h₂)
+                (optionSumEquivLeft S T)).toAlgHom.comp
+                  (forget (g₁ + g₂) (S ⊕ T)
+                    (StableArity.separating h₁ h₂))))
+
+namespace StableCurveCohomology
+
+/-- A homogeneous stable-curve class above the geometric top degree is zero. -/
+theorem eq_zero_of_dimension_lt {R : Type u} [CommRing R] [Algebra ℚ R]
+    (C : StableCurveCohomology R) (g : ℕ) (S : Type) [Fintype S]
+    (h : StableArity g S) (d : ℕ) (x : C.H g S)
+    (hx : x ∈ (C.H g S).degree d) (hd : StableArity.dimension g S < d) :
+    x = 0 := by
+  rw [C.degree_eq_bot_of_dimension_lt g S h d hd] at hx
+  exact (Submodule.mem_bot R).mp hx
+
+end StableCurveCohomology
 
 /-- Optional low-genus facts used to extract a Frobenius algebra and WDVV. -/
 structure GenusZeroGeometry {R : Type u} [CommRing R] [Algebra ℚ R]

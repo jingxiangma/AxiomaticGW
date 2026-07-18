@@ -89,11 +89,22 @@ structure ForgetfulPushforward {R : Type u} [CommRing R] [Algebra ℚ R]
   /-- Pushforward after forgetting the newly adjoined marking. -/
   push : ∀ (g : ℕ) (S : Type) [Fintype S] (_h : StableArity g S),
     C.H g (Option S) →ₗ[R] C.H g S
+  /-- Forgetful pushforward is natural under relabelling. -/
+  push_rename : ∀ (g : ℕ) (S T : Type) [Fintype S] [Fintype T]
+      (hS : StableArity g S) (hT : StableArity g T) (e : S ≃ T),
+    (push g T hT).comp
+        (C.rename g (Option S) (Option T) (StableArity.option hS)
+          (StableArity.option hT) e.optionCongr).toLinearMap =
+      (C.rename g S T hS hT e).toLinearMap.comp (push g S hS)
   /-- Forgetful pushforward lowers codimension by one. -/
   push_degree : ∀ (g : ℕ) (S : Type) [Fintype S]
       (h : StableArity g S) (d : ℕ) (x : C.H g (Option S)),
     x ∈ (C.H g (Option S)).degree (d + 1) →
       push g S h x ∈ (C.H g S).degree d
+  /-- Forgetful pushforward of a degree-zero class vanishes. -/
+  push_eq_zero_of_degree_zero : ∀ (g : ℕ) (S : Type) [Fintype S]
+      (h : StableArity g S) (x : C.H g (Option S)),
+    x ∈ (C.H g (Option S)).degree 0 → push g S h x = 0
   /-- Projection formula for forgetting a marking. -/
   projection_formula : ∀ (g : ℕ) (S : Type) [Fintype S]
       (h : StableArity g S) (x : C.H g S) (y : C.H g (Option S)),
@@ -157,6 +168,40 @@ noncomputable def kappa {R : Type u} [CommRing R] [Algebra ℚ R]
     (g : ℕ) (S : Type) [Fintype S] (h : StableArity g S)
     (m : ℕ) : C.H g S :=
   F.push g S h (P.psi g (Option S) (StableArity.option h) none ^ (m + 1))
+
+/-- Kappa classes are natural under relabelling of the original markings. -/
+theorem kappa_rename {R : Type u} [CommRing R] [Algebra ℚ R]
+    {C : StableCurveCohomology R} (P : PsiClasses C)
+    {I : StableCurveIntegration C} (F : ForgetfulPushforward C I)
+    (g : ℕ) (S T : Type) [Fintype S] [Fintype T]
+    (hS : StableArity g S) (hT : StableArity g T) (e : S ≃ T)
+    (m : ℕ) :
+    C.rename g S T hS hT e (P.kappa F g S hS m) =
+      P.kappa F g T hT m := by
+  let x := P.psi g (Option S) (StableArity.option hS) none ^ (m + 1)
+  have hpsi :
+      C.rename g (Option S) (Option T) (StableArity.option hS)
+          (StableArity.option hT) e.optionCongr x =
+        P.psi g (Option T) (StableArity.option hT) none ^ (m + 1) := by
+    simp only [x, map_pow, P.rename_psi]
+    rfl
+  have hpush := congrArg (fun f ↦ f x) (F.push_rename g S T hS hT e)
+  change F.push g T hT
+      (C.rename g (Option S) (Option T) (StableArity.option hS)
+        (StableArity.option hT) e.optionCongr x) =
+    C.rename g S T hS hT e (F.push g S hS x) at hpush
+  rw [hpsi] at hpush
+  exact hpush.symm
+
+/-- The kappa class `kappa_m` has codimension `m`. -/
+theorem kappa_degree {R : Type u} [CommRing R] [Algebra ℚ R]
+    {C : StableCurveCohomology R} (P : PsiClasses C)
+    {I : StableCurveIntegration C} (F : ForgetfulPushforward C I)
+    (g : ℕ) (S : Type) [Fintype S] (h : StableArity g S) (m : ℕ) :
+    P.kappa F g S h m ∈ (C.H g S).degree m := by
+  apply F.push_degree g S h m
+  simpa using SetLike.pow_mem_graded (m + 1)
+    (P.psi_degree g (Option S) (StableArity.option h) none)
 
 end PsiClasses
 

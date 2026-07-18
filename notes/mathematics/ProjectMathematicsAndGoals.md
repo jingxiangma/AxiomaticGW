@@ -282,7 +282,7 @@ Additional GW data and axioms include:
   $$
 - grading compatibility;
 - the divisor--curve pairing and divisor equation;
-- degree-zero normalization recovering classical multiplication;
+- a geometric degree-zero formula recovering classical multiplication;
 - explicit treatment of unstable exceptional cases.
 
 These properties are not consequences of a bare CohFT.
@@ -336,7 +336,7 @@ $$
 \bar\psi_i+\text{boundary terms}.
 $$
 
-Descendant invariants integrate powers of $\psi_i^{\mathrm{map}}$ against the virtual class. Ancestor invariants use powers of $\bar\psi_i$. The project keeps these classes in distinct interfaces and derives their comparison only from explicit stabilization and boundary hypotheses.
+Descendant invariants integrate powers of $\psi_i^{\mathrm{map}}$ against the virtual class. Ancestor invariants use powers of $\bar\psi_i$. The project keeps these classes in distinct interfaces. The current Lean API records only their residual difference; a genuine comparison derived from explicit stabilization and boundary hypotheses remains future work.
 
 ## 11. All-genus potentials
 
@@ -369,9 +369,9 @@ Once the coefficient ring is defined, geometric axioms become formal differentia
 - Pullbacks, external products, gluing, pushforwards, and integration as explicitly axiomatized operations.
 - Full unital CohFTs and their Frobenius/topological/genus-zero consequences.
 - Effective-curve-class refinements and Novikov packaging.
-- Ancestor and descendant theories with a formal comparison theorem.
-- Quantum products, potentials, and equations.
-- An abstract algebraic output boundary for future virtual GW realizations.
+- Ancestor and descendant theories with a formal residual identity.
+- Quantum products, stable-sector potentials, and optional stable equations.
+- An abstract algebraic output carrier for future virtual GW realizations.
 
 ### Not required for the axiomatic endpoint
 
@@ -394,9 +394,9 @@ M1  perfect pairings and Frobenius algebras                 complete
   -> M5  tautological classes, integration, and ancestors complete core
   -> M6  curve-class-resolved GW axioms                    complete core
   -> M7  Novikov coefficients and quantum products         coefficientwise core complete
-  -> M8  descendants and descendant--ancestor comparison   interface complete
-  -> M9  all-genus potentials and equations                stable-sector core complete
-  -> M10 abstract geometric realization                    output boundary complete
+  -> M8  descendants and descendant--ancestor comparison   optional rational-tail comparison implemented
+  -> M9  all-genus potentials and equations                stable and explicit unstable extensions implemented
+  -> M10 abstract geometric realization                    algebraic carrier only
 ```
 
 Each phase is intended to compile independently and expose a stable API before the next phase begins.
@@ -421,14 +421,17 @@ The repository currently contains:
 - stable-curve psi classes, integration, forgetful pushforward, kappa classes, and ancestors;
 - positive locally finite effective curve classes and beta-resolved primary GW axioms;
 - the beta-preserving Novikov ring, fixed-beta quantum-product coefficients, and derived coefficientwise small WDVV and associativity;
-- the invariant-defined formal big product and its proved zero-background specialization to the small product;
-- distinct stable-map descendants and stable-curve ancestors with an explicit comparison term;
-- invariant-defined Novikov-valued descendant and ancestor potentials, their comparison, and Laurent total free energies;
-- optional stable string, dilaton, and descendant divisor law packages;
-- a self-contained point-target block identifying descendants with psi intersections on stable curves and stating the all-genus DVV relation;
-- the abstract virtual-GW algebraic output boundary.
+- the invariant-defined commutative formal big product and its proved zero-background specialization to the small product;
+- an optional higher-background WDVV package deriving formal big-product associativity;
+- finite stable graphs and optional order-independent graph pullbacks;
+- distinct stable-map descendants and stable-curve ancestors with both a weak residual API and an optional positive-tail factorization;
+- invariant-defined Novikov-valued stable-sector descendant and ancestor potentials, their residual identity, and Laurent total free energies;
+- a tail-derived two-point calibration with separately named symplectic and quantized-comparison hypotheses;
+- explicit unstable conventions, a full descendant potential, global string/dilaton laws, and the separately usable divisor law;
+- a self-contained point-target block identifying ancestors with psi intersections on stable curves and stating the all-genus DVV proposition as an additional hypothesis;
+- an abstract virtual-GW algebraic output carrier, not a construction from geometry.
 
-The next theorem boundary is either the higher-point genus-zero relation needed for big WDVV and formal big-product associativity, or a concrete stable-curve cohomology model proving the point initial values and DVV. Global string and dilaton PDEs also remain gated by an explicit choice of unstable conventions. The settled architectural choices are recorded in the design-decision ledger.
+The next internal theorem boundary is the third-derivative characterization of the primary potential and a vector-field presentation of the global equations. The more important external boundary is a concrete stable-curve or stable-map geometric model instantiating the optional graph, stabilization, higher-boundary, or DVV hypotheses. The settled architectural choices are recorded in the design-decision ledger.
 
 ## 15. Criteria for success
 
@@ -439,7 +442,7 @@ The project succeeds when the main endpoint is expressed by Lean structures and 
 3. construct Novikov-valued numerical invariants and quantum products from coefficientwise GW data;
 4. define primary, ancestor, and descendant invariants without conflating their cotangent-line classes;
 5. derive the standard equations from named abstract hypotheses;
-6. construct the axiomatic GW theory from an abstract virtual realization package;
+6. eventually construct the axiomatic GW theory from genuine virtual-geometric input, rather than merely repackaging already axiomatized fields;
 7. verify every implemented milestone with no `sorry` or `admit`.
 
 ## Further reading within the repository

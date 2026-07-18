@@ -126,7 +126,9 @@ more complex dimension while the model has no positive-degree classes. -/
 noncomputable def forgetfulPushforward :
     ForgetfulPushforward (constantStableCurveCohomology R) (integration R) where
   push := fun _ _ _ _ ↦ 0
+  push_rename := by intros; rfl
   push_degree := by intros; exact Submodule.zero_mem _
+  push_eq_zero_of_degree_zero := by intros; rfl
   projection_formula := by intros; simp
   integrate_push := by
     intro g S _ h x

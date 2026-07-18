@@ -60,7 +60,7 @@ $$
 
 equipped with relabelling pullbacks, forgetful pullbacks, gluing pullbacks, external products, and their compatibility laws. The first interface includes functoriality of relabelling, naturality of primitive gluing, compatibility of forgetting with gluing, and node/component symmetries. Coherence for arbitrary iterated gluings is deferred to the stable-graph layer.
 
-The Lean grading is half the ordinary cohomological degree: its degree-$d$ piece models $H^{2d}(\overline{\mathcal M}_{g,S})$. Consequently `psi` and divisor classes have degree one, top degree is the complex dimension, and no Koszul signs occur in products or gluing. Odd cohomology is deliberately outside the scope of the interface.
+The Lean grading is half the ordinary cohomological degree: its degree-$d$ piece models $H^{2d}(\overline{\mathcal M}_{g,S})$. Consequently `psi` and divisor classes have degree one, top degree is the complex dimension, and no Koszul signs occur in products or gluing. `StableCurveCohomology` enforces vanishing above `3g - 3 + |S|`; it does not assert that the top component itself is nonzero. Odd cohomology is deliberately outside the scope of the interface.
 
 This interface isolates the part of stable-curve geometry actually used by CohFT axioms.
 
@@ -82,6 +82,6 @@ $$
 
 Contracting every internal edge describes the map from a product of vertex moduli spaces to $\overline{\mathcal M}_{g,S}$. Coherence of the primitive gluing maps implies that graph evaluation is independent of the order in which edges are contracted.
 
-Stable graphs later organize tautological boundary strata, Givental-type graph sums, and localization formulas, but the first definition of a CohFT needs only the primitive separating and nonseparating maps.
+`StableGraph` implements this finite combinatorics using an edge type with two branches, so loops and multiple edges are represented without a half-edge quotient. It defines vertex label types, valence, first Betti number, total genus, and complete contraction orders. `StableGraphPullbacks` is an optional extension recording ordered graph pullbacks and their permutation coherence; the derived canonical pullback is independent of a complete edge order. The first definition of a CohFT still needs only the primitive separating and nonseparating maps, and concrete geometric graph pullbacks remain instance data.
 
 With this target-side system available, one can state the full CohFT axioms. See [M4: full unital CohFT](M04FullUnitalCohFT.md).

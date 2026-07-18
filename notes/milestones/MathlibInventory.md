@@ -146,13 +146,27 @@ Beyond the coefficient ring, build:
 - small and big quantum products and associativity/WDVV;
 - the classical-limit theorem at curve class zero.
 
+The current implementation completes the coefficient ring and derives the
+small product laws coefficientwise. It defines its beta-zero product
+internally; an equality with an independently supplied classical cup product
+is still outside the present data.
+
 ## M8. Descendants and ancestor comparison
 
 No GW-specific part of this milestone exists in mathlib. The reusable pieces are only the algebra and the abstract M5/M6 interfaces once those have been built.
 
 The project must add distinct types or namespaces for stable-map `psi` and pulled-back stable-curve `psi`, along with stabilization, evaluation insertions, virtual integration/pushforward, forgetful and boundary formulas, descendant correlators, and the comparison theorem. The correction formula must be a theorem/axiom of this package, never definitional equality.
 
-The generating-function `S`-operator should wait until the coefficient and formal-series choices of M7 and M9 are stable.
+The current `DescendantAncestorComparison` remains only a residual
+decomposition. The optional `StabilizationBoundaryComparison` now meets the
+axiomatic comparison boundary by recording a finite positive-tail
+factorization and the associated two-point operators. Constructing that
+package from moduli-space geometry remains open.
+
+The coefficientwise `TwoPointCalibration`, its separately assumed boundary
+identity, and an explicit quantized-action carrier are implemented. The
+repository does not claim an unrestricted exponential in the Laurent-series
+type.
 
 ## M9. All-genus potentials and equations
 
@@ -172,6 +186,11 @@ The generating-function `S`-operator should wait until the coefficient and forma
 
 Most importantly, `F = sum_g hbar^(g-1) F_g` is Laurent-bounded below by `-1`, but `exp(F)` generally contains arbitrarily negative powers of `hbar` because of powers of the genus-zero term. Decision D13 therefore leaves `exp(F)` outside the first axiomatic endpoint. M9 implements genus potentials and the honest Laurent-series total free energy; a mixed completion for the exponential will be introduced only when a concrete theorem consumes it.
 
+The project-owned `MvPowerSeries.pderiv` now includes linearity, the Leibniz
+rule, commutation, and iterated derivatives. Stable potentials retain their
+original convention; `UnstableDescendantConventions` optionally extends them
+to every arity and derives global correlator-level string and dilaton laws.
+
 ## M10. Geometric realization
 
 ### Already available
@@ -182,22 +201,27 @@ Mathlib has a substantial scheme layer: schemes, fiber products, many local and 
 
 The roadmap requires Deligne--Mumford or derived stacks, the actual moduli objects, a suitable cohomology or Chow theory with rational equivalence, products and refined Gysin pullbacks, Chern classes, perfect obstruction theories, intrinsic normal cones, virtual fundamental classes, and their gluing/base-change compatibility. These are not present in mathlib `v4.32.0`. The existing scheme `AlgebraicCycle` is an early building block, not a substitute for them.
 
-Accordingly, the achievable M10 deliverable in this repository is an abstract `VirtualGWPackage` whose fields expose precisely the operations and theorems used in M5, M6, and M8, followed by a construction
+Accordingly, the current M10 deliverable is only an abstract
+`VirtualGWPackage` carrier whose fields store already axiomatized M6 and M8
+outputs, followed by projections such as
 
 ```text
-VirtualGWPackage -> CurveClassResolvedGWTheory.
+VirtualGWPackage -> CurveClassGW.
 ```
 
-Constructing a concrete instance from moduli stacks and virtual classes should remain explicitly out of scope until those external foundations exist.
+This is not a realization construction and does not encode boundary support
+for the descendant--ancestor residual. Constructing a concrete instance from
+moduli stacks and virtual classes should remain explicitly out of scope until
+those external foundations exist.
 
 ## Recommended implementation gates
 
 1. **M3a (complete):** implement the even-cohomology targets, graded by half cohomological degree, and the primitive stable-curve pullbacks with coherence.
 2. **M4a (complete):** generalize contraction to arbitrary codomains and define full CohFT; use the existing topological theory as the first instance.
-3. **M3b/M4b (complete):** add only the `Mbar(0,3)` and `Mbar(0,4)` facts needed for the Frobenius/WDVV theorems; defer general stable graphs.
+3. **M3b/M4b (complete):** retain only the `Mbar(0,3)` and `Mbar(0,4)` facts in the core; use the separate optional stable-graph layer for iterated gluing.
 4. **M5 (complete core):** add abstract intersection operations and tautological data.
 5. **M6 (complete core):** require finite class antidiagonals and settle grading conventions.
 6. **M7a (complete):** implement the finite-support inclusion and completed Novikov coefficient ring.
 7. **M7b/M9a (complete for the current endpoint):** prove the beta-preserving convolution ring and the Laurent-bounded total free energy.
-8. **M8/M9 (complete interfaces):** add descendants and equations coefficientwise, then package generating functions.
-9. **M10 (complete abstract boundary):** define only the abstract realization interface unless mathlib's geometric foundations change substantially.
+8. **M8/M9 (complete axiomatic layer):** descendant families, rational-tail comparison data, stable/full generating functions, and global correlator equations are implemented as explicit optional packages.
+9. **M10 (carrier only):** retain the algebraic output carrier while recording that a realization theorem requires external geometric foundations.

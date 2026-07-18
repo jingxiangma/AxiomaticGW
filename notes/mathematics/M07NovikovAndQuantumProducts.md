@@ -50,12 +50,16 @@ $$
 \left\langle a,b,c\right\rangle_{0,3,\beta}.
 $$
 
-The separating gluing relation for four-point invariants proves associativity. Under the degree-zero normalization,
+The separating gluing relation for four-point invariants proves associativity. For a geometric GW theory equipped with the usual degree-zero mapping formula,
 
 $$
 a*_Q b\equiv a\smile b
 \pmod{Q^{\beta\ne0}}.
 $$
+
+The implemented abstract interface instead treats its beta-zero product as
+intrinsically extracted from the beta-zero three-point coefficient. It does
+not contain a separate cup product whose equality could be stated.
 
 ## 4. Big quantum product and WDVV
 
@@ -83,4 +87,4 @@ Descendant theory requires a second distinction, between cotangent lines on stab
 
 `NovikovSeries D R` is implemented as the full coefficient function type with finite-antidiagonal convolution. Its semiring, ring, and commutative-ring laws are proved by finite reindexing; monomial multiplication and the injective map from `AddMonoidAlgebra` are part of the public API. A `CurveClassGW` determines each fixed-beta three-point product coefficient. Separating gluing and `GenusZeroGeometry` now derive scalar coefficientwise WDVV and associativity of the small product directly, without an abstract product-family structure.
 
-`CurveClassGW.formalBigProduct` is the state-valued power series obtained from genus-zero primary invariants with three distinguished insertions. Its zero-background coefficient is proved to equal `smallProductCoefficient` when stable-curve integration on $\overline{\mathcal M}_{0,3}$ agrees with the scalar identification in `GenusZeroGeometry`. Associativity at a nonzero background is not asserted: it requires the higher-point genus-zero boundary relation that is deliberately deferred.
+`CurveClassGW.formalBigProduct` is the state-valued power series obtained from genus-zero primary invariants with three distinguished insertions. Relabelling proves that it is commutative. Its zero-background coefficient is proved to equal `smallProductCoefficient` when stable-curve integration on $\overline{\mathcal M}_{0,3}$ agrees with the scalar identification in `GenusZeroGeometry`. The construction uses the same primary invariant coefficients as the conventional third-derivative formula, but that derivative characterization is not yet a theorem. Associativity at a nonzero background is not asserted: it requires the higher-point genus-zero boundary relation that is deliberately deferred.

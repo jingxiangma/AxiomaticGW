@@ -13,8 +13,9 @@ public import AxiomaticGW.GW.QuantumProduct
 
 The genus-zero primary invariants define a state-valued formal series with
 three distinguished insertions. Its zero-background coefficient is the small
-quantum product. Associativity at nonzero background requires the higher-point
-genus-zero boundary relation and is deliberately not asserted here.
+quantum product. Relabelling proves commutativity coefficientwise.
+Associativity at nonzero background requires the higher-point genus-zero
+boundary relation and is deliberately not asserted here.
 -/
 
 @[expose] public section
@@ -74,6 +75,78 @@ theorem primaryThreePointSeriesCoefficient_apply
             (formalBigProduct_stable n) beta
             (Sum.elim a (InsertionLabel.primaryState b))) := rfl
 
+/-- The primary three-point series is invariant under permutations of its
+three distinguished insertions. Background insertions remain fixed. -/
+theorem primaryThreePointSeriesCoefficient_relabel
+    (Omega : CurveClassGW R V B D C) (I : StableCurveIntegration C)
+    (b : Basis ι R V) (n : ι →₀ ℕ) (beta : B)
+    (perm : Equiv.Perm (Fin 3)) :
+    (Omega.primaryThreePointSeriesCoefficient I b n beta).domDomCongr perm =
+      Omega.primaryThreePointSeriesCoefficient I b n beta := by
+  apply MultilinearMap.ext
+  intro a
+  let e : Fin 3 ⊕ InsertionLabel n ≃ Fin 3 ⊕ InsertionLabel n :=
+    Equiv.sumCongr perm (Equiv.refl (InsertionLabel n))
+  let fullInput : Fin 3 ⊕ InsertionLabel n → V :=
+    Sum.elim a (InsertionLabel.primaryState b)
+  have hinputs : Sum.elim (fun i ↦ a (perm i))
+      (InsertionLabel.primaryState b) = fullInput ∘ e := by
+    funext s
+    rcases s with s | s <;> rfl
+  have hrel := congrArg (fun f ↦ f fullInput)
+    (Omega.relabel 0 (Fin 3 ⊕ InsertionLabel n)
+      (Fin 3 ⊕ InsertionLabel n) (formalBigProduct_stable n)
+      (formalBigProduct_stable n) e beta)
+  change C.rename 0 (Fin 3 ⊕ InsertionLabel n)
+      (Fin 3 ⊕ InsertionLabel n) (formalBigProduct_stable n)
+      (formalBigProduct_stable n) e
+        (Omega.omega 0 (Fin 3 ⊕ InsertionLabel n)
+          (formalBigProduct_stable n) beta (fullInput ∘ e)) =
+    Omega.omega 0 (Fin 3 ⊕ InsertionLabel n)
+      (formalBigProduct_stable n) beta fullInput at hrel
+  simp only [MultilinearMap.domDomCongr_apply,
+    Omega.primaryThreePointSeriesCoefficient_apply]
+  rw [hinputs]
+  congr 1
+  calc
+    I.integrate 0 (Fin 3 ⊕ InsertionLabel n) (formalBigProduct_stable n)
+        (Omega.omega 0 (Fin 3 ⊕ InsertionLabel n)
+          (formalBigProduct_stable n) beta (fullInput ∘ e)) =
+      I.integrate 0 (Fin 3 ⊕ InsertionLabel n) (formalBigProduct_stable n)
+        (C.rename 0 (Fin 3 ⊕ InsertionLabel n)
+          (Fin 3 ⊕ InsertionLabel n) (formalBigProduct_stable n)
+          (formalBigProduct_stable n) e
+          (Omega.omega 0 (Fin 3 ⊕ InsertionLabel n)
+            (formalBigProduct_stable n) beta (fullInput ∘ e))) :=
+      (I.integrate_rename 0 (Fin 3 ⊕ InsertionLabel n)
+        (Fin 3 ⊕ InsertionLabel n) (formalBigProduct_stable n)
+        (formalBigProduct_stable n) e _).symm
+    _ = I.integrate 0 (Fin 3 ⊕ InsertionLabel n)
+        (formalBigProduct_stable n)
+        (Omega.omega 0 (Fin 3 ⊕ InsertionLabel n)
+          (formalBigProduct_stable n) beta fullInput) := by rw [hrel]
+
+/-- Symmetry of the first two distinguished inputs of the primary
+three-point series. -/
+theorem primaryThreePointSeriesCoefficient_swap_first
+    (Omega : CurveClassGW R V B D C) (I : StableCurveIntegration C)
+    (b : Basis ι R V) (n : ι →₀ ℕ) (beta : B) (x y z : V) :
+    Omega.primaryThreePointSeriesCoefficient I b n beta
+        (Fin.cons x (Fin.cons y fun _ ↦ z)) =
+      Omega.primaryThreePointSeriesCoefficient I b n beta
+        (Fin.cons y (Fin.cons x fun _ ↦ z)) := by
+  let a : Fin 3 → V := Fin.cons x (Fin.cons y fun _ ↦ z)
+  have h := congrArg (fun f ↦ f a)
+    (Omega.primaryThreePointSeriesCoefficient_relabel I b n beta
+      (Equiv.swap 0 1))
+  change Omega.primaryThreePointSeriesCoefficient I b n beta
+      (a ∘ Equiv.swap 0 1) =
+    Omega.primaryThreePointSeriesCoefficient I b n beta a at h
+  rw [← h]
+  congr 1
+  funext j
+  fin_cases j <;> rfl
+
 /-- Raise the third distinguished insertion using the target metric. -/
 noncomputable def formalBigProductCoefficient
     (Omega : CurveClassGW R V B D C) (I : StableCurveIntegration C)
@@ -111,6 +184,27 @@ theorem pairing_formalBigProductCoefficient
   rw [← Omega.pairing.toDual_apply]
   simp [formalBigProductCoefficient,
     SymmetricPerfectPairing.finTwoToBilin_apply]
+
+/-- Every coefficient of the formal big quantum product is commutative. -/
+theorem formalBigProductCoefficient_comm
+    (Omega : CurveClassGW R V B D C) (I : StableCurveIntegration C)
+    (b : Basis ι R V) (n : ι →₀ ℕ) (beta : B) (x y : V) :
+    Omega.formalBigProductCoefficient I b n beta x y =
+      Omega.formalBigProductCoefficient I b n beta y x := by
+  apply Omega.pairing.toDual.injective
+  ext z
+  simp only [Omega.pairing.toDual_apply,
+    Omega.pairing_formalBigProductCoefficient]
+  exact Omega.primaryThreePointSeriesCoefficient_swap_first
+    I b n beta x y z
+
+/-- The completed formal big quantum product is commutative. -/
+theorem formalBigProduct_comm
+    (Omega : CurveClassGW R V B D C) (I : StableCurveIntegration C)
+    (b : Basis ι R V) (x y : V) :
+    Omega.formalBigProduct I b x y = Omega.formalBigProduct I b y x := by
+  funext n beta
+  exact Omega.formalBigProductCoefficient_comm I b n beta x y
 
 private def zeroBackgroundEquiv :
     Fin 3 ⊕ InsertionLabel (0 : ι →₀ ℕ) ≃ Fin 3 where
