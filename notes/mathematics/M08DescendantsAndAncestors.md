@@ -53,7 +53,7 @@ $$
 
 The correction strata describe rational components that become unstable after forgetting the map. Iterating this identity expresses descendants in terms of ancestors and lower-complexity boundary contributions. In generating-function form the comparison is commonly organized by a fundamental solution, or $S$-operator, built from genus-zero two-point descendants.
 
-The formalization should therefore maintain distinct types or names for stable-map and stable-curve psi classes. Their comparison is a theorem derived from stabilization and boundary identities, never a definitional equality.
+The formalization therefore maintains distinct interfaces for stable-map and stable-curve psi classes. Their comparison is recorded through explicit residual and optional stabilization-boundary hypotheses, never a definitional equality.
 
 ## 4. Abstract descendant package
 
@@ -63,4 +63,4 @@ Once primary, ancestor, and descendant correlators are defined with suitable com
 
 ## 5. Implemented boundary
 
-`CurveClassGW.ancestorClass` uses stable-curve `PsiClasses`, while `StableMapDescendants.descendantClass` is a distinct stabilized stable-map family with zero-power, relabelling, total-degree, and negative-total-degree laws. `DescendantAncestorComparison` remains the weak residual API. The optional `StabilizationBoundaryComparison` strengthens it by expressing that residual as a finite sum over positive-degree rational-tail splittings, with the boundary pushforward, tail weights, and state-space tail operators visible as hypotheses. Those same tail operators define `TwoPointCalibration`; a separately named two-point boundary identity implies coefficientwise symplecticity. `GiventalComparison` exposes the additional genus-one factor and quantized partition identity rather than claiming they follow from a bare residual. Concrete stable-map geometry must still construct these packages. No definitional identification between the two cotangent-line theories is used.
+`GromovWittenTheory.ancestorClass` uses stable-curve `PsiClasses`, while `StableMapDescendants.descendantClass` is a distinct stabilized stable-map family with zero-power, relabelling, total-degree, and negative-total-degree laws. `DescendantAncestorComparison` remains the weak residual API. The optional `StabilizationBoundaryComparison` strengthens it by expressing that residual as a finite sum over positive-degree rational-tail splittings, with the boundary pushforward, tail weights, and state-space tail operators visible as hypotheses. Those same tail operators define `TwoPointCalibration`; a separately named two-point boundary identity implies coefficientwise symplecticity. `GiventalComparison` exposes the additional genus-one factor and quantized partition identity rather than claiming they follow from a bare residual. Concrete stable-map geometry must still construct these packages. No definitional identification between the two cotangent-line theories is used.

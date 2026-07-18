@@ -12,7 +12,7 @@ $$
 
 The word **full** means that the theory includes every stable genus, not only genus zero. The genus-zero theory is a restriction of this all-genus object.
 
-The basic CohFT does not require a grading on $V$. A later **graded CohFT** equips the same state space with a decomposition
+The basic CohFT does not require a grading on $V$. The **graded CohFT** extension equips the same state space with a decomposition
 
 $$
 V=\bigoplus_{p\geq 0}V^p,
@@ -73,7 +73,7 @@ Relabelling gives commutativity, the unit axiom makes $\mathbf 1$ the identity, 
 
 Projecting every class to cohomological degree zero gives a class valued in $H^0_{g,S}$. A `ConnectedDegreeZero` extension coherently identifies this module with $R$ for every stable pair. Under that explicit hypothesis, the projection gives the scalar-valued **topological part** of a CohFT, determined by the underlying Frobenius algebra. For actual stable-curve moduli spaces this extension expresses their usual connectedness property.
 
-Restricting to genus zero yields a genus-zero CohFT. Integrating its primary classes produces a formal potential whose boundary factorization gives WDVV and hence the formal big product. These are derived constructions, not replacements for the full all-genus definition.
+Restricting to genus zero yields a genus-zero CohFT and its ordinary Frobenius product. The curve-class-resolved GW layer later constructs a big quantum product from integrated primary invariants; commutativity and reduction at zero background are derived from the primitive axioms, while associativity at arbitrary background uses the optional higher boundary relation. These are derived constructions, not replacements for the full all-genus definition.
 
 Additional intersection-theoretic data are required before inserting tautological classes. See [M5: tautological classes and ancestors](M05TautologicalClassesAndAncestors.md).
 

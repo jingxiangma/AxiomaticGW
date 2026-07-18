@@ -24,11 +24,7 @@ $$
 
 The analogous expression with ancestor classes $\bar\psi$ defines the ancestor potential.
 
-This is the conventional full formula. In the current Lean construction,
-coefficients whose occurrence-label type is not a stable curve arity are set
-to zero. That stable-sector convention is narrower: for positive curve class,
-a stable-map invariant can exist even when the stabilized curve arity is
-unstable, so the omitted coefficients are not proved to vanish geometrically.
+This is the conventional full formula. The base Lean construction `descendantPotential` sets coefficients outside stable curve arities to zero. That stable-sector convention is narrower: for positive curve class, a stable-map invariant can exist even when the stabilized curve arity is unstable, so the omitted coefficients are not proved to vanish geometrically. The optional `UnstableDescendantConventions` supplies those numerical values explicitly, and `fullDescendantPotential` combines them with the stable invariants without asserting a geometric vanishing theorem.
 
 ## 2. Genus expansion
 
@@ -66,7 +62,7 @@ The remaining question is why geometric GW invariants satisfy these axioms. See 
 
 ## 6. Implemented boundary
 
-Formal descendant variables are represented by `MvPowerSeries`, with project-owned partial derivatives, their Leibniz and commutation laws, commuting iterated derivatives, stable-sector projection, and basis-direction insertion derivatives. `CurveClassGW.descendantPotential` and `ancestorPotential` construct stable-sector genus potentials coefficientwise from invariants using a canonical finite occurrence-label type and the reciprocal multiplicity factorial. `DescendantAncestorComparison.descendantPotential_eq_ancestor_add_boundary` lifts the recorded residual identity to these constructed series; despite the retained declaration name, it does not prove geometric boundary support.
+Formal descendant variables are represented by `MvPowerSeries`, with project-owned partial derivatives, their Leibniz and commutation laws, commuting iterated derivatives, stable-sector projection, and basis-direction insertion derivatives. `GromovWittenTheory.descendantPotential` and `ancestorPotential` construct stable-sector genus potentials coefficientwise from invariants using a canonical finite occurrence-label type and the reciprocal multiplicity factorial. `DescendantAncestorComparison.descendantPotential_eq_ancestor_add_boundary` lifts the recorded residual identity to these constructed series; despite the retained declaration name, it does not prove geometric boundary support.
 
 `GWPotentials` stores the resulting Novikov-valued genus potentials. `totalFreeEnergy` is an actual `LaurentSeries`, defined as $\hbar^{-1}$ times the corresponding power series, and its coefficient at $\hbar^{g-1}$ is proved to be the genus-$g$ potential. `DescendantStringDilatonLaws` records the stable equations, while `UnstableDescendantConventions` supplies only the missing numerical arities, including the genus-zero two-point metric term. Their combination gives `global_string`, `global_dilaton`, and `fullDescendantPotential`. These are correlator/coefficient equations; a packaged vector-field PDE syntax is not claimed. The unrestricted exponential $\exp(\mathcal F)$ remains outside the Laurent completion; `CompletedFockPotential` is instead a coefficientwise carrier used only with an explicit quantized action.
 

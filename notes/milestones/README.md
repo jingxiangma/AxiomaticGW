@@ -6,5 +6,6 @@ This folder tracks the implementation plan and its current status. Each mileston
 - [Roadmap to axiomatic Gromov--Witten theory](AxiomaticGWRoadmap.md)
 - [Mathematics-to-Lean map](../MathematicsToLean.md)
 - [Implementation progress and verification record](ImplementationProgress.md)
-- [Mathlib inventory for future milestones](MathlibInventory.md)
-- [CohFT design decisions before implementation](CohFTDesignDecisions.md)
+- [Mathlib dependency and project-ownership inventory](MathlibInventory.md)
+- [CohFT design-decision ledger](CohFTDesignDecisions.md)
+- [Mathematical terminology audit](TerminologyAudit.md)

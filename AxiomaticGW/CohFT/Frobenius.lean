@@ -38,7 +38,7 @@ noncomputable def threePoint (T : GenusZeroCohFT R V C)
     (T.omega (Fin 3) StableArity.zero_fin_three)
 
 /-- The scalar three-point correlator, curried into three linear inputs. -/
-noncomputable def threePointFunctional (T : GenusZeroCohFT R V C)
+noncomputable def threePointFunction (T : GenusZeroCohFT R V C)
     (G : GenusZeroGeometry C) : V →ₗ[R] V →ₗ[R] V →ₗ[R] R :=
   (LinearMap.compRight R
     (SymmetricPerfectPairing.finTwoToBilin (R := R) (V := V))).comp
@@ -47,11 +47,11 @@ noncomputable def threePointFunctional (T : GenusZeroCohFT R V C)
 
 /-- Evaluation of the curried scalar three-point correlator. -/
 @[simp]
-theorem threePointFunctional_apply (T : GenusZeroCohFT R V C)
+theorem threePointFunction_apply (T : GenusZeroCohFT R V C)
     (G : GenusZeroGeometry C) (x y z : V) :
-    T.threePointFunctional G x y z =
+    T.threePointFunction G x y z =
       T.threePoint G (Fin.cons x (Fin.cons y fun _ ↦ z)) := by
-  simp [threePointFunctional]
+  simp [threePointFunction]
 
 /-- The product obtained by raising the last index of the three-point
 correlator with the inverse metric. -/
@@ -68,9 +68,9 @@ noncomputable def product (T : GenusZeroCohFT R V C)
 correlator. -/
 theorem pairing_product (T : GenusZeroCohFT R V C)
     (G : GenusZeroGeometry C) (x y z : V) :
-    T.pairing.form (T.product G x y) z = T.threePointFunctional G x y z := by
+    T.pairing.form (T.product G x y) z = T.threePointFunction G x y z := by
   rw [← T.pairing.toDual_apply]
-  simp [product, threePointFunctional]
+  simp [product, threePointFunction]
 
 /-- The point identification of `Mbar(0,3)` is insensitive to relabelling. -/
 theorem _root_.AxiomaticGW.GenusZeroGeometry.mbarZeroThree_rename
@@ -106,13 +106,13 @@ theorem threePoint_relabel (T : GenusZeroCohFT R V C)
   exact (G.mbarZeroThree_rename e _).symm.trans (congrArg G.mbarZeroThree h)
 
 /-- Symmetry of the first two inputs of the three-point correlator. -/
-theorem threePointFunctional_swap_first (T : GenusZeroCohFT R V C)
+theorem threePointFunction_swap_first (T : GenusZeroCohFT R V C)
     (G : GenusZeroGeometry C) (x y z : V) :
-    T.threePointFunctional G x y z = T.threePointFunctional G y x z := by
+    T.threePointFunction G x y z = T.threePointFunction G y x z := by
   let a : Fin 3 → V := Fin.cons x (Fin.cons y fun _ ↦ z)
   have h := congrArg (fun f ↦ f a)
     (T.threePoint_relabel G (Equiv.swap 0 1))
-  rw [threePointFunctional_apply, threePointFunctional_apply]
+  rw [threePointFunction_apply, threePointFunction_apply]
   change (T.threePoint G) a =
     (T.threePoint G) (Fin.cons y (Fin.cons x fun _ ↦ z))
   change (T.threePoint G) (a ∘ Equiv.swap 0 1) = (T.threePoint G) a at h
@@ -122,13 +122,13 @@ theorem threePointFunctional_swap_first (T : GenusZeroCohFT R V C)
   fin_cases i <;> rfl
 
 /-- Symmetry of the last two inputs of the three-point correlator. -/
-theorem threePointFunctional_swap_last (T : GenusZeroCohFT R V C)
+theorem threePointFunction_swap_last (T : GenusZeroCohFT R V C)
     (G : GenusZeroGeometry C) (x y z : V) :
-    T.threePointFunctional G x y z = T.threePointFunctional G x z y := by
+    T.threePointFunction G x y z = T.threePointFunction G x z y := by
   let a : Fin 3 → V := Fin.cons x (Fin.cons y fun _ ↦ z)
   have h := congrArg (fun f ↦ f a)
     (T.threePoint_relabel G (Equiv.swap 1 2))
-  rw [threePointFunctional_apply, threePointFunctional_apply]
+  rw [threePointFunction_apply, threePointFunction_apply]
   change (T.threePoint G) a =
     (T.threePoint G) (Fin.cons x (Fin.cons z fun _ ↦ y))
   change (T.threePoint G) (a ∘ Equiv.swap 1 2) = (T.threePoint G) a at h
@@ -144,18 +144,18 @@ theorem product_comm (T : GenusZeroCohFT R V C)
   apply T.pairing.toDual.injective
   ext z
   simp only [T.pairing.toDual_apply, T.pairing_product]
-  exact T.threePointFunctional_swap_first G x y z
+  exact T.threePointFunction_swap_first G x y z
 
 /-- Inserting the CohFT unit into the first three-point slot recovers the
 metric. -/
-theorem threePointFunctional_unit (T : GenusZeroCohFT R V C)
+theorem threePointFunction_unit (T : GenusZeroCohFT R V C)
     (G : GenusZeroGeometry C) (x y : V) :
-    T.threePointFunctional G T.unit x y = T.pairing.form x y := by
+    T.threePointFunction G T.unit x y = T.pairing.form x y := by
   let a : Fin 3 → V := Fin.cons T.unit (Fin.cons x fun _ ↦ y)
   have h := congrArg (fun f ↦ f a)
     (T.relabel (Option (Fin 2)) (Fin 3) StableArity.zero_option_fin_two
       StableArity.zero_fin_three optionFinTwoEquivFinThree)
-  rw [threePointFunctional_apply]
+  rw [threePointFunction_apply]
   simp only [threePoint, LinearMap.compMultilinearMap_apply]
   change G.mbarZeroThree (T.omega (Fin 3) StableArity.zero_fin_three a) = _
   have hG := congrArg G.mbarZeroThree h
@@ -186,7 +186,7 @@ theorem unit_product (T : GenusZeroCohFT R V C)
   apply T.pairing.toDual.injective
   ext y
   rw [T.pairing.toDual_apply, T.pairing.toDual_apply, T.pairing_product]
-  exact T.threePointFunctional_unit G x y
+  exact T.threePointFunction_unit G x y
 
 /-- The CohFT unit is a right identity for the extracted product. -/
 theorem product_unit (T : GenusZeroCohFT R V C)
@@ -246,12 +246,12 @@ private theorem threePointScalar_omega_apply (T : GenusZeroCohFT R V C)
     threePointScalar G
         (T.omega (Option (Fin 2)) StableArity.zero_option_fin_two
           (fun | none => u | some i => ![x, y] i)) =
-      T.threePointFunctional G u x y := by
+      T.threePointFunction G u x y := by
   let a : Fin 3 → V := Fin.cons u (Fin.cons x fun _ ↦ y)
   have h := congrArg (fun f ↦ f a)
     (T.relabel (Option (Fin 2)) (Fin 3) StableArity.zero_option_fin_two
       StableArity.zero_fin_three optionFinTwoEquivFinThree)
-  rw [threePointFunctional_apply]
+  rw [threePointFunction_apply]
   simp only [threePointScalar, threePoint, AlgHom.comp_apply,
     LinearMap.compMultilinearMap_apply]
   change G.mbarZeroThree
@@ -336,11 +336,11 @@ private theorem scalarized_pairContract_products
     T.pairing.form (T.product G x y) u *
       T.pairing.form (T.product G z w) v
   rw [threePointScalar_omega_apply, threePointScalar_omega_apply]
-  rw [T.threePointFunctional_swap_first G u x y,
-    T.threePointFunctional_swap_last G x u y,
+  rw [T.threePointFunction_swap_first G u x y,
+    T.threePointFunction_swap_last G x u y,
     ← T.pairing_product]
-  rw [T.threePointFunctional_swap_first G v z w,
-    T.threePointFunctional_swap_last G z v w,
+  rw [T.threePointFunction_swap_first G v z w,
+    T.threePointFunction_swap_last G z v w,
     ← T.pairing_product]
 
 /-- Scalar WDVV in basis-free form. -/
@@ -381,8 +381,8 @@ theorem pairing_product_assoc (T : GenusZeroCohFT R V C)
   rw [T.pairing_product]
   rw [T.pairing.isSymm.eq]
   rw [T.pairing_product]
-  rw [T.threePointFunctional_swap_first G x y z]
-  exact T.threePointFunctional_swap_last G y x z
+  rw [T.threePointFunction_swap_first G x y z]
+  exact T.threePointFunction_swap_last G y x z
 
 /-- Associativity of the product extracted from the four-point boundary
 relation. -/
@@ -548,7 +548,7 @@ theorem toCommFrobeniusAlgebra_correlator_zero_fin_three
       (T.product G (FrobeniusCarrier.toStateSpace T G (a 0))
         (FrobeniusCarrier.toStateSpace T G (a 1)))
       (FrobeniusCarrier.toStateSpace T G (a 2)) = _
-  rw [T.pairing_product, T.threePointFunctional_apply]
+  rw [T.pairing_product, T.threePointFunction_apply]
   congr 1
   funext i
   fin_cases i <;> rfl

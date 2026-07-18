@@ -2,9 +2,9 @@
 
 Lean formalization of the algebraic foundations of axiomatic Gromov--Witten theory.
 
-The repository is the home of the full project, developed in verified layers. The Frobenius/TFT and full CohFT foundations are implemented, as are the axiomatic GW interfaces for tautological ancestors, positive effective curve classes, beta-resolved primary classes, Novikov coefficients, quantum-product laws, stable-map descendants, a descendant--ancestor residual decomposition, stable-sector formal potentials, Laurent total free energies, and an algebraic output carrier for future virtual geometry.
+The repository is the home of the full project, developed in verified layers. The Frobenius/TFT and full CohFT foundations are implemented, as are the axiomatic GW interfaces for tautological ancestors, positive effective curve classes, beta-resolved primary classes, Novikov coefficients, small and big quantum products, stable graphs, stable-map descendants, rational-tail descendant--ancestor comparison data, stable and explicitly extended descendant potentials, Laurent total free energies, and an algebraic output carrier for future virtual geometry.
 
-> **Project status:** active, research-stage development. The axiomatic interfaces compile without `sorry` or `admit`. Optional packages now expose stable-graph pullbacks, higher-background WDVV and formal big-product associativity, rational-tail descendant--ancestor factorization with its two-point calibration, and explicit unstable conventions with global string/dilaton laws. These packages state their independent geometric inputs explicitly; concrete stable-map moduli, virtual classes, and proofs that geometric theories instantiate them remain future work.
+> **Project status:** active, research-stage development. The axiomatic interfaces compile without `sorry` or `admit`. Optional packages now expose stable-graph pullbacks, arbitrary-background genus-zero WDVV and big-quantum-product associativity, rational-tail descendant--ancestor factorization with its two-point calibration, and explicit unstable conventions with global string/dilaton laws. These packages state their independent geometric inputs explicitly; concrete stable-map moduli, virtual classes, and proofs that geometric theories instantiate them remain future work.
 
 > **Scope:** Stable-curve targets are abstract even graded cohomology algebras and are not assumed finite free. Novikov completion is therefore coefficientwise for cohomology-valued classes; numerical coefficients and the finite-free state space carry the completed convolution operations.
 
@@ -103,10 +103,9 @@ AxiomaticGW/
 
   GW/
     Basic.lean                 # beta-resolved, full all-genus primary theory
-    QuantumProduct.lean        # derived small WDVV and associativity
+    SmallQuantumProduct.lean   # derived small WDVV and associativity
     Constant.lean              # beta-zero reference model
-    FormalQuantumProduct.lean  # commutative formal big product and small specialization
-    BigQuantumProduct.lean     # higher WDVV and formal associativity
+    BigQuantumProduct.lean     # big product, genus-zero WDVV, and primary potential
     Descendants/
       Basic.lean               # stable-map descendant classes
       Comparison.lean          # descendant--ancestor residual decomposition
@@ -115,7 +114,7 @@ AxiomaticGW/
       Potentials.lean          # invariant-defined descendant/ancestor series
       FullPotential.lean       # unstable conventions and global equations
 
-  Point/
+  PointTarget/
     Descendants.lean           # stable-curve intersections and DVV hypothesis
 
   Geometry/
@@ -132,7 +131,8 @@ perfect duality and contractions
   -> full all-genus CohFT
   -> beta-resolved all-genus primary GW theory
   -> Novikov coefficients and quantum-product WDVV
-  -> descendants, ancestors, residual identities, and total free energies
+  -> descendants, ancestors, rational-tail comparison, and total free energies
+  -> stable graphs, arbitrary-background WDVV, and explicit unstable extensions
   -> algebraic output carrier for future virtual stable-map geometry
 ```
 
@@ -155,13 +155,13 @@ finite-labelled multiplication
   -> all-genus Frobenius correlators
   -> basis-free named-slot contraction
   -> separating and nonseparating sewing
-  -> bundled topological correlator theory
+  -> bundled two-dimensional TFT
   -> stable scalar-valued topological CohFT
   -> recovery of the counit and three-point product
   -> full stable-arity Frobenius classification.
 ```
 
-The geometric oriented bordism category is not formalized: `TopologicalCorrelatorTheory` is its algebraic correlator presentation. `TopologicalCohFT` remains the scalar-valued degree-zero theory, while `CohFT` is valued in an abstract `StableCurveCohomology`. The constant target connects the two interfaces and serves as their regression model. For a general CohFT, `ConnectedDegreeZero` produces its topological part, while `GenusZeroGeometry` supplies the low-genus facts used for Frobenius extraction and WDVV.
+The geometric oriented bordism category is not formalized: `TwoDimensionalTFT` is its algebraic correlator presentation. `TopologicalCohFT` remains the scalar-valued degree-zero theory, while `CohFT` is valued in an abstract `StableCurveCohomology`. The constant target connects the two interfaces and serves as their regression model. For a general CohFT, `ConnectedDegreeZero` produces its topological part, while `GenusZeroGeometry` supplies the low-genus facts used for Frobenius extraction and WDVV.
 
 ## Notes
 
@@ -173,6 +173,7 @@ The geometric oriented bordism category is not formalized: `TopologicalCorrelato
 - [Mathematics notes for M1--M10](notes/mathematics/README.md)
 - [Roadmap to axiomatic Gromov--Witten theory](notes/milestones/AxiomaticGWRoadmap.md)
 - [Completed topological field theory milestones](notes/milestones/TopologicalTFTMilestones.md)
+- [Mathematical terminology audit](notes/milestones/TerminologyAudit.md)
 
 Build the project with:
 

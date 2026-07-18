@@ -1,6 +1,6 @@
 # Completed milestone: from Frobenius algebras to topological field theory
 
-This note records the next formalization phase after the completed commutative Frobenius-algebra and coalgebra layer. The first target is the algebraic correlator model of a closed oriented two-dimensional topological field theory. The geometric bordism category will not be formalized at this stage.
+This note records the completed formalization phase after the commutative Frobenius-algebra and coalgebra layer. The milestone specifications below retain their implementation-order wording as a historical record; the status table states the delivered result. The target is the algebraic correlator model of a closed oriented two-dimensional topological field theory. The geometric bordism category is not formalized.
 
 For the underlying definitions and mathematical explanations, see [M1: perfect pairings and Frobenius algebras](../mathematics/M01PerfectPairingsAndFrobeniusAlgebras.md) and [M2: two-dimensional topological field theory](../mathematics/M02TwoDimensionalTFT.md).
 
@@ -27,7 +27,7 @@ where $g\in\mathbb N$ and $S$ is an arbitrary finite label type. The use of fini
 | T6 | Complete | The abstract metric contraction and Frobenius sewing identities compile without choosing a basis. |
 | T7 | Complete | Nonseparating contraction of a correlator is proved to add one handle. |
 | T8 | Complete | Separating contraction of two correlators is proved to give the correlator of the glued component. |
-| T9 | Complete | `TopologicalCorrelatorTheory` and `CommFrobeniusAlgebra.toTopologicalCorrelatorTheory` compile. |
+| T9 | Complete | `TwoDimensionalTFT` and `CommFrobeniusAlgebra.toTwoDimensionalTFT` compile. |
 | T10 | Complete | Base-ring and product-algebra correlators and API regression tests compile. |
 | T11 | Complete | Stable arities, `TopologicalCohFT`, and the stable restriction of a correlator theory compile. |
 | T12 | Complete for the current fixed-algebra API | The counit and three-point product are extracted, the forward theory recovers the original multiplication, and the Frobenius round trip is proved. A classification on a bare module requires separately bundling the extracted ring structure. |
@@ -36,7 +36,7 @@ The status table is updated only after the corresponding Lean declarations compi
 
 ## T0. Fix the scope and conventions
 
-The initial theory will use scalar-valued correlators for every genus and every finite label type, including unstable arities. A later topological CohFT interface will restrict these correlators to stable pairs.
+The implemented theory uses scalar-valued correlators for every genus and every finite label type, including unstable arities. `TopologicalCohFT` restricts these correlators to stable pairs.
 
 Before bundling a theory, record the conventions for tensor orientation, distinguished gluing labels, and relabelling. The initial implementation should not claim that the oriented bordism category has been formalized.
 
@@ -155,21 +155,21 @@ The proof should combine the sewing identity with $E^{g_1}E^{g_2}=E^{g_1+g_2}$.
 
 **Completion criterion:** Gluing two connected surfaces agrees with the correlator assigned to the glued surface.
 
-## T9. Bundle the correlator theory
+## T9. Bundle the two-dimensional TFT
 
-Create `AxiomaticGW/TFT/Basic.lean` and `AxiomaticGW/TFT/Frobenius.lean`. Initially use a name such as `TopologicalCorrelatorTheory` so the code does not imply that a geometric bordism category has already been constructed.
+Create `AxiomaticGW/TFT/Basic.lean` and `AxiomaticGW/TFT/Frobenius.lean`. The canonical `TwoDimensionalTFT` name follows the mathematical literature; its docstring identifies the implemented object as the correlator presentation and does not claim that the bordism category or symmetric monoidal functor has been constructed.
 
 The bundled data should include the state space, symmetric perfect pairing, finite-labelled correlators, relabelling, unit insertion, separating gluing, nonseparating gluing, and normalization at genus zero with two inputs.
 
 Construct
 
 ```lean
-CommFrobeniusAlgebra.toTopologicalCorrelatorTheory
+CommFrobeniusAlgebra.toTwoDimensionalTFT
 ```
 
 from every finite-free commutative Frobenius algebra.
 
-**Completion criterion:** Every current `CommFrobeniusAlgebra` canonically produces the bundled correlator theory.
+**Completion criterion:** Every current `CommFrobeniusAlgebra` canonically produces the bundled two-dimensional TFT.
 
 ## T10. Examples and regression tests
 
@@ -185,7 +185,7 @@ For the product algebra $R\times R$, compute the correlators using the two coord
 
 ## T11. Restrict to a topological CohFT
 
-After the correlator theory is stable, create `AxiomaticGW/Combinatorics/StableArity.lean` and `AxiomaticGW/CohFT/Topological.lean`.
+After the two-dimensional TFT is stable, create `AxiomaticGW/Combinatorics/StableArity.lean` and `AxiomaticGW/CohFT/Topological.lean`.
 
 Represent the stability condition without natural-number subtraction, for example by
 
@@ -199,14 +199,14 @@ Restrict the correlators to stable arities and interpret their scalar values as 
 
 ## T12. Reverse construction and classification
 
-This is a later milestone rather than a prerequisite for the forward construction. Recover the counit from $\omega_{0,1}$, the pairing from $\omega_{0,2}$, and multiplication from $\omega_{0,3}$. Then prove commutativity, associativity, the unit law, invariance, and both round-trip theorems.
+This was implemented after the forward construction rather than as its prerequisite. It recovers the counit from $\omega_{0,1}$, the pairing from $\omega_{0,2}$, and multiplication from $\omega_{0,3}$, then proves the applicable round-trip theorems in the fixed-algebra API.
 
 The intended classification result is
 
 $$
 \text{commutative Frobenius algebras}
 \simeq
-\text{topological correlator theories}.
+\text{two-dimensional TFTs}.
 $$
 
 ### Implemented boundary
@@ -215,7 +215,7 @@ The current repository represents `CommFrobeniusAlgebra R A` on a carrier `A` th
 
 A literal equivalence starting from a bare module would also have to install the extracted multiplication and unit as new `CommRing` and `Algebra` instances and prove that those instances use the module's existing addition and scalar action. That is a larger bundled-algebra refactor and is recorded as a later foundational extension rather than being hidden inside the correlator milestone.
 
-## Immediate implementation order
+## Historical implementation order
 
 ```text
 T1 finite products
@@ -228,4 +228,4 @@ T1 finite products
   -> T10 examples
 ```
 
-The smallest useful next commit is T1 alone: finite-labelled multilinear multiplication together with its relabelling, empty-label, disjoint-union, and unit-insertion lemmas.
+This order was completed through T12. Current project priorities are recorded in [`ImplementationProgress.md`](ImplementationProgress.md), not in this historical milestone sequence.

@@ -37,7 +37,7 @@ structure DescendantStringDilatonLaws
     {R V B : Type u} [CommRing R] [Algebra ℚ R]
     [AddCommGroup V] [Module R V] [Module.Free R V] [Module.Finite R V]
     [AddCancelCommMonoid B] {D : EffectiveCurveMonoid B}
-    {C : StableCurveCohomology R} {Omega : CurveClassGW R V B D C}
+    {C : StableCurveCohomology R} {Omega : GromovWittenTheory R V B D C}
     (M : StableMapDescendants Omega) (I : StableCurveIntegration C) where
   /-- Stable string equation. -/
   string : ∀ (g : ℕ) (S : Type) [Fintype S] [DecidableEq S]
@@ -63,7 +63,7 @@ structure DescendantDivisorLaw
     {R V B : Type u} [CommRing R] [Algebra ℚ R]
     [AddCommGroup V] [Module R V] [Module.Free R V] [Module.Finite R V]
     [AddCancelCommMonoid B] {D : EffectiveCurveMonoid B}
-    {C : StableCurveCohomology R} {Omega : CurveClassGW R V B D C}
+    {C : StableCurveCohomology R} {Omega : GromovWittenTheory R V B D C}
     (M : StableMapDescendants Omega) (I : StableCurveIntegration C)
     {F : ForgetfulPushforward C I} (A : GWDivisorAxiom Omega F) where
   /-- Cup product by a divisor state, linear in both the divisor and the state. -/
@@ -86,7 +86,7 @@ structure DescendantEquationLaws
     {R V B : Type u} [CommRing R] [Algebra ℚ R]
     [AddCommGroup V] [Module R V] [Module.Free R V] [Module.Finite R V]
     [AddCancelCommMonoid B] {D : EffectiveCurveMonoid B}
-    {C : StableCurveCohomology R} {Omega : CurveClassGW R V B D C}
+    {C : StableCurveCohomology R} {Omega : GromovWittenTheory R V B D C}
     (M : StableMapDescendants Omega) (I : StableCurveIntegration C)
     {F : ForgetfulPushforward C I} (A : GWDivisorAxiom Omega F) extends
       DescendantStringDilatonLaws M I, DescendantDivisorLaw M I A

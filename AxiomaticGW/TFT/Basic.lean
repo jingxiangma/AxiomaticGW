@@ -8,13 +8,12 @@ module
 public import AxiomaticGW.Linear.Contraction
 
 /-!
-# Topological correlator theories
+# Two-dimensional topological field theories
 
-`TopologicalCorrelatorTheory` is the algebraic correlator presentation of a
-closed oriented two-dimensional topological field theory. It records
-finite-labelled scalar correlators, their unit, and their one-edge sewing
-laws. It does not claim that a geometric bordism category has been
-formalized.
+`TwoDimensionalTFT` is the finite-labelled correlator presentation of a closed
+oriented two-dimensional topological field theory. It records scalar
+correlators, their unit, and their one-edge sewing laws. The equivalent
+symmetric-monoidal-functor presentation is not constructed here.
 
 Correlators are provided for all genera and all finite label types, including
 unstable arities. This makes the counit, metric, and multiplication visible as
@@ -25,9 +24,9 @@ low-arity operations and permits a later restriction to stable CohFT arities.
 
 namespace AxiomaticGW
 
-/-- A finite-labelled scalar correlator theory satisfying the algebraic unit,
-normalization, and one-edge sewing laws of a closed oriented 2D TFT. -/
-structure TopologicalCorrelatorTheory (R V : Type*) [CommRing R]
+/-- A closed oriented two-dimensional TFT in its finite-labelled correlator
+presentation. -/
+structure TwoDimensionalTFT (R V : Type*) [CommRing R]
     [AddCommGroup V] [Module R V] [Module.Free R V] [Module.Finite R V] where
   /-- The metric used to contract the two half-edges of a node. -/
   pairing : SymmetricPerfectPairing R V
@@ -56,22 +55,22 @@ structure TopologicalCorrelatorTheory (R V : Type*) [CommRing R]
   normalization : ∀ a : Fin 2 → V,
     correlator 0 (Fin 2) a = pairing.form (a 0) (a 1)
 
-namespace TopologicalCorrelatorTheory
+namespace TwoDimensionalTFT
 
 variable {R V : Type*} [CommRing R] [AddCommGroup V] [Module R V]
   [Module.Free R V] [Module.Finite R V]
 
 /-- The genus-zero one-input correlator of a theory, used below as its
 candidate Frobenius counit. -/
-noncomputable def counit (T : TopologicalCorrelatorTheory R V) : V →ₗ[R] R :=
+noncomputable def counit (T : TwoDimensionalTFT R V) : V →ₗ[R] R :=
   SymmetricPerfectPairing.finOneToLinear (T.correlator 0 (Fin 1))
 
 /-- Evaluation of the counit extracted from the one-input correlator. -/
 @[simp]
-theorem counit_apply (T : TopologicalCorrelatorTheory R V) (x : V) :
+theorem counit_apply (T : TwoDimensionalTFT R V) (x : V) :
     T.counit x = T.correlator 0 (Fin 1) (fun _ ↦ x) := by
   exact SymmetricPerfectPairing.finOneToLinear_apply _ _
 
-end TopologicalCorrelatorTheory
+end TwoDimensionalTFT
 
 end AxiomaticGW

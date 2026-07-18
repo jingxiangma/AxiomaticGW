@@ -21,3 +21,4 @@ The [`milestones`](milestones/) folder contains implementation roadmaps, complet
 - [Topological field theory milestones](milestones/TopologicalTFTMilestones.md)
 - [Roadmap to axiomatic Gromov--Witten theory](milestones/AxiomaticGWRoadmap.md)
 - [Implementation progress and verification record](milestones/ImplementationProgress.md)
+- [Mathematical terminology audit](milestones/TerminologyAudit.md)

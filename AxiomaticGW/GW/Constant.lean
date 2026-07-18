@@ -52,7 +52,7 @@ theorem atZero_of_ne {R V H : Type*} [CommRing R]
 
 end EffectiveCurveMonoid
 
-namespace constantCurveClassGW
+namespace constantGromovWittenTheory
 
 variable (R : Type u) [CommRing R] [Algebra ℚ R]
   {B : Type u} [AddCancelCommMonoid B]
@@ -86,7 +86,7 @@ noncomputable def gradedState :
 
 /-- The constant primary GW theory is supported only at beta zero. -/
 noncomputable def theory (D : EffectiveCurveMonoid B) :
-    CurveClassGW R R B D (constantStableCurveCohomology R) where
+    GromovWittenTheory R R B D (constantStableCurveCohomology R) where
   pairing := (cohft R).pairing
   unit := (cohft R).unit
   graded := gradedState R
@@ -221,6 +221,6 @@ theorem theory_omega_zero (D : EffectiveCurveMonoid B)
     (theory R D).omega g S h 0 = (cohft R).omega g S h := by
   simp [theory]
 
-end constantCurveClassGW
+end constantGromovWittenTheory
 
 end AxiomaticGW

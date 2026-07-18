@@ -1,6 +1,6 @@
-# Mathlib inventory for future milestones
+# Mathlib dependency and project-ownership inventory
 
-This note records which parts of M3--M10 are supplied by the pinned mathlib dependency and which parts belong to this project. It was checked against the source tree for mathlib `v4.32.0`, the revision in `lakefile.toml`, on 2026-07-16. The “must be built here” column is an ownership statement, not a current-status statement; the roadmap and mathematics-to-Lean map record which items have since been implemented.
+This note records which parts of M3--M10 are supplied by the pinned mathlib dependency and which parts belong to this project. It was checked against the source tree for mathlib `v4.32.0`, the revision in `lakefile.toml`, on 2026-07-16, and synchronized with the project implementation through commit `9a3d625` on 2026-07-18. The “must be built here” column is an ownership statement, not a current-status statement; each milestone section below distinguishes implemented project APIs from remaining gaps.
 
 The distinction matters: a nearby general-purpose definition is not counted as an implementation of a GW-theoretic object. In particular, mathlib contains schemes, algebraic cycles, formal series, and graphs, but no stable-curve moduli spaces, CohFTs, or Gromov--Witten invariants.
 
@@ -17,14 +17,14 @@ The distinction matters: a nearby general-purpose definition is not counted as a
 | M9 potentials | `PowerSeries`, `MvPowerSeries`, `LaurentSeries`, Hahn-series summability tools, factorials, exponentials, renaming and substitution | Multivariable formal partial derivatives, the mixed completion in all variables, genus/marking bookkeeping, equations, and a completion large enough for `exp(F)` when `F` starts with `hbar^-1` |
 | M10 realization | Schemes and many morphism properties; fiber products; a basic `AlgebraicCycle` with quasicompact pushforward | Moduli stacks of curves/maps, Chow or suitable cohomology, rational equivalence, products and Gysin maps, Chern classes, perfect obstruction theories and virtual classes; initially, only an abstract virtual-GW interface should be attempted |
 
-The realistic conclusion is that mathlib supplies most of the algebraic language but almost none of the GW-specific structures or geometric theorems. M3--M9 remain feasible as an axiomatic development. A first-principles M10 is a separate large formalization project.
+The realistic conclusion is that mathlib supplies most of the algebraic language but almost none of the GW-specific structures or geometric theorems. The repository now implements the stated axiomatic layers through M9, with explicit optional hypotheses where geometry is independent input. A first-principles M10 remains a separate large formalization project.
 
 ## Cross-cutting mathlib infrastructure
 
 The following APIs are suitable foundations and should not be reimplemented.
 
 - Finite labels: `Fintype`, `Finite`, `Equiv`, `Option`, `Sum`, `Finset`, and cardinality lemmas. The project already wraps the numerical stability condition in `AxiomaticGW.StableArity`.
-- Multilinear algebra: `MultilinearMap`, `domDomCongr`, currying, coproducts of domains, `TensorProduct`, and `LinearMap`. The existing project contraction API specializes these tools to scalar-valued correlators.
+- Multilinear algebra: `MultilinearMap`, `domDomCongr`, currying, coproducts of domains, `TensorProduct`, and `LinearMap`. The project contraction API specializes these tools to scalar- and target-valued correlators, including tensor-valued separating contraction.
 - Internal gradings: `GradedRing`, `GradedAlgebra`, `DirectSum.Decomposition`, and `GradedAlgebra.proj` in `Mathlib.RingTheory.GradedAlgebra.Basic`.
 - Tensor symmetry: ordinary `TensorProduct.comm` is sufficient for the chosen even-cohomology theory. Mathlib also has `TensorProduct.gradedComm`, but the project's CohFT interfaces do not need Koszul signs.
 - Curve-class algebra: `AddMonoidAlgebra B R`/`MonoidAlgebra`, `Finsupp`, and `Finset.HasAntidiagonal`. The last is exactly the extra finiteness data needed to turn all decompositions `b1 + b2 = b` into a `Finset`.
@@ -54,18 +54,18 @@ With this convention `psi` and divisor classes have degree one, multiplication a
 - Tensor products, direct sums, internal gradings, and ordinary tensor symmetry.
 - A general multigraph carrier supporting loops and parallel edges.
 
-### Required implementation
+### Project implementation and remaining gap
 
-The first deliverable should be an abstract `StableCurveCohomology`-style record, not a construction of moduli spaces. It needs:
+The project implements an abstract `StableCurveCohomology` record rather than constructing moduli spaces. The core supplies:
 
 - a target `H g S` for every stable finite-labelled arity;
 - an ordinary commutative algebra graded by half cohomological degree;
 - relabelling, forgetful, separating-gluing, and nonseparating-gluing pullbacks;
 - an external product or an equivalent bilinear map into the separating boundary target;
-- functoriality, identity, naturality, forget/glue compatibility, and commutation of disjoint gluings;
-- explicit low-moduli-space input: the point-like behavior of `Mbar(0,3)` and the equality/boundary relation on `Mbar(0,4)` needed later.
+- functoriality, identity, naturality, the immediate forget/glue compatibility laws, and node/component symmetries;
+- optional low-moduli-space input through `GenusZeroGeometry`, containing the point-like behavior of `Mbar(0,3)` and the boundary relation on `Mbar(0,4)`.
 
-Stable graphs should be a second layer. `Graph V E` may be reused for internal edges, but the project must add finite legs/half-edges, leg labels, vertex genera, vertex stability, total genus, contraction, and independence of edge contraction order. A purpose-built finite half-edge record may be easier than forcing all decorations through the general embedded-set graph API.
+The separate `StableGraph` layer uses a purpose-built finite edge type with two branches. It implements labelled legs, vertex genera, vertex stability, relabelling, loop-aware valence, total genus, complete edge orders, and the optional `StableGraphPullbacks` package. Complete orders are permutation-equivalent, and the package yields a canonical order-independent pullback; the constant target supplies a concrete instance. Actual combinatorial edge contraction and a derivation of graph coherence solely from the primitive `StableCurveCohomology` laws are not implemented.
 
 ## M4. Full unital CohFT
 
@@ -73,16 +73,15 @@ Stable graphs should be a second layer. `Graph V E` may be reused for internal e
 
 - `SymmetricPerfectPairing`, its canonical copairing, and finite-free module assumptions.
 - `MultilinearMap` and the project's finite-label relabelling conventions.
-- `selfContract` and `pairContract` for scalar-valued maps.
+- `selfContract` and `pairContract` for scalar-valued maps, together with target-generic and tensor-valued variants.
 - `TopologicalCohFT`, which is a useful degree-zero test case for the new API.
 
-### Required implementation
+### Project implementation
 
-- Generalize contraction from codomain `R` to a target module/algebra `H`. Separating contraction must combine two cohomology-valued maps using the external product before contracting the two state-space inputs.
-- Define the full cohomology-valued CohFT record over the M3 system, including relabelling, flat unit, normalization, and both gluing axioms.
-- Define restriction to genus zero and projection to degree zero.
-- Extract the three-point product. Proving its laws is not purely multilinear algebra: commutativity uses relabelling, the unit uses the forgetful axiom, and associativity/WDVV needs the M3 `Mbar(0,4)` relation.
-- Prove that the degree-zero theory agrees with the existing topological CohFT only under an explicit connectedness/degree-zero-target hypothesis.
+- Target-generic contraction and tensor-valued separating contraction combine cohomology-valued maps before contracting node inputs.
+- `CohFT` records relabelling, flat unit, normalization, and both gluing axioms over `StableCurveCohomology`.
+- Genus-zero restriction, degree-zero projection, Frobenius extraction, WDVV, and associativity are derived.
+- `ConnectedDegreeZero` makes the connectedness hypothesis for scalar topological truncation explicit, and the classification theorem recovers every stable topological correlator.
 
 There is no mathlib CohFT definition to adapt.
 
@@ -92,18 +91,18 @@ There is no mathlib CohFT definition to adapt.
 
 Ordinary ring powers, graded components, linear maps, tensor products, and finite sums are ready. The new `AlgebraicCycle` API is relevant only to a much later scheme-level realization: it is not a Chow ring and does not supply the operations needed here.
 
-### Required implementation
+### Project implementation and remaining gap
 
-Extend M3 with an abstract bivariant/intersection package containing:
+The implemented abstract intersection layer contains:
 
-- pullback, degree-shifting proper pushforward, external products, and integration;
-- functoriality, projection formula, the required base-change identities, and compatibility with gluing;
-- marked classes `psi`, rational-tail boundary classes and their forgetful correction formula;
-- `kappa` (possibly defined through pushforward), Hodge/`lambda` classes, and boundary-stratum classes;
+- stable-curve pullbacks, degree-shifting forgetful pushforward, and top-degree integration;
+- relabelling naturality, degree laws, degree-zero vanishing, and the projection formula;
+- marked classes `psi`, rational-tail boundary classes, and their forgetful correction formula;
+- `kappa`, defined through pushforward, with degree and naturality theorems;
 - dimension/top-degree vanishing sufficient to define numerical integrals;
 - ancestor correlators and their symmetry/degree rules.
 
-Mathlib `v4.32.0` has no general Chow ring, rational equivalence, cup/cap product package for these moduli spaces, Chern-class package applicable here, or integration theorem. These should be fields and laws of the abstract M5 interface rather than blocked on geometric foundations.
+General pushforward composition and base change, Hodge/`lambda` classes, and decorated boundary-stratum classes remain absent because no current theorem consumes them. Mathlib `v4.32.0` has no general Chow ring, rational equivalence, cup/cap product package for these moduli spaces, applicable Chern-class package, or integration theorem.
 
 ## M6. Curve-class-resolved GW axioms
 
@@ -114,16 +113,12 @@ Mathlib `v4.32.0` has no general Chow ring, rational equivalence, cup/cap produc
 - `Finset.HasAntidiagonal B`, whose membership theorem identifies its entries with the splittings `b1 + b2 = b`.
 - General grading and degree arithmetic.
 
-### Required implementation
+### Project implementation
 
-- A coefficientwise class `omega g S beta` extending M4.
-- A stated finiteness hypothesis for separating sums. Prefer `[Finset.HasAntidiagonal B]` in the first algebraic API, or store finite splitting data explicitly. An arbitrary commutative monoid is not enough.
-- Curve-class-resolved separating and nonseparating axioms.
-- A grading convention for the state space and target, plus a checked virtual dimension/degree formula.
-- The Chern-number/energy homomorphism on curve classes and the divisor--curve pairing as additional data.
-- Flat unit, divisor pushforward, effectivity (if indexing a group), and separate genus-zero and higher-genus degree-zero normalizations.
-
-The M6 implementation now supplies `GradedStateSpace` and reuses it in both `GradedCohFT` and `CurveClassGW`.
+- `GromovWittenTheory` supplies coefficientwise classes `omega g S beta`, curve-class-resolved gluing, flat unit, normalization, and virtual-degree laws.
+- `EffectiveCurveMonoid` stores positive locally finite energy data and derives finite splitting sets and a finite-antidiagonal interface.
+- `GradedStateSpace` is reused by `GradedCohFT` and `GromovWittenTheory`; `c1Degree` records the Chern-number homomorphism.
+- `GWDivisorAxiom` separately supplies divisor--curve pairing and forgetful pushforward because those are not consequences of the primary theory.
 
 ## M7. Novikov coefficients and quantum products
 
@@ -134,39 +129,29 @@ The M6 implementation now supplies `GradedStateSpace` and reuses it in both `Gra
 - Coefficient maps, monomials, finite-support embeddings, and summable-family tools exist for Hahn series.
 - `PowerSeries` and `MvPowerSeries` can handle later formal insertions after a coefficient ring has been fixed.
 
-### Required implementation and settled choice
+### Project implementation and remaining gap
 
 Decision D13 fixes a positive locally finite cancellative effective monoid `B` with additive energy in `ℕ`. The final coefficient type is the beta-preserving completed monoid ring of coefficient functions `B → R`, whose convolution is finite because bounded-energy sets and hence fixed antidiagonals are finite. `AddMonoidAlgebra B R` remains the finite-support subring and a useful regression backend. `HahnSeries` is not used because it would add a noncanonical order and PWO support obligations that the energy hypothesis makes unnecessary.
 
-Beyond the coefficient ring, build:
+The project-owned objectives beyond the coefficient ring and their current boundaries are:
 
-- monomial and coefficient lemmas matching curve-class splitting;
-- scalar extension of the state space, metric, cohomology targets, and multilinear classes;
-- the theorem turning coefficientwise gluing into ordinary completed gluing;
-- small and big quantum products and associativity/WDVV;
-- the classical-limit theorem at curve class zero.
+- monomial and coefficient lemmas matching curve-class splitting, implemented for `NovikovSeries` and the quantum-product coefficients;
+- completed scalar and state-valued series where coefficientwise convolution is canonical, without claiming that arbitrary cohomology targets are algebraic scalar extensions;
+- small-product WDVV and associativity derived from primitive coefficientwise gluing;
+- the commutative big quantum product, its zero-background reduction, and associativity from optional genus-zero WDVV at arbitrary primary background;
+- the still-open identification with an independently supplied classical cup product and the primary-potential third-derivative theorem.
 
-The current implementation completes the coefficient ring and derives the
-small product laws coefficientwise. It defines its beta-zero product
-internally; an equality with an independently supplied classical cup product
-is still outside the present data.
+The current implementation completes the coefficient ring and derives the small quantum product laws coefficientwise. `bigQuantumProduct` is commutative and specializes to the small quantum product at zero background. The optional `GenusZeroWDVV` states scalar genus-zero WDVV at arbitrary primary background and yields coefficientwise associativity; `primaryPotential` supplies the stable primary coefficients. Its full third-derivative characterization and an equality with an independently supplied classical cup product remain outside the present data.
 
 ## M8. Descendants and ancestor comparison
 
 No GW-specific part of this milestone exists in mathlib. The reusable pieces are only the algebra and the abstract M5/M6 interfaces once those have been built.
 
-The project must add distinct types or namespaces for stable-map `psi` and pulled-back stable-curve `psi`, along with stabilization, evaluation insertions, virtual integration/pushforward, forgetful and boundary formulas, descendant correlators, and the comparison theorem. The correction formula must be a theorem/axiom of this package, never definitional equality.
+The project owns distinct interfaces for stable-map `psi` and pulled-back stable-curve `psi`, together with descendant correlators and comparison data. The correction formula is an explicit theorem field of the optional stabilization package, never a definitional equality.
 
-The current `DescendantAncestorComparison` remains only a residual
-decomposition. The optional `StabilizationBoundaryComparison` now meets the
-axiomatic comparison boundary by recording a finite positive-tail
-factorization and the associated two-point operators. Constructing that
-package from moduli-space geometry remains open.
+The current `DescendantAncestorComparison` remains only a residual decomposition. The optional `StabilizationBoundaryComparison` now meets the axiomatic comparison boundary by recording a finite positive-tail factorization and the associated two-point operators. Constructing that package from moduli-space geometry remains open.
 
-The coefficientwise `TwoPointCalibration`, its separately assumed boundary
-identity, and an explicit quantized-action carrier are implemented. The
-repository does not claim an unrestricted exponential in the Laurent-series
-type.
+The coefficientwise `TwoPointCalibration`, its separately assumed boundary identity, and an explicit quantized-action carrier are implemented. The repository does not claim an unrestricted exponential in the Laurent-series type.
 
 ## M9. All-genus potentials and equations
 
@@ -177,19 +162,16 @@ type.
 - `LaurentSeries R` is Hahn series with exponent group `Int`, appropriate for expressions with a uniform lower bound on powers of `hbar`.
 - Hahn series has summable-family infrastructure.
 
-### Required implementation and completion warning
+### Project implementation and completion warning
 
-- Mathlib currently has no formal partial derivative API for `MvPowerSeries`; define coefficientwise `pderiv` and its linearity, Leibniz, commutation, and iterated-derivative lemmas.
-- Choose a single mixed coefficient type for Novikov, descendant variables, and genus. Nesting existing series types may work for individual free energies, but every interchange of sums needs a support theorem.
-- Encode factorial denominators with assumptions such as `Algebra ℚ R`, or use divided-power coefficients to support more general base rings.
-- Formalize stable/unstable conventions and prove string, dilaton, divisor, splitting, genus-reduction, WDVV, and tautological equations at the coefficient level before translating them to differential equations.
+- The project-owned `MvPowerSeries.pderiv` includes linearity, Leibniz, commutation, and iterated-derivative lemmas.
+- `FormalPotential` nests formal insertion variables over `NovikovSeries`, while `totalFreeEnergy` uses a Laurent genus expansion; every completed convolution remains coefficientwise.
+- Factorial denominators use `Algebra ℚ R` and the explicit `profileWeight` normalization.
+- Stable string/dilaton and divisor laws are separate optional packages. `UnstableDescendantConventions` extends numerical correlators to all arities and derives global correlator-level string and dilaton equations.
 
 Most importantly, `F = sum_g hbar^(g-1) F_g` is Laurent-bounded below by `-1`, but `exp(F)` generally contains arbitrarily negative powers of `hbar` because of powers of the genus-zero term. Decision D13 therefore leaves `exp(F)` outside the first axiomatic endpoint. M9 implements genus potentials and the honest Laurent-series total free energy; a mixed completion for the exponential will be introduced only when a concrete theorem consumes it.
 
-The project-owned `MvPowerSeries.pderiv` now includes linearity, the Leibniz
-rule, commutation, and iterated derivatives. Stable potentials retain their
-original convention; `UnstableDescendantConventions` optionally extends them
-to every arity and derives global correlator-level string and dilaton laws.
+Stable potentials retain their original convention; `fullDescendantPotential` uses the explicit unstable extension. A vector-field PDE presentation, the primary-potential third-derivative theorem, and the unrestricted exponential partition function remain unimplemented. `CompletedFockPotential` is only a coefficientwise carrier for an explicitly supplied quantized action, not the missing mixed exponential completion.
 
 ## M10. Geometric realization
 
@@ -201,18 +183,13 @@ Mathlib has a substantial scheme layer: schemes, fiber products, many local and 
 
 The roadmap requires Deligne--Mumford or derived stacks, the actual moduli objects, a suitable cohomology or Chow theory with rational equivalence, products and refined Gysin pullbacks, Chern classes, perfect obstruction theories, intrinsic normal cones, virtual fundamental classes, and their gluing/base-change compatibility. These are not present in mathlib `v4.32.0`. The existing scheme `AlgebraicCycle` is an early building block, not a substitute for them.
 
-Accordingly, the current M10 deliverable is only an abstract
-`VirtualGWPackage` carrier whose fields store already axiomatized M6 and M8
-outputs, followed by projections such as
+Accordingly, the current M10 deliverable is only an abstract `VirtualGWPackage` carrier whose fields store already axiomatized M6 and M8 outputs, followed by projections such as
 
 ```text
-VirtualGWPackage -> CurveClassGW.
+VirtualGWPackage -> GromovWittenTheory.
 ```
 
-This is not a realization construction and does not encode boundary support
-for the descendant--ancestor residual. Constructing a concrete instance from
-moduli stacks and virtual classes should remain explicitly out of scope until
-those external foundations exist.
+This is not a realization construction and does not encode boundary support for the descendant--ancestor residual. Constructing a concrete instance from moduli stacks and virtual classes should remain explicitly out of scope until those external foundations exist.
 
 ## Recommended implementation gates
 

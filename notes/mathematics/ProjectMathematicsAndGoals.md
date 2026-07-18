@@ -310,7 +310,7 @@ $$
 \langle a,b,c\rangle_{0,3,\beta}.
 $$
 
-Its associativity follows from separating gluing on $\overline{\mathcal M}_{0,4}$. Adding a formal point $t\in V$ gives the big quantum product and the genus-zero primary potential; WDVV is the corresponding associativity equation.
+Its associativity follows from separating gluing on $\overline{\mathcal M}_{0,4}$. Adding a formal point $t\in V$ gives the big quantum product and the genus-zero primary potential; the optional higher-background boundary relation yields WDVV and coefficientwise associativity in the implemented axiomatic layer.
 
 The project proves cohomology-valued identities coefficientwise. Numerical invariants and the finite-free state space pass to the chosen Novikov completion, where fixed coefficients use only finite antidiagonals. An arbitrary cohomology family $B\to H$ is not identified with the algebraic tensor product $(B\to R)\otimes_R H$ without an additional target-finiteness or completed-tensor hypothesis.
 
@@ -336,7 +336,7 @@ $$
 \bar\psi_i+\text{boundary terms}.
 $$
 
-Descendant invariants integrate powers of $\psi_i^{\mathrm{map}}$ against the virtual class. Ancestor invariants use powers of $\bar\psi_i$. The project keeps these classes in distinct interfaces. The current Lean API records only their residual difference; a genuine comparison derived from explicit stabilization and boundary hypotheses remains future work.
+Descendant invariants integrate powers of $\psi_i^{\mathrm{map}}$ against the virtual class. Ancestor invariants use powers of $\bar\psi_i$. The project keeps these classes in distinct interfaces. `DescendantAncestorComparison` records their weak residual difference, while the optional `StabilizationBoundaryComparison` exhibits that residual as a finite positive-degree rational-tail sum with explicit factorization and tail-operator data. Concrete stable-map geometry must still construct those hypotheses.
 
 ## 11. All-genus potentials
 
@@ -369,8 +369,8 @@ Once the coefficient ring is defined, geometric axioms become formal differentia
 - Pullbacks, external products, gluing, pushforwards, and integration as explicitly axiomatized operations.
 - Full unital CohFTs and their Frobenius/topological/genus-zero consequences.
 - Effective-curve-class refinements and Novikov packaging.
-- Ancestor and descendant theories with a formal residual identity.
-- Quantum products, stable-sector potentials, and optional stable equations.
+- Ancestor and descendant theories with a weak residual identity and optional rational-tail factorization.
+- Small and big quantum products, arbitrary-background genus-zero WDVV associativity, stable/full potentials, and optional equation packages.
 - An abstract algebraic output carrier for future virtual GW realizations.
 
 ### Not required for the axiomatic endpoint
@@ -393,7 +393,7 @@ M1  perfect pairings and Frobenius algebras                 complete
   -> M4  full unital all-genus CohFT                       complete
   -> M5  tautological classes, integration, and ancestors complete core
   -> M6  curve-class-resolved GW axioms                    complete core
-  -> M7  Novikov coefficients and quantum products         coefficientwise core complete
+  -> M7  Novikov coefficients and quantum products         arbitrary-background WDVV implemented
   -> M8  descendants and descendant--ancestor comparison   optional rational-tail comparison implemented
   -> M9  all-genus potentials and equations                stable and explicit unstable extensions implemented
   -> M10 abstract geometric realization                    algebraic carrier only
@@ -410,7 +410,7 @@ The repository currently contains:
 - basis-free contraction and sewing identities;
 - finite-labelled all-genus TFT correlators;
 - separating and nonseparating sewing;
-- a bundled topological correlator theory;
+- a bundled two-dimensional TFT;
 - its scalar-valued stable topological CohFT restriction;
 - recovery of the counit and three-point product in the current fixed-algebra API;
 - internally graded even-cohomology targets with primitive stable-curve maps;
@@ -421,8 +421,8 @@ The repository currently contains:
 - stable-curve psi classes, integration, forgetful pushforward, kappa classes, and ancestors;
 - positive locally finite effective curve classes and beta-resolved primary GW axioms;
 - the beta-preserving Novikov ring, fixed-beta quantum-product coefficients, and derived coefficientwise small WDVV and associativity;
-- the invariant-defined commutative formal big product and its proved zero-background specialization to the small product;
-- an optional higher-background WDVV package deriving formal big-product associativity;
+- the invariant-defined commutative big quantum product and its proved zero-background specialization to the small quantum product;
+- an optional arbitrary-background genus-zero WDVV package deriving big-quantum-product associativity;
 - finite stable graphs and optional order-independent graph pullbacks;
 - distinct stable-map descendants and stable-curve ancestors with both a weak residual API and an optional positive-tail factorization;
 - invariant-defined Novikov-valued stable-sector descendant and ancestor potentials, their residual identity, and Laurent total free energies;

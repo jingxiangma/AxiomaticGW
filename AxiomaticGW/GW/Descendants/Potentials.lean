@@ -146,7 +146,7 @@ theorem insertionDerivative_basis
     rw [Algebra.smul_def, map_zero, zero_mul])]
   rw [Algebra.smul_def, map_one, one_mul]
 
-namespace CurveClassGW
+namespace GromovWittenTheory
 
 variable {R V B : Type u} {ι : Type} [CommRing R] [Algebra ℚ R]
   [AddCommGroup V] [Module R V] [Module.Free R V] [Module.Finite R V]
@@ -155,7 +155,7 @@ variable {R V B : Type u} {ι : Type} [CommRing R] [Algebra ℚ R]
 
 /-- Genus-`g` descendant potential constructed from stabilized descendant
 invariants in a chosen state-space basis. -/
-noncomputable def descendantPotential (Omega : CurveClassGW R V B D C)
+noncomputable def descendantPotential (Omega : GromovWittenTheory R V B D C)
     (M : StableMapDescendants Omega) (I : StableCurveIntegration C)
     (b : Basis ι R V) (g : ℕ) :
     FormalPotential D (DescendantVariable ι) R := by
@@ -168,7 +168,7 @@ noncomputable def descendantPotential (Omega : CurveClassGW R V B D C)
     else 0
 
 /-- Genus-`g` ancestor potential constructed from stable-curve psi classes. -/
-noncomputable def ancestorPotential (Omega : CurveClassGW R V B D C)
+noncomputable def ancestorPotential (Omega : GromovWittenTheory R V B D C)
     (P : PsiClasses C) (I : StableCurveIntegration C)
     (b : Basis ι R V) (g : ℕ) :
     FormalPotential D (DescendantVariable ι) R := by
@@ -181,7 +181,7 @@ noncomputable def ancestorPotential (Omega : CurveClassGW R V B D C)
     else 0
 
 /-- Descendant and ancestor potentials produced by one GW theory. -/
-noncomputable def potentials (Omega : CurveClassGW R V B D C)
+noncomputable def potentials (Omega : GromovWittenTheory R V B D C)
     (M : StableMapDescendants Omega) (P : PsiClasses C)
     (I : StableCurveIntegration C) (b : Basis ι R V) :
     GWPotentials D (DescendantVariable ι) R where
@@ -189,7 +189,7 @@ noncomputable def potentials (Omega : CurveClassGW R V B D C)
   ancestor := Omega.ancestorPotential P I b
 
 theorem descendantPotential_coeff_of_stable
-    (Omega : CurveClassGW R V B D C)
+    (Omega : GromovWittenTheory R V B D C)
     (M : StableMapDescendants Omega) (I : StableCurveIntegration C)
     (b : Basis ι R V) (g : ℕ) (n : DescendantVariable ι →₀ ℕ)
     (beta : B) (h : StableArity g (InsertionLabel n)) :
@@ -202,7 +202,7 @@ theorem descendantPotential_coeff_of_stable
   simp [descendantPotential, h]
 
 theorem descendantPotential_coeff_of_unstable
-    (Omega : CurveClassGW R V B D C)
+    (Omega : GromovWittenTheory R V B D C)
     (M : StableMapDescendants Omega) (I : StableCurveIntegration C)
     (b : Basis ι R V) (g : ℕ) (n : DescendantVariable ι →₀ ℕ)
     (beta : B) (h : ¬StableArity g (InsertionLabel n)) :
@@ -211,7 +211,7 @@ theorem descendantPotential_coeff_of_unstable
   simp [descendantPotential, h]
 
 theorem ancestorPotential_coeff_of_stable
-    (Omega : CurveClassGW R V B D C)
+    (Omega : GromovWittenTheory R V B D C)
     (P : PsiClasses C) (I : StableCurveIntegration C)
     (b : Basis ι R V) (g : ℕ) (n : DescendantVariable ι →₀ ℕ)
     (beta : B) (h : StableArity g (InsertionLabel n)) :
@@ -224,7 +224,7 @@ theorem ancestorPotential_coeff_of_stable
   simp [ancestorPotential, h]
 
 theorem ancestorPotential_coeff_of_unstable
-    (Omega : CurveClassGW R V B D C)
+    (Omega : GromovWittenTheory R V B D C)
     (P : PsiClasses C) (I : StableCurveIntegration C)
     (b : Basis ι R V) (g : ℕ) (n : DescendantVariable ι →₀ ℕ)
     (beta : B) (h : ¬StableArity g (InsertionLabel n)) :
@@ -232,14 +232,14 @@ theorem ancestorPotential_coeff_of_unstable
   classical
   simp [ancestorPotential, h]
 
-end CurveClassGW
+end GromovWittenTheory
 
 namespace DescendantAncestorComparison
 
 variable {R V B : Type u} {ι : Type} [CommRing R] [Algebra ℚ R]
   [AddCommGroup V] [Module R V] [Module.Free R V] [Module.Finite R V]
   [AddCancelCommMonoid B] {D : EffectiveCurveMonoid B}
-  {C : StableCurveCohomology R} {Omega : CurveClassGW R V B D C}
+  {C : StableCurveCohomology R} {Omega : GromovWittenTheory R V B D C}
   {P : PsiClasses C} {M : StableMapDescendants Omega}
 
 /-- Generating series of the recorded descendant--ancestor residuals. -/
@@ -268,8 +268,8 @@ theorem descendantPotential_eq_ancestor_add_boundary
     Omega.ancestorPotential P I b g n beta +
       X.boundaryPotential I b g n beta
   by_cases h : StableArity g (InsertionLabel n)
-  · rw [CurveClassGW.descendantPotential_coeff_of_stable _ _ _ _ _ _ _ h,
-      CurveClassGW.ancestorPotential_coeff_of_stable _ _ _ _ _ _ _ h]
+  · rw [GromovWittenTheory.descendantPotential_coeff_of_stable _ _ _ _ _ _ _ h,
+      GromovWittenTheory.ancestorPotential_coeff_of_stable _ _ _ _ _ _ _ h]
     simp only [boundaryPotential, h, dite_true]
     have hcomparison := congrArg
       (fun f ↦ f (InsertionLabel.state (n := n) b))
@@ -277,8 +277,8 @@ theorem descendantPotential_eq_ancestor_add_boundary
         (InsertionLabel.power (n := n)))
     simp only [add_apply, LinearMap.compMultilinearMap_apply] at hcomparison
     rw [hcomparison, mul_add]
-  · rw [CurveClassGW.descendantPotential_coeff_of_unstable _ _ _ _ _ _ _ h,
-      CurveClassGW.ancestorPotential_coeff_of_unstable _ _ _ _ _ _ _ h]
+  · rw [GromovWittenTheory.descendantPotential_coeff_of_unstable _ _ _ _ _ _ _ h,
+      GromovWittenTheory.ancestorPotential_coeff_of_unstable _ _ _ _ _ _ _ h]
     simp [boundaryPotential, h]
 
 end DescendantAncestorComparison

@@ -34,7 +34,7 @@ noncomputable def extendedDescendantInvariant
     {R V B : Type u} [CommRing R] [Algebra ℚ R]
     [AddCommGroup V] [Module R V] [Module.Free R V] [Module.Finite R V]
     [AddCancelCommMonoid B] {D : EffectiveCurveMonoid B}
-    {C : StableCurveCohomology R} {Omega : CurveClassGW R V B D C}
+    {C : StableCurveCohomology R} {Omega : GromovWittenTheory R V B D C}
     (M : StableMapDescendants Omega) (I : StableCurveIntegration C)
     (unstable : ∀ (_g : ℕ) (S : Type) [Fintype S], B → (S → ℕ) →
       MultilinearMap R (fun _ : S ↦ V) R)
@@ -52,7 +52,7 @@ structure UnstableDescendantConventions
     {R V B : Type u} [CommRing R] [Algebra ℚ R]
     [AddCommGroup V] [Module R V] [Module.Free R V] [Module.Finite R V]
     [AddCancelCommMonoid B] {D : EffectiveCurveMonoid B}
-    {C : StableCurveCohomology R} {Omega : CurveClassGW R V B D C}
+    {C : StableCurveCohomology R} {Omega : GromovWittenTheory R V B D C}
     (M : StableMapDescendants Omega) (I : StableCurveIntegration C) where
   /-- Numerical correlators outside stable curve arities. Values in positive
   curve class are data, not consequences of the current axioms. -/
@@ -92,7 +92,7 @@ namespace UnstableDescendantConventions
 variable {R V B : Type u} {ι : Type} [CommRing R] [Algebra ℚ R]
   [AddCommGroup V] [Module R V] [Module.Free R V] [Module.Finite R V]
   [AddCancelCommMonoid B] {D : EffectiveCurveMonoid B}
-  {C : StableCurveCohomology R} {Omega : CurveClassGW R V B D C}
+  {C : StableCurveCohomology R} {Omega : GromovWittenTheory R V B D C}
   {M : StableMapDescendants Omega} {I : StableCurveIntegration C}
 
 /-- Numerical descendant invariant for every arity. -/
@@ -188,7 +188,7 @@ theorem fullDescendantPotential_coeff_of_stable
     (h : StableArity g (InsertionLabel n)) :
     U.fullDescendantPotential b g n beta =
       Omega.descendantPotential M I b g n beta := by
-  rw [CurveClassGW.descendantPotential_coeff_of_stable _ _ _ _ _ _ _ h]
+  rw [GromovWittenTheory.descendantPotential_coeff_of_stable _ _ _ _ _ _ _ h]
   simp only [fullDescendantPotential]
   rw [U.invariant_of_stable g (InsertionLabel n) h]
 

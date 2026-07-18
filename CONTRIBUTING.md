@@ -2,7 +2,7 @@
 
 Thank you for contributing. AxiomaticGW is a research-stage formalization, so clear mathematical motivation and stable API boundaries matter as much as a proof compiling today.
 
-Contributions may include Lean definitions and proofs, regression examples, mathematical exposition, corrections, or implementation-planning work. For a substantial change, open an issue first so its scope and dependencies can be agreed before implementation. Architectural questions tracked as pending in [`CohFTDesignDecisions.md`](notes/milestones/CohFTDesignDecisions.md) should not be settled implicitly inside an unrelated pull request.
+Contributions may include Lean definitions and proofs, regression examples, mathematical exposition, corrections, or implementation-planning work. For a substantial change, open an issue first so its scope and dependencies can be agreed before implementation. The settled choices in [`CohFTDesignDecisions.md`](notes/milestones/CohFTDesignDecisions.md) should be reopened explicitly when evidence requires a change, not altered implicitly inside an unrelated pull request.
 
 ## Development setup
 
@@ -48,6 +48,8 @@ Use `public import` when users of the current module need declarations or instan
 Give every public definition, theorem, structure, class, and data-carrying structure field a `/-- ... -/` documentation comment. Explain the mathematics and any non-obvious Lean design choice, but do not narrate syntax that is already clear from the declaration.
 
 Use `UpperCamelCase` for types and structures, `lowerCamelCase` for definitions and theorems, and established mathlib vocabulary where it exists. Names should describe the mathematical statement rather than its proof.
+
+For domain terminology, use the standard name in the cited mathematical literature. When a Lean structure records only part of a standard object, retain the standard term only with a docstring that states which defining properties are fields, which are derived, and which are absent. Record repository-wide terminology decisions and limitations in [`TerminologyAudit.md`](notes/milestones/TerminologyAudit.md).
 
 Prefer explicit bundled objects such as `F : CommFrobeniusAlgebra R A` when the same carrier can support more than one structure. Install derived typeclass structures only locally with `letI` unless there is a canonical global choice.
 

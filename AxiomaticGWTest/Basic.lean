@@ -68,22 +68,22 @@ example (R : Type*) [CommRing R] :
     (AxiomaticGW.CommFrobeniusAlgebra.productAlgebra R).handleElement = 1 := by
   simp
 
-/-- The bundled correlator theory exposes the nonseparating gluing law. -/
+/-- The bundled two-dimensional TFT exposes the nonseparating gluing law. -/
 example {R A : Type*} [CommRing R] [CommRing A] [Algebra R A]
     [Module.Free R A] [Module.Finite R A]
     (F : AxiomaticGW.CommFrobeniusAlgebra R A) (g : ℕ) :
     F.pairing.selfContract (F.correlator g (Fin 1 ⊕ Fin 2)) =
       F.correlator (g + 1) (Fin 1) := by
-  exact (F.toTopologicalCorrelatorTheory.nonseparating g (Fin 1))
+  exact (F.toTwoDimensionalTFT.nonseparating g (Fin 1))
 
-/-- The bundled correlator theory exposes the separating gluing law. -/
+/-- The bundled two-dimensional TFT exposes the separating gluing law. -/
 example {R A : Type*} [CommRing R] [CommRing A] [Algebra R A]
     [Module.Free R A] [Module.Finite R A]
     (F : AxiomaticGW.CommFrobeniusAlgebra R A) (g₁ g₂ : ℕ) :
     F.pairing.pairContract (F.correlator g₁ (Option (Fin 1)))
         (F.correlator g₂ (Option (Fin 1))) =
       F.correlator (g₁ + g₂) (Fin 1 ⊕ Fin 1) := by
-  exact (F.toTopologicalCorrelatorTheory.separating g₁ g₂ (Fin 1) (Fin 1))
+  exact (F.toTwoDimensionalTFT.separating g₁ g₂ (Fin 1) (Fin 1))
 
 /-- The base-ring example computes every genus and finite arity. -/
 example (R : Type*) [CommRing R] (g : ℕ) (a : Fin 3 → R) :
@@ -120,8 +120,17 @@ algebra multiplication. -/
 example {R A : Type*} [CommRing R] [CommRing A] [Algebra R A]
     [Module.Free R A] [Module.Finite R A]
     (F : AxiomaticGW.CommFrobeniusAlgebra R A) (x y : A) :
-    F.toTopologicalCorrelatorTheory.product x y = x * y := by
-  exact F.toTopologicalCorrelatorTheory_product x y
+    F.toTwoDimensionalTFT.product x y = x * y := by
+  exact F.toTwoDimensionalTFT_product x y
+
+/-- The canonical public name for the curried three-point correlator is
+`threePointFunction`. -/
+example {R A : Type*} [CommRing R] [CommRing A] [Algebra R A]
+    [Module.Free R A] [Module.Finite R A]
+    (F : AxiomaticGW.CommFrobeniusAlgebra R A) (x y z : A) :
+    F.toTwoDimensionalTFT.threePointFunction x y z =
+      F.correlator 0 (Fin 3) (Fin.cons x (Fin.cons y fun _ ↦ z)) := by
+  exact F.toTwoDimensionalTFT.threePointFunction_apply x y z
 
 end CommFrobeniusAlgebra
 
@@ -338,7 +347,7 @@ example {V : Type} [AddCommGroup V] [Module ℚ V]
 
 end FullCohFT
 
-namespace CurveClassGW
+namespace GromovWittenTheory
 
 /-- Descendant cotangent powers participate in the virtual-dimension
 equation and can compensate a negative primary expected degree. -/
@@ -351,7 +360,7 @@ example {R V B : Type} [CommRing R] [Algebra ℚ R]
     [AddCommGroup V] [Module R V] [Module.Free R V] [Module.Finite R V]
     [AddCancelCommMonoid B] {D : AxiomaticGW.EffectiveCurveMonoid B}
     {C : AxiomaticGW.StableCurveCohomology R}
-    {Omega : AxiomaticGW.CurveClassGW R V B D C}
+    {Omega : AxiomaticGW.GromovWittenTheory R V B D C}
     (P : AxiomaticGW.PsiClasses C)
     (M : AxiomaticGW.StableMapDescendants Omega)
     (X : AxiomaticGW.DescendantAncestorComparison P M)
@@ -374,51 +383,51 @@ example : (1, 2) ∈ (AxiomaticGW.EffectiveCurveMonoid.nat).splittings 3 := by
 
 /-- The beta-zero reference theory recovers its underlying CohFT class. -/
 example (g : ℕ) (S : Type) [Fintype S] (h : AxiomaticGW.StableArity g S) :
-    (AxiomaticGW.constantCurveClassGW.theory ℚ
+    (AxiomaticGW.constantGromovWittenTheory.theory ℚ
       AxiomaticGW.EffectiveCurveMonoid.nat).omega g S h 0 =
-      (AxiomaticGW.constantCurveClassGW.cohft ℚ).omega g S h := by
-  exact AxiomaticGW.constantCurveClassGW.theory_omega_zero ℚ
+      (AxiomaticGW.constantGromovWittenTheory.cohft ℚ).omega g S h := by
+  exact AxiomaticGW.constantGromovWittenTheory.theory_omega_zero ℚ
     AxiomaticGW.EffectiveCurveMonoid.nat g S h
 
 /-- Small quantum associativity is derived directly from coefficientwise
 gluing and WDVV. -/
 example (beta : ℕ) (x y z : ℚ) :
     (∑ split ∈ AxiomaticGW.EffectiveCurveMonoid.nat.splittings beta,
-      (AxiomaticGW.constantCurveClassGW.theory ℚ
-        AxiomaticGW.EffectiveCurveMonoid.nat).smallProductCoefficient
+      (AxiomaticGW.constantGromovWittenTheory.theory ℚ
+        AxiomaticGW.EffectiveCurveMonoid.nat).smallQuantumProductCoefficient
           (AxiomaticGW.constantStableCurveCohomology.genusZeroGeometry ℚ)
           split.2
-          ((AxiomaticGW.constantCurveClassGW.theory ℚ
-            AxiomaticGW.EffectiveCurveMonoid.nat).smallProductCoefficient
+          ((AxiomaticGW.constantGromovWittenTheory.theory ℚ
+            AxiomaticGW.EffectiveCurveMonoid.nat).smallQuantumProductCoefficient
               (AxiomaticGW.constantStableCurveCohomology.genusZeroGeometry ℚ)
               split.1 x y) z) =
       ∑ split ∈ AxiomaticGW.EffectiveCurveMonoid.nat.splittings beta,
-        (AxiomaticGW.constantCurveClassGW.theory ℚ
-          AxiomaticGW.EffectiveCurveMonoid.nat).smallProductCoefficient
+        (AxiomaticGW.constantGromovWittenTheory.theory ℚ
+          AxiomaticGW.EffectiveCurveMonoid.nat).smallQuantumProductCoefficient
             (AxiomaticGW.constantStableCurveCohomology.genusZeroGeometry ℚ)
             split.2 x
-            ((AxiomaticGW.constantCurveClassGW.theory ℚ
-              AxiomaticGW.EffectiveCurveMonoid.nat).smallProductCoefficient
+            ((AxiomaticGW.constantGromovWittenTheory.theory ℚ
+              AxiomaticGW.EffectiveCurveMonoid.nat).smallQuantumProductCoefficient
                 (AxiomaticGW.constantStableCurveCohomology.genusZeroGeometry ℚ)
                 split.1 y z) := by
-  exact (AxiomaticGW.constantCurveClassGW.theory ℚ
-    AxiomaticGW.EffectiveCurveMonoid.nat).smallProductCoefficient_assoc
+  exact (AxiomaticGW.constantGromovWittenTheory.theory ℚ
+    AxiomaticGW.EffectiveCurveMonoid.nat).smallQuantumProductCoefficient_assoc
       (AxiomaticGW.constantStableCurveCohomology.genusZeroGeometry ℚ)
       beta x y z
 
-/-- The formal big product specializes to the small product at zero primary
+/-- The big quantum product specializes to the small quantum product at zero primary
 background. -/
 example (x y : ℚ) (beta : ℕ) :
-    (AxiomaticGW.constantCurveClassGW.theory ℚ
-      AxiomaticGW.EffectiveCurveMonoid.nat).formalBigProduct
+    (AxiomaticGW.constantGromovWittenTheory.theory ℚ
+      AxiomaticGW.EffectiveCurveMonoid.nat).bigQuantumProduct
         (AxiomaticGW.constantStableCurveCohomology.integration ℚ)
         (Module.Basis.singleton Unit ℚ) x y 0 beta =
-      (AxiomaticGW.constantCurveClassGW.theory ℚ
-        AxiomaticGW.EffectiveCurveMonoid.nat).smallProductCoefficient
+      (AxiomaticGW.constantGromovWittenTheory.theory ℚ
+        AxiomaticGW.EffectiveCurveMonoid.nat).smallQuantumProductCoefficient
           (AxiomaticGW.constantStableCurveCohomology.genusZeroGeometry ℚ)
           beta x y := by
-  apply (AxiomaticGW.constantCurveClassGW.theory ℚ
-    AxiomaticGW.EffectiveCurveMonoid.nat).formalBigProduct_zero
+  apply (AxiomaticGW.constantGromovWittenTheory.theory ℚ
+    AxiomaticGW.EffectiveCurveMonoid.nat).bigQuantumProduct_zero
       (AxiomaticGW.constantStableCurveCohomology.integration ℚ)
       (AxiomaticGW.constantStableCurveCohomology.genusZeroGeometry ℚ)
       (Module.Basis.singleton Unit ℚ)
@@ -426,23 +435,23 @@ example (x y : ℚ) (beta : ℕ) :
     LinearMap.id
   simp
 
-/-- Relabelling the distinguished insertions makes the completed formal big
-product commutative at every primary background. -/
+/-- Relabelling the distinguished insertions makes the big quantum product
+commutative at every primary background. -/
 example (x y : ℚ) :
-    (AxiomaticGW.constantCurveClassGW.theory ℚ
-      AxiomaticGW.EffectiveCurveMonoid.nat).formalBigProduct
+    (AxiomaticGW.constantGromovWittenTheory.theory ℚ
+      AxiomaticGW.EffectiveCurveMonoid.nat).bigQuantumProduct
         (AxiomaticGW.constantStableCurveCohomology.integration ℚ)
         (Module.Basis.singleton Unit ℚ) x y =
-      (AxiomaticGW.constantCurveClassGW.theory ℚ
-        AxiomaticGW.EffectiveCurveMonoid.nat).formalBigProduct
+      (AxiomaticGW.constantGromovWittenTheory.theory ℚ
+        AxiomaticGW.EffectiveCurveMonoid.nat).bigQuantumProduct
           (AxiomaticGW.constantStableCurveCohomology.integration ℚ)
           (Module.Basis.singleton Unit ℚ) y x := by
-  exact (AxiomaticGW.constantCurveClassGW.theory ℚ
-    AxiomaticGW.EffectiveCurveMonoid.nat).formalBigProduct_comm
+  exact (AxiomaticGW.constantGromovWittenTheory.theory ℚ
+    AxiomaticGW.EffectiveCurveMonoid.nat).bigQuantumProduct_comm
       (AxiomaticGW.constantStableCurveCohomology.integration ℚ)
       (Module.Basis.singleton Unit ℚ) x y
 
-end CurveClassGW
+end GromovWittenTheory
 
 namespace StableGraphs
 
@@ -502,19 +511,20 @@ end StableGraphs
 
 namespace HigherAndUnstableExtensions
 
-/-- Higher WDVV is consumed as a scalar boundary identity and yields a
-state-valued associativity coefficient by metric nondegeneracy. -/
+/-- Genus-zero WDVV at arbitrary primary background is consumed as a scalar
+boundary identity and yields a state-valued associativity coefficient by
+metric nondegeneracy. -/
 example {R V B : Type} {ι : Type} [CommRing R] [Algebra ℚ R]
     [AddCommGroup V] [Module R V] [Module.Free R V] [Module.Finite R V]
     [AddCancelCommMonoid B] {D : AxiomaticGW.EffectiveCurveMonoid B}
     {C : AxiomaticGW.StableCurveCohomology R}
-    (Omega : AxiomaticGW.CurveClassGW R V B D C)
+    (Omega : AxiomaticGW.GromovWittenTheory R V B D C)
     (I : AxiomaticGW.StableCurveIntegration C) (b : Module.Basis ι R V)
-    (H : Omega.GenusZeroHigherBoundary I b)
+    (H : Omega.GenusZeroWDVV I b)
     (n : ι →₀ ℕ) (beta : B) (x y z : V) :
-    Omega.formalBigProductAssocLeftCoefficient I b n beta x y z =
-      Omega.formalBigProductAssocRightCoefficient I b n beta x y z :=
-  Omega.formalBigProductCoefficient_assoc I b H n beta x y z
+    Omega.bigQuantumProductAssocLeftCoefficient I b n beta x y z =
+      Omega.bigQuantumProductAssocRightCoefficient I b n beta x y z :=
+  Omega.bigQuantumProductCoefficient_assoc I b H n beta x y z
 
 /-- The global string equation really combines the stable law with the
 exceptional unstable convention. -/
@@ -522,7 +532,7 @@ example {R V B : Type} [CommRing R] [Algebra ℚ R]
     [AddCommGroup V] [Module R V] [Module.Free R V] [Module.Finite R V]
     [AddCancelCommMonoid B] {D : AxiomaticGW.EffectiveCurveMonoid B}
     {C : AxiomaticGW.StableCurveCohomology R}
-    {Omega : AxiomaticGW.CurveClassGW R V B D C}
+    {Omega : AxiomaticGW.GromovWittenTheory R V B D C}
     {M : AxiomaticGW.StableMapDescendants Omega}
     {I : AxiomaticGW.StableCurveIntegration C}
     (U : AxiomaticGW.UnstableDescendantConventions M I)

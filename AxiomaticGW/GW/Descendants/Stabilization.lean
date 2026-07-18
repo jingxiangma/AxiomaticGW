@@ -71,7 +71,7 @@ structure StabilizationBoundaryComparison
     {R V B : Type u} [CommRing R] [Algebra ℚ R]
     [AddCommGroup V] [Module R V] [Module.Free R V] [Module.Finite R V]
     [AddCancelCommMonoid B] {D : EffectiveCurveMonoid B}
-    {C : StableCurveCohomology R} {Omega : CurveClassGW R V B D C}
+    {C : StableCurveCohomology R} {Omega : GromovWittenTheory R V B D C}
     (P : PsiClasses C) (M : StableMapDescendants Omega) where
   /-- The underlying residual comparison, retained for compatibility. -/
   toDescendantAncestorComparison : DescendantAncestorComparison P M
@@ -111,7 +111,7 @@ namespace StabilizationBoundaryComparison
 variable {R V B : Type u} [CommRing R] [Algebra ℚ R]
   [AddCommGroup V] [Module R V] [Module.Free R V] [Module.Finite R V]
   [AddCancelCommMonoid B] {D : EffectiveCurveMonoid B}
-  {C : StableCurveCohomology R} {Omega : CurveClassGW R V B D C}
+  {C : StableCurveCohomology R} {Omega : GromovWittenTheory R V B D C}
   {P : PsiClasses C} {M : StableMapDescendants Omega}
 
 /-- The geometric comparison still supplies the original public weak API. -/
@@ -146,8 +146,10 @@ theorem correction_eq_positive_tail_sum
 
 end StabilizationBoundaryComparison
 
-/-- Genus-zero two-point calibration, coefficientwise in `z^-1` and the
-effective curve class. -/
+/-- Genus-zero two-point calibration data, coefficientwise in `z^-1` and the
+effective curve class. This carrier stores only the operator coefficients and
+their constant term; symplecticity requires `CalibrationBoundaryRelation`, and
+no geometric fundamental solution is constructed here. -/
 structure TwoPointCalibration
     {R V B : Type u} [CommRing R] [AddCommGroup V] [Module R V]
     [AddCancelCommMonoid B] (D : EffectiveCurveMonoid B)
@@ -188,7 +190,7 @@ namespace StabilizationBoundaryComparison
 variable {R V B : Type u} [CommRing R] [Algebra ℚ R]
   [AddCommGroup V] [Module R V] [Module.Free R V] [Module.Finite R V]
   [AddCancelCommMonoid B] {D : EffectiveCurveMonoid B}
-  {C : StableCurveCohomology R} {Omega : CurveClassGW R V B D C}
+  {C : StableCurveCohomology R} {Omega : GromovWittenTheory R V B D C}
   {P : PsiClasses C} {M : StableMapDescendants Omega}
 
 /-- The two-point calibration built from the same tail operators that occur
@@ -237,9 +239,10 @@ theorem symplectic (H : CalibrationBoundaryRelation S)
 
 end CalibrationBoundaryRelation
 
-/-- A locally indexed completed Fock potential. The natural-number index is
-the Euler/genus filtration; each coefficient is already complete in formal
-variables and Novikov degree. No unrestricted exponential is asserted. -/
+/-- A coefficientwise genus-indexed carrier for completed formal potentials.
+Each coefficient is complete in the formal variables and Novikov degree. This
+is not a construction of a topological Fock completion, and no unrestricted
+exponential partition function is asserted. -/
 structure CompletedFockPotential
     {B : Type*} [AddCancelCommMonoid B] (D : EffectiveCurveMonoid B)
     (Vars R : Type*) [CommRing R] where
@@ -307,7 +310,7 @@ structure GiventalComparison
     {R V B : Type u} {ι : Type} [CommRing R] [Algebra ℚ R]
     [AddCommGroup V] [Module R V] [Module.Free R V] [Module.Finite R V]
     [AddCancelCommMonoid B] {D : EffectiveCurveMonoid B}
-    {C : StableCurveCohomology R} {Omega : CurveClassGW R V B D C}
+    {C : StableCurveCohomology R} {Omega : GromovWittenTheory R V B D C}
     {P : PsiClasses C} {M : StableMapDescendants Omega}
     (I : StableCurveIntegration C) (b : Basis ι R V)
     (X : StabilizationBoundaryComparison P M)
@@ -329,7 +332,7 @@ namespace GiventalComparison
 variable {R V B : Type u} {ι : Type} [CommRing R] [Algebra ℚ R]
   [AddCommGroup V] [Module R V] [Module.Free R V] [Module.Finite R V]
   [AddCancelCommMonoid B] {D : EffectiveCurveMonoid B}
-  {C : StableCurveCohomology R} {Omega : CurveClassGW R V B D C}
+  {C : StableCurveCohomology R} {Omega : GromovWittenTheory R V B D C}
   {P : PsiClasses C} {M : StableMapDescendants Omega}
   {I : StableCurveIntegration C} {b : Basis ι R V}
   {X : StabilizationBoundaryComparison P M}

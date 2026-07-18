@@ -1,6 +1,6 @@
-# CohFT design decisions before implementation
+# CohFT design-decision ledger
 
-This document records the architectural decisions that should be settled before implementing M3 and the full CohFT/GW layers. Decisions are discussed in the order listed below. A decision is marked **Settled** only after it has been explicitly accepted.
+This document records the architectural decisions settled before and during implementation of M3 and the full CohFT/GW layers. Decisions are discussed in the order listed below. A decision is marked **Settled** only after it has been explicitly accepted; later paragraphs record implementation consequences without rewriting the original choice.
 
 ## Decision summary
 
@@ -14,7 +14,7 @@ This document records the architectural decisions that should be settled before 
 | D6 | How are genera and label sets indexed? | Retain arbitrary finite label types and explicit `StableArity` proofs | **Settled** |
 | D7 | What are the directions and composition conventions for geometric maps? | Contravariant geometric pullbacks and covariant label renaming | **Settled** |
 | D8 | Is the state space graded? | Keep the bare CohFT state space ungraded; add grading in the GW extension | **Settled** |
-| D9 | How much coherence belongs in the first M3 interface? | Primitive maps and their immediate laws only; defer stable graphs | **Settled** |
+| D9 | How much coherence belongs in the first M3 interface? | Primitive maps in the core; stable graphs in a separate optional layer | **Settled** |
 | D10 | Where do low-genus geometric facts live? | Separate `GenusZeroGeometry` extension containing the `Mbar(0,3)` and `Mbar(0,4)` facts | **Settled** |
 | D11 | Is `H^0 = R` part of every cohomology system? | Use an optional `ConnectedDegreeZero` extension | **Settled** |
 | D12 | What validates the initial architecture? | End-to-end constant-system conversion and regression tests | **Settled** |
@@ -73,10 +73,7 @@ variable (R : Type*) [CommRing R] [Algebra ℚ R]
 
 Ordinary rational GW theory is obtained by taking `R = ℚ`. This retains the usual rational-valued interpretation while permitting scalar extension, Novikov and formal-series coefficients, and equivariant parameters. The already completed Frobenius/TFT layer remains generic over an arbitrary commutative ring.
 
-The stable-arity classification theorem currently passes through the full
-CohFT layer, so `TopologicalCohFT.classification` also carries the
-`Algebra ℚ R` hypothesis even though the lower Frobenius/TFT constructions do
-not intrinsically require it.
+The stable-arity classification theorem currently passes through the full CohFT layer, so `TopologicalCohFT.classification` also carries the `Algebra ℚ R` hypothesis even though the lower Frobenius/TFT constructions do not intrinsically require it.
 
 ### D5. Separating pullback and the even-even Kunneth sector
 
@@ -136,7 +133,7 @@ The first stable-curve system contains primitive operations together with the co
 - invariance of nonseparating gluing under exchange of its two node labels;
 - compatibility of separating gluing with exchanging the two components and applying the tensor-factor swap.
 
-General stable graphs and order-coherent graph pullbacks belong to the separate `StableGraph`/`StableGraphPullbacks` layer now implemented; they are intentionally not fields of the first M3 structure. Concrete contraction maps and their geometric compatibility remain obligations of an instance of that optional layer.
+General stable graphs and order-coherent graph pullbacks belong to the separate `StableGraph`/`StableGraphPullbacks` layer now implemented; they are intentionally not fields of the first M3 structure. Actual graph-contraction operations are not part of that layer, while concrete geometric graph pullbacks and their compatibility remain obligations of an optional `StableGraphPullbacks` instance.
 
 ### D10. Low-genus geometry
 
@@ -182,7 +179,7 @@ The Lean package exposes the energy map, positivity, and bounded-energy finitene
 
 For `Lambda = NovikovSeries D R`, D13 makes convolution on `Lambda` and on coefficient families `B → V` finite in every fixed curve class. It does not identify an arbitrary family `B → H` with the algebraic scalar extension `Lambda tensor[R] H`: the latter contains only finite sums of pure tensors unless `H` satisfies an additional finiteness hypothesis. The separating target has the analogous mismatch between `B → (H1 tensor[R] H2)` and `(Lambda tensor[R] H1) tensor[Lambda] (Lambda tensor[R] H2)`.
 
-The project therefore keeps cohomology-valued GW classes coefficientwise in `CurveClassGW`. It completes numerical coefficients and the finite-free state space, where convolution is canonical, and derives quantum products and equations coefficientwise. It does not claim that every abstract stable-curve target produces an ordinary `CohFT` over `Lambda`. A future geometric target may add finite-free or completed-tensor hypotheses and prove that stronger construction separately.
+The project therefore keeps cohomology-valued GW classes coefficientwise in `GromovWittenTheory`. It completes numerical coefficients and the finite-free state space, where convolution is canonical, and derives quantum products and equations coefficientwise. It does not claim that every abstract stable-curve target produces an ordinary `CohFT` over `Lambda`. A future geometric target may add finite-free or completed-tensor hypotheses and prove that stronger construction separately.
 
 ## Decision status
 

@@ -29,7 +29,7 @@ structure DescendantAncestorComparison
     {R V B : Type u} [CommRing R] [Algebra ℚ R]
     [AddCommGroup V] [Module R V] [Module.Free R V] [Module.Finite R V]
     [AddCancelCommMonoid B] {D : EffectiveCurveMonoid B}
-    {C : StableCurveCohomology R} {Omega : CurveClassGW R V B D C}
+    {C : StableCurveCohomology R} {Omega : GromovWittenTheory R V B D C}
     (P : PsiClasses C) (M : StableMapDescendants Omega) where
   /-- Residual difference. The field name is retained for API compatibility;
   no boundary-support property is part of its type. -/
@@ -48,7 +48,7 @@ namespace DescendantAncestorComparison
 variable {R V B : Type u} [CommRing R] [Algebra ℚ R]
   [AddCommGroup V] [Module R V] [Module.Free R V] [Module.Finite R V]
   [AddCancelCommMonoid B] {D : EffectiveCurveMonoid B}
-  {C : StableCurveCohomology R} {Omega : CurveClassGW R V B D C}
+  {C : StableCurveCohomology R} {Omega : GromovWittenTheory R V B D C}
   {P : PsiClasses C} {M : StableMapDescendants Omega}
 
 /-- The recorded residual is uniquely the descendant class minus the ancestor

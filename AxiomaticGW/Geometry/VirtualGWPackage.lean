@@ -11,7 +11,7 @@ public import AxiomaticGW.GW.Descendants.Equations
 # Algebraic output package for a future virtual GW realization
 
 This is the boundary between the axiomatic theory and future geometry. A
-geometric construction must supply a primary curve-class theory, stabilized
+geometric construction must supply a primary Gromov--Witten theory, stabilized
 stable-map descendants, and a descendant--ancestor residual decomposition.
 The package is only a carrier for those algebraic outputs: it neither
 constructs actual moduli stacks or virtual fundamental classes nor certifies
@@ -33,7 +33,7 @@ structure VirtualGWPackage
     [AddCancelCommMonoid B] (D : EffectiveCurveMonoid B)
     (C : StableCurveCohomology R) (P : PsiClasses C) where
   /-- Stored stabilized primary classes and their gluing laws. -/
-  primary : CurveClassGW R V B D C
+  primary : GromovWittenTheory R V B D C
   /-- Stable-map cotangent insertions pushed to stable curves. -/
   descendants : StableMapDescendants primary
   /-- Residual decomposition against stable-curve ancestors. -/
@@ -47,15 +47,15 @@ variable {R V B : Type u} [CommRing R] [Algebra ℚ R]
   {C : StableCurveCohomology R} {P : PsiClasses C}
 
 /-- Project the primary axiomatic GW theory stored in the package. -/
-def toCurveClassGW
+def toGromovWittenTheory
     (G : VirtualGWPackage (R := R) (V := V) (B := B) D C P) :
-    CurveClassGW R V B D C :=
+    GromovWittenTheory R V B D C :=
   G.primary
 
 /-- Project the stable-map descendant extension stored in the package. -/
 def toStableMapDescendants
     (G : VirtualGWPackage (R := R) (V := V) (B := B) D C P) :
-    StableMapDescendants G.toCurveClassGW :=
+    StableMapDescendants G.toGromovWittenTheory :=
   G.descendants
 
 /-- Project the recorded descendant--ancestor residual decomposition. -/

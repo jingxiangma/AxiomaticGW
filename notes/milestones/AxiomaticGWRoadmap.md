@@ -2,7 +2,7 @@
 
 This document gives the rough implementation order for the whole project. Detailed definitions and completion criteria belong in separate milestone notes when a phase becomes active.
 
-For an audit of reusable APIs in the pinned mathlib revision and the structures that still need to be implemented, see the [mathlib inventory for M3--M10](MathlibInventory.md). The architectural choices to settle before implementation are tracked in the [CohFT design-decision ledger](CohFTDesignDecisions.md).
+For an audit of reusable APIs in the pinned mathlib revision, project ownership, implemented layers, and remaining geometric gaps, see the [mathlib inventory for M3--M10](MathlibInventory.md). The settled architectural choices and their implementation consequences are tracked in the [CohFT design-decision ledger](CohFTDesignDecisions.md).
 
 The [mathematics-to-Lean map](../MathematicsToLean.md) records the correspondence between mathematical sections and implemented modules. Completed scope, verification evidence, and commit provenance are recorded in the [implementation progress record](ImplementationProgress.md).
 
@@ -26,7 +26,7 @@ Formalize symmetric perfect pairings, the canonical copairing, commutative Frobe
 
 [Mathematical background](../mathematics/M02TwoDimensionalTFT.md)
 
-Construct finite-labelled all-genus correlators, prove separating and nonseparating sewing, bundle the topological correlator theory, and obtain its scalar-valued topological CohFT restriction.
+Construct finite-labelled all-genus correlators, prove separating and nonseparating sewing, bundle the two-dimensional TFT, and obtain its scalar-valued topological CohFT restriction.
 
 **Status:** Complete for the current fixed-algebra API.
 
@@ -34,7 +34,7 @@ Construct finite-labelled all-genus correlators, prove separating and nonseparat
 
 [Mathematical background](../mathematics/M03StableCurvesAndGluing.md)
 
-Introduce an abstract even-cohomology system for stable-curve moduli spaces, modeled by ordinary commutative algebras graded by half cohomological degree. Include finite-label relabelling, forgetful maps, separating gluing, nonseparating gluing, and the compatibility identities needed by CohFTs. Add optional `GenusZeroGeometry` and `ConnectedDegreeZero` extensions for the special low-genus relations and the identifications $H^0(\overline{\mathcal M}_{g,S})\cong R$. Stable graphs and graph contraction can then package iterated gluing. Odd cohomology and Koszul signs are outside the project scope.
+Introduce an abstract even-cohomology system for stable-curve moduli spaces, modeled by ordinary commutative algebras graded by half cohomological degree. Include finite-label relabelling, forgetful maps, separating gluing, nonseparating gluing, and the compatibility identities needed by CohFTs. Add optional `GenusZeroGeometry` and `ConnectedDegreeZero` extensions for the special low-genus relations and the identifications $H^0(\overline{\mathcal M}_{g,S})\cong R$. Keep stable graphs in a separate layer for iterated gluing data; actual combinatorial edge contraction is not part of the current layer. Odd cohomology and Koszul signs are outside the project scope.
 
 **Status:** Complete for the primitive-map interface fixed by D9. All maps are degree-preserving, the immediate forget/glue coherence laws are present, and the constant model validates the interface. The separate stable-graph layer now provides finite stable graphs, vertex factors, arithmetic genus, complete edge orders, and optional order-independent graph pullbacks without strengthening `StableCurveCohomology`.
 
@@ -69,7 +69,7 @@ $$
 
 Formalize symmetry, the flat unit, splitting, genus reduction, grading, virtual dimension, effectivity, divisor data, and the appropriate degree-zero normalizations.
 
-`GradedStateSpace` factors the state-space grading, homogeneous unit, and degree compatibility of the pairing out of `GradedCohFT`. The coefficientwise `CurveClassGW` structure reuses that data without pretending that an arbitrary cohomology target admits an algebraic Novikov scalar extension; its `beta`-dependent virtual-dimension law belongs specifically to the GW layer.
+`GradedStateSpace` factors the state-space grading, homogeneous unit, and degree compatibility of the pairing out of `GradedCohFT`. The coefficientwise `GromovWittenTheory` structure reuses that data without pretending that an arbitrary cohomology target admits an algebraic Novikov scalar extension; its `beta`-dependent virtual-dimension law belongs specifically to the GW layer.
 
 **Status:** Complete for the primary axiomatic core. Positive locally finite effective classes, finite splittings, graded primary classes, relabelling, unit, separating and nonseparating gluing, normalization, virtual degree, negative-degree vanishing, and the optional primary divisor axiom are implemented. The beta-zero base-ring theory is the regression model.
 
@@ -79,7 +79,7 @@ Formalize symmetry, the flat unit, splitting, genus reduction, grading, virtual 
 
 Package the coefficientwise curve-class theory using the beta-preserving completed monoid ring fixed by D13. Define small and big quantum products and prove associativity and WDVV.
 
-**Status:** Complete for the coefficientwise scope fixed by D14. `NovikovSeries` is the beta-preserving completed monoid ring, with proven commutative-ring laws, monomial multiplication, and an injective finite monoid-algebra map. Fixed-beta products and small associativity are derived directly from `CurveClassGW` gluing. The formal big product is commutative and specializes to the small product; the optional `GenusZeroHigherBoundary` supplies scalar higher WDVV and yields coefficientwise associativity at arbitrary primary background. The stable primary potential is defined, while its full formal third-derivative characterization remains open.
+**Status:** Complete for the coefficientwise scope fixed by D14. `NovikovSeries` is the beta-preserving completed monoid ring, with proven commutative-ring laws, monomial multiplication, and an injective finite monoid-algebra map. Fixed-beta products and small associativity are derived directly from `GromovWittenTheory` gluing. The big quantum product is commutative and specializes to the small quantum product; the optional `GenusZeroWDVV` supplies scalar genus-zero WDVV at arbitrary primary background and yields coefficientwise associativity. The stable primary potential is defined, while its full formal third-derivative characterization remains open.
 
 ## M8. Descendants and descendant--ancestor comparison
 

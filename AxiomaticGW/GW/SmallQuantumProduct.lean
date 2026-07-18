@@ -10,7 +10,7 @@ public import AxiomaticGW.CohFT.Frobenius
 public import AxiomaticGW.GW.Basic
 
 /-!
-# Quantum products
+# Small quantum product
 
 The curve-class theory determines one three-point product coefficient for each
 effective class. Separating gluing and the four-point boundary relation imply
@@ -23,7 +23,7 @@ namespace AxiomaticGW
 
 universe u
 
-namespace CurveClassGW
+namespace GromovWittenTheory
 
 variable {R V B : Type u} [CommRing R] [Algebra ℚ R]
   [AddCommGroup V] [Module R V] [Module.Free R V] [Module.Finite R V]
@@ -34,14 +34,14 @@ private def optionFinTwoEquivFinThree : Option (Fin 2) ≃ Fin 3 :=
   (finSuccEquiv 2).symm
 
 /-- The scalar genus-zero three-point class in curve class `beta`. -/
-noncomputable def threePoint (Omega : CurveClassGW R V B D C)
+noncomputable def threePoint (Omega : GromovWittenTheory R V B D C)
     (G : GenusZeroGeometry C) (beta : B) :
     MultilinearMap R (fun _ : Fin 3 ↦ V) R :=
   G.mbarZeroThree.toLinearMap.compMultilinearMap
     (Omega.omega 0 (Fin 3) StableArity.zero_fin_three beta)
 
 /-- Raise the last input of a fixed three-point coefficient with the metric. -/
-noncomputable def smallProductCoefficient (Omega : CurveClassGW R V B D C)
+noncomputable def smallQuantumProductCoefficient (Omega : GromovWittenTheory R V B D C)
     (G : GenusZeroGeometry C) (beta : B) : V →ₗ[R] V →ₗ[R] V :=
   (LinearMap.compRight R
       (LinearMap.compRight R Omega.pairing.toDual.symm.toLinearMap)).comp
@@ -52,29 +52,29 @@ noncomputable def smallProductCoefficient (Omega : CurveClassGW R V B D C)
 
 /-- The coefficient product is characterized by the beta-resolved
 three-point invariant. -/
-theorem pairing_smallProductCoefficient (Omega : CurveClassGW R V B D C)
+theorem pairing_smallQuantumProductCoefficient (Omega : GromovWittenTheory R V B D C)
     (G : GenusZeroGeometry C) (beta : B) (x y z : V) :
-    Omega.pairing.form (Omega.smallProductCoefficient G beta x y) z =
+    Omega.pairing.form (Omega.smallQuantumProductCoefficient G beta x y) z =
       Omega.threePoint G beta (Fin.cons x (Fin.cons y fun _ ↦ z)) := by
   rw [← Omega.pairing.toDual_apply]
-  simp [smallProductCoefficient, SymmetricPerfectPairing.finTwoToBilin_apply]
+  simp [smallQuantumProductCoefficient, SymmetricPerfectPairing.finTwoToBilin_apply]
 
 /-- The small quantum product of two ordinary states, retained coefficientwise
 as a Novikov series with values in the state space. -/
-noncomputable def smallProductSeries (Omega : CurveClassGW R V B D C)
+noncomputable def smallQuantumProduct (Omega : GromovWittenTheory R V B D C)
     (G : GenusZeroGeometry C) (x y : V) : NovikovSeries D V :=
-  fun beta ↦ Omega.smallProductCoefficient G beta x y
+  fun beta ↦ Omega.smallQuantumProductCoefficient G beta x y
 
 @[simp]
-theorem smallProductSeries_apply (Omega : CurveClassGW R V B D C)
+theorem smallQuantumProduct_apply (Omega : GromovWittenTheory R V B D C)
     (G : GenusZeroGeometry C) (x y : V) (beta : B) :
-    Omega.smallProductSeries G x y beta =
-      Omega.smallProductCoefficient G beta x y := rfl
+    Omega.smallQuantumProduct G x y beta =
+      Omega.smallQuantumProductCoefficient G beta x y := rfl
 
 /-- The two four-point boundary presentations agree after summing over all
 splittings of a fixed curve class. This is coefficientwise, cohomology-valued
 WDVV. -/
-theorem pairContractTarget_wdvv (Omega : CurveClassGW R V B D C)
+theorem pairContractTarget_wdvv (Omega : GromovWittenTheory R V B D C)
     (G : GenusZeroGeometry C) (beta : B) :
     ((∑ split ∈ D.splittings beta,
         Omega.pairing.pairContractTarget
@@ -120,7 +120,7 @@ theorem pairContractTarget_wdvv (Omega : CurveClassGW R V B D C)
       StableArity.zero_option_fin_two StableArity.zero_option_fin_two) hrel)
 
 /-- The scalar three-point coefficient is invariant under relabelling. -/
-theorem threePoint_relabel (Omega : CurveClassGW R V B D C)
+theorem threePoint_relabel (Omega : GromovWittenTheory R V B D C)
     (G : GenusZeroGeometry C) (beta : B) (e : Equiv.Perm (Fin 3)) :
     (Omega.threePoint G beta).domDomCongr e = Omega.threePoint G beta := by
   ext a
@@ -139,7 +139,7 @@ theorem threePoint_relabel (Omega : CurveClassGW R V B D C)
     (congrArg G.mbarZeroThree h)
 
 /-- Symmetry of the first two inputs of a three-point GW coefficient. -/
-theorem threePoint_swap_first (Omega : CurveClassGW R V B D C)
+theorem threePoint_swap_first (Omega : GromovWittenTheory R V B D C)
     (G : GenusZeroGeometry C) (beta : B) (x y z : V) :
     Omega.threePoint G beta (Fin.cons x (Fin.cons y fun _ ↦ z)) =
       Omega.threePoint G beta (Fin.cons y (Fin.cons x fun _ ↦ z)) := by
@@ -154,7 +154,7 @@ theorem threePoint_swap_first (Omega : CurveClassGW R V B D C)
   fin_cases i <;> rfl
 
 /-- Symmetry of the last two inputs of a three-point GW coefficient. -/
-theorem threePoint_swap_last (Omega : CurveClassGW R V B D C)
+theorem threePoint_swap_last (Omega : GromovWittenTheory R V B D C)
     (G : GenusZeroGeometry C) (beta : B) (x y z : V) :
     Omega.threePoint G beta (Fin.cons x (Fin.cons y fun _ ↦ z)) =
       Omega.threePoint G beta (Fin.cons x (Fin.cons z fun _ ↦ y)) := by
@@ -169,32 +169,32 @@ theorem threePoint_swap_last (Omega : CurveClassGW R V B D C)
   fin_cases i <;> rfl
 
 /-- Every fixed curve-class product coefficient is commutative. -/
-theorem smallProductCoefficient_comm
-    (Omega : CurveClassGW R V B D C) (G : GenusZeroGeometry C)
+theorem smallQuantumProductCoefficient_comm
+    (Omega : GromovWittenTheory R V B D C) (G : GenusZeroGeometry C)
     (beta : B) (x y : V) :
-    Omega.smallProductCoefficient G beta x y =
-      Omega.smallProductCoefficient G beta y x := by
+    Omega.smallQuantumProductCoefficient G beta x y =
+      Omega.smallQuantumProductCoefficient G beta y x := by
   apply Omega.pairing.toDual.injective
   ext z
   simp only [Omega.pairing.toDual_apply,
-    Omega.pairing_smallProductCoefficient]
+    Omega.pairing_smallQuantumProductCoefficient]
   exact Omega.threePoint_swap_first G beta x y z
 
 /-- Frobenius invariance holds coefficientwise. -/
-theorem pairing_smallProductCoefficient_assoc
-    (Omega : CurveClassGW R V B D C) (G : GenusZeroGeometry C)
+theorem pairing_smallQuantumProductCoefficient_assoc
+    (Omega : GromovWittenTheory R V B D C) (G : GenusZeroGeometry C)
     (beta : B) (x y z : V) :
-    Omega.pairing.form (Omega.smallProductCoefficient G beta x y) z =
-      Omega.pairing.form x (Omega.smallProductCoefficient G beta y z) := by
-  rw [Omega.pairing_smallProductCoefficient]
+    Omega.pairing.form (Omega.smallQuantumProductCoefficient G beta x y) z =
+      Omega.pairing.form x (Omega.smallQuantumProductCoefficient G beta y z) := by
+  rw [Omega.pairing_smallQuantumProductCoefficient]
   rw [Omega.pairing.isSymm.eq]
-  rw [Omega.pairing_smallProductCoefficient]
+  rw [Omega.pairing_smallQuantumProductCoefficient]
   exact (Omega.threePoint_swap_first G beta x y z).trans
     (Omega.threePoint_swap_last G beta y x z)
 
 /-- The beta-zero three-point coefficient with a unit insertion is the
 metric. -/
-theorem threePoint_unit_zero (Omega : CurveClassGW R V B D C)
+theorem threePoint_unit_zero (Omega : GromovWittenTheory R V B D C)
     (G : GenusZeroGeometry C) (x y : V) :
     Omega.threePoint G 0
         (Fin.cons Omega.unit (Fin.cons x fun _ ↦ y)) =
@@ -228,7 +228,7 @@ theorem threePoint_unit_zero (Omega : CurveClassGW R V B D C)
 
 /-- Positive curve-class three-point coefficients vanish after a unit
 insertion. -/
-theorem threePoint_unit_of_ne (Omega : CurveClassGW R V B D C)
+theorem threePoint_unit_of_ne (Omega : GromovWittenTheory R V B D C)
     (G : GenusZeroGeometry C) {beta : B} (hbeta : beta ≠ 0)
     (x y : V) :
     Omega.threePoint G beta
@@ -261,40 +261,40 @@ theorem threePoint_unit_of_ne (Omega : CurveClassGW R V B D C)
     (Omega.normalization_nonzero beta hbeta ![x, y])).trans (by simp)
 
 /-- The beta-zero product coefficient has the flat identity. -/
-theorem unit_smallProductCoefficient_zero
-    (Omega : CurveClassGW R V B D C) (G : GenusZeroGeometry C)
-    (x : V) : Omega.smallProductCoefficient G 0 Omega.unit x = x := by
+theorem unit_smallQuantumProductCoefficient_zero
+    (Omega : GromovWittenTheory R V B D C) (G : GenusZeroGeometry C)
+    (x : V) : Omega.smallQuantumProductCoefficient G 0 Omega.unit x = x := by
   apply Omega.pairing.toDual.injective
   ext y
   rw [Omega.pairing.toDual_apply, Omega.pairing.toDual_apply,
-    Omega.pairing_smallProductCoefficient]
+    Omega.pairing_smallQuantumProductCoefficient]
   exact Omega.threePoint_unit_zero G x y
 
 /-- Positive product coefficients vanish after inserting the flat identity. -/
-theorem unit_smallProductCoefficient_of_ne
-    (Omega : CurveClassGW R V B D C) (G : GenusZeroGeometry C)
+theorem unit_smallQuantumProductCoefficient_of_ne
+    (Omega : GromovWittenTheory R V B D C) (G : GenusZeroGeometry C)
     {beta : B} (hbeta : beta ≠ 0) (x : V) :
-    Omega.smallProductCoefficient G beta Omega.unit x = 0 := by
+    Omega.smallQuantumProductCoefficient G beta Omega.unit x = 0 := by
   apply Omega.pairing.toDual.injective
   ext y
   rw [Omega.pairing.toDual_apply, Omega.pairing.toDual_apply,
-    Omega.pairing_smallProductCoefficient, map_zero]
+    Omega.pairing_smallQuantumProductCoefficient, map_zero]
   exact Omega.threePoint_unit_of_ne G hbeta x y
 
-/-- The completed small-product series has only its zero curve-class
+/-- The completed small quantum product has only its zero curve-class
 coefficient after inserting the flat identity. -/
-theorem smallProductSeries_unit
-    (Omega : CurveClassGW R V B D C) (G : GenusZeroGeometry C)
+theorem smallQuantumProduct_unit
+    (Omega : GromovWittenTheory R V B D C) (G : GenusZeroGeometry C)
     [DecidableEq B] (x : V) (beta : B) :
-    Omega.smallProductSeries G Omega.unit x beta =
+    Omega.smallQuantumProduct G Omega.unit x beta =
       if beta = 0 then x else 0 := by
   classical
   by_cases hbeta : beta = 0
   · subst beta
-    rw [if_pos rfl, Omega.smallProductSeries_apply,
-      Omega.unit_smallProductCoefficient_zero G]
-  · rw [if_neg hbeta, Omega.smallProductSeries_apply,
-      Omega.unit_smallProductCoefficient_of_ne G hbeta]
+    rw [if_pos rfl, Omega.smallQuantumProduct_apply,
+      Omega.unit_smallQuantumProductCoefficient_zero G]
+  · rw [if_neg hbeta, Omega.smallQuantumProduct_apply,
+      Omega.unit_smallQuantumProductCoefficient_of_ne G hbeta]
 
 private noncomputable def threePointScalar (G : GenusZeroGeometry C) :
     C.H 0 (Option (Fin 2)) →ₐ[R] R :=
@@ -303,7 +303,7 @@ private noncomputable def threePointScalar (G : GenusZeroGeometry C) :
       StableArity.zero_fin_three optionFinTwoEquivFinThree).toAlgHom
 
 private theorem threePointScalar_omega_apply
-    (Omega : CurveClassGW R V B D C) (G : GenusZeroGeometry C)
+    (Omega : GromovWittenTheory R V B D C) (G : GenusZeroGeometry C)
     (beta : B) (u x y : V) :
     threePointScalar G
         (Omega.omega 0 (Option (Fin 2)) StableArity.zero_option_fin_two beta
@@ -339,7 +339,7 @@ private theorem threePointScalar_omega_apply
   exact congrArg G.mbarZeroThree h
 
 private theorem scalarized_pairContract_products
-    (Omega : CurveClassGW R V B D C) (G : GenusZeroGeometry C)
+    (Omega : GromovWittenTheory R V B D C) (G : GenusZeroGeometry C)
     (beta₁ beta₂ : B) (x y z w : V) :
     (Algebra.TensorProduct.lift (threePointScalar G) (threePointScalar G)
       (fun _ _ ↦ .all _ _))
@@ -350,8 +350,8 @@ private theorem scalarized_pairContract_products
             StableArity.zero_option_fin_two beta₂)
           (Sum.elim ![x, y] ![z, w])) =
       Omega.pairing.form
-        (Omega.smallProductCoefficient G beta₁ x y)
-        (Omega.smallProductCoefficient G beta₂ z w) := by
+        (Omega.smallQuantumProductCoefficient G beta₁ x y)
+        (Omega.smallQuantumProductCoefficient G beta₂ z w) := by
   change ((Algebra.TensorProduct.lift (threePointScalar G) (threePointScalar G)
       (fun _ _ ↦ .all _ _)).toLinearMap.compMultilinearMap
         (Omega.pairing.pairContractTarget
@@ -364,8 +364,8 @@ private theorem scalarized_pairContract_products
   rw [SymmetricPerfectPairing.pairContract_apply,
     SymmetricPerfectPairing.contractTwo_apply]
   rw [← Omega.pairing.contract_toDual_mul_toDual
-    (Omega.smallProductCoefficient G beta₁ x y)
-    (Omega.smallProductCoefficient G beta₂ z w)]
+    (Omega.smallQuantumProductCoefficient G beta₁ x y)
+    (Omega.smallQuantumProductCoefficient G beta₂ z w)]
   congr 1
   ext u v
   simp only [TensorProduct.AlgebraTensorModule.curry_apply,
@@ -403,29 +403,29 @@ private theorem scalarized_pairContract_products
       threePointScalar G
         (Omega.omega 0 (Option (Fin 2)) StableArity.zero_option_fin_two beta₂
           (fun | none => v | some i => ![z, w] i)) =
-    Omega.pairing.form (Omega.smallProductCoefficient G beta₁ x y) u *
-      Omega.pairing.form (Omega.smallProductCoefficient G beta₂ z w) v
+    Omega.pairing.form (Omega.smallQuantumProductCoefficient G beta₁ x y) u *
+      Omega.pairing.form (Omega.smallQuantumProductCoefficient G beta₂ z w) v
   rw [threePointScalar_omega_apply, threePointScalar_omega_apply]
   rw [Omega.threePoint_swap_first G beta₁ u x y,
     Omega.threePoint_swap_last G beta₁ x u y,
-    ← Omega.pairing_smallProductCoefficient]
+    ← Omega.pairing_smallQuantumProductCoefficient]
   rw [Omega.threePoint_swap_first G beta₂ v z w,
     Omega.threePoint_swap_last G beta₂ z v w,
-    ← Omega.pairing_smallProductCoefficient]
+    ← Omega.pairing_smallQuantumProductCoefficient]
 
 /-- Scalar coefficientwise WDVV. The finite sums are exactly the coefficient
 of the two Novikov products at `beta`. -/
-theorem smallProductCoefficient_wdvv
-    (Omega : CurveClassGW R V B D C) (G : GenusZeroGeometry C)
+theorem smallQuantumProductCoefficient_wdvv
+    (Omega : GromovWittenTheory R V B D C) (G : GenusZeroGeometry C)
     (beta : B) (x y z w : V) :
     (∑ split ∈ D.splittings beta,
       Omega.pairing.form
-        (Omega.smallProductCoefficient G split.1 x y)
-        (Omega.smallProductCoefficient G split.2 z w)) =
+        (Omega.smallQuantumProductCoefficient G split.1 x y)
+        (Omega.smallQuantumProductCoefficient G split.2 z w)) =
       ∑ split ∈ D.splittings beta,
         Omega.pairing.form
-          (Omega.smallProductCoefficient G split.1 x z)
-          (Omega.smallProductCoefficient G split.2 y w) := by
+          (Omega.smallQuantumProductCoefficient G split.1 x z)
+          (Omega.smallQuantumProductCoefficient G split.2 y w) := by
   let a : Fin 2 ⊕ Fin 2 → V := Sum.elim ![x, y] ![z, w]
   have h := congrArg (fun f ↦ f a) (Omega.pairContractTarget_wdvv G beta)
   have hscalar := congrArg
@@ -444,15 +444,15 @@ theorem smallProductCoefficient_wdvv
 /-- Associativity of the small quantum product, stated at every Novikov
 coefficient. The two finite sums are the coefficients of `(x * y) * z` and
 `x * (y * z)`. -/
-theorem smallProductCoefficient_assoc
-    (Omega : CurveClassGW R V B D C) (G : GenusZeroGeometry C)
+theorem smallQuantumProductCoefficient_assoc
+    (Omega : GromovWittenTheory R V B D C) (G : GenusZeroGeometry C)
     (beta : B) (x y z : V) :
     (∑ split ∈ D.splittings beta,
-      Omega.smallProductCoefficient G split.2
-        (Omega.smallProductCoefficient G split.1 x y) z) =
+      Omega.smallQuantumProductCoefficient G split.2
+        (Omega.smallQuantumProductCoefficient G split.1 x y) z) =
       ∑ split ∈ D.splittings beta,
-        Omega.smallProductCoefficient G split.2 x
-          (Omega.smallProductCoefficient G split.1 y z) := by
+        Omega.smallQuantumProductCoefficient G split.2 x
+          (Omega.smallQuantumProductCoefficient G split.1 y z) := by
   apply Omega.pairing.toDual.injective
   ext w
   rw [Omega.pairing.toDual_apply, Omega.pairing.toDual_apply]
@@ -460,42 +460,42 @@ theorem smallProductCoefficient_assoc
   calc
     (∑ split ∈ D.splittings beta,
         Omega.pairing.form
-          (Omega.smallProductCoefficient G split.2
-            (Omega.smallProductCoefficient G split.1 x y) z) w) =
+          (Omega.smallQuantumProductCoefficient G split.2
+            (Omega.smallQuantumProductCoefficient G split.1 x y) z) w) =
       ∑ split ∈ D.splittings beta,
         Omega.pairing.form
-          (Omega.smallProductCoefficient G split.1 x y)
-          (Omega.smallProductCoefficient G split.2 z w) := by
+          (Omega.smallQuantumProductCoefficient G split.1 x y)
+          (Omega.smallQuantumProductCoefficient G split.2 z w) := by
         apply Finset.sum_congr rfl
         intro split _
-        exact Omega.pairing_smallProductCoefficient_assoc G split.2
-          (Omega.smallProductCoefficient G split.1 x y) z w
+        exact Omega.pairing_smallQuantumProductCoefficient_assoc G split.2
+          (Omega.smallQuantumProductCoefficient G split.1 x y) z w
     _ = ∑ split ∈ D.splittings beta,
         Omega.pairing.form
-          (Omega.smallProductCoefficient G split.1 y z)
-          (Omega.smallProductCoefficient G split.2 x w) := by
-        rw [Omega.smallProductCoefficient_wdvv G beta y z x w]
+          (Omega.smallQuantumProductCoefficient G split.1 y z)
+          (Omega.smallQuantumProductCoefficient G split.2 x w) := by
+        rw [Omega.smallQuantumProductCoefficient_wdvv G beta y z x w]
         apply Finset.sum_congr rfl
         intro split _
-        rw [Omega.smallProductCoefficient_comm G split.1 y x]
+        rw [Omega.smallQuantumProductCoefficient_comm G split.1 y x]
     _ = ∑ split ∈ D.splittings beta,
         Omega.pairing.form
-          (Omega.smallProductCoefficient G split.2 x
-            (Omega.smallProductCoefficient G split.1 y z)) w := by
+          (Omega.smallQuantumProductCoefficient G split.2 x
+            (Omega.smallQuantumProductCoefficient G split.1 y z)) w := by
         apply Finset.sum_congr rfl
         intro split _
-        let q := Omega.smallProductCoefficient G split.1 y z
+        let q := Omega.smallQuantumProductCoefficient G split.1 y z
         calc
           Omega.pairing.form q
-              (Omega.smallProductCoefficient G split.2 x w) =
+              (Omega.smallQuantumProductCoefficient G split.2 x w) =
               Omega.pairing.form
-                (Omega.smallProductCoefficient G split.2 q x) w :=
-            (Omega.pairing_smallProductCoefficient_assoc G split.2
+                (Omega.smallQuantumProductCoefficient G split.2 q x) w :=
+            (Omega.pairing_smallQuantumProductCoefficient_assoc G split.2
               q x w).symm
           _ = Omega.pairing.form
-              (Omega.smallProductCoefficient G split.2 x q) w := by
-            rw [Omega.smallProductCoefficient_comm G split.2 q x]
+              (Omega.smallQuantumProductCoefficient G split.2 x q) w := by
+            rw [Omega.smallQuantumProductCoefficient_comm G split.2 q x]
 
-end CurveClassGW
+end GromovWittenTheory
 
 end AxiomaticGW

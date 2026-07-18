@@ -16,7 +16,7 @@ public import AxiomaticGW.GW.Descendants.Stabilization
 public import AxiomaticGW.GW.Descendants.Equations
 public import AxiomaticGW.Geometry.VirtualGWPackage
 public import AxiomaticGW.Linear.Contraction
-public import AxiomaticGW.Point.Descendants
+public import AxiomaticGW.PointTarget.Descendants
 public import AxiomaticGW.TFT.Correlator
 public import AxiomaticGW.TFT.Classification
 public import AxiomaticGW.TFT.Examples

@@ -1,6 +1,6 @@
 # M10. Geometric realization
 
-The axiomatic theory becomes geometric when its classes are constructed from moduli spaces of stable maps and their virtual fundamental classes. This phase should first be expressed through an abstract realization interface rather than by immediately formalizing the entire construction of virtual classes.
+The axiomatic theory becomes geometric when its classes are constructed from moduli spaces of stable maps and their virtual fundamental classes. The repository expresses the first implementation boundary through an abstract algebraic carrier rather than pretending to construct virtual classes.
 
 ## 1. Stable maps
 
@@ -70,7 +70,7 @@ $$
 
 Such a construction theorem would mark a precise boundary between axiomatic formalization and virtual intersection theory; it is not currently present.
 
-In Lean, `VirtualGWPackage` is deliberately only an algebraic output carrier. It does not introduce placeholder types for stacks or virtual cycles that no theorem can use; instead it exposes projections to stored `CurveClassGW`, `StableMapDescendants`, and `DescendantAncestorComparison` structures. Inhabiting the carrier does not certify that these fields arise from geometry.
+In Lean, `VirtualGWPackage` is deliberately only an algebraic output carrier. It does not introduce placeholder types for stacks or virtual cycles that no theorem can use; instead it exposes projections to stored `GromovWittenTheory`, `StableMapDescendants`, and `DescendantAncestorComparison` structures. The separate optional `StabilizationBoundaryComparison` package strengthens the weak residual with explicit positive-degree rational-tail data, but neither package certifies that its fields arise from geometry.
 
 ## 5. Longer-term geometry
 

@@ -59,14 +59,14 @@ structure TopologicalCohFT (R V : Type*) [CommRing R] [AddCommGroup V]
         (fun | none => unit | some i => a i) =
       pairing.form (a 0) (a 1)
 
-namespace TopologicalCorrelatorTheory
+namespace TwoDimensionalTFT
 
 variable {R V : Type*} [CommRing R] [AddCommGroup V] [Module R V]
   [Module.Free R V] [Module.Finite R V]
 
-/-- Restrict an all-arity topological correlator theory to its stable arities,
+/-- Restrict a two-dimensional TFT to its stable arities,
 producing a scalar-valued topological CohFT. -/
-noncomputable def toTopologicalCohFT (T : TopologicalCorrelatorTheory R V) :
+noncomputable def toTopologicalCohFT (T : TwoDimensionalTFT R V) :
     TopologicalCohFT R V where
   pairing := T.pairing
   unit := T.unit
@@ -82,7 +82,7 @@ noncomputable def toTopologicalCohFT (T : TopologicalCorrelatorTheory R V) :
     funext x
     rcases x with _ | i <;> rfl
 
-end TopologicalCorrelatorTheory
+end TwoDimensionalTFT
 
 namespace CommFrobeniusAlgebra
 
@@ -93,7 +93,7 @@ variable {R A : Type*} [CommRing R] [CommRing A] [Algebra R A]
 algebra. -/
 noncomputable def toTopologicalCohFT (F : CommFrobeniusAlgebra R A) :
     TopologicalCohFT R A :=
-  F.toTopologicalCorrelatorTheory.toTopologicalCohFT
+  F.toTwoDimensionalTFT.toTopologicalCohFT
 
 end CommFrobeniusAlgebra
 

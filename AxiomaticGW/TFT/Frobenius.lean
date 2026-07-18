@@ -9,7 +9,7 @@ public import AxiomaticGW.TFT.Basic
 public import AxiomaticGW.TFT.Sewing
 
 /-!
-# The correlator theory associated to a Frobenius algebra
+# The two-dimensional TFT associated to a Frobenius algebra
 
 This file bundles the correlators of a finite-free commutative Frobenius
 algebra and the gluing theorems already proved for them.
@@ -24,11 +24,11 @@ namespace CommFrobeniusAlgebra
 variable {R A : Type*} [CommRing R] [CommRing A] [Algebra R A]
   [Module.Free R A] [Module.Finite R A]
 
-/-- The topological correlator theory canonically associated to a
-finite-free commutative Frobenius algebra. -/
-noncomputable def toTopologicalCorrelatorTheory
+/-- The two-dimensional TFT canonically associated to a finite-free
+commutative Frobenius algebra. -/
+noncomputable def toTwoDimensionalTFT
     (F : CommFrobeniusAlgebra R A) :
-    TopologicalCorrelatorTheory R A where
+    TwoDimensionalTFT R A where
   pairing := F.pairing
   unit := 1
   correlator := F.correlator

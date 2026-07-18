@@ -10,7 +10,7 @@ $$
 \psi_i=c_1(L_i)\in H^2(\overline{\mathcal M}_{g,S}).
 $$
 
-These are stable-curve classes. They will later be distinguished from the cotangent-line classes on moduli spaces of stable maps.
+These are stable-curve classes. The descendant layer distinguishes them from the cotangent-line classes on moduli spaces of stable maps.
 
 The forgetful map satisfies a correction formula of the form
 

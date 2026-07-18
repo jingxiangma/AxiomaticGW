@@ -9,7 +9,7 @@ public import AxiomaticGW.Coefficients.EffectiveCurveClass
 public import AxiomaticGW.CohFT.Ancestors
 
 /-!
-# Curve-class-resolved primary Gromov--Witten theories
+# Primary Gromov--Witten theory
 
 The class family is coefficientwise in an effective curve class. Numerical
 and finite-free state-valued operations support Novikov completion, while an
@@ -28,9 +28,10 @@ def GWOutputDegree (dimension g inputDegree q : ℕ) (c1Degree : ℤ) : Prop :=
   (q : ℤ) + (dimension : ℤ) + c1Degree =
     (inputDegree : ℤ) + (g : ℤ) * (dimension : ℤ)
 
-/-- A full all-genus primary GW theory resolved by effective numerical curve
-class. -/
-structure CurveClassGW (R V B : Type u) [CommRing R] [Algebra ℚ R]
+/-- An all-genus primary Gromov--Witten theory resolved by effective numerical
+curve class. This is an axiomatic class package; it does not construct
+stable-map spaces or virtual fundamental classes. -/
+structure GromovWittenTheory (R V B : Type u) [CommRing R] [Algebra ℚ R]
     [AddCommGroup V] [Module R V] [Module.Free R V] [Module.Finite R V]
     [AddCancelCommMonoid B] (D : EffectiveCurveMonoid B)
     (C : StableCurveCohomology R) where
@@ -106,7 +107,7 @@ forgetful pushforward and target-specific divisor--curve pairing data. -/
 structure GWDivisorAxiom {R V B : Type u} [CommRing R] [Algebra ℚ R]
     [AddCommGroup V] [Module R V] [Module.Free R V] [Module.Finite R V]
     [AddCancelCommMonoid B] {D : EffectiveCurveMonoid B}
-    {C : StableCurveCohomology R} (Omega : CurveClassGW R V B D C)
+    {C : StableCurveCohomology R} (Omega : GromovWittenTheory R V B D C)
     {I : StableCurveIntegration C} (F : ForgetfulPushforward C I) where
   /-- Pairing between divisor states and effective curve classes. -/
   divisorPairing : Omega.graded.degree 1 →ₗ[R] (B →+ R)
