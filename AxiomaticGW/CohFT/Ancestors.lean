@@ -34,9 +34,9 @@ noncomputable def multiplyPsi (P : PsiClasses C)
   toFun x := x * P.monomial g S h k
   map_add' x y := add_mul x y _
   map_smul' r x := by
-    simp [Algebra.smul_def, mul_assoc]
+    simp only [Algebra.smul_def, mul_assoc, RingHom.id_apply]
 
-/-- Numerical ancestor correlator with descendant powers `k`. -/
+/-- Numerical ancestor correlator with cotangent powers `k`. -/
 noncomputable def ancestor (Ω : CohFT R V C) (P : PsiClasses C)
     (I : StableCurveIntegration C) (g : ℕ) (S : Type) [Fintype S]
     (h : StableArity g S) (k : S → ℕ) :
@@ -56,7 +56,7 @@ theorem ancestor_zero_apply (Ω : CohFT R V C) (P : PsiClasses C)
     (h : StableArity g S) (a : S → V) :
     Ω.ancestor P I g S h (fun _ ↦ 0) a =
       I.integrate g S h (Ω.omega g S h a) := by
-  simp [ancestor_apply]
+  simp only [ancestor_apply, PsiClasses.monomial_zero, mul_one]
 
 /-- Ancestor correlators are invariant under simultaneous relabelling of
 markings, insertion powers, and state-space inputs. -/
@@ -84,10 +84,15 @@ variable (R : Type u) [CommRing R] [Algebra ℚ R]
 noncomputable def psiClasses : PsiClasses (constantStableCurveCohomology R) where
   psi := fun _ _ _ _ _ ↦ 0
   psi_degree := by intros; exact Submodule.zero_mem _
-  rename_psi := by intros; simp
-  nonseparating_psi := by intros; simp
-  separating_psi_left := by intros; simp
-  separating_psi_right := by intros; simp
+  rename_psi := by intros; simp only [AlgEquiv.coe_refl, id_eq]
+  nonseparating_psi := by intros; simp only [AlgHom.coe_id, id_eq]
+  separating_psi_left := by
+    intros
+    simp only [Algebra.TensorProduct.includeLeft_apply, TensorProduct.zero_tmul]
+  separating_psi_right := by
+    intros
+    simp only [Algebra.TensorProduct.includeLeft_apply, TensorProduct.zero_tmul,
+      TensorProduct.tmul_zero]
 
 /-- Integration in the constant target is the identity exactly in complex
 dimension zero and is zero otherwise. -/
@@ -97,7 +102,7 @@ noncomputable def integrate (g : ℕ) (S : Type) [Fintype S] : R →ₗ[R] R :=
 omit [Algebra ℚ R] in
 @[simp]
 theorem integrate_zero_fin_three : integrate R 0 (Fin 3) = LinearMap.id := by
-  simp [integrate]
+  simp only [integrate, StableArity.dimension_zero_fin_three, ↓reduceIte]
 
 /-- Top-degree integration for the constant stable-curve target. -/
 noncomputable def integration :
@@ -109,12 +114,13 @@ noncomputable def integration :
     · have hd0 : d ≠ 0 := by
         intro hd'
         apply hd
-        simpa [hd'] using hdim.symm
+        simpa only [hd'] using hdim.symm
       have hx0 : x = 0 := by
-        simpa [constantDegree, hd0] using hx
+        simpa only [constantDegree, hd0, ↓reduceIte, Submodule.mem_bot]
+          using hx
       subst x
-      simp [integrate]
-    · simp [integrate, hdim]
+      simp only [integrate, map_zero]
+    · simp only [integrate, hdim, ↓reduceIte, LinearMap.zero_apply]
   integrate_rename := by
     intro g S T _ _ hS hT e x
     change integrate R g T x = integrate R g S x
@@ -129,18 +135,24 @@ noncomputable def forgetfulPushforward :
   push_rename := by intros; rfl
   push_degree := by intros; exact Submodule.zero_mem _
   push_eq_zero_of_degree_zero := by intros; rfl
-  projection_formula := by intros; simp
+  projection_formula := by
+    intros
+    simp only [AlgHom.coe_id, id_eq, LinearMap.zero_apply, mul_zero]
   integrate_push := by
     intro g S _ h x
     change integrate R g S 0 = integrate R g (Option S) x
-    simp [integrate, StableArity.dimension_option h]
+    simp only [integrate, map_zero, StableArity.dimension_option h,
+      Nat.add_eq_zero_iff, one_ne_zero, and_false, ↓reduceIte,
+      LinearMap.zero_apply]
 
 /-- The constant model has no rational-tail divisor and satisfies the
 forgetful `psi` formula trivially. -/
 noncomputable def psiForgetFormula : PsiForgetFormula (psiClasses R) where
   boundaryTail := fun _ _ _ _ _ ↦ 0
   boundaryTail_degree := by intros; exact Submodule.zero_mem _
-  psi_eq_forget_add_boundary := by intros; simp [psiClasses]
+  psi_eq_forget_add_boundary := by
+    intros
+    simp only [psiClasses, AlgHom.coe_id, id_eq, add_zero]
 
 @[simp]
 theorem kappa_eq_zero (g : ℕ) (S : Type) [Fintype S]
@@ -168,7 +180,8 @@ theorem toConstantCohFT_ancestor_zero_three (T : TopologicalCohFT R V)
   change constantStableCurveCohomology.integrate R 0 (Fin 3)
       (T.omega 0 (Fin 3) StableArity.zero_fin_three a) =
     T.omega 0 (Fin 3) StableArity.zero_fin_three a
-  simp
+  simp only [constantStableCurveCohomology.integrate_zero_fin_three,
+    LinearMap.id_coe, id_eq]
 
 end TopologicalCohFT
 

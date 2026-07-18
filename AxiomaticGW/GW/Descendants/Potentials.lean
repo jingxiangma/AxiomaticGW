@@ -93,7 +93,7 @@ noncomputable def stablePart {B Vars R : Type*} [AddCancelCommMonoid B]
         by_cases hn : StableArity g (InsertionLabel n)
         · simp only [hn, if_pos]
           rfl
-        · simp [hn]
+        · simp only [hn, ↓reduceIte, add_zero]
       map_smul' := by
         intro q f
         funext n
@@ -102,7 +102,7 @@ noncomputable def stablePart {B Vars R : Type*} [AddCancelCommMonoid B]
         by_cases hn : StableArity g (InsertionLabel n)
         · simp only [hn, if_pos]
           rfl
-        · simp [hn] }
+        · simp only [hn, ↓reduceIte, smul_eq_mul, mul_zero] }
 
 @[simp]
 theorem stablePart_apply_of_stable {B Vars R : Type*}
@@ -110,7 +110,7 @@ theorem stablePart_apply_of_stable {B Vars R : Type*}
     (g : ℕ) (f : FormalPotential D Vars R) (n : Vars →₀ ℕ)
     (h : StableArity g (InsertionLabel n)) :
     stablePart D g f n = f n := by
-  simp [stablePart, h]
+  simp only [stablePart, LinearMap.coe_mk, AddHom.coe_mk, h, ↓reduceIte]
 
 @[simp]
 theorem stablePart_apply_of_unstable {B Vars R : Type*}
@@ -118,7 +118,7 @@ theorem stablePart_apply_of_unstable {B Vars R : Type*}
     (g : ℕ) (f : FormalPotential D Vars R) (n : Vars →₀ ℕ)
     (h : ¬StableArity g (InsertionLabel n)) :
     stablePart D g f n = 0 := by
-  simp [stablePart, h]
+  simp only [stablePart, LinearMap.coe_mk, AddHom.coe_mk, h, ↓reduceIte]
 
 /-- Differentiate a descendant potential by inserting `x` with cotangent
 power `k`. The finite support of `b.repr x` makes the directional derivative
@@ -199,7 +199,8 @@ theorem descendantPotential_coeff_of_stable
           (InsertionLabel.power (n := n))
           (InsertionLabel.state (n := n) b) := by
   classical
-  simp [descendantPotential, h]
+  simp only [descendantPotential, h, ↓reduceDIte,
+    StableMapDescendants.invariant_apply]
 
 theorem descendantPotential_coeff_of_unstable
     (Omega : GromovWittenTheory R V B D C)
@@ -208,7 +209,7 @@ theorem descendantPotential_coeff_of_unstable
     (beta : B) (h : ¬StableArity g (InsertionLabel n)) :
     Omega.descendantPotential M I b g n beta = 0 := by
   classical
-  simp [descendantPotential, h]
+  simp only [descendantPotential, h, ↓reduceDIte]
 
 theorem ancestorPotential_coeff_of_stable
     (Omega : GromovWittenTheory R V B D C)
@@ -221,7 +222,7 @@ theorem ancestorPotential_coeff_of_stable
           (InsertionLabel.power (n := n))
           (InsertionLabel.state (n := n) b) := by
   classical
-  simp [ancestorPotential, h]
+  simp only [ancestorPotential, h, ↓reduceDIte, ancestorInvariant_apply]
 
 theorem ancestorPotential_coeff_of_unstable
     (Omega : GromovWittenTheory R V B D C)
@@ -230,7 +231,7 @@ theorem ancestorPotential_coeff_of_unstable
     (beta : B) (h : ¬StableArity g (InsertionLabel n)) :
     Omega.ancestorPotential P I b g n beta = 0 := by
   classical
-  simp [ancestorPotential, h]
+  simp only [ancestorPotential, h, ↓reduceDIte]
 
 end GromovWittenTheory
 
@@ -279,7 +280,7 @@ theorem descendantPotential_eq_ancestor_add_boundary
     rw [hcomparison, mul_add]
   · rw [GromovWittenTheory.descendantPotential_coeff_of_unstable _ _ _ _ _ _ _ h,
       GromovWittenTheory.ancestorPotential_coeff_of_unstable _ _ _ _ _ _ _ h]
-    simp [boundaryPotential, h]
+    simp only [boundaryPotential, h, ↓reduceDIte, add_zero]
 
 end DescendantAncestorComparison
 

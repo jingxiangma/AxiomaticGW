@@ -129,7 +129,7 @@ theorem monomial_zero {R : Type u} [CommRing R] [Algebra ℚ R]
     {C : StableCurveCohomology R} (P : PsiClasses C)
     (g : ℕ) (S : Type) [Fintype S] (h : StableArity g S) :
     P.monomial g S h (fun _ ↦ 0) = 1 := by
-  simp [monomial]
+  simp only [monomial, pow_zero, Finset.prod_const_one]
 
 /-- A psi monomial has codimension equal to the sum of its exponents. -/
 theorem monomial_degree {R : Type u} [CommRing R] [Algebra ℚ R]
@@ -145,7 +145,8 @@ theorem monomial_degree {R : Type u} [CommRing R] [Algebra ℚ R]
   | @insert s markings hs ih =>
       rw [Finset.prod_insert hs, Finset.sum_insert hs]
       apply SetLike.mul_mem_graded
-      · simpa using SetLike.pow_mem_graded (k s) (P.psi_degree g S h s)
+      · simpa only [smul_eq_mul, mul_one]
+          using SetLike.pow_mem_graded (k s) (P.psi_degree g S h s)
       · exact ih
 
 /-- Relabelling transports a `psi` monomial by reindexing its powers. -/
@@ -158,7 +159,7 @@ theorem rename_monomial {R : Type u} [CommRing R] [Algebra ℚ R]
       P.monomial g T hT (fun t ↦ k (e.symm t)) := by
   rw [monomial, map_prod]
   simp_rw [map_pow, P.rename_psi]
-  simpa [monomial] using
+  simpa only [monomial, Equiv.symm_apply_apply] using
     e.prod_comp (fun t ↦ P.psi g T hT t ^ k (e.symm t))
 
 /-- Kappa classes defined by forgetting an additional marking. -/
@@ -200,8 +201,9 @@ theorem kappa_degree {R : Type u} [CommRing R] [Algebra ℚ R]
     (g : ℕ) (S : Type) [Fintype S] (h : StableArity g S) (m : ℕ) :
     P.kappa F g S h m ∈ (C.H g S).degree m := by
   apply F.push_degree g S h m
-  simpa using SetLike.pow_mem_graded (m + 1)
-    (P.psi_degree g (Option S) (StableArity.option h) none)
+  simpa only [smul_eq_mul, mul_one] using
+    SetLike.pow_mem_graded (m + 1)
+      (P.psi_degree g (Option S) (StableArity.option h) none)
 
 end PsiClasses
 

@@ -53,7 +53,7 @@ theorem finiteProduct_sum_apply {T : Type*} [Fintype T] (a : S ⊕ T → A) :
 /-- The product over no labels is the algebra unit. -/
 theorem finiteProduct_empty_apply (a : Empty → A) :
     finiteProduct R A Empty a = 1 := by
-  simp
+  simp only [finiteProduct_apply, Finset.univ_eq_empty, Finset.prod_empty]
 
 /-- Adjoining a new label whose value is the algebra unit does not change the
 finite product. -/

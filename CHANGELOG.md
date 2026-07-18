@@ -40,6 +40,8 @@ The project is research-stage and follows the pinned Lean/mathlib version in `le
 
 ### Changed
 
+- Made production simplifier calls explicit with `simp only` or `simpa only`, and documented the dependency-stability policy for future proofs.
+- Tightened public mathematical comments so fixed-class quantum products, rational-tail stabilization data, and coefficientwise Fock carriers are described without nonstandard or overstated terminology.
 - Renamed the public `TopologicalCorrelatorTheory` API to `TwoDimensionalTFT` and `threePointFunctional` to `threePointFunction` to match the standard mathematical terminology.
 - Renamed `CurveClassGW` to `GromovWittenTheory` and standardized the public small and big quantum-product declarations, including `GenusZeroWDVV`.
 - Replaced `GW/QuantumProduct.lean` and `GW/FormalQuantumProduct.lean` with the canonical `GW/SmallQuantumProduct.lean` and consolidated `GW/BigQuantumProduct.lean` modules.

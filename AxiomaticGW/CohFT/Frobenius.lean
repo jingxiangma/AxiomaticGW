@@ -51,7 +51,11 @@ theorem threePointFunction_apply (T : GenusZeroCohFT R V C)
     (G : GenusZeroGeometry C) (x y z : V) :
     T.threePointFunction G x y z =
       T.threePoint G (Fin.cons x (Fin.cons y fun _ ↦ z)) := by
-  simp [threePointFunction]
+  simp only [threePointFunction, Nat.succ_eq_add_one, Nat.reduceAdd,
+    LinearMap.coe_comp, LinearEquiv.coe_coe, Function.comp_apply,
+    multilinearCurryLeftEquiv_apply, LinearMap.compRight_apply,
+    SymmetricPerfectPairing.finTwoToBilin_apply,
+    MultilinearMap.curryLeft_apply]
 
 /-- The product obtained by raising the last index of the three-point
 correlator with the inverse metric. -/
@@ -70,7 +74,11 @@ theorem pairing_product (T : GenusZeroCohFT R V C)
     (G : GenusZeroGeometry C) (x y z : V) :
     T.pairing.form (T.product G x y) z = T.threePointFunction G x y z := by
   rw [← T.pairing.toDual_apply]
-  simp [product, threePointFunction]
+  simp only [product, Nat.succ_eq_add_one, Nat.reduceAdd,
+    LinearMap.coe_comp, LinearEquiv.coe_coe, Function.comp_apply,
+    multilinearCurryLeftEquiv_apply, LinearMap.compRight_apply,
+    LinearEquiv.apply_symm_apply, SymmetricPerfectPairing.finTwoToBilin_apply,
+    MultilinearMap.curryLeft_apply, threePointFunction]
 
 /-- The point identification of `Mbar(0,3)` is insensitive to relabelling. -/
 theorem _root_.AxiomaticGW.GenusZeroGeometry.mbarZeroThree_rename
@@ -83,9 +91,10 @@ theorem _root_.AxiomaticGW.GenusZeroGeometry.mbarZeroThree_rename
   have hx : G.mbarZeroThree.symm r = x := G.mbarZeroThree.symm_apply_apply x
   rw [← hx]
   have hr : G.mbarZeroThree.symm r = algebraMap R (C.H 0 (Fin 3)) r := by
-    simpa using G.mbarZeroThree.symm.commutes r
+    simpa only [Algebra.algebraMap_self, RingHom.id_apply]
+      using G.mbarZeroThree.symm.commutes r
   rw [hr]
-  simp
+  simp only [AlgEquiv.commutes, Algebra.algebraMap_self, RingHom.id_apply]
 
 /-- The scalar three-point correlator is invariant under every permutation of
 its labels. -/
@@ -177,7 +186,9 @@ theorem threePointFunction_unit (T : GenusZeroCohFT R V C)
     · fin_cases i <;> rfl
   rw [ha]
   rw [hnorm]
-  simp
+  simp only [Fin.isValue, Matrix.cons_val_zero, Matrix.cons_val_one,
+    Matrix.cons_val_fin_one, AlgEquiv.commutes, Algebra.algebraMap_self,
+    RingHom.id_apply]
 
 /-- The CohFT unit is a left identity for the extracted product. -/
 theorem unit_product (T : GenusZeroCohFT R V C)
@@ -535,8 +546,8 @@ theorem toCommFrobeniusAlgebra_pairing (T : GenusZeroCohFT R V C)
       (FrobeniusCarrier.toStateSpace T G y)
   rw [T.pairing_product_assoc, T.product_unit]
 
-/-- The canonical Frobenius theory recovers the scalar three-point
-correlator from which its multiplication was extracted. -/
+/-- The correlators of the extracted Frobenius algebra recover the scalar
+three-point correlator from which its multiplication was defined. -/
 theorem toCommFrobeniusAlgebra_correlator_zero_fin_three
     (T : GenusZeroCohFT R V C) (G : GenusZeroGeometry C)
     (a : Fin 3 → FrobeniusCarrier T G) :

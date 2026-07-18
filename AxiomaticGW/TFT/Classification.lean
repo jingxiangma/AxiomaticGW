@@ -45,7 +45,11 @@ theorem threePointFunction_apply (T : TwoDimensionalTFT R V)
     (x y z : V) :
     T.threePointFunction x y z =
       T.correlator 0 (Fin 3) (Fin.cons x (Fin.cons y fun _ ↦ z)) := by
-  simp [threePointFunction]
+  simp only [threePointFunction, Nat.succ_eq_add_one, Nat.reduceAdd,
+    LinearMap.coe_comp, LinearEquiv.coe_coe, Function.comp_apply,
+    multilinearCurryLeftEquiv_apply, LinearMap.compRight_apply,
+    SymmetricPerfectPairing.finTwoToBilin_apply,
+    MultilinearMap.curryLeft_apply]
 
 /-- The product recovered from the three-point correlator by raising its last
 index with the inverse metric. -/
@@ -63,7 +67,11 @@ correlator. -/
 theorem pairing_product (T : TwoDimensionalTFT R V) (x y z : V) :
     T.pairing.form (T.product x y) z = T.threePointFunction x y z := by
   rw [← T.pairing.toDual_apply]
-  simp [product, threePointFunction]
+  simp only [product, Nat.succ_eq_add_one, Nat.reduceAdd,
+    LinearMap.coe_comp, LinearEquiv.coe_coe, Function.comp_apply,
+    multilinearCurryLeftEquiv_apply, LinearMap.compRight_apply,
+    LinearEquiv.apply_symm_apply, SymmetricPerfectPairing.finTwoToBilin_apply,
+    MultilinearMap.curryLeft_apply, threePointFunction]
 
 end TwoDimensionalTFT
 
@@ -107,8 +115,10 @@ theorem toTwoDimensionalTFT_counit
     (F : CommFrobeniusAlgebra R A) :
     F.toTwoDimensionalTFT.counit = F.counit := by
   ext x
-  simp [TwoDimensionalTFT.counit,
-    toTwoDimensionalTFT, correlator_apply]
+  simp only [TwoDimensionalTFT.counit, toTwoDimensionalTFT,
+    SymmetricPerfectPairing.finOneToLinear_apply, correlator_apply,
+    Finset.univ_unique, Fin.default_eq_zero, Fin.isValue, Finset.prod_const,
+    Finset.card_singleton, pow_one, pow_zero, mul_one]
 
 /-- The three-point product recovered from the two-dimensional TFT of `F` is
 the original algebra multiplication. -/
@@ -123,8 +133,13 @@ theorem toTwoDimensionalTFT_product
       (F.toTwoDimensionalTFT.product x y) z =
     F.pairing.form (x * y) z
   rw [F.toTwoDimensionalTFT.pairing_product]
-  simp [TwoDimensionalTFT.threePointFunction,
-    toTwoDimensionalTFT, correlator_apply, mul_assoc]
+  simp only [TwoDimensionalTFT.threePointFunction, Nat.succ_eq_add_one,
+    Nat.reduceAdd, toTwoDimensionalTFT, LinearMap.coe_comp,
+    LinearEquiv.coe_coe, Function.comp_apply, multilinearCurryLeftEquiv_apply,
+    LinearMap.compRight_apply, SymmetricPerfectPairing.finTwoToBilin_apply,
+    MultilinearMap.curryLeft_apply, correlator_apply, Fin.prod_cons,
+    Finset.univ_unique, Fin.default_eq_zero, Fin.isValue, Finset.prod_const,
+    Finset.card_singleton, pow_one, pow_zero, mul_one, pairing_apply, mul_assoc]
 
 /-- The forward two-dimensional TFT satisfies trace compatibility with the
 original algebra. -/

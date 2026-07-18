@@ -45,7 +45,8 @@ theorem mem_positiveTailSplittings (D : EffectiveCurveMonoid B)
     (betaMain, betaTail) ∈ D.positiveTailSplittings beta ↔
       betaMain + betaTail = beta ∧ betaTail ≠ 0 := by
   classical
-  simp [positiveTailSplittings, D.mem_splittings]
+  simp only [positiveTailSplittings, ne_eq, Finset.mem_filter,
+    D.mem_splittings]
 
 end EffectiveCurveMonoid
 
@@ -64,9 +65,10 @@ noncomputable def rationalTailCorrection
   exact ∑ s, ∑ split ∈ D.positiveTailSplittings beta,
     tailWeight s split • mainBoundary s split
 
-/-- A genuine stabilization comparison: the weak residual is exhibited as a
-finite sum of classes pushed forward from positive-degree rational-tail
-strata, and every summand is factorized into main and tail contributions. -/
+/-- A factorized rational-tail stabilization comparison: the weak residual is
+exhibited as a finite sum of classes pushed forward from positive-degree
+rational-tail strata, and every summand is factorized into main and tail
+contributions. -/
 structure StabilizationBoundaryComparison
     {R V B : Type u} [CommRing R] [Algebra ℚ R]
     [AddCommGroup V] [Module R V] [Module.Free R V] [Module.Finite R V]
@@ -246,7 +248,7 @@ exponential partition function is asserted. -/
 structure CompletedFockPotential
     {B : Type*} [AddCancelCommMonoid B] (D : EffectiveCurveMonoid B)
     (Vars R : Type*) [CommRing R] where
-  /-- Coefficient in the Euler/genus filtration. -/
+  /-- Coefficient indexed by genus. -/
   coefficient : ℕ → FormalPotential D Vars R
 
 namespace CompletedFockPotential
@@ -295,15 +297,16 @@ structure QuantizedCalibrationAction
     [AddCommGroup V] [Module R V] [AddCancelCommMonoid B]
     (D : EffectiveCurveMonoid B) (pairing : SymmetricPerfectPairing R V)
     (S : TwoPointCalibration D pairing) where
-  /-- Quantized inverse calibration on completed Fock potentials. -/
+  /-- Supplied action representing the quantized inverse calibration on
+  coefficientwise Fock data. -/
   act : CompletedFockPotential D Vars R → CompletedFockPotential D Vars R
   /-- Quantization preserves zero. -/
   map_zero : act 0 = 0
   /-- Quantization is additive. -/
   map_add : ∀ F G, act (F + G) = act F + act G
 
-/-- Optional coefficientwise Givental comparison. The partition identity is
-geometric input beyond the rational-tail class formula; packaging it here
+/-- Optional coefficientwise Givental comparison. The descendant--ancestor
+identity is geometric input beyond the rational-tail class formula; packaging it here
 makes the extra assumption visible and ties it to the calibration constructed
 from those same tail operators. -/
 structure GiventalComparison
@@ -315,11 +318,11 @@ structure GiventalComparison
     (I : StableCurveIntegration C) (b : Basis ι R V)
     (X : StabilizationBoundaryComparison P M)
     (Q : QuantizedCalibrationAction D Omega.pairing X.calibration) where
-  /-- Exponential of the independent genus-one scalar correction, supplied
-  directly because no analytic exponential is assumed for arbitrary rings. -/
+  /-- Supplied scalar representing the exponential of the independent
+  genus-one correction; no analytic exponential is assumed for arbitrary rings. -/
   genusOneFactor : R
-  /-- Descendant partition data is the genus-one factor times the quantized
-  inverse calibration applied to ancestor partition data. -/
+  /-- Descendant coefficient data is the genus-one factor times the supplied
+  quantized inverse calibration applied to ancestor coefficient data. -/
   partition_identity :
     CompletedFockPotential.ofGenusPotential
         (fun g ↦ Omega.descendantPotential M I b g) =

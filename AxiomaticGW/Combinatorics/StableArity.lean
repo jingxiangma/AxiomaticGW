@@ -33,7 +33,7 @@ def dimension (g : ℕ) (S : Type*) [Fintype S] : ℕ :=
 
 @[simp]
 theorem dimension_zero_fin_three : dimension 0 (Fin 3) = 0 := by
-  simp [dimension]
+  simp only [dimension, Nat.mul_zero, Fintype.card_fin, zero_add, Nat.sub_self]
 
 /-- Relabelling does not change the complex dimension. -/
 theorem dimension_equiv {g : ℕ} {S T : Type*} [Fintype S] [Fintype T]
@@ -72,7 +72,7 @@ theorem equiv {g : ℕ} {S T : Type*} [Fintype S] [Fintype T]
 
 /-- Three genus-zero markings form a stable arity. -/
 theorem zero_fin_three : StableArity 0 (Fin 3) := by
-  simp [StableArity]
+  simp only [StableArity, Nat.mul_zero, Fintype.card_fin, zero_add, Std.le_refl]
 
 /-- Adding a marking preserves stability. -/
 theorem option {g : ℕ} {S : Type*} [Fintype S] (h : StableArity g S) :
@@ -104,7 +104,8 @@ theorem separating {g₁ g₂ : ℕ} {S T : Type*} [Fintype S] [Fintype T]
 /-- Genus zero with two inputs becomes stable after adjoining the unit
 marking used in the metric normalization axiom. -/
 theorem zero_option_fin_two : StableArity 0 (Option (Fin 2)) := by
-  simp [StableArity]
+  simp only [StableArity, Nat.mul_zero, Fintype.card_option, Fintype.card_fin,
+    Nat.reduceAdd, zero_add, Std.le_refl]
 
 end StableArity
 

@@ -30,7 +30,7 @@ structure TwoDimensionalTFT (R V : Type*) [CommRing R]
     [AddCommGroup V] [Module R V] [Module.Free R V] [Module.Finite R V] where
   /-- The metric used to contract the two half-edges of a node. -/
   pairing : SymmetricPerfectPairing R V
-  /-- The state inserted by the outgoing disk. -/
+  /-- The distinguished unit state. -/
   unit : V
   /-- The connected genus-`g` correlator with label type `S`. -/
   correlator : (g : ℕ) → (S : Type) → [Fintype S] →
@@ -51,7 +51,7 @@ structure TwoDimensionalTFT (R V : Type*) [CommRing R]
     pairing.pairContract (correlator g₁ (Option S))
         (correlator g₂ (Option T)) =
       correlator (g₁ + g₂) (S ⊕ T)
-  /-- The genus-zero two-input correlator is the metric. -/
+  /-- The genus-zero two-point correlator is the metric. -/
   normalization : ∀ a : Fin 2 → V,
     correlator 0 (Fin 2) a = pairing.form (a 0) (a 1)
 
@@ -60,12 +60,12 @@ namespace TwoDimensionalTFT
 variable {R V : Type*} [CommRing R] [AddCommGroup V] [Module R V]
   [Module.Free R V] [Module.Finite R V]
 
-/-- The genus-zero one-input correlator of a theory, used below as its
+/-- The genus-zero one-point correlator of a theory, used below as its
 candidate Frobenius counit. -/
 noncomputable def counit (T : TwoDimensionalTFT R V) : V →ₗ[R] R :=
   SymmetricPerfectPairing.finOneToLinear (T.correlator 0 (Fin 1))
 
-/-- Evaluation of the counit extracted from the one-input correlator. -/
+/-- Evaluation of the counit extracted from the one-point correlator. -/
 @[simp]
 theorem counit_apply (T : TwoDimensionalTFT R V) (x : V) :
     T.counit x = T.correlator 0 (Fin 1) (fun _ ↦ x) := by

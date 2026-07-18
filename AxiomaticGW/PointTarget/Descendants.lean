@@ -44,9 +44,13 @@ noncomputable def primaryClass (g : ℕ) (S : Type) [Fintype S]
 theorem primaryClass_apply (g : ℕ) (S : Type) [Fintype S]
     (h : StableArity g S) (a : S → R) :
     primaryClass (C := C) g S h a = algebraMap R (C.H g S) (∏ s, a s) := by
-  simp [primaryClass]
+  simp only [primaryClass, LinearMap.compMultilinearMap_apply,
+    CommFrobeniusAlgebra.correlator_apply,
+    CommFrobeniusAlgebra.baseRing_handleElement, one_pow, mul_one,
+    CommFrobeniusAlgebra.baseRing_counit_apply, Algebra.linearMap_apply,
+    map_prod]
 
-/-- A stable point-target psi intersection number. -/
+/-- A stable point-target psi-class intersection number. -/
 noncomputable def intersectionNumber (P : PsiClasses C)
     (I : StableCurveIntegration C) (g : ℕ) (S : Type) [Fintype S]
     (k : S → ℕ) : R := by
@@ -61,16 +65,16 @@ theorem intersectionNumber_of_stable (P : PsiClasses C)
     (h : StableArity g S) (k : S → ℕ) :
     intersectionNumber P I g S k =
       I.integrate g S h (P.monomial g S h k) := by
-  simp [intersectionNumber, h]
+  simp only [intersectionNumber, h, ↓reduceDIte]
 
 @[simp]
 theorem intersectionNumber_of_unstable (P : PsiClasses C)
     (I : StableCurveIntegration C) (g : ℕ) (S : Type) [Fintype S]
     (h : ¬StableArity g S) (k : S → ℕ) :
     intersectionNumber P I g S k = 0 := by
-  simp [intersectionNumber, h]
+  simp only [intersectionNumber, h, ↓reduceDIte]
 
-/-- Point-target ancestors: primary inputs multiply the psi intersection
+/-- Point-target ancestors: primary inputs multiply the psi-class intersection
 number. -/
 noncomputable def ancestor (P : PsiClasses C)
     (I : StableCurveIntegration C) (g : ℕ) (S : Type) [Fintype S]
@@ -107,8 +111,8 @@ theorem intersectionNumber_relabel (P : PsiClasses C)
   rw [← P.rename_monomial g S T hS hT e k]
   exact I.integrate_rename g S T hS hT e _
 
-/-- A point intersection number vanishes unless the psi codimension equals
-the dimension of `Mbar(g,S)`. -/
+/-- A point-target psi-class intersection number vanishes unless the psi codimension
+equals the dimension of `Mbar(g,S)`. -/
 theorem intersectionNumber_eq_zero_of_degree_ne (P : PsiClasses C)
     (I : StableCurveIntegration C) (g : ℕ) (S : Type) [Fintype S]
     (h : StableArity g S) (k : S → ℕ)
@@ -126,11 +130,12 @@ theorem intersectionNumber_zero_three (P : PsiClasses C)
     intersectionNumber P I 0 (Fin 3) (fun _ ↦ 0) = 1 := by
   rw [intersectionNumber_of_stable P I 0 (Fin 3)
     StableArity.zero_fin_three]
-  simpa using hI
+  simpa only [PsiClasses.monomial_zero] using hI
 
 /-- One marked point in genus one is stable. -/
 theorem genusOne_one_stable : StableArity 1 (Fin 1) := by
-  simp [StableArity]
+  simp only [StableArity, mul_one, Fintype.card_unique, Nat.reduceAdd,
+    Std.le_refl]
 
 /-- The exceptional initial value needed alongside DVV is
 `<tau_1>_1 = 1/24`. The hypothesis isolates the corresponding geometric
@@ -143,7 +148,9 @@ theorem intersectionNumber_one_one (P : PsiClasses C)
     intersectionNumber P I 1 (Fin 1) (fun _ ↦ 1) =
       algebraMap ℚ R (1 / 24 : ℚ) := by
   rw [intersectionNumber_of_stable P I 1 (Fin 1) genusOne_one_stable]
-  simpa [PsiClasses.monomial] using hI
+  simpa only [PsiClasses.monomial, Finset.univ_unique,
+    Fin.default_eq_zero, Fin.isValue, pow_one, Finset.prod_singleton, one_div]
+    using hI
 
 /-- The point primary class passes the `Mbar(0,4)` WDVV boundary test: both
 boundary restrictions of the unit class agree. -/
@@ -171,7 +178,7 @@ noncomputable def dvvMergeWeight (k d : ℕ) : ℚ :=
   (oddDoubleFactorial (k + d) : ℚ) /
     if d = 0 then 1 else oddDoubleFactorial (d - 1)
 
-/-- The all-genus DVV recursion for point-target psi intersections.
+/-- The all-genus DVV recursion for point-target psi-class intersections.
 
 The intersection-number definition supplies the unstable value `0`; the
 formula therefore includes stable and unstable splittings uniformly. A

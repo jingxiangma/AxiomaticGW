@@ -55,7 +55,9 @@ contracted. -/
 @[simp]
 theorem tensorEndEquiv_tmul (P : SymmetricPerfectPairing R V) (x y z : V) :
     P.tensorEndEquiv (x ⊗ₜ[R] y) z = P.form x z • y := by
-  simp [tensorEndEquiv]
+  simp only [tensorEndEquiv, dualTensorHomEquiv, LinearEquiv.trans_apply,
+    congr_tmul, LinearEquiv.refl_apply, dualTensorHomEquivOfBasis_apply,
+    dualTensorHom_apply, toDual_apply]
 
 /-- The inverse metric tensor, characterized by contraction to the identity
 endomorphism.
@@ -71,14 +73,14 @@ the identity endomorphism. -/
 @[simp]
 theorem tensorEndEquiv_copairing (P : SymmetricPerfectPairing R V) :
     P.tensorEndEquiv P.copairing = LinearMap.id := by
-  simp [copairing]
+  simp only [copairing, LinearEquiv.apply_symm_apply]
 
 /-- The preceding endomorphism equality evaluated at a vector `x`.  In basis
 notation, if `copairing = ∑ᵢ uᵢ ⊗ vᵢ`, this says
 `∑ᵢ P.form uᵢ x • vᵢ = x`. -/
 theorem copairing_contract (P : SymmetricPerfectPairing R V) (x : V) :
     P.tensorEndEquiv P.copairing x = x := by
-  simp
+  simp only [tensorEndEquiv_copairing, LinearMap.id_coe, id_eq]
 
 /-- Swapping a tensor before contracting exchanges the two vectors tested by
 the pairing.
@@ -91,9 +93,10 @@ theorem form_tensorEndEquiv_comm (P : SymmetricPerfectPairing R V)
     P.form (P.tensorEndEquiv (TensorProduct.comm R V V t) x) y =
       P.form (P.tensorEndEquiv t y) x := by
   induction t using TensorProduct.induction_on with
-  | zero => simp
+  | zero => simp only [map_zero, LinearMap.zero_apply]
   | tmul u v =>
-      simp [smul_eq_mul, P.isSymm.eq, mul_comm]
+      simp only [comm_tmul, tensorEndEquiv_tmul, P.isSymm.eq, map_smul,
+        LinearMap.smul_apply, smul_eq_mul, mul_comm]
   | add t₁ t₂ h₁ h₂ =>
       simpa only [map_add, LinearMap.add_apply] using congrArg₂ (· + ·) h₁ h₂
 

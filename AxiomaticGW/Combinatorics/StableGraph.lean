@@ -88,7 +88,11 @@ theorem mate_edge (G : StableGraph S) (h : G.HalfEdge) :
 @[simp]
 theorem mate_ne (G : StableGraph S) (h : G.HalfEdge) : G.mate h ≠ h := by
   rcases h with ⟨e, i⟩
-  fin_cases i <;> simp [mate]
+  fin_cases i <;>
+    simp only [mate, Fin.isValue, Fin.zero_eta, Fin.mk_one, Equiv.coe_fn_mk,
+      Equiv.swap_apply_left, Equiv.swap_apply_right, ne_eq, Prod.mk.injEq,
+      Fin.one_eq_zero_iff, Fin.zero_eq_one_iff, OfNat.ofNat_ne_one, and_false,
+      not_false_eq_true]
 
 @[simp]
 theorem mate_mate (G : StableGraph S) (h : G.HalfEdge) :
@@ -108,13 +112,13 @@ def valence (G : StableGraph S) (v : G.Vertex) : ℕ :=
 
 theorem card_vertexLabel (G : StableGraph S) (v : G.Vertex) :
     Fintype.card (G.VertexLabel v) = G.valence v := by
-  simp [valence]
+  simp only [Fintype.card_sum, valence]
 
 /-- Every vertex decoration determines a stable moduli-space factor. -/
 theorem vertex_stable (G : StableGraph S) (v : G.Vertex) :
     StableArity (G.genus v) (G.VertexLabel v) := by
   rw [StableArity, G.card_vertexLabel]
-  simpa [valence, add_assoc] using G.stable v
+  simpa only [valence, add_assoc] using G.stable v
 
 /-- First Betti number of a connected finite graph. -/
 def firstBetti (G : StableGraph S) : ℕ :=
@@ -141,9 +145,13 @@ def relabel {T : Type} [Fintype T] (G : StableGraph S) (e : S ≃ T) :
         {t : T // (G.legVertex ∘ e.symm) t = v} ≃
           {s : S // G.legVertex s = v} :=
       { toFun := fun t ↦ ⟨e.symm t.1, t.2⟩
-        invFun := fun s ↦ ⟨e s.1, by simp [s.2]⟩
-        left_inv := fun t ↦ by simp
-        right_inv := fun s ↦ by simp }
+        invFun := fun s ↦ ⟨e s.1, by
+          simp only [Function.comp_apply, Equiv.symm_apply_apply, s.2]⟩
+        left_inv := fun t ↦ by
+          simp only [Function.comp_apply, Equiv.apply_symm_apply,
+            Subtype.coe_eta]
+        right_inv := fun s ↦ by
+          simp only [Equiv.symm_apply_apply, Subtype.coe_eta] }
     rw [Fintype.card_congr legEquiv]
     exact G.stable v
 
@@ -165,7 +173,7 @@ structure ContractionOrder (G : StableGraph S) where
 noncomputable def canonicalOrder (G : StableGraph S) : G.ContractionOrder where
   edges := Finset.univ.toList
   nodup := Finset.nodup_toList _
-  complete := by simp
+  complete := by simp only [Finset.toList_toFinset]
 
 /-- Any two complete edge orders differ only by a permutation. -/
 theorem contractionOrder_perm (G : StableGraph S)

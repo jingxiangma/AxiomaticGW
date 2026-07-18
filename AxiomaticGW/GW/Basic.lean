@@ -37,9 +37,9 @@ structure GromovWittenTheory (R V B : Type u) [CommRing R] [Algebra ℚ R]
     (C : StableCurveCohomology R) where
   /-- Metric used at every node. -/
   pairing : SymmetricPerfectPairing R V
-  /-- Flat identity insertion. -/
+  /-- Flat unit insertion. -/
   unit : V
-  /-- State-space grading and Poincare-duality degree. -/
+  /-- State-space grading and Poincare duality dimension. -/
   graded : GradedStateSpace R V pairing unit
   /-- First-Chern number of a curve class. -/
   c1Degree : B →+ ℤ

@@ -43,7 +43,7 @@ private theorem genusZero_omega_eq (T U : TopologicalCohFT R V)
   induction hn : Fintype.card S using Nat.strong_induction_on generalizing S with
   | h n ih =>
       have hn3 : 3 ≤ n := by
-        simpa [StableArity, hn] using h
+        simpa only [StableArity, mul_zero, hn, zero_add] using h
       rcases hn3.eq_or_lt with rfl | hn3
       · let e : Fin 3 ≃ S := (Fintype.equivFinOfCardEq hn).symm
         calc
@@ -56,15 +56,17 @@ private theorem genusZero_omega_eq (T U : TopologicalCohFT R V)
             U.relabel 0 (Fin 3) S StableArity.zero_fin_three h e
       · have hn4 : 4 ≤ n := by omega
         have hright : StableArity 0 (Option (Fin (n - 2))) := by
-          simp [StableArity]
+          simp only [StableArity, mul_zero, Fintype.card_option,
+            Fintype.card_fin, zero_add, Nat.reduceLeDiff]
           omega
         have hleft_eq :
             T.omega 0 (Option (Fin 2)) StableArity.zero_option_fin_two =
               U.omega 0 (Option (Fin 2)) StableArity.zero_option_fin_two :=
           ih 3 (by omega) (Option (Fin 2))
-            StableArity.zero_option_fin_two (by simp)
+            StableArity.zero_option_fin_two (by
+              simp only [Fintype.card_option, Fintype.card_fin, Nat.reduceAdd])
         have hright_lt : Fintype.card (Option (Fin (n - 2))) < n := by
-          simp
+          simp only [Fintype.card_option, Fintype.card_fin]
           omega
         have hright_eq : T.omega 0 (Option (Fin (n - 2))) hright =
             U.omega 0 (Option (Fin (n - 2))) hright :=
@@ -113,18 +115,19 @@ private theorem omega_eq (T U : TopologicalCohFT R V)
   | zero => exact genusZero_omega_eq T U hpairing hthree S h
   | succ g ih =>
       have h' : StableArity (g + 1) S := by
-        simpa [Nat.succ_eq_add_one] using h
+        simpa only using h
       calc
         T.omega (Nat.succ g) S h = T.pairing.selfContract
             (T.omega g (S ⊕ Fin 2) (StableArity.sum_fin_two_iff.mpr h')) := by
-          simpa [Nat.succ_eq_add_one] using (T.nonseparating g S h').symm
+          simpa only [Nat.succ_eq_add_one]
+            using (T.nonseparating g S h').symm
         _ = U.pairing.selfContract
             (U.omega g (S ⊕ Fin 2) (StableArity.sum_fin_two_iff.mpr h')) := by
           rw [hpairing]
           exact congrArg U.pairing.selfContract
             (ih (S ⊕ Fin 2) (StableArity.sum_fin_two_iff.mpr h'))
         _ = U.omega (Nat.succ g) S h := by
-          simpa [Nat.succ_eq_add_one] using U.nonseparating g S h'
+          simpa only [Nat.succ_eq_add_one] using U.nonseparating g S h'
 
 /-- Extract the commutative Frobenius algebra classified by a topological
 CohFT. A separate carrier records which theory supplied the multiplication. -/
@@ -145,7 +148,7 @@ theorem toConstantCohFT_topologicalPart_omega
   change ↑((DirectSum.decompose (constantDegree R) (T.omega g S h a)) 0) =
     T.omega g S h a
   exact DirectSum.decompose_of_mem_same (constantDegree R)
-    (by simp [constantDegree])
+    (by simp only [constantDegree, ↓reduceIte, Submodule.mem_top])
 
 /-- Classification of scalar-valued topological CohFTs: in every stable genus
 and arity, the original correlator agrees with the canonical Frobenius

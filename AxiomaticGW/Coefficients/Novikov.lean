@@ -118,14 +118,14 @@ protected theorem zero_mul (f : NovikovSeries D R) : 0 * f = 0 := by
   intro beta
   rw [coeff_mul]
   change (∑ x ∈ D.splittings beta, (0 : R) * f x.2) = 0
-  simp
+  simp only [zero_mul, Finset.sum_const_zero]
 
 protected theorem mul_zero (f : NovikovSeries D R) : f * 0 = 0 := by
   apply NovikovSeries.ext D
   intro beta
   rw [coeff_mul]
   change (∑ x ∈ D.splittings beta, f x.1 * (0 : R)) = 0
-  simp
+  simp only [mul_zero, Finset.sum_const_zero]
 
 theorem coeff_monomial_zero_mul (a : R) (f : NovikovSeries D R) (beta : B) :
     coeff D beta (monomial D 0 a * f) = a * coeff D beta f := by
@@ -139,9 +139,11 @@ theorem coeff_monomial_zero_mul (a : R) (f : NovikovSeries D R) (beta : B) :
           intro hzero
           apply hne
           apply Prod.ext hzero
-          simpa [hzero] using (D.mem_splittings split.1 split.2 beta).mp hsplit
-        simp [coeff_monomial_ne D hfirst]
-      · simp [D.mem_splittings]
+          simpa only [hzero, zero_add]
+            using (D.mem_splittings split.1 split.2 beta).mp hsplit
+        simp only [coeff_monomial_ne D hfirst, coeff_apply, zero_mul]
+      · simp only [D.mem_splittings, zero_add, not_true_eq_false,
+          coeff_apply, coeff_monomial_same, IsEmpty.forall_iff]
     _ = _ := by simp only [coeff_apply, coeff_monomial_same]
 
 theorem coeff_mul_monomial_zero (f : NovikovSeries D R) (a : R) (beta : B) :
@@ -156,10 +158,12 @@ theorem coeff_mul_monomial_zero (f : NovikovSeries D R) (a : R) (beta : B) :
           intro hzero
           apply hne
           apply Prod.ext
-          · simpa [hzero] using (D.mem_splittings split.1 split.2 beta).mp hsplit
+          · simpa only [hzero, add_zero]
+              using (D.mem_splittings split.1 split.2 beta).mp hsplit
           · exact hzero
-        simp [coeff_monomial_ne D hsecond]
-      · simp [D.mem_splittings]
+        simp only [coeff_apply, coeff_monomial_ne D hsecond, mul_zero]
+      · simp only [D.mem_splittings, add_zero, not_true_eq_false,
+          coeff_apply, coeff_monomial_same, IsEmpty.forall_iff]
     _ = _ := by simp only [coeff_apply, coeff_monomial_same]
 
 protected theorem one_mul (f : NovikovSeries D R) : 1 * f = f := by
@@ -198,8 +202,31 @@ protected theorem mul_assoc (f g h : NovikovSeries D R) :
   simp only [coeff_mul, Finset.sum_mul, Finset.mul_sum, Finset.sum_sigma']
   apply Finset.sum_nbij'
       (fun ⟨⟨_ , j⟩, ⟨k, l⟩⟩ ↦ ⟨(k, l + j), (l, j)⟩)
-      (fun ⟨⟨i, _⟩, ⟨k, l⟩⟩ ↦ ⟨(i + k, l), (i, k)⟩) <;>
-    aesop (add simp [D.mem_splittings, add_assoc, mul_assoc])
+      (fun ⟨⟨i, _⟩, ⟨k, l⟩⟩ ↦ ⟨(i + k, l), (i, k)⟩)
+  · intro a ha
+    simp only [Finset.mem_sigma, D.mem_splittings] at ha ⊢
+    rcases ha with ⟨houter, hinner⟩
+    refine ⟨?_, trivial⟩
+    calc
+      a.2.1 + (a.2.2 + a.1.2) = (a.2.1 + a.2.2) + a.1.2 :=
+        (add_assoc _ _ _).symm
+      _ = a.1.1 + a.1.2 := congrArg (· + a.1.2) hinner
+      _ = beta := houter
+  · intro a ha
+    simp only [Finset.mem_sigma, D.mem_splittings] at ha ⊢
+    rcases ha with ⟨houter, hinner⟩
+    refine ⟨?_, trivial⟩
+    calc
+      (a.1.1 + a.2.1) + a.2.2 = a.1.1 + (a.2.1 + a.2.2) :=
+        add_assoc _ _ _
+      _ = a.1.1 + a.1.2 := congrArg (a.1.1 + ·) hinner
+      _ = beta := houter
+  · intro a ha
+    simp_all only [Finset.mem_sigma, D.mem_splittings, Prod.mk.eta, Sigma.eta]
+  · intro a ha
+    simp_all only [Finset.mem_sigma, D.mem_splittings, Prod.mk.eta, Sigma.eta]
+  · intro a ha
+    simp_all only [Finset.mem_sigma, D.mem_splittings, coeff_apply, mul_assoc]
 
 instance : Semiring (NovikovSeries D R) where
   zero_mul := NovikovSeries.zero_mul D
@@ -220,9 +247,11 @@ instance [CommSemiring R] : CommSemiring (NovikovSeries D R) where
     rw [coeff_mul, coeff_mul]
     apply Finset.sum_equiv (Equiv.prodComm B B)
     · intro split
-      simp [D.mem_splittings, add_comm]
+      simp only [D.mem_splittings, Equiv.prodComm_apply, Prod.fst_swap,
+        Prod.snd_swap, add_comm]
     · intro split hsplit
-      simp [mul_comm]
+      simp only [coeff_apply, Equiv.prodComm_apply, Prod.fst_swap,
+        Prod.snd_swap, mul_comm]
 
 instance [Ring R] : Ring (NovikovSeries D R) where
 
@@ -279,9 +308,11 @@ theorem monomial_mul_monomial (beta gamma : B) (a b : R) :
           · have hsecond : split.2 ≠ gamma := by
               intro hs
               exact hne (Prod.ext hfirst hs)
-            simp [hfirst, coeff_monomial_ne D hsecond]
-          · simp [coeff_monomial_ne D hfirst]
-        · simp [D.mem_splittings]
+            simp only [hfirst, coeff_apply, coeff_monomial_same,
+              coeff_monomial_ne D hsecond, mul_zero]
+          · simp only [coeff_monomial_ne D hfirst, coeff_apply, zero_mul]
+        · simp only [D.mem_splittings, not_true_eq_false, coeff_apply,
+            coeff_monomial_same, IsEmpty.forall_iff]
       _ = _ := by
         simp only [coeff_apply, coeff_monomial_same]
   · have hnone : (beta, gamma) ∉ D.splittings delta := by
@@ -294,10 +325,11 @@ theorem monomial_mul_monomial (beta gamma : B) (a b : R) :
         intro hs
         apply hnone
         exact (D.mem_splittings beta gamma delta).mpr (by
-          simpa [hfirst, hs] using
+          simpa only [hfirst, hs] using
             (D.mem_splittings split.1 split.2 delta).mp hsplit)
-      simp [hfirst, coeff_monomial_ne D hsecond]
-    · simp [coeff_monomial_ne D hfirst]
+      simp only [hfirst, coeff_apply, coeff_monomial_same,
+        coeff_monomial_ne D hsecond, mul_zero]
+    · simp only [coeff_monomial_ne D hfirst, coeff_apply, zero_mul]
 
 /-- Finite monoid-algebra expressions embed coefficientwise in the completion. -/
 noncomputable def ofMonoidAlgebra :

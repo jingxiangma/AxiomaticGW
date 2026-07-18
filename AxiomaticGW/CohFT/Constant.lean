@@ -33,37 +33,41 @@ namespace constantDegree
 variable (R : Type*) [CommRing R]
 
 instance gradedMonoid : SetLike.GradedMonoid (constantDegree R) where
-  one_mem := by simp [constantDegree]
+  one_mem := by simp only [constantDegree, ↓reduceIte, Submodule.mem_top]
   mul_mem := by
     intro i j x y hx hy
     by_cases hi : i = 0
     · subst i
       by_cases hj : j = 0
       · subst j
-        simp [constantDegree]
+        simp only [constantDegree, add_zero, ↓reduceIte, Submodule.mem_top]
       · have hy0 : y = 0 := by
-          simpa [constantDegree, hj] using hy
+          simpa only [constantDegree, hj, ↓reduceIte, Submodule.mem_bot]
+            using hy
         subst y
-        simp [constantDegree]
+        simp only [constantDegree, zero_add, mul_zero, zero_mem]
     · have hx0 : x = 0 := by
-        simpa [constantDegree, hi] using hx
+        simpa only [constantDegree, hi, ↓reduceIte, Submodule.mem_bot]
+          using hx
       subst x
-      simp [constantDegree]
+      simp only [constantDegree, Nat.add_eq_zero_iff, zero_mul, zero_mem]
 
 /-- The explicit homogeneous decomposition for the constant grading. -/
 noncomputable def decompose : R →+ ⨁ d, constantDegree R d where
   toFun x := (DirectSum.of (fun d ↦ ↥(constantDegree R d)) 0)
-    ⟨x, by simp [constantDegree]⟩
+    ⟨x, by simp only [constantDegree, ↓reduceIte, Submodule.mem_top]⟩
   map_zero' := by
     exact (DirectSum.of (fun d ↦ ↥(constantDegree R d)) 0).map_zero
   map_add' x y := by
     exact (DirectSum.of (fun d ↦ ↥(constantDegree R d)) 0).map_add
-      ⟨x, by simp [constantDegree]⟩ ⟨y, by simp [constantDegree]⟩
+      ⟨x, by simp only [constantDegree, ↓reduceIte, Submodule.mem_top]⟩
+      ⟨y, by simp only [constantDegree, ↓reduceIte, Submodule.mem_top]⟩
 
 noncomputable instance decomposition : DirectSum.Decomposition (constantDegree R) where
   decompose' := decompose R
   left_inv x := by
-    simp [decompose]
+    simp only [decompose, AddMonoidHom.coe_mk, ZeroHom.coe_mk,
+      coeAddMonoidHom_of]
   right_inv x := by
     induction x using DirectSum.induction_on with
     | zero =>
@@ -72,10 +76,13 @@ noncomputable instance decomposition : DirectSum.Decomposition (constantDegree R
     | of d x =>
         by_cases hd : d = 0
         · subst d
-          simp [decompose]
+          simp only [decompose, coeAddMonoidHom_of, AddMonoidHom.coe_mk,
+            ZeroHom.coe_mk, Subtype.coe_eta]
         · have hx : x = 0 := by
             apply Subtype.ext
-            simpa [constantDegree, hd] using x.property
+            simpa only [constantDegree, hd, ZeroMemClass.coe_zero,
+              ZeroMemClass.coe_eq_zero, ↓reduceIte, Submodule.mem_bot]
+              using x.property
           subst x
           simp only [map_zero]
     | add x y hx hy =>
@@ -104,9 +111,10 @@ private theorem constantSeparatingDegree (R : Type*) [CommRing R]
     change x ⊗ₜ[R] 1 ∈ tensorDegree (constantEvenGradedAlgebra R)
       (constantEvenGradedAlgebra R) 0
     apply Submodule.subset_span
-    exact ⟨0, 0, x, 1, rfl, hx, by simp [constantDegree], rfl⟩
+    exact ⟨0, 0, x, 1, rfl, hx,
+      by simp only [constantDegree, ↓reduceIte, Submodule.mem_top], rfl⟩
   · have hx0 : x = 0 := by
-      simpa [constantDegree, hd] using hx
+      simpa only [constantDegree, hd, ↓reduceIte, Submodule.mem_bot] using hx
     subst x
     rw [map_zero]
     exact (tensorDegree (constantEvenGradedAlgebra R)
@@ -122,7 +130,7 @@ noncomputable abbrev constantStableCurveCohomology (R : Type*) [CommRing R]
       intro hd0
       subst d
       exact (Nat.not_lt_zero _ hd)
-    simp [constantDegree, hd0]
+    simp only [constantDegree, hd0, ↓reduceIte]
   rename := fun _ _ _ _ _ _ _ _ ↦ AlgEquiv.refl
   forget := fun _ _ _ _ ↦ AlgHom.id R R
   nonseparating := fun _ _ _ _ ↦ AlgHom.id R R
@@ -173,7 +181,8 @@ noncomputable def connectedDegreeZero :
     change ↥(constantDegree R 0) ≃ₐ[R] R
     exact
       { toFun := fun x ↦ x.1
-        invFun := fun x ↦ ⟨x, by simp [constantDegree]⟩
+        invFun := fun x ↦
+          ⟨x, by simp only [constantDegree, ↓reduceIte, Submodule.mem_top]⟩
         left_inv := fun _ ↦ rfl
         right_inv := fun _ ↦ rfl
         map_mul' := fun _ _ ↦ rfl
@@ -184,7 +193,12 @@ noncomputable def connectedDegreeZero :
   nonseparating_scalar := by intros; rfl
   separating_scalar := by
     intros
-    simp [EvenGradedAlgebra.projZeroAlgHom]
+    simp only [id_eq, EvenGradedAlgebra.projZeroAlgHom,
+      Algebra.TensorProduct.includeLeft_apply, Algebra.TensorProduct.lift_tmul,
+      AlgHom.coe_comp, AlgEquiv.coe_toAlgHom, AlgEquiv.coe_mk,
+      Equiv.coe_fn_mk, AlgHom.coe_mk, Function.comp_apply,
+      GradedRing.coe_projZeroRingHom'_apply, GradedRing.projZeroRingHom_apply,
+      map_one, mul_one]
 
 /-- Canonical stable-graph pullbacks for the constant target. Every vertex
 factor is the base ring, so graph pullback is the inverse of multiplication
@@ -219,8 +233,17 @@ theorem pairContractTarget_eq_includeLeft (P : SymmetricPerfectPairing R V)
   simp only [pairContractTarget_apply, LinearMap.compMultilinearMap_apply,
     pairContract_apply, contractTwoTarget_apply, contractTwo_apply]
   induction P.copairing using TensorProduct.induction_on with
-  | zero => simp
-  | tmul x y => simp [finTwoToLinearTarget_apply, finTwoToBilin_apply]
+  | zero => simp only [map_zero,
+      Algebra.TensorProduct.toLinearMap_includeLeft,
+      LinearMap.compMultilinearMap_domDomCongr]
+  | tmul x y => simp only [lift.tmul, finTwoToLinearTarget_apply,
+      MultilinearMap.currySum_apply', MultilinearMap.domDomCongr_apply,
+      MultilinearMap.domCoprod_apply, lid_tmul, smul_eq_mul,
+      Algebra.TensorProduct.toLinearMap_includeLeft,
+      LinearMap.compMultilinearMap_domDomCongr, finTwoToBilin_apply,
+      LinearMap.compMultilinearMap_apply, LinearMap.mul'_apply,
+      LinearMap.flip_apply, AlgebraTensorModule.mk_apply, LinearMap.coe_mk,
+      AddHom.coe_mk, mul_one]
   | add x y hx hy => simp only [map_add, hx, hy]
 
 end SymmetricPerfectPairing
@@ -251,9 +274,10 @@ noncomputable def toConstantCohFT (T : TopologicalCohFT R V) :
     rw [T.relabel g (Option (Option S)) (S ⊕ Fin 2)
       (StableArity.double_option_iff.mpr h)
       (StableArity.sum_fin_two_iff.mpr h) (doubleOptionEquiv S)]
-    simpa [constantStableCurveCohomology,
-      SymmetricPerfectPairing.selfContractTarget_eq_selfContract] using
-        T.nonseparating g S h
+    simpa only [constantStableCurveCohomology,
+      SymmetricPerfectPairing.selfContractTarget_eq_selfContract,
+      AlgHom.toLinearMap_id, LinearMap.id_compMultilinearMap]
+      using T.nonseparating g S h
   separating := by
     intro g₁ g₂ S U _ _ h₁ h₂
     rw [T.pairing.pairContractTarget_eq_includeLeft]
@@ -307,7 +331,12 @@ noncomputable def toTopologicalCohFT
     ext a
     have ha := congrArg (fun f ↦ f a) hglue
     have hal := congrArg (TensorProduct.lid R R) ha
-    simpa using hal
+    simpa only [SymmetricPerfectPairing.pairContract_apply,
+      LinearMap.compMultilinearMap_domDomCongr,
+      Algebra.TensorProduct.toLinearMap_includeLeft,
+      LinearMap.compMultilinearMap_apply, LinearMap.flip_apply,
+      AlgebraTensorModule.mk_apply, LinearMap.coe_mk, AddHom.coe_mk, lid_tmul,
+      smul_eq_mul, mul_one] using hal
   normalization := by
     intro a
     have h := Ω.normalization a

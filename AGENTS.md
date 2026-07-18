@@ -155,6 +155,7 @@ Check that each important proof:
 - proves the theorem actually stated;
 - uses stable public declarations rather than private representation details;
 - does not succeed only because of an unexpectedly broad simp set or accidental import;
+- uses `simp only [...]` or `simpa only [...]` by default, with any unrestricted terminal simplification specifically justified;
 - does not conceal the mathematical argument inside opaque, brittle automation;
 - does not duplicate a theorem already available in the project or mathlib;
 - uses classical logic or noncomputability only where mathematically needed;

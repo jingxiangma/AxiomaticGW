@@ -45,14 +45,16 @@ variable {R A : Type*} [CommRing R] [CommRing A] [Algebra R A]
   [Module.Free R A] [Module.Finite R A]
 
 /-- Multiplying the first tensor leg by `a` moves the input of the associated
-endomorphism from `x` to `a*x`. -/
+endomorphism from `x` to `a * x`. -/
 theorem tensorEndEquiv_includeLeft_mul (F : CommFrobeniusAlgebra R A)
     (a : A) (t : A ⊗[R] A) (x : A) :
     F.pairing.tensorEndEquiv ((a ⊗ₜ[R] 1) * t) x =
       F.pairing.tensorEndEquiv t (a * x) := by
   induction t using TensorProduct.induction_on with
-  | zero => simp
-  | tmul u v => simp [mul_assoc, mul_comm a u]
+  | zero => simp only [mul_zero, map_zero, LinearMap.zero_apply]
+  | tmul u v => simp only [Algebra.TensorProduct.tmul_mul_tmul,
+      mul_comm a u, one_mul, SymmetricPerfectPairing.tensorEndEquiv_tmul,
+      pairing_apply, mul_assoc]
   | add t₁ t₂ h₁ h₂ => simp only [mul_add, map_add, LinearMap.add_apply, h₁, h₂]
 
 /-- Multiplying the second tensor leg by `a` multiplies the output of the
@@ -62,13 +64,15 @@ theorem tensorEndEquiv_includeRight_mul (F : CommFrobeniusAlgebra R A)
     F.pairing.tensorEndEquiv ((1 ⊗ₜ[R] a) * t) x =
       a * F.pairing.tensorEndEquiv t x := by
   induction t using TensorProduct.induction_on with
-  | zero => simp
-  | tmul u v => simp [mul_comm a]
+  | zero => simp only [mul_zero, map_zero, LinearMap.zero_apply]
+  | tmul u v => simp only [Algebra.TensorProduct.tmul_mul_tmul, one_mul,
+      mul_comm a, SymmetricPerfectPairing.tensorEndEquiv_tmul, pairing_apply,
+      Algebra.smul_mul_assoc]
   | add t₁ t₂ h₁ h₂ =>
       simp only [mul_add, map_add, LinearMap.add_apply, h₁, h₂, mul_add]
 
 /-- The Casimir tensor is balanced over the algebra:
-`(a ⊗ 1)C = (1 ⊗ a)C`.
+`(a ⊗ 1) * C = (1 ⊗ a) * C`.
 
 This tensor identity is the main computational form of invariance of the
 Frobenius pairing. -/
@@ -79,9 +83,9 @@ theorem includeLeft_mul_casimir_eq_includeRight_mul_casimir
   apply LinearMap.ext
   intro x
   rw [F.tensorEndEquiv_includeLeft_mul, F.tensorEndEquiv_includeRight_mul]
-  simp
+  simp only [tensorEndEquiv_casimir, LinearMap.id_coe, id_eq]
 
-/-- The canonical Frobenius comultiplication `Δ(a) = (a ⊗ 1)C`. -/
+/-- The canonical Frobenius comultiplication `Δ(a) = (a ⊗ 1) * C`. -/
 noncomputable def comul (F : CommFrobeniusAlgebra R A) :
     A →ₗ[R] A ⊗[R] A :=
   (LinearMap.mulRight R F.casimir).comp
@@ -106,21 +110,21 @@ theorem comul_one (F : CommFrobeniusAlgebra R A) : F.comul 1 = F.casimir := by
 theorem tensorEndEquiv_comul (F : CommFrobeniusAlgebra R A) (a x : A) :
     F.pairing.tensorEndEquiv (F.comul a) x = a * x := by
   rw [comul_apply, F.tensorEndEquiv_includeLeft_mul]
-  simp
+  simp only [tensorEndEquiv_casimir, LinearMap.id_coe, id_eq]
 
 /-- Left-linearity of comultiplication, one half of the Frobenius relation. -/
 theorem comul_mul (F : CommFrobeniusAlgebra R A) (a b : A) :
     F.comul (a * b) = (a ⊗ₜ[R] 1) * F.comul b := by
   simp only [comul_apply]
   rw [← mul_assoc]
-  simp
+  simp only [Algebra.TensorProduct.tmul_mul_tmul, mul_one]
 
 /-- Right-linearity of comultiplication, the other half of the Frobenius
 relation. -/
 theorem comul_mul_right (F : CommFrobeniusAlgebra R A) (a b : A) :
     F.comul (a * b) = (1 ⊗ₜ[R] b) * F.comul a := by
   rw [comul_apply_right, comul_apply_right, ← mul_assoc]
-  simp [mul_comm]
+  simp only [mul_comm, Algebra.TensorProduct.tmul_mul_tmul, mul_one]
 
 omit [Module.Free R A] [Module.Finite R A] in
 /-- Swapping the tensor factors in a product swaps each factor. -/
@@ -128,8 +132,9 @@ theorem comm_mul_tmul_left (a : A) (t : A ⊗[R] A) :
     TensorProduct.comm R A A ((a ⊗ₜ[R] 1) * t) =
       (1 ⊗ₜ[R] a) * TensorProduct.comm R A A t := by
   induction t using TensorProduct.induction_on with
-  | zero => simp
-  | tmul u v => simp
+  | zero => simp only [mul_zero, map_zero]
+  | tmul u v => simp only [Algebra.TensorProduct.tmul_mul_tmul, one_mul,
+      comm_tmul]
   | add t₁ t₂ h₁ h₂ => simp only [mul_add, map_add, h₁, h₂]
 
 /-- The canonical Frobenius comultiplication is cocommutative. -/
@@ -147,8 +152,9 @@ theorem lid_counit_rTensor (F : CommFrobeniusAlgebra R A) (t : A ⊗[R] A) :
     TensorProduct.lid R A (F.counit.rTensor A t) =
       F.pairing.tensorEndEquiv t 1 := by
   induction t using TensorProduct.induction_on with
-  | zero => simp
-  | tmul u v => simp
+  | zero => simp only [map_zero, LinearMap.zero_apply]
+  | tmul u v => simp only [LinearMap.rTensor_tmul, lid_tmul,
+      SymmetricPerfectPairing.tensorEndEquiv_tmul, pairing_apply, mul_one]
   | add t₁ t₂ h₁ h₂ => simp only [map_add, LinearMap.add_apply, h₁, h₂]
 
 /-- The first counit law, written in mathlib's explicit-unitor convention. -/
@@ -158,7 +164,7 @@ theorem rTensor_counit_comul (F : CommFrobeniusAlgebra R A) (a : A) :
   apply (TensorProduct.lid R A).injective
   rw [F.lid_counit_rTensor]
   rw [F.tensorEndEquiv_comul]
-  simp
+  simp only [mul_one, lid_tmul, one_smul]
 
 /-- Applying the right tensor unitor after contracting the second leg with the
 counit can be computed by first swapping the tensor. -/
@@ -166,8 +172,9 @@ theorem rid_counit_lTensor (F : CommFrobeniusAlgebra R A) (t : A ⊗[R] A) :
     TensorProduct.rid R A (F.counit.lTensor A t) =
       F.pairing.tensorEndEquiv (TensorProduct.comm R A A t) 1 := by
   induction t using TensorProduct.induction_on with
-  | zero => simp
-  | tmul u v => simp
+  | zero => simp only [map_zero, LinearMap.zero_apply]
+  | tmul u v => simp only [LinearMap.lTensor_tmul, rid_tmul, comm_tmul,
+      SymmetricPerfectPairing.tensorEndEquiv_tmul, pairing_apply, mul_one]
   | add t₁ t₂ h₁ h₂ => simp only [map_add, LinearMap.add_apply, h₁, h₂]
 
 /-- The second counit law. -/
@@ -177,7 +184,7 @@ theorem lTensor_counit_comul (F : CommFrobeniusAlgebra R A) (a : A) :
   apply (TensorProduct.rid R A).injective
   rw [F.rid_counit_lTensor, F.comm_comul]
   rw [F.tensorEndEquiv_comul]
-  simp
+  simp only [mul_one, rid_tmul, one_smul]
 
 omit [Module.Free R A] [Module.Finite R A] in
 /-- Multiplying a fixed element into the first tensor leg commutes with
@@ -186,12 +193,13 @@ theorem mul'_includeLeft_mul (a : A) (t : A ⊗[R] A) :
     LinearMap.mul' R A ((a ⊗ₜ[R] 1) * t) =
       a * LinearMap.mul' R A t := by
   induction t using TensorProduct.induction_on with
-  | zero => simp
-  | tmul u v => simp [mul_comm, mul_left_comm]
+  | zero => simp only [mul_zero, map_zero]
+  | tmul u v => simp only [Algebra.TensorProduct.tmul_mul_tmul, mul_comm,
+      mul_one, LinearMap.mul'_apply, mul_left_comm]
   | add t₁ t₂ h₁ h₂ => simp only [mul_add, map_add, h₁, h₂]
 
 /-- Multiplication after comultiplication is multiplication by the handle
-element: `μ(Δ(a)) = aE`. -/
+element: `μ(Δ(a)) = a * E`. -/
 @[simp]
 theorem mul'_comul (F : CommFrobeniusAlgebra R A) (a : A) :
     LinearMap.mul' R A (F.comul a) = a * F.handleElement := by
@@ -219,7 +227,10 @@ noncomputable def tensorModuleHomEquiv (F : CommFrobeniusAlgebra R A)
 theorem tensorModuleHomEquiv_tmul (F : CommFrobeniusAlgebra R A)
     {W : Type*} [AddCommGroup W] [Module R W] (a x : A) (w : W) :
     F.tensorModuleHomEquiv W (a ⊗ₜ[R] w) x = F.pairing.form a x • w := by
-  simp [tensorModuleHomEquiv]
+  simp only [tensorModuleHomEquiv, dualTensorHomEquiv,
+    LinearEquiv.trans_apply, congr_tmul, LinearEquiv.refl_apply,
+    dualTensorHomEquivOfBasis_apply, dualTensorHom_apply,
+    SymmetricPerfectPairing.toDual_apply, pairing_apply]
 
 /-- Contracting the first leg after reassociating `(A ⊗ A) ⊗ A` contracts the
 first leg of the inner two-tensor. -/
@@ -229,8 +240,9 @@ theorem tensorModuleHomEquiv_assoc_tmul (F : CommFrobeniusAlgebra R A)
         (TensorProduct.assoc R A A A (s ⊗ₜ[R] q)) x =
       F.pairing.tensorEndEquiv s x ⊗ₜ[R] q := by
   induction s using TensorProduct.induction_on with
-  | zero => simp
-  | tmul u v => simp [TensorProduct.smul_tmul']
+  | zero => simp only [zero_tmul, map_zero, LinearMap.zero_apply]
+  | tmul u v => simp only [assoc_tmul, tensorModuleHomEquiv_tmul,
+      pairing_apply, smul_tmul', SymmetricPerfectPairing.tensorEndEquiv_tmul]
   | add s₁ s₂ h₁ h₂ =>
       simp only [add_tmul, map_add, LinearMap.add_apply, h₁, h₂]
 
@@ -242,11 +254,11 @@ theorem tensorModuleHomEquiv_assoc_comul_rTensor
         (TensorProduct.assoc R A A A (F.comul.rTensor A t)) x =
       (x ⊗ₜ[R] 1) * t := by
   induction t using TensorProduct.induction_on with
-  | zero => simp
+  | zero => simp only [map_zero, LinearMap.zero_apply, mul_zero]
   | tmul p q =>
       rw [LinearMap.rTensor_tmul, F.tensorModuleHomEquiv_assoc_tmul]
       rw [F.tensorEndEquiv_comul]
-      simp [mul_comm]
+      simp only [mul_comm, Algebra.TensorProduct.tmul_mul_tmul, mul_one]
   | add t₁ t₂ h₁ h₂ =>
       simp only [map_add, LinearMap.add_apply, mul_add, h₁, h₂]
 
@@ -257,8 +269,10 @@ theorem tensorModuleHomEquiv_comul_lTensor
     F.tensorModuleHomEquiv (A ⊗[R] A) (F.comul.lTensor A t) x =
       F.comul (F.pairing.tensorEndEquiv t x) := by
   induction t using TensorProduct.induction_on with
-  | zero => simp
-  | tmul p q => simp
+  | zero => simp only [map_zero, LinearMap.zero_apply]
+  | tmul p q => simp only [LinearMap.lTensor_tmul,
+      tensorModuleHomEquiv_tmul, pairing_apply,
+      SymmetricPerfectPairing.tensorEndEquiv_tmul, map_smul]
   | add t₁ t₂ h₁ h₂ =>
       simp only [map_add, LinearMap.add_apply, h₁, h₂]
 

@@ -11,8 +11,8 @@ public import AxiomaticGW.Frobenius.Examples
 /-!
 # Constant curve-class-resolved GW theory
 
-The base-ring Frobenius theory, concentrated at beta zero, is the first model
-of the coefficientwise GW interface.
+The first model of the coefficientwise GW interface places the base-ring
+topological CohFT in curve class zero.
 -/
 
 @[expose] public section
@@ -40,7 +40,7 @@ theorem atZero_zero {R V H : Type*} [CommRing R]
     {S : Type}
     (f : MultilinearMap R (fun _ : S ↦ V) H) :
     atZero f (0 : B) = f := by
-  simp [atZero]
+  simp only [atZero, ↓reduceIte]
 
 @[simp]
 theorem atZero_of_ne {R V H : Type*} [CommRing R]
@@ -48,7 +48,7 @@ theorem atZero_of_ne {R V H : Type*} [CommRing R]
     {S : Type}
     (f : MultilinearMap R (fun _ : S ↦ V) H) {beta : B} (h : beta ≠ 0) :
     atZero f beta = 0 := by
-  simp [atZero, h]
+  simp only [atZero, h, ↓reduceIte]
 
 end EffectiveCurveMonoid
 
@@ -72,17 +72,23 @@ noncomputable def gradedState :
   dimension := 0
   degree := constantDegree R
   decomposition := constantDegree.decomposition R
-  unit_mem_degree_zero := by simp [constantDegree, cohft, topological]
+  unit_mem_degree_zero := by
+    simp only [constantDegree, ↓reduceIte, cohft, topological,
+      Submodule.mem_top]
   pairing_vanishes := by
     intro p q x y hx hy hpq
     have hp_or_hq : p ≠ 0 ∨ q ≠ 0 := by omega
     rcases hp_or_hq with hp | hq
-    · have hx0 : x = 0 := by simpa [constantDegree, hp] using hx
+    · have hx0 : x = 0 := by
+        simpa only [constantDegree, hp, ↓reduceIte, Submodule.mem_bot]
+          using hx
       subst x
-      simp
-    · have hy0 : y = 0 := by simpa [constantDegree, hq] using hy
+      simp only [map_zero, LinearMap.zero_apply]
+    · have hy0 : y = 0 := by
+        simpa only [constantDegree, hq, ↓reduceIte, Submodule.mem_bot]
+          using hy
       subst y
-      simp
+      simp only [map_zero]
 
 /-- The constant primary GW theory is supported only at beta zero. -/
 noncomputable def theory (D : EffectiveCurveMonoid B) :
@@ -97,11 +103,14 @@ noncomputable def theory (D : EffectiveCurveMonoid B) :
     intro g S T _ _ hS hT e beta
     by_cases hbeta : beta = 0
     · subst beta
-      simpa using (cohft R).relabel g S T hS hT e
+      simpa only [EffectiveCurveMonoid.atZero_zero]
+        using (cohft R).relabel g S T hS hT e
     · simp only [EffectiveCurveMonoid.atZero_of_ne _ hbeta]
       apply MultilinearMap.ext
       intro a
-      simp [MultilinearMap.domDomCongr_apply]
+      simp only [LinearMap.compMultilinearMap_apply,
+        MultilinearMap.domDomCongr_apply, zero_apply,
+        AlgEquiv.toLinearMap_apply, AlgEquiv.coe_refl, id_eq]
   unit_insert := by
     intro g S _ h beta a
     by_cases hbeta : beta = 0
@@ -112,12 +121,15 @@ noncomputable def theory (D : EffectiveCurveMonoid B) :
         (constantStableCurveCohomology R).forget g S h
           ((cohft R).omega g S h a)
       exact (cohft R).unit_insert g S h a
-    · simp [EffectiveCurveMonoid.atZero, hbeta]
+    · simp only [EffectiveCurveMonoid.atZero, hbeta, ↓reduceIte, zero_apply,
+        AlgHom.coe_id, id_eq]
   nonseparating := by
     intro g S _ h beta
     by_cases hbeta : beta = 0
     · subst beta
-      simpa using (cohft R).nonseparating g S h
+      simpa only [EffectiveCurveMonoid.atZero_zero, AlgHom.toLinearMap_id,
+        LinearMap.id_compMultilinearMap]
+        using (cohft R).nonseparating g S h
     · simp only [EffectiveCurveMonoid.atZero_of_ne _ hbeta]
       apply MultilinearMap.ext
       intro a
@@ -125,7 +137,8 @@ noncomputable def theory (D : EffectiveCurveMonoid B) :
       rw [show ((MultilinearMap.domDomCongr (doubleOptionEquiv S) 0).currySum a) = 0 by
         apply MultilinearMap.ext
         intro b
-        simp [MultilinearMap.currySum_apply', MultilinearMap.domDomCongr_apply]]
+        simp only [MultilinearMap.currySum_apply',
+          MultilinearMap.domDomCongr_apply, zero_apply]]
       exact map_zero _
   separating := by
     intro g₁ g₂ S T _ _ h₁ h₂ beta
@@ -147,7 +160,7 @@ noncomputable def theory (D : EffectiveCurveMonoid B) :
         · have h₂ne : split.2 ≠ 0 := by
             intro h₂zero
             apply hbeta
-            simpa [h₁zero, h₂zero] using hadd.symm
+            simpa only [h₁zero, h₂zero, add_zero] using hadd.symm
           rw [EffectiveCurveMonoid.atZero_of_ne _ h₂ne]
           apply MultilinearMap.ext
           intro a
@@ -158,8 +171,10 @@ noncomputable def theory (D : EffectiveCurveMonoid B) :
                   (SymmetricPerfectPairing.separatingLabelsEquiv S T)).currySum a = 0 by
             apply MultilinearMap.ext
             intro b
-            simp [MultilinearMap.currySum_apply',
-              MultilinearMap.domDomCongr_apply, MultilinearMap.domCoprod_apply]]
+            simp only [MultilinearMap.currySum_apply',
+              MultilinearMap.domDomCongr_apply,
+              MultilinearMap.domCoprod_apply, zero_apply,
+              TensorProduct.tmul_zero]]
           exact map_zero _
         · rw [EffectiveCurveMonoid.atZero_of_ne _ h₁zero]
           apply MultilinearMap.ext
@@ -172,11 +187,15 @@ noncomputable def theory (D : EffectiveCurveMonoid B) :
                     (SymmetricPerfectPairing.separatingLabelsEquiv S T)).currySum a = 0 by
             apply MultilinearMap.ext
             intro b
-            simp [MultilinearMap.currySum_apply',
-              MultilinearMap.domDomCongr_apply, MultilinearMap.domCoprod_apply]]
+            simp only [MultilinearMap.currySum_apply',
+              MultilinearMap.domDomCongr_apply,
+              MultilinearMap.domCoprod_apply, zero_apply,
+              TensorProduct.zero_tmul]]
           exact map_zero _
       rw [hsum]
-      simp [EffectiveCurveMonoid.atZero, hbeta]
+      simp only [Algebra.TensorProduct.toLinearMap_includeLeft,
+        EffectiveCurveMonoid.atZero, hbeta, ↓reduceIte,
+        LinearMap.compMultilinearMap_zero]
   normalization_zero := by
     intro a
     simp only [EffectiveCurveMonoid.atZero_zero]
@@ -188,7 +207,7 @@ noncomputable def theory (D : EffectiveCurveMonoid B) :
     exact (cohft R).normalization a
   normalization_nonzero := by
     intro beta hbeta a
-    simp [EffectiveCurveMonoid.atZero, hbeta]
+    simp only [EffectiveCurveMonoid.atZero, hbeta, ↓reduceIte, zero_apply]
   omega_degree := by
     intro g S _ h beta p a q ha hdegree
     by_cases hbeta : beta = 0
@@ -197,15 +216,17 @@ noncomputable def theory (D : EffectiveCurveMonoid B) :
       by_cases hp : ∀ s, p s = 0
       · have hq : q = 0 := by
           simp only [GWOutputDegree, map_zero, gradedState] at hdegree
-          have hsum : ∑ s, p s = 0 := by simp [hp]
+          have hsum : ∑ s, p s = 0 := by
+            simp only [hp, Finset.sum_const_zero]
           omega
         subst q
-        simp [constantDegree]
+        simp only [constantDegree, ↓reduceIte, Submodule.mem_top]
       · obtain ⟨s, hs⟩ := not_forall.mp hp
         have has : a s = 0 := by
           have hsMem := ha s
           change a s ∈ constantDegree R (p s) at hsMem
-          simpa [constantDegree, hs] using hsMem
+          simpa only [constantDegree, hs, ↓reduceIte, Submodule.mem_bot]
+            using hsMem
         rw [(cohft R).omega g S h |>.map_coord_zero s has]
         exact Submodule.zero_mem _
     · rw [EffectiveCurveMonoid.atZero_of_ne _ hbeta]
@@ -219,7 +240,7 @@ noncomputable def theory (D : EffectiveCurveMonoid B) :
 theorem theory_omega_zero (D : EffectiveCurveMonoid B)
     (g : ℕ) (S : Type) [Fintype S] (h : StableArity g S) :
     (theory R D).omega g S h 0 = (cohft R).omega g S h := by
-  simp [theory]
+  simp only [theory, EffectiveCurveMonoid.atZero_zero]
 
 end constantGromovWittenTheory
 

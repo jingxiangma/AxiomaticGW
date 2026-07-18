@@ -78,7 +78,7 @@ simplification. -/
 @[simp]
 theorem toDual_apply (P : SymmetricPerfectPairing R V) (x y : V) :
     P.toDual x y = P.form x y := by
-  simp [toDual]
+  simp only [toDual, LinearMap.toLinearMap_toPerfPair]
 
 end SymmetricPerfectPairing
 

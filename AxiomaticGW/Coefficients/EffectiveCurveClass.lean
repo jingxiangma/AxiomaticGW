@@ -39,7 +39,7 @@ noncomputable def bounded (D : EffectiveCurveMonoid B) (d : ℕ) : Finset B :=
 @[simp]
 theorem mem_bounded (D : EffectiveCurveMonoid B) (d : ℕ) (beta : B) :
     beta ∈ D.bounded d ↔ D.energy beta ≤ d := by
-  simp [bounded]
+  simp only [bounded, Set.Finite.mem_toFinset, Set.mem_setOf_eq]
 
 /-- All additive splittings of a fixed effective class. -/
 noncomputable def splittings (D : EffectiveCurveMonoid B) (beta : B) :
@@ -77,10 +77,10 @@ theorem splittings_zero (D : EffectiveCurveMonoid B) :
     simp only [map_add, map_zero, Nat.add_eq_zero_iff] at henergy
     have h₁ : beta₁ = 0 := (D.energy_eq_zero_iff beta₁).mp henergy.1
     have h₂ : beta₂ = 0 := (D.energy_eq_zero_iff beta₂).mp henergy.2
-    simp [h₁, h₂]
+    simp only [h₁, h₂]
   · intro h
     cases h
-    simp
+    simp only [add_zero]
 
 /-- The energy hypothesis supplies mathlib's finite-antidiagonal interface. -/
 @[reducible] noncomputable def hasAntidiagonal (D : EffectiveCurveMonoid B) :
@@ -94,7 +94,7 @@ theorem splittings_zero (D : EffectiveCurveMonoid B) :
 /-- Natural-number degree is the basic positive locally finite curve monoid. -/
 noncomputable def nat : EffectiveCurveMonoid ℕ where
   energy := AddMonoidHom.id ℕ
-  energy_eq_zero_iff := by simp
+  energy_eq_zero_iff := by simp only [AddMonoidHom.id_apply, implies_true]
   finite_energy_le := fun d ↦ by
     change {n : ℕ | n ≤ d}.Finite
     apply Set.Finite.subset (Finset.finite_toSet (Finset.range (d + 1)))

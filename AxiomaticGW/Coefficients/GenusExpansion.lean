@@ -35,7 +35,8 @@ theorem totalFreeEnergy_coeff {A : Type*} [CommRing A]
     (F : GenusPotential A) (g : ℕ) :
     (totalFreeEnergy F).coeff ((g : ℤ) - 1) = F g := by
   rw [totalFreeEnergy, HahnSeries.coeff_single_mul]
-  simp [LaurentSeries.coeff_coe_powerSeries, PowerSeries.coeff_mk]
+  simp only [Int.reduceNeg, sub_neg_eq_add, sub_add_cancel,
+    LaurentSeries.coeff_coe_powerSeries, PowerSeries.coeff_mk, one_mul]
 
 /-- Descendant and ancestor genus potentials over the same Novikov and formal
 variable completion. -/

@@ -6,6 +6,45 @@ Each entry records the accepted scope, implementation commit, a link to the cano
 
 Older entries preserve their then-current scope and next gate; explicit follow-up paragraphs record work completed by later revisions.
 
+## 2026-07-18: Simplifier stability and mathematical-comment audit
+
+**Status:** Implemented and locally verified.
+
+### Review evidence
+
+The proof audit covered every `simp`, `simpa`, `simp_all`, and simplifier-enabled Aesop call in all 42 production Lean modules and the public API regression tests. The terminology audit separately inspected every module docstring, public declaration docstring, and explanatory inline comment. Mathematical vocabulary was cross-checked against the project-local arXiv TeX sources for two-dimensional TFTs, CohFT/Gromov--Witten theory and quantum products, point-target psi-class intersections and DVV, and Givental's descendant--ancestor formalism.
+
+### Findings and revisions
+
+- **Medium:** 227 unrestricted simplifier calls depended on the evolving package and mathlib simp sets. Every production and test call now uses an explicit `simp only`, `simpa only`, or `simp_all only` set; the single explicit `simp_rw` already names its rewrite rules.
+- **Medium:** Novikov multiplication associativity delegated the finite splitting bijection to Aesop with a broad simp set. The proof now states the forward and inverse membership calculations explicitly and uses associativity of curve-class addition transparently.
+- **Low:** Comments used several vague or nonstandard phrases, including “flat identity,” “curve ancestors,” “Frobenius correlator theories,” “curve-class theory,” and “coefficient product,” while some stabilization/Fock comments overstated supplied carrier data. They now use flat unit, stable-curve ancestors, Frobenius-algebra correlators, fixed-class small-quantum-product contributions, and explicit supplied-data qualifications.
+- No critical or high-severity issue was found. No declaration name, theorem statement, assumption, simp attribute, instance, coercion, or import changed.
+
+### Mathematical effect
+
+The represented definitions, theorem propositions, hypotheses, normalizations, and public APIs are unchanged. The Novikov proof exposes the same reassociation bijection previously discharged by automation. Comment changes make the formal limitations of optional geometric and Fock-space carriers more precise without strengthening them.
+
+### Verification
+
+Direct elaboration passed for every changed Lean module, followed by:
+
+```bash
+lake build
+lake test
+lake lint
+git diff --check
+git diff --cached --check
+rg --pcre2 -n '\b(?:simp|simpa|simp_all)(?! only)(?:\s|\[|$)' AxiomaticGW AxiomaticGWTest -g '*.lean'
+rg -n '\b(sorry|admit)\b|^\s*(axiom|unsafe|opaque)\b|sorryAx|admitAx' AxiomaticGW AxiomaticGWTest
+```
+
+The full build completed 2,570 jobs. `lake test` passed with only the pre-existing private-module warning for `AxiomaticGWTest/Basic.lean`; library lint passed. Both source scans returned no matches. There are 369 explicit simplifier calls. `#print axioms` for Novikov associativity, TFT product reconstruction, and small and big quantum associativity reported only `propext`, `Classical.choice`, and `Quot.sound`.
+
+### Remaining risk and next gate
+
+Explicit simp lemma names may change in a future mathlib upgrade, but such changes now fail locally instead of silently changing proof normalization. The one `simp_rw` call is controlled by its two named rewrite rules. Terminology can vary between sources, but retained carrier names and their non-geometric limits are centralized in the [mathematical terminology audit](TerminologyAudit.md). The next mathematically substantive priority remains a concrete stable-curve or stable-map realization rather than further vocabulary-only work.
+
 ## 2026-07-18: Mathematical terminology and module-path audit
 
 **Status:** Implemented and locally verified.

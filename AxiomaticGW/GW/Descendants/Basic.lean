@@ -8,7 +8,7 @@ module
 public import AxiomaticGW.GW.Basic
 
 /-!
-# Stable-map descendants and curve ancestors
+# Stable-map descendants and stable-curve ancestors
 
 Ancestor classes use cotangent lines on stable curves. Stable-map descendants
 are separate pushed-forward classes and agree with the primary theory only when
@@ -51,7 +51,7 @@ theorem ancestorClass_zero (Omega : GromovWittenTheory R V B D C)
       Omega.omega g S h beta := by
   apply MultilinearMap.ext
   intro a
-  simp [ancestorClass_apply]
+  simp only [ancestorClass_apply, PsiClasses.monomial_zero, mul_one]
 
 /-- Relabelling transports markings, ancestor powers, and inputs together. -/
 theorem ancestorClass_relabel (Omega : GromovWittenTheory R V B D C)
@@ -97,7 +97,7 @@ theorem ancestorClass_eq_zero_of_negative (Omega : GromovWittenTheory R V B D C)
   rw [ancestorClass_apply,
     Omega.omega_eq_zero_of_negative g S h beta p a ha hnegative, zero_mul]
 
-/-- Ancestor classes satisfy the total descendant-degree rule. If the psi
+/-- Ancestor classes satisfy the total codimension rule. If the psi
 powers would require a negative primary degree, the primary class vanishes. -/
 theorem ancestorClass_total_degree (Omega : GromovWittenTheory R V B D C)
     (P : PsiClasses C) (g : ℕ) (S : Type) [Fintype S]
@@ -114,7 +114,7 @@ theorem ancestorClass_total_degree (Omega : GromovWittenTheory R V B D C)
       omega
     have hdegree := Omega.ancestorClass_degree P g S h beta k p a
       (q - ∑ s, k s) ha hprimary
-    simpa [Nat.sub_add_cancel hk] using hdegree
+    simpa only [ancestorClass_apply, Nat.sub_add_cancel hk] using hdegree
   · have hnegative : ((∑ s, p s : ℕ) : ℤ) +
         (g : ℤ) * (Omega.graded.dimension : ℤ) <
       (Omega.graded.dimension : ℤ) + Omega.c1Degree beta := by
@@ -293,7 +293,7 @@ theorem invariant_zero (M : StableMapDescendants Omega)
     M.invariant I g S h beta (fun _ ↦ 0) =
       (I.integrate g S h).compMultilinearMap
         (Omega.omega g S h beta) := by
-  simp [invariant, M.descendantClass_zero]
+  simp only [invariant, M.descendantClass_zero]
 
 end StableMapDescendants
 

@@ -1,6 +1,6 @@
 # Mathematical terminology audit
 
-This ledger records the repository-wide terminology review completed on 2026-07-18. It covers the public entry point, all 42 production modules, their public structures and definitions, and the associated theorem families. Private helpers were checked for local accuracy but are not presented as literature-level objects.
+This ledger records the repository-wide terminology review completed on 2026-07-18. It covers the public entry point, all 42 production modules, their module docstrings and public declaration comments, public structures and definitions, and the associated theorem families. Private helpers were checked for local accuracy but are not presented as literature-level objects.
 
 ## Sources and policy
 
@@ -21,6 +21,16 @@ Public names use a standard literature term when the represented object has that
 | `GW/QuantumProduct.lean` | `GW/SmallQuantumProduct.lean` | The module proves the small quantum-product laws. |
 | `GW/FormalQuantumProduct.lean` plus the former `GW/BigQuantumProduct.lean` | consolidated `GW/BigQuantumProduct.lean` | One module now owns the big product, WDVV, associativity, and primary potential. |
 | `AxiomaticGW.Point.Descendants` | `AxiomaticGW.PointTarget.Descendants` | The target is a point, matching the existing `PointTarget` namespace and the standard phrase “GW theory of a point.” |
+
+## Comment vocabulary
+
+| Avoided wording | Standard or precise wording | Reason |
+| --- | --- | --- |
+| flat identity | flat unit | CohFT and Gromov--Witten literature uses the flat-unit axiom. |
+| one/two/three-input correlator | one/two/three-point correlator | The mathematical object is an n-point function; “input” remains appropriate only when discussing Lean multilinear slots. |
+| curve ancestor, descendant powers in an ancestor correlator | stable-curve ancestor, cotangent powers | Ancestors use cotangent-line classes on the stable-curve moduli space and must remain distinct from stable-map descendants. |
+| coefficient product, curve-class theory | fixed-class contribution to the small quantum product, genus-zero Gromov--Witten theory | These phrases identify the standard operation and the theory supplying its coefficients. |
+| genuine stabilization comparison, quantized inverse calibration on completed Fock potentials | supplied factorized rational-tail comparison, supplied quantized action on coefficientwise Fock data | The current structures package hypothesis data and do not construct the underlying geometry or quantization. |
 
 ## Formal limitations of retained terms
 
@@ -77,7 +87,7 @@ Public names use a standard literature term when the represented object has that
 | `Linear/Contraction.lean` | Named-slot contraction, self-contraction, and pair-contraction terminology retained. |
 | `Linear/Copairing.lean` | Copairing and tensor-endomorphism correspondence terminology retained. |
 | `Linear/PerfectPairing.lean` | Symmetric perfect pairing and duality terminology retained. |
-| `PointTarget/Descendants.lean` | Point-target primary class, psi intersections, WDVV, and DVV terminology retained under the canonical module path. |
+| `PointTarget/Descendants.lean` | Point-target primary class, psi-class intersection numbers, WDVV, and DVV terminology retained under the canonical module path. |
 | `TFT/Basic.lean` | The bundled object is canonically `TwoDimensionalTFT`; its fields remain correlators and sewing laws. |
 | `TFT/Classification.lean` | `threePointFunction`, Frobenius product recovery, trace compatibility, and round-trip terminology standardized. |
 | `TFT/Correlator.lean` | Individual finite-labelled maps remain `correlator`, matching the literature. |

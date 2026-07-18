@@ -83,7 +83,8 @@ private theorem coeff_pderiv_trunc' (v : Vars)
       pderiv v f n := by
   classical
   rw [MvPolynomial.coeff_pderiv, MvPowerSeries.coeff_trunc', if_pos hN]
-  simp [MvPowerSeries.coeff_apply, pderiv_apply, nsmul_eq_mul, mul_comm]
+  simp only [MvPowerSeries.coeff_apply, pderiv_apply, nsmul_eq_mul,
+    Nat.cast_add, Nat.cast_one, mul_comm]
 
 private theorem coeff_pderiv_mul_trunc' (v : Vars)
     (f g : MvPowerSeries Vars R) (n : Vars →₀ ℕ) :
@@ -95,7 +96,8 @@ private theorem coeff_pderiv_mul_trunc' (v : Vars)
   rw [MvPolynomial.coeff_pderiv,
     MvPowerSeries.coeff_trunc'_mul_trunc'_eq_coeff_mul
       (n + Finsupp.single v 1) f g le_rfl]
-  simp [MvPowerSeries.coeff_apply, pderiv_apply, nsmul_eq_mul, mul_comm]
+  simp only [MvPowerSeries.coeff_apply, pderiv_apply, nsmul_eq_mul,
+    Nat.cast_add, Nat.cast_one, mul_comm]
 
 private theorem coeff_pderiv_trunc'_mul (v : Vars)
     (f g : MvPowerSeries Vars R) (n : Vars →₀ ℕ) :

@@ -59,7 +59,7 @@ Keep lines at or below 100 characters where practical. Use Unicode notation and 
 
 Prefer a short structural proof whose intermediate steps reflect the mathematical argument. Use `rfl`, `exact`, `rw`, `calc`, extensionality, or induction when they make the reason for the result visible.
 
-`simp` is allowed. A terminal `simp` is often the clearest final step and should not be expanded mechanically. In the middle of a proof, prefer `simp only [...]` when later steps rely on a specific normal form. Avoid an unrestricted nonterminal `simp` followed by a rigid tactic such as `rw`, because changes to the simp set can make that proof fragile.
+Use `simp only [...]` and `simpa only [...]` by default in production proofs. The package and mathlib simp sets evolve, so an unrestricted simplifier call can silently change a proof's normal form after a dependency update. An unrestricted terminal `simp` requires a specific justification; never use unrestricted nonterminal simplification before a tactic that relies on a particular normal form.
 
 Add `@[simp]` only when the theorem has a clear, terminating, canonical orientation. Evaluation and projection rules are typical simp lemmas. Derived corollaries that simplify to an existing canonical rule should remain named theorems without the attribute. Run the `simpNF` linter whenever a simp attribute changes.
 

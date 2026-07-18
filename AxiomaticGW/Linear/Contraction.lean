@@ -68,7 +68,10 @@ omit [Module.Free R V] [Module.Finite R V] in
 theorem finTwoToBilin_apply
     (f : MultilinearMap R (fun _ : Fin 2 ↦ V) R) (x y : V) :
     finTwoToBilin f x y = f (Fin.cons x fun _ ↦ y) := by
-  simp [finTwoToBilin]
+  simp only [finTwoToBilin, Nat.succ_eq_add_one, Nat.reduceAdd,
+    LinearMap.coe_comp, LinearEquiv.coe_coe, Function.comp_apply,
+    multilinearCurryLeftEquiv_apply, LinearMap.compRight_apply,
+    finOneToLinear_apply, MultilinearMap.curryLeft_apply]
 
 /-- Contract a two-input multilinear map against the copairing. -/
 noncomputable def contractTwo (P : SymmetricPerfectPairing R V) :
@@ -100,14 +103,16 @@ theorem selfContract_apply (P : SymmetricPerfectPairing R V)
 theorem selfContract_add (P : SymmetricPerfectPairing R V) {S : Type*}
     (f g : MultilinearMap R (fun _ : S ⊕ Fin 2 ↦ V) R) :
     P.selfContract (f + g) = P.selfContract f + P.selfContract g := by
-  simp [selfContract]
+  simp only [selfContract, MultilinearMap.currySum_add,
+    LinearMap.compMultilinearMap_add]
 
 /-- Self-contraction is compatible with scalar multiplication. -/
 @[simp]
 theorem selfContract_smul (P : SymmetricPerfectPairing R V) {S : Type*}
     (r : R) (f : MultilinearMap R (fun _ : S ⊕ Fin 2 ↦ V) R) :
     P.selfContract (r • f) = r • P.selfContract f := by
-  simp [selfContract]
+  simp only [selfContract, MultilinearMap.currySum_smul,
+    LinearMap.compMultilinearMap_smul]
 
 section Target
 
@@ -149,7 +154,10 @@ omit [Module.Free R V] [Module.Finite R V] in
 theorem finTwoToLinearTarget_apply
     (f : MultilinearMap R (fun _ : Fin 2 ↦ V) W) (x y : V) :
     finTwoToLinearTarget f x y = f (Fin.cons x fun _ ↦ y) := by
-  simp [finTwoToLinearTarget]
+  simp only [finTwoToLinearTarget, Nat.succ_eq_add_one, Nat.reduceAdd,
+    LinearMap.coe_comp, LinearEquiv.coe_coe, Function.comp_apply,
+    multilinearCurryLeftEquiv_apply, LinearMap.compRight_apply,
+    finOneToLinearTarget_apply, MultilinearMap.curryLeft_apply]
 
 /-- Contract a two-input multilinear map with arbitrary target against the
 copairing. -/
@@ -245,7 +253,7 @@ theorem contractTwo_domDomCongr_swap (P : SymmetricPerfectPairing R V)
       TensorProduct.lift (finTwoToBilin (f.domDomCongr swapFinTwo)) t =
         TensorProduct.lift (finTwoToBilin f) (TensorProduct.comm R V V t) := by
     induction t using TensorProduct.induction_on with
-    | zero => simp
+    | zero => simp only [map_zero]
     | tmul x y =>
         simp only [TensorProduct.lift.tmul, TensorProduct.comm_tmul]
         exact finTwoToBilin_domDomCongr_swap f x y
@@ -330,9 +338,11 @@ theorem selfContractTarget_comp {W : Type*} [AddCommGroup W] [Module R W]
   simp only [LinearMap.compMultilinearMap_apply, selfContractTarget_apply,
     selfContract_apply, contractTwoTarget_apply, contractTwo_apply]
   induction P.copairing using TensorProduct.induction_on with
-  | zero => simp
+  | zero => simp only [map_zero]
   | tmul x y =>
-      simp [finTwoToLinearTarget_apply, finTwoToBilin_apply]
+      simp only [lift.tmul, finTwoToLinearTarget_apply,
+        MultilinearMap.currySum_apply', finTwoToBilin_apply,
+        LinearMap.compMultilinearMap_apply]
   | add x y hx hy => simp only [map_add, hx, hy]
 
 /-- Scalarizing both targets after separating contraction agrees with first
@@ -352,9 +362,14 @@ theorem pairContractTarget_comp_lift
   simp only [LinearMap.compMultilinearMap_apply, pairContractTarget_apply,
     pairContract_apply, contractTwoTarget_apply, contractTwo_apply]
   induction P.copairing using TensorProduct.induction_on with
-  | zero => simp
+  | zero => simp only [map_zero, LinearMap.compMultilinearMap_domDomCongr]
   | tmul x y =>
-      simp [finTwoToLinearTarget_apply, finTwoToBilin_apply]
+      simp only [lift.tmul, finTwoToLinearTarget_apply,
+        MultilinearMap.currySum_apply', MultilinearMap.domDomCongr_apply,
+        MultilinearMap.domCoprod_apply, AlgHom.toLinearMap_apply,
+        Algebra.TensorProduct.lift_tmul,
+        LinearMap.compMultilinearMap_domDomCongr, finTwoToBilin_apply,
+        LinearMap.compMultilinearMap_apply, LinearMap.mul'_apply]
   | add x y hx hy => simp only [map_add, hx, hy]
 
 /-- Contracting two metric functionals against the copairing recovers the
@@ -370,9 +385,12 @@ theorem contract_toDual_mul_toDual (P : SymmetricPerfectPairing R V)
           (((LinearMap.mul R R).comp (P.toDual x)).compl₂ (P.toDual y)) t =
         P.form (P.tensorEndEquiv t x) y := by
     induction t using TensorProduct.induction_on with
-    | zero => simp
+    | zero => simp only [map_zero, LinearMap.zero_apply]
     | tmul u v =>
-        simp [P.isSymm.eq]
+        simp only [lift.tmul, LinearMap.compl₂_apply, LinearMap.coe_comp,
+          Function.comp_apply, toDual_apply, LinearMap.mul_apply_apply,
+          tensorEndEquiv_tmul, P.isSymm.eq, map_smul, LinearMap.smul_apply,
+          smul_eq_mul]
     | add t₁ t₂ h₁ h₂ =>
         simpa only [map_add, LinearMap.add_apply] using congrArg₂ (· + ·) h₁ h₂
   rw [contraction, P.tensorEndEquiv_copairing]

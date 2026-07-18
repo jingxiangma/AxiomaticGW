@@ -50,7 +50,7 @@ theorem contract_mul_casimir (F : CommFrobeniusAlgebra R A) (z : A) :
           ((LinearMap.mul R A).compr₂ (F.counit.comp (LinearMap.mulLeft R z))) t =
         F.counit (z * LinearMap.mul' R A t) := by
     induction t using TensorProduct.induction_on with
-    | zero => simp
+    | zero => simp only [map_zero, mul_zero]
     | tmul x y => rfl
     | add t₁ t₂ h₁ h₂ =>
         simpa only [map_add, mul_add] using congrArg₂ (· + ·) h₁ h₂
@@ -120,10 +120,16 @@ theorem pairContract_correlator (F : CommFrobeniusAlgebra R A)
     intro x
     apply LinearMap.ext
     intro y
-    simp [SymmetricPerfectPairing.finTwoToBilin_apply,
-      MultilinearMap.currySum_apply', MultilinearMap.domDomCongr_apply,
-      SymmetricPerfectPairing.separatingLabelsEquiv, correlator_apply,
-      Fintype.prod_option, x₀, y₀]
+    simp only [SymmetricPerfectPairing.separatingLabelsEquiv, Fin.isValue,
+      LinearMap.compMultilinearMap_domDomCongr,
+      SymmetricPerfectPairing.finTwoToBilin_apply,
+      MultilinearMap.currySum_apply', LinearMap.compMultilinearMap_apply,
+      MultilinearMap.domDomCongr_apply, Equiv.coe_fn_mk,
+      MultilinearMap.domCoprod_apply, correlator_apply, Fintype.prod_option,
+      Sum.elim_inr, Fin.cons_zero, Sum.elim_inl, Fin.cons_one,
+      LinearMap.mul'_apply, LinearMap.compl₂_apply, LinearMap.coe_comp,
+      Function.comp_apply, SymmetricPerfectPairing.toDual_apply, pairing_apply,
+      LinearMap.mul_apply_apply, x₀, y₀]
     congr 1 <;> congr 1 <;> ac_rfl
   rw [hform]
   change TensorProduct.lift

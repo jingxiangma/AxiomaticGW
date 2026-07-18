@@ -72,7 +72,7 @@ theorem boundaryCorrection_zero (X : DescendantAncestorComparison P M)
   rw [M.descendantClass_zero, Omega.ancestorClass_zero] at hcomparison
   have hsubtract := congrArg
     (fun f ↦ f - Omega.omega g S h beta) hcomparison
-  simpa [add_sub_cancel_left] using hsubtract.symm
+  simpa only [add_sub_cancel_left, sub_self] using hsubtract.symm
 
 /-- The residual is natural under simultaneous relabelling of markings,
 powers, and state-space inputs. -/

@@ -32,7 +32,7 @@ variable {R A : Type*} [CommRing R] [CommRing A] [Algebra R A]
 /-- Construct a Frobenius algebra from an invariant perfect pairing.
 
 The input `invariant` is the equation
-`form (a*b) c = form a (b*c)`.  The counit is recovered by
+`form (a * b) c = form a (b * c)`. The counit is recovered by
 `counit a = form a 1`. -/
 def ofInvariantPairing (form : LinearMap.BilinForm R A)
     (isPerfPair : form.IsPerfPair)
@@ -45,7 +45,8 @@ def ofInvariantPairing (form : LinearMap.BilinForm R A)
     -- the original form.  Invariance with `c = 1` is the key calculation.
     have hform : tracePairing (form.flip 1) = form := by
       ext a b
-      simpa using invariant a b 1
+      simpa only [tracePairing_apply, LinearMap.BilinForm.flip_apply, mul_one]
+        using invariant a b 1
     -- Rewrite the goal using that equality, then reuse the assumed
     -- perfectness of `form`.
     rw [hform]
@@ -66,7 +67,8 @@ theorem pairing_ofInvariantPairing (form : LinearMap.BilinForm R A)
     (invariant : ∀ a b c : A, form (a * b) c = form a (b * c)) :
     (ofInvariantPairing form isPerfPair invariant).pairing.form = form := by
   ext a b
-  simpa using invariant a b 1
+  simpa only [pairing_apply, ofInvariantPairing_counit, mul_one]
+    using invariant a b 1
 
 section FiniteFree
 
@@ -86,7 +88,7 @@ identity endomorphism. -/
 @[simp]
 theorem tensorEndEquiv_casimir (F : CommFrobeniusAlgebra R A) :
     F.pairing.tensorEndEquiv F.casimir = LinearMap.id := by
-  simp [casimir]
+  simp only [casimir, SymmetricPerfectPairing.tensorEndEquiv_copairing]
 
 /-- The handle (Euler) element, obtained by multiplying the two legs of the
 Casimir tensor.

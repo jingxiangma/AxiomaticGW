@@ -66,7 +66,7 @@ example {R A : Type*} [CommRing R] [CommRing A] [Algebra R A]
 /-- The rank-two example remains available through the project entry point. -/
 example (R : Type*) [CommRing R] :
     (AxiomaticGW.CommFrobeniusAlgebra.productAlgebra R).handleElement = 1 := by
-  simp
+  simp only [CommFrobeniusAlgebra.productAlgebra_handleElement]
 
 /-- The bundled two-dimensional TFT exposes the nonseparating gluing law. -/
 example {R A : Type*} [CommRing R] [CommRing A] [Algebra R A]
@@ -89,7 +89,9 @@ example {R A : Type*} [CommRing R] [CommRing A] [Algebra R A]
 example (R : Type*) [CommRing R] (g : ℕ) (a : Fin 3 → R) :
     (AxiomaticGW.CommFrobeniusAlgebra.baseRing R).correlator g (Fin 3) a =
       ∏ i, a i := by
-  simp
+  simp only [CommFrobeniusAlgebra.correlator_apply,
+    CommFrobeniusAlgebra.baseRing_handleElement, one_pow, mul_one,
+    CommFrobeniusAlgebra.baseRing_counit_apply]
 
 /-- A correlator with no marked inputs is the closed-surface partition
 function. -/
@@ -138,7 +140,7 @@ namespace FullCohFT
 
 /-- The constant stable-curve system is concentrated in codimension zero. -/
 example (r : ℚ) : r ∈ AxiomaticGW.constantDegree ℚ 0 := by
-  simp [AxiomaticGW.constantDegree]
+  simp only [AxiomaticGW.constantDegree, ↓reduceIte, Submodule.mem_top]
 
 /-- The forget/nonseparating transport cycles the forgotten marking past the
 two ordered node markings and fixes every original marking. -/
@@ -149,7 +151,7 @@ example (S : Type) (s : S) :
       AxiomaticGW.forgetNonseparatingEquiv S (some (some none)) = none ∧
       AxiomaticGW.forgetNonseparatingEquiv S (some (some (some s))) =
         some (some (some s)) := by
-  simp [AxiomaticGW.forgetNonseparatingEquiv]
+  simp only [AxiomaticGW.forgetNonseparatingEquiv, Equiv.coe_fn_mk, and_self]
 
 /-- Forgetting after nonseparating gluing exposes the required transport of
 the forgotten marking and node labels. -/
@@ -296,7 +298,7 @@ example {V : Type*} [AddCommGroup V] [Module ℚ V]
     (T : AxiomaticGW.TopologicalCohFT ℚ V) (g : ℕ) (S : Type) [Fintype S]
     (h : AxiomaticGW.StableArity g S) :
     T.toConstantCohFT.toTopologicalCohFT.omega g S h = T.omega g S h := by
-  simp
+  simp only [AxiomaticGW.TopologicalCohFT.toConstantCohFT_toTopologicalCohFT_omega]
 
 /-- The generic degree-zero construction specializes to the original
 topological theory on the constant target. -/
@@ -307,7 +309,7 @@ example {V : Type*} [AddCommGroup V] [Module ℚ V]
     (T.toConstantCohFT.topologicalPart
       (AxiomaticGW.constantStableCurveCohomology.connectedDegreeZero ℚ)).omega
         g S h = T.omega g S h := by
-  simp
+  simp only [AxiomaticGW.TopologicalCohFT.toConstantCohFT_topologicalPart_omega]
 
 /-- The genus-zero product extracted from a topological CohFT is associative. -/
 example {V : Type*} [AddCommGroup V] [Module ℚ V]
@@ -379,7 +381,7 @@ example {R V B : Type} [CommRing R] [Algebra ℚ R]
 /-- The natural-number model exposes exactly the additive curve-class
 splittings used by coefficientwise gluing. -/
 example : (1, 2) ∈ (AxiomaticGW.EffectiveCurveMonoid.nat).splittings 3 := by
-  simp
+  simp only [AxiomaticGW.EffectiveCurveMonoid.mem_splittings, Nat.reduceAdd]
 
 /-- The beta-zero reference theory recovers its underlying CohFT class. -/
 example (g : ℕ) (S : Type) [Fintype S] (h : AxiomaticGW.StableArity g S) :
@@ -433,7 +435,7 @@ example (x y : ℚ) (beta : ℕ) :
       (Module.Basis.singleton Unit ℚ)
   change AxiomaticGW.constantStableCurveCohomology.integrate ℚ 0 (Fin 3) =
     LinearMap.id
-  simp
+  simp only [AxiomaticGW.constantStableCurveCohomology.integrate_zero_fin_three]
 
 /-- Relabelling the distinguished insertions makes the big quantum product
 commutative at every primary background. -/
@@ -468,11 +470,16 @@ def loopGraph : AxiomaticGW.StableGraph (Fin 1) where
     have hvw : v = w := Subsingleton.elim _ _
     subst w
     exact Relation.ReflTransGen.refl
-  stable := by simp
+  stable := by
+    simp only [mul_zero, Fintype.card_subtype_true, Fintype.card_unique,
+      zero_add, Fintype.card_prod, Fintype.card_fin, one_mul, Nat.reduceAdd,
+      Std.le_refl, implies_true]
 
 example : loopGraph.totalGenus = 1 := by
-  simp [AxiomaticGW.StableGraph.totalGenus,
-    AxiomaticGW.StableGraph.firstBetti, loopGraph]
+  simp only [AxiomaticGW.StableGraph.totalGenus, loopGraph,
+    Finset.univ_unique, PUnit.default_eq_unit, Finset.sum_const_zero,
+    AxiomaticGW.StableGraph.firstBetti, Fintype.card_unique, Nat.reduceAdd,
+    Nat.add_one_sub_one, zero_add]
 
 example : AxiomaticGW.StableArity
     (loopGraph.genus ()) (loopGraph.VertexLabel ()) :=
@@ -491,7 +498,10 @@ def twoLoopGraph : AxiomaticGW.StableGraph Empty where
     have hvw : v = w := Subsingleton.elim _ _
     subst w
     exact Relation.ReflTransGen.refl
-  stable := by simp
+  stable := by
+    simp only [mul_zero, Fintype.card_eq_zero, add_zero,
+      Fintype.card_subtype_true, Fintype.card_prod, Fintype.card_bool,
+      Fintype.card_fin, Nat.reduceMul, zero_add, Nat.reduceLeDiff, implies_true]
 
 example (o₁ o₂ : twoLoopGraph.ContractionOrder) :
     o₁.edges.Perm o₂.edges :=
@@ -549,7 +559,8 @@ example {R V B : Type} [CommRing R] [Algebra ℚ R]
 /-- Positive-tail support excludes the zero class on the tail component. -/
 example : (1, 2) ∈
     AxiomaticGW.EffectiveCurveMonoid.nat.positiveTailSplittings 3 := by
-  simp
+  simp only [AxiomaticGW.EffectiveCurveMonoid.mem_positiveTailSplittings,
+    Nat.reduceAdd, ne_eq, OfNat.ofNat_ne_zero, not_false_eq_true, and_self]
 
 end HigherAndUnstableExtensions
 
@@ -572,8 +583,12 @@ example :
         (AxiomaticGW.constantStableCurveCohomology.integration ℚ)
         0 (Fin 4) (fun _ ↦ 0) = 0 := by
   apply AxiomaticGW.PointTarget.intersectionNumber_eq_zero_of_degree_ne
-    (h := by simp [AxiomaticGW.StableArity])
-  simp [AxiomaticGW.StableArity.dimension]
+    (h := by
+      simp only [AxiomaticGW.StableArity, mul_zero, Fintype.card_fin,
+        zero_add, Nat.reduceLeDiff])
+  simp only [Finset.sum_const_zero, AxiomaticGW.StableArity.dimension,
+    mul_zero, Fintype.card_fin, zero_add, Nat.reduceSub, ne_eq, zero_ne_one,
+    not_false_eq_true]
 
 /-- The DVV normalization uses `(2 * 1 + 1)!! = 3`. -/
 example : AxiomaticGW.PointTarget.oddDoubleFactorial 1 = 3 := by
@@ -597,7 +612,7 @@ example :
 /-- The Laurent total free energy exposes the original genus coefficient. -/
 example (F : AxiomaticGW.GenusPotential ℚ) (g : ℕ) :
     (AxiomaticGW.totalFreeEnergy F).coeff ((g : ℤ) - 1) = F g := by
-  simp
+  simp only [AxiomaticGW.totalFreeEnergy_coeff]
 
 /-- Formal partial derivatives in distinct variables commute. -/
 example (f : MvPowerSeries (Fin 2) ℚ) :

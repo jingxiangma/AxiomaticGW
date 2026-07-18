@@ -56,21 +56,23 @@ theorem correlator_domDomCongr (F : CommFrobeniusAlgebra R A) (g : ℕ)
 theorem correlator_empty_apply (F : CommFrobeniusAlgebra R A) (g : ℕ)
     (a : Empty → A) :
     F.correlator g Empty a = F.counit (F.handleElement ^ g) := by
-  simp
+  simp only [correlator_apply, Finset.univ_eq_empty, Finset.prod_empty,
+    one_mul]
 
-/-- In genus zero with one input, the correlator is the Frobenius counit. -/
+/-- The genus-zero one-point correlator is the Frobenius counit. -/
 theorem correlator_zero_punit_apply (F : CommFrobeniusAlgebra R A) (a : A) :
     F.correlator 0 PUnit (fun _ ↦ a) = F.counit a := by
-  simp
+  simp only [correlator_apply, Finset.univ_unique, PUnit.default_eq_unit,
+    Finset.prod_const, Finset.card_singleton, pow_one, pow_zero, mul_one]
 
-/-- In genus zero with two ordered inputs, the correlator is the Frobenius
+/-- The genus-zero ordered two-point correlator is the Frobenius
 pairing. -/
 theorem correlator_zero_fin_two_apply (F : CommFrobeniusAlgebra R A)
     (a : Fin 2 → A) :
     F.correlator 0 (Fin 2) a = F.pairing.form (a 0) (a 1) := by
   simp only [correlator_apply, Fin.prod_univ_two, pow_zero, mul_one, pairing_apply]
 
-/-- In genus zero with three ordered inputs, the correlator records
+/-- The genus-zero ordered three-point correlator records
 multiplication paired with the third input. -/
 theorem correlator_zero_fin_three_apply (F : CommFrobeniusAlgebra R A)
     (a : Fin 3 → A) :
@@ -86,7 +88,7 @@ theorem correlator_option_one_apply (F : CommFrobeniusAlgebra R A) (g : ℕ)
   simp only [correlator_apply, Fintype.prod_option, one_mul]
 
 /-- Adding one handle is equivalent to inserting the handle element at one
-new marked input. -/
+new marked point. -/
 theorem correlator_succ_eq_option_handle (F : CommFrobeniusAlgebra R A)
     (g : ℕ) {S : Type*} [Fintype S] (a : S → A) :
     F.correlator (g + 1) S a =

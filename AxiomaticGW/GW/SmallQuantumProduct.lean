@@ -12,9 +12,9 @@ public import AxiomaticGW.GW.Basic
 /-!
 # Small quantum product
 
-The curve-class theory determines one three-point product coefficient for each
-effective class. Separating gluing and the four-point boundary relation imply
-coefficientwise WDVV and associativity of the resulting small quantum product.
+For each effective curve class, the genus-zero Gromov--Witten theory determines
+a three-point invariant. Separating gluing and the four-point boundary relation
+imply coefficientwise WDVV and associativity of the resulting small quantum product.
 -/
 
 @[expose] public section
@@ -50,14 +50,19 @@ noncomputable def smallQuantumProductCoefficient (Omega : GromovWittenTheory R V
         (multilinearCurryLeftEquiv R (fun _ : Fin 3 ↦ V) R).toLinearMap) <|
           Omega.threePoint G beta
 
-/-- The coefficient product is characterized by the beta-resolved
-three-point invariant. -/
+/-- The fixed-class contribution to the small quantum product is characterized
+by the corresponding three-point Gromov--Witten invariant. -/
 theorem pairing_smallQuantumProductCoefficient (Omega : GromovWittenTheory R V B D C)
     (G : GenusZeroGeometry C) (beta : B) (x y z : V) :
     Omega.pairing.form (Omega.smallQuantumProductCoefficient G beta x y) z =
       Omega.threePoint G beta (Fin.cons x (Fin.cons y fun _ ↦ z)) := by
   rw [← Omega.pairing.toDual_apply]
-  simp [smallQuantumProductCoefficient, SymmetricPerfectPairing.finTwoToBilin_apply]
+  simp only [smallQuantumProductCoefficient, Nat.succ_eq_add_one,
+    Nat.reduceAdd, LinearMap.coe_comp, LinearEquiv.coe_coe,
+    Function.comp_apply, multilinearCurryLeftEquiv_apply,
+    LinearMap.compRight_apply, LinearEquiv.apply_symm_apply,
+    SymmetricPerfectPairing.finTwoToBilin_apply,
+    MultilinearMap.curryLeft_apply]
 
 /-- The small quantum product of two ordinary states, retained coefficientwise
 as a Novikov series with values in the state space. -/
@@ -168,7 +173,7 @@ theorem threePoint_swap_last (Omega : GromovWittenTheory R V B D C)
   funext i
   fin_cases i <;> rfl
 
-/-- Every fixed curve-class product coefficient is commutative. -/
+/-- Every fixed-class contribution to the small quantum product is commutative. -/
 theorem smallQuantumProductCoefficient_comm
     (Omega : GromovWittenTheory R V B D C) (G : GenusZeroGeometry C)
     (beta : B) (x y : V) :
@@ -224,7 +229,10 @@ theorem threePoint_unit_zero (Omega : GromovWittenTheory R V B D C)
       (C.rename 0 (Option (Fin 2)) (Fin 3)
         StableArity.zero_option_fin_two StableArity.zero_fin_three
         optionFinTwoEquivFinThree q))
-    (Omega.normalization_zero ![x, y])).trans (by simp)
+    (Omega.normalization_zero ![x, y])).trans
+      (by simp only [Fin.isValue, Matrix.cons_val_zero, Matrix.cons_val_one,
+        Matrix.cons_val_fin_one, AlgEquiv.commutes, Algebra.algebraMap_self,
+        RingHom.id_apply])
 
 /-- Positive curve-class three-point coefficients vanish after a unit
 insertion. -/
@@ -258,9 +266,10 @@ theorem threePoint_unit_of_ne (Omega : GromovWittenTheory R V B D C)
       (C.rename 0 (Option (Fin 2)) (Fin 3)
         StableArity.zero_option_fin_two StableArity.zero_fin_three
         optionFinTwoEquivFinThree q))
-    (Omega.normalization_nonzero beta hbeta ![x, y])).trans (by simp)
+    (Omega.normalization_nonzero beta hbeta ![x, y])).trans
+      (by simp only [map_zero])
 
-/-- The beta-zero product coefficient has the flat identity. -/
+/-- The beta-zero product coefficient has the flat unit. -/
 theorem unit_smallQuantumProductCoefficient_zero
     (Omega : GromovWittenTheory R V B D C) (G : GenusZeroGeometry C)
     (x : V) : Omega.smallQuantumProductCoefficient G 0 Omega.unit x = x := by
@@ -270,7 +279,7 @@ theorem unit_smallQuantumProductCoefficient_zero
     Omega.pairing_smallQuantumProductCoefficient]
   exact Omega.threePoint_unit_zero G x y
 
-/-- Positive product coefficients vanish after inserting the flat identity. -/
+/-- Positive product coefficients vanish after inserting the flat unit. -/
 theorem unit_smallQuantumProductCoefficient_of_ne
     (Omega : GromovWittenTheory R V B D C) (G : GenusZeroGeometry C)
     {beta : B} (hbeta : beta ≠ 0) (x : V) :
@@ -282,7 +291,7 @@ theorem unit_smallQuantumProductCoefficient_of_ne
   exact Omega.threePoint_unit_of_ne G hbeta x y
 
 /-- The completed small quantum product has only its zero curve-class
-coefficient after inserting the flat identity. -/
+coefficient after inserting the flat unit. -/
 theorem smallQuantumProduct_unit
     (Omega : GromovWittenTheory R V B D C) (G : GenusZeroGeometry C)
     [DecidableEq B] (x : V) (beta : B) :

@@ -43,7 +43,9 @@ variable {R V B : Type u} {ι : Type} [CommRing R] [Algebra ℚ R]
 profile. -/
 theorem bigQuantumProduct_stable (n : ι →₀ ℕ) :
     StableArity 0 (Fin 3 ⊕ InsertionLabel n) := by
-  simp [StableArity]
+  simp only [StableArity, mul_zero, Fintype.card_sum, Fintype.card_fin,
+    Fintype.card_sigma, Finset.univ_eq_attach, zero_add,
+    le_add_iff_nonneg_right, zero_le]
 
 /-- The three-point series at a primary background profile. The reciprocal
 multiplicity factorial accounts only for the undistinguished background
@@ -183,8 +185,12 @@ theorem pairing_bigQuantumProductCoefficient
       Omega.primaryThreePointSeriesCoefficient I b n beta
         (Fin.cons x (Fin.cons y fun _ ↦ z)) := by
   rw [← Omega.pairing.toDual_apply]
-  simp [bigQuantumProductCoefficient,
-    SymmetricPerfectPairing.finTwoToBilin_apply]
+  simp only [bigQuantumProductCoefficient, Nat.succ_eq_add_one,
+    Nat.reduceAdd, LinearMap.coe_comp, LinearEquiv.coe_coe,
+    Function.comp_apply, multilinearCurryLeftEquiv_apply,
+    LinearMap.compRight_apply, LinearEquiv.apply_symm_apply,
+    SymmetricPerfectPairing.finTwoToBilin_apply,
+    MultilinearMap.curryLeft_apply, primaryThreePointSeriesCoefficient_apply]
 
 /-- Every coefficient of the big quantum product is commutative. -/
 theorem bigQuantumProductCoefficient_comm
@@ -211,12 +217,16 @@ private def zeroBackgroundEquiv :
     Fin 3 ⊕ InsertionLabel (0 : ι →₀ ℕ) ≃ Fin 3 where
   toFun
     | .inl i => i
-    | .inr s => Fin.elim0 (by simpa using s.2)
+    | .inr s => Fin.elim0 (by
+        simpa only [Finsupp.support_zero, Finsupp.coe_zero, Pi.zero_apply]
+          using s.2)
   invFun := Sum.inl
   left_inv x := by
     rcases x with i | s
     · rfl
-    · exact Fin.elim0 (by simpa using s.2)
+    · exact Fin.elim0 (by
+        simpa only [Finsupp.support_zero, Finsupp.coe_zero, Pi.zero_apply]
+          using s.2)
   right_inv _ := rfl
 
 /-- At zero background, the primary three-point series is the fixed-beta
@@ -238,7 +248,9 @@ theorem primaryThreePointSeriesCoefficient_zero
     funext s
     rcases s with i | s
     · rfl
-    · exact Fin.elim0 (by simpa using s.2)
+    · exact Fin.elim0 (by
+        simpa only [Finsupp.support_zero, Finsupp.coe_zero, Pi.zero_apply]
+          using s.2)
   have hrel := congrArg (fun f ↦ f a)
     (Omega.relabel 0 (Fin 3 ⊕ InsertionLabel (0 : ι →₀ ℕ)) (Fin 3)
       (bigQuantumProduct_stable 0) StableArity.zero_fin_three e beta)
@@ -250,7 +262,8 @@ theorem primaryThreePointSeriesCoefficient_zero
   rw [Omega.primaryThreePointSeriesCoefficient_apply]
   simp only [threePoint, LinearMap.compMultilinearMap_apply]
   rw [show profileWeight R (0 : ι →₀ ℕ) = 1 by
-    simp [profileWeight, profileFactorial]]
+    simp only [profileWeight, profileFactorial, Finsupp.prod_zero_index,
+      Nat.cast_one, inv_one, map_one]]
   rw [one_mul, hinputs]
   calc
     I.integrate 0 (Fin 3 ⊕ InsertionLabel (0 : ι →₀ ℕ))
@@ -382,7 +395,7 @@ theorem primaryPotential_coeff_of_stable
         I.integrate 0 (InsertionLabel n) h
           (Omega.omega 0 (InsertionLabel n) h beta
             (InsertionLabel.primaryState b)) := by
-  simp [primaryPotential, h]
+  simp only [primaryPotential, h, ↓reduceDIte]
 
 @[simp]
 theorem primaryPotential_coeff_of_unstable
@@ -390,7 +403,7 @@ theorem primaryPotential_coeff_of_unstable
     (b : Basis ι R V) (n : ι →₀ ℕ) (beta : B)
     (h : ¬StableArity 0 (InsertionLabel n)) :
     Omega.primaryPotential I b n beta = 0 := by
-  simp [primaryPotential, h]
+  simp only [primaryPotential, h, ↓reduceDIte]
 
 end GromovWittenTheory
 

@@ -107,14 +107,15 @@ theorem invariant_of_stable (U : UnstableDescendantConventions M I)
     (g : ℕ) (S : Type) [Fintype S] (h : StableArity g S)
     (beta : B) (k : S → ℕ) (a : S → V) :
     U.invariant g S beta k a = M.invariant I g S h beta k a := by
-  simp [invariant, extendedDescendantInvariant, h]
+  simp only [invariant, extendedDescendantInvariant, h, ↓reduceDIte,
+    StableMapDescendants.invariant_apply]
 
 /-- On unstable arities the extension uses exactly the supplied convention. -/
 theorem invariant_of_unstable (U : UnstableDescendantConventions M I)
     (g : ℕ) (S : Type) [Fintype S] (h : ¬StableArity g S)
     (beta : B) (k : S → ℕ) (a : S → V) :
     U.invariant g S beta k a = U.unstableInvariant g S beta k a := by
-  simp [invariant, extendedDescendantInvariant, h]
+  simp only [invariant, extendedDescendantInvariant, h, ↓reduceDIte]
 
 /-- String equation for every arity, derived by separating the stable law
 from the explicitly supplied exceptional recurrences. -/
