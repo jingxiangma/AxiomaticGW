@@ -88,6 +88,13 @@ Public names use a standard literature term when the represented object has that
 | `Linear/Copairing.lean` | Copairing and tensor-endomorphism correspondence terminology retained. |
 | `Linear/PerfectPairing.lean` | Symmetric perfect pairing and duality terminology retained. |
 | `PointTarget/Descendants.lean` | Point-target primary class, psi-class intersection numbers, WDVV, and DVV terminology retained under the canonical module path. |
+| `Tautological/BasicStrata.lean` | “One-vertex stable graph” and “fundamental stratum” are used for the undecorated graph with no internal edges; the operadic term “corolla” is avoided in the public API. |
+| `Tautological/DecoratedStableGraph.lean` | Decorated stable graph, leg, internal half-edge, arithmetic genus, kappa/psi decoration, codimension, graph isomorphism, and decorated stratum follow the standard tautological-ring terminology. |
+| `Tautological/Getzler.lean` | `GetzlerStratum` indexes the seven named symmetric cycles on `Mbar(1,4)` and is distinct from `Fin 4`, the marking type. The orbifold-cycle normalization is explicit in `GetzlerStrataEncoding`. |
+| `Tautological/LowGenus.lean` | Genus-zero psi-class intersection values and the multinomial formula follow standard point-target intersection notation; agreement with geometric integration is an explicit certificate. |
+| `Tautological/StrataAlgebra.lean` | “Certified strata product” is used because the structure records product laws but does not yet implement the common-refinement and excess-intersection algorithm; it is not advertised as the tautological ring. |
+| `Tautological/StrataModule.lean` | “Strata module” denotes the free rational module on decorated stable-graph isomorphism classes; “known-relations quotient” avoids claiming that supplied relations generate the full tautological ideal. |
+| `Tautological/StrataRealization.lean` | “Realization” denotes a degree-preserving linear map into an abstract stable-curve cohomology target, not a construction of the moduli stack or its cohomology. |
 | `TFT/Basic.lean` | The bundled object is canonically `TwoDimensionalTFT`; its fields remain correlators and sewing laws. |
 | `TFT/Classification.lean` | `threePointFunction`, Frobenius product recovery, trace compatibility, and round-trip terminology standardized. |
 | `TFT/Correlator.lean` | Individual finite-labelled maps remain `correlator`, matching the literature. |

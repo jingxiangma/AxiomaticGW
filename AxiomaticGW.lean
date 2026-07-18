@@ -22,6 +22,13 @@ public import AxiomaticGW.TFT.Classification
 public import AxiomaticGW.TFT.Examples
 public import AxiomaticGW.TFT.Frobenius
 public import AxiomaticGW.TFT.Sewing
+public import AxiomaticGW.Tautological.BasicStrata
+public import AxiomaticGW.Tautological.DecoratedStableGraph
+public import AxiomaticGW.Tautological.Getzler
+public import AxiomaticGW.Tautological.LowGenus
+public import AxiomaticGW.Tautological.StrataAlgebra
+public import AxiomaticGW.Tautological.StrataModule
+public import AxiomaticGW.Tautological.StrataRealization
 
 /-!
 # Public entry point

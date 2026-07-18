@@ -286,6 +286,14 @@ $$
 \lambda_j=c_j(\mathbb E).
 $$
 
+For a stable graph $\Gamma$ and a kappa/psi monomial $\alpha$ on the product of vertex moduli spaces, the associated decorated boundary stratum is
+
+$$
+[\Gamma,\alpha]=(\xi_\Gamma)_*\alpha.
+$$
+
+The current combinatorial layer uses this raw gluing-pushforward convention without division by $|\operatorname{Aut}(\Gamma)|$. It formalizes decorated stable graphs modulo label-preserving isomorphism, including branch exchange at every node, and defines their codimension and free rational strata module. A known-relations quotient does not by itself identify the quotient with the tautological ring: a geometric realization must kill the supplied relations, and multiplication requires common refinements together with excess factors such as $-\psi_h-\psi_{h'}$ for a repeated node. The exact Getzler coefficient vector on $\overline{\mathcal M}_{1,4}$ is available as a named formal relation, with its orbifold-cycle normalization kept explicit rather than conflated with the raw graph convention.
+
 Using integration on the stable-curve space, ancestor correlators are
 
 $$
@@ -298,7 +306,7 @@ $$
 \prod_{i\in S}\psi_i^{k_i}.
 $$
 
-To formalize this expression, the stable-curve system must be extended with proper pushforward, integration, external products, projection formulas, base-change identities, top-degree rules, and the relevant tautological relations.
+To realize this expression geometrically, the stable-curve system must be extended with proper pushforward, integration, external products, projection formulas, base-change identities, top-degree rules, and proofs of the relevant tautological relations. The existing Lean interfaces provide the operations used by ancestors and the separate formal strata syntax; they do not construct the moduli-space cohomology theory or the all-genus strata product.
 
 ## 8. Curve-class-resolved GW theory
 

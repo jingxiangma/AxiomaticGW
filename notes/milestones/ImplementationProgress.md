@@ -6,6 +6,53 @@ Each entry records the accepted scope, implementation commit, a link to the cano
 
 Older entries preserve their then-current scope and next gate; explicit follow-up paragraphs record work completed by later revisions.
 
+## 2026-07-18: Decorated tautological strata and Getzler relation layer
+
+**Status:** Implemented for combinatorial syntax, formal relation quotients, realization factoring, and low-genus arithmetic; the geometric product and relation proofs remain open.
+
+### Scope reviewed
+
+The review covered the existing `StableGraph`, `StableCurveCohomology`, tautological-class, ancestor, and point-target APIs; every new declaration and its public imports; and the conventions in Getzler's arXiv TeX source and the `admcycles` TeX manual. The source audit fixed the raw decorated-stratum convention $[\Gamma,\alpha]=(\xi_\Gamma)_*\alpha$ without division by $|\operatorname{Aut}(\Gamma)|$, the node self-intersection factor $-\psi_h-\psi_{h'}$, the low-genus values, and the exact Getzler coefficient vector. No SageMath or `admcycles` package was installed.
+
+### Findings and revisions
+
+- **High:** The first graph-isomorphism draft preserved an artificial ordering of the two branches of each edge. `StableGraphCode.Iso` now carries an independent `Fin 2` equivalence for every edge, and decorated isomorphisms transport internal psi powers through that branch equivalence. A regression example identifies loop strata whose sole psi decoration lies on opposite presentations of the same branch.
+- **Medium:** The abstract cohomology API had no universe-small basis syntax for general decorated stable graphs or a checked path from formal relations to a geometric target. The new layer defines decorated graph isomorphism classes, codimension, one-vertex strata, `StrataModule`, homogeneous and dimension-relation submodules, known-relation quotients, `StrataRealization`, and the kernel condition that factors a realization through a quotient.
+- **Medium:** Calling the free module a tautological ring before implementing common refinements and excess intersection would overstate the construction. `CertifiedStrataProduct` is therefore a proof-carrying contract with explicit grading, commutativity, associativity, and unit fields; no global multiplication or ring instance is installed.
+- **Medium:** Getzler's named cycles use an orbifold normalization that is not identical to the raw gluing-pushforward convention. `GetzlerStrataEncoding` requires an explicit normalized codimension-two cycle for each of the seven names, and `GetzlerRelationGeometry` keeps geometric validity separate from formal quotient vanishing.
+- **Low:** The point-target layer lacked an executable genus-zero reference formula. `PointTarget.genusZeroPsiValue` now implements the standard multinomial value and verifies the first three closed cases with explicit finite reductions; `GenusZeroPsiFormula` is the separate certificate linking those values to abstract integration.
+
+### Mathematical effect
+
+No existing theorem statement or assumption changed. The new quotient proves only that supplied relation generators vanish formally. It does not prove that those relations hold in cohomology or generate the full tautological ideal. The exact Getzler linear combination is available to downstream theorems, while its normalized graph encoding and geometric proof remain visible obligations.
+
+### Delivered API
+
+- `StableGraphCode`, `StableGraphCode.Iso`, `DecoratedStableGraph`, `DecoratedStableGraph.Iso`, and `TautologicalStratum`.
+- `TautologicalStratum.oneVertex`, `TautologicalStratum.fundamental`, and their genus and codimension theorems.
+- `StrataModule`, `StrataModule.degree`, `dimensionRelations`, `KnownRelationsQuotient`, `CertifiedStrataProduct`, `ProductIdeal`, `StrataRealization.dimensionRelations_le_kernel`, and `StrataRealization.factor`.
+- `GetzlerStratum`, `GetzlerStrataEncoding`, its exact relation and known quotient, `GetzlerRelationGeometry`, and the realization-kernel factorization theorem.
+- `PointTarget.genusZeroPsiValue`, the initial arithmetic checks, and `PointTarget.GenusZeroPsiFormula`.
+
+### Verification
+
+The final validation passed:
+
+```bash
+lake build
+lake test
+lake lint
+git diff --check
+rg --pcre2 -n '\b(?:simp|simpa|simp_all)(?! only)(?:\s|\[|$)' AxiomaticGW AxiomaticGWTest -g '*.lean'
+rg -n '\b(sorry|admit)\b|^\s*(axiom|unsafe|opaque)\b|sorryAx|admitAx' AxiomaticGW AxiomaticGWTest
+```
+
+`lake build` completed 2,577 jobs, `lake test` completed 2,578 jobs, and `lake lint` passed. The test command emitted only the pre-existing private-module warning for `AxiomaticGWTest/Basic.lean`. The explicit-simplifier and placeholder/axiom scans returned no matches, and `git diff --check` passed. `#print axioms` for the graph genus theorem, realization factorization, Getzler quotient vanishing, and the genus-zero arithmetic check reported only `propext`, `Classical.choice`, and `Quot.sound`.
+
+### Remaining risk and next gate
+
+The principal remaining risk is mathematical rather than syntactic: a native finite enumeration of common refinements and excess factors has not constructed `CertifiedStrataProduct`; the seven normalized Getzler cycles are not yet expanded into decorated stable graphs; and no `StrataRealization` has been constructed from an actual Chow or cohomology theory of $\overline{\mathcal M}_{g,S}$. The next priority is the explicit low-genus graph encoding for `Mbar(0,4)`, `Mbar(1,1)`, and the seven Getzler cycles, followed by a checked low-genus product table. SageMath/`admcycles` may later serve as an external oracle, but the Lean kernel must check the resulting certificates.
+
 ## 2026-07-18: Literature-based mathematical-note revision
 
 **Status:** Implemented and locally verified.
@@ -295,7 +342,7 @@ The placeholder scan returned no matches. Public regression examples cover ances
 - Differential forms of every correlator equation and the exponential total potential require additional formal-series theorems or a stronger mixed completion.
 - Actual moduli stacks, virtual fundamental classes, and concrete projective-target packages remain outside the current mathematical foundations.
 
-**Follow-up:** The separate stable-graph carrier, arbitrary-background genus-zero WDVV, rational-tail comparison data, and full-potential extension were implemented in `9a3d625`; the other geometric and mixed-completion limitations above still apply.
+**Follow-up:** The separate stable-graph carrier, arbitrary-background genus-zero WDVV, rational-tail comparison data, and full-potential extension were implemented in `9a3d625`. Decorated stable-graph syntax, formal relation quotients, the named Getzler generator, and low-genus psi values were added in the later tautological-strata revision; the native product, geometric relation proofs, other geometric limitations, and mixed-completion limitations still apply.
 
 ### Next gate at the time
 

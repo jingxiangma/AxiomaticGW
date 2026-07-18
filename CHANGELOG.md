@@ -35,6 +35,8 @@ The project is research-stage and follows the pinned Lean/mathlib version in `le
 - Rational-tail stabilization data, a two-point calibration with a separately justified symplectic identity, and explicit coefficientwise Fock/quantized comparison carriers.
 - Explicit unstable descendant conventions, a full descendant potential, and global correlator-level string and dilaton equations.
 - A point-target stable-curve block with psi intersection numbers, dimension vanishing, initial values, a WDVV check, and the all-genus DVV proposition as an explicit geometric hypothesis.
+- Decorated stable graphs modulo label-preserving isomorphism, including edge-branch exchange, kappa and psi decorations, codimension, one-vertex strata, and the free rational strata module.
+- Known-relation quotients, degree-preserving realization maps and quotient factorization, a certified product contract, the exact named Getzler relation on `Mbar(1,4)`, and executable low-genus genus-zero psi values.
 - An abstract virtual-GW algebraic output carrier connecting future geometric constructions to the primary and descendant axiomatic layers; the carrier itself is not a realization theorem.
 - Mathematical notes and a roadmap toward axiomatic Gromov--Witten theory.
 
@@ -53,6 +55,7 @@ The project is research-stage and follows the pinned Lean/mathlib version in `le
 - Corrected the forget/nonseparating and left forget/separating label transports in the stable-curve coherence axioms.
 - Added the stable-curve top-degree bound, forgetful-pushforward relabelling and degree-zero laws, and derived kappa naturality and degree theorems.
 - Corrected the stable-map descendant grading so cotangent powers contribute before testing whether the expected output degree is nonnegative.
+- Corrected decorated-graph isomorphism so the two branches of every internal edge may be exchanged, including transport of half-edge psi decorations.
 - Added relabelling and total-degree theorems for ancestors and descendants, and derived the residual subtraction, relabelling, and homogeneity API.
 - Replaced documentation claims of geometric boundary support and virtual realization with the weaker residual and carrier properties actually represented by the public API.
 - Synchronized the README, mathematics notes, roadmap, mathlib inventory, design ledger, and historical follow-up annotations with the stable-graph, arbitrary-background genus-zero WDVV, stabilization, calibration, and full-potential APIs delivered in `9a3d625`.

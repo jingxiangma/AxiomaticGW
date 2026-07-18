@@ -1,6 +1,6 @@
 # Mathlib dependency and project-ownership inventory
 
-This note records which parts of M3--M10 are supplied by the pinned mathlib dependency and which parts belong to this project. It was checked against the source tree for mathlib `v4.32.0`, the revision in `lakefile.toml`, on 2026-07-16, and synchronized with the project implementation through commit `9a3d625` on 2026-07-18. The “must be built here” column is an ownership statement, not a current-status statement; each milestone section below distinguishes implemented project APIs from remaining gaps.
+This note records which parts of M3--M10 are supplied by the pinned mathlib dependency and which parts belong to this project. It was checked against the source tree for mathlib `v4.32.0`, the revision in `lakefile.toml`, on 2026-07-16 and synchronized with the project source, including the tautological-strata layer, on 2026-07-18. The “must be built here” column is an ownership statement, not a current-status statement; each milestone section below distinguishes implemented project APIs from remaining gaps.
 
 The distinction matters: a nearby general-purpose definition is not counted as an implementation of a GW-theoretic object. In particular, mathlib contains schemes, algebraic cycles, formal series, and graphs, but no stable-curve moduli spaces, CohFTs, or Gromov--Witten invariants.
 
@@ -10,7 +10,7 @@ The distinction matters: a nearby general-purpose definition is not counted as a
 | --- | --- | --- |
 | M3 stable curves | Finite types and equivalences; multilinear relabelling; ordinary commutative graded-algebra/direct-sum infrastructure; tensor products; a looped multigraph type | The abstract even-cohomology stable-curve system, all geometric pullbacks and coherence laws, external products in the chosen target model, stable graphs and contraction/evaluation |
 | M4 full CohFT | The project's perfect pairing, copairing, stable arities, and scalar contractions; mathlib multilinear maps and tensor products | Cohomology-valued contraction, the full CohFT record and axioms, the `(0,3)` and `(0,4)` target facts needed to extract the Frobenius algebra and prove associativity/WDVV |
-| M5 tautological classes | Ordinary graded-ring operations; abstract linear maps; a very early scheme-level algebraic-cycle pushforward | Abstract pullback/pushforward/integration packages, projection/base-change formulas, `psi`, boundary, `kappa`, Hodge/`lambda` classes, and ancestor correlators |
+| M5 tautological classes | Ordinary graded-ring operations; `Finsupp`, quotients by submodules, abstract linear maps; a very early scheme-level algebraic-cycle pushforward | Abstract pullback/pushforward/integration packages, projection/base-change formulas, `psi`, boundary, `kappa`, Hodge/`lambda` classes, decorated stable graphs, strata products and relations, realization maps, and ancestor correlators |
 | M6 curve classes | Commutative monoids, monoid homomorphisms, finite sums, gradings, and finite antidiagonals when an instance is available | The curve-class-resolved CohFT, finiteness of class splittings, virtual-dimension bookkeeping, divisor pairing/axiom, effectivity and degree-zero normalization |
 | M7 Novikov/quantum | Finite monoid algebras; Hahn series under ordered-cancellative hypotheses; power and multivariate power series | The precise Novikov support condition or a justified Hahn-series specialization, coefficientwise-to-completed CohFT proofs, scalar extension, quantum products, WDVV |
 | M8 descendants | General algebra, finite sums, and the M5 integration interface once built | Stable-map and ancestor psi classes as distinct data, stabilization/evaluation/virtual integration, boundary comparison, descendant invariants and the comparison theorem |
@@ -65,7 +65,7 @@ The project implements an abstract `StableCurveCohomology` record rather than co
 - functoriality, identity, naturality, the immediate forget/glue compatibility laws, and node/component symmetries;
 - optional low-moduli-space input through `GenusZeroGeometry`, containing the point-like behavior of `Mbar(0,3)` and the boundary relation on `Mbar(0,4)`.
 
-The separate `StableGraph` layer uses a purpose-built finite edge type with two branches. It implements labelled legs, vertex genera, vertex stability, relabelling, loop-aware valence, total genus, complete edge orders, and the optional `StableGraphPullbacks` package. Complete orders are permutation-equivalent, and the package yields a canonical order-independent pullback; the constant target supplies a concrete instance. Actual combinatorial edge contraction and a derivation of graph coherence solely from the primitive `StableCurveCohomology` laws are not implemented.
+The separate `StableGraph` layer uses a purpose-built finite edge type with two branches. It implements labelled legs, vertex genera, vertex stability, relabelling, loop-aware valence, total genus, complete edge orders, and the optional `StableGraphPullbacks` package. Complete orders are permutation-equivalent, and the package yields a canonical order-independent pullback; the constant target supplies a concrete instance. The tautological layer adds a universe-small `StableGraphCode`, label-preserving graph isomorphisms with independent branch exchange at each edge, and decorated isomorphism classes. Actual combinatorial edge contraction, common-refinement enumeration, and a derivation of graph coherence solely from the primitive `StableCurveCohomology` laws are not implemented.
 
 ## M4. Full unital CohFT
 
@@ -100,9 +100,14 @@ The implemented abstract intersection layer contains:
 - marked classes `psi`, rational-tail boundary classes, and their forgetful correction formula;
 - `kappa`, defined through pushforward, with degree and naturality theorems;
 - dimension/top-degree vanishing sufficient to define numerical integrals;
-- ancestor correlators and their symmetry/degree rules.
+- ancestor correlators and their symmetry/degree rules;
+- decorated stable graphs modulo isomorphism, with positive-index kappa powers, psi powers on external and internal flags, and combinatorial codimension;
+- one-vertex and fundamental strata, the free rational strata module, homogeneous submodules, dimension relations, and quotients by explicitly supplied relation submodules;
+- `CertifiedStrataProduct`, which records bilinearity, grading, commutativity, associativity, and unit laws without installing an unproved product;
+- `StrataRealization`, whose kernel condition gives a verified factorization through a relation quotient;
+- the exact seven coefficients of Getzler's relation, with its orbifold normalization delegated to an explicit encoding, and the standard executable genus-zero psi-value formula.
 
-General pushforward composition and base change, Hodge/`lambda` classes, and decorated boundary-stratum classes remain absent because no current theorem consumes them. Mathlib `v4.32.0` has no general Chow ring, rational equivalence, cup/cap product package for these moduli spaces, applicable Chern-class package, or integration theorem.
+General pushforward composition and base change, Hodge/`lambda` classes, a native common-refinement and excess-intersection product, an explicit normalized stable-graph encoding of Getzler's seven cycles, geometric relation proofs, and a concrete realization of the quotient remain absent. Mathlib `v4.32.0` has no general Chow ring, rational equivalence, cup/cap product package for these moduli spaces, applicable Chern-class package, or integration theorem.
 
 ## M6. Curve-class-resolved GW axioms
 
@@ -196,7 +201,7 @@ This is not a realization construction and does not encode boundary support for 
 1. **M3a (complete):** implement the even-cohomology targets, graded by half cohomological degree, and the primitive stable-curve pullbacks with coherence.
 2. **M4a (complete):** generalize contraction to arbitrary codomains and define full CohFT; use the existing topological theory as the first instance.
 3. **M3b/M4b (complete):** retain only the `Mbar(0,3)` and `Mbar(0,4)` facts in the core; use the separate optional stable-graph layer for iterated gluing.
-4. **M5 (complete core):** add abstract intersection operations and tautological data.
+4. **M5 (complete ancestor core; strata syntax partial):** add abstract intersection operations, tautological data, decorated-stratum syntax, relation quotients, and realization adapters; retain the common-refinement product and geometric relations as explicit next gates.
 5. **M6 (complete core):** require finite class antidiagonals and settle grading conventions.
 6. **M7a (complete):** implement the finite-support inclusion and completed Novikov coefficient ring.
 7. **M7b/M9a (complete for the current endpoint):** prove the beta-preserving convolution ring and the Laurent-bounded total free energy.
