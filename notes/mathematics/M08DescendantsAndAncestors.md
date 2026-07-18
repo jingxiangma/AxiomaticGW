@@ -43,17 +43,33 @@ Replacing $\psi_i^{\mathrm{map}}$ by $\bar\psi_i$ defines ancestor invariants. A
 
 ## 3. Comparison
 
-The two cotangent lines differ when stabilization contracts a component. Schematically,
+The two cotangent lines differ on the locus where stabilization contracts the component carrying the marking. If $D_i$ denotes the sum of boundary divisors whose generic stable map has $i$ on a positive-degree rational tail that becomes unstable after forgetting the map, then
 
 $$
 \psi_i^{\mathrm{map}}
 =
-\bar\psi_i+\text{boundary corrections}.
+\bar\psi_i+[D_i].
 $$
 
-The correction strata describe rational components that become unstable after forgetting the map. Iterating this identity expresses descendants in terms of ancestors and lower-complexity boundary contributions. In generating-function form the comparison is commonly organized by a fundamental solution, or $S$-operator, built from genus-zero two-point descendants.
+Products of this identity express descendants as ancestors plus terms supported on rational-tail boundary strata. At the generating-function level, Givental packages the genus-zero two-point descendants into an operator series $S_t(z)=1+S_1z^{-1}+S_2z^{-2}+\cdots$ characterized by
 
-The formalization therefore maintains distinct interfaces for stable-map and stable-curve psi classes. Their comparison is recorded through explicit residual and optional stabilization-boundary hypotheses, never a definitional equality.
+$$
+\eta(a,S_t(z)b)
+=
+\eta(a,b)
++\sum_{k\ge0}
+\left\langle a,b\psi^k\right\rangle_{0,2}(t)z^{-k-1}.
+$$
+
+The geometric two-point relations imply the symplectic identity
+
+$$
+S_t^*(-z)S_t(z)=1,
+$$
+
+where the adjoint is taken with respect to $\eta$. This identity is additional geometry, not a formal consequence of choosing an arbitrary operator series.
+
+The formalization therefore maintains distinct interfaces for stable-map and stable-curve psi classes. Its weak comparison records only the residual difference. The optional stabilization package separately requires rational-tail support and factorization, while its calibration becomes symplectic only after a named two-point boundary relation is supplied.
 
 ## 4. Abstract descendant package
 
@@ -63,4 +79,4 @@ Once primary, ancestor, and descendant correlators are defined with suitable com
 
 ## 5. Implemented boundary
 
-`GromovWittenTheory.ancestorClass` uses stable-curve `PsiClasses`, while `StableMapDescendants.descendantClass` is a distinct stabilized stable-map family with zero-power, relabelling, total-degree, and negative-total-degree laws. `DescendantAncestorComparison` remains the weak residual API. The optional `StabilizationBoundaryComparison` strengthens it by expressing that residual as a finite sum over positive-degree rational-tail splittings, with the boundary pushforward, tail weights, and state-space tail operators visible as hypotheses. Those same tail operators define `TwoPointCalibration`; a separately named two-point boundary identity implies coefficientwise symplecticity. `GiventalComparison` exposes the additional genus-one factor and quantized partition identity rather than claiming they follow from a bare residual. Concrete stable-map geometry must still construct these packages. No definitional identification between the two cotangent-line theories is used.
+`GromovWittenTheory.ancestorClass` uses stable-curve `PsiClasses`, while `StableMapDescendants.descendantClass` is a distinct stabilized stable-map family with zero-power, relabelling, total-degree, and negative-total-degree laws. `DescendantAncestorComparison` remains the weak residual API. The optional `StabilizationBoundaryComparison` strengthens it by expressing that residual as a finite sum over positive-degree rational-tail splittings, with the boundary pushforward, tail weights, and state-space tail operators visible as hypotheses. Those same tail operators define `TwoPointCalibration`; a separately named two-point boundary identity implies coefficientwise symplecticity. `GiventalComparison` supplies a genus-one scalar factor and a coefficientwise descendant--ancestor identity rather than deriving either from a bare residual. Concrete stable-map geometry must still construct these packages. No definitional identification between the two cotangent-line theories is used.

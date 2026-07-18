@@ -30,9 +30,9 @@ $$
 
 Thus all nontrivial information in the point theory comes from the geometry of $\overline{\mathcal M}_{g,S}$ itself.
 
-## 2. Descendants are psi intersections
+## 2. Descendants are psi-class intersections
 
-Because stabilization is the identity for stable maps to a point, stable-map cotangent lines and stable-curve cotangent lines agree. Point descendants and ancestors therefore coincide. With powers $d:S\to\mathbb N$, the invariant is
+Because stabilization is the identity for stable maps to a point, stable-map cotangent lines and stable-curve cotangent lines agree. Point descendants and ancestors therefore coincide. With powers $d:S\to\mathbb N$, the invariant is the psi-class intersection number
 
 $$
 \left\langle\prod_{s\in S}\tau_{d_s}\right\rangle_g
@@ -63,7 +63,7 @@ Although this equation is algebraically trivial for a point, it is an important 
 
 ## 4. DVV recursion
 
-The point theory also isolates higher tautological geometry. Set
+The point theory also isolates the Virasoro constraints for psi-class intersections. Set
 
 $$
 D_m=(2m+1)!!,
@@ -103,7 +103,7 @@ $$
 \langle\tau_1\rangle_1=\frac1{24}.
 $$
 
-DVV is not a consequence of the primitive pullback rules in `PsiClasses`. It is a higher tautological relation on stable-curve moduli and must be proved by a geometric realization or supplied as an explicit hypothesis.
+This coefficient recursion is the DVV form of the Virasoro constraints for the Witten--Kontsevich generating function. It is not a consequence of the primitive pullback rules in `PsiClasses`; a geometric stable-curve model must prove it from stronger tautological input or supply it as an explicit hypothesis.
 
 ## 5. Lean boundary
 

@@ -87,7 +87,7 @@ Package the coefficientwise curve-class theory using the beta-preserving complet
 
 Introduce stable-map `psi`-classes separately from stable-curve `psi`-classes. Define descendant correlators and prove the comparison with ancestors once the necessary stabilization and boundary formulas are available.
 
-**Status:** Complete as an optional axiomatic comparison. Stable-map descendant classes remain separate from stable-curve `PsiClasses`. `DescendantAncestorComparison` is the weak residual API; `StabilizationBoundaryComparison` adds explicit positive-degree rational-tail support, factorized boundary data, and the two-point tail operators used by the calibration. Symplecticity and the quantized partition identity require separately named optional boundary/Fock hypotheses. Concrete stable-map geometry has not yet constructed these packages.
+**Status:** Complete as an optional axiomatic comparison. Stable-map descendant classes remain separate from stable-curve `PsiClasses`. `DescendantAncestorComparison` is the weak residual API; `StabilizationBoundaryComparison` adds explicit positive-degree rational-tail support, factorized boundary data, and the two-point tail operators used by the calibration. Symplecticity and the coefficientwise descendant--ancestor identity require separately named optional boundary/Fock hypotheses. Concrete stable-map geometry has not yet constructed these packages.
 
 ## M9. All-genus potentials and equations
 

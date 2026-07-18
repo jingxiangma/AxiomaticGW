@@ -27,21 +27,21 @@ $$
 \overline{\mathcal M}_{g,S}.
 $$
 
-The actual dimension of the stable-map space can be wrong, so ordinary fundamental classes do not give deformation-invariant intersection numbers.
+The stable-map stack need not be smooth, pure-dimensional, or of the expected dimension, so its ordinary fundamental class does not supply the required deformation-invariant intersection theory.
 
 ## 2. Virtual fundamental class
 
-A perfect obstruction theory produces a virtual fundamental class
+A perfect obstruction theory of the expected virtual dimension produces a virtual fundamental class
 
 $$
 [\overline{\mathcal M}_{g,S}(X,\beta)]^{\mathrm{vir}}
 $$
 
-in the expected dimension. The primary GW class is
+in the expected dimension. First form the homology or Chow class
 
 $$
-\Omega^X_{g,S,\beta}((\gamma_i))
-=
+I^X_{g,S,\beta}((\gamma_i))
+:=
 \operatorname{st}_*
 \left(
 \prod_{i\in S}\operatorname{ev}_i^*(\gamma_i)
@@ -50,11 +50,26 @@ $$
 \right).
 $$
 
-Integrating this class, possibly after multiplying by tautological classes, gives numerical GW invariants.
+When Poincare duality is available, the cohomology-valued GW class used by a CohFT is
+
+$$
+\Omega^X_{g,S,\beta}((\gamma_i))
+=\operatorname{PD}\bigl(I^X_{g,S,\beta}((\gamma_i))\bigr)
+\in H^*(\overline{\mathcal M}_{g,S}).
+$$
+
+This distinction avoids identifying a pushed-forward virtual homology class with a cohomology class without duality. Numerical invariants are obtained by integrating the cohomology class, possibly after multiplying by tautological classes.
 
 ## 3. Why the axioms hold
 
-Relabelling follows from symmetry of the marked points. The flat-unit property follows from forgetting a marking and the compatibility of virtual classes. Separating gluing follows from the virtual class of a boundary fiber product over the diagonal $X\to X\times X$; contraction by the inverse Poincare pairing is the cohomological expression of that diagonal. Nonseparating gluing is governed by the analogous self-node construction.
+Relabelling follows from symmetry of the marked points. The flat-unit property follows from forgetting a marking and the compatibility of virtual classes. In the project's even-cohomology convention, choose a basis $(e_a)$ of the state space and inverse Poincare matrix $(\eta^{ab})$. The cohomology class dual to the diagonal is
+
+$$
+\operatorname{PD}([\Delta_X])
+=\sum_{a,b}\eta^{ab}e_a\otimes e_b.
+$$
+
+The stable-map boundary is a fiber product over $X\times X$ pulled back along $\Delta_X$. Applying the virtual splitting and projection formulas therefore produces exactly the inverse-metric sums in the CohFT gluing axioms. The nonseparating formula uses the same diagonal class for the two branches of a self-node.
 
 The divisor equation uses the compatibility of evaluation classes with the universal curve. Grading follows from virtual dimension. Descendant identities use cotangent-line comparison and boundary formulas.
 
@@ -63,7 +78,7 @@ The divisor equation uses the compatibility of evaluation classes with the unive
 The first implementation boundary is represented algebraically by a package containing the stabilized primary theory, stable-map descendants, and a descendant--ancestor residual decomposition. A future geometric construction must produce stronger evidence from stable-map objects, evaluation and stabilization maps, virtual classes, pullback and proper pushforward, external products, refined pullback along diagonals, and all required compatibility theorems. In particular, the current residual field does not encode boundary support. The intended future implication is
 
 $$
-\text{genuine virtual-geometric construction}
+\text{constructed virtual-geometric data}
 \Longrightarrow
 \text{curve-class-resolved axiomatic GW theory}.
 $$
@@ -76,4 +91,4 @@ In Lean, `VirtualGWPackage` is deliberately only an algebraic output carrier. It
 
 Constructing the package from first principles would require a theory of Deligne--Mumford or derived stacks, Chow or homology groups, proper pushforward, refined Gysin maps, perfect obstruction theories, intrinsic normal cones, and virtual pullback compatibility. That is a substantial independent project and is not a prerequisite for completing the axiomatic development.
 
-This phase will close the roadmap only when a genuine geometric construction connects the abstract structures back to Gromov--Witten invariants.
+This phase will close the roadmap only when a concrete geometric construction connects the abstract structures back to Gromov--Witten invariants.

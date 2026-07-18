@@ -70,7 +70,7 @@ The [implementation progress record](milestones/ImplementationProgress.md) conta
 
 - Beta-resolved ancestor classes and the distinct stabilized stable-map descendant family correspond to [`GW/Descendants/Basic.lean`](../AxiomaticGW/GW/Descendants/Basic.lean), principally `GromovWittenTheory.ancestorClass`, `ancestorClass_relabel`, `ancestorClass_total_degree`, `ancestorInvariant`, `StableMapDescendants`, and the two invariant relabelling theorems.
 - The recorded residual and integrated identity correspond to [`GW/Descendants/Comparison.lean`](../AxiomaticGW/GW/Descendants/Comparison.lean), principally `DescendantAncestorComparison`, `boundaryCorrection_eq_sub`, `boundaryCorrection_relabel`, `boundaryCorrection_degree`, and `invariant_eq_ancestor_add_boundary`. These derived theorems make the weak residual coherent and homogeneous, but the interface still does not encode geometric boundary support or a stabilization theorem.
-- The optional geometric strengthening corresponds to [`GW/Descendants/Stabilization.lean`](../AxiomaticGW/GW/Descendants/Stabilization.lean). `StabilizationBoundaryComparison` exhibits the residual as a finite sum over positive-degree rational-tail splittings, using explicit boundary pushforward and two-point tail-operator data. The same operators define `TwoPointCalibration`; `CalibrationBoundaryRelation` derives coefficientwise symplecticity, and `GiventalComparison` records the additional quantized partition identity without treating it as a consequence of the weak residual.
+- The optional geometric strengthening corresponds to [`GW/Descendants/Stabilization.lean`](../AxiomaticGW/GW/Descendants/Stabilization.lean). `StabilizationBoundaryComparison` exhibits the residual as a finite sum over positive-degree rational-tail splittings, using explicit boundary pushforward and two-point tail-operator data. The same operators define `TwoPointCalibration`; `CalibrationBoundaryRelation` derives coefficientwise symplecticity, and `GiventalComparison` supplies the additional genus-one scalar factor and coefficientwise descendant--ancestor identity without treating them as consequences of the weak residual.
 
 ## M9. Potentials and equations
 
@@ -86,7 +86,7 @@ The [implementation progress record](milestones/ImplementationProgress.md) conta
 
 **Mathematical note:** [The point target and stable-curve intersection theory](mathematics/PointTargetAndStableCurves.md).
 
-- The point primary class, psi intersection numbers, point ancestors, dimension vanishing, initial values, and unit-class WDVV test correspond to [`PointTarget/Descendants.lean`](../AxiomaticGW/PointTarget/Descendants.lean), principally `PointTarget.primaryClass`, `intersectionNumber`, `ancestor`, `intersectionNumber_eq_zero_of_degree_ne`, `intersectionNumber_zero_three`, `intersectionNumber_one_one`, and `unitClass_wdvv`.
+- The point primary class, psi-class intersection numbers, point ancestors, dimension vanishing, initial values, and unit-class WDVV test correspond to [`PointTarget/Descendants.lean`](../AxiomaticGW/PointTarget/Descendants.lean), principally `PointTarget.primaryClass`, `intersectionNumber`, `ancestor`, `intersectionNumber_eq_zero_of_degree_ne`, `intersectionNumber_zero_three`, `intersectionNumber_one_one`, and `unitClass_wdvv`.
 - The labelled all-genus DVV formula corresponds to `PointTarget.DVVRecursion`. It is an explicit higher tautological hypothesis on a geometric stable-curve model, not a theorem of the primitive `PsiClasses` interface.
 
 ## M10. Algebraic output carrier

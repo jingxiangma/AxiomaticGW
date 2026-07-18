@@ -22,26 +22,27 @@ requires the unit to lie in $V^0$, and records the degree compatibility of the p
 
 ## 2. Relabelling and gluing
 
-The maps $\Omega_{g,S}$ are natural under bijections of label sets. For separating gluing, pulling back a class to the boundary equals the product of the two component classes with the two new state-space inputs contracted by the copairing $C_\eta$:
+The maps $\Omega_{g,S}$ are natural under bijections of label sets. Choose a basis $(e_a)$ of $V$, write $\eta_{ab}=\eta(e_a,e_b)$, and let $(\eta^{ab})$ be the inverse matrix. For input families $x:S\to V$ and $y:T\to V$, the separating gluing axiom is
 
 $$
-\xi^*\Omega_{g_1+g_2,S\sqcup T}
+\xi^*\Omega_{g_1+g_2,S\sqcup T}(x,y)
 =
-\operatorname{Contr}_{C_\eta}
-\bigl(\Omega_{g_1,S\sqcup\{*\}}\boxtimes
-\Omega_{g_2,T\sqcup\{*\}}\bigr).
+\sum_{a,b}\eta^{ab}
+\Omega_{g_1,S\sqcup\{*\}}(x,e_a)
+\boxtimes
+\Omega_{g_2,T\sqcup\{*\}}(y,e_b).
 $$
 
-For nonseparating gluing,
+For nonseparating gluing, the corresponding formula is
 
 $$
-\iota^*\Omega_{g+1,S}
+\iota^*\Omega_{g+1,S}(x)
 =
-\operatorname{Contr}_{C_\eta}
-\bigl(\Omega_{g,S\sqcup\{+,-\}}\bigr).
+\sum_{a,b}\eta^{ab}
+\Omega_{g,S\sqcup\{+,-\}}(x,e_a,e_b).
 $$
 
-These equations are the cohomological versions of the TFT sewing identities.
+These expressions are independent of the chosen basis because $\sum_{a,b}\eta^{ab}e_a\otimes e_b=C_\eta$. They are the cohomological analogues of the two TFT contraction formulas in M2.
 
 ## 3. Unit and normalization
 
@@ -61,13 +62,21 @@ $$
 
 ## 4. Underlying Frobenius algebra
 
-Because $\overline{\mathcal M}_{0,3}$ is a point, the three-point class defines a product by
+After identifying $H^0(\overline{\mathcal M}_{0,3};R)$ with $R$, the three-point class defines a product by
 
 $$
 \eta(a*b,c)=\Omega_{0,3}(a,b,c).
 $$
 
-Relabelling gives commutativity, the unit axiom makes $\mathbf 1$ the identity, and the boundary relation in $\overline{\mathcal M}_{0,4}$ gives associativity. Invariance of $\eta$ follows directly from the symmetric three-point function. Thus every unital CohFT has an underlying commutative Frobenius algebra.
+If $\omega(a,b,c)$ denotes this scalar three-point function, equality of the $12|34$ and $13|24$ boundary divisor classes in $H^2(\overline{\mathcal M}_{0,4})$ gives
+
+$$
+\sum_{a,b}\omega(x,y,e_a)\eta^{ab}\omega(e_b,z,w)
+=
+\sum_{a,b}\omega(x,z,e_a)\eta^{ab}\omega(e_b,y,w).
+$$
+
+This is WDVV. Nondegeneracy of $\eta$ identifies it with $(x*y)*z=x*(y*z)$. Relabelling gives commutativity, the unit axiom makes $\mathbf 1$ the identity, and symmetry of $\omega$ gives Frobenius invariance.
 
 ## 5. Topological part and genus zero
 

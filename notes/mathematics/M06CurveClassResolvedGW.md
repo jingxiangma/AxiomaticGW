@@ -21,27 +21,25 @@ Indexing directly by effective classes makes effectivity structural. If one inst
 
 ## 2. Curve-class-resolved gluing
 
-At a separating node, the total class splits between the two components:
+At a separating node, the total class splits between the two components. In a basis $(e_a)$ with inverse pairing matrix $(\eta^{ab})$, the formula evaluated on input families $x:S\to V$ and $y:T\to V$ is
 
 $$
-\xi^*\Omega_{g_1+g_2,S\sqcup T,\beta}
+\xi^*\Omega_{g_1+g_2,S\sqcup T,\beta}(x,y)
 =
 \sum_{\beta_1+\beta_2=\beta}
-\operatorname{Contr}_{C_\eta}
-\bigl(
-\Omega_{g_1,S\sqcup\{*\},\beta_1}
+\sum_{a,b}\eta^{ab}
+\Omega_{g_1,S\sqcup\{*\},\beta_1}(x,e_a)
 \boxtimes
-\Omega_{g_2,T\sqcup\{*\},\beta_2}
-\bigr).
+\Omega_{g_2,T\sqcup\{*\},\beta_2}(y,e_b).
 $$
 
 At a nonseparating node, normalization does not split the curve into two components, so the class remains $\beta$:
 
 $$
-\iota^*\Omega_{g+1,S,\beta}
+\iota^*\Omega_{g+1,S,\beta}(x)
 =
-\operatorname{Contr}_{C_\eta}
-\bigl(\Omega_{g,S\sqcup\{+,-\},\beta}\bigr).
+\sum_{a,b}\eta^{ab}
+\Omega_{g,S\sqcup\{+,-\},\beta}(x,e_a,e_b).
 $$
 
 Relabelling and the flat-unit axiom are imposed coefficientwise in $\beta$.
@@ -61,7 +59,21 @@ $$
 (1-g)(d-3)+|S|+\int_\beta c_1(TX).
 $$
 
-The degree assigned to $\Omega_{g,S,\beta}$ must agree with this dimension after accounting for the degrees of the insertions and for pushforward along stabilization. An abstract theory therefore records the grading and the homomorphism $\beta\mapsto\int_\beta c_1(TX)$.
+Suppose the insertions have complex codimensions $p_s$ and the stabilized class has codimension $q$ on $\overline{\mathcal M}_{g,S}$. Comparing the virtual dimension with $\dim_\mathbb C\overline{\mathcal M}_{g,S}=3g-3+|S|$ gives
+
+$$
+q
+=\sum_{s\in S}p_s+(g-1)d-\int_\beta c_1(TX).
+$$
+
+Equivalently,
+
+$$
+q+d+\int_\beta c_1(TX)
+=\sum_{s\in S}p_s+gd,
+$$
+
+which is the subtraction-free equation encoded by `GWOutputDegree`. If the right-hand side of the first formula is negative, the corresponding class must vanish.
 
 ## 4. Divisors and degree zero
 
@@ -76,7 +88,7 @@ $$
 
 where $\pi$ forgets the divisor marking, with unstable and degree-zero exceptional cases handled explicitly. This pushforward formula should be kept distinct from the flat-unit axiom, which uses pullback along $\pi$. The pairing $\langle D,\beta\rangle=\int_\beta D$ is extra GW data and cannot be recovered from a bare CohFT.
 
-For a geometric target, a mapping-to-degree-zero theorem connects the theory to classical intersection theory and identifies the genus-zero zero-class coefficient with the cup product. The current abstract `GromovWittenTheory` interface has no pre-existing cup product on `V`; its beta-zero normalization fixes the unit/metric three-point value and therefore defines an intrinsic beta-zero product. Identifying that product with a separately supplied classical cup product requires additional target data. Higher-genus degree-zero terms can involve obstruction and Hodge data, so they should not be confused with the cohomological degree-zero, or topological, part of a CohFT.
+For a geometric target, the degree-zero, traditionally “mapping-to-point,” formula connects the theory to classical intersection theory and identifies the genus-zero zero-class coefficient with the cup product. The current abstract `GromovWittenTheory` interface has no pre-existing cup product on `V`; its beta-zero normalization fixes the unit/metric three-point value and therefore defines an intrinsic beta-zero product. Identifying that product with a separately supplied classical cup product requires additional target data. Higher-genus degree-zero terms can involve obstruction and Hodge data, so they must not be confused with the cohomological degree-zero, or topological, part of a CohFT.
 
 ## 5. Axiomatic core
 

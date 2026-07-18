@@ -16,13 +16,13 @@ $$
 \sum_{\beta\in B}a_\beta Q^\beta.
 $$
 
-The monoid algebra permits only finite support, which is often too small for GW theory. The project uses the positive locally finite effective monoid fixed in D13: an additive energy $E:B\to\mathbb N$ is positive away from zero, and the entire set of classes below each energy bound is finite. Consequently every coefficient function $B\to R$ is locally finite with respect to energy.
+The monoid algebra permits only finite support, which is often too small for GW theory. Here an additive energy $E:B\to\mathbb N$ is positive away from zero, and the set of classes below each energy bound is finite. Consequently every coefficient function $B\to R$ is locally finite with respect to energy.
 
 The Novikov coefficient ring is the completed monoid ring of all coefficient functions $B\to R$. Addition is pointwise and multiplication is convolution over the finite antidiagonal $\beta_1+\beta_2=\beta$. This completion preserves distinct curve classes of equal energy. The finite-support additive monoid algebra embeds as a subring and remains useful for finite regression examples, but it is not the final coefficient type.
 
 ## 2. Coefficientwise completion boundary
 
-Define
+The notation
 
 $$
 \Omega_{g,S}
@@ -30,7 +30,7 @@ $$
 \sum_{\beta\in B}Q^\beta\Omega_{g,S,\beta}.
 $$
 
-Coefficientwise separating gluing has the same convolution formula as ordinary CohFT gluing because the coefficient of $Q^\beta$ in a product is
+denotes the coefficient family $\beta\mapsto\Omega_{g,S,\beta}$; it is not automatically an element of an algebraic tensor product with the cohomology target. Coefficientwise separating gluing has the same convolution formula as ordinary CohFT gluing because the coefficient of $Q^\beta$ in a product is
 
 $$
 \sum_{\beta_1+\beta_2=\beta}
@@ -41,19 +41,42 @@ This identity always makes sense coefficientwise. It gives convolution on numeri
 
 ## 3. Small quantum product
 
-The three-point genus-zero classes define the small quantum product by
+Let $\langle a,b,c\rangle_{0,3,\beta}$ be the scalar obtained by integrating the fixed-class three-point class. Perfectness of $\eta$ defines a unique product coefficient
 
 $$
-\eta(a*_Q b,c)
+a *_\beta b
+=
+(\eta^\sharp)^{-1}
+\bigl(c\mapsto\langle a,b,c\rangle_{0,3,\beta}\bigr),
+$$
+
+and the small quantum product is the Novikov series
+
+$$
+a *_Q b=\sum_{\beta\in B}Q^\beta(a *_\beta b).
+$$
+
+Equivalently,
+
+$$
+\eta(a *_Q b,c)
 =
 \sum_{\beta\in B}Q^\beta
 \left\langle a,b,c\right\rangle_{0,3,\beta}.
 $$
 
-The separating gluing relation for four-point invariants proves associativity. For a geometric GW theory equipped with the usual degree-zero mapping formula,
+The two boundary presentations of $\overline{\mathcal M}_{0,4}$ and the separating gluing formula give, for every $\beta$,
 
 $$
-a*_Q b\equiv a\smile b
+\sum_{\beta_1+\beta_2=\beta}(a *_{\beta_1}b) *_{\beta_2}c
+=
+\sum_{\beta_1+\beta_2=\beta}a *_{\beta_1}(b *_{\beta_2}c).
+$$
+
+This is precisely the coefficient of $Q^\beta$ in associativity of $*_Q$. For a geometric GW theory equipped with the usual degree-zero mapping formula,
+
+$$
+a *_Q b\equiv a\smile b
 \pmod{Q^{\beta\ne0}}.
 $$
 
@@ -61,12 +84,12 @@ The implemented abstract interface instead treats its beta-zero product as intri
 
 ## 4. Big quantum product and WDVV
 
-Introduce a formal parameter $t\in V$ and the genus-zero primary potential
+Choose coordinates $(t^a)$ in a basis $(e_a)$ of $V$. With terms of total polynomial degree below three omitted, the genus-zero primary potential is
 
 $$
 F_0(t)
 =
-\sum_{\beta}\sum_{n\ge0}
+\sum_{\beta}\sum_{n\ge3}
 \frac{Q^\beta}{n!}
 \left\langle t,\ldots,t\right\rangle_{0,n,\beta}.
 $$
@@ -77,7 +100,15 @@ $$
 \eta(a*_t b,c)=\partial_a\partial_b\partial_cF_0(t).
 $$
 
-The two boundary decompositions of $\overline{\mathcal M}_{0,4}$ give the WDVV equation, which is equivalent to associativity of $*_t$. The divisor equation often rewrites divisor variables as rescalings of the Novikov monomials.
+Writing $F_{abc}=\partial_a\partial_b\partial_cF_0$, WDVV is
+
+$$
+\sum_{e,f}F_{abe}\eta^{ef}F_{fcd}
+=
+\sum_{e,f}F_{ace}\eta^{ef}F_{fbd}.
+$$
+
+This equation is equivalent to associativity of $*_t$ because $\eta$ is perfect. Terms of degree below three do not affect either the third derivatives or the product; a geometric theory may nevertheless retain them under its chosen unstable conventions.
 
 Descendant theory requires a second distinction, between cotangent lines on stable maps and on stable curves. See [M8: descendants and ancestors](M08DescendantsAndAncestors.md).
 

@@ -1,6 +1,6 @@
 # M3. Stable curves and gluing
 
-This note describes the geometric operations on moduli spaces of stable curves that form the target-side infrastructure of a CohFT.
+This note fixes the stable-curve moduli spaces and pullback maps that occur in the CohFT axioms.
 
 ## 1. Stable marked curves
 
@@ -10,13 +10,13 @@ $$
 2g-2+|S|>0.
 $$
 
-Its compact moduli space is denoted
+The corresponding proper Deligne--Mumford moduli stack is denoted
 
 $$
 \overline{\mathcal M}_{g,S}.
 $$
 
-Finite label sets are preferable to a fixed ordered set because all geometric maps are naturally expressed by adding, removing, or relabelling named points.
+Its complex dimension is $3g-3+|S|$. Finite label sets make the symmetric-group covariance intrinsic: relabelling, forgetting, and gluing are expressed without choosing an ordering of the marked points.
 
 ## 2. Primitive maps
 
@@ -74,14 +74,23 @@ for every stable pair. The latter is automatic for the actual connected moduli s
 
 ## 4. Stable graphs
 
-A stable graph records a boundary stratum. Its vertices carry genera, its legs carry the labels in $S$, and its internal edges pair half-edges. Every vertex satisfies its own stability condition. The total genus is
+A stable graph $\Gamma$ consists of vertices with genus labels, legs labelled by $S$, and internal edges pairing half-edges. If $L(v)$ is the set of legs and incident half-edges at $v$, stability requires $2g(v)-2+|L(v)|>0$. The total genus is
 
 $$
 g(\Gamma)=h^1(\Gamma)+\sum_{v}g(v).
 $$
 
-Contracting every internal edge describes the map from a product of vertex moduli spaces to $\overline{\mathcal M}_{g,S}$. The optional graph-pullback layer records the order coherence needed to make graph evaluation independent of the order in which edges are processed.
+Identifying the two marked points belonging to each internal edge defines the gluing morphism
 
-`StableGraph` implements this finite combinatorics using an edge type with two branches, so loops and multiple edges are represented without a half-edge quotient. It defines vertex label types, valence, first Betti number, total genus, relabeling, and complete contraction orders. `StableGraphPullbacks` is an optional extension recording ordered graph pullbacks and their permutation coherence; the derived canonical pullback is independent of a complete edge order, and the constant cohomology target supplies a concrete algebraic instance. Actual combinatorial edge contraction and geometric graph pullbacks for moduli-space targets remain unimplemented.
+$$
+\xi_\Gamma:
+\prod_{v\in V(\Gamma)}\overline{\mathcal M}_{g(v),L(v)}
+\longrightarrow
+\overline{\mathcal M}_{g(\Gamma),S}.
+$$
+
+Its image is the closure of the boundary stratum indexed by $\Gamma$, of codimension $|E(\Gamma)|$. The associated cohomological operation is the pullback $\xi_\Gamma^*$; it is intrinsic and therefore independent of an ordering of the internal edges.
+
+`StableGraph` implements this finite combinatorics using an edge type with two branches, so loops and multiple edges are represented without a half-edge quotient. It defines vertex label types, valence, first Betti number, total genus, relabelling, and complete edge orders. Because the abstract core has only one-edge pullbacks, `StableGraphPullbacks` separately records an ordered construction and its permutation coherence; the resulting public pullback models $\xi_\Gamma^*$. The constant target supplies an algebraic instance, while geometric graph pullbacks and combinatorial edge contraction remain unimplemented.
 
 With this target-side system available, one can state the full CohFT axioms. See [M4: full unital CohFT](M04FullUnitalCohFT.md).

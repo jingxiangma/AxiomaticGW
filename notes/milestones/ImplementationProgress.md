@@ -6,6 +6,43 @@ Each entry records the accepted scope, implementation commit, a link to the cano
 
 Older entries preserve their then-current scope and next gate; explicit follow-up paragraphs record work completed by later revisions.
 
+## 2026-07-18: Literature-based mathematical-note revision
+
+**Status:** Implemented and locally verified.
+
+### Scope reviewed
+
+The review covered the ten numbered mathematical notes, the point-target note, the project-wide mathematical overview, the mathematics-to-Lean map, and the current roadmap descriptions. Formulas and terminology were checked directly in the project-local arXiv TeX sources: Kontsevich--Manin for GW classes, inverse-metric splitting, grading, unit, divisor, quantum multiplication, and WDVV; Dumitrescu for the oriented two-dimensional TFT/Frobenius-algebra correspondence; Givental for descendants, ancestors, the two-point calibration, symplecticity, total potentials, and Fock-space qualifications; and Mulase--Safnuk for psi-class intersections and the DVV/Virasoro normalization.
+
+### Findings and revisions
+
+- **Medium:** The geometric-realization notes wrote a pushed-forward virtual homology or Chow class as though it were already a cohomology class. They now define the pushed-forward class first and apply Poincare duality explicitly when available.
+- **Medium:** Several central constructions were described narratively without the formulas needed to determine their meaning. The notes now define copairing contraction, separating and nonseparating inverse-metric sums, the TFT handle operator, stable-graph gluing, the stable-curve and stable-map cotangent-line corrections, the exact GW output codimension, fixed-class and Novikov quantum products, WDVV, the $S$-operator and its symplectic identity, and the stable string, dilaton, and descendant divisor equations.
+- **Low:** Phrases such as “the tensor inserted at a node,” “wrong ordinary dimension,” and schematic boundary corrections obscured the mathematical maps and hypotheses. These were replaced by basis-independent definitions, explicit source and target classes, and stated implementation limits.
+- No critical or high-severity defect was found. The source ledger now records which topics were checked in each TeX archive, and the roadmap, overview, and mathematics-to-Lean map use the same current terminology.
+
+### Mathematical effect
+
+No Lean definition, theorem statement, proof, assumption, instance, coercion, or public API changed. The documentation now distinguishes homology from cohomology, stable-map descendants from stable-curve ancestors, coefficient families from completed tensor products, and supplied comparison carriers from geometric theorems. These are corrections and clarifications of the described mathematics, not changes to the formalized propositions.
+
+### Verification
+
+The revision passed:
+
+```bash
+lake build
+lake test
+lake lint
+git diff --check
+rg -n '\b(sorry|admit)\b|^\s*(axiom|unsafe|opaque)\b|sorryAx|admitAx' AxiomaticGW AxiomaticGWTest
+```
+
+The full build completed 2,570 jobs. `lake test` passed with only the pre-existing private-module warning for `AxiomaticGWTest/Basic.lean`, and library lint passed. The source scan returned no matches. Stateful audits of every changed Markdown file found no manually wrapped prose paragraphs, unbalanced or attached display-math delimiters, stale renamed anchors, or broken tracked local links.
+
+### Remaining risk and next gate
+
+The literature audit checks the mathematical exposition and its agreement with the current Lean interfaces; it does not construct or verify the missing geometric hypotheses. The principal remaining risk is still the realization of stable-curve and stable-map geometry: graph pullbacks, tautological push-pull identities, rational-tail factorization, virtual classes, refined diagonal pullback, and the comparison packages are represented abstractly. The next priority is a concrete geometric instance of one of those optional packages, with the stabilization comparison as the most direct target.
+
 ## 2026-07-18: Simplifier stability and mathematical-comment audit
 
 **Status:** Implemented and locally verified.

@@ -10,7 +10,7 @@ $$
 Z:\operatorname{Bord}^{\mathrm{or}}_2\longrightarrow R\text{-}\operatorname{Mod}.
 $$
 
-Objects of the bordism category are closed oriented one-manifolds, and morphisms are compact oriented surfaces with incoming and outgoing boundary. The monoidal operation is disjoint union.
+Objects of the bordism category are closed oriented one-manifolds, morphisms are diffeomorphism classes of compact oriented bordisms, composition is gluing along parametrized boundary circles, and the monoidal operation is disjoint union. The state modules must be dualizable; the project works with finite free modules.
 
 The **state space** is the value on a positively oriented circle:
 
@@ -18,7 +18,7 @@ $$
 A=Z(S^1).
 $$
 
-The pair of pants gives multiplication or comultiplication according to its orientation. The two disks give the unit and counit, and the cylinder gives the identity. Relations between different decompositions of a surface give the Frobenius algebra axioms.
+With two circles incoming and one outgoing, the pair of pants gives $\mu:A\otimes_R A\to A$; with one incoming and two outgoing, it gives $\Delta:A\to A\otimes_R A$. The disks give $\mathbf 1:R\to A$ and $\epsilon:A\to R$, and the cylinder gives $\mathrm{id}_A$. Functoriality under gluing gives the associativity, unit, counit, and Frobenius relations.
 
 Conversely, a commutative Frobenius algebra assigns maps to pair-of-pants decompositions. The Frobenius identities prove that the result is independent of the chosen decomposition. This gives the classification
 
@@ -46,29 +46,42 @@ $$
 
 This functional is the **connected genus-$g$, $S$-labelled correlator**. Equivalently, $\omega_{g,S}$ is multilinear in a family of states $(a_s)_{s\in S}$, where the circle labelled by $s$ carries $a_s\in A$. Using a label type rather than only the number $|S|$ makes relabelling and gluing canonical: a bijection $S\simeq T$ reindexes the inputs, while disjoint collections of inputs are indexed by $S\sqcup T$.
 
-Suppose first that $S$ is nonempty. Choose a pair-of-pants decomposition that merges the incoming circles until only one intermediate circle remains. Multiplication at the merging vertices places the state
+Let
 
 $$
-x=\prod_{s\in S}a_s.
+m_S:\bigotimes_{s\in S}A\longrightarrow A,
+\qquad
+m_S\left(\bigotimes_{s\in S}a_s\right)=\prod_{s\in S}a_s,
 $$
 
-on that circle. The product is independent of the order of the labels because $A$ is commutative.
-
-At genus zero, the intermediate circle is capped by a disk, which applies the counit:
+with $m_\varnothing(1)=1_A$. Let $m_E:A\to A$ be multiplication by the handle element. The map assigned to a connected genus-$g$ bordism from the $S$-labelled circles to the empty one is
 
 $$
-\omega_{0,S}((a_s)_{s\in S})
+\omega_{g,S}=\epsilon\circ m_E^g\circ m_S.
+$$
+
+Indeed, the genus-one bordism with one incoming and one outgoing circle is the composite $\mu\circ\Delta$, and
+
+$$
+\mu\circ\Delta=m_E,
+\qquad
+m_E(a)=aE.
+$$
+
+It follows directly that
+
+$$
+\boxed{\displaystyle
+\omega_{g,S}((a_s)_{s\in S})
 =
-\epsilon(x)
-=
-\epsilon\left(\prod_{s\in S}a_s\right).
+\epsilon\left(\prod_{s\in S}a_s\,E^g\right).}
 $$
 
-The intermediate circle belongs only to the chosen decomposition; it is not an additional boundary circle of the original surface. Different decompositions may parenthesize the product differently, but associativity gives the same result.
+Associativity and commutativity make $m_S$ independent of an ordering or parenthesization, and the Frobenius relation identifies the maps obtained from different pair-of-pants decompositions.
 
 ![Feynman diagram for a genus-zero three-point correlator: three external states pass through two multiplication vertices and terminate at the counit](images/m02-genus-zero-decomposition.svg)
 
-When the genus is greater than zero, handles are inserted before the intermediate circle is capped. A one-handle cobordism is the composite of a splitting pair of pants and a merging pair of pants, so its **handle operator** is
+The **handle operator** is therefore
 
 $$
 H=\mu\circ\Delta:A\longrightarrow A.
@@ -85,44 +98,23 @@ H(a)
 =aE.
 $$
 
-Thus one handle acts by multiplication by $E$, and $g$ handles act by
+Its $g$-fold composite is
 
 $$
 H^g(x)=xE^g.
 $$
 
-Capping the final circle gives, for nonempty $S$,
+For example, when $g=1$ and $S=\{1,2\}$,
 
 $$
-\boxed{\displaystyle
-\omega_{g,S}((a_s)_{s\in S})
-=
-\epsilon\left(\prod_{s\in S}a_s\,E^g\right).}
+(\mu\circ\Delta)(ab)
+=\sum_i abu_iv_i
+=abE,
+\qquad
+\omega_{1,\{1,2\}}(a,b)=\epsilon(abE).
 $$
 
-Equivalently, cutting a handle open produces two boundary circles. Sewing them together inserts the copairing $C_\eta=\sum_i u_i\otimes v_i$, and merging its two legs contributes $\sum_i u_iv_i=\mu(C_\eta)=E$. The Frobenius identities ensure that this value is independent of the chosen pair-of-pants decomposition.
-
-As a genus-one example, take two incoming circles carrying $a,b\in A$. Merging them gives the state $ab$. Writing $C_\eta=\sum_i u_i\otimes v_i$, the handle acts by
-
-$$
-ab
-\xmapsto{\ \Delta\ }
-\Delta(ab)
-=
-\sum_i abu_i\otimes v_i
-\xmapsto{\ \mu\ }
-\sum_i abu_iv_i
-=abE.
-$$
-
-The final cap applies the counit, hence
-
-$$
-\omega_{1,\{1,2\}}(a,b)
-=\epsilon(abE).
-$$
-
-When $S$ is empty, a unit disk creates an intermediate circle carrying $1_A$. Applying the $g$ handle operators and then the counit gives the **partition function**
+For $S=\varnothing$, the convention $m_\varnothing(1)=1_A$ gives the closed genus-$g$ **partition function**
 
 $$
 Z(\Sigma_g)=\epsilon(E^g).
@@ -154,7 +146,15 @@ $$
 \sum_i\epsilon(xu_i)\epsilon(v_i y)=\epsilon(xy).
 $$
 
-The left-hand side inserts the two legs of the copairing at the boundaries being sewn. The defining identity of $C_\eta$ contracts those two insertions, leaving the product $xy$ on the sewn surface.
+This is an immediate contraction calculation:
+
+$$
+\sum_i\epsilon(xu_i)\epsilon(v_i y)
+=\epsilon\left(\left(\sum_i\eta(x,u_i)v_i\right)y\right)
+=\epsilon(xy),
+$$
+
+where symmetry of $\eta$ and the defining identity of $C_\eta$ are used in the second equality.
 
 **Nonseparating sewing** identifies two distinguished boundary circles on the same connected surface and creates a handle:
 

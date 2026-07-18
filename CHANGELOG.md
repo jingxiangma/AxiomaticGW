@@ -40,6 +40,7 @@ The project is research-stage and follows the pinned Lean/mathlib version in `le
 
 ### Changed
 
+- Reworked the mathematical notes against the project-local arXiv TeX sources, replacing narrative descriptions of copairing, gluing, virtual classes, descendant--ancestor comparison, quantum products, and GW equations with explicit formulas and stated conventions.
 - Made production simplifier calls explicit with `simp only` or `simpa only`, and documented the dependency-stability policy for future proofs.
 - Tightened public mathematical comments so fixed-class quantum products, rational-tail stabilization data, and coefficientwise Fock carriers are described without nonstandard or overstated terminology.
 - Renamed the public `TopologicalCorrelatorTheory` API to `TwoDimensionalTFT` and `threePointFunctional` to `threePointFunction` to match the standard mathematical terminology.

@@ -21,4 +21,6 @@ The numbering agrees with the phases in the [project-wide milestone roadmap](../
 
 The focused note [The point target and stable-curve intersection theory](PointTargetAndStableCurves.md) gives the first universal regression case beyond the constant degree-zero model and records the all-genus DVV formula.
 
+The formulas and terminology in these notes are checked against searchable arXiv TeX sources: Kontsevich--Manin for GW classes, CohFT gluing, grading, unit, divisor, and WDVV; Givental for descendant and ancestor potentials, calibrations, symplecticity, and Fock-space qualifications; Mulase--Safnuk for psi-class intersections, dimension constraints, and Virasoro/DVV normalization; and Dumitrescu for the two-dimensional TFT/Frobenius correspondence. Source metadata and the audited topics are recorded in the [online reference ledger](../references/online/README.md).
+
 The canonical mapping from mathematical sections to Lean modules is maintained in the [mathematics-to-Lean map](../MathematicsToLean.md). Dated implementation status and verification evidence belong in the [`implementation progress record`](../milestones/ImplementationProgress.md), not in these mathematical notes.

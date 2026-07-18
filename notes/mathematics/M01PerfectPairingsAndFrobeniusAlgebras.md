@@ -1,6 +1,6 @@
 # M1. Perfect pairings and Frobenius algebras
 
-This note describes the algebraic data that later appear at every node of a topological field theory, a CohFT, or Gromov--Witten theory.
+This note fixes the duality and contraction conventions used in the later TFT, CohFT, and Gromov--Witten gluing formulas.
 
 ## 1. Algebraic setting
 
@@ -70,7 +70,13 @@ $$
 C_\eta\in A\otimes_R A.
 $$
 
-If a basis calculation writes $C_\eta=\sum_i u_i\otimes v_i$, its defining identity is
+For a basis $(e_a)$ of $A$, write $\eta_{ab}=\eta(e_a,e_b)$ and let $(\eta^{ab})$ be the inverse matrix. Then
+
+$$
+C_\eta=\sum_{a,b}\eta^{ab}e_a\otimes e_b.
+$$
+
+More generally, if $C_\eta=\sum_i u_i\otimes v_i$ is any finite tensor presentation, its defining identity is
 
 $$
 \sum_i\eta(u_i,x)v_i=x.
@@ -84,7 +90,22 @@ $$
 \tau(a\otimes b)=b\otimes a.
 $$
 
-The copairing is the tensor inserted whenever two marked points are joined to form a node.
+Let $M$ be an $R$-module and let $F$ be multilinear with two distinguished arguments. After fixing the other arguments $\mathbf a$, those two slots induce a linear map $\widetilde F_{\mathbf a}:A\otimes_R A\to M$. Contraction with the copairing is the basis-independent operation
+
+$$
+\operatorname{Contr}_{C_\eta}(F)(\mathbf a)
+:=\widetilde F_{\mathbf a}(C_\eta)
+=\sum_i F(\mathbf a,u_i,v_i).
+$$
+
+For multilinear maps $F$ and $G$ with one distinguished argument each and respective targets $M$ and $N$, separating contraction is
+
+$$
+\operatorname{Contr}_{C_\eta}(F,G)(\mathbf a,\mathbf b)
+=\sum_i F(\mathbf a,u_i)\otimes G(\mathbf b,v_i),
+$$
+
+followed by multiplication when the two targets are scalar algebras. The TFT and CohFT gluing axioms use these two contractions; the phrase “contract at a node” always refers to one of these formulas.
 
 ## 4. Coalgebra structure
 
@@ -114,7 +135,7 @@ $$
 E=\mu(C_\eta)=\sum_i u_iv_i.
 $$
 
-To see why, regard a surface with one additional handle as the composite of a pair of pants that splits one circle into two and a pair of pants that merges those two circles again. A two-dimensional TFT assigns $\Delta$ to the first bordism and $\mu$ to the second. Hence the operator assigned to the handle is
+Multiplication after comultiplication is the endomorphism
 
 $$
 (\mu\circ\Delta)(a)
@@ -123,7 +144,7 @@ $$
 =aE.
 $$
 
-Thus multiplication by $E$ represents the addition of one handle to a surface. Equivalently, cutting open a handle produces two boundary circles; sewing them back together inserts the two legs of $C_\eta$, and merging those legs turns the insertion into $\mu(C_\eta)=E$.
+Thus $\mu\circ\Delta=m_E$, multiplication by $E$. Under the Frobenius-algebra classification of oriented two-dimensional TFTs, this is the linear map assigned to the genus-one bordism with one incoming and one outgoing circle.
 
 ## 5. Examples
 

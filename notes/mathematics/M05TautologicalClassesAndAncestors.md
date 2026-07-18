@@ -12,17 +12,18 @@ $$
 
 These are stable-curve classes. The descendant layer distinguishes them from the cotangent-line classes on moduli spaces of stable maps.
 
-The forgetful map satisfies a correction formula of the form
+Let $\pi:\overline{\mathcal M}_{g,S\sqcup\{*\}}\to\overline{\mathcal M}_{g,S}$ forget the marking $*$. Distinguishing the cotangent classes on the source and target, the correction formula is
 
 $$
-\psi_i=\pi^*\psi_i+D_{i,*},
+\psi_i^{S\sqcup\{*\}}
+=\pi^*\psi_i^S+D_{i,*},
 $$
 
-where $D_{i,*}$ is the boundary divisor on which the markings $i$ and $*$ lie on a rational tail. This boundary term is the source of topological recursion relations.
+where $D_{i,*}$ is the boundary divisor whose generic curve has $i$ and $*$ on a three-pointed rational component. The superscripts prevent the common ambiguity of writing the two different cotangent classes with the same symbol.
 
 ## 2. Other tautological classes
 
-The kappa classes may be defined by pushforward:
+With the convention used in this project, the kappa classes are defined by
 
 $$
 \kappa_m=\pi_*(\psi_*^{m+1}).
@@ -50,7 +51,7 @@ $$
 f_*(f^*\alpha\smile\beta)=\alpha\smile f_*\beta.
 $$
 
-An abstract tautological stable-curve system records these operations without initially constructing the actual moduli stacks.
+The geometric tautological system satisfies these identities. The implemented abstract interface retains only the particular pushforward, degree, naturality, and projection laws used by current theorems; it does not claim a complete six-functor formalism.
 
 ## 4. Ancestor correlators
 
@@ -66,7 +67,7 @@ $$
 \prod_{i\in S}\psi_i^{k_i}.
 $$
 
-The bar emphasizes that these are ancestor insertions. Forgetful-map and boundary formulas lead to the string equation, dilaton equation, and topological recursion relations, once the corresponding unstable conventions are fixed.
+The bar on $\bar\tau$ distinguishes these stable-curve cotangent insertions from stable-map descendants. String, dilaton, and topological recursion equations additionally require the relevant push-pull identities and unstable conventions; they do not follow from the displayed integral alone.
 
 The next stage enriches the theory by effective curve classes and the additional axioms special to Gromov--Witten theory. See [M6: curve-class-resolved GW axioms](M06CurveClassResolvedGW.md).
 

@@ -45,11 +45,11 @@ $$
 \overline{\mathcal M}_{g,S}.
 $$
 
-The stable-map space generally has the wrong ordinary dimension. A virtual fundamental class supplies the expected intersection theory. Given insertions $\gamma_i\in H^*(X)$, the associated primary GW class is schematically
+The stable-map stack need not be smooth or of the expected dimension. A virtual fundamental class supplies the expected intersection theory. Given insertions $\gamma_i\in H^*(X)$, first define the pushed-forward virtual homology or Chow class
 
 $$
-\Omega^X_{g,S,\beta}((\gamma_i))
-=
+I^X_{g,S,\beta}((\gamma_i))
+:=
 \operatorname{st}_*
 \left(
   \prod_{i\in S}\operatorname{ev}_i^*(\gamma_i)
@@ -58,7 +58,15 @@ $$
 \right).
 $$
 
-This class lies on the moduli space of stable curves. The symmetries, forgetful maps, and boundary gluings of stable curves turn the collection of all such classes into a highly structured object.
+When Poincare duality is available, the cohomology-valued class is
+
+$$
+\Omega^X_{g,S,\beta}((\gamma_i))
+=\operatorname{PD}\bigl(I^X_{g,S,\beta}((\gamma_i))\bigr)
+\in H^*(\overline{\mathcal M}_{g,S}).
+$$
+
+The symmetries, forgetful maps, and boundary gluings of stable curves impose the GW and CohFT identities on this family.
 
 The formalization begins with that structure. It first assumes abstract cohomology and gluing operations satisfying their geometric identities, then derives the algebraic consequences. A later realization theorem will state which abstract virtual-stable-map data are sufficient to construct the axiomatic theory.
 
@@ -78,7 +86,20 @@ $$
 C_\eta\in V\otimes V.
 $$
 
-Contracting node insertions against $C_\eta$ is the algebraic form of gluing two branches of a curve.
+For a basis $(e_a)$ with pairing matrix $(\eta_{ab})$ and inverse matrix $(\eta^{ab})$,
+
+$$
+C_\eta=\sum_{a,b}\eta^{ab}e_a\otimes e_b.
+$$
+
+If $F$ has two distinguished state-space arguments, contraction means
+
+$$
+\operatorname{Contr}_{C_\eta}(F)(\mathbf x)
+=\sum_{a,b}\eta^{ab}F(\mathbf x,e_a,e_b).
+$$
+
+This basis-independent operation, rather than an informal tensor-insertion picture, is used at every node.
 
 ### 3.2 Frobenius algebras
 
@@ -94,7 +115,15 @@ $$
 \eta(a,b)=\epsilon(ab)
 $$
 
-is a perfect pairing. The inverse metric determines the Casimir tensor, comultiplication, and handle element $E$.
+is a perfect pairing. The comultiplication and handle element are
+
+$$
+\Delta(a)=(a\otimes1)C_\eta,
+\qquad
+E=\mu(C_\eta),
+\qquad
+(\mu\circ\Delta)(a)=aE.
+$$
 
 The associated finite-labelled topological correlators are
 
@@ -150,7 +179,16 @@ The abstract stable-curve system supplies pullbacks for:
 - separating gluing of two curves at distinguished markings;
 - nonseparating gluing of two markings on one curve.
 
-It also records the functoriality, naturality, and coherence identities used by CohFT axioms. Stable graphs later package iterated boundary gluings.
+It also records the functoriality, naturality, and coherence identities used by CohFT axioms. For a stable graph $\Gamma$, the geometric iterated gluing map is
+
+$$
+\xi_\Gamma:
+\prod_{v\in V(\Gamma)}\overline{\mathcal M}_{g(v),L(v)}
+\longrightarrow
+\overline{\mathcal M}_{g(\Gamma),S},
+$$
+
+and the corresponding cohomological operation is $\xi_\Gamma^*$.
 
 ## 5. Cohomological field theories
 
@@ -168,28 +206,26 @@ The classes are natural under bijections of finite label sets. The project uses 
 
 ### 5.2 Separating gluing
 
-When a curve splits into components of genera $g_1$ and $g_2$, restriction to the corresponding boundary equals the external product of the component classes with the two new state-space inputs contracted against $C_\eta$:
+For input families $x:S\to V$ and $y:T\to V$, separating gluing is the inverse-metric sum
 
 $$
-\xi^*\Omega_{g_1+g_2,S\sqcup T}
+\xi^*\Omega_{g_1+g_2,S\sqcup T}(x,y)
 =
-\operatorname{Contr}_{C_\eta}
-\left(
-  \Omega_{g_1,S\sqcup\{*\}}
-  \boxtimes
-  \Omega_{g_2,T\sqcup\{*\}}
-\right).
+\sum_{a,b}\eta^{ab}
+\Omega_{g_1,S\sqcup\{*\}}(x,e_a)
+\boxtimes
+\Omega_{g_2,T\sqcup\{*\}}(y,e_b).
 $$
 
 ### 5.3 Nonseparating gluing
 
-Identifying two markings on one curve raises the genus by one:
+Nonseparating gluing is
 
 $$
-\iota^*\Omega_{g+1,S}
+\iota^*\Omega_{g+1,S}(x)
 =
-\operatorname{Contr}_{C_\eta}
-\left(\Omega_{g,S\sqcup\{+,-\}}\right).
+\sum_{a,b}\eta^{ab}
+\Omega_{g,S\sqcup\{+,-\}}(x,e_a,e_b).
 $$
 
 ### 5.4 Flat unit
@@ -206,13 +242,21 @@ The three-point normalization identifies the unit insertion with the metric.
 
 ## 6. Frobenius algebra and WDVV from a CohFT
 
-Because $\overline{\mathcal M}_{0,3}$ is a point, the three-point class defines a multiplication on $V$ by
+After identifying $H^0(\overline{\mathcal M}_{0,3};R)$ with $R$, the three-point class defines a multiplication on $V$ by
 
 $$
 \eta(a*b,c)=\Omega_{0,3}(a,b,c).
 $$
 
-Relabelling gives commutativity, the flat-unit axiom gives the identity, and the two boundary presentations of $\overline{\mathcal M}_{0,4}$ give associativity. The same boundary relation, written for a varying insertion, is the WDVV equation.
+Writing $\omega(a,b,c)$ for the scalar three-point function, the two boundary presentations of $\overline{\mathcal M}_{0,4}$ give WDVV:
+
+$$
+\sum_{a,b}\omega(x,y,e_a)\eta^{ab}\omega(e_b,z,w)
+=
+\sum_{a,b}\omega(x,z,e_a)\eta^{ab}\omega(e_b,y,w).
+$$
+
+Perfectness of $\eta$ identifies this equation with associativity. Relabelling gives commutativity and the flat-unit axiom gives the identity.
 
 Consequently the genus-zero Frobenius algebra is derived from the full all-genus CohFT. It is not a replacement for the higher-genus theory.
 
@@ -226,7 +270,15 @@ $$
 \psi_i\in H^2(\overline{\mathcal M}_{g,S}),
 $$
 
-which has project degree one. Other distinguished classes include
+which has project degree one.
+
+For $\pi:\overline{\mathcal M}_{g,S\sqcup\{*\}}\to\overline{\mathcal M}_{g,S}$, the source and target cotangent classes satisfy
+
+$$
+\psi_i^{S\sqcup\{*\}}=\pi^*\psi_i^S+D_{i,*},
+$$
+
+where $D_{i,*}$ is the rational-tail boundary divisor. The kappa and Hodge classes are
 
 $$
 \kappa_m=\pi_*(\psi_*^{m+1})
@@ -257,18 +309,16 @@ $$
 \qquad \beta\in B.
 $$
 
-At a separating node the total class is distributed over the two components:
+For input families $x:S\to V$ and $y:T\to V$, separating gluing is
 
 $$
-\xi^*\Omega_{g_1+g_2,S\sqcup T,\beta}
+\xi^*\Omega_{g_1+g_2,S\sqcup T,\beta}(x,y)
 =
 \sum_{\beta_1+\beta_2=\beta}
-\operatorname{Contr}_{C_\eta}
-\left(
-  \Omega_{g_1,S\sqcup\{*\},\beta_1}
-  \boxtimes
-  \Omega_{g_2,T\sqcup\{*\},\beta_2}
-\right).
+\sum_{a,b}\eta^{ab}
+\Omega_{g_1,S\sqcup\{*\},\beta_1}(x,e_a)
+\boxtimes
+\Omega_{g_2,T\sqcup\{*\},\beta_2}(y,e_b).
 $$
 
 The formal system must state a finiteness condition making this coefficient sum meaningful. Nonseparating gluing preserves $\beta$.
@@ -287,6 +337,12 @@ Additional GW data and axioms include:
 
 These properties are not consequences of a bare CohFT.
 
+If the insertions have codimensions $p_s$ and the stabilized class has codimension $q$, the virtual-dimension equation is
+
+$$
+q=\sum_{s\in S}p_s+(g-1)\dim_\mathbb C X-\int_\beta c_1(TX).
+$$
+
 ## 9. Novikov coefficients and quantum products
 
 Introduce formal monomials $Q^\beta$ satisfying
@@ -301,16 +357,24 @@ $$
 \Omega_{g,S}=\sum_{\beta\in B}Q^\beta\Omega_{g,S,\beta}.
 $$
 
-A Novikov support condition controls the infinite sum. The small quantum product is characterized by
+A Novikov support condition controls the infinite sum. Perfectness of $\eta$ defines fixed-class products by
 
 $$
-\eta(a*_Q b,c)
+a *_\beta b
+=(\eta^\sharp)^{-1}
+\bigl(c\mapsto\langle a,b,c\rangle_{0,3,\beta}\bigr),
+$$
+
+and the small quantum product is $a *_Q b=\sum_\beta Q^\beta(a *_\beta b)$. Equivalently,
+
+$$
+\eta(a *_Q b,c)
 =
 \sum_{\beta\in B}Q^\beta
 \langle a,b,c\rangle_{0,3,\beta}.
 $$
 
-Its associativity follows from separating gluing on $\overline{\mathcal M}_{0,4}$. Adding a formal point $t\in V$ gives the big quantum product and the genus-zero primary potential; the optional higher-background boundary relation yields WDVV and coefficientwise associativity in the implemented axiomatic layer.
+The two boundary presentations of $\overline{\mathcal M}_{0,4}$ give coefficientwise associativity after summing over $\beta_1+\beta_2=\beta$. Adding a formal point $t\in V$ gives the big quantum product and the genus-zero primary potential; arbitrary-background associativity uses the corresponding WDVV relation.
 
 The project proves cohomology-valued identities coefficientwise. Numerical invariants and the finite-free state space pass to the chosen Novikov completion, where fixed coefficients use only finite antidiagonals. An arbitrary cohomology family $B\to H$ is not identified with the algebraic tensor product $(B\to R)\otimes_R H$ without an additional target-finiteness or completed-tensor hypothesis.
 
@@ -328,19 +392,19 @@ $$
 \bar\psi_i=\operatorname{st}^*(\psi_i^{\mathrm{curve}}).
 $$
 
-They are not definitionally equal. Stabilization can contract a rational component, producing boundary corrections of the schematic form
+They are not definitionally equal. Let $D_i$ be the sum of boundary divisors on which the component carrying $i$ is stable as a positive-degree map but unstable after forgetting the map. Then
 
 $$
 \psi_i^{\mathrm{map}}
 =
-\bar\psi_i+\text{boundary terms}.
+\bar\psi_i+[D_i].
 $$
 
 Descendant invariants integrate powers of $\psi_i^{\mathrm{map}}$ against the virtual class. Ancestor invariants use powers of $\bar\psi_i$. The project keeps these classes in distinct interfaces. `DescendantAncestorComparison` records their weak residual difference, while the optional `StabilizationBoundaryComparison` exhibits that residual as a finite positive-degree rational-tail sum with explicit factorization and tail-operator data. Concrete stable-map geometry must still construct those hypotheses.
 
 ## 11. All-genus potentials
 
-With descendant variables $t_k^\alpha$, the genus-$g$ potential is schematically
+With descendant variables $t_k^\alpha$ and $\mathbf t(\psi)=\sum_{k,\alpha}t_k^\alpha\phi_\alpha\psi^k$, the conventional genus-$g$ descendant potential is
 
 $$
 \mathcal F_g
@@ -357,7 +421,13 @@ $$
 \mathcal F=\sum_{g\geq 0}\hbar^{g-1}\mathcal F_g.
 $$
 
-This expression requires a completion simultaneously controlling curve classes, insertion variables, descendant degree, and genus. It is bounded below by $\hbar^{-1}$ and therefore fits an ordinary Laurent-series genus expansion. Its exponential can contain arbitrarily negative powers of $\hbar$ and is deferred until a concrete theorem requires a filtered mixed completion.
+This expression requires a completion simultaneously controlling curve classes, insertion variables, descendant degree, and genus. It is bounded below by $\hbar^{-1}$ and therefore fits an ordinary Laurent-series genus expansion. The total descendant potential
+
+$$
+\mathcal D=\exp(\mathcal F)
+$$
+
+has powers $\hbar^{-n}$ for arbitrarily large $n$ and therefore requires a different filtered Fock-space completion.
 
 Once the coefficient ring is defined, geometric axioms become formal differential equations: string, dilaton, divisor, splitting, genus reduction, WDVV, topological recursion, and higher tautological relations.
 
@@ -428,7 +498,7 @@ The repository currently contains:
 - invariant-defined Novikov-valued stable-sector descendant and ancestor potentials, their residual identity, and Laurent total free energies;
 - a tail-derived two-point calibration with separately named symplectic and quantized-comparison hypotheses;
 - explicit unstable conventions, a full descendant potential, global string/dilaton laws, and the separately usable divisor law;
-- a self-contained point-target block identifying ancestors with psi intersections on stable curves and stating the all-genus DVV proposition as an additional hypothesis;
+- a self-contained point-target block identifying ancestors with psi-class intersections on stable curves and stating the all-genus DVV proposition as an additional hypothesis;
 - an abstract virtual-GW algebraic output carrier, not a construction from geometry.
 
 The next internal theorem boundary is the third-derivative characterization of the primary potential and a vector-field presentation of the global equations. The more important external boundary is a concrete stable-curve or stable-map geometric model instantiating the optional graph, stabilization, higher-boundary, or DVV hypotheses. The settled architectural choices are recorded in the design-decision ledger.
@@ -442,7 +512,7 @@ The project succeeds when the main endpoint is expressed by Lean structures and 
 3. construct Novikov-valued numerical invariants and quantum products from coefficientwise GW data;
 4. define primary, ancestor, and descendant invariants without conflating their cotangent-line classes;
 5. derive the standard equations from named abstract hypotheses;
-6. eventually construct the axiomatic GW theory from genuine virtual-geometric input, rather than merely repackaging already axiomatized fields;
+6. eventually construct the axiomatic GW theory from concrete virtual-geometric input, rather than merely repackaging already axiomatized fields;
 7. verify every implemented milestone with no `sorry` or `admit`.
 
 ## Further reading within the repository
