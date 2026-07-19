@@ -92,7 +92,7 @@ theorem splittings_zero (D : EffectiveCurveMonoid B) :
     exact D.mem_splittings beta₁ beta₂ beta
 
 /-- Natural-number degree is the basic positive locally finite curve monoid. -/
-noncomputable def nat : EffectiveCurveMonoid ℕ where
+def nat : EffectiveCurveMonoid ℕ where
   energy := AddMonoidHom.id ℕ
   energy_eq_zero_iff := by simp only [AddMonoidHom.id_apply, implies_true]
   finite_energy_le := fun d ↦ by

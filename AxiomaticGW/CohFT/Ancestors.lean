@@ -28,7 +28,7 @@ variable {R V : Type u} [CommRing R] [Algebra ℚ R]
   {C : StableCurveCohomology R}
 
 /-- Multiplication by a fixed stable-curve `psi` monomial. -/
-noncomputable def multiplyPsi (P : PsiClasses C)
+def multiplyPsi (P : PsiClasses C)
     (g : ℕ) (S : Type) [Fintype S] (h : StableArity g S)
     (k : S → ℕ) : C.H g S →ₗ[R] C.H g S where
   toFun x := x * P.monomial g S h k
@@ -37,7 +37,7 @@ noncomputable def multiplyPsi (P : PsiClasses C)
     simp only [Algebra.smul_def, mul_assoc, RingHom.id_apply]
 
 /-- Numerical ancestor correlator with cotangent powers `k`. -/
-noncomputable def ancestor (Ω : CohFT R V C) (P : PsiClasses C)
+def ancestor (Ω : CohFT R V C) (P : PsiClasses C)
     (I : StableCurveIntegration C) (g : ℕ) (S : Type) [Fintype S]
     (h : StableArity g S) (k : S → ℕ) :
     MultilinearMap R (fun _ : S ↦ V) R :=
@@ -81,7 +81,7 @@ namespace constantStableCurveCohomology
 variable (R : Type u) [CommRing R] [Algebra ℚ R]
 
 /-- The constant target has zero cotangent-line classes. -/
-noncomputable def psiClasses : PsiClasses (constantStableCurveCohomology R) where
+def psiClasses : PsiClasses (constantStableCurveCohomology R) where
   psi := fun _ _ _ _ _ ↦ 0
   psi_degree := by intros; exact Submodule.zero_mem _
   rename_psi := by intros; simp only [AlgEquiv.coe_refl, id_eq]
@@ -96,7 +96,7 @@ noncomputable def psiClasses : PsiClasses (constantStableCurveCohomology R) wher
 
 /-- Integration in the constant target is the identity exactly in complex
 dimension zero and is zero otherwise. -/
-noncomputable def integrate (g : ℕ) (S : Type) [Fintype S] : R →ₗ[R] R :=
+def integrate (g : ℕ) (S : Type) [Fintype S] : R →ₗ[R] R :=
   if StableArity.dimension g S = 0 then LinearMap.id else 0
 
 omit [Algebra ℚ R] in
@@ -105,7 +105,7 @@ theorem integrate_zero_fin_three : integrate R 0 (Fin 3) = LinearMap.id := by
   simp only [integrate, StableArity.dimension_zero_fin_three, ↓reduceIte]
 
 /-- Top-degree integration for the constant stable-curve target. -/
-noncomputable def integration :
+def integration :
     StableCurveIntegration (constantStableCurveCohomology R) where
   integrate := fun g S _ h ↦ integrate R g S
   integrate_of_degree_ne := by
@@ -129,7 +129,7 @@ noncomputable def integration :
 
 /-- Forgetful pushforward in the constant model is zero: its source has one
 more complex dimension while the model has no positive-degree classes. -/
-noncomputable def forgetfulPushforward :
+def forgetfulPushforward :
     ForgetfulPushforward (constantStableCurveCohomology R) (integration R) where
   push := fun _ _ _ _ ↦ 0
   push_rename := by intros; rfl
@@ -147,7 +147,7 @@ noncomputable def forgetfulPushforward :
 
 /-- The constant model has no rational-tail divisor and satisfies the
 forgetful `psi` formula trivially. -/
-noncomputable def psiForgetFormula : PsiForgetFormula (psiClasses R) where
+def psiForgetFormula : PsiForgetFormula (psiClasses R) where
   boundaryTail := fun _ _ _ _ _ ↦ 0
   boundaryTail_degree := by intros; exact Submodule.zero_mem _
   psi_eq_forget_add_boundary := by

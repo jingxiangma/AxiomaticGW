@@ -28,8 +28,6 @@ def NovikovSeries {B : Type*} [AddCancelCommMonoid B]
 
 namespace NovikovSeries
 
-noncomputable section
-
 variable {B R : Type*} [AddCancelCommMonoid B]
   (D : EffectiveCurveMonoid B)
 
@@ -94,10 +92,10 @@ theorem coeff_monomial_ne {beta gamma : B} (h : beta ≠ gamma) (a : R) :
   change (Pi.single gamma a : B → R) beta = 0
   exact Pi.single_eq_of_ne (M := fun _ : B ↦ R) h a
 
-instance : One (NovikovSeries D R) :=
+noncomputable instance : One (NovikovSeries D R) :=
   ⟨monomial D 0 1⟩
 
-instance : AddMonoidWithOne (NovikovSeries D R) where
+noncomputable instance : AddMonoidWithOne (NovikovSeries D R) where
   natCast n := monomial D 0 n
   natCast_zero := by
     simpa only [Nat.cast_zero] using map_zero (monomial D 0)
@@ -105,7 +103,7 @@ instance : AddMonoidWithOne (NovikovSeries D R) where
     rw [Nat.cast_succ]
     exact map_add (monomial D 0) (n : R) 1
 
-instance : Mul (NovikovSeries D R) :=
+noncomputable instance : Mul (NovikovSeries D R) :=
   ⟨fun f g beta ↦ ∑ split ∈ D.splittings beta,
     coeff D split.1 f * coeff D split.2 g⟩
 
@@ -228,7 +226,7 @@ protected theorem mul_assoc (f g h : NovikovSeries D R) :
   · intro a ha
     simp_all only [Finset.mem_sigma, D.mem_splittings, coeff_apply, mul_assoc]
 
-instance : Semiring (NovikovSeries D R) where
+noncomputable instance : Semiring (NovikovSeries D R) where
   zero_mul := NovikovSeries.zero_mul D
   mul_zero := NovikovSeries.mul_zero D
   one_mul := NovikovSeries.one_mul D
@@ -239,7 +237,7 @@ instance : Semiring (NovikovSeries D R) where
 
 end Semiring
 
-instance [CommSemiring R] : CommSemiring (NovikovSeries D R) where
+noncomputable instance [CommSemiring R] : CommSemiring (NovikovSeries D R) where
   mul_comm f g := by
     apply NovikovSeries.ext D
     intro beta
@@ -253,9 +251,9 @@ instance [CommSemiring R] : CommSemiring (NovikovSeries D R) where
       simp only [coeff_apply, Equiv.prodComm_apply, Prod.fst_swap,
         Prod.snd_swap, mul_comm]
 
-instance [Ring R] : Ring (NovikovSeries D R) where
+noncomputable instance [Ring R] : Ring (NovikovSeries D R) where
 
-instance [CommRing R] : CommRing (NovikovSeries D R) where
+noncomputable instance [CommRing R] : CommRing (NovikovSeries D R) where
 
 section CommSemiring
 
@@ -365,8 +363,6 @@ theorem ofMonoidAlgebra_injective : Function.Injective (ofMonoidAlgebra D (R := 
   exact congrFun h beta
 
 end CommSemiring
-
-end
 
 end NovikovSeries
 

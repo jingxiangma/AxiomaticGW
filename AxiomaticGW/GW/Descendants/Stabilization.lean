@@ -197,7 +197,7 @@ variable {R V B : Type u} [CommRing R] [Algebra ℚ R]
 
 /-- The two-point calibration built from the same tail operators that occur
 in the rational-tail correction. -/
-noncomputable def calibration (X : StabilizationBoundaryComparison P M) :
+def calibration (X : StabilizationBoundaryComparison P M) :
     TwoPointCalibration D Omega.pairing where
   coefficient := X.twoPointTailCoefficient
   coefficient_zero := X.twoPointTailCoefficient_zero
@@ -259,7 +259,7 @@ variable {B Vars R : Type*} [AddCancelCommMonoid B]
 noncomputable instance : Add (CompletedFockPotential D Vars R) :=
   ⟨fun F G ↦ ⟨fun n ↦ F.coefficient n + G.coefficient n⟩⟩
 
-noncomputable instance : Zero (CompletedFockPotential D Vars R) :=
+instance : Zero (CompletedFockPotential D Vars R) :=
   ⟨⟨fun _ ↦ 0⟩⟩
 
 noncomputable instance : SMul R (CompletedFockPotential D Vars R) :=

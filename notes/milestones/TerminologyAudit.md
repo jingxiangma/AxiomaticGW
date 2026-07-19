@@ -99,7 +99,7 @@ Public names use a standard literature term when the represented object has that
 | `TFT/Classification.lean` | `threePointFunction`, Frobenius product recovery, trace compatibility, and round-trip terminology standardized. |
 | `TFT/Correlator.lean` | Individual finite-labelled maps remain `correlator`, matching the literature. |
 | `TFT/Examples.lean` | Two-dimensional TFT regression examples retain their algebra-specific names. |
-| `TFT/FiniteProduct.lean` | Finite-labelled multilinear product is an implementation helper and retains its descriptive name. |
+| `TFT/FiniteProduct.lean` | Uses mathlib's `MultilinearMap.mkPiAlgebra` directly and records only the missing relabelling lemma. |
 | `TFT/Frobenius.lean` | The canonical construction is `CommFrobeniusAlgebra.toTwoDimensionalTFT`. |
 | `TFT/Sewing.lean` | Separating and nonseparating sewing terminology retained. |
 

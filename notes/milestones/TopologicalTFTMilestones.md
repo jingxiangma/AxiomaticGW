@@ -19,7 +19,7 @@ where $g\in\mathbb N$ and $S$ is an arbitrary finite label type. The use of fini
 | Milestone | Status | Verified content |
 | --- | --- | --- |
 | T0 | Complete | Scope, finite-label convention, and the distinction from a geometric bordism category are recorded. |
-| T1 | Complete | `TFT.finiteProduct`, evaluation, relabelling, empty-label, disjoint-union, and unit-insertion lemmas compile. |
+| T1 | Complete | `MultilinearMap.mkPiAlgebra` and the project relabelling lemma support the finite-labelled correlator calculations. |
 | T2 | Complete | `CommFrobeniusAlgebra.correlator` and its evaluation and relabelling theorems compile for arbitrary finite label types. |
 | T3 | Complete | Empty, one-, two-, and three-input normalizations, unit insertion, and handle recursion compile. |
 | T4 | Complete | Basis-free `contractTwo`, `selfContract`, and `pairContract` operations compile with explicit evaluation lemmas. |

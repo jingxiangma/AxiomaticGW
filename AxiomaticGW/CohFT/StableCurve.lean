@@ -55,11 +55,6 @@ instance {R : Type u} [CommRing R] (A : EvenGradedAlgebra R) :
     GradedAlgebra A.degree :=
   A.graded
 
-/-- Projection to codimension degree `d`. -/
-noncomputable def proj {R : Type u} [CommRing R] (A : EvenGradedAlgebra R)
-    (d : ℕ) : A →ₗ[R] A :=
-  GradedAlgebra.proj A.degree d
-
 /-- Projection onto the degree-zero subalgebra. The nonnegative grading makes
 the degree-zero component multiplicative. -/
 noncomputable def projZeroAlgHom {R : Type u} [CommRing R]

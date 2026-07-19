@@ -29,7 +29,7 @@ variable {R V B : Type u} [CommRing R] [Algebra ℚ R]
   {C : StableCurveCohomology R}
 
 /-- A curve-class-resolved ancestor class, formed with stable-curve `psi`. -/
-noncomputable def ancestorClass (Omega : GromovWittenTheory R V B D C)
+def ancestorClass (Omega : GromovWittenTheory R V B D C)
     (P : PsiClasses C) (g : ℕ) (S : Type) [Fintype S]
     (h : StableArity g S) (beta : B) (k : S → ℕ) :
     MultilinearMap R (fun _ : S ↦ V) (C.H g S) :=
@@ -125,7 +125,7 @@ theorem ancestorClass_total_degree (Omega : GromovWittenTheory R V B D C)
     exact Submodule.zero_mem _
 
 /-- Numerical ancestor invariant in a fixed curve class. -/
-noncomputable def ancestorInvariant (Omega : GromovWittenTheory R V B D C)
+def ancestorInvariant (Omega : GromovWittenTheory R V B D C)
     (P : PsiClasses C) (I : StableCurveIntegration C)
     (g : ℕ) (S : Type) [Fintype S] (h : StableArity g S)
     (beta : B) (k : S → ℕ) :
@@ -256,7 +256,7 @@ theorem descendant_degree (M : StableMapDescendants Omega)
   omega
 
 /-- Integrate a stabilized descendant class. -/
-noncomputable def invariant (M : StableMapDescendants Omega)
+def invariant (M : StableMapDescendants Omega)
     (I : StableCurveIntegration C) (g : ℕ) (S : Type) [Fintype S]
     (h : StableArity g S) (beta : B) (k : S → ℕ) :
     MultilinearMap R (fun _ : S ↦ V) R :=

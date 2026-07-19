@@ -32,34 +32,11 @@ namespace SymmetricPerfectPairing
 variable {R V : Type*} [CommRing R] [AddCommGroup V] [Module R V]
   [Module.Free R V] [Module.Finite R V]
 
-/-- A multilinear map with one input is canonically a linear map. This is
-implemented through currying and evaluation of the resulting empty
-multilinear map. -/
-noncomputable def finOneToLinear :
-    MultilinearMap R (fun _ : Fin 1 ↦ V) R →ₗ[R] (V →ₗ[R] R) :=
-  (LinearMap.compRight R
-    (MultilinearMap.constLinearEquivOfIsEmpty R R (fun _ : Fin 0 ↦ V) R).symm.toLinearMap).comp
-    (multilinearCurryLeftEquiv R (fun _ : Fin 1 ↦ V) R).toLinearMap
-
-omit [Module.Free R V] [Module.Finite R V] in
-/-- Evaluation of the one-input-to-linear-map identification. -/
-@[simp]
-theorem finOneToLinear_apply
-    (f : MultilinearMap R (fun _ : Fin 1 ↦ V) R) (x : V) :
-    finOneToLinear f x = f (fun _ ↦ x) := by
-  simp only [finOneToLinear, LinearMap.coe_comp, LinearEquiv.coe_coe,
-    Function.comp_apply, multilinearCurryLeftEquiv_apply,
-    LinearMap.compRight_apply, MultilinearMap.constLinearEquivOfIsEmpty_symm_apply,
-    MultilinearMap.curryLeft_apply]
-  congr 1
-  funext i
-  fin_cases i
-  rfl
-
 /-- A two-input multilinear map is canonically a bilinear form. -/
-noncomputable def finTwoToBilin :
+def finTwoToBilin :
     MultilinearMap R (fun _ : Fin 2 ↦ V) R →ₗ[R] LinearMap.BilinForm R V :=
-  (LinearMap.compRight R (finOneToLinear (R := R) (V := V))).comp
+  (LinearMap.compRight R
+      (MultilinearMap.ofSubsingletonₗ R R V R (0 : Fin 1)).symm.toLinearMap).comp
     (multilinearCurryLeftEquiv R (fun _ : Fin 2 ↦ V) R).toLinearMap
 
 omit [Module.Free R V] [Module.Finite R V] in
@@ -70,8 +47,8 @@ theorem finTwoToBilin_apply
     finTwoToBilin f x y = f (Fin.cons x fun _ ↦ y) := by
   simp only [finTwoToBilin, Nat.succ_eq_add_one, Nat.reduceAdd,
     LinearMap.coe_comp, LinearEquiv.coe_coe, Function.comp_apply,
-    multilinearCurryLeftEquiv_apply, LinearMap.compRight_apply,
-    finOneToLinear_apply, MultilinearMap.curryLeft_apply]
+    multilinearCurryLeftEquiv_apply, LinearMap.compRight_apply]
+  rfl
 
 /-- Contract a two-input multilinear map against the copairing. -/
 noncomputable def contractTwo (P : SymmetricPerfectPairing R V) :
@@ -118,34 +95,12 @@ section Target
 
 variable {W : Type*} [AddCommGroup W] [Module R W]
 
-/-- A one-input multilinear map with arbitrary target is canonically a linear
-map. This is the target-generic counterpart of `finOneToLinear`. -/
-noncomputable def finOneToLinearTarget :
-    MultilinearMap R (fun _ : Fin 1 ↦ V) W →ₗ[R] (V →ₗ[R] W) :=
-  (LinearMap.compRight R
-    (MultilinearMap.constLinearEquivOfIsEmpty R R (fun _ : Fin 0 ↦ V) W).symm.toLinearMap).comp
-    (multilinearCurryLeftEquiv R (fun _ : Fin 1 ↦ V) W).toLinearMap
-
-omit [Module.Free R V] [Module.Finite R V] in
-/-- Evaluation of the target-generic one-input identification. -/
-@[simp]
-theorem finOneToLinearTarget_apply
-    (f : MultilinearMap R (fun _ : Fin 1 ↦ V) W) (x : V) :
-    finOneToLinearTarget f x = f (fun _ ↦ x) := by
-  simp only [finOneToLinearTarget, LinearMap.coe_comp, LinearEquiv.coe_coe,
-    Function.comp_apply, multilinearCurryLeftEquiv_apply,
-    LinearMap.compRight_apply, MultilinearMap.constLinearEquivOfIsEmpty_symm_apply,
-    MultilinearMap.curryLeft_apply]
-  congr 1
-  funext i
-  fin_cases i
-  rfl
-
 /-- A two-input multilinear map with arbitrary target is canonically a
 curried bilinear map. -/
-noncomputable def finTwoToLinearTarget :
+def finTwoToLinearTarget :
     MultilinearMap R (fun _ : Fin 2 ↦ V) W →ₗ[R] (V →ₗ[R] V →ₗ[R] W) :=
-  (LinearMap.compRight R (finOneToLinearTarget (R := R) (V := V) (W := W))).comp
+  (LinearMap.compRight R
+      (MultilinearMap.ofSubsingletonₗ R R V W (0 : Fin 1)).symm.toLinearMap).comp
     (multilinearCurryLeftEquiv R (fun _ : Fin 2 ↦ V) W).toLinearMap
 
 omit [Module.Free R V] [Module.Finite R V] in
@@ -156,8 +111,8 @@ theorem finTwoToLinearTarget_apply
     finTwoToLinearTarget f x y = f (Fin.cons x fun _ ↦ y) := by
   simp only [finTwoToLinearTarget, Nat.succ_eq_add_one, Nat.reduceAdd,
     LinearMap.coe_comp, LinearEquiv.coe_coe, Function.comp_apply,
-    multilinearCurryLeftEquiv_apply, LinearMap.compRight_apply,
-    finOneToLinearTarget_apply, MultilinearMap.curryLeft_apply]
+    multilinearCurryLeftEquiv_apply, LinearMap.compRight_apply]
+  rfl
 
 /-- Contract a two-input multilinear map with arbitrary target against the
 copairing. -/

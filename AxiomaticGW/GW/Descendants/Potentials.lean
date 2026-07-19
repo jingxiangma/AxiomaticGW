@@ -33,7 +33,7 @@ def profileFactorial {Vars : Type*} (n : Vars →₀ ℕ) : ℕ :=
   n.prod fun _ multiplicity ↦ Nat.factorial multiplicity
 
 /-- The reciprocal multiplicity factorial in a rational coefficient ring. -/
-noncomputable def profileWeight (R : Type*) [CommRing R] [Algebra ℚ R]
+def profileWeight (R : Type*) [CommRing R] [Algebra ℚ R]
     {Vars : Type*} (n : Vars →₀ ℕ) : R :=
   algebraMap ℚ R ((profileFactorial n : ℚ)⁻¹)
 

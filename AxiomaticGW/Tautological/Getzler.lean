@@ -23,8 +23,6 @@ namespace AxiomaticGW
 
 open scoped BigOperators
 
-noncomputable section
-
 /-- The seven symmetric codimension-two cycles occurring in Getzler's
 relation on `Mbar(1,4)`. -/
 inductive GetzlerStratum
@@ -157,12 +155,7 @@ namespace GetzlerStrataEncoding
 variable {R : Type*} [CommRing R] [Algebra ℚ R]
   {C : StableCurveCohomology R}
 
-/-- Rational scalar restriction for the fixed Getzler target. -/
-@[reducible]
-def getzlerRealizationModule : Module ℚ (C.H 1 (Fin 4)) :=
-  strataRealizationModule C 1 (Fin 4)
-
-attribute [local instance] getzlerRealizationModule
+attribute [local instance] strataRealizationModule
 
 /-- If an encoded cycle realizes as the corresponding geometric cycle, the
 encoded Getzler combination lies in the realization kernel. -/
@@ -204,7 +197,5 @@ noncomputable def realizationFactor (E : GetzlerStrataEncoding)
     (E.knownRelations_le_realization_kernel A G hcycle)
 
 end GetzlerStrataEncoding
-
-end
 
 end AxiomaticGW

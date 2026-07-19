@@ -174,7 +174,7 @@ def oddDoubleFactorial (n : ℕ) : ℕ :=
   ∏ j ∈ Finset.range (n + 1), (2 * j + 1)
 
 /-- Coefficient for merging `tau_(k+1)` with `tau_d` in the DVV recursion. -/
-noncomputable def dvvMergeWeight (k d : ℕ) : ℚ :=
+def dvvMergeWeight (k d : ℕ) : ℚ :=
   (oddDoubleFactorial (k + d) : ℚ) /
     if d = 0 then 1 else oddDoubleFactorial (d - 1)
 

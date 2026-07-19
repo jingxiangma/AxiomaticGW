@@ -53,7 +53,7 @@ instance gradedMonoid : SetLike.GradedMonoid (constantDegree R) where
       simp only [constantDegree, Nat.add_eq_zero_iff, zero_mul, zero_mem]
 
 /-- The explicit homogeneous decomposition for the constant grading. -/
-noncomputable def decompose : R →+ ⨁ d, constantDegree R d where
+def decompose : R →+ ⨁ d, constantDegree R d where
   toFun x := (DirectSum.of (fun d ↦ ↥(constantDegree R d)) 0)
     ⟨x, by simp only [constantDegree, ↓reduceIte, Submodule.mem_top]⟩
   map_zero' := by
@@ -63,7 +63,7 @@ noncomputable def decompose : R →+ ⨁ d, constantDegree R d where
       ⟨x, by simp only [constantDegree, ↓reduceIte, Submodule.mem_top]⟩
       ⟨y, by simp only [constantDegree, ↓reduceIte, Submodule.mem_top]⟩
 
-noncomputable instance decomposition : DirectSum.Decomposition (constantDegree R) where
+instance decomposition : DirectSum.Decomposition (constantDegree R) where
   decompose' := decompose R
   left_inv x := by
     simp only [decompose, AddMonoidHom.coe_mk, ZeroHom.coe_mk,
@@ -89,7 +89,7 @@ noncomputable instance decomposition : DirectSum.Decomposition (constantDegree R
         change (decompose R) ((DirectSum.coeAddMonoidHom (constantDegree R)) (x + y)) = x + y
         rw [map_add, map_add, hx, hy]
 
-noncomputable instance gradedAlgebra : GradedAlgebra (constantDegree R) where
+instance gradedAlgebra : GradedAlgebra (constantDegree R) where
   __ := gradedMonoid R
   __ := decomposition R
 
@@ -97,7 +97,7 @@ end constantDegree
 
 /-- The coefficient ring as an even graded algebra concentrated in degree
 zero. -/
-noncomputable abbrev constantEvenGradedAlgebra (R : Type*) [CommRing R] :
+abbrev constantEvenGradedAlgebra (R : Type*) [CommRing R] :
     EvenGradedAlgebra R where
   carrier := R
   degree := constantDegree R
@@ -121,7 +121,7 @@ private theorem constantSeparatingDegree (R : Type*) [CommRing R]
       (constantEvenGradedAlgebra R) d).zero_mem
 
 /-- The constant stable-curve cohomology system. -/
-noncomputable abbrev constantStableCurveCohomology (R : Type*) [CommRing R]
+abbrev constantStableCurveCohomology (R : Type*) [CommRing R]
     [Algebra ℚ R] : StableCurveCohomology R where
   H := fun _ _ _ ↦ constantEvenGradedAlgebra R
   degree_eq_bot_of_dimension_lt := by
@@ -169,13 +169,13 @@ namespace constantStableCurveCohomology
 variable (R : Type*) [CommRing R] [Algebra ℚ R]
 
 /-- The constant system has the expected genus-zero point geometry. -/
-noncomputable def genusZeroGeometry :
+def genusZeroGeometry :
     GenusZeroGeometry (constantStableCurveCohomology R) where
   mbarZeroThree := AlgEquiv.refl
   mbarZeroFourBoundary := rfl
 
 /-- The constant system is connected in degree zero. -/
-noncomputable def connectedDegreeZero :
+def connectedDegreeZero :
     ConnectedDegreeZero (constantStableCurveCohomology R) where
   degreeZeroEquiv := fun _ _ _ _ ↦ by
     change ↥(constantDegree R 0) ≃ₐ[R] R
@@ -255,7 +255,7 @@ variable {R V : Type*} [CommRing R] [Algebra ℚ R]
 
 /-- Regard a scalar-valued topological CohFT as a full CohFT over the constant
 degree-zero stable-curve cohomology system. -/
-noncomputable def toConstantCohFT (T : TopologicalCohFT R V) :
+def toConstantCohFT (T : TopologicalCohFT R V) :
     CohFT R V (constantStableCurveCohomology R) where
   pairing := T.pairing
   unit := T.unit
@@ -297,7 +297,7 @@ variable {R V : Type*} [CommRing R] [Algebra ℚ R]
 
 /-- A full CohFT over the constant degree-zero target is a scalar-valued
 topological CohFT. -/
-noncomputable def toTopologicalCohFT
+def toTopologicalCohFT
     (Ω : CohFT R V (constantStableCurveCohomology R)) :
     TopologicalCohFT R V where
   pairing := Ω.pairing

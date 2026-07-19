@@ -62,14 +62,15 @@ variable {R V : Type*} [CommRing R] [AddCommGroup V] [Module R V]
 
 /-- The genus-zero one-point correlator of a theory, used below as its
 candidate Frobenius counit. -/
-noncomputable def counit (T : TwoDimensionalTFT R V) : V →ₗ[R] R :=
-  SymmetricPerfectPairing.finOneToLinear (T.correlator 0 (Fin 1))
+def counit (T : TwoDimensionalTFT R V) : V →ₗ[R] R :=
+  (MultilinearMap.ofSubsingletonₗ R R V R (0 : Fin 1)).symm.toLinearMap
+    (T.correlator 0 (Fin 1))
 
 /-- Evaluation of the counit extracted from the one-point correlator. -/
 @[simp]
 theorem counit_apply (T : TwoDimensionalTFT R V) (x : V) :
     T.counit x = T.correlator 0 (Fin 1) (fun _ ↦ x) := by
-  exact SymmetricPerfectPairing.finOneToLinear_apply _ _
+  rfl
 
 end TwoDimensionalTFT
 

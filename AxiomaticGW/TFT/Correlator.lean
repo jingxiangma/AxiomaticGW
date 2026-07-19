@@ -36,7 +36,7 @@ commutative Frobenius algebra. -/
 noncomputable def correlator (F : CommFrobeniusAlgebra R A) (g : ℕ)
     (S : Type*) [Fintype S] : MultilinearMap R (fun _ : S ↦ A) R :=
   (F.counit.comp (LinearMap.mulRight R (F.handleElement ^ g))).compMultilinearMap
-    (finiteProduct R A S)
+    (MultilinearMap.mkPiAlgebra R S A)
 
 /-- Evaluation formula for the Frobenius correlator. -/
 @[simp]
@@ -49,7 +49,7 @@ theorem correlator_domDomCongr (F : CommFrobeniusAlgebra R A) (g : ℕ)
     {S T : Type*} [Fintype S] [Fintype T] (e : S ≃ T) :
     (F.correlator g S).domDomCongr e = F.correlator g T := by
   simp only [correlator, LinearMap.compMultilinearMap_domDomCongr,
-    TFT.finiteProduct_domDomCongr]
+    TFT.mkPiAlgebra_domDomCongr]
 
 /-- The correlator with no inputs is the partition function
 `ε(E^g)`. -/

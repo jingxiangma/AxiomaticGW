@@ -31,14 +31,14 @@ variable {R V : Type*} [CommRing R] [Algebra ℚ R]
 
 /-- The scalar three-point correlator supplied by the point geometry of
 `Mbar(0,3)`. -/
-noncomputable def threePoint (T : GenusZeroCohFT R V C)
+def threePoint (T : GenusZeroCohFT R V C)
     (G : GenusZeroGeometry C) :
     MultilinearMap R (fun _ : Fin 3 ↦ V) R :=
   G.mbarZeroThree.toLinearMap.compMultilinearMap
     (T.omega (Fin 3) StableArity.zero_fin_three)
 
 /-- The scalar three-point correlator, curried into three linear inputs. -/
-noncomputable def threePointFunction (T : GenusZeroCohFT R V C)
+def threePointFunction (T : GenusZeroCohFT R V C)
     (G : GenusZeroGeometry C) : V →ₗ[R] V →ₗ[R] V →ₗ[R] R :=
   (LinearMap.compRight R
     (SymmetricPerfectPairing.finTwoToBilin (R := R) (V := V))).comp
@@ -246,7 +246,7 @@ theorem pairContractTarget_wdvv (T : GenusZeroCohFT R V C)
     (congrArg (C.separating 0 0 (Fin 2) (Fin 2)
       StableArity.zero_option_fin_two StableArity.zero_option_fin_two) hrel)
 
-private noncomputable def threePointScalar (G : GenusZeroGeometry C) :
+private def threePointScalar (G : GenusZeroGeometry C) :
     C.H 0 (Option (Fin 2)) →ₐ[R] R :=
   G.mbarZeroThree.toAlgHom.comp
     (C.rename 0 (Option (Fin 2)) (Fin 3) StableArity.zero_option_fin_two

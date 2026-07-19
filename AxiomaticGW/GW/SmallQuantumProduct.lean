@@ -34,7 +34,7 @@ private def optionFinTwoEquivFinThree : Option (Fin 2) ≃ Fin 3 :=
   (finSuccEquiv 2).symm
 
 /-- The scalar genus-zero three-point class in curve class `beta`. -/
-noncomputable def threePoint (Omega : GromovWittenTheory R V B D C)
+def threePoint (Omega : GromovWittenTheory R V B D C)
     (G : GenusZeroGeometry C) (beta : B) :
     MultilinearMap R (fun _ : Fin 3 ↦ V) R :=
   G.mbarZeroThree.toLinearMap.compMultilinearMap
@@ -305,7 +305,7 @@ theorem smallQuantumProduct_unit
   · rw [if_neg hbeta, Omega.smallQuantumProduct_apply,
       Omega.unit_smallQuantumProductCoefficient_of_ne G hbeta]
 
-private noncomputable def threePointScalar (G : GenusZeroGeometry C) :
+private def threePointScalar (G : GenusZeroGeometry C) :
     C.H 0 (Option (Fin 2)) →ₐ[R] R :=
   G.mbarZeroThree.toAlgHom.comp
     (C.rename 0 (Option (Fin 2)) (Fin 3) StableArity.zero_option_fin_two

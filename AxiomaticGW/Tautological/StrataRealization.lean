@@ -51,12 +51,7 @@ namespace StrataRealization
 variable {R : Type u} [CommRing R] [Algebra ℚ R]
   {C : StableCurveCohomology R} {g : ℕ} {S : Type} [Fintype S]
 
-/-- The same scalar restriction in the realization namespace. -/
-@[reducible]
-def strataRealizationModule' : Module ℚ (C.H g S) :=
-  Module.compHom (C.H g S) (algebraMap ℚ R)
-
-attribute [local instance] strataRealizationModule'
+attribute [local instance] strataRealizationModule
 
 /-- Relations invisible in the chosen cohomology realization. -/
 noncomputable def kernel (A : StrataRealization C g S) :

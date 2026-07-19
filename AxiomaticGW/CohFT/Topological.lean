@@ -66,7 +66,7 @@ variable {R V : Type*} [CommRing R] [AddCommGroup V] [Module R V]
 
 /-- Restrict a two-dimensional TFT to its stable arities,
 producing a scalar-valued topological CohFT. -/
-noncomputable def toTopologicalCohFT (T : TwoDimensionalTFT R V) :
+def toTopologicalCohFT (T : TwoDimensionalTFT R V) :
     TopologicalCohFT R V where
   pairing := T.pairing
   unit := T.unit

@@ -118,7 +118,7 @@ structure ForgetfulPushforward {R : Type u} [CommRing R] [Algebra ℚ R]
 namespace PsiClasses
 
 /-- Product of powers of the marked cotangent-line classes. -/
-noncomputable def monomial {R : Type u} [CommRing R] [Algebra ℚ R]
+def monomial {R : Type u} [CommRing R] [Algebra ℚ R]
     {C : StableCurveCohomology R} (P : PsiClasses C)
     (g : ℕ) (S : Type) [Fintype S] (h : StableArity g S)
     (k : S → ℕ) : C.H g S :=
@@ -163,7 +163,7 @@ theorem rename_monomial {R : Type u} [CommRing R] [Algebra ℚ R]
     e.prod_comp (fun t ↦ P.psi g T hT t ^ k (e.symm t))
 
 /-- Kappa classes defined by forgetting an additional marking. -/
-noncomputable def kappa {R : Type u} [CommRing R] [Algebra ℚ R]
+def kappa {R : Type u} [CommRing R] [Algebra ℚ R]
     {C : StableCurveCohomology R} (P : PsiClasses C)
     {I : StableCurveIntegration C} (F : ForgetfulPushforward C I)
     (g : ℕ) (S : Type) [Fintype S] (h : StableArity g S)

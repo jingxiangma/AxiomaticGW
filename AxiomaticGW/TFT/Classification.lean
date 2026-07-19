@@ -32,7 +32,7 @@ variable {R V : Type*} [CommRing R] [AddCommGroup V] [Module R V]
   [Module.Free R V] [Module.Finite R V]
 
 /-- The three-point correlator, curried into three successive linear maps. -/
-noncomputable def threePointFunction (T : TwoDimensionalTFT R V) :
+def threePointFunction (T : TwoDimensionalTFT R V) :
     V →ₗ[R] V →ₗ[R] V →ₗ[R] R :=
   (LinearMap.compRight R
     (SymmetricPerfectPairing.finTwoToBilin (R := R) (V := V))).comp
@@ -89,7 +89,7 @@ def IsTraceCompatible (T : TwoDimensionalTFT R A) : Prop :=
 
 /-- Recover a Frobenius algebra on an existing commutative algebra when its
 multiplication is compatible with the correlator counit and metric. -/
-noncomputable def toCommFrobeniusAlgebra
+def toCommFrobeniusAlgebra
     (T : TwoDimensionalTFT R A) (h : T.IsTraceCompatible) :
     CommFrobeniusAlgebra R A where
   counit := T.counit
@@ -115,8 +115,8 @@ theorem toTwoDimensionalTFT_counit
     (F : CommFrobeniusAlgebra R A) :
     F.toTwoDimensionalTFT.counit = F.counit := by
   ext x
-  simp only [TwoDimensionalTFT.counit, toTwoDimensionalTFT,
-    SymmetricPerfectPairing.finOneToLinear_apply, correlator_apply,
+  change F.correlator 0 (Fin 1) (fun _ ↦ x) = F.counit x
+  simp only [correlator_apply,
     Finset.univ_unique, Fin.default_eq_zero, Fin.isValue, Finset.prod_const,
     Finset.card_singleton, pow_one, pow_zero, mul_one]
 
