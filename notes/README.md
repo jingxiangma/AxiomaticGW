@@ -14,6 +14,15 @@ The [`mathematics`](mathematics/) folder contains self-contained mathematical ex
 - [The mathematics and goals of AxiomaticGW](mathematics/ProjectMathematicsAndGoals.md)
 - [The point target and stable-curve intersection theory](mathematics/PointTargetAndStableCurves.md)
 
+## Formalization reviews
+
+The [`reviews`](reviews/) folder contains targeted audits of existing Lean modules and test infrastructure. These records distinguish mathematical findings, API checks, validation evidence, and remaining uncertainty; accepted project-wide status remains in the milestone records.
+
+- [Review index](reviews/README.md)
+- [Linear and Frobenius review guide](reviews/LinearFrobeniusReviewGuide.md)
+- [Symmetric perfect-pairing review](reviews/Linear/PerfectPairing.md)
+- [Basic regression-test suite review](reviews/TestSuite/Basic.md)
+
 ## Milestones
 
 The [`milestones`](milestones/) folder contains implementation roadmaps, completion criteria, dependency order, and the status of the Lean development. Milestone documents should link to the corresponding mathematical notes rather than repeat their full exposition.
