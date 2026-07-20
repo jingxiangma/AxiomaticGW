@@ -12,6 +12,7 @@ The [`mathematics`](mathematics/) folder contains self-contained mathematical ex
 
 - [Mathematics notes for M1--M10](mathematics/README.md)
 - [The mathematics and goals of AxiomaticGW](mathematics/ProjectMathematicsAndGoals.md)
+- [Core structure dependencies](mathematics/CoreStructureDependencies.md)
 - [The point target and stable-curve intersection theory](mathematics/PointTargetAndStableCurves.md)
 
 ## Formalization reviews

@@ -4,6 +4,13 @@ This file is the canonical bridge between the mathematical exposition and the Le
 
 The [implementation progress record](milestones/ImplementationProgress.md) contains dated scope, commit provenance, and verification evidence. Generated API documentation remains the declaration-level reference; this map explains where the mathematics enters that API.
 
+## Cross-layer structure dependencies
+
+- The formula-level input--output relationships among commutative Frobenius algebras, two-dimensional TFTs, CohFTs, and curve-class-resolved axiomatic GW theories are summarized in [Core structure dependencies](mathematics/CoreStructureDependencies.md).
+- Frobenius-to-TFT construction and recovery correspond principally to [`TFT/Correlator.lean`](../AxiomaticGW/TFT/Correlator.lean), [`TFT/Frobenius.lean`](../AxiomaticGW/TFT/Frobenius.lean), and [`TFT/Classification.lean`](../AxiomaticGW/TFT/Classification.lean).
+- The constant topological-CohFT construction, degree-zero topological part, and genus-zero Frobenius extraction correspond principally to [`CohFT/Topological.lean`](../AxiomaticGW/CohFT/Topological.lean), [`CohFT/TopologicalPart.lean`](../AxiomaticGW/CohFT/TopologicalPart.lean), and [`CohFT/Frobenius.lean`](../AxiomaticGW/CohFT/Frobenius.lean).
+- The beta-resolved refinement and conditional Novikov recombination correspond principally to [`GW/Basic.lean`](../AxiomaticGW/GW/Basic.lean) and [`Coefficients/Novikov.lean`](../AxiomaticGW/Coefficients/Novikov.lean). The latter supplies coefficient convolution; no general bundled conversion from `GromovWittenTheory` to a Novikov-valued `CohFT` is claimed.
+
 ## M1. Perfect pairings and Frobenius algebras
 
 **Mathematical note:** [M1. Perfect pairings and Frobenius algebras](mathematics/M01PerfectPairingsAndFrobeniusAlgebras.md).

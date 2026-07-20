@@ -4,6 +4,8 @@ This folder contains the mathematical background for the formalization. A note h
 
 For a single self-contained introduction, see [The mathematics and goals of AxiomaticGW](ProjectMathematicsAndGoals.md).
 
+For a formula-level input--output account of how the principal structures relate, see [Core structure dependencies: Frobenius algebra, TFT, CohFT, and axiomatic GW theory](CoreStructureDependencies.md).
+
 The numbering agrees with the phases in the [project-wide milestone roadmap](../milestones/AxiomaticGWRoadmap.md).
 
 | Phase | Mathematical note |
