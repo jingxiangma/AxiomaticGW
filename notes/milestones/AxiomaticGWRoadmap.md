@@ -8,6 +8,8 @@ The [mathematics-to-Lean map](../MathematicsToLean.md) records the correspondenc
 
 The intended endpoint is an all-genus, curve-class-resolved axiomatic Gromov--Witten theory with primary classes, descendants, ancestors, Novikov coefficients, genus potentials, and total free energies.
 
+The [GW reconstruction plan](GWReconstructionPlan.md) extends this foundation toward a proof-producing research engine integrated with Sage/admcycles. Its fixed first applications are genus-two descendant reconstruction for the projective plane, its blowup at one point, and its blowup at two distinct points. Stages R0--R8 have separate acceptance gates; they are planned work, not completed M0--M10 results.
+
 ## M0. Project foundations
 
 Set up the Lean project, source layout, documentation conventions, tests, and local Git workflow.
@@ -95,7 +97,7 @@ Introduce stable-map `psi`-classes separately from stable-curve `psi`-classes. D
 
 Define genus expansions, descendant and ancestor genus potentials, and their total free energies. Prove string, dilaton, divisor, splitting, genus-reduction, and tautological relations from the corresponding abstract axioms. The exponential total potential is deferred until a theorem requires a mixed completion supporting its unbounded negative `hbar` powers.
 
-**Status:** Complete for stable potentials and explicit unstable extensions. Stable-sector descendant and ancestor potentials, formal derivatives, Laurent total free energies, and the residual identity are implemented. `UnstableDescendantConventions` supplies the missing arities without asserting geometric vanishing, and stable plus exceptional recurrences derive global correlator-level string and dilaton equations and `fullDescendantPotential`. A vector-field PDE presentation and unrestricted exponential total potential remain deliberately deferred.
+**Status:** Stable potentials are implemented; the explicit unstable extension requires a correctness repair. Stable-sector descendant and ancestor potentials, formal derivatives, Laurent total free energies, and the residual identity are implemented. The 2026-10-01 status audit found that the current `UnstableDescendantConventions.string_unstable` forces the pairing to vanish under normalized three-point integration, while `dilaton_unstable` forces the exceptional genus-one one-point value to zero and uses truncated natural subtraction at unstable arities. The conditional `global_string`, `global_dilaton`, and `fullDescendantPotential` declarations compile, but their existence does not establish a valid normalized all-arity theory. [R0 of the reconstruction plan](GWReconstructionPlan.md#r0-correct-normalization-and-unstable-sectors) is the next correctness gate. A vector-field PDE presentation and unrestricted exponential total potential remain deferred.
 
 ## M10. Geometric realization
 

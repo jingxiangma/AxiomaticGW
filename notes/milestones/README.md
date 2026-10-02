@@ -4,6 +4,7 @@ This folder tracks the implementation plan and its current status. Each mileston
 
 - [Topological field theory milestones](TopologicalTFTMilestones.md)
 - [Roadmap to axiomatic Gromov--Witten theory](AxiomaticGWRoadmap.md)
+- [Plan for a proof-producing GW reconstruction engine](GWReconstructionPlan.md)
 - [Mathematics-to-Lean map](../MathematicsToLean.md)
 - [Implementation progress and verification record](ImplementationProgress.md)
 - [Mathlib dependency and project-ownership inventory](MathlibInventory.md)
