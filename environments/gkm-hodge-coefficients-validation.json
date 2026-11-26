@@ -1,0 +1,804 @@
+{
+  "accepted_audit_declarations": 57,
+  "allowed_axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "corruption_and_preservation_tests": [
+    "Each of 108 coefficient mutations changes the emitted source.",
+    "Changed ordered tangent/cone values are emitted into changed proof obligations.",
+    "Malformed finite labels, target/curve/marking metadata, missing components, wrong pair indices and bidegrees are rejected.",
+    "Zero denominators and duplicate JSON keys are rejected.",
+    "Changed helper hash is rejected before executing that helper.",
+    "All output source/test files regenerate byte-for-byte from an unrelated working directory.",
+    "Positive coefficient changes are retained in the full class; no class equality is inferred from projection.",
+    "Existing or colliding output paths are rejected."
+  ],
+  "data_scope": {
+    "actual_fractions": 108,
+    "all_complete_curve_coordinates_retained": true,
+    "both_ordered_tangent_characters_retained": true,
+    "component_references": 540,
+    "denominator_nonvanishing": "All 108 exact denominators checked; evaluation only witnesses nonvanishing.",
+    "embedded_raw_equals_integrated_raw": true,
+    "existing_raw_components": 45,
+    "field": "Existing FractionRing (MvPolynomial (Fin 2) QQ)",
+    "fixed_points": [
+      3,
+      4,
+      5
+    ],
+    "ordered_hodge_pairs_per_fixed_point": 9,
+    "positive_components": "Every coefficient and every raw component remains in candidateClass.",
+    "targets": [
+      "P2",
+      "F1",
+      "Bl2P2"
+    ]
+  },
+  "generator": {
+    "path": "/tmp/gw_hodge_coefficients_record_20261005/record_hodge_coefficient_validation.py",
+    "sha256": "cf265c13b8c46237359b566af0a159377caa5510cdf02ce45a23d288e58c89a3"
+  },
+  "historical_runs": [
+    {
+      "accepted_as_integrated_validation": false,
+      "log": {
+        "path": "/tmp/gw_hodge_c00_public_v1_20261005.log",
+        "sha256": "23a930e21bafe673473cb942713b08c2580768c4415ee30738e173272fb79196",
+        "text": "{\"start\": \"AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroCoefficientReplay.lean\", \"command\": [\"/Users/jma/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lean\", \"--memory=2048\", \"--root=/private/tmp/gw_blowup_public_probe_20261004\", \"-o\", \"/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroCoefficientReplay.olean\", \"/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroCoefficientReplay.lean\"]}\n/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroCoefficientReplay.lean:86:37: error: unsolved goals\ncase \u00ab0\u00bb\n\u22a2 1 \u2260 0\n\ncase \u00ab1\u00bb\n\u22a2 1 \u2260 0\n\ncase \u00ab2\u00bb\n\u22a2 1 \u2260 0\n/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroCoefficientReplay.lean:120:49: error: unsolved goals\ncase \u00ab0\u00bb\n\u22a2 1 \u2260 0\n\ncase \u00ab1\u00bb\n\u22a2 1 \u2260 0\n\ncase \u00ab2\u00bb\n\u22a2 1 \u2260 0\n/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroCoefficientReplay.lean:152:38: error: unsolved goals\ncase \u00ab0\u00bb\n\u22a2 1 \u2260 0\n\ncase \u00ab1\u00bb\n\u22a2 1 \u2260 0\n\ncase \u00ab2\u00bb\n\u22a2 1 \u2260 0\n/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroCoefficientReplay.lean:283:37: error: unsolved goals\ncase \u00ab0\u00bb\n\u22a2 1 \u2260 0\n\ncase \u00ab1\u00bb\n\u22a2 1 \u2260 0\n\ncase \u00ab2\u00bb\n\u22a2 1 \u2260 0\n\ncase \u00ab3\u00bb\n\u22a2 1 \u2260 0\n/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroCoefficientReplay.lean:321:49: error: unsolved goals\ncase \u00ab0\u00bb\n\u22a2 1 \u2260 0\n\ncase \u00ab1\u00bb\n\u22a2 1 \u2260 0\n\ncase \u00ab2\u00bb\n\u22a2 1 \u2260 0\n\ncase \u00ab3\u00bb\n\u22a2 1 \u2260 0\n/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroCoefficientReplay.lean:355:38: error: unsolved goals\ncase \u00ab0\u00bb\n\u22a2 1 \u2260 0\n\ncase \u00ab1\u00bb\n\u22a2 1 \u2260 0\n\ncase \u00ab2\u00bb\n\u22a2 1 \u2260 0\n\ncase \u00ab3\u00bb\n\u22a2 1 \u2260 0\n/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroCoefficientReplay.lean:495:37: error: unsolved goals\ncase \u00ab0\u00bb\n\u22a2 1 \u2260 0\n\ncase \u00ab1\u00bb\n\u22a2 1 \u2260 0\n\ncase \u00ab2\u00bb\n\u22a2 1 \u2260 0\n\ncase \u00ab3\u00bb\n\u22a2 1 \u2260 0\n\ncase \u00ab4\u00bb\n\u22a2 1 \u2260 0\n/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroCoefficientReplay.lean:535:49: error: unsolved goals\ncase \u00ab0\u00bb\n\u22a2 1 \u2260 0\n\ncase \u00ab1\u00bb\n\u22a2 1 \u2260 0\n\ncase \u00ab2\u00bb\n\u22a2 1 \u2260 0\n\ncase \u00ab3\u00bb\n\u22a2 1 \u2260 0\n\ncase \u00ab4\u00bb\n\u22a2 1 \u2260 0\n/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroCoefficientReplay.lean:571:38: error: unsolved goals\ncase \u00ab0\u00bb\n\u22a2 1 \u2260 0\n\ncase \u00ab1\u00bb\n\u22a2 1 \u2260 0\n\ncase \u00ab2\u00bb\n\u22a2 1 \u2260 0\n\ncase \u00ab3\u00bb\n\u22a2 1 \u2260 0\n\ncase \u00ab4\u00bb\n\u22a2 1 \u2260 0\n{\"status\": \"public_module_failed\", \"manifest\": \"/private/tmp/gw_hodge_c00_replay_20261005/public-probe-manifest.json\", \"commands\": [{\"command\": [\"/Users/jma/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lean\", \"--memory=2048\", \"--root=/private/tmp/gw_blowup_public_probe_20261004\", \"-o\", \"/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroCoefficientReplay.olean\", \"/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroCoefficientReplay.lean\"], \"exit_code\": 1, \"elapsed_seconds\": 4.551}], \"elapsed_seconds\": 4.551, \"isolated_root\": \"/private/tmp/gw_blowup_public_probe_20261004\", \"scope\": \"Exact source modules and separate public imports; no repository edits\"}\n"
+      },
+      "metadata": {
+        "children_ru_maxrss_raw": 1201946624,
+        "children_ru_maxrss_unit": "bytes",
+        "command": [
+          "python3",
+          "/tmp/gw_blowup_public_probe_runner_20261004.py",
+          "/tmp/gw_hodge_c00_replay_20261005/public-probe-manifest.json"
+        ],
+        "elapsed_seconds": 5.546,
+        "exit_code": 1,
+        "log": "/tmp/gw_hodge_c00_public_v1_20261005.log",
+        "resource_note": "Wrapper child usage may omit descendants on interrupted runs.",
+        "status": "failed"
+      },
+      "metadata_source": {
+        "path": "/tmp/gw_hodge_c00_public_v1_20261005.json",
+        "sha256": "74ea213d8347302f03ca80985cacb364699507dccdfe5f7c8dfa5c26c87d860e"
+      }
+    },
+    {
+      "accepted_as_integrated_validation": false,
+      "log": {
+        "path": "/tmp/gw_hodge_full_coefficients_public_v1_20261005.log",
+        "sha256": "151a348759d91dd8b86027da18c326b39516580810201ac4d38436d7bd7f8367",
+        "text": "{\"start\": \"AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroFullCoefficientReplay.lean\", \"command\": [\"/Users/jma/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lean\", \"--memory=2048\", \"--root=/private/tmp/gw_blowup_public_probe_20261004\", \"-o\", \"/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroFullCoefficientReplay.olean\", \"/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroFullCoefficientReplay.lean\"]}\n/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroFullCoefficientReplay.lean:151:12: warning: this tactic is never executed\n\nNote: This linter can be disabled with `set_option linter.unreachableTactic false`\n/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroFullCoefficientReplay.lean:151:2: warning: 'all_goals exact one_ne_zero' tactic does nothing\n\nNote: This linter can be disabled with `set_option linter.unusedTactic false`\n/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroFullCoefficientReplay.lean:336:12: warning: this tactic is never executed\n\nNote: This linter can be disabled with `set_option linter.unreachableTactic false`\n/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroFullCoefficientReplay.lean:336:2: warning: 'all_goals exact one_ne_zero' tactic does nothing\n\nNote: This linter can be disabled with `set_option linter.unusedTactic false`\n/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroFullCoefficientReplay.lean:547:12: warning: this tactic is never executed\n\nNote: This linter can be disabled with `set_option linter.unreachableTactic false`\n/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroFullCoefficientReplay.lean:547:2: warning: 'all_goals exact one_ne_zero' tactic does nothing\n\nNote: This linter can be disabled with `set_option linter.unusedTactic false`\n{\"start\": \"AxiomaticGWTest/GKM/HodgeDegreeZeroFullCoefficientReplay.lean\", \"command\": [\"/Users/jma/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lean\", \"--memory=2048\", \"--root=/private/tmp/gw_blowup_public_probe_20261004\", \"-o\", \"/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGWTest/GKM/HodgeDegreeZeroFullCoefficientReplay.olean\", \"/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGWTest/GKM/HodgeDegreeZeroFullCoefficientReplay.lean\"]}\n'AxiomaticGW.GKM.HodgeDegreeZeroFullCoefficientReplay.Plane.denominator_ne_zero' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeZeroFullCoefficientReplay.Plane.coefficients_zero_zero' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeZeroFullCoefficientReplay.Plane.coefficients_zero_zero_eq_eulerUnits' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeZeroFullCoefficientReplay.Plane.scalar_candidateClass_eq_tft' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeZeroFullCoefficientReplay.OneBlowup.denominator_ne_zero' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeZeroFullCoefficientReplay.OneBlowup.coefficients_zero_zero' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeZeroFullCoefficientReplay.OneBlowup.coefficients_zero_zero_eq_eulerUnits' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeZeroFullCoefficientReplay.OneBlowup.scalar_candidateClass_eq_tft' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeZeroFullCoefficientReplay.TwoBlowups.denominator_ne_zero' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeZeroFullCoefficientReplay.TwoBlowups.coefficients_zero_zero' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeZeroFullCoefficientReplay.TwoBlowups.coefficients_zero_zero_eq_eulerUnits' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeZeroFullCoefficientReplay.TwoBlowups.scalar_candidateClass_eq_tft' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGWTest.HodgeDegreeZeroFullCoefficientReplay.plane_all_denominators' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGWTest.HodgeDegreeZeroFullCoefficientReplay.plane_complete_normalization' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGWTest.HodgeDegreeZeroFullCoefficientReplay.oneBlowup_all_denominators' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGWTest.HodgeDegreeZeroFullCoefficientReplay.oneBlowup_complete_normalization' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGWTest.HodgeDegreeZeroFullCoefficientReplay.twoBlowups_all_denominators' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGWTest.HodgeDegreeZeroFullCoefficientReplay.twoBlowups_complete_normalization' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n{\"status\": \"passed\", \"manifest\": \"/private/tmp/gw_hodge_full_coefficients_20261005/public-probe-manifest.json\", \"commands\": [{\"command\": [\"/Users/jma/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lean\", \"--memory=2048\", \"--root=/private/tmp/gw_blowup_public_probe_20261004\", \"-o\", \"/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroFullCoefficientReplay.olean\", \"/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroFullCoefficientReplay.lean\"], \"exit_code\": 0, \"elapsed_seconds\": 8.84}, {\"command\": [\"/Users/jma/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lean\", \"--memory=2048\", \"--root=/private/tmp/gw_blowup_public_probe_20261004\", \"-o\", \"/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGWTest/GKM/HodgeDegreeZeroFullCoefficientReplay.olean\", \"/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGWTest/GKM/HodgeDegreeZeroFullCoefficientReplay.lean\"], \"exit_code\": 0, \"elapsed_seconds\": 2.005}, {\"command\": [\"/Users/jma/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lean\", \"--memory=2048\", \"--root=/private/tmp/gw_blowup_public_probe_20261004\", \"/private/tmp/gw_blowup_public_probe_20261004/PublicAudit.lean\"], \"exit_code\": 0, \"elapsed_seconds\": 1.066}], \"elapsed_seconds\": 11.911, \"isolated_root\": \"/private/tmp/gw_blowup_public_probe_20261004\", \"scope\": \"Exact source modules and separate public imports; no repository edits\"}\n"
+      },
+      "metadata": {
+        "children_ru_maxrss_raw": 1255915520,
+        "children_ru_maxrss_unit": "bytes",
+        "command": [
+          "python3",
+          "/tmp/gw_blowup_public_probe_runner_20261004.py",
+          "/tmp/gw_hodge_full_coefficients_20261005/public-probe-manifest.json"
+        ],
+        "elapsed_seconds": 12.721,
+        "exit_code": 0,
+        "log": "/tmp/gw_hodge_full_coefficients_public_v1_20261005.log",
+        "resource_note": "Wrapper child usage may omit descendants on interrupted runs.",
+        "status": "passed"
+      },
+      "metadata_source": {
+        "path": "/tmp/gw_hodge_full_coefficients_public_v1_20261005.json",
+        "sha256": "e0280562c2224e6367e4c8ef9489c51f84a593d78bdf2990ee5c052e1a9ab058"
+      }
+    }
+  ],
+  "integration_manifest": {
+    "contents": {
+      "audit_names": [
+        "AxiomaticGW.GKM.HodgeDegreeZeroCoefficientReplay.Plane.fullCurveClass_eq_zero",
+        "AxiomaticGW.GKM.HodgeDegreeZeroCoefficientReplay.Plane.fixedPointIndex_eq",
+        "AxiomaticGW.GKM.HodgeDegreeZeroCoefficientReplay.Plane.fixedPoints_eq",
+        "AxiomaticGW.GKM.HodgeDegreeZeroCoefficientReplay.Plane.tangent_eq_replay",
+        "AxiomaticGW.GKM.HodgeDegreeZeroCoefficientReplay.Plane.c00_denominator_ne_zero",
+        "AxiomaticGW.GKM.HodgeDegreeZeroCoefficientReplay.Plane.serializedEuler_denominator_ne_zero",
+        "AxiomaticGW.GKM.HodgeDegreeZeroCoefficientReplay.Plane.unit_denominator_ne_zero",
+        "AxiomaticGW.GKM.HodgeDegreeZeroCoefficientReplay.Plane.coefficient00_eq_serializedEuler",
+        "AxiomaticGW.GKM.HodgeDegreeZeroCoefficientReplay.Plane.coefficient00_eq_tangentProduct",
+        "AxiomaticGW.GKM.HodgeDegreeZeroCoefficientReplay.Plane.unitRestriction_eq_one",
+        "AxiomaticGW.GKM.HodgeDegreeZeroCoefficientReplay.Plane.coefficient00_eq_requestEuler",
+        "AxiomaticGW.GKM.HodgeDegreeZeroCoefficientReplay.Plane.coefficient00_eq_eulerUnits",
+        "AxiomaticGW.GKM.HodgeDegreeZeroCoefficientReplay.OneBlowup.fullCurveClass_eq_zero",
+        "AxiomaticGW.GKM.HodgeDegreeZeroCoefficientReplay.OneBlowup.fixedPointIndex_eq",
+        "AxiomaticGW.GKM.HodgeDegreeZeroCoefficientReplay.OneBlowup.fixedPoints_eq",
+        "AxiomaticGW.GKM.HodgeDegreeZeroCoefficientReplay.OneBlowup.tangent_eq_replay",
+        "AxiomaticGW.GKM.HodgeDegreeZeroCoefficientReplay.OneBlowup.c00_denominator_ne_zero",
+        "AxiomaticGW.GKM.HodgeDegreeZeroCoefficientReplay.OneBlowup.serializedEuler_denominator_ne_zero",
+        "AxiomaticGW.GKM.HodgeDegreeZeroCoefficientReplay.OneBlowup.unit_denominator_ne_zero",
+        "AxiomaticGW.GKM.HodgeDegreeZeroCoefficientReplay.OneBlowup.coefficient00_eq_serializedEuler",
+        "AxiomaticGW.GKM.HodgeDegreeZeroCoefficientReplay.OneBlowup.coefficient00_eq_tangentProduct",
+        "AxiomaticGW.GKM.HodgeDegreeZeroCoefficientReplay.OneBlowup.unitRestriction_eq_one",
+        "AxiomaticGW.GKM.HodgeDegreeZeroCoefficientReplay.OneBlowup.coefficient00_eq_requestEuler",
+        "AxiomaticGW.GKM.HodgeDegreeZeroCoefficientReplay.OneBlowup.coefficient00_eq_eulerUnits",
+        "AxiomaticGW.GKM.HodgeDegreeZeroCoefficientReplay.TwoBlowups.fullCurveClass_eq_zero",
+        "AxiomaticGW.GKM.HodgeDegreeZeroCoefficientReplay.TwoBlowups.fixedPointIndex_eq",
+        "AxiomaticGW.GKM.HodgeDegreeZeroCoefficientReplay.TwoBlowups.fixedPoints_eq",
+        "AxiomaticGW.GKM.HodgeDegreeZeroCoefficientReplay.TwoBlowups.tangent_eq_replay",
+        "AxiomaticGW.GKM.HodgeDegreeZeroCoefficientReplay.TwoBlowups.c00_denominator_ne_zero",
+        "AxiomaticGW.GKM.HodgeDegreeZeroCoefficientReplay.TwoBlowups.serializedEuler_denominator_ne_zero",
+        "AxiomaticGW.GKM.HodgeDegreeZeroCoefficientReplay.TwoBlowups.unit_denominator_ne_zero",
+        "AxiomaticGW.GKM.HodgeDegreeZeroCoefficientReplay.TwoBlowups.coefficient00_eq_serializedEuler",
+        "AxiomaticGW.GKM.HodgeDegreeZeroCoefficientReplay.TwoBlowups.coefficient00_eq_tangentProduct",
+        "AxiomaticGW.GKM.HodgeDegreeZeroCoefficientReplay.TwoBlowups.unitRestriction_eq_one",
+        "AxiomaticGW.GKM.HodgeDegreeZeroCoefficientReplay.TwoBlowups.coefficient00_eq_requestEuler",
+        "AxiomaticGW.GKM.HodgeDegreeZeroCoefficientReplay.TwoBlowups.coefficient00_eq_eulerUnits",
+        "AxiomaticGWTest.HodgeDegreeZeroCoefficientReplay.plane_all_c00",
+        "AxiomaticGWTest.HodgeDegreeZeroCoefficientReplay.oneBlowup_all_c00",
+        "AxiomaticGWTest.HodgeDegreeZeroCoefficientReplay.twoBlowups_all_c00",
+        "AxiomaticGW.GKM.HodgeDegreeZeroFullCoefficientReplay.Plane.denominator_ne_zero",
+        "AxiomaticGW.GKM.HodgeDegreeZeroFullCoefficientReplay.Plane.coefficients_zero_zero",
+        "AxiomaticGW.GKM.HodgeDegreeZeroFullCoefficientReplay.Plane.coefficients_zero_zero_eq_eulerUnits",
+        "AxiomaticGW.GKM.HodgeDegreeZeroFullCoefficientReplay.Plane.scalar_candidateClass_eq_tft",
+        "AxiomaticGW.GKM.HodgeDegreeZeroFullCoefficientReplay.OneBlowup.denominator_ne_zero",
+        "AxiomaticGW.GKM.HodgeDegreeZeroFullCoefficientReplay.OneBlowup.coefficients_zero_zero",
+        "AxiomaticGW.GKM.HodgeDegreeZeroFullCoefficientReplay.OneBlowup.coefficients_zero_zero_eq_eulerUnits",
+        "AxiomaticGW.GKM.HodgeDegreeZeroFullCoefficientReplay.OneBlowup.scalar_candidateClass_eq_tft",
+        "AxiomaticGW.GKM.HodgeDegreeZeroFullCoefficientReplay.TwoBlowups.denominator_ne_zero",
+        "AxiomaticGW.GKM.HodgeDegreeZeroFullCoefficientReplay.TwoBlowups.coefficients_zero_zero",
+        "AxiomaticGW.GKM.HodgeDegreeZeroFullCoefficientReplay.TwoBlowups.coefficients_zero_zero_eq_eulerUnits",
+        "AxiomaticGW.GKM.HodgeDegreeZeroFullCoefficientReplay.TwoBlowups.scalar_candidateClass_eq_tft",
+        "AxiomaticGWTest.HodgeDegreeZeroFullCoefficientReplay.plane_all_denominators",
+        "AxiomaticGWTest.HodgeDegreeZeroFullCoefficientReplay.plane_complete_normalization",
+        "AxiomaticGWTest.HodgeDegreeZeroFullCoefficientReplay.oneBlowup_all_denominators",
+        "AxiomaticGWTest.HodgeDegreeZeroFullCoefficientReplay.oneBlowup_complete_normalization",
+        "AxiomaticGWTest.HodgeDegreeZeroFullCoefficientReplay.twoBlowups_all_denominators",
+        "AxiomaticGWTest.HodgeDegreeZeroFullCoefficientReplay.twoBlowups_complete_normalization"
+      ],
+      "integrate": [
+        {
+          "bytes": 16279,
+          "destination": "scripts/export_gkm_hodge_c00.py",
+          "sha256": "40a111318d8fd8c42cfec82157690c60822df1fb23f12adb6062f7b6939d3cbe",
+          "source": "/tmp/gw_hodge_full_coefficients_v2_20261005/scripts/export_gkm_hodge_c00.py"
+        },
+        {
+          "bytes": 7010,
+          "destination": "scripts/test_gkm_hodge_c00.py",
+          "sha256": "35de87af971507956a262a5c57407b159e2396e7b9696011a316fce798cbbc48",
+          "source": "/tmp/gw_hodge_full_coefficients_v2_20261005/scripts/test_gkm_hodge_c00.py"
+        },
+        {
+          "bytes": 11206,
+          "destination": "scripts/export_gkm_hodge_coefficients.py",
+          "sha256": "0caee1d95f14791ed90b28b5b9b9a0e9a2501aab63192fdfb5f76231a87a6c47",
+          "source": "/tmp/gw_hodge_full_coefficients_v2_20261005/scripts/export_gkm_hodge_coefficients.py"
+        },
+        {
+          "bytes": 5873,
+          "destination": "scripts/test_gkm_hodge_coefficients.py",
+          "sha256": "c67a9914e7eda27ad90b1cbb06914013fa8c1b62780d73da108d665a3bb2fe75",
+          "source": "/tmp/gw_hodge_full_coefficients_v2_20261005/scripts/test_gkm_hodge_coefficients.py"
+        },
+        {
+          "bytes": 1169158,
+          "destination": "environments/gkm-degree-zero-hodge-strata-factored-candidate.json",
+          "sha256": "5be60671ddc68304610987123f048a6c010504cf27f3b690cd1e4d4e39227399",
+          "source": "/tmp/gw_hodge_full_coefficients_v2_20261005/environments/gkm-degree-zero-hodge-strata-factored-candidate.json"
+        },
+        {
+          "bytes": 29784,
+          "destination": "AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroCoefficientReplay.lean",
+          "sha256": "0b2ab996b5e331bef42e1465a4b6c99307a605393f12077d1c950824f0ea48c6",
+          "source": "/tmp/gw_hodge_full_coefficients_v2_20261005/AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroCoefficientReplay.lean"
+        },
+        {
+          "bytes": 1243,
+          "destination": "AxiomaticGWTest/GKM/HodgeDegreeZeroCoefficientReplay.lean",
+          "sha256": "68c4407a4971eae82458403f740e6274f383bcf0a98ee95a892f0fdbdea0c676",
+          "source": "/tmp/gw_hodge_full_coefficients_v2_20261005/AxiomaticGWTest/GKM/HodgeDegreeZeroCoefficientReplay.lean"
+        },
+        {
+          "bytes": 22918,
+          "destination": "AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroFullCoefficientReplay.lean",
+          "sha256": "648ac71eb16d06ca1b94b29ca2e1972ca2f360ce534fb864230933daa6c29ce8",
+          "source": "/tmp/gw_hodge_full_coefficients_v2_20261005/AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroFullCoefficientReplay.lean"
+        },
+        {
+          "bytes": 3181,
+          "destination": "AxiomaticGWTest/GKM/HodgeDegreeZeroFullCoefficientReplay.lean",
+          "sha256": "b82970d0aec7d5c3fb96663cb27440f228cc6b43070c1161ed2fefaea6250996",
+          "source": "/tmp/gw_hodge_full_coefficients_v2_20261005/AxiomaticGWTest/GKM/HodgeDegreeZeroFullCoefficientReplay.lean"
+        }
+      ],
+      "package": "/tmp/gw_hodge_full_coefficients_v2_20261005/manifest.json"
+    },
+    "source": {
+      "path": "/tmp/gw_hodge_coefficients_integration_20261005.json",
+      "sha256": "df1abe48eca5eef0a50c922471f9cff81d07993332fd611baa25429089599415"
+    }
+  },
+  "mathematical_effect": {
+    "changed_existing_statements": false,
+    "conclusion": "For each fixed target, the connected degree-zero scalar of the complete actual candidateClass equals the existing genus-two one-marked unit TFT correlator.",
+    "grading": "Stable-curve codimension over the coefficient field; no ordinary complementary-degree assumption.",
+    "h00": "Discharged for all 12 actual c00 coefficients, through the source-bound tangent product and existing accepted Euler units.",
+    "new_axioms": 0,
+    "new_global_instances": 0,
+    "new_global_simp_rules": 0,
+    "new_seeds": 0,
+    "positive_coefficient_meaning_certified": false,
+    "remaining_explicit_inputs": [
+      "D : ConnectedDegreeZero C",
+      "A : StrataRealization C 2 (Fin 1)",
+      "hfund: the actual fundamental basis vector realizes to one"
+    ],
+    "scalar_determines_complete_class": false
+  },
+  "milestones": {
+    "GKM_geometric_gate_complete": false,
+    "R4_complete": false,
+    "R5_complete": false,
+    "fixed_applications_changed": false,
+    "goal_complete": false
+  },
+  "next_priority": "Identify a normalized geometric realization of the actual Hodge expressions and prove their Hodge/GRR, product, and constant-map comparison; scalar normalization alone leaves these class-valued obligations open.",
+  "not_accepted": [
+    "Geometric normalized realization",
+    "Hodge/Chern/GRR identification",
+    "Positive coefficient Hodge formula and product compatibility",
+    "Constant-map virtual Euler and stabilization comparison",
+    "Total equivariant grading and ordinary specialization",
+    "Actual semisimple GKM CohFT and its unit/gluing laws",
+    "Quantum product, R-matrix or translation action",
+    "Full-project build/test/lint checkpoint",
+    "Full fixed research application suites"
+  ],
+  "python_test_count": 18,
+  "recorded_at_utc": "2026-10-05T05:09:13.746139+00:00",
+  "schema_version": 1,
+  "source_binding_review": {
+    "contents": {
+      "checks": {
+        "all_45_component_names_in_order_reviewed": true,
+        "embedded_raw_canonical_digest_matches": true,
+        "embedded_raw_equals_integrated_raw_packet": true,
+        "targets_canonical_digest_matches": true
+      },
+      "exact_data_boundary": "The complete packet hash binds historical metadata plus the embedded raw packet and all 108 exact fractions. A reviewed equality check binds the embedded raw JSON to the integrated raw candidate. Generic rawComponent uses each of the 45 existing definitions exactly once in ordered rows. This is exact-input replay, not an arbitrary-packet geometric validator.",
+      "historical_metadata": "Absolute paths in the immutable compact packet, including GKM/admcycles producer paths and assembler/factorizer hashes, are preserved historical provenance only. They are not followed or executed by these portable replay tools. No producer code is vendored or imported.",
+      "integrated_raw_binding": [
+        {
+          "path": "environments/admcycles-hodge-strata-candidates.json",
+          "sha256": "1ec7e5df068bd9edbe896dc5bf6f20f59b0e42e81896d2e4364f11efc0c6ec32"
+        },
+        {
+          "path": "AxiomaticGW/GKM/Fixtures/AdmcyclesHodgeStrataCandidates.lean",
+          "sha256": "244eaf08f741057b92113ee4b0c4a48b2185b55350473bc28286460ea07b651c"
+        },
+        {
+          "path": "AxiomaticGW/GKM/AdmcyclesHodgeStrataNormalization.lean",
+          "sha256": "d36565c19b0198d833caddfc755ba431660d2f84752fdd760cbcc38f37734ce3"
+        },
+        {
+          "path": "scripts/export_admcycles_hodge_certificate.py",
+          "sha256": "adce4b8eaf05e29b952aa23d5c0528446653eb6c0d7f24fec16dbafaf954646d"
+        }
+      ],
+      "lean_or_sage_run_for_review": false,
+      "mathematical_boundary": "Only coefficient interpretation, denominator nonvanishing, exact c00-to-Euler equality, and scalar projection under the existing D/A/hfund hypotheses are accepted. Positive coefficients remain data in the complete class; scalar projection does not validate their geometric meaning.",
+      "package_files": [
+        {
+          "path": "/tmp/gw_hodge_full_coefficients_v2_20261005/scripts/export_gkm_hodge_c00.py",
+          "sha256": "40a111318d8fd8c42cfec82157690c60822df1fb23f12adb6062f7b6939d3cbe"
+        },
+        {
+          "path": "/tmp/gw_hodge_full_coefficients_v2_20261005/scripts/export_gkm_hodge_coefficients.py",
+          "sha256": "0caee1d95f14791ed90b28b5b9b9a0e9a2501aab63192fdfb5f76231a87a6c47"
+        },
+        {
+          "path": "/tmp/gw_hodge_full_coefficients_v2_20261005/scripts/check_gkm_inputs.py",
+          "sha256": "ba2728773135a47a114b325287a098ece7165e95c6e7b5f8638f06e55c00376e"
+        },
+        {
+          "path": "/tmp/gw_hodge_full_coefficients_v2_20261005/scripts/export_gkm_certificate.py",
+          "sha256": "54c5052adbb569fb7ed4172ac1600b04a5b31506f8a77c16dface1bbfe10f19c"
+        }
+      ],
+      "runtime_paths": "ROOT comes from each script location; --input selects the held packet and three output CLI options select new output files. No execution depends on a user-machine or /tmp path.",
+      "source_execution_order": [
+        "Entry point checks the exact complete input file hash before dependency loading.",
+        "Full exporter checks the held c00 helper hash before executing its source.",
+        "c00 helper uses only standard-library imports before dependency loading.",
+        "c00 dependencies checks both existing helper hashes before executing either helper.",
+        "Individual helper load checks its hash again immediately before execution.",
+        "Emitter import is bound to the checked codec via a temporary sys.modules entry, which is restored; emitter.codec identity is verified."
+      ],
+      "status": "reviewed_source_binding_and_portability",
+      "validation": "Read-only source inspection and Python exact object/hash comparisons; no new repository writes."
+    },
+    "source": {
+      "path": "/tmp/gw_hodge_full_coefficients_v2_20261005/source-binding-review.json",
+      "sha256": "efebf9ed965688513190a51be3fc35b6c2d22fd21f7e3ade75d4f5d17b1614aa"
+    }
+  },
+  "source_pins": {
+    "AxiomaticGW/GKM/AdmcyclesHodgeStrataNormalization.lean": {
+      "bytes": 9676,
+      "sha256": "d36565c19b0198d833caddfc755ba431660d2f84752fdd760cbcc38f37734ce3"
+    },
+    "AxiomaticGW/GKM/FixedPointTFT.lean": {
+      "bytes": 3264,
+      "sha256": "91ce8bc7ea085e2eb33596b44fb6e2ef5451cd8129ce79cdf28f44b60c2397e1"
+    },
+    "AxiomaticGW/GKM/Fixtures/AdmcyclesHodgeStrataCandidates.lean": {
+      "bytes": 496592,
+      "sha256": "244eaf08f741057b92113ee4b0c4a48b2185b55350473bc28286460ea07b651c"
+    },
+    "AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroCoefficientReplay.lean": {
+      "bytes": 29784,
+      "sha256": "0b2ab996b5e331bef42e1465a4b6c99307a605393f12077d1c950824f0ea48c6"
+    },
+    "AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroFullCoefficientReplay.lean": {
+      "bytes": 22918,
+      "sha256": "648ac71eb16d06ca1b94b29ca2e1972ca2f360ce534fb864230933daa6c29ce8"
+    },
+    "AxiomaticGW/Tautological/StrataRealizationDegree.lean": {
+      "bytes": 2643,
+      "sha256": "d258d6a0d5c2249667155dd1a910ecf8e94ef35076600f5a9d0d7342c9b4a05b"
+    },
+    "AxiomaticGWTest/GKM/HodgeDegreeZeroCoefficientReplay.lean": {
+      "bytes": 1243,
+      "sha256": "68c4407a4971eae82458403f740e6274f383bcf0a98ee95a892f0fdbdea0c676"
+    },
+    "AxiomaticGWTest/GKM/HodgeDegreeZeroFullCoefficientReplay.lean": {
+      "bytes": 3181,
+      "sha256": "b82970d0aec7d5c3fb96663cb27440f228cc6b43070c1161ed2fefaea6250996"
+    },
+    "environments/admcycles-hodge-strata-candidates.json": {
+      "bytes": 776909,
+      "sha256": "1ec7e5df068bd9edbe896dc5bf6f20f59b0e42e81896d2e4364f11efc0c6ec32"
+    },
+    "environments/gkm-degree-zero-hodge-strata-factored-candidate.json": {
+      "bytes": 1169158,
+      "sha256": "5be60671ddc68304610987123f048a6c010504cf27f3b690cd1e4d4e39227399"
+    },
+    "scripts/check_gkm_inputs.py": {
+      "bytes": 19638,
+      "sha256": "ba2728773135a47a114b325287a098ece7165e95c6e7b5f8638f06e55c00376e"
+    },
+    "scripts/export_admcycles_hodge_certificate.py": {
+      "bytes": 20151,
+      "sha256": "adce4b8eaf05e29b952aa23d5c0528446653eb6c0d7f24fec16dbafaf954646d"
+    },
+    "scripts/export_gkm_certificate.py": {
+      "bytes": 17990,
+      "sha256": "54c5052adbb569fb7ed4172ac1600b04a5b31506f8a77c16dface1bbfe10f19c"
+    },
+    "scripts/export_gkm_hodge_c00.py": {
+      "bytes": 16279,
+      "sha256": "40a111318d8fd8c42cfec82157690c60822df1fb23f12adb6062f7b6939d3cbe"
+    },
+    "scripts/export_gkm_hodge_coefficients.py": {
+      "bytes": 11206,
+      "sha256": "0caee1d95f14791ed90b28b5b9b9a0e9a2501aab63192fdfb5f76231a87a6c47"
+    },
+    "scripts/test_gkm_hodge_c00.py": {
+      "bytes": 7010,
+      "sha256": "35de87af971507956a262a5c57407b159e2396e7b9696011a316fce798cbbc48"
+    },
+    "scripts/test_gkm_hodge_coefficients.py": {
+      "bytes": 5873,
+      "sha256": "c67a9914e7eda27ad90b1cbb06914013fa8c1b62780d73da108d665a3bb2fe75"
+    }
+  },
+  "status": "targeted_actual_hodge_coefficients_and_conditional_scalar_normalization_verified",
+  "test_boundary": "Python controls preserve source binding and reject malformed exchange data. They are not independent geometric proofs or additional kernel rejection cases.",
+  "validation": {
+    "integrated_axiom_audit": {
+      "audit_source": {
+        "path": "/tmp/gw_hodge_coefficients_integrated_audit_20261005.lean",
+        "sha256": "67094fb893d86aa02d2ed62cb37fe32990cdcb58e240363405a4e3904dd012dc",
+        "text": "module\npublic import AxiomaticGWTest.GKM.HodgeDegreeZeroCoefficientReplay\npublic import AxiomaticGWTest.GKM.HodgeDegreeZeroFullCoefficientReplay\n\n#print axioms AxiomaticGW.GKM.HodgeDegreeZeroCoefficientReplay.Plane.fullCurveClass_eq_zero\n#print axioms AxiomaticGW.GKM.HodgeDegreeZeroCoefficientReplay.Plane.fixedPointIndex_eq\n#print axioms AxiomaticGW.GKM.HodgeDegreeZeroCoefficientReplay.Plane.fixedPoints_eq\n#print axioms AxiomaticGW.GKM.HodgeDegreeZeroCoefficientReplay.Plane.tangent_eq_replay\n#print axioms AxiomaticGW.GKM.HodgeDegreeZeroCoefficientReplay.Plane.c00_denominator_ne_zero\n#print axioms AxiomaticGW.GKM.HodgeDegreeZeroCoefficientReplay.Plane.serializedEuler_denominator_ne_zero\n#print axioms AxiomaticGW.GKM.HodgeDegreeZeroCoefficientReplay.Plane.unit_denominator_ne_zero\n#print axioms AxiomaticGW.GKM.HodgeDegreeZeroCoefficientReplay.Plane.coefficient00_eq_serializedEuler\n#print axioms AxiomaticGW.GKM.HodgeDegreeZeroCoefficientReplay.Plane.coefficient00_eq_tangentProduct\n#print axioms AxiomaticGW.GKM.HodgeDegreeZeroCoefficientReplay.Plane.unitRestriction_eq_one\n#print axioms AxiomaticGW.GKM.HodgeDegreeZeroCoefficientReplay.Plane.coefficient00_eq_requestEuler\n#print axioms AxiomaticGW.GKM.HodgeDegreeZeroCoefficientReplay.Plane.coefficient00_eq_eulerUnits\n#print axioms AxiomaticGW.GKM.HodgeDegreeZeroCoefficientReplay.OneBlowup.fullCurveClass_eq_zero\n#print axioms AxiomaticGW.GKM.HodgeDegreeZeroCoefficientReplay.OneBlowup.fixedPointIndex_eq\n#print axioms AxiomaticGW.GKM.HodgeDegreeZeroCoefficientReplay.OneBlowup.fixedPoints_eq\n#print axioms AxiomaticGW.GKM.HodgeDegreeZeroCoefficientReplay.OneBlowup.tangent_eq_replay\n#print axioms AxiomaticGW.GKM.HodgeDegreeZeroCoefficientReplay.OneBlowup.c00_denominator_ne_zero\n#print axioms AxiomaticGW.GKM.HodgeDegreeZeroCoefficientReplay.OneBlowup.serializedEuler_denominator_ne_zero\n#print axioms AxiomaticGW.GKM.HodgeDegreeZeroCoefficientReplay.OneBlowup.unit_denominator_ne_zero\n#print axioms AxiomaticGW.GKM.HodgeDegreeZeroCoefficientReplay.OneBlowup.coefficient00_eq_serializedEuler\n#print axioms AxiomaticGW.GKM.HodgeDegreeZeroCoefficientReplay.OneBlowup.coefficient00_eq_tangentProduct\n#print axioms AxiomaticGW.GKM.HodgeDegreeZeroCoefficientReplay.OneBlowup.unitRestriction_eq_one\n#print axioms AxiomaticGW.GKM.HodgeDegreeZeroCoefficientReplay.OneBlowup.coefficient00_eq_requestEuler\n#print axioms AxiomaticGW.GKM.HodgeDegreeZeroCoefficientReplay.OneBlowup.coefficient00_eq_eulerUnits\n#print axioms AxiomaticGW.GKM.HodgeDegreeZeroCoefficientReplay.TwoBlowups.fullCurveClass_eq_zero\n#print axioms AxiomaticGW.GKM.HodgeDegreeZeroCoefficientReplay.TwoBlowups.fixedPointIndex_eq\n#print axioms AxiomaticGW.GKM.HodgeDegreeZeroCoefficientReplay.TwoBlowups.fixedPoints_eq\n#print axioms AxiomaticGW.GKM.HodgeDegreeZeroCoefficientReplay.TwoBlowups.tangent_eq_replay\n#print axioms AxiomaticGW.GKM.HodgeDegreeZeroCoefficientReplay.TwoBlowups.c00_denominator_ne_zero\n#print axioms AxiomaticGW.GKM.HodgeDegreeZeroCoefficientReplay.TwoBlowups.serializedEuler_denominator_ne_zero\n#print axioms AxiomaticGW.GKM.HodgeDegreeZeroCoefficientReplay.TwoBlowups.unit_denominator_ne_zero\n#print axioms AxiomaticGW.GKM.HodgeDegreeZeroCoefficientReplay.TwoBlowups.coefficient00_eq_serializedEuler\n#print axioms AxiomaticGW.GKM.HodgeDegreeZeroCoefficientReplay.TwoBlowups.coefficient00_eq_tangentProduct\n#print axioms AxiomaticGW.GKM.HodgeDegreeZeroCoefficientReplay.TwoBlowups.unitRestriction_eq_one\n#print axioms AxiomaticGW.GKM.HodgeDegreeZeroCoefficientReplay.TwoBlowups.coefficient00_eq_requestEuler\n#print axioms AxiomaticGW.GKM.HodgeDegreeZeroCoefficientReplay.TwoBlowups.coefficient00_eq_eulerUnits\n#print axioms AxiomaticGWTest.HodgeDegreeZeroCoefficientReplay.plane_all_c00\n#print axioms AxiomaticGWTest.HodgeDegreeZeroCoefficientReplay.oneBlowup_all_c00\n#print axioms AxiomaticGWTest.HodgeDegreeZeroCoefficientReplay.twoBlowups_all_c00\n#print axioms AxiomaticGW.GKM.HodgeDegreeZeroFullCoefficientReplay.Plane.denominator_ne_zero\n#print axioms AxiomaticGW.GKM.HodgeDegreeZeroFullCoefficientReplay.Plane.coefficients_zero_zero\n#print axioms AxiomaticGW.GKM.HodgeDegreeZeroFullCoefficientReplay.Plane.coefficients_zero_zero_eq_eulerUnits\n#print axioms AxiomaticGW.GKM.HodgeDegreeZeroFullCoefficientReplay.Plane.scalar_candidateClass_eq_tft\n#print axioms AxiomaticGW.GKM.HodgeDegreeZeroFullCoefficientReplay.OneBlowup.denominator_ne_zero\n#print axioms AxiomaticGW.GKM.HodgeDegreeZeroFullCoefficientReplay.OneBlowup.coefficients_zero_zero\n#print axioms AxiomaticGW.GKM.HodgeDegreeZeroFullCoefficientReplay.OneBlowup.coefficients_zero_zero_eq_eulerUnits\n#print axioms AxiomaticGW.GKM.HodgeDegreeZeroFullCoefficientReplay.OneBlowup.scalar_candidateClass_eq_tft\n#print axioms AxiomaticGW.GKM.HodgeDegreeZeroFullCoefficientReplay.TwoBlowups.denominator_ne_zero\n#print axioms AxiomaticGW.GKM.HodgeDegreeZeroFullCoefficientReplay.TwoBlowups.coefficients_zero_zero\n#print axioms AxiomaticGW.GKM.HodgeDegreeZeroFullCoefficientReplay.TwoBlowups.coefficients_zero_zero_eq_eulerUnits\n#print axioms AxiomaticGW.GKM.HodgeDegreeZeroFullCoefficientReplay.TwoBlowups.scalar_candidateClass_eq_tft\n#print axioms AxiomaticGWTest.HodgeDegreeZeroFullCoefficientReplay.plane_all_denominators\n#print axioms AxiomaticGWTest.HodgeDegreeZeroFullCoefficientReplay.plane_complete_normalization\n#print axioms AxiomaticGWTest.HodgeDegreeZeroFullCoefficientReplay.oneBlowup_all_denominators\n#print axioms AxiomaticGWTest.HodgeDegreeZeroFullCoefficientReplay.oneBlowup_complete_normalization\n#print axioms AxiomaticGWTest.HodgeDegreeZeroFullCoefficientReplay.twoBlowups_all_denominators\n#print axioms AxiomaticGWTest.HodgeDegreeZeroFullCoefficientReplay.twoBlowups_complete_normalization\n"
+      },
+      "axioms": {
+        "AxiomaticGW.GKM.HodgeDegreeZeroCoefficientReplay.OneBlowup.c00_denominator_ne_zero": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.GKM.HodgeDegreeZeroCoefficientReplay.OneBlowup.coefficient00_eq_eulerUnits": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.GKM.HodgeDegreeZeroCoefficientReplay.OneBlowup.coefficient00_eq_requestEuler": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.GKM.HodgeDegreeZeroCoefficientReplay.OneBlowup.coefficient00_eq_serializedEuler": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.GKM.HodgeDegreeZeroCoefficientReplay.OneBlowup.coefficient00_eq_tangentProduct": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.GKM.HodgeDegreeZeroCoefficientReplay.OneBlowup.fixedPointIndex_eq": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.GKM.HodgeDegreeZeroCoefficientReplay.OneBlowup.fixedPoints_eq": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.GKM.HodgeDegreeZeroCoefficientReplay.OneBlowup.fullCurveClass_eq_zero": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.GKM.HodgeDegreeZeroCoefficientReplay.OneBlowup.serializedEuler_denominator_ne_zero": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.GKM.HodgeDegreeZeroCoefficientReplay.OneBlowup.tangent_eq_replay": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.GKM.HodgeDegreeZeroCoefficientReplay.OneBlowup.unitRestriction_eq_one": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.GKM.HodgeDegreeZeroCoefficientReplay.OneBlowup.unit_denominator_ne_zero": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.GKM.HodgeDegreeZeroCoefficientReplay.Plane.c00_denominator_ne_zero": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.GKM.HodgeDegreeZeroCoefficientReplay.Plane.coefficient00_eq_eulerUnits": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.GKM.HodgeDegreeZeroCoefficientReplay.Plane.coefficient00_eq_requestEuler": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.GKM.HodgeDegreeZeroCoefficientReplay.Plane.coefficient00_eq_serializedEuler": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.GKM.HodgeDegreeZeroCoefficientReplay.Plane.coefficient00_eq_tangentProduct": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.GKM.HodgeDegreeZeroCoefficientReplay.Plane.fixedPointIndex_eq": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.GKM.HodgeDegreeZeroCoefficientReplay.Plane.fixedPoints_eq": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.GKM.HodgeDegreeZeroCoefficientReplay.Plane.fullCurveClass_eq_zero": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.GKM.HodgeDegreeZeroCoefficientReplay.Plane.serializedEuler_denominator_ne_zero": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.GKM.HodgeDegreeZeroCoefficientReplay.Plane.tangent_eq_replay": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.GKM.HodgeDegreeZeroCoefficientReplay.Plane.unitRestriction_eq_one": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.GKM.HodgeDegreeZeroCoefficientReplay.Plane.unit_denominator_ne_zero": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.GKM.HodgeDegreeZeroCoefficientReplay.TwoBlowups.c00_denominator_ne_zero": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.GKM.HodgeDegreeZeroCoefficientReplay.TwoBlowups.coefficient00_eq_eulerUnits": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.GKM.HodgeDegreeZeroCoefficientReplay.TwoBlowups.coefficient00_eq_requestEuler": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.GKM.HodgeDegreeZeroCoefficientReplay.TwoBlowups.coefficient00_eq_serializedEuler": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.GKM.HodgeDegreeZeroCoefficientReplay.TwoBlowups.coefficient00_eq_tangentProduct": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.GKM.HodgeDegreeZeroCoefficientReplay.TwoBlowups.fixedPointIndex_eq": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.GKM.HodgeDegreeZeroCoefficientReplay.TwoBlowups.fixedPoints_eq": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.GKM.HodgeDegreeZeroCoefficientReplay.TwoBlowups.fullCurveClass_eq_zero": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.GKM.HodgeDegreeZeroCoefficientReplay.TwoBlowups.serializedEuler_denominator_ne_zero": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.GKM.HodgeDegreeZeroCoefficientReplay.TwoBlowups.tangent_eq_replay": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.GKM.HodgeDegreeZeroCoefficientReplay.TwoBlowups.unitRestriction_eq_one": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.GKM.HodgeDegreeZeroCoefficientReplay.TwoBlowups.unit_denominator_ne_zero": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.GKM.HodgeDegreeZeroFullCoefficientReplay.OneBlowup.coefficients_zero_zero": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.GKM.HodgeDegreeZeroFullCoefficientReplay.OneBlowup.coefficients_zero_zero_eq_eulerUnits": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.GKM.HodgeDegreeZeroFullCoefficientReplay.OneBlowup.denominator_ne_zero": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.GKM.HodgeDegreeZeroFullCoefficientReplay.OneBlowup.scalar_candidateClass_eq_tft": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.GKM.HodgeDegreeZeroFullCoefficientReplay.Plane.coefficients_zero_zero": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.GKM.HodgeDegreeZeroFullCoefficientReplay.Plane.coefficients_zero_zero_eq_eulerUnits": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.GKM.HodgeDegreeZeroFullCoefficientReplay.Plane.denominator_ne_zero": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.GKM.HodgeDegreeZeroFullCoefficientReplay.Plane.scalar_candidateClass_eq_tft": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.GKM.HodgeDegreeZeroFullCoefficientReplay.TwoBlowups.coefficients_zero_zero": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.GKM.HodgeDegreeZeroFullCoefficientReplay.TwoBlowups.coefficients_zero_zero_eq_eulerUnits": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.GKM.HodgeDegreeZeroFullCoefficientReplay.TwoBlowups.denominator_ne_zero": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.GKM.HodgeDegreeZeroFullCoefficientReplay.TwoBlowups.scalar_candidateClass_eq_tft": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGWTest.HodgeDegreeZeroCoefficientReplay.oneBlowup_all_c00": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGWTest.HodgeDegreeZeroCoefficientReplay.plane_all_c00": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGWTest.HodgeDegreeZeroCoefficientReplay.twoBlowups_all_c00": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGWTest.HodgeDegreeZeroFullCoefficientReplay.oneBlowup_all_denominators": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGWTest.HodgeDegreeZeroFullCoefficientReplay.oneBlowup_complete_normalization": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGWTest.HodgeDegreeZeroFullCoefficientReplay.plane_all_denominators": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGWTest.HodgeDegreeZeroFullCoefficientReplay.plane_complete_normalization": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGWTest.HodgeDegreeZeroFullCoefficientReplay.twoBlowups_all_denominators": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGWTest.HodgeDegreeZeroFullCoefficientReplay.twoBlowups_complete_normalization": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "declaration_count": 57,
+      "log": {
+        "path": "/tmp/gw_hodge_coefficients_integrated_axioms_20261005.log",
+        "sha256": "344159a1b005d61ce08b15532a726a673fb2a59b113191fd0f47d08d3a501c88",
+        "text": "'AxiomaticGW.GKM.HodgeDegreeZeroCoefficientReplay.Plane.fullCurveClass_eq_zero' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeZeroCoefficientReplay.Plane.fixedPointIndex_eq' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeZeroCoefficientReplay.Plane.fixedPoints_eq' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeZeroCoefficientReplay.Plane.tangent_eq_replay' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeZeroCoefficientReplay.Plane.c00_denominator_ne_zero' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeZeroCoefficientReplay.Plane.serializedEuler_denominator_ne_zero' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeZeroCoefficientReplay.Plane.unit_denominator_ne_zero' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeZeroCoefficientReplay.Plane.coefficient00_eq_serializedEuler' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeZeroCoefficientReplay.Plane.coefficient00_eq_tangentProduct' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeZeroCoefficientReplay.Plane.unitRestriction_eq_one' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeZeroCoefficientReplay.Plane.coefficient00_eq_requestEuler' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeZeroCoefficientReplay.Plane.coefficient00_eq_eulerUnits' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeZeroCoefficientReplay.OneBlowup.fullCurveClass_eq_zero' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeZeroCoefficientReplay.OneBlowup.fixedPointIndex_eq' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeZeroCoefficientReplay.OneBlowup.fixedPoints_eq' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeZeroCoefficientReplay.OneBlowup.tangent_eq_replay' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeZeroCoefficientReplay.OneBlowup.c00_denominator_ne_zero' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeZeroCoefficientReplay.OneBlowup.serializedEuler_denominator_ne_zero' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeZeroCoefficientReplay.OneBlowup.unit_denominator_ne_zero' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeZeroCoefficientReplay.OneBlowup.coefficient00_eq_serializedEuler' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeZeroCoefficientReplay.OneBlowup.coefficient00_eq_tangentProduct' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeZeroCoefficientReplay.OneBlowup.unitRestriction_eq_one' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeZeroCoefficientReplay.OneBlowup.coefficient00_eq_requestEuler' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeZeroCoefficientReplay.OneBlowup.coefficient00_eq_eulerUnits' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeZeroCoefficientReplay.TwoBlowups.fullCurveClass_eq_zero' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeZeroCoefficientReplay.TwoBlowups.fixedPointIndex_eq' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeZeroCoefficientReplay.TwoBlowups.fixedPoints_eq' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeZeroCoefficientReplay.TwoBlowups.tangent_eq_replay' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeZeroCoefficientReplay.TwoBlowups.c00_denominator_ne_zero' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeZeroCoefficientReplay.TwoBlowups.serializedEuler_denominator_ne_zero' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeZeroCoefficientReplay.TwoBlowups.unit_denominator_ne_zero' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeZeroCoefficientReplay.TwoBlowups.coefficient00_eq_serializedEuler' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeZeroCoefficientReplay.TwoBlowups.coefficient00_eq_tangentProduct' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeZeroCoefficientReplay.TwoBlowups.unitRestriction_eq_one' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeZeroCoefficientReplay.TwoBlowups.coefficient00_eq_requestEuler' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeZeroCoefficientReplay.TwoBlowups.coefficient00_eq_eulerUnits' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGWTest.HodgeDegreeZeroCoefficientReplay.plane_all_c00' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGWTest.HodgeDegreeZeroCoefficientReplay.oneBlowup_all_c00' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGWTest.HodgeDegreeZeroCoefficientReplay.twoBlowups_all_c00' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeZeroFullCoefficientReplay.Plane.denominator_ne_zero' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeZeroFullCoefficientReplay.Plane.coefficients_zero_zero' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeZeroFullCoefficientReplay.Plane.coefficients_zero_zero_eq_eulerUnits' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeZeroFullCoefficientReplay.Plane.scalar_candidateClass_eq_tft' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeZeroFullCoefficientReplay.OneBlowup.denominator_ne_zero' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeZeroFullCoefficientReplay.OneBlowup.coefficients_zero_zero' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeZeroFullCoefficientReplay.OneBlowup.coefficients_zero_zero_eq_eulerUnits' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeZeroFullCoefficientReplay.OneBlowup.scalar_candidateClass_eq_tft' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeZeroFullCoefficientReplay.TwoBlowups.denominator_ne_zero' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeZeroFullCoefficientReplay.TwoBlowups.coefficients_zero_zero' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeZeroFullCoefficientReplay.TwoBlowups.coefficients_zero_zero_eq_eulerUnits' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeZeroFullCoefficientReplay.TwoBlowups.scalar_candidateClass_eq_tft' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGWTest.HodgeDegreeZeroFullCoefficientReplay.plane_all_denominators' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGWTest.HodgeDegreeZeroFullCoefficientReplay.plane_complete_normalization' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGWTest.HodgeDegreeZeroFullCoefficientReplay.oneBlowup_all_denominators' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGWTest.HodgeDegreeZeroFullCoefficientReplay.oneBlowup_complete_normalization' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGWTest.HodgeDegreeZeroFullCoefficientReplay.twoBlowups_all_denominators' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGWTest.HodgeDegreeZeroFullCoefficientReplay.twoBlowups_complete_normalization' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n"
+      },
+      "metadata": {
+        "children_ru_maxrss_raw": 1106362368,
+        "children_ru_maxrss_unit": "bytes",
+        "command": [
+          "lake",
+          "env",
+          "lean",
+          "--memory=2048",
+          "/tmp/gw_hodge_coefficients_integrated_audit_20261005.lean"
+        ],
+        "elapsed_seconds": 2.671,
+        "exit_code": 0,
+        "log": "/tmp/gw_hodge_coefficients_integrated_axioms_20261005.log",
+        "resource_note": "Wrapper child usage may omit descendants on interrupted runs.",
+        "status": "passed"
+      },
+      "metadata_source": {
+        "path": "/tmp/gw_hodge_coefficients_integrated_axioms_20261005.json",
+        "sha256": "bb95caebf9ed9df5616c2a26f3b51b9f514ab3a8c6a1c2bcc4fadbb2dfcd33be"
+      }
+    },
+    "integrated_build": {
+      "log": {
+        "path": "/tmp/gw_hodge_coefficients_integrated_build_20261005.log",
+        "sha256": "719a01ee5612225dbe0c1a51999ef6eb3905b16eeee8ddfa62f7b25427aea713",
+        "text": "\u2714 [1818/1821] Built AxiomaticGW.GKM.Fixtures.HodgeDegreeZeroCoefficientReplay (4.2s)\n\u2714 [1819/1821] Built AxiomaticGWTest.GKM.HodgeDegreeZeroCoefficientReplay (1.3s)\n\u2714 [1820/1821] Built AxiomaticGW.GKM.Fixtures.HodgeDegreeZeroFullCoefficientReplay (10s)\n\u2714 [1821/1821] Built AxiomaticGWTest.GKM.HodgeDegreeZeroFullCoefficientReplay (1.4s)\nBuild completed successfully (1821 jobs).\n"
+      },
+      "metadata": {
+        "children_ru_maxrss_raw": 1161396224,
+        "children_ru_maxrss_unit": "bytes",
+        "command": [
+          "lake",
+          "build",
+          "AxiomaticGW.GKM.Fixtures.HodgeDegreeZeroCoefficientReplay",
+          "AxiomaticGWTest.GKM.HodgeDegreeZeroCoefficientReplay",
+          "AxiomaticGW.GKM.Fixtures.HodgeDegreeZeroFullCoefficientReplay",
+          "AxiomaticGWTest.GKM.HodgeDegreeZeroFullCoefficientReplay"
+        ],
+        "elapsed_seconds": 17.485,
+        "exit_code": 0,
+        "log": "/tmp/gw_hodge_coefficients_integrated_build_20261005.log",
+        "resource_note": "Wrapper child usage may omit descendants on interrupted runs.",
+        "status": "passed"
+      },
+      "metadata_source": {
+        "path": "/tmp/gw_hodge_coefficients_integrated_build_20261005.json",
+        "sha256": "6831261bc2af14025c9827d90ba9400b201b6eb482596b11d7bea5140cef7ae8"
+      }
+    },
+    "integrated_python": [
+      {
+        "log": {
+          "path": "/tmp/gw_hodge_c00_integrated_python_20261005.log",
+          "sha256": "c2139c8dbbd22e9018b4cef31a7bdb4eb92c6fd142081852d73d15378228e853",
+          "text": "..........\n----------------------------------------------------------------------\nRan 10 tests in 0.380s\n\nOK\n"
+        },
+        "metadata": {
+          "children_ru_maxrss_raw": 28016640,
+          "children_ru_maxrss_unit": "bytes",
+          "command": [
+            "python3",
+            "scripts/test_gkm_hodge_c00.py"
+          ],
+          "elapsed_seconds": 0.487,
+          "exit_code": 0,
+          "log": "/tmp/gw_hodge_c00_integrated_python_20261005.log",
+          "resource_note": "Wrapper child usage may omit descendants on interrupted runs.",
+          "status": "passed"
+        },
+        "metadata_source": {
+          "path": "/tmp/gw_hodge_c00_integrated_python_20261005.json",
+          "sha256": "2f2fa0332bef2d5181aef36ba0236a871f8e5b2adac35f3efa8b9376d5493042"
+        },
+        "test_count": 10,
+        "test_source_sha256": "35de87af971507956a262a5c57407b159e2396e7b9696011a316fce798cbbc48",
+        "unittest_elapsed_seconds": 0.38
+      },
+      {
+        "log": {
+          "path": "/tmp/gw_hodge_full_coefficients_integrated_python_20261005.log",
+          "sha256": "e2e22fc81da8892d07e36305c973001f936d1ed61f3d71fbb466a8d1c8a909f8",
+          "text": "........\n----------------------------------------------------------------------\nRan 8 tests in 2.166s\n\nOK\n"
+        },
+        "metadata": {
+          "children_ru_maxrss_raw": 29179904,
+          "children_ru_maxrss_unit": "bytes",
+          "command": [
+            "python3",
+            "scripts/test_gkm_hodge_coefficients.py"
+          ],
+          "elapsed_seconds": 2.252,
+          "exit_code": 0,
+          "log": "/tmp/gw_hodge_full_coefficients_integrated_python_20261005.log",
+          "resource_note": "Wrapper child usage may omit descendants on interrupted runs.",
+          "status": "passed"
+        },
+        "metadata_source": {
+          "path": "/tmp/gw_hodge_full_coefficients_integrated_python_20261005.json",
+          "sha256": "1a811f65019aa29e02fdec6a79ebf053f2dfa978f7eedc8e83a992f0eba0ae75"
+        },
+        "test_count": 8,
+        "test_source_sha256": "c67a9914e7eda27ad90b1cbb06914013fa8c1b62780d73da108d665a3bb2fe75",
+        "unittest_elapsed_seconds": 2.166
+      }
+    ]
+  }
+}

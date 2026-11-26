@@ -1,0 +1,113 @@
+{
+  "status": "passed",
+  "scope": "fixed unmarked genus-two exchange",
+  "report_sha256": "142c06e43218a470cd90daee0064ea6c2b49bbe37dba0372441c8ee4a75244b0",
+  "sage_required": false,
+  "cases": [
+    {
+      "case": "valid",
+      "parser": "accepted",
+      "kernel": "accepted"
+    },
+    {
+      "case": "alternative_witness",
+      "parser": "accepted",
+      "kernel": "accepted"
+    },
+    {
+      "case": "equivalent_loop_branch_swap",
+      "parser": "accepted",
+      "kernel": "accepted"
+    },
+    {
+      "case": "wrong_witness",
+      "parser": "accepted",
+      "kernel": "rejected"
+    },
+    {
+      "case": "wrong_row_coefficient",
+      "parser": "accepted",
+      "kernel": "rejected"
+    },
+    {
+      "case": "wrong_generator_references",
+      "parser": "accepted",
+      "kernel": "rejected"
+    },
+    {
+      "case": "wrong_graph_incidence",
+      "parser": "accepted",
+      "kernel": "rejected"
+    },
+    {
+      "case": "wrong_conversion",
+      "parser": "accepted",
+      "kernel": "rejected"
+    },
+    {
+      "case": "wrong_inverse_conversion",
+      "parser": "accepted",
+      "kernel": "rejected"
+    },
+    {
+      "case": "wrong_source_row",
+      "parser": "accepted",
+      "kernel": "rejected"
+    },
+    {
+      "case": "wrong_requested_expression",
+      "parser": "accepted",
+      "kernel": "rejected"
+    },
+    {
+      "case": "wrong_source_request",
+      "parser": "accepted",
+      "kernel": "rejected"
+    },
+    {
+      "case": "wrong_column_factor",
+      "parser": "accepted",
+      "kernel": "rejected"
+    },
+    {
+      "case": "boolean_schema_version",
+      "parser": "rejected"
+    },
+    {
+      "case": "wrong_external_label",
+      "parser": "rejected"
+    },
+    {
+      "case": "wrong_locus",
+      "parser": "rejected"
+    },
+    {
+      "case": "wrong_environment",
+      "parser": "rejected"
+    },
+    {
+      "case": "missing_rows",
+      "parser": "rejected"
+    },
+    {
+      "case": "zero_denominator",
+      "parser": "rejected"
+    },
+    {
+      "case": "negative_denominator",
+      "parser": "rejected"
+    },
+    {
+      "case": "noninteger_coefficient",
+      "parser": "rejected"
+    },
+    {
+      "case": "code_in_rational",
+      "parser": "rejected"
+    },
+    {
+      "case": "duplicate_json_key",
+      "parser": "rejected"
+    }
+  ]
+}

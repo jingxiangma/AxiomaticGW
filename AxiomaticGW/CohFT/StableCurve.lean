@@ -148,6 +148,11 @@ def optionSumEquivLeft (S T : Type*) : Option (S ⊕ T) ≃ Option S ⊕ T where
   left_inv x := by rcases x with _ | (s | t) <;> rfl
   right_inv x := by rcases x with (_ | s) | t <;> rfl
 
+/-- Move a newly adjoined label to the right component of a disjoint union. -/
+def optionSumEquivRight (S T : Type*) : Option (S ⊕ T) ≃ S ⊕ Option T :=
+  ((Equiv.sumComm S T).optionCongr.trans (optionSumEquivLeft T S)).trans
+    (Equiv.sumComm (Option T) S)
+
 /-- The permutation of four labels comparing the `12|34` and `13|24`
 boundary presentations in WDVV notation. -/
 def wdvvPermutation : Equiv.Perm (Fin 2 ⊕ Fin 2) :=

@@ -1,0 +1,348 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-05",
+  "recorded_utc": "2026-10-05T04:30:46.894432+00:00",
+  "status": "targeted_generic_cache_acceptance_full_project_and_numeric_certificates_pending",
+  "source_sha256": {
+    "AxiomaticGW/Surfaces/LowGenusPointCache.lean": "59afffd9f4b3196dfeb650f08ff8bccdc0dc6c0b3e4c075a010aa45f6658fc1d",
+    "AxiomaticGWTest/Surfaces/LowGenusPointCache.lean": "3313940c5ae6a7cbd46f5362782cb547d4d54b6584cf3063c9ec9c4078c235d9",
+    "AxiomaticGW/Surfaces/GenusTwoL24PointCache.lean": "8250f4a0abd5d7d4534938821c2e9b7687dd85a2f55240983d2050d792f93a30",
+    "AxiomaticGW/Surfaces/GenusTwoResidualPointCache.lean": "afe14a2bbca80663dd32397b1486040ce0aae5dc3b9ddbbf7fc303cc639625a5",
+    "AxiomaticGW/Surfaces/GenusTwoBlowupPointCache.lean": "98be3f142eca9d0e6ac9f47aa55e5d712bad4611712ff4472e97f10e4f9075f5",
+    "AxiomaticGWTest/Surfaces/GenusTwoBlowupPointCache.lean": "5cc2b632feba5546e15642e132b03aa172a0b64a148be0709a1f8d1c0f90a39a"
+  },
+  "commands": [
+    {
+      "command": [
+        "lake",
+        "build",
+        "AxiomaticGW.Surfaces.GenusTwoResidualPointCache",
+        "AxiomaticGWTest.Surfaces.LowGenusPointCache",
+        "AxiomaticGWTest.Surfaces.GenusTwoBlowupPointCache"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "elapsed_seconds": 7.235,
+      "log": "/tmp/gw_point_cache_core_integrated_build_20261005.log",
+      "children_ru_maxrss_raw": 1331953664,
+      "children_ru_maxrss_unit": "bytes",
+      "resource_note": "Wrapper child usage may omit descendants on interrupted runs.",
+      "log_sha256": "3e7d3c0d8ef1d5502f1766c1999e043b9089de038bf34762754cf9c05c24ba63"
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--memory=2048",
+        "/tmp/gw_point_cache_core_integrated_audit_20261005.lean"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "elapsed_seconds": 2.252,
+      "log": "/tmp/gw_point_cache_core_integrated_audit_20261005.log",
+      "children_ru_maxrss_raw": 1450311680,
+      "children_ru_maxrss_unit": "bytes",
+      "resource_note": "Wrapper child usage may omit descendants on interrupted runs.",
+      "log_sha256": "e17705fba5f902cadfa6c75c900ee3011bc04e741fa32ba83f2171ed979b43f2"
+    }
+  ],
+  "axiom_audit": {
+    "count": 40,
+    "results": {
+      "AxiomaticGW.SurfaceLowGenusPointCache.rationalPrimary_eq": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "AxiomaticGW.SurfaceLowGenusPointCache.ellipticPrimary_eq": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "AxiomaticGW.SurfaceLowGenusPointCache.rationalFuel_eq": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "AxiomaticGW.SurfaceLowGenusPointCache.rationalValue_eq": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "AxiomaticGW.SurfaceLowGenusPointCache.ellipticStep_eq": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "AxiomaticGW.SurfaceLowGenusPointCache.ellipticFuel_eq": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "AxiomaticGW.SurfaceLowGenusPointCache.ellipticValue_eq": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "AxiomaticGW.SurfaceLowGenusPointCache.componentValue_eq": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "AxiomaticGWTest.Surfaces.LowGenusPointCache.rational_classical": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "AxiomaticGWTest.Surfaces.LowGenusPointCache.elliptic_classical": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "AxiomaticGWTest.Surfaces.LowGenusPointCache.rational_count_guard": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "AxiomaticGWTest.Surfaces.LowGenusPointCache.elliptic_count_guard": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "AxiomaticGWTest.Surfaces.LowGenusPointCache.signed_exceptional_factor": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "AxiomaticGWTest.Surfaces.LowGenusPointCache.primary_unit_zero": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "AxiomaticGWTest.Surfaces.LowGenusPointCache.full_curve_keys": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "AxiomaticGWTest.Surfaces.LowGenusPointCache.arbitrary_rational_fuel": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "AxiomaticGWTest.Surfaces.LowGenusPointCache.arbitrary_elliptic_fuel": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "AxiomaticGWTest.Surfaces.LowGenusPointCache.unsupported_genus": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "AxiomaticGW.SurfaceGenusTwo.constantVertexWithPoints_eq": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "AxiomaticGW.SurfaceGenusTwo.guardedConstantPointContractionWithPoints_eq": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "AxiomaticGW.L24Relation.pointConstantWithPoints_eq": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "AxiomaticGW.L24Relation.pointConstantWithPoints_eq_original": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "AxiomaticGW.L24Relation.pointConstantWithPoints_eq_normalized": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "AxiomaticGW.SurfaceGenusTwo.residualTermsWithPoints_eq": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "AxiomaticGW.SurfaceGenusTwo.cachedLowerValueWithPoints_of_missing": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "AxiomaticGW.SurfaceGenusTwo.cachedLowerValueWithPoints_of_present": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "AxiomaticGW.SurfaceGenusTwo.cachedLowerValueWithPoints_eq_cached": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "AxiomaticGW.SurfaceGenusTwo.cachedLowerValueWithPoints_eq": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "AxiomaticGW.SurfaceGenusTwo.constantVertexWithPointCache_eq": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "AxiomaticGW.SurfaceGenusTwo.guardedConstantPointContractionWithPointCache_eq": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "AxiomaticGW.L24Relation.pointConstantWithPointCache_eq_guarded": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "AxiomaticGW.L24Relation.pointConstantWithPointCache_eq": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "AxiomaticGW.L24Relation.pointConstantWithPointCache_eq_normalized": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "AxiomaticGW.SurfaceGenusTwoBlowupPointCache.constant_eq": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "AxiomaticGWTest.Surfaces.GenusTwoBlowupPointCache.signed_full_class": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "AxiomaticGWTest.Surfaces.GenusTwoBlowupPointCache.zero_class_all_families": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "AxiomaticGWTest.Surfaces.GenusTwoBlowupPointCache.signed_h_dispatch": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "AxiomaticGWTest.Surfaces.GenusTwoBlowupPointCache.foreign_exceptional_dispatch": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "AxiomaticGWTest.Surfaces.GenusTwoBlowupPointCache.primary_four_weights": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "AxiomaticGW.SurfaceGenusTwo.ResidualCache.ofQueriesWithPoints": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "unexpected": []
+  },
+  "scope": "Targeted review of the original low-genus recursions, constant vertices, selected H/P/N/K scalar dispatch, and existing ResidualCache. Not a comprehensive geometric or repository audit.",
+  "mathematical_effect": {
+    "existing_theorem_statements_changed": false,
+    "new_numerical_seeds": 0,
+    "new_geometric_hypotheses": 0,
+    "new_global_simp_rules": 0,
+    "new_global_instances": 0,
+    "required_backend_inputs": "Global equalities to the existing genus-zero and genus-one point evaluators.",
+    "preserved": "All fuel approximations, full curve keys, class-zero formulas, psi expansions, dimension/genus guards, signed point pullbacks, H/P/N/K weights and missing-cache fallback."
+  },
+  "findings": [
+    {
+      "severity": "medium",
+      "issue": "The original low-genus ancestor recursion repeatedly evaluates already certified primary point values.",
+      "correction": "An upward evaluator replaces only primary terminals and proves function equality at every fuel. It uses the existing residual cache for certified component reuse."
+    },
+    {
+      "severity": "low",
+      "issue": "A staged signed-class consumer left the target implicit where Fin2 did not determine it.",
+      "correction": "Explicit surface arguments; same theorem statement and proof mechanism."
+    }
+  ],
+  "static_scan": {
+    "issues": [],
+    "files": [
+      "AxiomaticGW/Surfaces/LowGenusPointCache.lean",
+      "AxiomaticGWTest/Surfaces/LowGenusPointCache.lean",
+      "AxiomaticGW/Surfaces/GenusTwoL24PointCache.lean",
+      "AxiomaticGW/Surfaces/GenusTwoResidualPointCache.lean",
+      "AxiomaticGW/Surfaces/GenusTwoBlowupPointCache.lean",
+      "AxiomaticGWTest/Surfaces/GenusTwoBlowupPointCache.lean"
+    ]
+  },
+  "native_diagnostic": {
+    "status": "native_candidate_complete_not_kernel_acceptance",
+    "query": {
+      "target": "F1",
+      "source_curve": [
+        1,
+        1
+      ],
+      "added_points": 1,
+      "labels": [
+        "H",
+        "E0",
+        "E0",
+        "E0"
+      ]
+    },
+    "complete_terms": 721,
+    "chunk_counts": [
+      409,
+      312
+    ],
+    "weighted_chunk_sums": [
+      [
+        1361,
+        67392
+      ],
+      [
+        -1127,
+        67392
+      ]
+    ],
+    "weighted_sum": [
+      1,
+      288
+    ],
+    "source_logs": [
+      {
+        "path": "/tmp/gw_blowup_h_constant_cached_profile_v1_20261005.log",
+        "sha256": "eb0eae37ef69e946b9b9fc00243d6c9a9f5de58412fdeb1a7ec2b14d8be54c20"
+      },
+      {
+        "path": "/tmp/gw_blowup_h_constant_cached_tail_v1_20261005.log",
+        "sha256": "5b3c17cb1664d372a5942969ddb462363fd7cd65fc76123fe952ee3043331ad1"
+      }
+    ],
+    "coverage": "positions0through720exactlyonce; distinct heldindices; exact coefficient-times-contraction checked for eachterm"
+  },
+  "remaining": [
+    "Finish the existing GenusOneBl2Table rebuild and validate the all-target benchmark backend and L24/residual consumers.",
+    "Kernel-certify the positive-degree constants and complete unchanged energy-twelve and few-marking suites.",
+    "Complete full project build, tests and lint.",
+    "Actual class-valued semisimple GKM realization and the offline research release remain mandatory."
+  ],
+  "next_priority": "Kernel-check the selected 48 lower-genus component values and bind their cached contraction to the first F1 H constant.",
+  "repository_actions": {
+    "producer_edits": false,
+    "commit": false,
+    "push": false
+  }
+}

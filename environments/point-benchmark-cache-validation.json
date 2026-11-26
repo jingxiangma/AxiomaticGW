@@ -1,0 +1,285 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-05",
+  "status": "targeted_repository_validation_passed_full_project_pending",
+  "scope": "Exact certified genus-zero and genus-one point backends on all three fixed surfaces, with original evaluator fallback outside energy twelve.",
+  "source_sha256": {
+    "AxiomaticGW/Surfaces/PointBenchmarkCache.lean": "7f31c407c6fd5c0cd4acf00cc4ae601d81aa27daf0f2adaa67a431802159ca1a",
+    "AxiomaticGWTest/Surfaces/PointBenchmarkCache.lean": "eb424ae5b7fa8304c1a8637f3d4fef29153a6ad756d01a5b7dc895f18a23f73c"
+  },
+  "mathematical_effect": "Two new functions equal the original well-founded point evaluators on every full curve class. No changed statement, numerical seed, geometric hypothesis, global instance or simp rule.",
+  "findings": [
+    {
+      "severity": "medium",
+      "consequence": "Repeated original primary evaluation in descendant and blowup contractions prevents practical reuse of already checked bounded tables.",
+      "correction": "Use the proved table within its bound and the original evaluator outside; prove equality as total functions."
+    }
+  ],
+  "commands": [
+    {
+      "command": [
+        "python3",
+        "/tmp/gw_root_benchmark_public_runner_20261005.py",
+        "/tmp/gw_point_benchmark_cache_final_manifest_20261005.json"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "elapsed_seconds": 6.821,
+      "log": "/tmp/gw_point_benchmark_cache_public_v1_20261005.log",
+      "children_ru_maxrss_raw": 1474756608,
+      "children_ru_maxrss_unit": "bytes",
+      "resource_note": "Wrapper child usage may omit descendants on interrupted runs.",
+      "metadata_sha256": "d891fba8227156765e58d71473b0afec3afbad5f2b09542935c596ff9fc002cc",
+      "log_sha256": "c6f3b92c49beac25dd4816bdc7d90dcfc013d2351a9f79590ffe4d74e10bf7aa",
+      "complete_log": "{\"start\": \"AxiomaticGW/Surfaces/PointBenchmarkCache.lean\", \"command\": [\"/Users/jma/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lean\", \"--memory=2048\", \"--root=/private/tmp/gw_blowup_public_probe_20261004\", \"-o\", \"/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGW/Surfaces/PointBenchmarkCache.olean\", \"/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGW/Surfaces/PointBenchmarkCache.lean\"]}\n{\"start\": \"AxiomaticGWTest/Surfaces/PointBenchmarkCache.lean\", \"command\": [\"/Users/jma/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lean\", \"--memory=2048\", \"--root=/private/tmp/gw_blowup_public_probe_20261004\", \"-o\", \"/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGWTest/Surfaces/PointBenchmarkCache.olean\", \"/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGWTest/Surfaces/PointBenchmarkCache.lean\"]}\n'AxiomaticGW.SurfacePointBenchmarkCache.genusZero_eq' depends on axioms: [propext, Classical.choice, Quot.sound]\n'AxiomaticGW.SurfacePointBenchmarkCache.genusOne_eq' depends on axioms: [propext, Classical.choice, Quot.sound]\n'AxiomaticGWTest.Surfaces.PointBenchmarkCache.cached_scalar_constant' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGWTest.Surfaces.PointBenchmarkCache.energy_thirteen_rational_fallback' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGWTest.Surfaces.PointBenchmarkCache.energy_thirteen_elliptic_fallback' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGWTest.Surfaces.PointBenchmarkCache.equal_energy_full_keys' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGWTest.Surfaces.PointBenchmarkCache.auxiliary_zero_class' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n{\"status\": \"passed\", \"manifest\": \"/private/tmp/gw_point_benchmark_cache_final_manifest_20261005.json\", \"commands\": [{\"command\": [\"/Users/jma/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lean\", \"--memory=2048\", \"--root=/private/tmp/gw_blowup_public_probe_20261004\", \"-o\", \"/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGW/Surfaces/PointBenchmarkCache.olean\", \"/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGW/Surfaces/PointBenchmarkCache.lean\"], \"exit_code\": 0, \"elapsed_seconds\": 2.116}, {\"command\": [\"/Users/jma/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lean\", \"--memory=2048\", \"--root=/private/tmp/gw_blowup_public_probe_20261004\", \"-o\", \"/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGWTest/Surfaces/PointBenchmarkCache.olean\", \"/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGWTest/Surfaces/PointBenchmarkCache.lean\"], \"exit_code\": 0, \"elapsed_seconds\": 1.908}, {\"command\": [\"/Users/jma/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lean\", \"--memory=2048\", \"--root=/private/tmp/gw_blowup_public_probe_20261004\", \"/private/tmp/gw_blowup_public_probe_20261004/RootBenchmarkAudit.lean\"], \"exit_code\": 0, \"elapsed_seconds\": 1.881}], \"elapsed_seconds\": 5.905, \"isolated_root\": \"/private/tmp/gw_blowup_public_probe_20261004\", \"scope\": \"Exact source modules and separate public imports; no repository edits\"}\n"
+    },
+    {
+      "command": [
+        "lake",
+        "build",
+        "AxiomaticGW.Surfaces.PointBenchmarkCache",
+        "AxiomaticGWTest.Surfaces.PointBenchmarkCache"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "elapsed_seconds": 4.291,
+      "log": "/tmp/gw_point_benchmark_cache_integrated_build_20261005.log",
+      "children_ru_maxrss_raw": 1323679744,
+      "children_ru_maxrss_unit": "bytes",
+      "resource_note": "Wrapper child usage may omit descendants on interrupted runs.",
+      "metadata_sha256": "e48f0973df78b27d2fb4e3974436a400613a965a826f792ee001ce4b431f1f50",
+      "log_sha256": "5fbf42fb76d2097cc0fdbfd5dc012a22e17788cbabd6193580f8c4b9a5af28c4",
+      "complete_log": "\u2714 [2854/2855] Built AxiomaticGW.Surfaces.PointBenchmarkCache (1.6s)\n\u2714 [2855/2855] Built AxiomaticGWTest.Surfaces.PointBenchmarkCache (1.3s)\nBuild completed successfully (2855 jobs).\n"
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--memory=2048",
+        "/tmp/gw_point_benchmark_cache_integrated_audit_20261005.lean"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "elapsed_seconds": 2.033,
+      "log": "/tmp/gw_point_benchmark_cache_integrated_axioms_20261005.log",
+      "children_ru_maxrss_raw": 1450082304,
+      "children_ru_maxrss_unit": "bytes",
+      "resource_note": "Wrapper child usage may omit descendants on interrupted runs.",
+      "metadata_sha256": "22738205909f6bd690960dc50e1e4e0200acd16c6eafcf95cfb5986056a03e7c",
+      "log_sha256": "dbc08e2168f4a27cee92cf33dee040e65f77fbfab70dc18bd72113cc8483fa64",
+      "complete_log": "'AxiomaticGW.SurfacePointBenchmarkCache.genusZero_eq' depends on axioms: [propext, Classical.choice, Quot.sound]\n'AxiomaticGW.SurfacePointBenchmarkCache.genusOne_eq' depends on axioms: [propext, Classical.choice, Quot.sound]\n'AxiomaticGWTest.Surfaces.PointBenchmarkCache.cached_scalar_constant' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGWTest.Surfaces.PointBenchmarkCache.energy_thirteen_rational_fallback' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGWTest.Surfaces.PointBenchmarkCache.energy_thirteen_elliptic_fallback' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGWTest.Surfaces.PointBenchmarkCache.equal_energy_full_keys' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGWTest.Surfaces.PointBenchmarkCache.auxiliary_zero_class' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n"
+    },
+    {
+      "command": [
+        "/Users/jma/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lake",
+        "build",
+        "AxiomaticGW.Surfaces.Fixtures.GenusOneBl2Table"
+      ],
+      "status": "complete",
+      "exit_code": 0,
+      "elapsed_seconds": 4765.125,
+      "children_ru_maxrss_raw": 5713248256,
+      "children_ru_maxrss_unit": "bytes",
+      "log": "/tmp/gw_blowup_reconstruction_resumed_genus_one_bl2_20261005.log",
+      "scheduling_log": "/tmp/gw_blowup_reconstruction_resumed_genus_one_bl2_20261005.scheduling.jsonl",
+      "lake_pid": 77032,
+      "command_pgid": 77032,
+      "lean_executable": "/Users/jma/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lean",
+      "lake_executable": "/Users/jma/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lake",
+      "environment_overrides": {
+        "LEAN_NUM_THREADS": "1"
+      },
+      "poll_interval_seconds": 0.1,
+      "hard_spawn_limit": false,
+      "active_direct_lean_limit": 1,
+      "peak_sampled_direct_lean_rss_kib": 5579344,
+      "peak_sampled_running_direct_lean_rss_kib": 5579344,
+      "peak_sampled_running_direct_lean_count": 1,
+      "stopped_pids": [],
+      "observed_lean_children": [
+        {
+          "pid": 77088,
+          "birth": "Mon Oct 5 00:10:48 2026",
+          "command": "/Users/jma/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lean /Users/jma/Documents/formalization/axiomatic_gw/AxiomaticGW/Surfaces/Fixtures/GenusOneBl2Table.lean -o /Users/jma/Documents/formalization/axiomatic_gw/.lake/build/lib/lean/AxiomaticGW/Surfaces/Fixtures/GenusOneBl2Table.olean -i /Users/jma/Documents/formalization/axiomatic_gw/.lake/build/lib/lean/AxiomaticGW/Surfaces/Fixtures/GenusOneBl2Table.ilean -c /Users/jma/Documents/formalization/axiomatic_gw/.lake/build/ir/AxiomaticGW/Surfaces/Fixtures/GenusOneBl2Table.c --setup /Users/jma/Documents/formalization/axiomatic_gw/.lake/build/ir/AxiomaticGW/Surfaces/Fixtures/GenusOneBl2Table.setup.json --json"
+        }
+      ],
+      "received_signal": null,
+      "runner_error": null,
+      "cleanup_errors": [],
+      "logging_errors": [],
+      "events": [
+        {
+          "elapsed_seconds": 0.016,
+          "action": "command_started",
+          "command": [
+            "/Users/jma/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lake",
+            "build",
+            "AxiomaticGW.Surfaces.Fixtures.GenusOneBl2Table"
+          ],
+          "lake_pid": 77032,
+          "pgid": 77032
+        }
+      ],
+      "metadata_sha256": "3b55ca2356cf16c71ab28e3c95ec7ce30c93a4e1d44fdb8f0bc86891ccce591c",
+      "log_sha256": "26e646134240338ca4717075dc996287211d77869fd3df2b78223523784dc0de",
+      "complete_log": "\u2714 [2683/2683] Built AxiomaticGW.Surfaces.Fixtures.GenusOneBl2Table (5942s)\nBuild completed successfully (2683 jobs).\n"
+    },
+    {
+      "command": [
+        "lake",
+        "build",
+        "AxiomaticGW.Surfaces.GenusOneBenchmarks"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "elapsed_seconds": 1.885,
+      "log": "/tmp/gw_blowup_reconstruction_genus_one_benchmarks_v3_20261005.log",
+      "children_ru_maxrss_raw": 724467712,
+      "children_ru_maxrss_unit": "bytes",
+      "resource_note": "Wrapper child usage may omit descendants on interrupted runs.",
+      "metadata_sha256": "710078abf3263cd6c186fae10114b98fb5339d5a4cfccac214c709bc21ec0c49",
+      "log_sha256": "95a519d29e1775108c8d600e5d11e37890db84add7f670852d4b322ddd0aec7a",
+      "complete_log": "Build completed successfully (2689 jobs).\n"
+    }
+  ],
+  "axiom_audit": {
+    "AxiomaticGW.SurfacePointBenchmarkCache.genusZero_eq": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "AxiomaticGW.SurfacePointBenchmarkCache.genusOne_eq": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "AxiomaticGWTest.Surfaces.PointBenchmarkCache.cached_scalar_constant": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "AxiomaticGWTest.Surfaces.PointBenchmarkCache.energy_thirteen_rational_fallback": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "AxiomaticGWTest.Surfaces.PointBenchmarkCache.energy_thirteen_elliptic_fallback": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "AxiomaticGWTest.Surfaces.PointBenchmarkCache.equal_energy_full_keys": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "AxiomaticGWTest.Surfaces.PointBenchmarkCache.auxiliary_zero_class": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "audit_source": "module\n\npublic import AxiomaticGW.Surfaces.PointBenchmarkCache\npublic import AxiomaticGWTest.Surfaces.PointBenchmarkCache\n#print axioms AxiomaticGW.SurfacePointBenchmarkCache.genusZero_eq\n#print axioms AxiomaticGW.SurfacePointBenchmarkCache.genusOne_eq\n#print axioms AxiomaticGWTest.Surfaces.PointBenchmarkCache.cached_scalar_constant\n#print axioms AxiomaticGWTest.Surfaces.PointBenchmarkCache.energy_thirteen_rational_fallback\n#print axioms AxiomaticGWTest.Surfaces.PointBenchmarkCache.energy_thirteen_elliptic_fallback\n#print axioms AxiomaticGWTest.Surfaces.PointBenchmarkCache.equal_energy_full_keys\n#print axioms AxiomaticGWTest.Surfaces.PointBenchmarkCache.auxiliary_zero_class\n",
+  "regressions": [
+    "Unchanged scalar constant for arbitrary target, exceptional shift and state",
+    "Original rational and elliptic fallback at energy thirteen",
+    "Distinct full classes with equal energy remain distinct queries",
+    "Auxiliary zero-class conventions preserved"
+  ],
+  "infrastructure_failures": [
+    {
+      "command": [
+        "/Users/jma/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lake",
+        "build",
+        "AxiomaticGW.Surfaces.GenusOneBenchmarks"
+      ],
+      "status": "preflight_failed_no_command_started",
+      "exit_code": null,
+      "elapsed_seconds": 0.001,
+      "children_ru_maxrss_raw": 1343488,
+      "children_ru_maxrss_unit": "bytes",
+      "log": "/tmp/gw_blowup_reconstruction_resumed_genus_one_benchmarks_20261005.log",
+      "scheduling_log": "/tmp/gw_blowup_reconstruction_resumed_genus_one_benchmarks_20261005.scheduling.jsonl",
+      "lake_pid": null,
+      "command_pgid": null,
+      "lean_executable": "/Users/jma/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lean",
+      "lake_executable": "/Users/jma/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lake",
+      "environment_overrides": {
+        "LEAN_NUM_THREADS": "1"
+      },
+      "poll_interval_seconds": 0.1,
+      "hard_spawn_limit": false,
+      "active_direct_lean_limit": 1,
+      "peak_sampled_direct_lean_rss_kib": 0,
+      "peak_sampled_running_direct_lean_rss_kib": 0,
+      "peak_sampled_running_direct_lean_count": 0,
+      "stopped_pids": [],
+      "observed_lean_children": [],
+      "received_signal": null,
+      "runner_error": "PermissionError(1, 'Operation not permitted')",
+      "cleanup_errors": [],
+      "logging_errors": [],
+      "events": [],
+      "complete_log": ""
+    },
+    {
+      "command": [
+        "/Users/jma/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lake",
+        "build",
+        "AxiomaticGW.Surfaces.GenusOneBenchmarks"
+      ],
+      "status": "runner_failed",
+      "exit_code": null,
+      "elapsed_seconds": 4.774,
+      "children_ru_maxrss_raw": 3637248,
+      "children_ru_maxrss_unit": "bytes",
+      "log": "/tmp/gw_blowup_reconstruction_resumed_genus_one_benchmarks_v2_20261005.log",
+      "scheduling_log": "/tmp/gw_blowup_reconstruction_resumed_genus_one_benchmarks_v2_20261005.scheduling.jsonl",
+      "lake_pid": 23873,
+      "command_pgid": 23873,
+      "lean_executable": "/Users/jma/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lean",
+      "lake_executable": "/Users/jma/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lake",
+      "environment_overrides": {
+        "LEAN_NUM_THREADS": "1"
+      },
+      "poll_interval_seconds": 0.1,
+      "hard_spawn_limit": false,
+      "active_direct_lean_limit": 1,
+      "peak_sampled_direct_lean_rss_kib": 1265232,
+      "peak_sampled_running_direct_lean_rss_kib": 1265232,
+      "peak_sampled_running_direct_lean_count": 1,
+      "stopped_pids": [],
+      "observed_lean_children": [
+        {
+          "pid": 23940,
+          "birth": "Mon Oct 5 01:54:29 2026",
+          "command": "/Users/jma/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lean /Users/jma/Documents/formalization/axiomatic_gw/AxiomaticGW/Surfaces/GenusOneBenchmarks.lean -o /Users/jma/Documents/formalization/axiomatic_gw/.lake/build/lib/lean/AxiomaticGW/Surfaces/GenusOneBenchmarks.olean -i /Users/jma/Documents/formalization/axiomatic_gw/.lake/build/lib/lean/AxiomaticGW/Surfaces/GenusOneBenchmarks.ilean -c /Users/jma/Documents/formalization/axiomatic_gw/.lake/build/ir/AxiomaticGW/Surfaces/GenusOneBenchmarks.c --setup /Users/jma/Documents/formalization/axiomatic_gw/.lake/build/ir/AxiomaticGW/Surfaces/GenusOneBenchmarks.setup.json --json"
+        }
+      ],
+      "received_signal": null,
+      "runner_error": "RuntimeError('Owned Lake PID identity changed')",
+      "cleanup_errors": [],
+      "logging_errors": [],
+      "events": [
+        {
+          "elapsed_seconds": 0.026,
+          "action": "command_started",
+          "command": [
+            "/Users/jma/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lake",
+            "build",
+            "AxiomaticGW.Surfaces.GenusOneBenchmarks"
+          ],
+          "lake_pid": 23873,
+          "pgid": 23873
+        }
+      ],
+      "complete_log": "\u2714 [2689/2689] Built AxiomaticGW.Surfaces.GenusOneBenchmarks (1.5s)\nBuild completed successfully (2689 jobs).\n"
+    }
+  ],
+  "remaining": [
+    "Full project build, test and lint pending.",
+    "Complete fixed genus-two numerical suites pending.",
+    "Actual geometric class-valued semisimple GKM bridge and research release pending."
+  ]
+}

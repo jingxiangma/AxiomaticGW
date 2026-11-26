@@ -1,0 +1,806 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-05",
+  "status": "targeted_module_acceptance_full_project_and_numeric_suites_pending",
+  "goal_status": "active",
+  "scope": [
+    "AxiomaticGW/Surfaces/GenusTwoBlowupCertificate.lean",
+    "AxiomaticGWTest/Surfaces/GenusTwoBlowupCertificate.lean",
+    "AxiomaticGW/Surfaces/GenusTwoBlowupScalar.lean",
+    "AxiomaticGWTest/Surfaces/GenusTwoBlowupScalar.lean",
+    "AxiomaticGW/Surfaces/GenusTwoBlowupDependencyEnergy.lean",
+    "AxiomaticGWTest/Surfaces/GenusTwoBlowupDependencyEnergy.lean",
+    "AxiomaticGW/Surfaces/GenusTwoBlowupBoundedCertificate.lean",
+    "AxiomaticGWTest/Surfaces/GenusTwoBlowupBoundedCertificate.lean",
+    "AxiomaticGW/Surfaces/GenusTwoBlowupOrderedCertificate.lean",
+    "AxiomaticGWTest/Surfaces/GenusTwoBlowupOrderedCertificate.lean",
+    "AxiomaticGW/Surfaces/GenusTwoL24ConstantGuard.lean",
+    "AxiomaticGWTest/Surfaces/GenusTwoL24ConstantGuard.lean"
+  ],
+  "source_sha256": {
+    "AxiomaticGW/Surfaces/GenusTwoBlowupCertificate.lean": "66212997eb52647796494f55e32d55bf0cf174cf58487d64e6c6cc6c5792f077",
+    "AxiomaticGWTest/Surfaces/GenusTwoBlowupCertificate.lean": "b6f533019f5b5f3a4412e2401fb2f5dbd7921fc95c5700951028c9fb9dece1fd",
+    "AxiomaticGW/Surfaces/GenusTwoBlowupScalar.lean": "f5238152c732dafcffbf9a6cfa16617832a1055eaa8d7746b962c0079542489a",
+    "AxiomaticGWTest/Surfaces/GenusTwoBlowupScalar.lean": "bf672d76f6f1d58d741a5bf28a5baa727aa76cc27438d7b68b8c86e9d3e92c4b",
+    "AxiomaticGW/Surfaces/GenusTwoBlowupDependencyEnergy.lean": "aed0c9d847d2e961516afeb63a665a2f546d10475db70b9d501800de378e9246",
+    "AxiomaticGWTest/Surfaces/GenusTwoBlowupDependencyEnergy.lean": "19c534e7dacf540a69f32af50807ebd059fd6288ecae0108dcb4dba72cec12dc",
+    "AxiomaticGW/Surfaces/GenusTwoBlowupBoundedCertificate.lean": "3b9abf38c1770d699938d0b8ec41c3b9c7b0621e5c97087d1251d5e9972788e7",
+    "AxiomaticGWTest/Surfaces/GenusTwoBlowupBoundedCertificate.lean": "5d826d8928852b4d909f49620c3cae96be3707de4e7ebe5aa141e97fdca0985e",
+    "AxiomaticGW/Surfaces/GenusTwoBlowupOrderedCertificate.lean": "626d050a9105f414300b8a904bbf1bd8fc8b280d3995d7567410ef640fe0ee5d",
+    "AxiomaticGWTest/Surfaces/GenusTwoBlowupOrderedCertificate.lean": "a3152d91b550d8b2dcc262b6ca45a9634da9a90b69ac2c1a5c0d339ccf0825b5",
+    "AxiomaticGW/Surfaces/GenusTwoL24ConstantGuard.lean": "743e6d8fc02203f6650c986b278b7a423ae7e876221e386a754251169c8781d5",
+    "AxiomaticGWTest/Surfaces/GenusTwoL24ConstantGuard.lean": "497afe794ec65346db671568bacbfa470c8aead7d48d99261bc65f09705dd030"
+  },
+  "root_imports_added": [
+    "GenusTwoBlowupCertificate",
+    "GenusTwoL24ConstantGuard",
+    "GenusTwoBlowupScalar",
+    "GenusTwoBlowupDependencyEnergy",
+    "GenusTwoBlowupBoundedCertificate",
+    "GenusTwoBlowupOrderedCertificate"
+  ],
+  "mathematical_effect": {
+    "existing_statements_changed": false,
+    "new_seeds": 0,
+    "new_geometric_hypotheses": 0,
+    "new_global_simp_rules": 0,
+    "new_global_instances": 0,
+    "scope": "Finite full-query table soundness, scalar/full-row equality, complete bounded-state dependency closure and ordered replay."
+  },
+  "validation": {
+    "build": {
+      "command": [
+        "/Users/jma/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lake",
+        "build",
+        "AxiomaticGW.Surfaces.GenusTwoBlowupOrderedCertificate",
+        "AxiomaticGWTest.Surfaces.GenusTwoBlowupCertificate",
+        "AxiomaticGWTest.Surfaces.GenusTwoL24ConstantGuard",
+        "AxiomaticGWTest.Surfaces.GenusTwoBlowupScalar",
+        "AxiomaticGWTest.Surfaces.GenusTwoBlowupDependencyEnergy",
+        "AxiomaticGWTest.Surfaces.GenusTwoBlowupBoundedCertificate",
+        "AxiomaticGWTest.Surfaces.GenusTwoBlowupOrderedCertificate"
+      ],
+      "status": "complete",
+      "exit_code": 0,
+      "elapsed_seconds": 14.965,
+      "children_ru_maxrss_raw": 1354694656,
+      "children_ru_maxrss_unit": "bytes",
+      "log": "/tmp/gw_blowup_certificate_integrated_20261005.log",
+      "scheduling_log": "/tmp/gw_blowup_certificate_integrated_20261005.scheduling.jsonl",
+      "lake_pid": 78102,
+      "command_pgid": 78102,
+      "lean_executable": "/Users/jma/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lean",
+      "lake_executable": "/Users/jma/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lake",
+      "environment_overrides": {
+        "LEAN_NUM_THREADS": "1"
+      },
+      "poll_interval_seconds": 0.1,
+      "hard_spawn_limit": false,
+      "active_direct_lean_limit": 1,
+      "peak_sampled_direct_lean_rss_kib": 1305168,
+      "peak_sampled_running_direct_lean_rss_kib": 1305168,
+      "peak_sampled_running_direct_lean_count": 1,
+      "stopped_pids": [],
+      "observed_lean_children": [
+        {
+          "pid": 78166,
+          "birth": "Mon Oct 5 00:12:22 2026",
+          "command": "/Users/jma/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lean /Users/jma/Documents/formalization/axiomatic_gw/AxiomaticGW/Surfaces/GenusTwoBlowupCertificate.lean -o /Users/jma/Documents/formalization/axiomatic_gw/.lake/build/lib/lean/AxiomaticGW/Surfaces/GenusTwoBlowupCertificate.olean -i /Users/jma/Documents/formalization/axiomatic_gw/.lake/build/lib/lean/AxiomaticGW/Surfaces/GenusTwoBlowupCertificate.ilean -c /Users/jma/Documents/formalization/axiomatic_gw/.lake/build/ir/AxiomaticGW/Surfaces/GenusTwoBlowupCertificate.c --setup /Users/jma/Documents/formalization/axiomatic_gw/.lake/build/ir/AxiomaticGW/Surfaces/GenusTwoBlowupCertificate.setup.json --json"
+        },
+        {
+          "pid": 78187,
+          "birth": "Mon Oct 5 00:12:23 2026",
+          "command": "/Users/jma/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lean /Users/jma/Documents/formalization/axiomatic_gw/AxiomaticGW/Surfaces/GenusTwoL24ConstantGuard.lean -o /Users/jma/Documents/formalization/axiomatic_gw/.lake/build/lib/lean/AxiomaticGW/Surfaces/GenusTwoL24ConstantGuard.olean -i /Users/jma/Documents/formalization/axiomatic_gw/.lake/build/lib/lean/AxiomaticGW/Surfaces/GenusTwoL24ConstantGuard.ilean -c /Users/jma/Documents/formalization/axiomatic_gw/.lake/build/ir/AxiomaticGW/Surfaces/GenusTwoL24ConstantGuard.c --setup /Users/jma/Documents/formalization/axiomatic_gw/.lake/build/ir/AxiomaticGW/Surfaces/GenusTwoL24ConstantGuard.setup.json --json"
+        },
+        {
+          "pid": 78206,
+          "birth": "Mon Oct 5 00:12:24 2026",
+          "command": "/Users/jma/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lean /Users/jma/Documents/formalization/axiomatic_gw/AxiomaticGW/Surfaces/GenusTwoBlowupDependencyEnergy.lean -o /Users/jma/Documents/formalization/axiomatic_gw/.lake/build/lib/lean/AxiomaticGW/Surfaces/GenusTwoBlowupDependencyEnergy.olean -i /Users/jma/Documents/formalization/axiomatic_gw/.lake/build/lib/lean/AxiomaticGW/Surfaces/GenusTwoBlowupDependencyEnergy.ilean -c /Users/jma/Documents/formalization/axiomatic_gw/.lake/build/ir/AxiomaticGW/Surfaces/GenusTwoBlowupDependencyEnergy.c --setup /Users/jma/Documents/formalization/axiomatic_gw/.lake/build/ir/AxiomaticGW/Surfaces/GenusTwoBlowupDependencyEnergy.setup.json --json"
+        },
+        {
+          "pid": 78223,
+          "birth": "Mon Oct 5 00:12:25 2026",
+          "command": "/Users/jma/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lean /Users/jma/Documents/formalization/axiomatic_gw/AxiomaticGW/Surfaces/GenusTwoBlowupScalar.lean -o /Users/jma/Documents/formalization/axiomatic_gw/.lake/build/lib/lean/AxiomaticGW/Surfaces/GenusTwoBlowupScalar.olean -i /Users/jma/Documents/formalization/axiomatic_gw/.lake/build/lib/lean/AxiomaticGW/Surfaces/GenusTwoBlowupScalar.ilean -c /Users/jma/Documents/formalization/axiomatic_gw/.lake/build/ir/AxiomaticGW/Surfaces/GenusTwoBlowupScalar.c --setup /Users/jma/Documents/formalization/axiomatic_gw/.lake/build/ir/AxiomaticGW/Surfaces/GenusTwoBlowupScalar.setup.json --json"
+        },
+        {
+          "pid": 78242,
+          "birth": "Mon Oct 5 00:12:26 2026",
+          "command": "/Users/jma/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lean /Users/jma/Documents/formalization/axiomatic_gw/AxiomaticGWTest/Surfaces/GenusTwoBlowupCertificate.lean -o /Users/jma/Documents/formalization/axiomatic_gw/.lake/build/lib/lean/AxiomaticGWTest/Surfaces/GenusTwoBlowupCertificate.olean -i /Users/jma/Documents/formalization/axiomatic_gw/.lake/build/lib/lean/AxiomaticGWTest/Surfaces/GenusTwoBlowupCertificate.ilean -c /Users/jma/Documents/formalization/axiomatic_gw/.lake/build/ir/AxiomaticGWTest/Surfaces/GenusTwoBlowupCertificate.c --setup /Users/jma/Documents/formalization/axiomatic_gw/.lake/build/ir/AxiomaticGWTest/Surfaces/GenusTwoBlowupCertificate.setup.json --json"
+        },
+        {
+          "pid": 78257,
+          "birth": "Mon Oct 5 00:12:27 2026",
+          "command": "/Users/jma/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lean /Users/jma/Documents/formalization/axiomatic_gw/AxiomaticGW/Surfaces/GenusTwoBlowupBoundedCertificate.lean -o /Users/jma/Documents/formalization/axiomatic_gw/.lake/build/lib/lean/AxiomaticGW/Surfaces/GenusTwoBlowupBoundedCertificate.olean -i /Users/jma/Documents/formalization/axiomatic_gw/.lake/build/lib/lean/AxiomaticGW/Surfaces/GenusTwoBlowupBoundedCertificate.ilean -c /Users/jma/Documents/formalization/axiomatic_gw/.lake/build/ir/AxiomaticGW/Surfaces/GenusTwoBlowupBoundedCertificate.c --setup /Users/jma/Documents/formalization/axiomatic_gw/.lake/build/ir/AxiomaticGW/Surfaces/GenusTwoBlowupBoundedCertificate.setup.json --json"
+        },
+        {
+          "pid": 78282,
+          "birth": "Mon Oct 5 00:12:28 2026",
+          "command": "/Users/jma/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lean /Users/jma/Documents/formalization/axiomatic_gw/AxiomaticGWTest/Surfaces/GenusTwoL24ConstantGuard.lean -o /Users/jma/Documents/formalization/axiomatic_gw/.lake/build/lib/lean/AxiomaticGWTest/Surfaces/GenusTwoL24ConstantGuard.olean -i /Users/jma/Documents/formalization/axiomatic_gw/.lake/build/lib/lean/AxiomaticGWTest/Surfaces/GenusTwoL24ConstantGuard.ilean -c /Users/jma/Documents/formalization/axiomatic_gw/.lake/build/ir/AxiomaticGWTest/Surfaces/GenusTwoL24ConstantGuard.c --setup /Users/jma/Documents/formalization/axiomatic_gw/.lake/build/ir/AxiomaticGWTest/Surfaces/GenusTwoL24ConstantGuard.setup.json --json"
+        },
+        {
+          "pid": 78299,
+          "birth": "Mon Oct 5 00:12:29 2026",
+          "command": "/Users/jma/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lean /Users/jma/Documents/formalization/axiomatic_gw/AxiomaticGW/Surfaces/GenusTwoBlowupOrderedCertificate.lean -o /Users/jma/Documents/formalization/axiomatic_gw/.lake/build/lib/lean/AxiomaticGW/Surfaces/GenusTwoBlowupOrderedCertificate.olean -i /Users/jma/Documents/formalization/axiomatic_gw/.lake/build/lib/lean/AxiomaticGW/Surfaces/GenusTwoBlowupOrderedCertificate.ilean -c /Users/jma/Documents/formalization/axiomatic_gw/.lake/build/ir/AxiomaticGW/Surfaces/GenusTwoBlowupOrderedCertificate.c --setup /Users/jma/Documents/formalization/axiomatic_gw/.lake/build/ir/AxiomaticGW/Surfaces/GenusTwoBlowupOrderedCertificate.setup.json --json"
+        },
+        {
+          "pid": 78320,
+          "birth": "Mon Oct 5 00:12:30 2026",
+          "command": "/Users/jma/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lean /Users/jma/Documents/formalization/axiomatic_gw/AxiomaticGWTest/Surfaces/GenusTwoBlowupScalar.lean -o /Users/jma/Documents/formalization/axiomatic_gw/.lake/build/lib/lean/AxiomaticGWTest/Surfaces/GenusTwoBlowupScalar.olean -i /Users/jma/Documents/formalization/axiomatic_gw/.lake/build/lib/lean/AxiomaticGWTest/Surfaces/GenusTwoBlowupScalar.ilean -c /Users/jma/Documents/formalization/axiomatic_gw/.lake/build/ir/AxiomaticGWTest/Surfaces/GenusTwoBlowupScalar.c --setup /Users/jma/Documents/formalization/axiomatic_gw/.lake/build/ir/AxiomaticGWTest/Surfaces/GenusTwoBlowupScalar.setup.json --json"
+        },
+        {
+          "pid": 78337,
+          "birth": "Mon Oct 5 00:12:31 2026",
+          "command": "/Users/jma/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lean /Users/jma/Documents/formalization/axiomatic_gw/AxiomaticGWTest/Surfaces/GenusTwoBlowupDependencyEnergy.lean -o /Users/jma/Documents/formalization/axiomatic_gw/.lake/build/lib/lean/AxiomaticGWTest/Surfaces/GenusTwoBlowupDependencyEnergy.olean -i /Users/jma/Documents/formalization/axiomatic_gw/.lake/build/lib/lean/AxiomaticGWTest/Surfaces/GenusTwoBlowupDependencyEnergy.ilean -c /Users/jma/Documents/formalization/axiomatic_gw/.lake/build/ir/AxiomaticGWTest/Surfaces/GenusTwoBlowupDependencyEnergy.c --setup /Users/jma/Documents/formalization/axiomatic_gw/.lake/build/ir/AxiomaticGWTest/Surfaces/GenusTwoBlowupDependencyEnergy.setup.json --json"
+        },
+        {
+          "pid": 78354,
+          "birth": "Mon Oct 5 00:12:32 2026",
+          "command": "/Users/jma/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lean /Users/jma/Documents/formalization/axiomatic_gw/AxiomaticGWTest/Surfaces/GenusTwoBlowupBoundedCertificate.lean -o /Users/jma/Documents/formalization/axiomatic_gw/.lake/build/lib/lean/AxiomaticGWTest/Surfaces/GenusTwoBlowupBoundedCertificate.olean -i /Users/jma/Documents/formalization/axiomatic_gw/.lake/build/lib/lean/AxiomaticGWTest/Surfaces/GenusTwoBlowupBoundedCertificate.ilean -c /Users/jma/Documents/formalization/axiomatic_gw/.lake/build/ir/AxiomaticGWTest/Surfaces/GenusTwoBlowupBoundedCertificate.c --setup /Users/jma/Documents/formalization/axiomatic_gw/.lake/build/ir/AxiomaticGWTest/Surfaces/GenusTwoBlowupBoundedCertificate.setup.json --json"
+        },
+        {
+          "pid": 78371,
+          "birth": "Mon Oct 5 00:12:33 2026",
+          "command": "/Users/jma/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lean /Users/jma/Documents/formalization/axiomatic_gw/AxiomaticGWTest/Surfaces/GenusTwoBlowupOrderedCertificate.lean -o /Users/jma/Documents/formalization/axiomatic_gw/.lake/build/lib/lean/AxiomaticGWTest/Surfaces/GenusTwoBlowupOrderedCertificate.olean -i /Users/jma/Documents/formalization/axiomatic_gw/.lake/build/lib/lean/AxiomaticGWTest/Surfaces/GenusTwoBlowupOrderedCertificate.ilean -c /Users/jma/Documents/formalization/axiomatic_gw/.lake/build/ir/AxiomaticGWTest/Surfaces/GenusTwoBlowupOrderedCertificate.c --setup /Users/jma/Documents/formalization/axiomatic_gw/.lake/build/ir/AxiomaticGWTest/Surfaces/GenusTwoBlowupOrderedCertificate.setup.json --json"
+        }
+      ],
+      "received_signal": null,
+      "runner_error": null,
+      "cleanup_errors": [],
+      "logging_errors": [],
+      "events": [
+        {
+          "elapsed_seconds": 0.017,
+          "action": "command_started",
+          "command": [
+            "/Users/jma/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lake",
+            "build",
+            "AxiomaticGW.Surfaces.GenusTwoBlowupOrderedCertificate",
+            "AxiomaticGWTest.Surfaces.GenusTwoBlowupCertificate",
+            "AxiomaticGWTest.Surfaces.GenusTwoL24ConstantGuard",
+            "AxiomaticGWTest.Surfaces.GenusTwoBlowupScalar",
+            "AxiomaticGWTest.Surfaces.GenusTwoBlowupDependencyEnergy",
+            "AxiomaticGWTest.Surfaces.GenusTwoBlowupBoundedCertificate",
+            "AxiomaticGWTest.Surfaces.GenusTwoBlowupOrderedCertificate"
+          ],
+          "lake_pid": 78102,
+          "pgid": 78102
+        }
+      ]
+    },
+    "axioms_command": {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--memory=2048",
+        "/tmp/gw_blowup_certificate_integrated_audit_20261005.lean"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "elapsed_seconds": 2.25,
+      "log": "/tmp/gw_blowup_certificate_integrated_audit_20261005.log",
+      "children_ru_maxrss_raw": 1449181184,
+      "children_ru_maxrss_unit": "bytes",
+      "resource_note": "Wrapper child usage may omit descendants on interrupted runs."
+    },
+    "axioms": {
+      "count": 100,
+      "axioms": {
+        "AxiomaticGW.SurfaceGenusTwoBlowupCertificate.mem_rowVariables_of_coefficient_ne_zero": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.SurfaceGenusTwoBlowupCertificate.checkDependency_eq_true_iff": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.SurfaceGenusTwoBlowupCertificate.checkClosure_eq_false_of_missing": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.SurfaceGenusTwoBlowupCertificate.checkCanonicalRow_eq_false_of_missing": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.SurfaceGenusTwoBlowupCertificate.checkCanonicalTable_sound": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.SurfaceGenusTwoBlowupCertificate.valuesCached_eq": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.SurfaceGenusTwoBlowupCertificate.checkCanonicalClaim_sound": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.SurfaceGenusTwoBlowupScalar.constant_eq": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.SurfaceGenusTwoBlowupScalar.singletonCoefficient_eq": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.SurfaceGenusTwoBlowupScalar.mem_columns": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.SurfaceGenusTwoBlowupScalar.collected_row_affine": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.SurfaceGenusTwoBlowupScalar.replay_eq_row": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.SurfaceGenusTwoBlowupDependencyEnergy.n_source_canonical_coefficient_eq_zero": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.SurfaceGenusTwoBlowupDependencyEnergy.n_coefficient_energy_le": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.SurfaceGenusTwoBlowupDependencyEnergy.h_source_canonical_coefficient_eq_zero": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.SurfaceGenusTwoBlowupDependencyEnergy.h_coefficient_energy_le": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.SurfaceGenusTwoBlowupDependencyEnergy.bp_coefficient_energy_le": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.SurfaceGenusTwoBlowupDependencyEnergy.dependency_energy_le": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.SurfaceGenusTwoBlowupDependencyEnergy.dependency_energy_le_of_positive_planeDegree": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.SurfaceGenusTwoBlowupBoundedCertificate.mem_coordinateBox": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.SurfaceGenusTwoBlowupBoundedCertificate.mem_classes": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.SurfaceGenusTwoBlowupBoundedCertificate.classes_toFinset": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.SurfaceGenusTwoBlowupBoundedCertificate.mem_families": [
+          "propext",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.SurfaceGenusTwoBlowupBoundedCertificate.mem_states": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.SurfaceGenusTwoBlowupBoundedCertificate.rowVariables_support": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.SurfaceGenusTwoBlowupBoundedCertificate.checkClosure_states": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.SurfaceGenusTwoBlowupBoundedCertificate.columns_cover": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.SurfaceGenusTwoBlowupBoundedCertificate.replay_eq_row": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.SurfaceGenusTwoBlowupBoundedCertificate.checkRow_eq": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.SurfaceGenusTwoBlowupBoundedCertificate.checkTable_eq": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.SurfaceGenusTwoBlowupBoundedCertificate.checkTable_sound": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.SurfaceGenusTwoBlowupOrderedCertificate.pivot_eq": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.SurfaceGenusTwoBlowupOrderedCertificate.pivot_ne_zero": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.SurfaceGenusTwoBlowupOrderedCertificate.earlierCandidate_own_zero": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.SurfaceGenusTwoBlowupOrderedCertificate.eval_row_masked": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.SurfaceGenusTwoBlowupOrderedCertificate.mem_earlierStates": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.SurfaceGenusTwoBlowupOrderedCertificate.masked_replay_eq_earlier_sum": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.SurfaceGenusTwoBlowupOrderedCertificate.replay_eq_explicit": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.SurfaceGenusTwoBlowupOrderedCertificate.replay_eq_bounded": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.SurfaceGenusTwoBlowupOrderedCertificate.checkRow_eq": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.SurfaceGenusTwoBlowupOrderedCertificate.checkTable_eq": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.SurfaceGenusTwoBlowupOrderedCertificate.checkTable_sound": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGWTest.Surfaces.GenusTwoBlowupCertificate.boundary_table_accepted": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGWTest.Surfaces.GenusTwoBlowupCertificate.corrupt_boundary_rejected": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGWTest.Surfaces.GenusTwoBlowupCertificate.boundary_table_sound": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGWTest.Surfaces.GenusTwoBlowupCertificate.nominal_point_claim_rejected": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGWTest.Surfaces.GenusTwoBlowupCertificate.boundary_h_claim_accepted": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGWTest.Surfaces.GenusTwoBlowupCertificate.p_row_h_dependency": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGWTest.Surfaces.GenusTwoBlowupCertificate.missing_p_h_dependency_rejected": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGWTest.Surfaces.GenusTwoBlowupCertificate.same_measure_class_collision_rejected": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGWTest.Surfaces.GenusTwoBlowupCertificate.exact_higher_energy_key_accepted": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGWTest.Surfaces.GenusTwoBlowupCertificate.exceptional_label_collision_rejected": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGWTest.Surfaces.GenusTwoBlowupCertificate.accepted_cache_preserves_every_state": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGWTest.Surfaces.GenusTwoBlowupCertificate.accepted_claim_names_exact_query": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGWTest.SurfaceGenusTwoBlowupScalar.negative_multiplicity_h_constant": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGWTest.SurfaceGenusTwoBlowupScalar.shifted_primary_constant_weights": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGWTest.SurfaceGenusTwoBlowupScalar.negative_multiplicity_p_coefficient": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGWTest.SurfaceGenusTwoBlowupScalar.foreign_exceptional_coefficient": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGWTest.SurfaceGenusTwoBlowupScalar.zero_multiplicity_n_coefficient": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGWTest.SurfaceGenusTwoBlowupScalar.equal_measure_columns_distinct": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGWTest.SurfaceGenusTwoBlowupScalar.zero_valuation_replay": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGWTest.SurfaceGenusTwoBlowupScalar.replay_equation_iff": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGWTest.Surfaces.GenusTwoBlowupDependencyEnergy.dependencies_stay_within_bound": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGWTest.Surfaces.GenusTwoBlowupDependencyEnergy.larger_energy_coefficient_zero": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGWTest.Surfaces.GenusTwoBlowupDependencyEnergy.primary_pivot_at_target_energy": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGWTest.Surfaces.GenusTwoBlowupDependencyEnergy.earlier_h_dependency_at_same_energy": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGWTest.Surfaces.GenusTwoBlowupDependencyEnergy.signed_f1_larger_class_rejected": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGWTest.Surfaces.GenusTwoBlowupDependencyEnergy.signed_foreign_bl2_larger_class_rejected": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGWTest.Surfaces.GenusTwoBlowupBoundedCertificate.complete_class_enumeration": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGWTest.Surfaces.GenusTwoBlowupBoundedCertificate.negative_signed_f1_class_retained": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGWTest.Surfaces.GenusTwoBlowupBoundedCertificate.mixed_signed_bl2_class_retained": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGWTest.Surfaces.GenusTwoBlowupBoundedCertificate.equal_measure_full_classes_both_retained": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGWTest.Surfaces.GenusTwoBlowupBoundedCertificate.distinct_exceptional_labels_retained": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGWTest.Surfaces.GenusTwoBlowupBoundedCertificate.nominal_point_zero_internal": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGWTest.Surfaces.GenusTwoBlowupBoundedCertificate.bounded_grid_closed": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGWTest.Surfaces.GenusTwoBlowupBoundedCertificate.exact_scalar_row_replay": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGWTest.Surfaces.GenusTwoBlowupBoundedCertificate.boundary_grid_zero_accepted": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGWTest.Surfaces.GenusTwoBlowupBoundedCertificate.corrupt_h_boundary_rejected": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGWTest.Surfaces.GenusTwoBlowupBoundedCertificate.accepted_scalar_table_sound": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGWTest.Surfaces.GenusTwoBlowupOrderedCertificate.closed_pivot_eq_compressed": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGWTest.Surfaces.GenusTwoBlowupOrderedCertificate.negative_signed_primary_pivot": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGWTest.Surfaces.GenusTwoBlowupOrderedCertificate.nominal_point_own_mask_zero": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGWTest.Surfaces.GenusTwoBlowupOrderedCertificate.later_nonzero_candidate_masked": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGWTest.Surfaces.GenusTwoBlowupOrderedCertificate.equal_measure_collision_masked": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGWTest.Surfaces.GenusTwoBlowupOrderedCertificate.exceptional_label_collision_masked": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGWTest.Surfaces.GenusTwoBlowupOrderedCertificate.earlier_negative_signed_class_retained": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGWTest.Surfaces.GenusTwoBlowupOrderedCertificate.earlier_zero_candidate_omitted": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGWTest.Surfaces.GenusTwoBlowupOrderedCertificate.producer_equation_exact": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGWTest.Surfaces.GenusTwoBlowupOrderedCertificate.ordered_check_preserves_bounded": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGWTest.Surfaces.GenusTwoBlowupOrderedCertificate.corrupt_h_boundary_rejected": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGWTest.Surfaces.GenusTwoBlowupOrderedCertificate.accepted_ordered_table_sound": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.SurfaceGenusTwo.guardedConstantPointContraction_eq_zero": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.SurfaceGenusTwo.guardedConstantPointContraction_of_lt": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.SurfaceGenusTwo.guardedConstantPointContraction_eq": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.L24Relation.pointConstantGuarded_eq": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.L24Relation.pointConstantGuarded_eq_normalized": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGWTest.GenusTwoL24ConstantGuard.signed_shifted_f1_term_zero": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGWTest.GenusTwoL24ConstantGuard.signed_shifted_bl2_full_constant": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGWTest.GenusTwoL24ConstantGuard.zero_class_full_constant": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGWTest.GenusTwoL24ConstantGuard.rational_boundary_retained": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "command_record": "/tmp/gw_blowup_certificate_integrated_audit_20261005.json",
+      "log_sha256": "1c099fda242e1a6ac79a7a41ec6a03bf36e4c1c80fee7870de852ed9d022c7e0",
+      "scope": "Actualrepository public imports of12certificate source/testfiles"
+    },
+    "static_issues": []
+  },
+  "prior_isolated_evidence": {
+    "manifest": "/tmp/gw_blowup_public_probe_manifest_v5_20261004.json",
+    "sha256": "0f4976f298d65a2c5c6303926318143607e3e27f28de07ae067bfc3ab22eed44",
+    "axiom_count": 110,
+    "scope": "100source/consumerresults plus10results fromtwoB0generatedfixtures"
+  },
+  "diagnostic": {
+    "status": "partial_native_diagnostic_not_numerical_acceptance",
+    "request": {
+      "added_points": 1,
+      "event": "header",
+      "family": "H",
+      "labels": [
+        1,
+        3,
+        3,
+        3
+      ],
+      "lower_genus_cache": "none; unchanged original algorithms",
+      "source_curve": [
+        1,
+        1
+      ],
+      "status": "untrusted_native_diagnostic",
+      "target": "F1",
+      "target_curve": [
+        0,
+        1
+      ],
+      "term_count": 721
+    },
+    "started_term_count": 29,
+    "completed_term_count": 28,
+    "last_completed_term": {
+      "coefficient": [
+        1,
+        15
+      ],
+      "contraction_value": [
+        1,
+        144
+      ],
+      "event": "term_end",
+      "held_index": 121,
+      "position": 27,
+      "upstream_index": 624,
+      "weighted_value": [
+        1,
+        2160
+      ],
+      "elapsed_ms": 110787
+    },
+    "unfinished_term": {
+      "coefficient": [
+        4259,
+        3510
+      ],
+      "event": "term_start",
+      "guarded": false,
+      "held_index": 122,
+      "max_component_genus": 1,
+      "position": 28,
+      "upstream_index": 625
+    },
+    "complete_constant_produced": false,
+    "log": "/tmp/gw_blowup_h_constant_profile_v1_20261005.log",
+    "log_sha256": "81ec6155fdfcd9f7a82aa318674177541e05a97dd228d16501c1e8f625df3396",
+    "original_build_resumed": true
+  },
+  "full_build_interruption": {
+    "status": "interrupted_build_not_accepted",
+    "observed_utc": "2026-10-05T04:10:45.846668+00:00",
+    "old_sessions": [
+      98052,
+      14455
+    ],
+    "old_pids": [
+      68714,
+      68715,
+      68840,
+      68844,
+      68846,
+      68855,
+      70299,
+      70300
+    ],
+    "evidence": [
+      "Botholdsessionhandlesunknown",
+      "ExactlistedprocessIDsabsent",
+      "Scopedprocesssearchfindsnoremainingtaskbuildorscheduler",
+      "Oldbuildloglastcompletedtarget2962of2990",
+      "Finalbuildmetadatamissing"
+    ],
+    "log": "/tmp/gw_blowup_reconstruction_final_build_20261004.log",
+    "log_sha256": "aba7aedff291477faca18e2c118e87d038140125b9720659a8ead5def9526ca0",
+    "stopped_workers_remaining": false,
+    "restart_reason": "Verifiedprocessabsenceafterturninterruption; completedartifactsretained, no cachedeletion."
+  },
+  "remaining": [
+    "Complete original fullbuild, tests and lint.",
+    "Prove and validate lower-genus primary table reuse through decorated ancestor contractions.",
+    "Kernel replay all required positive-degree F1/Bl2 tables and unchanged descendant suites.",
+    "Complete actual class-valued semisimple GKM bridge, geometric applicability and offline research release."
+  ],
+  "preservation": {
+    "snapshot": "/tmp/gw_blowup_certificate_preintegration_20261005.json",
+    "new_paths_previously_absent": true,
+    "producer_edits": false,
+    "commit": false,
+    "push": false
+  }
+}

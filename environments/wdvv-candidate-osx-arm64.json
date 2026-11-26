@@ -1,0 +1,349 @@
+{
+  "codimension": 1,
+  "column_factors": [
+    [
+      1,
+      1
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      1,
+      1
+    ]
+  ],
+  "environment": {
+    "admcycles": "1.4",
+    "architecture": "arm64",
+    "python": "3.12.14",
+    "sage": "10.9"
+  },
+  "exploration": {
+    "cache_ephemeral": true,
+    "online_lookup": false,
+    "raw_column_indices": [
+      5,
+      6,
+      7
+    ],
+    "raw_vectors": [
+      [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ]
+    ]
+  },
+  "frame": "wdvv_mbar_0_4_v1",
+  "genus": 0,
+  "graphs": [
+    {
+      "endpoints": [
+        [
+          0,
+          1
+        ]
+      ],
+      "genus": [
+        0,
+        0
+      ],
+      "half_psi": [
+        [
+          0,
+          0
+        ]
+      ],
+      "index": 0,
+      "kappa": [
+        [
+          0
+        ],
+        [
+          0
+        ]
+      ],
+      "leg_psi": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "leg_vertices": [
+        0,
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "endpoints": [
+        [
+          0,
+          1
+        ]
+      ],
+      "genus": [
+        0,
+        0
+      ],
+      "half_psi": [
+        [
+          0,
+          0
+        ]
+      ],
+      "index": 1,
+      "kappa": [
+        [
+          0
+        ],
+        [
+          0
+        ]
+      ],
+      "leg_psi": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "leg_vertices": [
+        0,
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "endpoints": [
+        [
+          0,
+          1
+        ]
+      ],
+      "genus": [
+        0,
+        0
+      ],
+      "half_psi": [
+        [
+          0,
+          0
+        ]
+      ],
+      "index": 2,
+      "kappa": [
+        [
+          0
+        ],
+        [
+          0
+        ]
+      ],
+      "leg_psi": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "leg_vertices": [
+        0,
+        1,
+        1,
+        0
+      ]
+    }
+  ],
+  "locus": "full_stable",
+  "markings": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "normalization": "raw_gluing_pushforward",
+  "producer_source_sha256": {
+    "admcycles.py": "19e9e77c58299b387abadab76f2e1f1b1b2b63808f3dbbd0e44499a930db9a1b",
+    "stable_graph.py": "aa9b81ae274660b2d44cf474390a8b0c3a7865cfa6deaa06d005ae96dfdbd3ca",
+    "tautological_ring.py": "c9cf9b46fa8c7f2207d6d0ebc3f3565518f6f29d324bb6b280c1626a772bbd12"
+  },
+  "relation_ids": [
+    "keel_01_23_minus_02_13",
+    "keel_02_13_minus_03_12"
+  ],
+  "relation_source": "10.1090/S0002-9947-1992-1034665-0; Section 4, Theorem 1, I(2)",
+  "requested": [
+    [
+      1,
+      1
+    ],
+    [
+      0,
+      1
+    ],
+    [
+      -1,
+      1
+    ]
+  ],
+  "rows": [
+    [
+      [
+        1,
+        1
+      ],
+      [
+        -1,
+        1
+      ],
+      [
+        0,
+        1
+      ]
+    ],
+    [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        -1,
+        1
+      ]
+    ]
+  ],
+  "schema_version": 1,
+  "scope": "Candidate marked raw graphs and exact searched witness; geometric boundary class equality is an explicit Lean hypothesis, not a Sage conclusion.",
+  "source_label_map": [
+    [
+      1,
+      0
+    ],
+    [
+      2,
+      1
+    ],
+    [
+      3,
+      2
+    ],
+    [
+      4,
+      3
+    ]
+  ],
+  "witness": [
+    [
+      1,
+      1
+    ],
+    [
+      1,
+      1
+    ]
+  ]
+}

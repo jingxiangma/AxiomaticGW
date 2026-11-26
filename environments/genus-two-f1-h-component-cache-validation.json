@@ -1,0 +1,88 @@
+{
+  "schema_version": 1,
+  "kind": "axiomatic_gw.f1_component_cache_validation",
+  "date": "2026-10-05",
+  "status": "offline_component_cache_accepted_repository_build_pending",
+  "scope": "722 original low-genus component equalities, full-key injectivity and the existing ResidualCache contract for the first F1 H request.",
+  "query": {
+    "target": "F1",
+    "source_curve": [
+      1,
+      1
+    ],
+    "added_points": 1,
+    "labels": [
+      "hyperplane",
+      "exceptional:0",
+      "exceptional:0",
+      "exceptional:0"
+    ]
+  },
+  "counts": {
+    "components": 722,
+    "unique_cache_audit_declarations": 2170,
+    "accepted_offline_runs": 125,
+    "supporting_trr_runs": 14,
+    "historical_failed_runs": 54,
+    "project_sources": 495,
+    "introduced_fixture_sources": 268,
+    "preexisting_sources": 227,
+    "direct_mathlib_sources": 60,
+    "reused_prior_component_values": 48,
+    "full_frame_terms": 815,
+    "selected_nonzero_terms": 721
+  },
+  "acceptance": {
+    "component_cache": true,
+    "full_815_contraction": false,
+    "selected_721_contraction": false,
+    "geometric_realization": false,
+    "actual_repository_build": false
+  },
+  "repository_integration": {
+    "status": "sources_preserved_actual_repository_build_pending",
+    "copied_sources": 268,
+    "copied_source_bytes": 989332,
+    "compiled_artifacts_copied": false
+  },
+  "cache_symbol": "AxiomaticGW.BlowupF1CompleteHComponents.cache",
+  "entry_module": "AxiomaticGW.Surfaces.Fixtures.BlowupF1CompleteHComponentsReplay",
+  "key_encoding": {
+    "labels": {
+      "exceptional:0": 2,
+      "hyperplane": 1,
+      "point": 3,
+      "unit": 0
+    },
+    "layout": "genus,curve_E,curve_F,then_label_psi_pairs"
+  },
+  "source_closure": {
+    "path": "genus-two-f1-h-component-cache/sources.json.gz",
+    "sha256": "55522e6d176981368e575af1e67bf60be992d07407287ff8ba18ab935767549c",
+    "uncompressed_sha256": "6777f9bcff88385afdb6862331bd7f582573796a0c7cbba2398a811acedf7072",
+    "uncompressed_bytes": 239031
+  },
+  "offline_evidence": {
+    "path": "genus-two-f1-h-component-cache/offline-audits.json.gz",
+    "sha256": "c5387a3293763f8a312e255a449eb3db12beb277b6ebc993e21004f3cb10c13e",
+    "uncompressed_sha256": "ee25c697c7da1ab0cb4b9cfc17dfacff9f0fb2d59dfea9259fee40eeab8e4ec8",
+    "uncompressed_bytes": 946060
+  },
+  "original_record_sha256": {
+    "cache_acceptance": "c0de309246ac4c1b0349883f095e1cb0c695bfb948b4632344e0d5c2b9ce8cc7",
+    "integration_manifest": "fdd19eb31aaa755de61296775b0eeb6e278d6617a6bc0ee49c4edb5847210dbf",
+    "source_copy_record": "7048d9775f627d424b4a7de5ed37af5bf6609aebb35985b62dac00fef51b9769",
+    "candidate_input": "292366499879e648aeb9deaa66c1f33a693d2eadde188eb7639801e33fe9ec1b"
+  },
+  "mathematical_effect": "No original query keys, curve coordinates, insertion multiplicities, psi powers, signed values, recursions or ResidualCache interface changed; exact equality proofs only.",
+  "documentation_limitations": [
+    "Frozen source prose says 721 terms, referring to the historical nonzero-coefficient selector; the complete original frame has 815 terms, including 94 zero coefficients. Neither contraction is accepted here.",
+    "113 generated modules lack standard headers/module docstrings; exact accepted source bytes remain unchanged.",
+    "Component-index TRR namespaces belong to this fixed request. The certified F1 point adapter retains historical diagnostic prose."
+  ],
+  "remaining": [
+    "Rebuild imported fixture closure in the actual repository and record that evidence separately.",
+    "Complete and kernel-check the full 815-term contraction; native totals remain candidates.",
+    "The geometric realization and remaining fixed research applications are outside this cache-only acceptance."
+  ]
+}

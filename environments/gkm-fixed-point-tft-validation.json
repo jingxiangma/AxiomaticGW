@@ -1,0 +1,145 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-05",
+  "status": "targeted_fixed_point_TFT_formulas_accepted_full_project_pending",
+  "source_sha256": {
+    "AxiomaticGW/GKM/FixedPointTFT.lean": "91ce8bc7ea085e2eb33596b44fb6e2ef5451cd8129ce79cdf28f44b60c2397e1",
+    "AxiomaticGWTest/GKM/FixedPointTFT.lean": "b2e8e794c4c007184638a8532c3051ba08faafb72f0b1f581f6830ba0b7ecf48"
+  },
+  "scope": "Canonical algebraic TFT attached to the existing split fixed-point Frobenius algebra over a field, with arbitrary invertible Euler weights and every finite arity/genus. No localization or geometric CohFT identification.",
+  "findings": [
+    {
+      "severity": "medium",
+      "issue": "The fixed-point bridge had inverse-metric expansion but no derived explicit canonical Casimir, handle or all-genus correlator formula.",
+      "correction": "Derive all three from the existing canonical Frobenius construction."
+    },
+    {
+      "severity": "low",
+      "issue": "A staged consumer tried decidability on a defined stable-arity predicate without unfolding it.",
+      "correction": "Explicit finite cardinality/stability normalization, same mathematical claim."
+    }
+  ],
+  "mathematical_effect": {
+    "new_numerical_seeds": 0,
+    "new_geometric_hypotheses": 0,
+    "changed_existing_statements": false,
+    "new_global_simp_rules": 0,
+    "new_global_instances": 0,
+    "derived_formula": "omega(g,S,a) = sum_p inverse(euler(p))*euler(p)^g*product_s a(s)(p); includes genus zero and empty markings",
+    "genus_two_unit": "sum_p euler(p)"
+  },
+  "validation_commands": [
+    {
+      "command": [
+        "lake",
+        "build",
+        "AxiomaticGW.GKM.FixedPointTFT",
+        "AxiomaticGWTest.GKM.FixedPointTFT"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "elapsed_seconds": 2.957,
+      "log": "/tmp/gw_gkm_fixed_point_tft_integrated_build_20261005.log",
+      "children_ru_maxrss_raw": 1018986496,
+      "children_ru_maxrss_unit": "bytes",
+      "resource_note": "Wrapper child usage may omit descendants on interrupted runs.",
+      "log_sha256": "524d6d580ab860c21e0681bc28196da32d80007f0c0c775cd3cccbed2e657f87"
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--memory=2048",
+        "/tmp/gw_gkm_fixed_point_tft_integrated_audit_20261005.lean"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "elapsed_seconds": 1.322,
+      "log": "/tmp/gw_gkm_fixed_point_tft_integrated_audit_20261005.log",
+      "children_ru_maxrss_raw": 1059323904,
+      "children_ru_maxrss_unit": "bytes",
+      "resource_note": "Wrapper child usage may omit descendants on interrupted runs.",
+      "log_sha256": "0cba920bfd3902a5e18ed74f67f91488cae8eb3ce1a8558e012dc00c6f413172"
+    }
+  ],
+  "axiom_audit": {
+    "count": 11,
+    "results": {
+      "AxiomaticGW.GKM.FixedPointTFT.casimir_eq": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "AxiomaticGW.GKM.FixedPointTFT.handleElement_eq": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "AxiomaticGW.GKM.FixedPointTFT.correlator_eq": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "AxiomaticGW.GKM.FixedPointTFT.correlator_two_unit": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "AxiomaticGWTest.GKM.FixedPointTFT.handle_coordinates": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "AxiomaticGWTest.GKM.FixedPointTFT.genus_zero_empty": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "AxiomaticGWTest.GKM.FixedPointTFT.genus_one_empty": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "AxiomaticGWTest.GKM.FixedPointTFT.genus_two_empty": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "AxiomaticGWTest.GKM.FixedPointTFT.genus_two_one_point": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "AxiomaticGWTest.GKM.FixedPointTFT.topological_genus_two_unit": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "AxiomaticGWTest.GKM.FixedPointTFT.topological_unit_normalization": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    }
+  },
+  "consumer_scope": [
+    "Distinct Euler weights2and3",
+    "Empty arities in genera0,1,2",
+    "Nonunit genus-two insertion",
+    "Actual bundled topological CohFT unit and three-point metric normalization"
+  ],
+  "development_failures": [
+    {
+      "metadata": "/tmp/gw_gkm_fixed_point_tft_public_v1_20261005.json",
+      "scope": "Test-only StableArity elaboration; production module passed."
+    }
+  ],
+  "remaining": [
+    "Bind all45actualHodgecandidate components through a normalized degree-preserving realization and prove degreezero agreement.",
+    "Replay actual12fixedpointEuler coefficient data.",
+    "Geometric Hodge/GRR/product/virtualEuler/stabilization and semisimple gluing/reconstruction remain required.",
+    "Full project build/test/lint remains pending."
+  ],
+  "next_priority": "Use the derived genus-two unit formula as the normalization of the actual assembled candidate class."
+}

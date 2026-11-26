@@ -386,6 +386,28 @@ def mk (G : DecoratedStableGraph S) (hG : G.graph.totalGenus = g) :
     TautologicalStratum g S :=
   Quotient.mk _ ⟨G, hG⟩
 
+/-- Number of vertices, independent of the chosen graph presentation. -/
+def vertexCount (x : TautologicalStratum g S) : ℕ :=
+  Quotient.liftOn x (fun G ↦ G.1.graph.vertexCount) fun _ _ h ↦ by
+    rcases h with ⟨e⟩
+    exact e.graphIso.vertexCount_eq
+
+@[simp]
+theorem vertexCount_mk (G : DecoratedStableGraph S)
+    (hG : G.graph.totalGenus = g) :
+    vertexCount (mk G hG) = G.graph.vertexCount := rfl
+
+/-- Number of internal edges, independent of the chosen presentation. -/
+def edgeCount (x : TautologicalStratum g S) : ℕ :=
+  Quotient.liftOn x (fun G ↦ G.1.graph.edgeCount) fun _ _ h ↦ by
+    rcases h with ⟨e⟩
+    exact e.graphIso.edgeCount_eq
+
+@[simp]
+theorem edgeCount_mk (G : DecoratedStableGraph S)
+    (hG : G.graph.totalGenus = g) :
+    edgeCount (mk G hG) = G.graph.edgeCount := rfl
+
 /-- Codimension of a tautological stratum. -/
 def codimension (x : TautologicalStratum g S) : ℕ :=
   Quotient.liftOn x (fun G ↦ G.1.codimension) fun G H h ↦ by

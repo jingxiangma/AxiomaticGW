@@ -1,0 +1,2060 @@
+{
+  "cache_ephemeral": true,
+  "cases": [
+    {
+      "additional_markings": 1,
+      "name": "bp_0_0",
+      "raw_coordinate_sha256": "4825b2e360d10048d285578a0198cb5eaddd4a3f5416bd2aa43df94569e7b8eb",
+      "raw_equal": true,
+      "raw_support": 3,
+      "signed_terms": 3
+    },
+    {
+      "additional_markings": 1,
+      "name": "bp_0_1",
+      "raw_coordinate_sha256": "4825b2e360d10048d285578a0198cb5eaddd4a3f5416bd2aa43df94569e7b8eb",
+      "raw_equal": true,
+      "raw_support": 3,
+      "signed_terms": 3
+    },
+    {
+      "additional_markings": 1,
+      "name": "bp_0_2",
+      "raw_coordinate_sha256": "d668d40df22ea67d07cf38119cbc05b694de80aeeae58cdfe9363dc2dcbd7a5b",
+      "raw_equal": true,
+      "raw_support": 3,
+      "signed_terms": 3
+    },
+    {
+      "additional_markings": 1,
+      "name": "bp_0_3",
+      "raw_coordinate_sha256": "601d88a54ff9d63a947ba59b84fb3cf6258bec22c82be1c54883354d7219080e",
+      "raw_equal": true,
+      "raw_support": 3,
+      "signed_terms": 3
+    },
+    {
+      "additional_markings": 1,
+      "name": "bp_0_4",
+      "raw_coordinate_sha256": "d668d40df22ea67d07cf38119cbc05b694de80aeeae58cdfe9363dc2dcbd7a5b",
+      "raw_equal": true,
+      "raw_support": 3,
+      "signed_terms": 3
+    },
+    {
+      "additional_markings": 1,
+      "name": "bp_0_5",
+      "raw_coordinate_sha256": "601d88a54ff9d63a947ba59b84fb3cf6258bec22c82be1c54883354d7219080e",
+      "raw_equal": true,
+      "raw_support": 3,
+      "signed_terms": 3
+    },
+    {
+      "additional_markings": 1,
+      "name": "bp_1_0",
+      "raw_coordinate_sha256": "67960d52081edad4ffdf672c8c4db914939ded2c46625269583e7d0a5dafc58b",
+      "raw_equal": true,
+      "raw_support": 3,
+      "signed_terms": 3
+    },
+    {
+      "additional_markings": 1,
+      "name": "bp_1_1",
+      "raw_coordinate_sha256": "67960d52081edad4ffdf672c8c4db914939ded2c46625269583e7d0a5dafc58b",
+      "raw_equal": true,
+      "raw_support": 3,
+      "signed_terms": 3
+    },
+    {
+      "additional_markings": 1,
+      "name": "bp_1_2",
+      "raw_coordinate_sha256": "67960d52081edad4ffdf672c8c4db914939ded2c46625269583e7d0a5dafc58b",
+      "raw_equal": true,
+      "raw_support": 3,
+      "signed_terms": 3
+    },
+    {
+      "additional_markings": 1,
+      "name": "bp_1_3",
+      "raw_coordinate_sha256": "67960d52081edad4ffdf672c8c4db914939ded2c46625269583e7d0a5dafc58b",
+      "raw_equal": true,
+      "raw_support": 3,
+      "signed_terms": 3
+    },
+    {
+      "additional_markings": 1,
+      "name": "bp_1_4",
+      "raw_coordinate_sha256": "67960d52081edad4ffdf672c8c4db914939ded2c46625269583e7d0a5dafc58b",
+      "raw_equal": true,
+      "raw_support": 3,
+      "signed_terms": 3
+    },
+    {
+      "additional_markings": 1,
+      "name": "bp_1_5",
+      "raw_coordinate_sha256": "67960d52081edad4ffdf672c8c4db914939ded2c46625269583e7d0a5dafc58b",
+      "raw_equal": true,
+      "raw_support": 3,
+      "signed_terms": 3
+    },
+    {
+      "additional_markings": 1,
+      "name": "bp_2_0",
+      "raw_coordinate_sha256": "e315adb17f8fecf97e5ce1231b6087112c9f781c165bd4d7240a0b014daae4bb",
+      "raw_equal": true,
+      "raw_support": 3,
+      "signed_terms": 3
+    },
+    {
+      "additional_markings": 1,
+      "name": "bp_2_1",
+      "raw_coordinate_sha256": "e315adb17f8fecf97e5ce1231b6087112c9f781c165bd4d7240a0b014daae4bb",
+      "raw_equal": true,
+      "raw_support": 3,
+      "signed_terms": 3
+    },
+    {
+      "additional_markings": 1,
+      "name": "bp_2_2",
+      "raw_coordinate_sha256": "7a9709229ac736d1d751850a8fc7156ed128ac4360b5959eddd21ba39f079326",
+      "raw_equal": true,
+      "raw_support": 3,
+      "signed_terms": 3
+    },
+    {
+      "additional_markings": 1,
+      "name": "bp_2_3",
+      "raw_coordinate_sha256": "319f9f4c4719401113bf3e60223983b753ebd1f42eef7e4b452e0db6e897933c",
+      "raw_equal": true,
+      "raw_support": 3,
+      "signed_terms": 3
+    },
+    {
+      "additional_markings": 1,
+      "name": "bp_2_4",
+      "raw_coordinate_sha256": "7a9709229ac736d1d751850a8fc7156ed128ac4360b5959eddd21ba39f079326",
+      "raw_equal": true,
+      "raw_support": 3,
+      "signed_terms": 3
+    },
+    {
+      "additional_markings": 1,
+      "name": "bp_2_5",
+      "raw_coordinate_sha256": "319f9f4c4719401113bf3e60223983b753ebd1f42eef7e4b452e0db6e897933c",
+      "raw_equal": true,
+      "raw_support": 3,
+      "signed_terms": 3
+    },
+    {
+      "additional_markings": 1,
+      "name": "bp_3_0",
+      "raw_coordinate_sha256": "159191eb7121b18d1d05e8446bbcb417a79a9b81c450ccd4f1b18cd0f5f66805",
+      "raw_equal": true,
+      "raw_support": 3,
+      "signed_terms": 3
+    },
+    {
+      "additional_markings": 1,
+      "name": "bp_3_1",
+      "raw_coordinate_sha256": "159191eb7121b18d1d05e8446bbcb417a79a9b81c450ccd4f1b18cd0f5f66805",
+      "raw_equal": true,
+      "raw_support": 3,
+      "signed_terms": 3
+    },
+    {
+      "additional_markings": 1,
+      "name": "bp_3_2",
+      "raw_coordinate_sha256": "36fedb2ea78fec9a50af92f860f7013c0321e858d5776174adaabe52f376b441",
+      "raw_equal": true,
+      "raw_support": 3,
+      "signed_terms": 3
+    },
+    {
+      "additional_markings": 1,
+      "name": "bp_3_3",
+      "raw_coordinate_sha256": "73ec662824825bf47f0d753268b8379235be1f859ecff7b757b4f195ac323c70",
+      "raw_equal": true,
+      "raw_support": 3,
+      "signed_terms": 3
+    },
+    {
+      "additional_markings": 1,
+      "name": "bp_3_4",
+      "raw_coordinate_sha256": "36fedb2ea78fec9a50af92f860f7013c0321e858d5776174adaabe52f376b441",
+      "raw_equal": true,
+      "raw_support": 3,
+      "signed_terms": 3
+    },
+    {
+      "additional_markings": 1,
+      "name": "bp_3_5",
+      "raw_coordinate_sha256": "73ec662824825bf47f0d753268b8379235be1f859ecff7b757b4f195ac323c70",
+      "raw_equal": true,
+      "raw_support": 3,
+      "signed_terms": 3
+    },
+    {
+      "additional_markings": 1,
+      "name": "bp_4_0",
+      "raw_coordinate_sha256": "d4eaedcaf3c4f4c302655edd3ee5d80539e43905801a612be39382a0fabe4851",
+      "raw_equal": true,
+      "raw_support": 2,
+      "signed_terms": 3
+    },
+    {
+      "additional_markings": 1,
+      "name": "bp_4_1",
+      "raw_coordinate_sha256": "d4eaedcaf3c4f4c302655edd3ee5d80539e43905801a612be39382a0fabe4851",
+      "raw_equal": true,
+      "raw_support": 2,
+      "signed_terms": 3
+    },
+    {
+      "additional_markings": 1,
+      "name": "bp_4_2",
+      "raw_coordinate_sha256": "d4eaedcaf3c4f4c302655edd3ee5d80539e43905801a612be39382a0fabe4851",
+      "raw_equal": true,
+      "raw_support": 2,
+      "signed_terms": 3
+    },
+    {
+      "additional_markings": 1,
+      "name": "bp_4_3",
+      "raw_coordinate_sha256": "d4eaedcaf3c4f4c302655edd3ee5d80539e43905801a612be39382a0fabe4851",
+      "raw_equal": true,
+      "raw_support": 2,
+      "signed_terms": 3
+    },
+    {
+      "additional_markings": 1,
+      "name": "bp_4_4",
+      "raw_coordinate_sha256": "d4eaedcaf3c4f4c302655edd3ee5d80539e43905801a612be39382a0fabe4851",
+      "raw_equal": true,
+      "raw_support": 2,
+      "signed_terms": 3
+    },
+    {
+      "additional_markings": 1,
+      "name": "bp_4_5",
+      "raw_coordinate_sha256": "d4eaedcaf3c4f4c302655edd3ee5d80539e43905801a612be39382a0fabe4851",
+      "raw_equal": true,
+      "raw_support": 2,
+      "signed_terms": 3
+    },
+    {
+      "additional_markings": 1,
+      "name": "bp_5_0",
+      "raw_coordinate_sha256": "226c37caf25aa03780a9d08a50331f0cba02caa3a90d6fcb393dbd3927248245",
+      "raw_equal": true,
+      "raw_support": 3,
+      "signed_terms": 3
+    },
+    {
+      "additional_markings": 1,
+      "name": "bp_5_1",
+      "raw_coordinate_sha256": "99c183838c1954b39a6269b93a7a3d2fbd94ab69941a4d0f13d0debbc9e8e534",
+      "raw_equal": true,
+      "raw_support": 3,
+      "signed_terms": 3
+    },
+    {
+      "additional_markings": 1,
+      "name": "bp_5_2",
+      "raw_coordinate_sha256": "226c37caf25aa03780a9d08a50331f0cba02caa3a90d6fcb393dbd3927248245",
+      "raw_equal": true,
+      "raw_support": 3,
+      "signed_terms": 3
+    },
+    {
+      "additional_markings": 1,
+      "name": "bp_5_3",
+      "raw_coordinate_sha256": "99c183838c1954b39a6269b93a7a3d2fbd94ab69941a4d0f13d0debbc9e8e534",
+      "raw_equal": true,
+      "raw_support": 3,
+      "signed_terms": 3
+    },
+    {
+      "additional_markings": 1,
+      "name": "bp_5_4",
+      "raw_coordinate_sha256": "54e36319de910c0ef665e50e2a9b7e3d8a150ee4f83c86e6dc8604ac946272a0",
+      "raw_equal": true,
+      "raw_support": 3,
+      "signed_terms": 3
+    },
+    {
+      "additional_markings": 1,
+      "name": "bp_5_5",
+      "raw_coordinate_sha256": "54e36319de910c0ef665e50e2a9b7e3d8a150ee4f83c86e6dc8604ac946272a0",
+      "raw_equal": true,
+      "raw_support": 3,
+      "signed_terms": 3
+    },
+    {
+      "additional_markings": 1,
+      "name": "bp_6_0",
+      "raw_coordinate_sha256": "e1fc132e01a34596842cfc3f014fc134ce954de350ab8feabcdef7797378feac",
+      "raw_equal": true,
+      "raw_support": 3,
+      "signed_terms": 3
+    },
+    {
+      "additional_markings": 1,
+      "name": "bp_6_1",
+      "raw_coordinate_sha256": "e1fc132e01a34596842cfc3f014fc134ce954de350ab8feabcdef7797378feac",
+      "raw_equal": true,
+      "raw_support": 3,
+      "signed_terms": 3
+    },
+    {
+      "additional_markings": 1,
+      "name": "bp_6_2",
+      "raw_coordinate_sha256": "cdcc2ecea709396ad87c7b38da0d8abc87a36e17df7818560d1ba4098e9a9136",
+      "raw_equal": true,
+      "raw_support": 3,
+      "signed_terms": 3
+    },
+    {
+      "additional_markings": 1,
+      "name": "bp_6_3",
+      "raw_coordinate_sha256": "3913ef84091f1ae73bc59bedc660363075f2a134c5c0ca80a8e39a36fa669793",
+      "raw_equal": true,
+      "raw_support": 3,
+      "signed_terms": 3
+    },
+    {
+      "additional_markings": 1,
+      "name": "bp_6_4",
+      "raw_coordinate_sha256": "cdcc2ecea709396ad87c7b38da0d8abc87a36e17df7818560d1ba4098e9a9136",
+      "raw_equal": true,
+      "raw_support": 3,
+      "signed_terms": 3
+    },
+    {
+      "additional_markings": 1,
+      "name": "bp_6_5",
+      "raw_coordinate_sha256": "3913ef84091f1ae73bc59bedc660363075f2a134c5c0ca80a8e39a36fa669793",
+      "raw_equal": true,
+      "raw_support": 3,
+      "signed_terms": 3
+    },
+    {
+      "additional_markings": 1,
+      "name": "bp_7_0",
+      "raw_coordinate_sha256": "6c52a32861a2fbc4437524603e04f37219030784819441c17887638876112cba",
+      "raw_equal": true,
+      "raw_support": 3,
+      "signed_terms": 3
+    },
+    {
+      "additional_markings": 1,
+      "name": "bp_7_1",
+      "raw_coordinate_sha256": "1f5a207ad13e75d1132a47cea710ed40bc0ed7ba2764dd808c6eff914d643434",
+      "raw_equal": true,
+      "raw_support": 3,
+      "signed_terms": 3
+    },
+    {
+      "additional_markings": 1,
+      "name": "bp_7_2",
+      "raw_coordinate_sha256": "80060362a2f16de92ed9675fab96fdbbdece972baff3b95172651f795d866994",
+      "raw_equal": true,
+      "raw_support": 3,
+      "signed_terms": 3
+    },
+    {
+      "additional_markings": 1,
+      "name": "bp_7_3",
+      "raw_coordinate_sha256": "80060362a2f16de92ed9675fab96fdbbdece972baff3b95172651f795d866994",
+      "raw_equal": true,
+      "raw_support": 3,
+      "signed_terms": 3
+    },
+    {
+      "additional_markings": 1,
+      "name": "bp_7_4",
+      "raw_coordinate_sha256": "1f5a207ad13e75d1132a47cea710ed40bc0ed7ba2764dd808c6eff914d643434",
+      "raw_equal": true,
+      "raw_support": 3,
+      "signed_terms": 3
+    },
+    {
+      "additional_markings": 1,
+      "name": "bp_7_5",
+      "raw_coordinate_sha256": "6c52a32861a2fbc4437524603e04f37219030784819441c17887638876112cba",
+      "raw_equal": true,
+      "raw_support": 3,
+      "signed_terms": 3
+    },
+    {
+      "additional_markings": 1,
+      "name": "bp_8_0",
+      "raw_coordinate_sha256": "1ec29b8bc1f3d1d5032ccc783887c6233aa358cacae4b46eacf0a297f05eaa88",
+      "raw_equal": true,
+      "raw_support": 3,
+      "signed_terms": 3
+    },
+    {
+      "additional_markings": 1,
+      "name": "bp_8_1",
+      "raw_coordinate_sha256": "1ec29b8bc1f3d1d5032ccc783887c6233aa358cacae4b46eacf0a297f05eaa88",
+      "raw_equal": true,
+      "raw_support": 3,
+      "signed_terms": 3
+    },
+    {
+      "additional_markings": 1,
+      "name": "bp_8_2",
+      "raw_coordinate_sha256": "1ec29b8bc1f3d1d5032ccc783887c6233aa358cacae4b46eacf0a297f05eaa88",
+      "raw_equal": true,
+      "raw_support": 3,
+      "signed_terms": 3
+    },
+    {
+      "additional_markings": 1,
+      "name": "bp_8_3",
+      "raw_coordinate_sha256": "1ec29b8bc1f3d1d5032ccc783887c6233aa358cacae4b46eacf0a297f05eaa88",
+      "raw_equal": true,
+      "raw_support": 3,
+      "signed_terms": 3
+    },
+    {
+      "additional_markings": 1,
+      "name": "bp_8_4",
+      "raw_coordinate_sha256": "1ec29b8bc1f3d1d5032ccc783887c6233aa358cacae4b46eacf0a297f05eaa88",
+      "raw_equal": true,
+      "raw_support": 3,
+      "signed_terms": 3
+    },
+    {
+      "additional_markings": 1,
+      "name": "bp_8_5",
+      "raw_coordinate_sha256": "1ec29b8bc1f3d1d5032ccc783887c6233aa358cacae4b46eacf0a297f05eaa88",
+      "raw_equal": true,
+      "raw_support": 3,
+      "signed_terms": 3
+    },
+    {
+      "additional_markings": 1,
+      "name": "bp_9_0",
+      "raw_coordinate_sha256": "1cca0af018db927cd52f16003555f6aebe60a9ef9882081f93cc6680b41fd8ce",
+      "raw_equal": true,
+      "raw_support": 3,
+      "signed_terms": 3
+    },
+    {
+      "additional_markings": 1,
+      "name": "bp_9_1",
+      "raw_coordinate_sha256": "1cca0af018db927cd52f16003555f6aebe60a9ef9882081f93cc6680b41fd8ce",
+      "raw_equal": true,
+      "raw_support": 3,
+      "signed_terms": 3
+    },
+    {
+      "additional_markings": 1,
+      "name": "bp_9_2",
+      "raw_coordinate_sha256": "67beb155af457cc63b45a301f0f9f6bea1603fd801123b58c160b60c88ade42f",
+      "raw_equal": true,
+      "raw_support": 3,
+      "signed_terms": 3
+    },
+    {
+      "additional_markings": 1,
+      "name": "bp_9_3",
+      "raw_coordinate_sha256": "6a53a3fe3ab0a5c0da9107517f100e65b9009cdf246bbbaf9b4cf0c59d30040a",
+      "raw_equal": true,
+      "raw_support": 3,
+      "signed_terms": 3
+    },
+    {
+      "additional_markings": 1,
+      "name": "bp_9_4",
+      "raw_coordinate_sha256": "67beb155af457cc63b45a301f0f9f6bea1603fd801123b58c160b60c88ade42f",
+      "raw_equal": true,
+      "raw_support": 3,
+      "signed_terms": 3
+    },
+    {
+      "additional_markings": 1,
+      "name": "bp_9_5",
+      "raw_coordinate_sha256": "6a53a3fe3ab0a5c0da9107517f100e65b9009cdf246bbbaf9b4cf0c59d30040a",
+      "raw_equal": true,
+      "raw_support": 3,
+      "signed_terms": 3
+    },
+    {
+      "additional_markings": 1,
+      "name": "bp_10_0",
+      "raw_coordinate_sha256": "a632fa896e7cb08a38ddf4156008fa7cb96b1d6d2657e6cf5bb1f45e9158bb2b",
+      "raw_equal": true,
+      "raw_support": 3,
+      "signed_terms": 3
+    },
+    {
+      "additional_markings": 1,
+      "name": "bp_10_1",
+      "raw_coordinate_sha256": "a632fa896e7cb08a38ddf4156008fa7cb96b1d6d2657e6cf5bb1f45e9158bb2b",
+      "raw_equal": true,
+      "raw_support": 3,
+      "signed_terms": 3
+    },
+    {
+      "additional_markings": 1,
+      "name": "bp_10_2",
+      "raw_coordinate_sha256": "ac392f7acfb6dec5afeee4b7519e142134d4a1a6462d356b95ab538d7c92a932",
+      "raw_equal": true,
+      "raw_support": 3,
+      "signed_terms": 3
+    },
+    {
+      "additional_markings": 1,
+      "name": "bp_10_3",
+      "raw_coordinate_sha256": "59cecfa677ec5635f6f604c521a2ae63d99d39e7c94a6bdd72f471d7dd2844db",
+      "raw_equal": true,
+      "raw_support": 3,
+      "signed_terms": 3
+    },
+    {
+      "additional_markings": 1,
+      "name": "bp_10_4",
+      "raw_coordinate_sha256": "ac392f7acfb6dec5afeee4b7519e142134d4a1a6462d356b95ab538d7c92a932",
+      "raw_equal": true,
+      "raw_support": 3,
+      "signed_terms": 3
+    },
+    {
+      "additional_markings": 1,
+      "name": "bp_10_5",
+      "raw_coordinate_sha256": "59cecfa677ec5635f6f604c521a2ae63d99d39e7c94a6bdd72f471d7dd2844db",
+      "raw_equal": true,
+      "raw_support": 3,
+      "signed_terms": 3
+    },
+    {
+      "additional_markings": 1,
+      "name": "bp_11_0",
+      "raw_coordinate_sha256": "6a22b16834eb2369eefce9d61b1913496ec73f3baeca8689fc9c721caba498d0",
+      "raw_equal": true,
+      "raw_support": 2,
+      "signed_terms": 2
+    },
+    {
+      "additional_markings": 1,
+      "name": "bp_11_1",
+      "raw_coordinate_sha256": "6a22b16834eb2369eefce9d61b1913496ec73f3baeca8689fc9c721caba498d0",
+      "raw_equal": true,
+      "raw_support": 2,
+      "signed_terms": 2
+    },
+    {
+      "additional_markings": 1,
+      "name": "bp_11_2",
+      "raw_coordinate_sha256": "6a22b16834eb2369eefce9d61b1913496ec73f3baeca8689fc9c721caba498d0",
+      "raw_equal": true,
+      "raw_support": 2,
+      "signed_terms": 2
+    },
+    {
+      "additional_markings": 1,
+      "name": "bp_11_3",
+      "raw_coordinate_sha256": "6a22b16834eb2369eefce9d61b1913496ec73f3baeca8689fc9c721caba498d0",
+      "raw_equal": true,
+      "raw_support": 2,
+      "signed_terms": 2
+    },
+    {
+      "additional_markings": 1,
+      "name": "bp_11_4",
+      "raw_coordinate_sha256": "6a22b16834eb2369eefce9d61b1913496ec73f3baeca8689fc9c721caba498d0",
+      "raw_equal": true,
+      "raw_support": 2,
+      "signed_terms": 2
+    },
+    {
+      "additional_markings": 1,
+      "name": "bp_11_5",
+      "raw_coordinate_sha256": "6a22b16834eb2369eefce9d61b1913496ec73f3baeca8689fc9c721caba498d0",
+      "raw_equal": true,
+      "raw_support": 2,
+      "signed_terms": 2
+    },
+    {
+      "additional_markings": 1,
+      "name": "bp_12_0",
+      "raw_coordinate_sha256": "769c423a3eb45d69ee3b24d1bcc3cb8d26b5027d887f4e598b4d4c0deb56d249",
+      "raw_equal": true,
+      "raw_support": 2,
+      "signed_terms": 2
+    },
+    {
+      "additional_markings": 1,
+      "name": "bp_12_1",
+      "raw_coordinate_sha256": "8be0729d00001b88a2d8ccf1036ff43bc1c2101c86f2f0d174f2d703cb51682c",
+      "raw_equal": true,
+      "raw_support": 2,
+      "signed_terms": 2
+    },
+    {
+      "additional_markings": 1,
+      "name": "bp_12_2",
+      "raw_coordinate_sha256": "769c423a3eb45d69ee3b24d1bcc3cb8d26b5027d887f4e598b4d4c0deb56d249",
+      "raw_equal": true,
+      "raw_support": 2,
+      "signed_terms": 2
+    },
+    {
+      "additional_markings": 1,
+      "name": "bp_12_3",
+      "raw_coordinate_sha256": "8be0729d00001b88a2d8ccf1036ff43bc1c2101c86f2f0d174f2d703cb51682c",
+      "raw_equal": true,
+      "raw_support": 2,
+      "signed_terms": 2
+    },
+    {
+      "additional_markings": 1,
+      "name": "bp_12_4",
+      "raw_coordinate_sha256": "d4d13ad5fb8b5e3aef7e9f8cc72c207a6ee2f766f928b7ee5cb7c823d9de02ad",
+      "raw_equal": true,
+      "raw_support": 2,
+      "signed_terms": 2
+    },
+    {
+      "additional_markings": 1,
+      "name": "bp_12_5",
+      "raw_coordinate_sha256": "d4d13ad5fb8b5e3aef7e9f8cc72c207a6ee2f766f928b7ee5cb7c823d9de02ad",
+      "raw_equal": true,
+      "raw_support": 2,
+      "signed_terms": 2
+    },
+    {
+      "additional_markings": 1,
+      "name": "bp_13_0",
+      "raw_coordinate_sha256": "f6bee01e294298ff9a55e40a9343df119fff3e25f4bde896137b5bda4f688a86",
+      "raw_equal": true,
+      "raw_support": 2,
+      "signed_terms": 2
+    },
+    {
+      "additional_markings": 1,
+      "name": "bp_13_1",
+      "raw_coordinate_sha256": "f6bee01e294298ff9a55e40a9343df119fff3e25f4bde896137b5bda4f688a86",
+      "raw_equal": true,
+      "raw_support": 2,
+      "signed_terms": 2
+    },
+    {
+      "additional_markings": 1,
+      "name": "bp_13_2",
+      "raw_coordinate_sha256": "14a5e100715ce5e0a6fb6945b89cef20088c31ae751069c4b626b7042e8526be",
+      "raw_equal": true,
+      "raw_support": 2,
+      "signed_terms": 2
+    },
+    {
+      "additional_markings": 1,
+      "name": "bp_13_3",
+      "raw_coordinate_sha256": "471e9220272b1e06db7f4ea14925a2685e6f1dc07ce85e5ebf9ff3c958b2bc09",
+      "raw_equal": true,
+      "raw_support": 2,
+      "signed_terms": 2
+    },
+    {
+      "additional_markings": 1,
+      "name": "bp_13_4",
+      "raw_coordinate_sha256": "14a5e100715ce5e0a6fb6945b89cef20088c31ae751069c4b626b7042e8526be",
+      "raw_equal": true,
+      "raw_support": 2,
+      "signed_terms": 2
+    },
+    {
+      "additional_markings": 1,
+      "name": "bp_13_5",
+      "raw_coordinate_sha256": "471e9220272b1e06db7f4ea14925a2685e6f1dc07ce85e5ebf9ff3c958b2bc09",
+      "raw_equal": true,
+      "raw_support": 2,
+      "signed_terms": 2
+    },
+    {
+      "additional_markings": 1,
+      "name": "bp_14_0",
+      "raw_coordinate_sha256": "71ad8ed3712f8eedc24d9e6afb074363e6c611da64f8fa8ce48f5d886c99b4ff",
+      "raw_equal": true,
+      "raw_support": 2,
+      "signed_terms": 2
+    },
+    {
+      "additional_markings": 1,
+      "name": "bp_14_1",
+      "raw_coordinate_sha256": "71ad8ed3712f8eedc24d9e6afb074363e6c611da64f8fa8ce48f5d886c99b4ff",
+      "raw_equal": true,
+      "raw_support": 2,
+      "signed_terms": 2
+    },
+    {
+      "additional_markings": 1,
+      "name": "bp_14_2",
+      "raw_coordinate_sha256": "71ad8ed3712f8eedc24d9e6afb074363e6c611da64f8fa8ce48f5d886c99b4ff",
+      "raw_equal": true,
+      "raw_support": 2,
+      "signed_terms": 2
+    },
+    {
+      "additional_markings": 1,
+      "name": "bp_14_3",
+      "raw_coordinate_sha256": "71ad8ed3712f8eedc24d9e6afb074363e6c611da64f8fa8ce48f5d886c99b4ff",
+      "raw_equal": true,
+      "raw_support": 2,
+      "signed_terms": 2
+    },
+    {
+      "additional_markings": 1,
+      "name": "bp_14_4",
+      "raw_coordinate_sha256": "71ad8ed3712f8eedc24d9e6afb074363e6c611da64f8fa8ce48f5d886c99b4ff",
+      "raw_equal": true,
+      "raw_support": 2,
+      "signed_terms": 2
+    },
+    {
+      "additional_markings": 1,
+      "name": "bp_14_5",
+      "raw_coordinate_sha256": "71ad8ed3712f8eedc24d9e6afb074363e6c611da64f8fa8ce48f5d886c99b4ff",
+      "raw_equal": true,
+      "raw_support": 2,
+      "signed_terms": 2
+    },
+    {
+      "additional_markings": 1,
+      "name": "bp_15_0",
+      "raw_coordinate_sha256": "2749ba15aa24efb99dd9435601d3f3e66526eb5eb8d51678f93be23a25250e91",
+      "raw_equal": true,
+      "raw_support": 2,
+      "signed_terms": 2
+    },
+    {
+      "additional_markings": 1,
+      "name": "bp_15_1",
+      "raw_coordinate_sha256": "2749ba15aa24efb99dd9435601d3f3e66526eb5eb8d51678f93be23a25250e91",
+      "raw_equal": true,
+      "raw_support": 2,
+      "signed_terms": 2
+    },
+    {
+      "additional_markings": 1,
+      "name": "bp_15_2",
+      "raw_coordinate_sha256": "2749ba15aa24efb99dd9435601d3f3e66526eb5eb8d51678f93be23a25250e91",
+      "raw_equal": true,
+      "raw_support": 2,
+      "signed_terms": 2
+    },
+    {
+      "additional_markings": 1,
+      "name": "bp_15_3",
+      "raw_coordinate_sha256": "2749ba15aa24efb99dd9435601d3f3e66526eb5eb8d51678f93be23a25250e91",
+      "raw_equal": true,
+      "raw_support": 2,
+      "signed_terms": 2
+    },
+    {
+      "additional_markings": 1,
+      "name": "bp_15_4",
+      "raw_coordinate_sha256": "2749ba15aa24efb99dd9435601d3f3e66526eb5eb8d51678f93be23a25250e91",
+      "raw_equal": true,
+      "raw_support": 2,
+      "signed_terms": 2
+    },
+    {
+      "additional_markings": 1,
+      "name": "bp_15_5",
+      "raw_coordinate_sha256": "2749ba15aa24efb99dd9435601d3f3e66526eb5eb8d51678f93be23a25250e91",
+      "raw_equal": true,
+      "raw_support": 2,
+      "signed_terms": 2
+    },
+    {
+      "additional_markings": 1,
+      "name": "bp_16_0",
+      "raw_coordinate_sha256": "d3a3747fc9f64e905d86a395923ae119b90e8417d0651b93759c6e519e15887a",
+      "raw_equal": true,
+      "raw_support": 2,
+      "signed_terms": 2
+    },
+    {
+      "additional_markings": 1,
+      "name": "bp_16_1",
+      "raw_coordinate_sha256": "15aa578183d8754a0bd8dfcf210db58db95fc3554e80f3be97e33d8d0042c2e4",
+      "raw_equal": true,
+      "raw_support": 2,
+      "signed_terms": 2
+    },
+    {
+      "additional_markings": 1,
+      "name": "bp_16_2",
+      "raw_coordinate_sha256": "d3a3747fc9f64e905d86a395923ae119b90e8417d0651b93759c6e519e15887a",
+      "raw_equal": true,
+      "raw_support": 2,
+      "signed_terms": 2
+    },
+    {
+      "additional_markings": 1,
+      "name": "bp_16_3",
+      "raw_coordinate_sha256": "15aa578183d8754a0bd8dfcf210db58db95fc3554e80f3be97e33d8d0042c2e4",
+      "raw_equal": true,
+      "raw_support": 2,
+      "signed_terms": 2
+    },
+    {
+      "additional_markings": 1,
+      "name": "bp_16_4",
+      "raw_coordinate_sha256": "57bfc995aa27dd12c6b38ff870a76dc3545e67f763ef5d70d57fd88400b81421",
+      "raw_equal": true,
+      "raw_support": 2,
+      "signed_terms": 2
+    },
+    {
+      "additional_markings": 1,
+      "name": "bp_16_5",
+      "raw_coordinate_sha256": "57bfc995aa27dd12c6b38ff870a76dc3545e67f763ef5d70d57fd88400b81421",
+      "raw_equal": true,
+      "raw_support": 2,
+      "signed_terms": 2
+    },
+    {
+      "additional_markings": 1,
+      "name": "bp_17_0",
+      "raw_coordinate_sha256": "f7318cfdb3950f066dec4123c43294347327fce45450be467f9ff760d29b4892",
+      "raw_equal": true,
+      "raw_support": 2,
+      "signed_terms": 2
+    },
+    {
+      "additional_markings": 1,
+      "name": "bp_17_1",
+      "raw_coordinate_sha256": "f7318cfdb3950f066dec4123c43294347327fce45450be467f9ff760d29b4892",
+      "raw_equal": true,
+      "raw_support": 2,
+      "signed_terms": 2
+    },
+    {
+      "additional_markings": 1,
+      "name": "bp_17_2",
+      "raw_coordinate_sha256": "3f052334a88a21d1e1011a475bba874bd3da1babbdc044563f98732ad3c68866",
+      "raw_equal": true,
+      "raw_support": 2,
+      "signed_terms": 2
+    },
+    {
+      "additional_markings": 1,
+      "name": "bp_17_3",
+      "raw_coordinate_sha256": "3cea01cea4e9d79c537b5181dfb060bc6356391beb764a4d19519b4d33e7b785",
+      "raw_equal": true,
+      "raw_support": 2,
+      "signed_terms": 2
+    },
+    {
+      "additional_markings": 1,
+      "name": "bp_17_4",
+      "raw_coordinate_sha256": "3f052334a88a21d1e1011a475bba874bd3da1babbdc044563f98732ad3c68866",
+      "raw_equal": true,
+      "raw_support": 2,
+      "signed_terms": 2
+    },
+    {
+      "additional_markings": 1,
+      "name": "bp_17_5",
+      "raw_coordinate_sha256": "3cea01cea4e9d79c537b5181dfb060bc6356391beb764a4d19519b4d33e7b785",
+      "raw_equal": true,
+      "raw_support": 2,
+      "signed_terms": 2
+    },
+    {
+      "additional_markings": 1,
+      "name": "bp_18_0",
+      "raw_coordinate_sha256": "fae445f1e96870b7ba85839de3860917fa6aa8ca479f68662d290142fdb61f20",
+      "raw_equal": true,
+      "raw_support": 2,
+      "signed_terms": 2
+    },
+    {
+      "additional_markings": 1,
+      "name": "bp_18_1",
+      "raw_coordinate_sha256": "fae445f1e96870b7ba85839de3860917fa6aa8ca479f68662d290142fdb61f20",
+      "raw_equal": true,
+      "raw_support": 2,
+      "signed_terms": 2
+    },
+    {
+      "additional_markings": 1,
+      "name": "bp_18_2",
+      "raw_coordinate_sha256": "fae445f1e96870b7ba85839de3860917fa6aa8ca479f68662d290142fdb61f20",
+      "raw_equal": true,
+      "raw_support": 2,
+      "signed_terms": 2
+    },
+    {
+      "additional_markings": 1,
+      "name": "bp_18_3",
+      "raw_coordinate_sha256": "fae445f1e96870b7ba85839de3860917fa6aa8ca479f68662d290142fdb61f20",
+      "raw_equal": true,
+      "raw_support": 2,
+      "signed_terms": 2
+    },
+    {
+      "additional_markings": 1,
+      "name": "bp_18_4",
+      "raw_coordinate_sha256": "fae445f1e96870b7ba85839de3860917fa6aa8ca479f68662d290142fdb61f20",
+      "raw_equal": true,
+      "raw_support": 2,
+      "signed_terms": 2
+    },
+    {
+      "additional_markings": 1,
+      "name": "bp_18_5",
+      "raw_coordinate_sha256": "fae445f1e96870b7ba85839de3860917fa6aa8ca479f68662d290142fdb61f20",
+      "raw_equal": true,
+      "raw_support": 2,
+      "signed_terms": 2
+    },
+    {
+      "additional_markings": 1,
+      "name": "bp_19_0",
+      "raw_coordinate_sha256": "4b6973d91628f11e189aa5784394b7dca5a70bf055de078a15b3dda7653fbd37",
+      "raw_equal": true,
+      "raw_support": 2,
+      "signed_terms": 2
+    },
+    {
+      "additional_markings": 1,
+      "name": "bp_19_1",
+      "raw_coordinate_sha256": "4b6973d91628f11e189aa5784394b7dca5a70bf055de078a15b3dda7653fbd37",
+      "raw_equal": true,
+      "raw_support": 2,
+      "signed_terms": 2
+    },
+    {
+      "additional_markings": 1,
+      "name": "bp_19_2",
+      "raw_coordinate_sha256": "9efb05144a1b4a6155c6eef0a8b77ef9b705fef7698f1a4302ec9ecf6d60b9bf",
+      "raw_equal": true,
+      "raw_support": 2,
+      "signed_terms": 2
+    },
+    {
+      "additional_markings": 1,
+      "name": "bp_19_3",
+      "raw_coordinate_sha256": "77013f5c2307d66b337ffda907146060e818b79e79cae99d9d538ef816d58a00",
+      "raw_equal": true,
+      "raw_support": 2,
+      "signed_terms": 2
+    },
+    {
+      "additional_markings": 1,
+      "name": "bp_19_4",
+      "raw_coordinate_sha256": "9efb05144a1b4a6155c6eef0a8b77ef9b705fef7698f1a4302ec9ecf6d60b9bf",
+      "raw_equal": true,
+      "raw_support": 2,
+      "signed_terms": 2
+    },
+    {
+      "additional_markings": 1,
+      "name": "bp_19_5",
+      "raw_coordinate_sha256": "77013f5c2307d66b337ffda907146060e818b79e79cae99d9d538ef816d58a00",
+      "raw_equal": true,
+      "raw_support": 2,
+      "signed_terms": 2
+    },
+    {
+      "additional_markings": 1,
+      "name": "psi_square",
+      "raw_coordinate_sha256": "48e876e72a1574f2c8dbc4aa11959245d66429a33dd8f0c7a590bc076721188b",
+      "raw_equal": true,
+      "raw_support": 2,
+      "signed_terms": 2
+    },
+    {
+      "additional_markings": 1,
+      "name": "psi_product",
+      "raw_coordinate_sha256": "e9b93ae1ee630ed4bef0f336f0f48872c298b165c21f49dc3732f41b9afbd5fa",
+      "raw_equal": true,
+      "raw_support": 3,
+      "signed_terms": 3
+    },
+    {
+      "additional_markings": 1,
+      "name": "zero_power",
+      "raw_coordinate_sha256": "c92da087a750c0d72699ac3d47e8f71a9e9de22e17a7fa05b5776eec512d64ae",
+      "raw_equal": true,
+      "raw_support": 1,
+      "signed_terms": 1
+    },
+    {
+      "additional_markings": 1,
+      "name": "unmarked_zero",
+      "raw_coordinate_sha256": "4c88726f8a7068bee6d74daab6014f0bf6ac3ee7209f8b1fe50ea3bea0514f18",
+      "raw_equal": true,
+      "raw_support": 1,
+      "signed_terms": 1
+    },
+    {
+      "additional_markings": 1,
+      "name": "loop_branches",
+      "raw_coordinate_sha256": "d226ceb1c7f86bbdbeb7ff6a387b0aa143b927cce6607c12dba989798aeae7cf",
+      "raw_equal": true,
+      "raw_support": 3,
+      "signed_terms": 3
+    },
+    {
+      "additional_markings": 1,
+      "name": "symmetric",
+      "raw_coordinate_sha256": "184fc348290a7953c77740c0a268eee35e0720e988ba51c28d76751b107bc58d",
+      "raw_equal": true,
+      "raw_support": 1,
+      "signed_terms": 2
+    },
+    {
+      "additional_markings": 2,
+      "name": "bp_0_0",
+      "raw_coordinate_sha256": "2a890eca0eaffae795f04223a1aa4cbed81becb18c96c45b546d5abf5f8fb8bd",
+      "raw_equal": true,
+      "raw_support": 9,
+      "signed_terms": 9
+    },
+    {
+      "additional_markings": 2,
+      "name": "bp_0_1",
+      "raw_coordinate_sha256": "2a890eca0eaffae795f04223a1aa4cbed81becb18c96c45b546d5abf5f8fb8bd",
+      "raw_equal": true,
+      "raw_support": 9,
+      "signed_terms": 9
+    },
+    {
+      "additional_markings": 2,
+      "name": "bp_0_2",
+      "raw_coordinate_sha256": "3abfe0f60a86934c07f172ceab3d11dc665f013d8af7d94486ccfec8683e8685",
+      "raw_equal": true,
+      "raw_support": 9,
+      "signed_terms": 9
+    },
+    {
+      "additional_markings": 2,
+      "name": "bp_0_3",
+      "raw_coordinate_sha256": "c5ea12ea5b7a417338b0beb0ffb5b645a4f9eb69ac10b5fe40a9f68a0db8c755",
+      "raw_equal": true,
+      "raw_support": 9,
+      "signed_terms": 9
+    },
+    {
+      "additional_markings": 2,
+      "name": "bp_0_4",
+      "raw_coordinate_sha256": "3abfe0f60a86934c07f172ceab3d11dc665f013d8af7d94486ccfec8683e8685",
+      "raw_equal": true,
+      "raw_support": 9,
+      "signed_terms": 9
+    },
+    {
+      "additional_markings": 2,
+      "name": "bp_0_5",
+      "raw_coordinate_sha256": "c5ea12ea5b7a417338b0beb0ffb5b645a4f9eb69ac10b5fe40a9f68a0db8c755",
+      "raw_equal": true,
+      "raw_support": 9,
+      "signed_terms": 9
+    },
+    {
+      "additional_markings": 2,
+      "name": "bp_1_0",
+      "raw_coordinate_sha256": "9d302574347cfc7b31fb5d63191872db970154dfe40f1b50103b3aa737931232",
+      "raw_equal": true,
+      "raw_support": 9,
+      "signed_terms": 9
+    },
+    {
+      "additional_markings": 2,
+      "name": "bp_1_1",
+      "raw_coordinate_sha256": "9d302574347cfc7b31fb5d63191872db970154dfe40f1b50103b3aa737931232",
+      "raw_equal": true,
+      "raw_support": 9,
+      "signed_terms": 9
+    },
+    {
+      "additional_markings": 2,
+      "name": "bp_1_2",
+      "raw_coordinate_sha256": "9d302574347cfc7b31fb5d63191872db970154dfe40f1b50103b3aa737931232",
+      "raw_equal": true,
+      "raw_support": 9,
+      "signed_terms": 9
+    },
+    {
+      "additional_markings": 2,
+      "name": "bp_1_3",
+      "raw_coordinate_sha256": "9d302574347cfc7b31fb5d63191872db970154dfe40f1b50103b3aa737931232",
+      "raw_equal": true,
+      "raw_support": 9,
+      "signed_terms": 9
+    },
+    {
+      "additional_markings": 2,
+      "name": "bp_1_4",
+      "raw_coordinate_sha256": "9d302574347cfc7b31fb5d63191872db970154dfe40f1b50103b3aa737931232",
+      "raw_equal": true,
+      "raw_support": 9,
+      "signed_terms": 9
+    },
+    {
+      "additional_markings": 2,
+      "name": "bp_1_5",
+      "raw_coordinate_sha256": "9d302574347cfc7b31fb5d63191872db970154dfe40f1b50103b3aa737931232",
+      "raw_equal": true,
+      "raw_support": 9,
+      "signed_terms": 9
+    },
+    {
+      "additional_markings": 2,
+      "name": "bp_2_0",
+      "raw_coordinate_sha256": "759c3eb0d73ab773070a35558a0b44bda4b914d3e86d759312c17648f796d4a1",
+      "raw_equal": true,
+      "raw_support": 9,
+      "signed_terms": 9
+    },
+    {
+      "additional_markings": 2,
+      "name": "bp_2_1",
+      "raw_coordinate_sha256": "759c3eb0d73ab773070a35558a0b44bda4b914d3e86d759312c17648f796d4a1",
+      "raw_equal": true,
+      "raw_support": 9,
+      "signed_terms": 9
+    },
+    {
+      "additional_markings": 2,
+      "name": "bp_2_2",
+      "raw_coordinate_sha256": "ee1180c2eb3d9ac049bc55bc614d7bd6d9d2cf156fbb6f3490d53299a563589a",
+      "raw_equal": true,
+      "raw_support": 9,
+      "signed_terms": 9
+    },
+    {
+      "additional_markings": 2,
+      "name": "bp_2_3",
+      "raw_coordinate_sha256": "17ed28e24613e48c0217e79218e5001b6ca446685fd36d86e1baa87c89fc9527",
+      "raw_equal": true,
+      "raw_support": 9,
+      "signed_terms": 9
+    },
+    {
+      "additional_markings": 2,
+      "name": "bp_2_4",
+      "raw_coordinate_sha256": "ee1180c2eb3d9ac049bc55bc614d7bd6d9d2cf156fbb6f3490d53299a563589a",
+      "raw_equal": true,
+      "raw_support": 9,
+      "signed_terms": 9
+    },
+    {
+      "additional_markings": 2,
+      "name": "bp_2_5",
+      "raw_coordinate_sha256": "17ed28e24613e48c0217e79218e5001b6ca446685fd36d86e1baa87c89fc9527",
+      "raw_equal": true,
+      "raw_support": 9,
+      "signed_terms": 9
+    },
+    {
+      "additional_markings": 2,
+      "name": "bp_3_0",
+      "raw_coordinate_sha256": "f38f52e593164ee0b5a8d5e4e842ef162828342b3265397462f4e2f70b558665",
+      "raw_equal": true,
+      "raw_support": 9,
+      "signed_terms": 9
+    },
+    {
+      "additional_markings": 2,
+      "name": "bp_3_1",
+      "raw_coordinate_sha256": "f38f52e593164ee0b5a8d5e4e842ef162828342b3265397462f4e2f70b558665",
+      "raw_equal": true,
+      "raw_support": 9,
+      "signed_terms": 9
+    },
+    {
+      "additional_markings": 2,
+      "name": "bp_3_2",
+      "raw_coordinate_sha256": "29dd57c423f0f697b9e746faf4a7540875936a2aa7ba74f67994c2eea0a7ac90",
+      "raw_equal": true,
+      "raw_support": 9,
+      "signed_terms": 9
+    },
+    {
+      "additional_markings": 2,
+      "name": "bp_3_3",
+      "raw_coordinate_sha256": "c1bf72bdae729180846d35b9e515115c5dc4f416f5344bd4460d1d31f8323b7a",
+      "raw_equal": true,
+      "raw_support": 9,
+      "signed_terms": 9
+    },
+    {
+      "additional_markings": 2,
+      "name": "bp_3_4",
+      "raw_coordinate_sha256": "29dd57c423f0f697b9e746faf4a7540875936a2aa7ba74f67994c2eea0a7ac90",
+      "raw_equal": true,
+      "raw_support": 9,
+      "signed_terms": 9
+    },
+    {
+      "additional_markings": 2,
+      "name": "bp_3_5",
+      "raw_coordinate_sha256": "c1bf72bdae729180846d35b9e515115c5dc4f416f5344bd4460d1d31f8323b7a",
+      "raw_equal": true,
+      "raw_support": 9,
+      "signed_terms": 9
+    },
+    {
+      "additional_markings": 2,
+      "name": "bp_4_0",
+      "raw_coordinate_sha256": "80f8b1bce199659b377a0b664bbb2e104e5a1f5ad2befca5cd7ef9a4efe89ad3",
+      "raw_equal": true,
+      "raw_support": 5,
+      "signed_terms": 9
+    },
+    {
+      "additional_markings": 2,
+      "name": "bp_4_1",
+      "raw_coordinate_sha256": "80f8b1bce199659b377a0b664bbb2e104e5a1f5ad2befca5cd7ef9a4efe89ad3",
+      "raw_equal": true,
+      "raw_support": 5,
+      "signed_terms": 9
+    },
+    {
+      "additional_markings": 2,
+      "name": "bp_4_2",
+      "raw_coordinate_sha256": "80f8b1bce199659b377a0b664bbb2e104e5a1f5ad2befca5cd7ef9a4efe89ad3",
+      "raw_equal": true,
+      "raw_support": 5,
+      "signed_terms": 9
+    },
+    {
+      "additional_markings": 2,
+      "name": "bp_4_3",
+      "raw_coordinate_sha256": "80f8b1bce199659b377a0b664bbb2e104e5a1f5ad2befca5cd7ef9a4efe89ad3",
+      "raw_equal": true,
+      "raw_support": 5,
+      "signed_terms": 9
+    },
+    {
+      "additional_markings": 2,
+      "name": "bp_4_4",
+      "raw_coordinate_sha256": "80f8b1bce199659b377a0b664bbb2e104e5a1f5ad2befca5cd7ef9a4efe89ad3",
+      "raw_equal": true,
+      "raw_support": 5,
+      "signed_terms": 9
+    },
+    {
+      "additional_markings": 2,
+      "name": "bp_4_5",
+      "raw_coordinate_sha256": "80f8b1bce199659b377a0b664bbb2e104e5a1f5ad2befca5cd7ef9a4efe89ad3",
+      "raw_equal": true,
+      "raw_support": 5,
+      "signed_terms": 9
+    },
+    {
+      "additional_markings": 2,
+      "name": "bp_5_0",
+      "raw_coordinate_sha256": "f8f0939aedc16bdbf642f9f0af23738443921c26d53328dea1be5e8111bfbdff",
+      "raw_equal": true,
+      "raw_support": 9,
+      "signed_terms": 9
+    },
+    {
+      "additional_markings": 2,
+      "name": "bp_5_1",
+      "raw_coordinate_sha256": "e34820c13328dc27fc535210d39e55c6bf1298fd35e3de0c0f7052769815b0ce",
+      "raw_equal": true,
+      "raw_support": 9,
+      "signed_terms": 9
+    },
+    {
+      "additional_markings": 2,
+      "name": "bp_5_2",
+      "raw_coordinate_sha256": "f8f0939aedc16bdbf642f9f0af23738443921c26d53328dea1be5e8111bfbdff",
+      "raw_equal": true,
+      "raw_support": 9,
+      "signed_terms": 9
+    },
+    {
+      "additional_markings": 2,
+      "name": "bp_5_3",
+      "raw_coordinate_sha256": "e34820c13328dc27fc535210d39e55c6bf1298fd35e3de0c0f7052769815b0ce",
+      "raw_equal": true,
+      "raw_support": 9,
+      "signed_terms": 9
+    },
+    {
+      "additional_markings": 2,
+      "name": "bp_5_4",
+      "raw_coordinate_sha256": "e89ecf08830edb37ac916c288163a5ea5006577d2e5db9d9c218192bd767bd97",
+      "raw_equal": true,
+      "raw_support": 9,
+      "signed_terms": 9
+    },
+    {
+      "additional_markings": 2,
+      "name": "bp_5_5",
+      "raw_coordinate_sha256": "e89ecf08830edb37ac916c288163a5ea5006577d2e5db9d9c218192bd767bd97",
+      "raw_equal": true,
+      "raw_support": 9,
+      "signed_terms": 9
+    },
+    {
+      "additional_markings": 2,
+      "name": "bp_6_0",
+      "raw_coordinate_sha256": "24e33ffbe6f76fe9ddec97e4b9ebeb4d5246965e1927cdb1d38e8f19906d2301",
+      "raw_equal": true,
+      "raw_support": 9,
+      "signed_terms": 9
+    },
+    {
+      "additional_markings": 2,
+      "name": "bp_6_1",
+      "raw_coordinate_sha256": "24e33ffbe6f76fe9ddec97e4b9ebeb4d5246965e1927cdb1d38e8f19906d2301",
+      "raw_equal": true,
+      "raw_support": 9,
+      "signed_terms": 9
+    },
+    {
+      "additional_markings": 2,
+      "name": "bp_6_2",
+      "raw_coordinate_sha256": "d92ebdcde8165de8d52bc5d0a211e97f027783c9d78e99d17b17f7698d613dd3",
+      "raw_equal": true,
+      "raw_support": 9,
+      "signed_terms": 9
+    },
+    {
+      "additional_markings": 2,
+      "name": "bp_6_3",
+      "raw_coordinate_sha256": "5f2b4fb350f188402f09bd1a1ac2481699202845f65a4b36ed6c28c4be521416",
+      "raw_equal": true,
+      "raw_support": 9,
+      "signed_terms": 9
+    },
+    {
+      "additional_markings": 2,
+      "name": "bp_6_4",
+      "raw_coordinate_sha256": "d92ebdcde8165de8d52bc5d0a211e97f027783c9d78e99d17b17f7698d613dd3",
+      "raw_equal": true,
+      "raw_support": 9,
+      "signed_terms": 9
+    },
+    {
+      "additional_markings": 2,
+      "name": "bp_6_5",
+      "raw_coordinate_sha256": "5f2b4fb350f188402f09bd1a1ac2481699202845f65a4b36ed6c28c4be521416",
+      "raw_equal": true,
+      "raw_support": 9,
+      "signed_terms": 9
+    },
+    {
+      "additional_markings": 2,
+      "name": "bp_7_0",
+      "raw_coordinate_sha256": "495c5fc41d76774cc4eb028b98ef0ea31506653ea0dfb7159beb02bd9e9a8a6a",
+      "raw_equal": true,
+      "raw_support": 9,
+      "signed_terms": 9
+    },
+    {
+      "additional_markings": 2,
+      "name": "bp_7_1",
+      "raw_coordinate_sha256": "e6d6187159dfa8215723508ca051ac991289010015c034f583f867e2952b7b12",
+      "raw_equal": true,
+      "raw_support": 9,
+      "signed_terms": 9
+    },
+    {
+      "additional_markings": 2,
+      "name": "bp_7_2",
+      "raw_coordinate_sha256": "ddae8b172ad2a4eb67dff9192e80b9c73bfbd74ee645a01f6e7aef380f6096db",
+      "raw_equal": true,
+      "raw_support": 9,
+      "signed_terms": 9
+    },
+    {
+      "additional_markings": 2,
+      "name": "bp_7_3",
+      "raw_coordinate_sha256": "ddae8b172ad2a4eb67dff9192e80b9c73bfbd74ee645a01f6e7aef380f6096db",
+      "raw_equal": true,
+      "raw_support": 9,
+      "signed_terms": 9
+    },
+    {
+      "additional_markings": 2,
+      "name": "bp_7_4",
+      "raw_coordinate_sha256": "e6d6187159dfa8215723508ca051ac991289010015c034f583f867e2952b7b12",
+      "raw_equal": true,
+      "raw_support": 9,
+      "signed_terms": 9
+    },
+    {
+      "additional_markings": 2,
+      "name": "bp_7_5",
+      "raw_coordinate_sha256": "495c5fc41d76774cc4eb028b98ef0ea31506653ea0dfb7159beb02bd9e9a8a6a",
+      "raw_equal": true,
+      "raw_support": 9,
+      "signed_terms": 9
+    },
+    {
+      "additional_markings": 2,
+      "name": "bp_8_0",
+      "raw_coordinate_sha256": "394e8c78f74b5f0e416d06dc47da820869b7a3d030e73f2eefb4f662594d72a2",
+      "raw_equal": true,
+      "raw_support": 9,
+      "signed_terms": 9
+    },
+    {
+      "additional_markings": 2,
+      "name": "bp_8_1",
+      "raw_coordinate_sha256": "394e8c78f74b5f0e416d06dc47da820869b7a3d030e73f2eefb4f662594d72a2",
+      "raw_equal": true,
+      "raw_support": 9,
+      "signed_terms": 9
+    },
+    {
+      "additional_markings": 2,
+      "name": "bp_8_2",
+      "raw_coordinate_sha256": "394e8c78f74b5f0e416d06dc47da820869b7a3d030e73f2eefb4f662594d72a2",
+      "raw_equal": true,
+      "raw_support": 9,
+      "signed_terms": 9
+    },
+    {
+      "additional_markings": 2,
+      "name": "bp_8_3",
+      "raw_coordinate_sha256": "394e8c78f74b5f0e416d06dc47da820869b7a3d030e73f2eefb4f662594d72a2",
+      "raw_equal": true,
+      "raw_support": 9,
+      "signed_terms": 9
+    },
+    {
+      "additional_markings": 2,
+      "name": "bp_8_4",
+      "raw_coordinate_sha256": "394e8c78f74b5f0e416d06dc47da820869b7a3d030e73f2eefb4f662594d72a2",
+      "raw_equal": true,
+      "raw_support": 9,
+      "signed_terms": 9
+    },
+    {
+      "additional_markings": 2,
+      "name": "bp_8_5",
+      "raw_coordinate_sha256": "394e8c78f74b5f0e416d06dc47da820869b7a3d030e73f2eefb4f662594d72a2",
+      "raw_equal": true,
+      "raw_support": 9,
+      "signed_terms": 9
+    },
+    {
+      "additional_markings": 2,
+      "name": "bp_9_0",
+      "raw_coordinate_sha256": "b52decab597c84a67be45c979b925058070164c11f8354967181254dcae57cf3",
+      "raw_equal": true,
+      "raw_support": 9,
+      "signed_terms": 9
+    },
+    {
+      "additional_markings": 2,
+      "name": "bp_9_1",
+      "raw_coordinate_sha256": "b52decab597c84a67be45c979b925058070164c11f8354967181254dcae57cf3",
+      "raw_equal": true,
+      "raw_support": 9,
+      "signed_terms": 9
+    },
+    {
+      "additional_markings": 2,
+      "name": "bp_9_2",
+      "raw_coordinate_sha256": "5a06faec8244431c2a22a274d717a64e74725d25b83dbd14028494dbf129b989",
+      "raw_equal": true,
+      "raw_support": 9,
+      "signed_terms": 9
+    },
+    {
+      "additional_markings": 2,
+      "name": "bp_9_3",
+      "raw_coordinate_sha256": "7d414af7099227b7edacebe89acb494e802dfbe6809922f09c39af80aaa456e5",
+      "raw_equal": true,
+      "raw_support": 9,
+      "signed_terms": 9
+    },
+    {
+      "additional_markings": 2,
+      "name": "bp_9_4",
+      "raw_coordinate_sha256": "5a06faec8244431c2a22a274d717a64e74725d25b83dbd14028494dbf129b989",
+      "raw_equal": true,
+      "raw_support": 9,
+      "signed_terms": 9
+    },
+    {
+      "additional_markings": 2,
+      "name": "bp_9_5",
+      "raw_coordinate_sha256": "7d414af7099227b7edacebe89acb494e802dfbe6809922f09c39af80aaa456e5",
+      "raw_equal": true,
+      "raw_support": 9,
+      "signed_terms": 9
+    },
+    {
+      "additional_markings": 2,
+      "name": "bp_10_0",
+      "raw_coordinate_sha256": "807bcb2444c5554c8023f3bb13bf5aa4b2cdfa828b13f9470aec83b22cf6e90c",
+      "raw_equal": true,
+      "raw_support": 9,
+      "signed_terms": 9
+    },
+    {
+      "additional_markings": 2,
+      "name": "bp_10_1",
+      "raw_coordinate_sha256": "807bcb2444c5554c8023f3bb13bf5aa4b2cdfa828b13f9470aec83b22cf6e90c",
+      "raw_equal": true,
+      "raw_support": 9,
+      "signed_terms": 9
+    },
+    {
+      "additional_markings": 2,
+      "name": "bp_10_2",
+      "raw_coordinate_sha256": "be8e363602caba3b708c7579b2b1e66b9e4bb1baf347a5125dd3530f0d8bc895",
+      "raw_equal": true,
+      "raw_support": 9,
+      "signed_terms": 9
+    },
+    {
+      "additional_markings": 2,
+      "name": "bp_10_3",
+      "raw_coordinate_sha256": "063c132e6e3d505e6789ee7eb0f0855e0b017bac237ddfd4023989681f1c3d59",
+      "raw_equal": true,
+      "raw_support": 9,
+      "signed_terms": 9
+    },
+    {
+      "additional_markings": 2,
+      "name": "bp_10_4",
+      "raw_coordinate_sha256": "be8e363602caba3b708c7579b2b1e66b9e4bb1baf347a5125dd3530f0d8bc895",
+      "raw_equal": true,
+      "raw_support": 9,
+      "signed_terms": 9
+    },
+    {
+      "additional_markings": 2,
+      "name": "bp_10_5",
+      "raw_coordinate_sha256": "063c132e6e3d505e6789ee7eb0f0855e0b017bac237ddfd4023989681f1c3d59",
+      "raw_equal": true,
+      "raw_support": 9,
+      "signed_terms": 9
+    },
+    {
+      "additional_markings": 2,
+      "name": "bp_11_0",
+      "raw_coordinate_sha256": "1643b42cfc8167e724b2b7600ca4d739b4564815d15e9e5c228b4f1f53043ef3",
+      "raw_equal": true,
+      "raw_support": 4,
+      "signed_terms": 4
+    },
+    {
+      "additional_markings": 2,
+      "name": "bp_11_1",
+      "raw_coordinate_sha256": "1643b42cfc8167e724b2b7600ca4d739b4564815d15e9e5c228b4f1f53043ef3",
+      "raw_equal": true,
+      "raw_support": 4,
+      "signed_terms": 4
+    },
+    {
+      "additional_markings": 2,
+      "name": "bp_11_2",
+      "raw_coordinate_sha256": "1643b42cfc8167e724b2b7600ca4d739b4564815d15e9e5c228b4f1f53043ef3",
+      "raw_equal": true,
+      "raw_support": 4,
+      "signed_terms": 4
+    },
+    {
+      "additional_markings": 2,
+      "name": "bp_11_3",
+      "raw_coordinate_sha256": "1643b42cfc8167e724b2b7600ca4d739b4564815d15e9e5c228b4f1f53043ef3",
+      "raw_equal": true,
+      "raw_support": 4,
+      "signed_terms": 4
+    },
+    {
+      "additional_markings": 2,
+      "name": "bp_11_4",
+      "raw_coordinate_sha256": "1643b42cfc8167e724b2b7600ca4d739b4564815d15e9e5c228b4f1f53043ef3",
+      "raw_equal": true,
+      "raw_support": 4,
+      "signed_terms": 4
+    },
+    {
+      "additional_markings": 2,
+      "name": "bp_11_5",
+      "raw_coordinate_sha256": "1643b42cfc8167e724b2b7600ca4d739b4564815d15e9e5c228b4f1f53043ef3",
+      "raw_equal": true,
+      "raw_support": 4,
+      "signed_terms": 4
+    },
+    {
+      "additional_markings": 2,
+      "name": "bp_12_0",
+      "raw_coordinate_sha256": "b0aea4a5261e03584ee08b8d9ef9ca4a5ed7372d6503d7d793a40bef294288a5",
+      "raw_equal": true,
+      "raw_support": 4,
+      "signed_terms": 4
+    },
+    {
+      "additional_markings": 2,
+      "name": "bp_12_1",
+      "raw_coordinate_sha256": "379de6d668456796ea7039b93df77e59ef6e9d4f367affb932d2e79a052f88b6",
+      "raw_equal": true,
+      "raw_support": 4,
+      "signed_terms": 4
+    },
+    {
+      "additional_markings": 2,
+      "name": "bp_12_2",
+      "raw_coordinate_sha256": "b0aea4a5261e03584ee08b8d9ef9ca4a5ed7372d6503d7d793a40bef294288a5",
+      "raw_equal": true,
+      "raw_support": 4,
+      "signed_terms": 4
+    },
+    {
+      "additional_markings": 2,
+      "name": "bp_12_3",
+      "raw_coordinate_sha256": "379de6d668456796ea7039b93df77e59ef6e9d4f367affb932d2e79a052f88b6",
+      "raw_equal": true,
+      "raw_support": 4,
+      "signed_terms": 4
+    },
+    {
+      "additional_markings": 2,
+      "name": "bp_12_4",
+      "raw_coordinate_sha256": "42f9c2491a6c7b29d3e566fa2ff81f3cb5dea8bca945083b4839ddda53c88767",
+      "raw_equal": true,
+      "raw_support": 4,
+      "signed_terms": 4
+    },
+    {
+      "additional_markings": 2,
+      "name": "bp_12_5",
+      "raw_coordinate_sha256": "42f9c2491a6c7b29d3e566fa2ff81f3cb5dea8bca945083b4839ddda53c88767",
+      "raw_equal": true,
+      "raw_support": 4,
+      "signed_terms": 4
+    },
+    {
+      "additional_markings": 2,
+      "name": "bp_13_0",
+      "raw_coordinate_sha256": "8a336166307b6546cf5d946ec1ed5f4f9511f6898cbb3c95fdba1a885748b5a4",
+      "raw_equal": true,
+      "raw_support": 4,
+      "signed_terms": 4
+    },
+    {
+      "additional_markings": 2,
+      "name": "bp_13_1",
+      "raw_coordinate_sha256": "8a336166307b6546cf5d946ec1ed5f4f9511f6898cbb3c95fdba1a885748b5a4",
+      "raw_equal": true,
+      "raw_support": 4,
+      "signed_terms": 4
+    },
+    {
+      "additional_markings": 2,
+      "name": "bp_13_2",
+      "raw_coordinate_sha256": "065ed2b7d5df5a2daa851964851d65246aad222bc70d298bf39e6e23c2799151",
+      "raw_equal": true,
+      "raw_support": 4,
+      "signed_terms": 4
+    },
+    {
+      "additional_markings": 2,
+      "name": "bp_13_3",
+      "raw_coordinate_sha256": "9b63a8615f7ed6f7b64677c561ae112bc7fd450c5bc833c4d9639ec1eb06324f",
+      "raw_equal": true,
+      "raw_support": 4,
+      "signed_terms": 4
+    },
+    {
+      "additional_markings": 2,
+      "name": "bp_13_4",
+      "raw_coordinate_sha256": "065ed2b7d5df5a2daa851964851d65246aad222bc70d298bf39e6e23c2799151",
+      "raw_equal": true,
+      "raw_support": 4,
+      "signed_terms": 4
+    },
+    {
+      "additional_markings": 2,
+      "name": "bp_13_5",
+      "raw_coordinate_sha256": "9b63a8615f7ed6f7b64677c561ae112bc7fd450c5bc833c4d9639ec1eb06324f",
+      "raw_equal": true,
+      "raw_support": 4,
+      "signed_terms": 4
+    },
+    {
+      "additional_markings": 2,
+      "name": "bp_14_0",
+      "raw_coordinate_sha256": "53a468588ee45b498eeec3b0efe4d6cac31e36c7a4476a23972ac1cca27e9d69",
+      "raw_equal": true,
+      "raw_support": 4,
+      "signed_terms": 4
+    },
+    {
+      "additional_markings": 2,
+      "name": "bp_14_1",
+      "raw_coordinate_sha256": "53a468588ee45b498eeec3b0efe4d6cac31e36c7a4476a23972ac1cca27e9d69",
+      "raw_equal": true,
+      "raw_support": 4,
+      "signed_terms": 4
+    },
+    {
+      "additional_markings": 2,
+      "name": "bp_14_2",
+      "raw_coordinate_sha256": "53a468588ee45b498eeec3b0efe4d6cac31e36c7a4476a23972ac1cca27e9d69",
+      "raw_equal": true,
+      "raw_support": 4,
+      "signed_terms": 4
+    },
+    {
+      "additional_markings": 2,
+      "name": "bp_14_3",
+      "raw_coordinate_sha256": "53a468588ee45b498eeec3b0efe4d6cac31e36c7a4476a23972ac1cca27e9d69",
+      "raw_equal": true,
+      "raw_support": 4,
+      "signed_terms": 4
+    },
+    {
+      "additional_markings": 2,
+      "name": "bp_14_4",
+      "raw_coordinate_sha256": "53a468588ee45b498eeec3b0efe4d6cac31e36c7a4476a23972ac1cca27e9d69",
+      "raw_equal": true,
+      "raw_support": 4,
+      "signed_terms": 4
+    },
+    {
+      "additional_markings": 2,
+      "name": "bp_14_5",
+      "raw_coordinate_sha256": "53a468588ee45b498eeec3b0efe4d6cac31e36c7a4476a23972ac1cca27e9d69",
+      "raw_equal": true,
+      "raw_support": 4,
+      "signed_terms": 4
+    },
+    {
+      "additional_markings": 2,
+      "name": "bp_15_0",
+      "raw_coordinate_sha256": "3c0bf62f94e41b597d955aa99d83e45c5b18ff8bef0ff66fb2007aa7939831fe",
+      "raw_equal": true,
+      "raw_support": 4,
+      "signed_terms": 4
+    },
+    {
+      "additional_markings": 2,
+      "name": "bp_15_1",
+      "raw_coordinate_sha256": "3c0bf62f94e41b597d955aa99d83e45c5b18ff8bef0ff66fb2007aa7939831fe",
+      "raw_equal": true,
+      "raw_support": 4,
+      "signed_terms": 4
+    },
+    {
+      "additional_markings": 2,
+      "name": "bp_15_2",
+      "raw_coordinate_sha256": "3c0bf62f94e41b597d955aa99d83e45c5b18ff8bef0ff66fb2007aa7939831fe",
+      "raw_equal": true,
+      "raw_support": 4,
+      "signed_terms": 4
+    },
+    {
+      "additional_markings": 2,
+      "name": "bp_15_3",
+      "raw_coordinate_sha256": "3c0bf62f94e41b597d955aa99d83e45c5b18ff8bef0ff66fb2007aa7939831fe",
+      "raw_equal": true,
+      "raw_support": 4,
+      "signed_terms": 4
+    },
+    {
+      "additional_markings": 2,
+      "name": "bp_15_4",
+      "raw_coordinate_sha256": "3c0bf62f94e41b597d955aa99d83e45c5b18ff8bef0ff66fb2007aa7939831fe",
+      "raw_equal": true,
+      "raw_support": 4,
+      "signed_terms": 4
+    },
+    {
+      "additional_markings": 2,
+      "name": "bp_15_5",
+      "raw_coordinate_sha256": "3c0bf62f94e41b597d955aa99d83e45c5b18ff8bef0ff66fb2007aa7939831fe",
+      "raw_equal": true,
+      "raw_support": 4,
+      "signed_terms": 4
+    },
+    {
+      "additional_markings": 2,
+      "name": "bp_16_0",
+      "raw_coordinate_sha256": "8fe44bf6436e46fa36912dac2c741e9b54104cb5f38d8477daecc75b4c4347fa",
+      "raw_equal": true,
+      "raw_support": 4,
+      "signed_terms": 4
+    },
+    {
+      "additional_markings": 2,
+      "name": "bp_16_1",
+      "raw_coordinate_sha256": "9f4c91519b1ab9babcf55dfdbf8f8d90cfc718232b052b58f1ef276e9f96d039",
+      "raw_equal": true,
+      "raw_support": 4,
+      "signed_terms": 4
+    },
+    {
+      "additional_markings": 2,
+      "name": "bp_16_2",
+      "raw_coordinate_sha256": "8fe44bf6436e46fa36912dac2c741e9b54104cb5f38d8477daecc75b4c4347fa",
+      "raw_equal": true,
+      "raw_support": 4,
+      "signed_terms": 4
+    },
+    {
+      "additional_markings": 2,
+      "name": "bp_16_3",
+      "raw_coordinate_sha256": "9f4c91519b1ab9babcf55dfdbf8f8d90cfc718232b052b58f1ef276e9f96d039",
+      "raw_equal": true,
+      "raw_support": 4,
+      "signed_terms": 4
+    },
+    {
+      "additional_markings": 2,
+      "name": "bp_16_4",
+      "raw_coordinate_sha256": "84421b78212693123241ccc3c4f6e446b3c5868e6525ad7813a0d67c20eab5e1",
+      "raw_equal": true,
+      "raw_support": 4,
+      "signed_terms": 4
+    },
+    {
+      "additional_markings": 2,
+      "name": "bp_16_5",
+      "raw_coordinate_sha256": "84421b78212693123241ccc3c4f6e446b3c5868e6525ad7813a0d67c20eab5e1",
+      "raw_equal": true,
+      "raw_support": 4,
+      "signed_terms": 4
+    },
+    {
+      "additional_markings": 2,
+      "name": "bp_17_0",
+      "raw_coordinate_sha256": "2db6526cbab6be00fa7e2e4dff84c6348487c7eb591e552f694db4e4ea182770",
+      "raw_equal": true,
+      "raw_support": 4,
+      "signed_terms": 4
+    },
+    {
+      "additional_markings": 2,
+      "name": "bp_17_1",
+      "raw_coordinate_sha256": "2db6526cbab6be00fa7e2e4dff84c6348487c7eb591e552f694db4e4ea182770",
+      "raw_equal": true,
+      "raw_support": 4,
+      "signed_terms": 4
+    },
+    {
+      "additional_markings": 2,
+      "name": "bp_17_2",
+      "raw_coordinate_sha256": "3df7ee4492b7ab40fe25ff56958c6c91b8c47875e98b60e749257b1f0bdb1f49",
+      "raw_equal": true,
+      "raw_support": 4,
+      "signed_terms": 4
+    },
+    {
+      "additional_markings": 2,
+      "name": "bp_17_3",
+      "raw_coordinate_sha256": "5a47ca64aeae607ba924ebcd1c6b77bd51f1a6040f8a551665e92fc2a5e921fb",
+      "raw_equal": true,
+      "raw_support": 4,
+      "signed_terms": 4
+    },
+    {
+      "additional_markings": 2,
+      "name": "bp_17_4",
+      "raw_coordinate_sha256": "3df7ee4492b7ab40fe25ff56958c6c91b8c47875e98b60e749257b1f0bdb1f49",
+      "raw_equal": true,
+      "raw_support": 4,
+      "signed_terms": 4
+    },
+    {
+      "additional_markings": 2,
+      "name": "bp_17_5",
+      "raw_coordinate_sha256": "5a47ca64aeae607ba924ebcd1c6b77bd51f1a6040f8a551665e92fc2a5e921fb",
+      "raw_equal": true,
+      "raw_support": 4,
+      "signed_terms": 4
+    },
+    {
+      "additional_markings": 2,
+      "name": "bp_18_0",
+      "raw_coordinate_sha256": "cae349b9174359080715fc7b67e3b1c47fda906bdb80f0474fc42395b1ebcd14",
+      "raw_equal": true,
+      "raw_support": 4,
+      "signed_terms": 4
+    },
+    {
+      "additional_markings": 2,
+      "name": "bp_18_1",
+      "raw_coordinate_sha256": "cae349b9174359080715fc7b67e3b1c47fda906bdb80f0474fc42395b1ebcd14",
+      "raw_equal": true,
+      "raw_support": 4,
+      "signed_terms": 4
+    },
+    {
+      "additional_markings": 2,
+      "name": "bp_18_2",
+      "raw_coordinate_sha256": "cae349b9174359080715fc7b67e3b1c47fda906bdb80f0474fc42395b1ebcd14",
+      "raw_equal": true,
+      "raw_support": 4,
+      "signed_terms": 4
+    },
+    {
+      "additional_markings": 2,
+      "name": "bp_18_3",
+      "raw_coordinate_sha256": "cae349b9174359080715fc7b67e3b1c47fda906bdb80f0474fc42395b1ebcd14",
+      "raw_equal": true,
+      "raw_support": 4,
+      "signed_terms": 4
+    },
+    {
+      "additional_markings": 2,
+      "name": "bp_18_4",
+      "raw_coordinate_sha256": "cae349b9174359080715fc7b67e3b1c47fda906bdb80f0474fc42395b1ebcd14",
+      "raw_equal": true,
+      "raw_support": 4,
+      "signed_terms": 4
+    },
+    {
+      "additional_markings": 2,
+      "name": "bp_18_5",
+      "raw_coordinate_sha256": "cae349b9174359080715fc7b67e3b1c47fda906bdb80f0474fc42395b1ebcd14",
+      "raw_equal": true,
+      "raw_support": 4,
+      "signed_terms": 4
+    },
+    {
+      "additional_markings": 2,
+      "name": "bp_19_0",
+      "raw_coordinate_sha256": "c64215a3e3503743b848caa71bf367ad23272d63eb06be31031973d27e80c071",
+      "raw_equal": true,
+      "raw_support": 4,
+      "signed_terms": 4
+    },
+    {
+      "additional_markings": 2,
+      "name": "bp_19_1",
+      "raw_coordinate_sha256": "c64215a3e3503743b848caa71bf367ad23272d63eb06be31031973d27e80c071",
+      "raw_equal": true,
+      "raw_support": 4,
+      "signed_terms": 4
+    },
+    {
+      "additional_markings": 2,
+      "name": "bp_19_2",
+      "raw_coordinate_sha256": "1dc7236c3f716fa70dd6b0f637bd5319c24f7319ce438e763b25c2b5ab57461a",
+      "raw_equal": true,
+      "raw_support": 4,
+      "signed_terms": 4
+    },
+    {
+      "additional_markings": 2,
+      "name": "bp_19_3",
+      "raw_coordinate_sha256": "ce2ce17b330e403020fc751004eab349493cd441d554b22e1d48a7d9c4d341e2",
+      "raw_equal": true,
+      "raw_support": 4,
+      "signed_terms": 4
+    },
+    {
+      "additional_markings": 2,
+      "name": "bp_19_4",
+      "raw_coordinate_sha256": "1dc7236c3f716fa70dd6b0f637bd5319c24f7319ce438e763b25c2b5ab57461a",
+      "raw_equal": true,
+      "raw_support": 4,
+      "signed_terms": 4
+    },
+    {
+      "additional_markings": 2,
+      "name": "bp_19_5",
+      "raw_coordinate_sha256": "ce2ce17b330e403020fc751004eab349493cd441d554b22e1d48a7d9c4d341e2",
+      "raw_equal": true,
+      "raw_support": 4,
+      "signed_terms": 4
+    },
+    {
+      "additional_markings": 2,
+      "name": "psi_square",
+      "raw_coordinate_sha256": "700629c16abcf3b1341e353c636e227cdbcc82b7e86ea5f215520c612b9c59c3",
+      "raw_equal": true,
+      "raw_support": 5,
+      "signed_terms": 5
+    },
+    {
+      "additional_markings": 2,
+      "name": "psi_product",
+      "raw_coordinate_sha256": "6e9a60018345360cc5bd3fde204cac4ebdfdcef88e5127c441678aa08482682c",
+      "raw_equal": true,
+      "raw_support": 10,
+      "signed_terms": 10
+    },
+    {
+      "additional_markings": 2,
+      "name": "zero_power",
+      "raw_coordinate_sha256": "504e4892fe8a86c936a687350b9a70ba271269b84016e66e7a455cc52ed8ddba",
+      "raw_equal": true,
+      "raw_support": 1,
+      "signed_terms": 1
+    },
+    {
+      "additional_markings": 2,
+      "name": "unmarked_zero",
+      "raw_coordinate_sha256": "c92da087a750c0d72699ac3d47e8f71a9e9de22e17a7fa05b5776eec512d64ae",
+      "raw_equal": true,
+      "raw_support": 1,
+      "signed_terms": 1
+    },
+    {
+      "additional_markings": 2,
+      "name": "loop_branches",
+      "raw_coordinate_sha256": "660d7f3e6871ab75ee797ca6d8734751d6766f2cc9a20713e0427eb23c797af9",
+      "raw_equal": true,
+      "raw_support": 9,
+      "signed_terms": 10
+    },
+    {
+      "additional_markings": 2,
+      "name": "symmetric",
+      "raw_coordinate_sha256": "962809f3ff06410185e2502748ae550ed351633f8a7726dec2c7cbd429fbcc91",
+      "raw_equal": true,
+      "raw_support": 2,
+      "signed_terms": 4
+    }
+  ],
+  "cases_checked": 252,
+  "environment": {
+    "admcycles": "1.4",
+    "architecture": "arm64",
+    "python": "3.12.14",
+    "sage": "10.9"
+  },
+  "full_bp": [
+    {
+      "additional_markings": 1,
+      "raw_coordinate_sha256": "955ef4d7cfcfb595e77b1b5185761f9a3f3a388e44c06822b41ea1c0752f05fb",
+      "raw_support": 118
+    },
+    {
+      "additional_markings": 2,
+      "raw_coordinate_sha256": "f929287d5feefb275a838a67cc119576c21e4080c58c1aab266e37734b4f8847",
+      "raw_support": 315
+    }
+  ],
+  "lean_payload_bytes": 235907,
+  "lean_payload_sha256": "0941ea7945ed6a4d272da9aacc494e35f1c4146efbbe706ecd93099663fbaeee",
+  "negative_expansions_rejected": [
+    "omit_all_rational_tails",
+    "use_minus_power_instead_of_minus_one",
+    "swap_genus_two_node_branch",
+    "discard_repeated_symmetric_placement"
+  ],
+  "online_lookup": false,
+  "original_bp_source_sha256": "5868b2f3ef1e5a45e6175b6349566b72c778f4ab028ef941b43498fd0ee8d1bc",
+  "producer_source_sha256": {
+    "admcycles.py": "19e9e77c58299b387abadab76f2e1f1b1b2b63808f3dbbd0e44499a930db9a1b",
+    "stable_graph.py": "aa9b81ae274660b2d44cf474390a8b0c3a7865cfa6deaa06d005ae96dfdbd3ca",
+    "tautological_ring.py": "c9cf9b46fa8c7f2207d6d0ebc3f3565518f6f29d324bb6b280c1626a772bbd12"
+  },
+  "raw_vector_checks": 250,
+  "schema_version": 1,
+  "scope": "Actual native Lean terms equal admcycles pullbacks before any tautological quotient. General class soundness is separately kernel-proved from named primitive geometry; this diagnostic proves no geometric vanishing or numerical GW value.",
+  "script_sha256": "1977a3348bbb7f97778ba174514d5ff67a58a455592b7663bdcb8d2738b2ff6d",
+  "status": "passed_raw_comparison"
+}

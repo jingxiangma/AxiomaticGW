@@ -1,0 +1,18 @@
+{
+  "byte_identical": true,
+  "commands": [
+    "/opt/homebrew/Caskroom/miniforge/base/envs/axiomatic-gw-sage/bin/python scripts/export_gkm_inputs.py --producer /Users/jma/Documents/gitlab/gkm_localisation",
+    "/opt/homebrew/Caskroom/miniforge/base/envs/axiomatic-gw-sage/bin/python scripts/export_gkm_inputs.py --producer /Users/jma/Documents/gitlab/gkm_localisation/gkm_localization"
+  ],
+  "environment": {
+    "admcycles": "1.4",
+    "sage": "10.9"
+  },
+  "fresh_cache_runs": 2,
+  "input_bytes": 308271,
+  "input_sha256": "062a32a9919fa5ddf806c353f5bb56256ca5dca31d170c246b9bfa39c3b11376",
+  "producer_revision": "a09c6625b280312721c5e0f2f915791781339aa5",
+  "producer_source_hashes_unchanged": true,
+  "scope": "Reproducibility of candidate inputs; not a geometric or Lean certificate",
+  "status": "passed"
+}

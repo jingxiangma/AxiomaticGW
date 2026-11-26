@@ -1,0 +1,169 @@
+/-
+Copyright (c) 2026 JMA. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: JMA
+-/
+module
+
+public import AxiomaticGW.Surfaces.Fixtures.BlowupF1CompleteHComponentsIndex
+
+/-!
+# Complete F1 H-row component batch 20: indices 320–335
+
+Complete request: F1 source [1,1], one added point, H/E0/E0/E0; 721 L24 terms.
+These component certificates do not certify the final 721-term contraction.
+Full-key labels use sortCode: unit=0, H=1, E0=2, point=3.
+Selector observation-log SHA256:
+  a5c4c41abad31443bffce2ffd25e3033c4746a82c1ef4ba144644d1e583a82f1
+Selector Lean source SHA256:
+  9dd879b24ac01f7d32f29e994b43ac9aba2add243b1104879f5dbab9947e7369
+Untrusted candidate input SHA256:
+  292366499879e648aeb9deaa66c1f33a693d2eadde188eb7639801e33fe9ec1b
+-/
+
+@[expose] public section
+set_option Elab.async false
+set_option maxRecDepth 65536
+
+namespace AxiomaticGW.BlowupF1CompleteHComponents
+open SurfaceGenusTwo
+open BlowupF1CertifiedPoints (rational elliptic rational_eq elliptic_eq)
+
+set_option maxHeartbeats 0 in
+theorem component_320_computed :
+    SurfaceLowGenusPointCache.componentValue .hirzebruchOne rational elliptic
+      (key 320) = value 320 := by
+  decide +kernel
+
+theorem entry_320_eq : entries 320 = residualTerms (key 320) := by
+  rw [← residualTermsWithPoints_eq .hirzebruchOne rational elliptic
+    rational_eq elliptic_eq]
+  rw [residualTermsWithPoints, if_pos (by decide +kernel),
+    component_320_computed]
+  rfl
+
+set_option maxHeartbeats 0 in
+theorem key_index_320 : keyIndex (key 320) = 320 := by
+  decide +kernel
+
+set_option maxHeartbeats 0 in
+theorem component_321_computed :
+    SurfaceLowGenusPointCache.componentValue .hirzebruchOne rational elliptic
+      (key 321) = value 321 := by
+  decide +kernel
+
+theorem entry_321_eq : entries 321 = residualTerms (key 321) := by
+  rw [← residualTermsWithPoints_eq .hirzebruchOne rational elliptic
+    rational_eq elliptic_eq]
+  rw [residualTermsWithPoints, if_pos (by decide +kernel),
+    component_321_computed]
+  rfl
+
+set_option maxHeartbeats 0 in
+theorem key_index_321 : keyIndex (key 321) = 321 := by
+  decide +kernel
+
+set_option maxHeartbeats 0 in
+theorem component_322_computed :
+    SurfaceLowGenusPointCache.componentValue .hirzebruchOne rational elliptic
+      (key 322) = value 322 := by
+  decide +kernel
+
+theorem entry_322_eq : entries 322 = residualTerms (key 322) := by
+  rw [← residualTermsWithPoints_eq .hirzebruchOne rational elliptic
+    rational_eq elliptic_eq]
+  rw [residualTermsWithPoints, if_pos (by decide +kernel),
+    component_322_computed]
+  rfl
+
+set_option maxHeartbeats 0 in
+theorem key_index_322 : keyIndex (key 322) = 322 := by
+  decide +kernel
+
+set_option maxHeartbeats 0 in
+theorem component_323_computed :
+    SurfaceLowGenusPointCache.componentValue .hirzebruchOne rational elliptic
+      (key 323) = value 323 := by
+  decide +kernel
+
+theorem entry_323_eq : entries 323 = residualTerms (key 323) := by
+  rw [← residualTermsWithPoints_eq .hirzebruchOne rational elliptic
+    rational_eq elliptic_eq]
+  rw [residualTermsWithPoints, if_pos (by decide +kernel),
+    component_323_computed]
+  rfl
+
+set_option maxHeartbeats 0 in
+theorem key_index_323 : keyIndex (key 323) = 323 := by
+  decide +kernel
+
+set_option maxHeartbeats 0 in
+theorem component_324_computed :
+    SurfaceLowGenusPointCache.componentValue .hirzebruchOne rational elliptic
+      (key 324) = value 324 := by
+  decide +kernel
+
+theorem entry_324_eq : entries 324 = residualTerms (key 324) := by
+  rw [← residualTermsWithPoints_eq .hirzebruchOne rational elliptic
+    rational_eq elliptic_eq]
+  rw [residualTermsWithPoints, if_pos (by decide +kernel),
+    component_324_computed]
+  rfl
+
+set_option maxHeartbeats 0 in
+theorem key_index_324 : keyIndex (key 324) = 324 := by
+  decide +kernel
+
+set_option maxHeartbeats 0 in
+theorem component_325_computed :
+    SurfaceLowGenusPointCache.componentValue .hirzebruchOne rational elliptic
+      (key 325) = value 325 := by
+  decide +kernel
+
+theorem entry_325_eq : entries 325 = residualTerms (key 325) := by
+  rw [← residualTermsWithPoints_eq .hirzebruchOne rational elliptic
+    rational_eq elliptic_eq]
+  rw [residualTermsWithPoints, if_pos (by decide +kernel),
+    component_325_computed]
+  rfl
+
+set_option maxHeartbeats 0 in
+theorem key_index_325 : keyIndex (key 325) = 325 := by
+  decide +kernel
+
+set_option maxHeartbeats 0 in
+theorem component_326_computed :
+    SurfaceLowGenusPointCache.componentValue .hirzebruchOne rational elliptic
+      (key 326) = value 326 := by
+  decide +kernel
+
+theorem entry_326_eq : entries 326 = residualTerms (key 326) := by
+  rw [← residualTermsWithPoints_eq .hirzebruchOne rational elliptic
+    rational_eq elliptic_eq]
+  rw [residualTermsWithPoints, if_pos (by decide +kernel),
+    component_326_computed]
+  rfl
+
+set_option maxHeartbeats 0 in
+theorem key_index_326 : keyIndex (key 326) = 326 := by
+  decide +kernel
+
+set_option maxHeartbeats 0 in
+theorem component_327_computed :
+    SurfaceLowGenusPointCache.componentValue .hirzebruchOne rational elliptic
+      (key 327) = value 327 := by
+  decide +kernel
+
+theorem entry_327_eq : entries 327 = residualTerms (key 327) := by
+  rw [← residualTermsWithPoints_eq .hirzebruchOne rational elliptic
+    rational_eq elliptic_eq]
+  rw [residualTermsWithPoints, if_pos (by decide +kernel),
+    component_327_computed]
+  rfl
+
+set_option maxHeartbeats 0 in
+theorem key_index_327 : keyIndex (key 327) = 327 := by
+  decide +kernel
+
+
+end AxiomaticGW.BlowupF1CompleteHComponents

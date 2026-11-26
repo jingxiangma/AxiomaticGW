@@ -1,0 +1,290 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-05",
+  "status": "targeted_raw_candidate_scalar_normalization_accepted_full_project_pending",
+  "source_sha256": {
+    "AxiomaticGW/Tautological/StrataRealizationDegree.lean": "d258d6a0d5c2249667155dd1a910ecf8e94ef35076600f5a9d0d7342c9b4a05b",
+    "AxiomaticGW/GKM/AdmcyclesHodgeStrataNormalization.lean": "d36565c19b0198d833caddfc755ba431660d2f84752fdd760cbcc38f37734ce3",
+    "AxiomaticGWTest/GKM/AdmcyclesHodgeStrataNormalization.lean": "5f095a256f02af2c24069f2ba8adfad6240f890cbfec7cda8ee05214d8044d37"
+  },
+  "selected_dependency_sha256": {
+    "AxiomaticGW/GKM/Fixtures/AdmcyclesHodgeStrataCandidates.lean": "244eaf08f741057b92113ee4b0c4a48b2185b55350473bc28286460ea07b651c",
+    "AxiomaticGW/GKM/FixedPointTFT.lean": "91ce8bc7ea085e2eb33596b44fb6e2ef5451cd8129ce79cdf28f44b60c2397e1",
+    "AxiomaticGW/Tautological/StrataRealization.lean": "ddf59186e35a331415f9cbb8713dbcfda209fbf9bf5530123a1ab87964cd308c",
+    "AxiomaticGW/Tautological/StrataModule.lean": "4cbd41c258dd6e0e03a691d8de21fd9021788e03b67d1df0127742553f53112f",
+    "AxiomaticGW/CohFT/StableCurve.lean": "3102914691877889a1a67e76d8dd17897ba6474e2837247d8d9c9241d269a674"
+  },
+  "dependency_scope": "Selected direct semantic dependencies, not the full transitive closure.",
+  "integration_manifest_sha256": "a39ff871fec480990b24891604ed3570a5b36cc9670a72b178871aec0252c227",
+  "scope": "All 45 existing raw candidate components for genus two with one marking; homogeneous realization and connected degree-zero projection; conditional agreement with the existing fixed-point TFT unit correlator.",
+  "findings": [
+    {
+      "severity": "medium",
+      "issue": "Basiswise graded realization did not expose the span-level degree lemma or positive-degree scalar vanishing needed by actual raw expressions.",
+      "correction": "Derive both in the upward StrataRealizationDegree module using existing linear and graded APIs."
+    },
+    {
+      "severity": "medium",
+      "issue": "No assembly theorem connected all 45 accepted raw components to the canonical TFT normalization.",
+      "correction": "Assemble all components; identify the actual fundamental degree-zero component and derive the scalar formula with explicit hfund and h00."
+    },
+    {
+      "severity": "low",
+      "issue": "The initial staged proof left two conditional expressions unreduced and listed five unused simp arguments.",
+      "correction": "Two explicit conditional rewrites and deletion of unused arguments; definitions and theorem statements unchanged."
+    }
+  ],
+  "review_conclusion": "No remaining defect found in this targeted accepted algebraic scope; no comprehensive geometry or repository review is claimed.",
+  "mathematical_effect": {
+    "changed_existing_statements": false,
+    "new_numerical_seeds": 0,
+    "new_axioms": 0,
+    "new_global_simp_rules": 0,
+    "new_global_instances": 0,
+    "component_frame": {
+      "ordered_pair_indices": [
+        0,
+        1,
+        2
+      ],
+      "degrees": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "component_count": 45
+    },
+    "fundamental_component": "raw_0_0_degree0 equals the existing fundamental basis vector; the other eight degree-zero components are zero.",
+    "scalar_formula": "scalar(assembly A coeff) = sum_p coeff(p,0,0)",
+    "tft_formula": "If coeff(p,0,0) = euler(p), then scalar(assembly A coeff) equals the canonical genus-two, one-marked unit correlator.",
+    "positive_degree_behavior": "Components are retained in the class expression; only their connected degree-zero projections vanish.",
+    "coefficient_grading": "Stable-curve codimension over the coefficient field; scalar coefficients have relative degree zero."
+  },
+  "explicit_inputs": [
+    "A field K with Algebra QQ K and a supplied StableCurveCohomology K.",
+    "A supplied ConnectedDegreeZero structure and degree-preserving rational StrataRealization.",
+    "hfund: realization of the fundamental basis vector equals one; this is necessary and is not derived from StrataRealization alone.",
+    "Supplied coefficients, a finite fixed-point index type, and invertible Euler weights.",
+    "h00: every supplied (0,0) coefficient equals its Euler weight; this remains conditional in this record."
+  ],
+  "actual_108_coefficient_packet_accepted_by_this_record": false,
+  "validation_commands": [
+    {
+      "command": [
+        "lake",
+        "build",
+        "AxiomaticGW.GKM.AdmcyclesHodgeStrataNormalization",
+        "AxiomaticGWTest.GKM.AdmcyclesHodgeStrataNormalization"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "elapsed_seconds": 8.238,
+      "log": "/tmp/gw_hodge_normalization_integrated_build_20261005.log",
+      "children_ru_maxrss_raw": 1083588608,
+      "children_ru_maxrss_unit": "bytes",
+      "resource_note": "Wrapper child usage may omit descendants on interrupted runs.",
+      "metadata_sha256": "c477dd75a583605add9690cdbb72b566006536a075319063d45f761d7444b063",
+      "log_sha256": "c68ce09dfe80b6a0093b7d1bac1f973a7572beeb7b365c1dd5ae092980898c25",
+      "captured_output": "✔ [1784/1786] Built AxiomaticGW.Tautological.StrataRealizationDegree (1.8s)\n✔ [1785/1786] Built AxiomaticGW.GKM.AdmcyclesHodgeStrataNormalization (2.5s)\n✔ [1786/1786] Built AxiomaticGWTest.GKM.AdmcyclesHodgeStrataNormalization (1.8s)\nBuild completed successfully (1786 jobs).\n"
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--memory=2048",
+        "/tmp/gw_hodge_normalization_integrated_audit_20261005.lean"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "elapsed_seconds": 2.636,
+      "log": "/tmp/gw_hodge_normalization_integrated_axioms_20261005.log",
+      "children_ru_maxrss_raw": 1093976064,
+      "children_ru_maxrss_unit": "bytes",
+      "resource_note": "Wrapper child usage may omit descendants on interrupted runs.",
+      "metadata_sha256": "b396feaffe0fe76de244dc6350a23120d771ea7eb8ef9388fc8e2a0b604f003c",
+      "log_sha256": "65417bf7e3b20c5632e60aa8d6ec5b0465cd83b99c09f2a679bc5713e7b82ff5",
+      "captured_output": "'AxiomaticGW.StrataRealization.map_mem_degree' depends on axioms: [propext, Classical.choice, Quot.sound]\n'AxiomaticGW.ConnectedDegreeZero.scalar_eq_zero_of_mem_degree' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGW.ConnectedDegreeZero.scalar_map_eq_zero_of_mem_degree' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGW.AdmcyclesHodgeStrataNormalization.stable' depends on axioms: [propext, Classical.choice, Quot.sound]\n'AxiomaticGW.AdmcyclesHodgeStrataNormalization.rawComponent_mem_degree' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGW.AdmcyclesHodgeStrataNormalization.rawGraph0_eq_fundamental' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGW.AdmcyclesHodgeStrataNormalization.raw_0_0_degree0_eq_fundamental' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGW.AdmcyclesHodgeStrataNormalization.rawComponent_degree_zero' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGW.AdmcyclesHodgeStrataNormalization.scalar_rawComponent' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGW.AdmcyclesHodgeStrataNormalization.scalar_assembly' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGW.AdmcyclesHodgeStrataNormalization.scalar_assembly_eq_tft' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGWTest.GKM.AdmcyclesHodgeStrataNormalization.top_component_retained' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGWTest.GKM.AdmcyclesHodgeStrataNormalization.ordered_components_retained' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGWTest.GKM.AdmcyclesHodgeStrataNormalization.full_component_degree' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGWTest.GKM.AdmcyclesHodgeStrataNormalization.mixed_positive_scalar_zero' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGWTest.GKM.AdmcyclesHodgeStrataNormalization.linear_combination_degree' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGWTest.GKM.AdmcyclesHodgeStrataNormalization.empty_loci' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGWTest.GKM.AdmcyclesHodgeStrataNormalization.same_zero_coordinates_same_projection' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n"
+    }
+  ],
+  "axiom_audit": {
+    "count": 18,
+    "expected_names": [
+      "AxiomaticGW.StrataRealization.map_mem_degree",
+      "AxiomaticGW.ConnectedDegreeZero.scalar_eq_zero_of_mem_degree",
+      "AxiomaticGW.ConnectedDegreeZero.scalar_map_eq_zero_of_mem_degree",
+      "AxiomaticGW.AdmcyclesHodgeStrataNormalization.stable",
+      "AxiomaticGW.AdmcyclesHodgeStrataNormalization.rawComponent_mem_degree",
+      "AxiomaticGW.AdmcyclesHodgeStrataNormalization.rawGraph0_eq_fundamental",
+      "AxiomaticGW.AdmcyclesHodgeStrataNormalization.raw_0_0_degree0_eq_fundamental",
+      "AxiomaticGW.AdmcyclesHodgeStrataNormalization.rawComponent_degree_zero",
+      "AxiomaticGW.AdmcyclesHodgeStrataNormalization.scalar_rawComponent",
+      "AxiomaticGW.AdmcyclesHodgeStrataNormalization.scalar_assembly",
+      "AxiomaticGW.AdmcyclesHodgeStrataNormalization.scalar_assembly_eq_tft",
+      "AxiomaticGWTest.GKM.AdmcyclesHodgeStrataNormalization.top_component_retained",
+      "AxiomaticGWTest.GKM.AdmcyclesHodgeStrataNormalization.ordered_components_retained",
+      "AxiomaticGWTest.GKM.AdmcyclesHodgeStrataNormalization.full_component_degree",
+      "AxiomaticGWTest.GKM.AdmcyclesHodgeStrataNormalization.mixed_positive_scalar_zero",
+      "AxiomaticGWTest.GKM.AdmcyclesHodgeStrataNormalization.linear_combination_degree",
+      "AxiomaticGWTest.GKM.AdmcyclesHodgeStrataNormalization.empty_loci",
+      "AxiomaticGWTest.GKM.AdmcyclesHodgeStrataNormalization.same_zero_coordinates_same_projection"
+    ],
+    "results": {
+      "AxiomaticGW.StrataRealization.map_mem_degree": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "AxiomaticGW.ConnectedDegreeZero.scalar_eq_zero_of_mem_degree": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "AxiomaticGW.ConnectedDegreeZero.scalar_map_eq_zero_of_mem_degree": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "AxiomaticGW.AdmcyclesHodgeStrataNormalization.stable": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "AxiomaticGW.AdmcyclesHodgeStrataNormalization.rawComponent_mem_degree": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "AxiomaticGW.AdmcyclesHodgeStrataNormalization.rawGraph0_eq_fundamental": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "AxiomaticGW.AdmcyclesHodgeStrataNormalization.raw_0_0_degree0_eq_fundamental": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "AxiomaticGW.AdmcyclesHodgeStrataNormalization.rawComponent_degree_zero": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "AxiomaticGW.AdmcyclesHodgeStrataNormalization.scalar_rawComponent": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "AxiomaticGW.AdmcyclesHodgeStrataNormalization.scalar_assembly": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "AxiomaticGW.AdmcyclesHodgeStrataNormalization.scalar_assembly_eq_tft": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "AxiomaticGWTest.GKM.AdmcyclesHodgeStrataNormalization.top_component_retained": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "AxiomaticGWTest.GKM.AdmcyclesHodgeStrataNormalization.ordered_components_retained": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "AxiomaticGWTest.GKM.AdmcyclesHodgeStrataNormalization.full_component_degree": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "AxiomaticGWTest.GKM.AdmcyclesHodgeStrataNormalization.mixed_positive_scalar_zero": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "AxiomaticGWTest.GKM.AdmcyclesHodgeStrataNormalization.linear_combination_degree": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "AxiomaticGWTest.GKM.AdmcyclesHodgeStrataNormalization.empty_loci": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "AxiomaticGWTest.GKM.AdmcyclesHodgeStrataNormalization.same_zero_coordinates_same_projection": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "allowed_axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "exact_name_sequence_checked": true,
+    "entire_log_parsed": true,
+    "audit_source_sha256": "49ea2676df5a9dfdc84d949cabd9d3ca0baaf0c3d8933393cd66686ec5c705ef",
+    "audit_source": "module\npublic import AxiomaticGW.Tautological.StrataRealizationDegree\npublic import AxiomaticGW.GKM.AdmcyclesHodgeStrataNormalization\npublic import AxiomaticGWTest.GKM.AdmcyclesHodgeStrataNormalization\n\n#print axioms AxiomaticGW.StrataRealization.map_mem_degree\n#print axioms AxiomaticGW.ConnectedDegreeZero.scalar_eq_zero_of_mem_degree\n#print axioms AxiomaticGW.ConnectedDegreeZero.scalar_map_eq_zero_of_mem_degree\n#print axioms AxiomaticGW.AdmcyclesHodgeStrataNormalization.stable\n#print axioms AxiomaticGW.AdmcyclesHodgeStrataNormalization.rawComponent_mem_degree\n#print axioms AxiomaticGW.AdmcyclesHodgeStrataNormalization.rawGraph0_eq_fundamental\n#print axioms AxiomaticGW.AdmcyclesHodgeStrataNormalization.raw_0_0_degree0_eq_fundamental\n#print axioms AxiomaticGW.AdmcyclesHodgeStrataNormalization.rawComponent_degree_zero\n#print axioms AxiomaticGW.AdmcyclesHodgeStrataNormalization.scalar_rawComponent\n#print axioms AxiomaticGW.AdmcyclesHodgeStrataNormalization.scalar_assembly\n#print axioms AxiomaticGW.AdmcyclesHodgeStrataNormalization.scalar_assembly_eq_tft\n#print axioms AxiomaticGWTest.GKM.AdmcyclesHodgeStrataNormalization.top_component_retained\n#print axioms AxiomaticGWTest.GKM.AdmcyclesHodgeStrataNormalization.ordered_components_retained\n#print axioms AxiomaticGWTest.GKM.AdmcyclesHodgeStrataNormalization.full_component_degree\n#print axioms AxiomaticGWTest.GKM.AdmcyclesHodgeStrataNormalization.mixed_positive_scalar_zero\n#print axioms AxiomaticGWTest.GKM.AdmcyclesHodgeStrataNormalization.linear_combination_degree\n#print axioms AxiomaticGWTest.GKM.AdmcyclesHodgeStrataNormalization.empty_loci\n#print axioms AxiomaticGWTest.GKM.AdmcyclesHodgeStrataNormalization.same_zero_coordinates_same_projection\n"
+  },
+  "consumer_scope": [
+    "Actual top-degree (2,2) component is retained.",
+    "Both ordered mixed raw expressions remain separate source entries.",
+    "All 45 actual components have their checked degree.",
+    "The actual 122-term mixed expression has zero scalar projection by degree.",
+    "Rational linear combinations realize homogeneously.",
+    "Empty fixed-point index type gives the empty assembly.",
+    "Equal (0,0) coefficient coordinates imply equal scalar projections; no class equality is asserted."
+  ],
+  "source_scans": {
+    "AxiomaticGW/Tautological/StrataRealizationDegree.lean": {
+      "placeholder_or_axiom_declaration_tokens": 0,
+      "native_acceptance_tokens": 0,
+      "new_global_simp_or_instance_attributes": 0,
+      "trailing_whitespace_lines": 0
+    },
+    "AxiomaticGW/GKM/AdmcyclesHodgeStrataNormalization.lean": {
+      "placeholder_or_axiom_declaration_tokens": 0,
+      "native_acceptance_tokens": 0,
+      "new_global_simp_or_instance_attributes": 0,
+      "trailing_whitespace_lines": 0
+    },
+    "AxiomaticGWTest/GKM/AdmcyclesHodgeStrataNormalization.lean": {
+      "placeholder_or_axiom_declaration_tokens": 0,
+      "native_acceptance_tokens": 0,
+      "new_global_simp_or_instance_attributes": 0,
+      "trailing_whitespace_lines": 0
+    }
+  },
+  "development_failures": [
+    {
+      "log": "/tmp/gw_admcycles_hodge_normalization_public_v1_20261005.log",
+      "scope": "Initial proof scripts only; generic degree module already passed. Frozen v2 corrected proofs without statement changes.",
+      "repair_ledger": "/tmp/gw_admcycles_hodge_normalization_repair_v2_20261005.json"
+    }
+  ],
+  "remaining": [
+    "Bind all 108 actual coefficient fractions and their fixed-point/tangent provenance, then specialize h00 in three target consumers.",
+    "Construct or supply a geometrically normalized realization satisfying hfund.",
+    "Identify candidate expressions with Hodge classes using the named GRR/Chern and raw Gysin conventions.",
+    "Geometric products, virtual Euler and stabilization comparisons, total equivariant grading and ordinary specialization remain open.",
+    "An actual semisimple GKM CohFT and its gluing/reconstruction laws remain open.",
+    "Full-project build/test/lint and unchanged fixed research benchmarks remain required."
+  ],
+  "excluded_claims": [
+    "Geometric Hodge or GW class identification",
+    "GRR or geometric product acceptance",
+    "Equality of full classes from equality of scalar projections",
+    "A constructed CohFT or geometric localization theorem",
+    "Total equivariant grading or ordinary specialization"
+  ],
+  "next_priority": "Replay the actual 108 coefficient entries and apply scalar_assembly_eq_tft separately to the three fixed targets, retaining hfund.",
+  "record_builder_sha256": "f557deb9daf2b819f8a9b98d97378e0cf62598797941ed165eccca768d46b832",
+  "record_builder_scope": "Read-only verification of captured executed evidence and source pins; no Lean or Sage process was started."
+}

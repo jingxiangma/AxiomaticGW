@@ -1,0 +1,770 @@
+{
+  "recorded_utc": "2026-10-02T20:21:14.951048+00:00",
+  "status": "passed_scoped_checks",
+  "scope": "Sound executable rational terms, complete reduced surface Getzler equations, kernel-safe query equality, and two conditional numerical consequences. All four fixed requests are checked against every original graph column.",
+  "base_commit": "c6289b432a462612f834721c7be3f306c7211ac0",
+  "working_tree": "Pre-existing work preserved; no commit or push.",
+  "baseline": {
+    "command": [
+      "lake",
+      "build",
+      "AxiomaticGWTest.Surfaces.DegreeZero"
+    ],
+    "exit_code": 0,
+    "jobs": 2645,
+    "tool_session": 13195,
+    "protected_files": 261,
+    "hash_snapshot": "/tmp/gw_sparse_start_hashes_20261002.json",
+    "diff_snapshot": "/tmp/gw_sparse_start_diff_20261002.txt"
+  },
+  "findings": [
+    {
+      "severity": "high",
+      "status": "resolved_for_four_fixed_requests",
+      "finding": "The final exploratory equations were not bound to the complete Lean graph evaluator.",
+      "correction": "Prove the executable expansion semantics and check every reduced original-column contribution and final coefficient."
+    },
+    {
+      "severity": "medium",
+      "status": "resolved",
+      "finding": "Derived query equality and generic sum-tag equality blocked kernel replay on extensionally equal curve functions, including splitting-produced representatives.",
+      "correction": "Compare query fields and tags without transporting the decision through equality proofs; preserve the public data and query instance name."
+    },
+    {
+      "severity": "medium",
+      "status": "resolved_for_current_finite_replay",
+      "finding": "Whole-expression comparisons repeatedly reduced long graph expansions.",
+      "correction": "Check each original column separately, then combine by finite-sum congruence and compare coefficients."
+    },
+    {
+      "status": "no_additional_semantic_defect_found_in_scoped_existing_apis",
+      "scope": "No comprehensive review or construction of geometric GW theories or GKM CohFTs is claimed."
+    }
+  ],
+  "gates": [
+    {
+      "command": [
+        "lake",
+        "build"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 108.283,
+      "log": "/tmp/gw_surface_terms_final_20261002_0.log",
+      "log_sha256": "63900a5d5e94998df4a7cb10116b22459c34ff6342381a07cfc412593c1e4109"
+    },
+    {
+      "command": [
+        "lake",
+        "test"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 53.032,
+      "log": "/tmp/gw_surface_terms_final_20261002_1.log",
+      "log_sha256": "ca7cb6ba25155446d7ae596d687c8e483c511bd28275eede135a40771708ae75"
+    },
+    {
+      "command": [
+        "lake",
+        "lint"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 9.512,
+      "log": "/tmp/gw_surface_terms_final_20261002_2.log",
+      "log_sha256": "8cb704e7f2acb11f508473f8f0a1ac324d56ac70cac206d0a94cbe2318027dce"
+    },
+    {
+      "command": [
+        "lake",
+        "build",
+        "AxiomaticGWTest.Surfaces.TermExpansion",
+        "AxiomaticGWTest.Surfaces.LowDegree"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 2.153,
+      "log": "/tmp/gw_surface_terms_final_20261002_3.log",
+      "log_sha256": "7fe746b7301a93c7cb4e495c1b380c4d462dc83f818217e2d5d02837532a26d5"
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "/tmp/gw_surface_terms_axioms_20261002.lean"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 2.713,
+      "log": "/tmp/gw_surface_terms_final_20261002_4.log",
+      "log_sha256": "e357fa0218a07c7e506c4437e1ff8e6c6fff8d73c436520084f56aab1c309d36"
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/test_surface_equations.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.858,
+      "log": "/tmp/gw_surface_terms_final_20261002_5.log",
+      "log_sha256": "894ffd72bd8ec1a86da72d17797504333775a3a1cc6d47ffc0264a667f0a5177"
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.024,
+      "log": "/tmp/gw_surface_terms_final_20261002_6.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "additional_regressions": [
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "environments/surface-primary-reduction-replay.lean"
+      ],
+      "exit_code": 0,
+      "tool_session": 54998,
+      "log": "/tmp/gw_sparse_primary_regression_20261002.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "environments/surface-degree-zero-replay.lean"
+      ],
+      "exit_code": 0,
+      "tool_session": 10943,
+      "log": "/tmp/gw_sparse_zero_regression_20261002.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "lake",
+        "build",
+        "AxiomaticGWTest.Surfaces.Queries",
+        "AxiomaticGWTest.Surfaces.PolynomialReduction",
+        "AxiomaticGWTest.Surfaces.DegreeZero"
+      ],
+      "exit_code": 0,
+      "tool_session": 59614,
+      "log": "/tmp/gw_sparse_downstream_20261002.log",
+      "log_sha256": "4504f09df199c2ba624dd78983ba0841b5701fcb2c819051520c48742e8fe4cd"
+    }
+  ],
+  "targeted_jobs": 2651,
+  "build_jobs": 2682,
+  "test_jobs": 2711,
+  "lean_regression_examples": 14,
+  "python_regression_tests": 8,
+  "axiom_audit": [
+    {
+      "declaration": "AxiomaticGW.SurfaceQuery.eq_iff",
+      "axioms": [
+        "propext"
+      ]
+    },
+    {
+      "declaration": "AxiomaticGW.instDecidableEqSurfaceQuery",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "AxiomaticGW.SurfacePolynomialReduction.instDecidableEqVariable",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "AxiomaticGW.RationalTerms.eval_zero",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "AxiomaticGW.RationalTerms.eval_add",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "AxiomaticGW.RationalTerms.eval_sum",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "AxiomaticGW.RationalTerms.eval_list_sum",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "AxiomaticGW.RationalTerms.eval_term",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "AxiomaticGW.RationalTerms.eval_scale",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "AxiomaticGW.RationalTerms.eval_mul",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "AxiomaticGW.RationalTerms.aeval_polynomial",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "AxiomaticGW.RationalTerms.eval_eq_sum",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "AxiomaticGW.RationalTerms.checkEquivalent_eq_true",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "AxiomaticGW.RationalTerms.eval_eq_of_equivalent",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "AxiomaticGW.RationalTerms.polynomial_eq_of_equivalent",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "AxiomaticGW.GluingExpression.surfaceTerms",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "AxiomaticGW.GluingExpression.eval_surfaceTerms",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "AxiomaticGW.SurfacePolynomialReduction.primaryTerms",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "AxiomaticGW.SurfacePolynomialReduction.polynomial_primaryTerms",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "AxiomaticGW.SurfacePolynomialReduction.primaryVertexTerms",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "AxiomaticGW.GetzlerGraphs.surfaceTerms",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "AxiomaticGW.GetzlerGraphs.eval_surfaceTerms",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "AxiomaticGW.GetzlerGraphs.primaryTerms",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "AxiomaticGW.GetzlerGraphs.polynomial_primaryTerms",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "AxiomaticGW.GetzlerGraphs.exchange_checkedPrimaryTerms_eq_zero",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "AxiomaticGW.SurfaceGetzlerReplay.planeLine_accepted",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "AxiomaticGW.SurfaceGetzlerReplay.hirzebruchLine_accepted",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "AxiomaticGW.SurfaceGetzlerReplay.blowupLine_accepted",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "AxiomaticGW.SurfaceGetzlerReplay.exceptionalSum_accepted",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "AxiomaticGW.SurfaceLowDegree.genusOne_plane_line",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "AxiomaticGW.SurfaceLowDegree.genusOne_exceptional_sum",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    }
+  ],
+  "axiom_query": "import AxiomaticGW.Surfaces.LowDegree\n\n#print axioms AxiomaticGW.SurfaceQuery.eq_iff\n#print axioms AxiomaticGW.instDecidableEqSurfaceQuery\n#print axioms AxiomaticGW.SurfacePolynomialReduction.instDecidableEqVariable\n#print axioms AxiomaticGW.RationalTerms.eval_zero\n#print axioms AxiomaticGW.RationalTerms.eval_add\n#print axioms AxiomaticGW.RationalTerms.eval_sum\n#print axioms AxiomaticGW.RationalTerms.eval_list_sum\n#print axioms AxiomaticGW.RationalTerms.eval_term\n#print axioms AxiomaticGW.RationalTerms.eval_scale\n#print axioms AxiomaticGW.RationalTerms.eval_mul\n#print axioms AxiomaticGW.RationalTerms.aeval_polynomial\n#print axioms AxiomaticGW.RationalTerms.eval_eq_sum\n#print axioms AxiomaticGW.RationalTerms.checkEquivalent_eq_true\n#print axioms AxiomaticGW.RationalTerms.eval_eq_of_equivalent\n#print axioms AxiomaticGW.RationalTerms.polynomial_eq_of_equivalent\n#print axioms AxiomaticGW.GluingExpression.surfaceTerms\n#print axioms AxiomaticGW.GluingExpression.eval_surfaceTerms\n#print axioms AxiomaticGW.SurfacePolynomialReduction.primaryTerms\n#print axioms AxiomaticGW.SurfacePolynomialReduction.polynomial_primaryTerms\n#print axioms AxiomaticGW.SurfacePolynomialReduction.primaryVertexTerms\n#print axioms AxiomaticGW.GetzlerGraphs.surfaceTerms\n#print axioms AxiomaticGW.GetzlerGraphs.eval_surfaceTerms\n#print axioms AxiomaticGW.GetzlerGraphs.primaryTerms\n#print axioms AxiomaticGW.GetzlerGraphs.polynomial_primaryTerms\n#print axioms AxiomaticGW.GetzlerGraphs.exchange_checkedPrimaryTerms_eq_zero\n#print axioms AxiomaticGW.SurfaceGetzlerReplay.planeLine_accepted\n#print axioms AxiomaticGW.SurfaceGetzlerReplay.hirzebruchLine_accepted\n#print axioms AxiomaticGW.SurfaceGetzlerReplay.blowupLine_accepted\n#print axioms AxiomaticGW.SurfaceGetzlerReplay.exceptionalSum_accepted\n#print axioms AxiomaticGW.SurfaceLowDegree.genusOne_plane_line\n#print axioms AxiomaticGW.SurfaceLowDegree.genusOne_exceptional_sum\n",
+  "axiom_query_sha256": "fdd6b03e829c95d90e064dee61d6d4f5ab6b5e04a167c72ec070750ef6c08225",
+  "warnings": [
+    "Only the pre-existing private-module warning in AxiomaticGWTest/Basic.lean."
+  ],
+  "certificate_replay": {
+    "module": "AxiomaticGW/Surfaces/Fixtures/GetzlerReplay.lean",
+    "sha256": "18f6989dae160bf0561bebfd6586d9fbe2f5d0343c4a6cc23aa61e484cad7b8f",
+    "request_module": "AxiomaticGW/Surfaces/Fixtures/GetzlerFrames.lean",
+    "request_sha256": "92f7b8bed7882a12d9f48c0442595dedfe7d99fc0c42f9ef79c4e19480c0d22f",
+    "proof_methods": [
+      "decide +kernel for 132 exact multiset column equalities",
+      "Finset.sum_congr for the four complete column sums",
+      "decide +kernel for four exact coefficient comparisons"
+    ],
+    "column_checks": 132,
+    "coefficient_checks": 4,
+    "cases": [
+      {
+        "held_request": "AxiomaticGW.SurfaceGetzlerFrames.planeLine",
+        "accepted": "AxiomaticGW.SurfaceGetzlerReplay.planeLine_accepted",
+        "target": "P2",
+        "curve": [
+          1
+        ],
+        "extra_markings": 1,
+        "external_powers": "all zero",
+        "original_states": "four hyperplanes",
+        "added_states": "points",
+        "original_columns": 33,
+        "uncollected_terms": 16,
+        "collected_terms": 1,
+        "leading_coefficient": [
+          -9,
+          1
+        ]
+      },
+      {
+        "held_request": "AxiomaticGW.SurfaceGetzlerFrames.hirzebruchLine",
+        "accepted": "AxiomaticGW.SurfaceGetzlerReplay.hirzebruchLine_accepted",
+        "target": "F1",
+        "curve": [
+          1,
+          1
+        ],
+        "extra_markings": 1,
+        "external_powers": "all zero",
+        "original_states": "four hyperplanes",
+        "added_states": "points",
+        "original_columns": 33,
+        "uncollected_terms": 34,
+        "collected_terms": 4,
+        "leading_coefficient": [
+          -9,
+          1
+        ]
+      },
+      {
+        "held_request": "AxiomaticGW.SurfaceGetzlerFrames.blowupLine",
+        "accepted": "AxiomaticGW.SurfaceGetzlerReplay.blowupLine_accepted",
+        "target": "Bl2P2",
+        "curve": [
+          1,
+          1,
+          1
+        ],
+        "extra_markings": 1,
+        "external_powers": "all zero",
+        "original_states": "four hyperplanes",
+        "added_states": "points",
+        "original_columns": 33,
+        "uncollected_terms": 72,
+        "collected_terms": 8,
+        "leading_coefficient": [
+          -9,
+          1
+        ]
+      },
+      {
+        "held_request": "AxiomaticGW.SurfaceGetzlerFrames.exceptionalSum",
+        "accepted": "AxiomaticGW.SurfaceGetzlerReplay.exceptionalSum_accepted",
+        "target": "Bl2P2",
+        "curve": [
+          1,
+          1,
+          0
+        ],
+        "extra_markings": 0,
+        "external_powers": "all zero",
+        "original_states": "four hyperplanes",
+        "added_states": "points",
+        "original_columns": 33,
+        "uncollected_terms": 3,
+        "collected_terms": 1,
+        "leading_coefficient": [
+          -9,
+          1
+        ]
+      }
+    ],
+    "complete_reduced_graph_expansion_certified": true,
+    "unreduced_archived_polynomials_certified": false,
+    "without_sage_or_network": true,
+    "final_module_build_seconds_reported_by_lake": 104,
+    "final_build_command": {
+      "command": [
+        "lake",
+        "build"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 108.283,
+      "log": "/tmp/gw_surface_terms_final_20261002_0.log",
+      "log_sha256": "63900a5d5e94998df4a7cb10116b22459c34ff6342381a07cfc412593c1e4109"
+    }
+  },
+  "exploration_provenance": {
+    "sage_candidate": "environments/surface-degree-zero-exploration.json",
+    "sage_candidate_sha256": "0fd1d642cad8cd1f4350c283b352238d2a5c06dc1342818d34b9164dd3efeb68",
+    "sage_environment": {
+      "admcycles": "1.4",
+      "architecture": "arm64",
+      "python": "3.12.14",
+      "sage": "10.9"
+    },
+    "sage_regenerated_in_this_step": false,
+    "raw_frame": "environments/getzler-candidate-osx-arm64.json",
+    "raw_frame_sha256": "ccd8a8f941e9d2d503ec91e29b2be527bf0c91ce111599e6ec56118f6994ecb7",
+    "export_command": [
+      "python3",
+      "scripts/export_surface_equations.py",
+      "--output",
+      "AxiomaticGW/Surfaces/Fixtures/GetzlerReplay.lean"
+    ],
+    "export_exit_code": 0,
+    "reproducibility": "Byte equality with the frozen module passes in the exporter regressions.",
+    "arithmetic": "Stdlib Fraction collection of all 125 uncollected contributions agrees with all 14 Sage candidate monomials.",
+    "shared_sources": "The Python witness expansion shares the pinned graph frame and component rules with prior exploration. It supplies candidate data; kernel checks provide mathematical acceptance under the stated semantic theorems."
+  },
+  "numerical_results": [
+    {
+      "theorem": "AxiomaticGW.SurfaceLowDegree.genusOne_plane_line",
+      "target": "P2",
+      "genus": 1,
+      "curve": [
+        1
+      ],
+      "point_insertions": 3,
+      "value": [
+        0,
+        1
+      ]
+    },
+    {
+      "theorem": "AxiomaticGW.SurfaceLowDegree.genusOne_exceptional_sum",
+      "target": "Bl2P2",
+      "genus": 1,
+      "curve": [
+        1,
+        1,
+        0
+      ],
+      "point_insertions": 2,
+      "value": [
+        0,
+        1
+      ]
+    }
+  ],
+  "geometric_inputs": [
+    "Strata realization, integration, compatible separating/nonseparating pushforwards and graph maps.",
+    "Primitive gluing/forgetting compatibility and realized Getzler cycle relation.",
+    "Supplied surface GW theory and unit, pairing, grading, dimension and first-Chern identification.",
+    "Existing numerical string/divisor laws and divisor-intersection compatibility.",
+    "Existing finite genus-one hyperplane and exceptional-divisor degree-zero seed equalities.",
+    "The original incoming Getzler presentation is separately checked; both integration regressions use GetzlerReplay.presentation and GetzlerReplay.accepted."
+  ],
+  "mathematical_effect": [
+    "Existing mathematical data, theorem signatures, conventions, normalizations and finite seed inventory are preserved.",
+    "The new finite coefficient checker preserves every valuation in every commutative rational algebra.",
+    "Terminal dimension/primary reductions and graph expansion denote the same previously defined reduced MvPolynomial.",
+    "Each fixed certificate checks the complete reduced held request, including full classes, signs, states, powers and marking multiplicities.",
+    "The two numerical values follow from the checked singleton equations and nonvanishing of -9 over the rationals.",
+    "The only new instances are the canonical coefficient-check decision and specialized residual-variable equality; the query equality instance is repaired under its existing name.",
+    "No global simp lemma, coercion, placeholder, substitute axiom, extra seed or assumed final recurrence is introduced."
+  ],
+  "development_repairs": [
+    "Draft elaboration issues in rational term soundness, empty vector entries and singleton numerical simplification were repaired.",
+    "The owned direct whole-equation run (session 47067) and initial whole-multiset build (session 58603) were explicitly interrupted with exit 130 to implement the smaller column certificates. Neither is recorded as successful validation.",
+    "The final 132-column proof and both numerical theorems passed. Generated line-length, option-scope and explanatory-comment warnings were corrected in the exporter.",
+    "Native diagnostic equality of the intermediate witnesses was used only as feedback; it provides no acceptance theorem or extra axiom."
+  ],
+  "review": {
+    "baseline_files": 261,
+    "unchanged": 252,
+    "changed": [
+      "AxiomaticGW.lean",
+      "AxiomaticGW/Surfaces/PolynomialReduction.lean",
+      "AxiomaticGW/Surfaces/Queries.lean",
+      "README.md",
+      "notes/MathematicsToLean.md",
+      "notes/mathematics/SurfaceReconstructionInputs.md",
+      "notes/milestones/GWReconstructionPlan.md",
+      "notes/milestones/ImplementationProgress.md",
+      "notes/references/AdmcyclesEnvironment.md"
+    ],
+    "new": [
+      "AxiomaticGW/Coefficients/RationalTerms.lean",
+      "AxiomaticGW/Surfaces/Fixtures/GetzlerFrames.lean",
+      "AxiomaticGW/Surfaces/Fixtures/GetzlerReplay.lean",
+      "AxiomaticGW/Surfaces/LowDegree.lean",
+      "AxiomaticGW/Surfaces/TermExpansion.lean",
+      "AxiomaticGWTest/Surfaces/LowDegree.lean",
+      "AxiomaticGWTest/Surfaces/TermExpansion.lean",
+      "environments/surface-term-expansion-validation.json",
+      "scripts/export_surface_equations.py",
+      "scripts/test_surface_equations.py"
+    ],
+    "missing": [],
+    "final_diff_reviewed": true,
+    "placeholder_scan": "No sorry, admit, sorryAx, native_decide or substitute axiom in the added Lean modules, tests or fixture.",
+    "untracked_whitespace_scan": "All added source files end with a newline and have no trailing whitespace.",
+    "local_links_checked": 267,
+    "baseline_reconstruction_matches": {
+      "AxiomaticGW/Surfaces/Queries.lean": true,
+      "AxiomaticGW/Surfaces/PolynomialReduction.lean": true,
+      "AxiomaticGW.lean": true
+    },
+    "source_pins_verified": 113
+  },
+  "source_sha256": {
+    "AxiomaticGW.lean": "a5f063b59e2ff7538b8bf9235e5ffc9dbf4ec1aafef8848db95e8b2932817e98",
+    "AxiomaticGW/Coefficients/DescendantVariables.lean": "2997f88ee1cd6e4fc76168e3e7c73ba804ccdafb02a9a0c511d623662a716471",
+    "AxiomaticGW/Coefficients/EffectiveCurveClass.lean": "d68ce5d44f0158b8df4cac5f347871e387ce5d17c937a04a702b5b94588819e0",
+    "AxiomaticGW/Coefficients/GenusExpansion.lean": "3a62d0084f52e32870be6a14388faff41d368a7ca3ec63f2dba7da805d06f93f",
+    "AxiomaticGW/Coefficients/Novikov.lean": "3b438f570a09a602592499a9deab983dd86c1b086688d9d60ad7bb3ed9dbdc04",
+    "AxiomaticGW/Coefficients/RationalTerms.lean": "b68e2b5736c5610f56741b14adc0b0ead3d7ad3526a01224c390621729e33f0d",
+    "AxiomaticGW/Coefficients/WeightedCurveClass.lean": "3bc8645d07e903dd01653f88d301d745828566a60b2434d667fa894998bc79ca",
+    "AxiomaticGW/CohFT/Ancestors.lean": "d04f17b0a9a465e89d7c054a94b096cf81bf7ef22b931c61fdf73419e988c4a4",
+    "AxiomaticGW/CohFT/Basic.lean": "8e42e96505c84bea43ada16ddc0d54644c0f4416a56db03a5baf4aace2117b66",
+    "AxiomaticGW/CohFT/Constant.lean": "2e88098c585d69f20c1ed77691298ee48c994cb3b13ab53dc7fb138677690721",
+    "AxiomaticGW/CohFT/GluingForgetful.lean": "702223851ca54f654842ef12eb14bb7d15ce7e0659e95a8ff71ad79653727e79",
+    "AxiomaticGW/CohFT/NonseparatingPushforward.lean": "6f5b1137ee901aa7b3a7db1d6a919023cd78fe2b9ff4c22cb709fc3e8d910121",
+    "AxiomaticGW/CohFT/PsiGluing.lean": "a10c0f8999f009e69dcc0755d3f6b33b3b577106c9e58c11fa7f58c162e73cfc",
+    "AxiomaticGW/CohFT/SeparatingPushforward.lean": "7ef46b53841cad087888a34bfbcd0a089488a8f46f0d9048576c43e2c83c5000",
+    "AxiomaticGW/CohFT/StableCurve.lean": "3102914691877889a1a67e76d8dd17897ba6474e2837247d8d9c9241d269a674",
+    "AxiomaticGW/CohFT/Tautological.lean": "09a580ac3e481df0ba90bc30637e6bed2741dfc0e6599d8463a48b42861635ed",
+    "AxiomaticGW/CohFT/Topological.lean": "41a27b98a4df8c38f0dd256c404ad6f45ed28c3cddf91c20eb1fa4048d62186a",
+    "AxiomaticGW/Combinatorics/StableArity.lean": "078a0d2cf8d7a31ed89429e6661cbd469fe4e8cc412adc3b55cccd3335724052",
+    "AxiomaticGW/Combinatorics/StableGraph.lean": "8ce882e57be59078d2aff6f58df1a9a280c807805f7eb1d600e47e89bc01ca2a",
+    "AxiomaticGW/Frobenius/Basic.lean": "c219c9f98197d6430b5a96fb0c9088fabfcd5e343008769d9da6a471f1f0472d",
+    "AxiomaticGW/Frobenius/Constructions.lean": "85353e37abba56fb40802acd39a922a2f45a6a93727c8f6518ce864db3fa501e",
+    "AxiomaticGW/GW/Basic.lean": "f55ca302b1bd3f7c09abd4c1a2b989dc04acf977be697e2776c3fddd77bd5420",
+    "AxiomaticGW/GW/Descendants/Basic.lean": "a2654d08f7cc4ae32953835a4e680a55a5d6d35b5e23c3bf57c15513c87c4d8d",
+    "AxiomaticGW/GW/Descendants/Comparison.lean": "c844012ec6e6ee26d0e3f856fa0e1512e789a15e8bc4633b5d2549fe8669f08b",
+    "AxiomaticGW/GW/Descendants/Equations.lean": "eca74e3828eadfec5c27f83608de2b27e1c77bd94f9c0eb049667013efd40652",
+    "AxiomaticGW/GW/Descendants/Exceptional.lean": "f58e46499486487f53c96d8f3dbb0356bbd4bb2406647ffab453d31a8334c3f8",
+    "AxiomaticGW/GW/Descendants/FullPotential.lean": "6b4bfc4585413f3bb181f1454c2b45f62e06b75dedcdbbdd5b7de9a207a2f85e",
+    "AxiomaticGW/GW/Descendants/Potentials.lean": "b86e2b7aa05c0c260fca980174093b7b2071a153d4ddf51fe3afb7cc9659c8a0",
+    "AxiomaticGW/GW/NonseparatingBoundary.lean": "ddc777c76b70f0c057da39995a99f2ffdc1e1d71f37df684fdea9a6c33dcd8a4",
+    "AxiomaticGW/GW/SeparatingBoundary.lean": "455b91bbce74cac444d04395ab0fa3673cd095e2ee30202796f355add8d66bfc",
+    "AxiomaticGW/Linear/Contraction.lean": "fc378491866b7bfc81751957f5fa904a62d46d6d0b67b69e580eeb9e774fb1aa",
+    "AxiomaticGW/Linear/Copairing.lean": "bd2ff186a8c185f6549a3b52f3f15e1e7cbc4c8dbe71af46dc7515ef1cb5d787",
+    "AxiomaticGW/Linear/PerfectPairing.lean": "f79e560a89494afd439038f9dd4915f08c827db023b0dd51c5fad1c281fc13bf",
+    "AxiomaticGW/Linear/SeparatingContraction.lean": "7c3ff5fc077e70ca058764271c21f355d0fea12cea12957a8c562583cb1e63f8",
+    "AxiomaticGW/Surfaces/AncestorPolynomial.lean": "680199089723296447b32a727da29e85942eb0648ec4bc7ac827f293b767e288",
+    "AxiomaticGW/Surfaces/Cohomology.lean": "7555f04a59f7594547ae85f73787534b94df2023ccfe61b78699ff28c5876d35",
+    "AxiomaticGW/Surfaces/Contraction.lean": "de70519312e1ea02ce82e16ec7bba33c4b1d60e8cccd12b66c4e086a346e68c1",
+    "AxiomaticGW/Surfaces/CurveClasses.lean": "30814002532e28140557e4f4d2b60a45665b31de95e5288a5cca4f6211073fb3",
+    "AxiomaticGW/Surfaces/DegreeZero.lean": "25d9529b192523273e5d0d572d4a54eff063995de22fbcc1611a6287d3bb06bf",
+    "AxiomaticGW/Surfaces/DegreeZeroPolynomial.lean": "66874b3d87ffa459e48dc4f2f646e6cd3f68ea22473de4b377c962973191ffd3",
+    "AxiomaticGW/Surfaces/Fixtures/GetzlerFrames.lean": "92f7b8bed7882a12d9f48c0442595dedfe7d99fc0c42f9ef79c4e19480c0d22f",
+    "AxiomaticGW/Surfaces/Fixtures/GetzlerReplay.lean": "18f6989dae160bf0561bebfd6586d9fbe2f5d0343c4a6cc23aa61e484cad7b8f",
+    "AxiomaticGW/Surfaces/GluingEvaluation.lean": "874ab320372c34647a5a5edcc06ec0da2d5e1d7d86bd92e58d8484d25821dc76",
+    "AxiomaticGW/Surfaces/LowDegree.lean": "c63b3f0166c3f7bf673533e078ee578c50960f186c12aef590a4669739f24688",
+    "AxiomaticGW/Surfaces/PolynomialReduction.lean": "26fa29ad42621599bc51e52d6c40709b72c790aad86a0481d586429ea9e717a6",
+    "AxiomaticGW/Surfaces/PrimaryReduction.lean": "3685edd1fe22b43086883e67cf03f4faa0ad891c347f01dd75ac4358c9909273",
+    "AxiomaticGW/Surfaces/Queries.lean": "20f6ed05012601dab184156903938d789d328733dc22bc3279aea6195102d88d",
+    "AxiomaticGW/Surfaces/TargetData.lean": "8f89f978fce57a80983a65aa46b91087ed9f2ad22aad16d7e3f9c8b190d13517",
+    "AxiomaticGW/Surfaces/TermExpansion.lean": "279b21d025b3e2d28141edcea069e7697d4fd717b6982ab0fbc69bae986ab8d4",
+    "AxiomaticGW/TFT/Basic.lean": "546dd0d8236ca564f589ed910058d47807cafb3c952b37d5600dddc87c04a794",
+    "AxiomaticGW/TFT/Correlator.lean": "5d5866bfc13ff00feaa53ceda514347595d0a6dd37b3d8129dc05ce6551ddb9b",
+    "AxiomaticGW/TFT/FiniteProduct.lean": "ee36e5a4a4e982fe4996dac2511d1b92142f324578a1bed9887af52cdb7a8ff2",
+    "AxiomaticGW/TFT/Frobenius.lean": "fdfcd37bf3b6bb9003b941e1048d06756ebd704c8907b08d58c69a050737c564",
+    "AxiomaticGW/TFT/Sewing.lean": "8c40554b9cff20461b50623160997e95d785dbf62d873a3d9be23af33a1ed4d5",
+    "AxiomaticGW/Tautological/BasicStrata.lean": "aaff11f4110657b96e99a223e8cea032126e21f3f12f37226d7d8094bcbc2159",
+    "AxiomaticGW/Tautological/DecoratedStableGraph.lean": "b4d0408b1cfddafe145230aad311a76577b8feafe6f2ac187cd1524a07247b60",
+    "AxiomaticGW/Tautological/Getzler.lean": "a18166e27b5c95f77c9eaa44afe59e4e5a53a6d17fa2994429239b53e04470a1",
+    "AxiomaticGW/Tautological/GetzlerAncestors.lean": "b55bebbb46947d4893b73c782905a2bf967f2a1a598a1344547f7ee251894c60",
+    "AxiomaticGW/Tautological/GetzlerForgetful.lean": "4b12803bac6e8de8fee1673ebdd103da6853d432b2e78855f8330c4db223d772",
+    "AxiomaticGW/Tautological/GetzlerGW.lean": "1bad4e6f07612c853f9d58dcc42b0983f3c479aca6220d32e17dfd097fe26275",
+    "AxiomaticGW/Tautological/GetzlerGluing.lean": "026c9e76249ba5bb47aa21dab6c8f41d5d97d7e2acb862addd16143ca638b083",
+    "AxiomaticGW/Tautological/GetzlerGraphs.lean": "3caca7fd4cf0d0e3366b5229015eb9756ec4fe9d019cb805748071b48eaf52e3",
+    "AxiomaticGW/Tautological/GetzlerRealization.lean": "2cc561bb53679eb6235adad35f3b57a5195c8c6898e8c4ae6e765b9d2a089ab4",
+    "AxiomaticGW/Tautological/GluingAncestors.lean": "2953e2715238bc0737786a08e7a9101a601d72de0195d1e37ba0fa5dacf6bbec",
+    "AxiomaticGW/Tautological/GluingEvaluation.lean": "79fa292114eb8499c2186d5bbd71bdfb6d15891a9ec5e00cd0eb4e5061fba67d",
+    "AxiomaticGW/Tautological/GluingExpression.lean": "36c5e908f9d13273c739102d0d7c21363776db58d92e5fd49a363661fedc0db5",
+    "AxiomaticGW/Tautological/GluingForgetful.lean": "9a1fb2b1be6198912dfccfa1dcd5b02f7aa9c2e406576443520ad670dd217b53",
+    "AxiomaticGW/Tautological/GluingMarking.lean": "a5afbbcb83fe40f662022b59d76c93884350a216b7849de7fb40889ca9c8ff9d",
+    "AxiomaticGW/Tautological/GraphBounds.lean": "69d1b5fe492e41ed328bc3d19797727f1cd1dc3885ba25de2d4fcb6decbcc679",
+    "AxiomaticGW/Tautological/GraphEnumeration.lean": "bbf9e878dc80e94b3e214e68b14e06dd370da516eb850b1c851d767cb7b01c6e",
+    "AxiomaticGW/Tautological/GraphIsomorphisms.lean": "5cd10ac37ec3390443ac5db4ef38bba59327491fa9f4708d13ea883ca258d0bf",
+    "AxiomaticGW/Tautological/LegPsi.lean": "9ca882b29db8f6dec38c510283aa9f4484839a8f1620232d20b65c61ecf3cb56",
+    "AxiomaticGW/Tautological/LegPsiRealization.lean": "e8d6bff52045adf408f2d4439b5df73b44328a88d1f51d1807ff70da58a6b95a",
+    "AxiomaticGW/Tautological/NonseparatingGluing.lean": "441bea8bc9e4935147b1b78ee29ae716006b5dba927add803941e837e3d66765",
+    "AxiomaticGW/Tautological/NonseparatingRealization.lean": "17d0072a0de621e5164ea39dfc46498b6d11388b0f5f278737a4f5baf1d89fda",
+    "AxiomaticGW/Tautological/Relabel.lean": "cff8eaef48a5789c21a85d3b7f74072538494c0505069911963e85a58c0ea020",
+    "AxiomaticGW/Tautological/RelabelRealization.lean": "3d61514b0b4d21ecb807f82b8c66794c47de46408b3eae5b0d7bbb7fe2f48152",
+    "AxiomaticGW/Tautological/RelationCertificate.lean": "665e0e9ed9aa8d16d8b86b30546623d4980a07a6add20dc771aafebaceee13d4",
+    "AxiomaticGW/Tautological/SeparatingGluing.lean": "05b43b110eb97c226e07ab7e898d1e2da1d90dcabbe59bd5726c45889933cb78",
+    "AxiomaticGW/Tautological/SeparatingRealization.lean": "e5ae34a58171024a17780469beafe6bd541e282ffc8537c562415e798659bfd0",
+    "AxiomaticGW/Tautological/StrataModule.lean": "4cbd41c258dd6e0e03a691d8de21fd9021788e03b67d1df0127742553f53112f",
+    "AxiomaticGW/Tautological/StrataRealization.lean": "ddf59186e35a331415f9cbb8713dbcfda209fbf9bf5530123a1ab87964cd308c",
+    "AxiomaticGWTest/Surfaces/AncestorPolynomial.lean": "280d2b9b12287af06a8c70cce7b48d927ecfe5881af169392644798cc194b016",
+    "AxiomaticGWTest/Surfaces/DegreeZero.lean": "3718c5e8ed8ffa1243be1c56d16915d905e3bba7c282506c073b6bbe51808f74",
+    "AxiomaticGWTest/Surfaces/LowDegree.lean": "6a0e6dd0c8b0f9ad9fe4f69e4fab0db9603fc3ce9a056db074ed4ad47eae636a",
+    "AxiomaticGWTest/Surfaces/PolynomialReduction.lean": "57cb832ed11af4df95b7da9a4604ed8254c29e4655aabc7ca3dd9ef72dcce7b2",
+    "AxiomaticGWTest/Surfaces/TermExpansion.lean": "0e674eb9119d8f5ff4adf19aeb7f185674ecc46653ed3aae1c0c5f9b4503c2eb",
+    "AxiomaticGWTest/Tautological/GetzlerReplay.lean": "7b91d9e3ac47d934f418aa112dbc153f374e41e3f149ca9fee1202769f1ccbec",
+    "README.md": "2c9063cb296cbe0ae3a9f4c8ce1d8fe3d95ec6ce616f36f6f847024cfcde8333",
+    "environments/getzler-candidate-osx-arm64.json": "ccd8a8f941e9d2d503ec91e29b2be527bf0c91ce111599e6ec56118f6994ecb7",
+    "environments/surface-degree-zero-exploration.json": "0fd1d642cad8cd1f4350c283b352238d2a5c06dc1342818d34b9164dd3efeb68",
+    "environments/surface-degree-zero-replay.lean": "450af04d4fed4f0158d03e9d516daac3cf52bd06cad295db599f4be36c31caee",
+    "environments/surface-getzler-exploration.json": "2487976e3c3e23dafa898a045bf0c4c68fcd891d9ca63dd160c5c958de7cc3a6",
+    "environments/surface-getzler-polynomials/Bl2P2-1-1-0-n0.json.gz": "344f545169de029a64ac1a695448cfb6a301c312a3674a914c1e31b0da22abff",
+    "environments/surface-getzler-polynomials/Bl2P2-1-1-1-n1.json.gz": "a77266a037a61ab6e5c81ce9f9133bae6da9760a70eea2592f33b44cfe380f20",
+    "environments/surface-getzler-polynomials/F1-1-1-n1.json.gz": "979b2d180fdcc48936be053443bab0e1da463387b5c1e3bc8fb2f4ce0b99ba35",
+    "environments/surface-getzler-polynomials/P2-1-n1.json.gz": "16bab6b0464d922269f4399751d08790bdf1603e6e3fcd7e1e983566b326ab0b",
+    "environments/surface-primary-reduction-exploration.json": "f859e67febe1608b1b2897123a86a2c704c4ac2c891c9311cc8e1007b01b0048",
+    "environments/surface-primary-reduction-replay.lean": "a2275483b02811853e32a4be42cb38d165cf7da31935db3e63c6cd1d6fcf8840",
+    "environments/surface-primary-reduction-validation.json": "36fbbf2605ee6f19371c1d1cc26f577ff8d6ef67d3a26a7e06d43e9e5758be3c",
+    "lake-manifest.json": "e9d145b9e7338c66d20f6039ba5937818c5a1c3e085465391d3723315fec453d",
+    "lakefile.toml": "58517e8c961d4a4fab407f323a7caa650f935a1202b30bd5becd0335fa0dafe1",
+    "lean-toolchain": "2773c517aa90b66ea8a2c52bddddf84393157797f8341be0df45294fff7fd32e",
+    "notes/MathematicsToLean.md": "c64e0f3588ebe45d209a6757f7f36c18869e91829e221e77d611729728daa2b5",
+    "notes/mathematics/SurfaceReconstructionInputs.md": "e446ba093a83e54f20c9d8200f3fd927c09e9bea9350827971d5f3186db8e1b7",
+    "notes/milestones/GWReconstructionPlan.md": "46f341c3f90c99418b48b8503b745c57660f11b5d32a658a2b7653dd74517600",
+    "notes/milestones/ImplementationProgress.md": "95064e69b56dfb76abfbdeaa159a76eacb7f6696c2e925af75a156204e6d0687",
+    "notes/references/AdmcyclesEnvironment.md": "f9d076185b48096cfd5328f77b7986fc9ca5a25693ef98f689de0945c49ab1c3",
+    "scripts/explore_surface_degree_zero.py": "65afcfe6fa0017a6bc5f1f1627a18c17d144b20ec4566d6e0283b972d122ba61",
+    "scripts/explore_surface_getzler.py": "f34f5288ef6b3a3b0a5417038f3d5e6b3f3f24c683c359431e7f0e39816fdd37",
+    "scripts/explore_surface_reduction.py": "a0e96453cb0063df446ae9f3ddd6416e6308a8466a0d52d1a6316fb4fcf8e5e4",
+    "scripts/export_surface_equations.py": "d8fdbbadff4b286c07a3072d39280dccb02385e4ce137dda0272bea0218987dc",
+    "scripts/test_surface_equations.py": "d6bf3bd5c274aeb468e25dcd3b4e76f37b4c28ab70d92357e8a8414ba4fd2079"
+  },
+  "remaining": [
+    "Uniform genus-one coefficient isolation and a decreasing recursion, including exceptional energy-one and equal-plane-degree sectors.",
+    "Finite seed sufficiency, arbitrary descendant reductions, genus-two reconstruction and remaining fixed benchmark suites.",
+    "Efficient direct symmetric enumeration and practical execution for research-scale energies and marking counts.",
+    "Actual GKM CohFT/reconstruction-action import, geometric and descendant-ancestor comparisons, R/translation conditions when used and ordinary specialization.",
+    "The separately archived unreduced exploratory polynomial files remain uncertified."
+  ],
+  "nonclaims": [
+    "The finite leading coefficients do not prove a uniform pivot, termination or uniqueness.",
+    "The conditional numerical deductions do not construct geometric surface theories or prove their law and seed inputs.",
+    "R1 and R3-R8 remain incomplete."
+  ],
+  "goal_status": "active"
+}

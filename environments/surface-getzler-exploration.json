@@ -1,0 +1,100 @@
+{
+  "cases": [
+    {
+      "collected_monomials": 251,
+      "compressed_sha256": "16bab6b0464d922269f4399751d08790bdf1603e6e3fcd7e1e983566b326ab0b",
+      "curve": [
+        1
+      ],
+      "distinct_component_variables": 94,
+      "extra_markings": 1,
+      "polynomial_file": "environments/surface-getzler-polynomials/P2-1-n1.json.gz",
+      "polynomial_sha256": "7398594f23bdf050dc31dd6ab465397bfeaec3b6c6d78ee0d7d0f0d455960403",
+      "probe": "-9*elliptic",
+      "probe_coefficient": [
+        -9,
+        1
+      ],
+      "raw_terms": 2313,
+      "target": "P2"
+    },
+    {
+      "collected_monomials": 1388,
+      "compressed_sha256": "979b2d180fdcc48936be053443bab0e1da463387b5c1e3bc8fb2f4ce0b99ba35",
+      "curve": [
+        1,
+        1
+      ],
+      "distinct_component_variables": 348,
+      "extra_markings": 1,
+      "polynomial_file": "environments/surface-getzler-polynomials/F1-1-1-n1.json.gz",
+      "polynomial_sha256": "efaa8e97113fe97b836927dbfe78de1a89e02c36239263109278a8810c3877ad",
+      "probe": "-9*elliptic",
+      "probe_coefficient": [
+        -9,
+        1
+      ],
+      "raw_terms": 11824,
+      "target": "F1"
+    },
+    {
+      "collected_monomials": 6550,
+      "compressed_sha256": "a77266a037a61ab6e5c81ce9f9133bae6da9760a70eea2592f33b44cfe380f20",
+      "curve": [
+        1,
+        1,
+        1
+      ],
+      "distinct_component_variables": 1128,
+      "extra_markings": 1,
+      "polynomial_file": "environments/surface-getzler-polynomials/Bl2P2-1-1-1-n1.json.gz",
+      "polynomial_sha256": "d275c38022ee940e85f0df1085e7895f0a4607cb7f33a7682640aa527a54947a",
+      "probe": "-9*elliptic",
+      "probe_coefficient": [
+        -9,
+        1
+      ],
+      "raw_terms": 53825,
+      "target": "Bl2P2"
+    },
+    {
+      "collected_monomials": 853,
+      "compressed_sha256": "344f545169de029a64ac1a695448cfb6a301c312a3674a914c1e31b0da22abff",
+      "curve": [
+        1,
+        1,
+        0
+      ],
+      "distinct_component_variables": 316,
+      "extra_markings": 0,
+      "polynomial_file": "environments/surface-getzler-polynomials/Bl2P2-1-1-0-n0.json.gz",
+      "polynomial_sha256": "496c5a9f543c8e4cc12e4d8d8f7ed973da0bec146371a619f79f0fd2c4070e18",
+      "probe": "-9*elliptic",
+      "probe_coefficient": [
+        -9,
+        1
+      ],
+      "raw_terms": 6425,
+      "target": "Bl2P2"
+    }
+  ],
+  "environment": {
+    "admcycles": "1.4",
+    "architecture": "arm64",
+    "python": "3.12.14",
+    "sage": "10.9"
+  },
+  "input": "environments/getzler-candidate-osx-arm64.json",
+  "input_sha256": "ccd8a8f941e9d2d503ec91e29b2be527bf0c91ce111599e6ec56118f6994ecb7",
+  "method": "independent incidence expansion of the frozen admcycles frame in Sage QQ",
+  "nonclaims": [
+    "No geometric input is proved by these computations",
+    "The probe is a formal substitution, not a numerical GW solution",
+    "The coefficient has not yet been isolated uniformly in arbitrary marking count",
+    "No numerical benchmark or termination gate is discharged"
+  ],
+  "normalization": "raw_gluing_pushforward; original held request; no extra automorphism factor",
+  "polynomial_format": "list of [monomial, [numerator, denominator]]; monomial is a sorted list of [genus, full_curve, sorted [state_code, psi_power] pairs]; state codes are unit=0, H=1, pt=2, E_i=3+i",
+  "script_sha256": "f34f5288ef6b3a3b0a5417038f3d5e6b3f3f24c683c359431e7f0e39816fdd37",
+  "status": "exploration_passed"
+}

@@ -1,0 +1,181 @@
+{
+  "command": "lake env lean /tmp/gw_gkm_and_replay_axioms_20261002.lean",
+  "declarations": [
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "AxiomaticGW.GKM.FixedPointAlgebra.algebra"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "AxiomaticGW.GKM.FixedPointAlgebra.metricMatrix_mul_inverse"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "AxiomaticGW.GKM.FixedPointAlgebra.expansion_from_pairing"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "declaration": "AxiomaticGW.SymmetricPerfectPairing.comap"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "AxiomaticGW.SymmetricPerfectPairing.map_copairing_comap"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "AxiomaticGW.SymmetricPerfectPairing.selfContractTarget_compLinearEquiv"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "AxiomaticGW.SymmetricPerfectPairing.pairContractTarget_compLinearEquiv"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "AxiomaticGW.CohFT.comap"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "AxiomaticGW.CohFT.comap_omega_roundTrip"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "AxiomaticGW.GKM.StateSpaceTransport.basisEquiv"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "AxiomaticGW.GKM.StateSpaceTransport.metricMatrix_mul_inverse"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "AxiomaticGW.GKM.StateSpaceTransport.inverseMetricMatrix_mul_metric"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "AxiomaticGW.GKM.StateSpaceTransport.pairing_basis"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "declaration": "AxiomaticGW.GKM.StateSpaceTransport.product_assoc"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "AxiomaticGW.GKM.StateSpaceTransport.pairing_product"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "AxiomaticGW.AdmcyclesGenusTwo.columns_eq_exactCorpus"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "AxiomaticGW.AdmcyclesGenusTwo.checkExchange_eq_true_iff_accepts"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "AxiomaticGW.AdmcyclesGenusTwo.acceptsExchange_sound"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "AxiomaticGW.AdmcyclesGenusTwo.toPushforward_comp_toMonomial"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "AxiomaticGW.AdmcyclesGenusTwo.toMonomial_comp_toPushforward"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "AxiomaticGW.RelationCertificate.evaluation_eq_zero"
+    }
+  ],
+  "scope": "Twenty-one key declarations; not a project-wide axiom audit",
+  "source_sha256": {
+    "AxiomaticGW/CohFT/Transport.lean": "d414144b8b147bccc6e616d9de15a6ad1cee88bdcfd270676e7a6e1e438d11bf",
+    "AxiomaticGW/GKM/FixedPointAlgebra.lean": "7501c0f4005b57efa99ab15442295fbf8d7992280ac2e4dac23e994779d6db8b",
+    "AxiomaticGW/GKM/StateSpaceTransport.lean": "6f0f5d3f7876ddcf9c99bd418cc9db2a5b8a63c7c9dd2435b38c8489f2fddcb8",
+    "AxiomaticGW/Linear/PairingTransport.lean": "318a43462e7c23fbdf2e8722b291c7cb34b5487c9ff4458e9f404a06e29ce43e",
+    "AxiomaticGW/Tautological/Fixtures/AdmcyclesGenusTwo.lean": "7497fd099eed41f3d9c415128063a8d8d4094f150287c98cb5bd049b1c8cfb80",
+    "AxiomaticGW/Tautological/RelationCertificate.lean": "665e0e9ed9aa8d16d8b86b30546623d4980a07a6add20dc771aafebaceee13d4"
+  },
+  "status": "passed"
+}

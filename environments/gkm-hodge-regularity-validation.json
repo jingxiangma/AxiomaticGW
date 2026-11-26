@@ -1,0 +1,1653 @@
+{
+  "actual_frame": {
+    "complete_polynomial_sums": 3,
+    "explicit_coefficient_sum_proofs": 18,
+    "fixed_point_counts": [
+      3,
+      4,
+      5
+    ],
+    "ordered_pairs_per_point": 9,
+    "source_bound_coefficients": 108,
+    "targets": [
+      "P2",
+      "F1",
+      "Bl2P2"
+    ]
+  },
+  "boundaries": [
+    "Only formal Hodge polynomials, not a realization of raw strata products.",
+    "Zero characters are applied only to the polynomial lift via the existing atZero homomorphism.",
+    "No map from the full fraction field to QQ is introduced.",
+    "No geometric Hodge/Chern/GRR, Mumford relation, GW localization or CohFT identification.",
+    "No global instance, simp rule, geometric hypothesis or seed is introduced.",
+    "Source has autoImplicit false to prevent unnoticed free indices."
+  ],
+  "development_failures_and_repairs": [
+    {
+      "repair": "Explicitly parenthesize whole summands to correct accidental binder scope; normalize finite indices, fractions and map numerals; add autoImplicit false.",
+      "run": {
+        "log": {
+          "path": "/tmp/gw_hodge_regularity_public_v1_20261005.log",
+          "sha256": "2821d08bdf4e8f82ee6f63eeba1854ebe15ca1af743b0c1e80ccee06ae915f06",
+          "text": "{\"start\": \"AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroRegularity.lean\", \"command\": [\"/Users/jma/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lean\", \"--memory=2048\", \"--root=/private/tmp/gw_blowup_public_probe_20261004\", \"-o\", \"/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroRegularity.olean\", \"/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroRegularity.lean\"]}\nTry this:\n  [apply] ring_nf\n  \n  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.\n    \n  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.\n/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroRegularity.lean:44:55: error: unsolved goals\nc : Fin 3 \u2192 Fin 3 \u2192 Coefficient\n\u22a2 MvPolynomial.C (c 0 0) + MvPolynomial.C (c 0 (Fin.succ 0)) * MvPolynomial.X 0 +\n                  MvPolynomial.X 0 * MvPolynomial.X 1 * MvPolynomial.C (c (Fin.succ 0) (Fin.succ 0).succ) +\n                MvPolynomial.X 0 * MvPolynomial.X 1 * MvPolynomial.C (c (Fin.succ 0).succ (Fin.succ 0)) +\n              MvPolynomial.X 0 * MvPolynomial.C (c (Fin.succ 0) 0) +\n            MvPolynomial.X 0 ^ 2 * MvPolynomial.C (c (Fin.succ 0) (Fin.succ 0)) +\n          MvPolynomial.C (c 0 (Fin.succ 0).succ) * MvPolynomial.X 1 +\n        MvPolynomial.X 1 * MvPolynomial.C (c (Fin.succ 0).succ 0) +\n      MvPolynomial.X 1 ^ 2 * MvPolynomial.C (c (Fin.succ 0).succ (Fin.succ 0).succ) =\n    MvPolynomial.C (c 0 0) + MvPolynomial.X 0 * MvPolynomial.X 1 * MvPolynomial.C (c 1 2) +\n                  MvPolynomial.X 0 * MvPolynomial.X 1 * MvPolynomial.C (c 2 1) +\n                MvPolynomial.X 0 * MvPolynomial.C (c 0 1) +\n              MvPolynomial.X 0 * MvPolynomial.C (c 1 0) +\n            MvPolynomial.X 0 ^ 2 * MvPolynomial.C (c 1 1) +\n          MvPolynomial.X 1 * MvPolynomial.C (c 0 2) +\n        MvPolynomial.X 1 * MvPolynomial.C (c 2 0) +\n      MvPolynomial.X 1 ^ 2 * MvPolynomial.C (c 2 2)\n/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroRegularity.lean:46:34: warning: This simp argument is unused:\n  Matrix.cons_val\n\nHint: Omit it from the simp argument list.\n  simp only [hodgePolynomial, hodgeGenerator, Fin.sum_univ_succ,\n  \u0335  \u0335 \u0335 \u0335 \u0335 \u0335Fin.sum_univ_zero, map_add,\n  \u0332 M\u0335a\u0335t\u0335r\u0335i\u0335x\u0335.\u0335c\u0335o\u0335n\u0335s\u0335_\u0335v\u0335a\u0335l\u0335,\u0335  \u0332 \u0332Matrix.of_apply,\n  \u0335  \u0335 \u0335 \u0335 \u0335 \u0335Matrix.cons_val_zero', Matrix.cons_val_succ', Matrix.cons_val_zero,\n       \u0335 \u0335Matrix.cons_val_succ, Matrix.cons_val_fin_one, Matrix.cons_val_one,\n  \u0335  \u0335 \u0335 \u0335 \u0335 \u0335Fin.mk.injEq, Fin.ext_iff,\n  \u0332  \u0332 \u0332 \u0332Fin.val_succ, Fin.val_zero,\n  \u0335  \u0335 \u0335 \u0335 \u0335 \u0335Fin.val_natCast, Fin.val_one', ite_true, ite_false]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`\n/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroRegularity.lean:46:51: warning: This simp argument is unused:\n  Matrix.of_apply\n\nHint: Omit it from the simp argument list.\n  simp only [hodgePolynomial, hodgeGenerator, Fin.sum_univ_succ,\n  \u0335  \u0335 \u0335 \u0335 \u0335 \u0335Fin.sum_univ_zero, map_add,\n  \u0332  \u0332 \u0332 \u0332Matrix.cons_val, Matrix.o\u0335f\u0335_\u0335a\u0335p\u0335p\u0335l\u0335y\u0335,\u0335\n  \u0335 \u0335 \u0335 \u0335 \u0335 \u0335 \u0335M\u0335a\u0335t\u0335r\u0335i\u0335x\u0335.\u0335cons_val_zero', Matrix.cons_val_succ', Matrix.cons_val_zero,\n       \u0335 \u0335Matrix.cons_val_succ, Matrix.cons_val_fin_one, Matrix.cons_val_one,\n  \u0335  \u0335 \u0335 \u0335 \u0335 \u0335Fin.mk.injEq, Fin.ext_iff,\n  \u0332  \u0332 \u0332 \u0332Fin.val_succ, Fin.val_zero,\n  \u0335  \u0335 \u0335 \u0335 \u0335 \u0335Fin.val_natCast, Fin.val_one', ite_true, ite_false]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`\n/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroRegularity.lean:47:6: warning: This simp argument is unused:\n  Matrix.cons_val_zero'\n\nHint: Omit it from the simp argument list.\n  simp only [hodgePolynomial, hodgeGenerator, Fin.sum_univ_succ,\n  \u0335  \u0335 \u0335 \u0335 \u0335 \u0335Fin.sum_univ_zero, map_add,\n  \u0332  \u0332 \u0332 \u0332Matrix.cons_val, Matrix.of_apply,\n  \u0335  \u0335 \u0335 \u0335 \u0335 \u0335Matrix.cons_val_z\u0335e\u0335r\u0335o\u0335'\u0335,\u0335 \u0335M\u0335a\u0335t\u0335r\u0335i\u0335x\u0335.\u0335c\u0335o\u0335n\u0335s_\u0335v\u0335a\u0335l\u0335_\u0335s\u0335ucc', Matrix.cons_val_zero,\n       \u0335 \u0335Matrix.cons_val_succ, Matrix.cons_val_fin_one, Matrix.cons_val_one,\n  \u0335  \u0335 \u0335 \u0335 \u0335 \u0335Fin.mk.injEq, Fin.ext_iff,\n  \u0332  \u0332 \u0332 \u0332Fin.val_succ, Fin.val_zero,\n  \u0335  \u0335 \u0335 \u0335 \u0335 \u0335Fin.val_natCast, Fin.val_one', ite_true, ite_false]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`\n/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroRegularity.lean:47:29: warning: This simp argument is unused:\n  Matrix.cons_val_succ'\n\nHint: Omit it from the simp argument list.\n  simp only [hodgePolynomial, hodgeGenerator, Fin.sum_univ_succ,\n  \u0335  \u0335 \u0335 \u0335 \u0335 \u0335Fin.sum_univ_zero, map_add,\n  \u0332  \u0332 \u0332 \u0332Matrix.cons_val, Matrix.of_apply,\n  \u0335  \u0335 \u0335 \u0335 \u0335 \u0335Matrix.cons_val_zero', Matrix.cons_val_s\u0335u\u0335c\u0335c\u0335'\u0335,\u0335 \u0335M\u0335a\u0335t\u0335r\u0335i\u0335x\u0335.\u0335c\u0335o\u0335n\u0335s\u0335_\u0335v\u0335a\u0335l\u0335_\u0335zero,\n       \u0335 \u0335Matrix.cons_val_succ, Matrix.cons_val_fin_one, Matrix.cons_val_one,\n  \u0335  \u0335 \u0335 \u0335 \u0335 \u0335Fin.mk.injEq, Fin.ext_iff,\n  \u0332  \u0332 \u0332 \u0332Fin.val_succ, Fin.val_zero,\n  \u0335  \u0335 \u0335 \u0335 \u0335 \u0335Fin.val_natCast, Fin.val_one', ite_true, ite_false]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`\n/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroRegularity.lean:48:53: warning: This simp argument is unused:\n  Matrix.cons_val_one\n\nHint: Omit it from the simp argument list.\n  simp only [hodgePolynomial, hodgeGenerator, Fin.sum_univ_succ,\n  \u0335  \u0335 \u0335 \u0335 \u0335 \u0335Fin.sum_univ_zero, map_add,\n  \u0332  \u0332 \u0332 \u0332Matrix.cons_val, Matrix.of_apply,\n  \u0335  \u0335 \u0335 \u0335 \u0335 \u0335Matrix.cons_val_zero', Matrix.cons_val_succ',\n  \u0332  \u0332 \u0332 \u0332Matrix.cons_val_zero,\n  \u0335  \u0335 \u0335 \u0335 \u0335 \u0335Matrix.cons_val_succ, Matrix.cons_val_fin_one, M\u0335a\u0335t\u0335r\u0335i\u0335x\u0335.\u0335c\u0335o\u0335n\u0335s\u0335_\u0335v\u0335a\u0335l\u0335_\u0335o\u0335n\u0335e\u0335,\u0335\n  \u0335 \u0335 \u0335 \u0335 \u0335 \u0335 \u0335Fin.mk.injEq, Fin.ext_iff,\n  \u0332  \u0332 \u0332 \u0332Fin.val_succ, Fin.val_zero,\n  \u0335  \u0335 \u0335 \u0335 \u0335 \u0335Fin.val_natCast, Fin.val_one', ite_true, ite_false]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`\n/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroRegularity.lean:49:6: warning: This simp argument is unused:\n  Fin.mk.injEq\n\nHint: Omit it from the simp argument list.\n  simp only [hodgePolynomial, hodgeGenerator, Fin.sum_univ_succ,\n  \u0335  \u0335 \u0335 \u0335 \u0335 \u0335Fin.sum_univ_zero, map_add,\n  \u0332  \u0332 \u0332 \u0332Matrix.cons_val, Matrix.of_apply,\n  \u0335  \u0335 \u0335 \u0335 \u0335 \u0335Matrix.cons_val_zero', Matrix.cons_val_succ',\n  \u0332  \u0332 \u0332 \u0332Matrix.cons_val_zero,\n  \u0335  \u0335 \u0335 \u0335 \u0335 \u0335Matrix.cons_val_succ, Matrix.cons_val_fin_one, Matrix.cons_val_one,\n       \u0335 \u0335Fin.m\u0335k\u0335.\u0335i\u0335n\u0335j\u0335E\u0335q\u0335,\u0335 \u0335F\u0335i\u0335n\u0335.\u0335ext_iff, Fin.val_succ, Fin.val_zero,\n  \u0335  \u0335 \u0335 \u0335 \u0335 \u0335Fin.val_natCast, Fin.val_one', ite_true, ite_false]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`\n/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroRegularity.lean:49:20: warning: This simp argument is unused:\n  Fin.ext_iff\n\nHint: Omit it from the simp argument list.\n  simp only [hodgePolynomial, hodgeGenerator, Fin.sum_univ_succ,\n  \u0335  \u0335 \u0335 \u0335 \u0335 \u0335Fin.sum_univ_zero, map_add,\n  \u0332  \u0332 \u0332 \u0332Matrix.cons_val, Matrix.of_apply,\n  \u0335  \u0335 \u0335 \u0335 \u0335 \u0335Matrix.cons_val_zero', Matrix.cons_val_succ',\n  \u0332  \u0332 \u0332 \u0332Matrix.cons_val_zero,\n  \u0335  \u0335 \u0335 \u0335 \u0335 \u0335Matrix.cons_val_succ, Matrix.cons_val_fin_one, Matrix.cons_val_one,\n       \u0335 \u0335Fin.mk.injEq, Fin.e\u0335x\u0335t\u0335_\u0335i\u0335f\u0335f\u0335,\u0335 \u0335F\u0335i\u0335n\u0335.\u0335val_succ, Fin.val_zero,\n  \u0335  \u0335 \u0335 \u0335 \u0335 \u0335Fin.val_natCast, Fin.val_one', ite_true, ite_false]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`\n/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroRegularity.lean:49:33: warning: This simp argument is unused:\n  Fin.val_succ\n\nHint: Omit it from the simp argument list.\n  simp only [hodgePolynomial, hodgeGenerator, Fin.sum_univ_succ,\n  \u0335  \u0335 \u0335 \u0335 \u0335 \u0335Fin.sum_univ_zero, map_add,\n  \u0332  \u0332 \u0332 \u0332Matrix.cons_val, Matrix.of_apply,\n  \u0335  \u0335 \u0335 \u0335 \u0335 \u0335Matrix.cons_val_zero', Matrix.cons_val_succ',\n  \u0332  \u0332 \u0332 \u0332Matrix.cons_val_zero,\n  \u0335  \u0335 \u0335 \u0335 \u0335 \u0335Matrix.cons_val_succ, Matrix.cons_val_fin_one, Matrix.cons_val_one,\n       \u0335 \u0335Fin.mk.injEq, Fin.ext_iff, Fin.val_s\u0335u\u0335c\u0335c\u0335,\u0335 \u0335F\u0335i\u0335n\u0335.\u0335v\u0335a\u0335l\u0335_\u0335zero,\n  \u0335  \u0335 \u0335 \u0335 \u0335 \u0335Fin.val_natCast, Fin.val_one', ite_true, ite_false]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`\n/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroRegularity.lean:49:47: warning: This simp argument is unused:\n  Fin.val_zero\n\nHint: Omit it from the simp argument list.\n  simp only [hodgePolynomial, hodgeGenerator, Fin.sum_univ_succ,\n  \u0335  \u0335 \u0335 \u0335 \u0335 \u0335Fin.sum_univ_zero, map_add,\n  \u0332  \u0332 \u0332 \u0332Matrix.cons_val, Matrix.of_apply,\n  \u0335  \u0335 \u0335 \u0335 \u0335 \u0335Matrix.cons_val_zero', Matrix.cons_val_succ',\n  \u0332  \u0332 \u0332 \u0332Matrix.cons_val_zero,\n  \u0335  \u0335 \u0335 \u0335 \u0335 \u0335Matrix.cons_val_succ, Matrix.cons_val_fin_one, Matrix.cons_val_one,\n       \u0335 \u0335Fin.mk.injEq, Fin.ext_iff, Fin.val_succ, Fin.val_z\u0335e\u0335r\u0335o\u0335,\u0335\n  \u0335 \u0335 \u0335 \u0335 \u0335 \u0335 \u0335F\u0335i\u0335n.\u0335v\u0335al\u0335_\u0335n\u0335a\u0335tCast, Fin.val_one', ite_true, ite_false]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`\n/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroRegularity.lean:50:6: warning: This simp argument is unused:\n  Fin.val_natCast\n\nHint: Omit it from the simp argument list.\n  simp only [hodgePolynomial, hodgeGenerator, Fin.sum_univ_succ,\n  \u0335  \u0335 \u0335 \u0335 \u0335 \u0335Fin.sum_univ_zero, map_add,\n  \u0332  \u0332 \u0332 \u0332Matrix.cons_val, Matrix.of_apply,\n  \u0335  \u0335 \u0335 \u0335 \u0335 \u0335Matrix.cons_val_zero', Matrix.cons_val_succ',\n  \u0332  \u0332 \u0332 \u0332Matrix.cons_val_zero,\n  \u0335  \u0335 \u0335 \u0335 \u0335 \u0335Matrix.cons_val_succ, Matrix.cons_val_fin_one, Matrix.cons_val_one,\n       \u0335 \u0335Fin.mk.injEq, Fin.ext_iff, Fin.val_succ, Fin.val_zero,\n  \u0335  \u0335 \u0335 \u0335 \u0335 \u0335Fin.val_n\u0335a\u0335t\u0335C\u0335a\u0335s\u0335t\u0335,\u0335 \u0335F\u0335i\u0335n\u0335.\u0335v\u0335a\u0335l\u0335_\u0335one', ite_true, ite_false]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`\n/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroRegularity.lean:50:23: warning: This simp argument is unused:\n  Fin.val_one'\n\nHint: Omit it from the simp argument list.\n  simp only [hodgePolynomial, hodgeGenerator, Fin.sum_univ_succ,\n  \u0335  \u0335 \u0335 \u0335 \u0335 \u0335Fin.sum_univ_zero, map_add,\n  \u0332  \u0332 \u0332 \u0332Matrix.cons_val, Matrix.of_apply,\n  \u0335  \u0335 \u0335 \u0335 \u0335 \u0335Matrix.cons_val_zero', Matrix.cons_val_succ',\n  \u0332  \u0332 \u0332 \u0332Matrix.cons_val_zero,\n  \u0335  \u0335 \u0335 \u0335 \u0335 \u0335Matrix.cons_val_succ, Matrix.cons_val_fin_one, Matrix.cons_val_one,\n       \u0335 \u0335Fin.mk.injEq, Fin.ext_iff, Fin.val_succ, Fin.val_zero,\n  \u0335  \u0335 \u0335 \u0335 \u0335 \u0335Fin.val_natCast, F\u0335in\u0335.\u0335v\u0335a\u0335l\u0335_\u0335o\u0335n\u0335e\u0335'\u0335,\u0335 \u0335i\u0335te_true, ite_false]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`\n/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroRegularity.lean:50:37: warning: This simp argument is unused:\n  ite_true\n\nHint: Omit it from the simp argument list.\n  simp only [hodgePolynomial, hodgeGenerator, Fin.sum_univ_succ,\n  \u0335  \u0335 \u0335 \u0335 \u0335 \u0335Fin.sum_univ_zero, map_add,\n  \u0332  \u0332 \u0332 \u0332Matrix.cons_val, Matrix.of_apply,\n  \u0335  \u0335 \u0335 \u0335 \u0335 \u0335Matrix.cons_val_zero', Matrix.cons_val_succ',\n  \u0332  \u0332 \u0332 \u0332Matrix.cons_val_zero,\n  \u0335  \u0335 \u0335 \u0335 \u0335 \u0335Matrix.cons_val_succ, Matrix.cons_val_fin_one, Matrix.cons_val_one,\n       \u0335 \u0335Fin.mk.injEq, Fin.ext_iff, Fin.val_succ, Fin.val_zero,\n  \u0335  \u0335 \u0335 \u0335 \u0335 \u0335Fin.val_natCast, Fin.val_one', ite_t\u0335r\u0335u\u0335e\u0335,\u0335 \u0335i\u0335t\u0335e\u0335_\u0335false]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`\n/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroRegularity.lean:50:47: warning: This simp argument is unused:\n  ite_false\n\nHint: Omit it from the simp argument list.\n  simp only [hodgePolynomial, hodgeGenerator, Fin.sum_univ_succ,\n  \u0335  \u0335 \u0335 \u0335 \u0335 \u0335Fin.sum_univ_zero, map_add,\n  \u0332  \u0332 \u0332 \u0332Matrix.cons_val, Matrix.of_apply,\n  \u0335  \u0335 \u0335 \u0335 \u0335 \u0335Matrix.cons_val_zero', Matrix.cons_val_succ',\n  \u0332  \u0332 \u0332 \u0332Matrix.cons_val_zero,\n  \u0335  \u0335 \u0335 \u0335 \u0335 \u0335Matrix.cons_val_succ, Matrix.cons_val_fin_one, Matrix.cons_val_one,\n       \u0335 \u0335Fin.mk.injEq, Fin.ext_iff, Fin.val_succ, Fin.val_zero,\n  \u0335  \u0335 \u0335 \u0335 \u0335 \u0335Fin.val_natCast, Fin.val_one', ite_true,\u0335 \u0335i\u0335t\u0335e\u0335_\u0335f\u0335a\u0335l\u0335s\u0335e\u0335]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`\n/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroRegularity.lean:87:46: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`\nTry this:\n  [apply] ring_nf\n  \n  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.\n    \n  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.\n/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroRegularity.lean:94:11: error: unsolved goals\np : Fin 3\n\u22a2 -(y * x * \u2191(![![![0, 1], ![1, 0]], ![![1, -1], ![0, -1]], ![![-1, 0], ![-1, 1]]] p 0 0) *\n                \u2191(![![![0, 1], ![1, 0]], ![![1, -1], ![0, -1]], ![![-1, 0], ![-1, 1]]] p 1 1) *\n              (y * \u2191(![![![0, 1], ![1, 0]], ![![1, -1], ![0, -1]], ![![-1, 0], ![-1, 1]]] p 0 1) +\n                  x * \u2191(![![![0, 1], ![1, 0]], ![![1, -1], ![0, -1]], ![![-1, 0], ![-1, 1]]] p 0 0))\u207b\u00b9) -\n          y * x * \u2191(![![![0, 1], ![1, 0]], ![![1, -1], ![0, -1]], ![![-1, 0], ![-1, 1]]] p 0 1) *\n              \u2191(![![![0, 1], ![1, 0]], ![![1, -1], ![0, -1]], ![![-1, 0], ![-1, 1]]] p 1 0) *\n            (y * \u2191(![![![0, 1], ![1, 0]], ![![1, -1], ![0, -1]], ![![-1, 0], ![-1, 1]]] p 0 1) +\n                x * \u2191(![![![0, 1], ![1, 0]], ![![1, -1], ![0, -1]], ![![-1, 0], ![-1, 1]]] p 0 0))\u207b\u00b9 -\n        y ^ 2 * \u2191(![![![0, 1], ![1, 0]], ![![1, -1], ![0, -1]], ![![-1, 0], ![-1, 1]]] p 0 1) *\n            \u2191(![![![0, 1], ![1, 0]], ![![1, -1], ![0, -1]], ![![-1, 0], ![-1, 1]]] p 1 1) *\n          (y * \u2191(![![![0, 1], ![1, 0]], ![![1, -1], ![0, -1]], ![![-1, 0], ![-1, 1]]] p 0 1) +\n              x * \u2191(![![![0, 1], ![1, 0]], ![![1, -1], ![0, -1]], ![![-1, 0], ![-1, 1]]] p 0 0))\u207b\u00b9 -\n      x ^ 2 * \u2191(![![![0, 1], ![1, 0]], ![![1, -1], ![0, -1]], ![![-1, 0], ![-1, 1]]] p 0 0) *\n          \u2191(![![![0, 1], ![1, 0]], ![![1, -1], ![0, -1]], ![![-1, 0], ![-1, 1]]] p 1 0) *\n        (y * \u2191(![![![0, 1], ![1, 0]], ![![1, -1], ![0, -1]], ![![-1, 0], ![-1, 1]]] p 0 1) +\n            x * \u2191(![![![0, 1], ![1, 0]], ![![1, -1], ![0, -1]], ![![-1, 0], ![-1, 1]]] p 0 0))\u207b\u00b9 =\n    0\nTry this:\n  [apply] ring_nf\n  \n  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.\n    \n  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.\n/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroRegularity.lean:116:11: error: unsolved goals\np : Fin 3\n\u22a2 -(y * x ^ 2 * 3) -\n                y * x ^ 3 * \u2191(![![![0, 1], ![1, 0]], ![![1, -1], ![0, -1]], ![![-1, 0], ![-1, 1]]] p 1 0) *\n                  (y * \u2191(![![![0, 1], ![1, 0]], ![![1, -1], ![0, -1]], ![![-1, 0], ![-1, 1]]] p 0 1) +\n                      x * \u2191(![![![0, 1], ![1, 0]], ![![1, -1], ![0, -1]], ![![-1, 0], ![-1, 1]]] p 0 0))\u207b\u00b9 +\n              y ^ 2 * x ^ 2 * \u2191(![![![0, 1], ![1, 0]], ![![1, -1], ![0, -1]], ![![-1, 0], ![-1, 1]]] p 1 0) *\n                (y * \u2191(![![![0, 1], ![1, 0]], ![![1, -1], ![0, -1]], ![![-1, 0], ![-1, 1]]] p 0 1) +\n                    x * \u2191(![![![0, 1], ![1, 0]], ![![1, -1], ![0, -1]], ![![-1, 0], ![-1, 1]]] p 0 0))\u207b\u00b9 -\n            y ^ 2 * x ^ 2 * \u2191(![![![0, 1], ![1, 0]], ![![1, -1], ![0, -1]], ![![-1, 0], ![-1, 1]]] p 1 1) *\n              (y * \u2191(![![![0, 1], ![1, 0]], ![![1, -1], ![0, -1]], ![![-1, 0], ![-1, 1]]] p 0 1) +\n                  x * \u2191(![![![0, 1], ![1, 0]], ![![1, -1], ![0, -1]], ![![-1, 0], ![-1, 1]]] p 0 0))\u207b\u00b9 +\n          y ^ 3 +\n        y ^ 3 * x * \u2191(![![![0, 1], ![1, 0]], ![![1, -1], ![0, -1]], ![![-1, 0], ![-1, 1]]] p 1 1) *\n          (y * \u2191(![![![0, 1], ![1, 0]], ![![1, -1], ![0, -1]], ![![-1, 0], ![-1, 1]]] p 0 1) +\n              x * \u2191(![![![0, 1], ![1, 0]], ![![1, -1], ![0, -1]], ![![-1, 0], ![-1, 1]]] p 0 0))\u207b\u00b9 +\n      x ^ 3 =\n    -(y * x ^ 2 * 3) + y ^ 2 * x * 3\nTry this:\n  [apply] ring_nf\n  \n  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.\n    \n  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.\n/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroRegularity.lean:137:11: error: unsolved goals\n\u22a2 2 + x * (x - y)\u207b\u00b9 - y * (x - y)\u207b\u00b9 = 3\nTry this:\n  [apply] ring_nf\n  \n  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.\n    \n  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.\n/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroRegularity.lean:159:11: error: unsolved goals\np : Fin 3\n\u22a2 y * x ^ 2 * (-y + x)\u207b\u00b9 * 2 +\n                  y * x ^ 3 * \u2191(![![![0, 1], ![1, 0]], ![![1, -1], ![0, -1]], ![![-1, 0], ![-1, 1]]] p 1 0) *\n                    (y * x * \u2191(![![![0, 1], ![1, 0]], ![![1, -1], ![0, -1]], ![![-1, 0], ![-1, 1]]] p 1 0) *\n                              \u2191(![![![0, 1], ![1, 0]], ![![1, -1], ![0, -1]], ![![-1, 0], ![-1, 1]]] p 0 1) +\n                            y * x * \u2191(![![![0, 1], ![1, 0]], ![![1, -1], ![0, -1]], ![![-1, 0], ![-1, 1]]] p 1 1) *\n                              \u2191(![![![0, 1], ![1, 0]], ![![1, -1], ![0, -1]], ![![-1, 0], ![-1, 1]]] p 0 0) +\n                          y ^ 2 * \u2191(![![![0, 1], ![1, 0]], ![![1, -1], ![0, -1]], ![![-1, 0], ![-1, 1]]] p 1 1) *\n                            \u2191(![![![0, 1], ![1, 0]], ![![1, -1], ![0, -1]], ![![-1, 0], ![-1, 1]]] p 0 1) +\n                        x ^ 2 * \u2191(![![![0, 1], ![1, 0]], ![![1, -1], ![0, -1]], ![![-1, 0], ![-1, 1]]] p 1 0) *\n                          \u2191(![![![0, 1], ![1, 0]], ![![1, -1], ![0, -1]], ![![-1, 0], ![-1, 1]]] p 0 0))\u207b\u00b9 -\n                y ^ 2 -\n              y ^ 2 * x * (-y + x)\u207b\u00b9 -\n            y ^ 2 * x ^ 2 * \u2191(![![![0, 1], ![1, 0]], ![![1, -1], ![0, -1]], ![![-1, 0], ![-1, 1]]] p 1 0) *\n              (y * x * \u2191(![![![0, 1], ![1, 0]], ![![1, -1], ![0, -1]], ![![-1, 0], ![-1, 1]]] p 1 0) *\n                        \u2191(![![![0, 1], ![1, 0]], ![![1, -1], ![0, -1]], ![![-1, 0], ![-1, 1]]] p 0 1) +\n                      y * x * \u2191(![![![0, 1], ![1, 0]], ![![1, -1], ![0, -1]], ![![-1, 0], ![-1, 1]]] p 1 1) *\n                        \u2191(![![![0, 1], ![1, 0]], ![![1, -1], ![0, -1]], ![![-1, 0], ![-1, 1]]] p 0 0) +\n                    y ^ 2 * \u2191(![![![0, 1], ![1, 0]], ![![1, -1], ![0, -1]], ![![-1, 0], ![-1, 1]]] p 1 1) *\n                      \u2191(![![![0, 1], ![1, 0]], ![![1, -1], ![0, -1]], ![![-1, 0], ![-1, 1]]] p 0 1) +\n                  x ^ 2 * \u2191(![![![0, 1], ![1, 0]], ![![1, -1], ![0, -1]], ![![-1, 0], ![-1, 1]]] p 1 0) *\n                    \u2191(![![![0, 1], ![1, 0]], ![![1, -1], ![0, -1]], ![![-1, 0], ![-1, 1]]] p 0 0))\u207b\u00b9 +\n          y ^ 2 * x ^ 2 * \u2191(![![![0, 1], ![1, 0]], ![![1, -1], ![0, -1]], ![![-1, 0], ![-1, 1]]] p 1 1) *\n            (y * x * \u2191(![![![0, 1], ![1, 0]], ![![1, -1], ![0, -1]], ![![-1, 0], ![-1, 1]]] p 1 0) *\n                      \u2191(![![![0, 1], ![1, 0]], ![![1, -1], ![0, -1]], ![![-1, 0], ![-1, 1]]] p 0 1) +\n                    y * x * \u2191(![![![0, 1], ![1, 0]], ![![1, -1], ![0, -1]], ![![-1, 0], ![-1, 1]]] p 1 1) *\n                      \u2191(![![![0, 1], ![1, 0]], ![![1, -1], ![0, -1]], ![![-1, 0], ![-1, 1]]] p 0 0) +\n                  y ^ 2 * \u2191(![![![0, 1], ![1, 0]], ![![1, -1], ![0, -1]], ![![-1, 0], ![-1, 1]]] p 1 1) *\n                    \u2191(![![![0, 1], ![1, 0]], ![![1, -1], ![0, -1]], ![![-1, 0], ![-1, 1]]] p 0 1) +\n                x ^ 2 * \u2191(![![![0, 1], ![1, 0]], ![![1, -1], ![0, -1]], ![![-1, 0], ![-1, 1]]] p 1 0) *\n                  \u2191(![![![0, 1], ![1, 0]], ![![1, -1], ![0, -1]], ![![-1, 0], ![-1, 1]]] p 0 0))\u207b\u00b9 -\n        y ^ 3 * x * \u2191(![![![0, 1], ![1, 0]], ![![1, -1], ![0, -1]], ![![-1, 0], ![-1, 1]]] p 1 1) *\n          (y * x * \u2191(![![![0, 1], ![1, 0]], ![![1, -1], ![0, -1]], ![![-1, 0], ![-1, 1]]] p 1 0) *\n                    \u2191(![![![0, 1], ![1, 0]], ![![1, -1], ![0, -1]], ![![-1, 0], ![-1, 1]]] p 0 1) +\n                  y * x * \u2191(![![![0, 1], ![1, 0]], ![![1, -1], ![0, -1]], ![![-1, 0], ![-1, 1]]] p 1 1) *\n                    \u2191(![![![0, 1], ![1, 0]], ![![1, -1], ![0, -1]], ![![-1, 0], ![-1, 1]]] p 0 0) +\n                y ^ 2 * \u2191(![![![0, 1], ![1, 0]], ![![1, -1], ![0, -1]], ![![-1, 0], ![-1, 1]]] p 1 1) *\n                  \u2191(![![![0, 1], ![1, 0]], ![![1, -1], ![0, -1]], ![![-1, 0], ![-1, 1]]] p 0 1) +\n              x ^ 2 * \u2191(![![![0, 1], ![1, 0]], ![![1, -1], ![0, -1]], ![![-1, 0], ![-1, 1]]] p 1 0) *\n                \u2191(![![![0, 1], ![1, 0]], ![![1, -1], ![0, -1]], ![![-1, 0], ![-1, 1]]] p 0 0))\u207b\u00b9 -\n      x ^ 3 * (-y + x)\u207b\u00b9 =\n    0\nTry this:\n  [apply] ring_nf\n  \n  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.\n    \n  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.\n/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroRegularity.lean:180:11: error: unsolved goals\n\u22a2 -x - x * y * (x - y)\u207b\u00b9 + x ^ 2 * (x - y)\u207b\u00b9 = 0\n/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroRegularity.lean:202:20: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern\n  \u2211 p, HodgeDegreeZeroFullCoefficientReplay.Plane.coefficients p 0 1 +\n    HodgeDegreeZeroFullCoefficientReplay.Plane.coefficients ?m.11 1 0\nin the target expression\n  (MvPolynomial.map embed) regularLift =\n    MvPolynomial.C (x ^ 2 - x * y + y ^ 2) +\n              MvPolynomial.C\n                  (\u2211 x, HodgeDegreeZeroFullCoefficientReplay.Plane.coefficients x 0 1 +\n                    \u2211 x, HodgeDegreeZeroFullCoefficientReplay.Plane.coefficients x 1 0) *\n                MvPolynomial.X 0 +\n            MvPolynomial.C\n                (\u2211 x, HodgeDegreeZeroFullCoefficientReplay.Plane.coefficients x 0 2 +\n                  \u2211 x, HodgeDegreeZeroFullCoefficientReplay.Plane.coefficients x 2 0) *\n              MvPolynomial.X 1 +\n          MvPolynomial.C (\u2211 x, HodgeDegreeZeroFullCoefficientReplay.Plane.coefficients x 1 1) * MvPolynomial.X 0 ^ 2 +\n        MvPolynomial.C\n              (\u2211 x, HodgeDegreeZeroFullCoefficientReplay.Plane.coefficients x 1 2 +\n                \u2211 x, HodgeDegreeZeroFullCoefficientReplay.Plane.coefficients x 2 1) *\n            MvPolynomial.X 0 *\n          MvPolynomial.X 1 +\n      MvPolynomial.C (\u2211 x, HodgeDegreeZeroFullCoefficientReplay.Plane.coefficients x 2 2) * MvPolynomial.X 1 ^ 2\n\n\u22a2 (MvPolynomial.map embed) regularLift =\n    MvPolynomial.C (x ^ 2 - x * y + y ^ 2) +\n              MvPolynomial.C\n                  (\u2211 x, HodgeDegreeZeroFullCoefficientReplay.Plane.coefficients x 0 1 +\n                    \u2211 x, HodgeDegreeZeroFullCoefficientReplay.Plane.coefficients x 1 0) *\n                MvPolynomial.X 0 +\n            MvPolynomial.C\n                (\u2211 x, HodgeDegreeZeroFullCoefficientReplay.Plane.coefficients x 0 2 +\n                  \u2211 x, HodgeDegreeZeroFullCoefficientReplay.Plane.coefficients x 2 0) *\n              MvPolynomial.X 1 +\n          MvPolynomial.C (\u2211 x, HodgeDegreeZeroFullCoefficientReplay.Plane.coefficients x 1 1) * MvPolynomial.X 0 ^ 2 +\n        MvPolynomial.C\n              (\u2211 x, HodgeDegreeZeroFullCoefficientReplay.Plane.coefficients x 1 2 +\n                \u2211 x, HodgeDegreeZeroFullCoefficientReplay.Plane.coefficients x 2 1) *\n            MvPolynomial.X 0 *\n          MvPolynomial.X 1 +\n      MvPolynomial.C (\u2211 x, HodgeDegreeZeroFullCoefficientReplay.Plane.coefficients x 2 2) * MvPolynomial.X 1 ^ 2\n/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroRegularity.lean:210:64: error: unsolved goals\n\u22a2 (MvPolynomial.map (MvPolynomial.eval\u2082Hom (RingHom.id \u211a) 0)) 3 * MvPolynomial.X 0 ^ 2 +\n      (MvPolynomial.map (MvPolynomial.eval\u2082Hom (RingHom.id \u211a) 0)) 3 * MvPolynomial.X 1 =\n    3 * MvPolynomial.X 0 ^ 2 + 3 * MvPolynomial.X 1\n/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroRegularity.lean:252:46: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`\nTry this:\n  [apply] ring_nf\n  \n  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.\n    \n  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.\n/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroRegularity.lean:259:11: error: unsolved goals\np : Fin 4\n\u22a2 y * x * (-y + x)\u207b\u00b9 -\n                y * x *\n                      \u2191(![![![0, -1], ![1, -1]], ![![1, -1], ![0, 1]], ![![-1, 0], ![-1, 1]], ![![-1, 1], ![1, 0]]] p 0\n                          0) *\n                    \u2191(![![![0, -1], ![1, -1]], ![![1, -1], ![0, 1]], ![![-1, 0], ![-1, 1]], ![![-1, 1], ![1, 0]]] p 1\n                        1) *\n                  (y *\n                        \u2191(![![![0, -1], ![1, -1]], ![![1, -1], ![0, 1]], ![![-1, 0], ![-1, 1]], ![![-1, 1], ![1, 0]]] p\n                            0 1) +\n                      x *\n                        \u2191(![![![0, -1], ![1, -1]], ![![1, -1], ![0, 1]], ![![-1, 0], ![-1, 1]], ![![-1, 1], ![1, 0]]] p\n                            0 0))\u207b\u00b9 -\n              y * x *\n                    \u2191(![![![0, -1], ![1, -1]], ![![1, -1], ![0, 1]], ![![-1, 0], ![-1, 1]], ![![-1, 1], ![1, 0]]] p 0\n                        1) *\n                  \u2191(![![![0, -1], ![1, -1]], ![![1, -1], ![0, 1]], ![![-1, 0], ![-1, 1]], ![![-1, 1], ![1, 0]]] p 1 0) *\n                (y *\n                      \u2191(![![![0, -1], ![1, -1]], ![![1, -1], ![0, 1]], ![![-1, 0], ![-1, 1]], ![![-1, 1], ![1, 0]]] p 0\n                          1) +\n                    x *\n                      \u2191(![![![0, -1], ![1, -1]], ![![1, -1], ![0, 1]], ![![-1, 0], ![-1, 1]], ![![-1, 1], ![1, 0]]] p 0\n                          0))\u207b\u00b9 -\n            y ^ 2 * (-y + x)\u207b\u00b9 -\n          y ^ 2 * \u2191(![![![0, -1], ![1, -1]], ![![1, -1], ![0, 1]], ![![-1, 0], ![-1, 1]], ![![-1, 1], ![1, 0]]] p 0 1) *\n              \u2191(![![![0, -1], ![1, -1]], ![![1, -1], ![0, 1]], ![![-1, 0], ![-1, 1]], ![![-1, 1], ![1, 0]]] p 1 1) *\n            (y * \u2191(![![![0, -1], ![1, -1]], ![![1, -1], ![0, 1]], ![![-1, 0], ![-1, 1]], ![![-1, 1], ![1, 0]]] p 0 1) +\n                x *\n                  \u2191(![![![0, -1], ![1, -1]], ![![1, -1], ![0, 1]], ![![-1, 0], ![-1, 1]], ![![-1, 1], ![1, 0]]] p 0\n                      0))\u207b\u00b9 +\n        x -\n      x ^ 2 * \u2191(![![![0, -1], ![1, -1]], ![![1, -1], ![0, 1]], ![![-1, 0], ![-1, 1]], ![![-1, 1], ![1, 0]]] p 0 0) *\n          \u2191(![![![0, -1], ![1, -1]], ![![1, -1], ![0, 1]], ![![-1, 0], ![-1, 1]], ![![-1, 1], ![1, 0]]] p 1 0) *\n        (y * \u2191(![![![0, -1], ![1, -1]], ![![1, -1], ![0, 1]], ![![-1, 0], ![-1, 1]], ![![-1, 1], ![1, 0]]] p 0 1) +\n            x *\n              \u2191(![![![0, -1], ![1, -1]], ![![1, -1], ![0, 1]], ![![-1, 0], ![-1, 1]], ![![-1, 1], ![1, 0]]] p 0 0))\u207b\u00b9 =\n    0\nTry this:\n  [apply] ring_nf\n  \n  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.\n    \n  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.\n/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroRegularity.lean:281:11: error: unsolved goals\np : Fin 4\n\u22a2 y * x ^ 2 * 2 -\n                      y * x ^ 3 *\n                          \u2191(![![![0, -1], ![1, -1]], ![![1, -1], ![0, 1]], ![![-1, 0], ![-1, 1]], ![![-1, 1], ![1, 0]]]\n                              p 1 0) *\n                        (y *\n                              \u2191(![![![0, -1], ![1, -1]], ![![1, -1], ![0, 1]], ![![-1, 0], ![-1, 1]],\n                                    ![![-1, 1], ![1, 0]]]\n                                  p 0 1) +\n                            x *\n                              \u2191(![![![0, -1], ![1, -1]], ![![1, -1], ![0, 1]], ![![-1, 0], ![-1, 1]],\n                                    ![![-1, 1], ![1, 0]]]\n                                  p 0 0))\u207b\u00b9 -\n                    y ^ 2 * x * 3 +\n                  y ^ 2 * x ^ 2 * (-y + x)\u207b\u00b9 +\n                y ^ 2 * x ^ 2 *\n                    \u2191(![![![0, -1], ![1, -1]], ![![1, -1], ![0, 1]], ![![-1, 0], ![-1, 1]], ![![-1, 1], ![1, 0]]] p 1\n                        0) *\n                  (y *\n                        \u2191(![![![0, -1], ![1, -1]], ![![1, -1], ![0, 1]], ![![-1, 0], ![-1, 1]], ![![-1, 1], ![1, 0]]] p\n                            0 1) +\n                      x *\n                        \u2191(![![![0, -1], ![1, -1]], ![![1, -1], ![0, 1]], ![![-1, 0], ![-1, 1]], ![![-1, 1], ![1, 0]]] p\n                            0 0))\u207b\u00b9 -\n              y ^ 2 * x ^ 2 *\n                  \u2191(![![![0, -1], ![1, -1]], ![![1, -1], ![0, 1]], ![![-1, 0], ![-1, 1]], ![![-1, 1], ![1, 0]]] p 1 1) *\n                (y *\n                      \u2191(![![![0, -1], ![1, -1]], ![![1, -1], ![0, 1]], ![![-1, 0], ![-1, 1]], ![![-1, 1], ![1, 0]]] p 0\n                          1) +\n                    x *\n                      \u2191(![![![0, -1], ![1, -1]], ![![1, -1], ![0, 1]], ![![-1, 0], ![-1, 1]], ![![-1, 1], ![1, 0]]] p 0\n                          0))\u207b\u00b9 +\n            y ^ 3 -\n          y ^ 3 * x * (-y + x)\u207b\u00b9 +\n        y ^ 3 * x *\n            \u2191(![![![0, -1], ![1, -1]], ![![1, -1], ![0, 1]], ![![-1, 0], ![-1, 1]], ![![-1, 1], ![1, 0]]] p 1 1) *\n          (y * \u2191(![![![0, -1], ![1, -1]], ![![1, -1], ![0, 1]], ![![-1, 0], ![-1, 1]], ![![-1, 1], ![1, 0]]] p 0 1) +\n              x *\n                \u2191(![![![0, -1], ![1, -1]], ![![1, -1], ![0, 1]], ![![-1, 0], ![-1, 1]], ![![-1, 1], ![1, 0]]] p 0\n                    0))\u207b\u00b9 -\n      x ^ 3 =\n    0\nTry this:\n  [apply] ring_nf\n  \n  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.\n    \n  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.\n/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroRegularity.lean:302:11: error: unsolved goals\n\u22a2 2 + x * (x - y)\u207b\u00b9 * 2 - y * (x - y)\u207b\u00b9 * 2 = 4\nTry this:\n  [apply] ring_nf\n  \n  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.\n    \n  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.\n/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroRegularity.lean:324:11: error: unsolved goals\np : Fin 4\n\u22a2 -(y * x ^ 2 * (-y + x)\u207b\u00b9) +\n                y * x ^ 3 *\n                    \u2191(![![![0, -1], ![1, -1]], ![![1, -1], ![0, 1]], ![![-1, 0], ![-1, 1]], ![![-1, 1], ![1, 0]]] p 1\n                        0) *\n                  (y * x *\n                              \u2191(![![![0, -1], ![1, -1]], ![![1, -1], ![0, 1]], ![![-1, 0], ![-1, 1]],\n                                    ![![-1, 1], ![1, 0]]]\n                                  p 1 0) *\n                            \u2191(![![![0, -1], ![1, -1]], ![![1, -1], ![0, 1]], ![![-1, 0], ![-1, 1]],\n                                  ![![-1, 1], ![1, 0]]]\n                                p 0 1) +\n                          y * x *\n                              \u2191(![![![0, -1], ![1, -1]], ![![1, -1], ![0, 1]], ![![-1, 0], ![-1, 1]],\n                                    ![![-1, 1], ![1, 0]]]\n                                  p 1 1) *\n                            \u2191(![![![0, -1], ![1, -1]], ![![1, -1], ![0, 1]], ![![-1, 0], ![-1, 1]],\n                                  ![![-1, 1], ![1, 0]]]\n                                p 0 0) +\n                        y ^ 2 *\n                            \u2191(![![![0, -1], ![1, -1]], ![![1, -1], ![0, 1]], ![![-1, 0], ![-1, 1]],\n                                  ![![-1, 1], ![1, 0]]]\n                                p 1 1) *\n                          \u2191(![![![0, -1], ![1, -1]], ![![1, -1], ![0, 1]], ![![-1, 0], ![-1, 1]], ![![-1, 1], ![1, 0]]]\n                              p 0 1) +\n                      x ^ 2 *\n                          \u2191(![![![0, -1], ![1, -1]], ![![1, -1], ![0, 1]], ![![-1, 0], ![-1, 1]], ![![-1, 1], ![1, 0]]]\n                              p 1 0) *\n                        \u2191(![![![0, -1], ![1, -1]], ![![1, -1], ![0, 1]], ![![-1, 0], ![-1, 1]], ![![-1, 1], ![1, 0]]] p\n                            0 0))\u207b\u00b9 -\n              y ^ 2 -\n            y ^ 2 * x ^ 2 *\n                \u2191(![![![0, -1], ![1, -1]], ![![1, -1], ![0, 1]], ![![-1, 0], ![-1, 1]], ![![-1, 1], ![1, 0]]] p 1 0) *\n              (y * x *\n                          \u2191(![![![0, -1], ![1, -1]], ![![1, -1], ![0, 1]], ![![-1, 0], ![-1, 1]], ![![-1, 1], ![1, 0]]]\n                              p 1 0) *\n                        \u2191(![![![0, -1], ![1, -1]], ![![1, -1], ![0, 1]], ![![-1, 0], ![-1, 1]], ![![-1, 1], ![1, 0]]] p\n                            0 1) +\n                      y * x *\n                          \u2191(![![![0, -1], ![1, -1]], ![![1, -1], ![0, 1]], ![![-1, 0], ![-1, 1]], ![![-1, 1], ![1, 0]]]\n                              p 1 1) *\n                        \u2191(![![![0, -1], ![1, -1]], ![![1, -1], ![0, 1]], ![![-1, 0], ![-1, 1]], ![![-1, 1], ![1, 0]]] p\n                            0 0) +\n                    y ^ 2 *\n                        \u2191(![![![0, -1], ![1, -1]], ![![1, -1], ![0, 1]], ![![-1, 0], ![-1, 1]], ![![-1, 1], ![1, 0]]] p\n                            1 1) *\n                      \u2191(![![![0, -1], ![1, -1]], ![![1, -1], ![0, 1]], ![![-1, 0], ![-1, 1]], ![![-1, 1], ![1, 0]]] p 0\n                          1) +\n                  x ^ 2 *\n                      \u2191(![![![0, -1], ![1, -1]], ![![1, -1], ![0, 1]], ![![-1, 0], ![-1, 1]], ![![-1, 1], ![1, 0]]] p 1\n                          0) *\n                    \u2191(![![![0, -1], ![1, -1]], ![![1, -1], ![0, 1]], ![![-1, 0], ![-1, 1]], ![![-1, 1], ![1, 0]]] p 0\n                        0))\u207b\u00b9 +\n          y ^ 2 * x ^ 2 *\n              \u2191(![![![0, -1], ![1, -1]], ![![1, -1], ![0, 1]], ![![-1, 0], ![-1, 1]], ![![-1, 1], ![1, 0]]] p 1 1) *\n            (y * x *\n                        \u2191(![![![0, -1], ![1, -1]], ![![1, -1], ![0, 1]], ![![-1, 0], ![-1, 1]], ![![-1, 1], ![1, 0]]] p\n                            1 0) *\n                      \u2191(![![![0, -1], ![1, -1]], ![![1, -1], ![0, 1]], ![![-1, 0], ![-1, 1]], ![![-1, 1], ![1, 0]]] p 0\n                          1) +\n                    y * x *\n                        \u2191(![![![0, -1], ![1, -1]], ![![1, -1], ![0, 1]], ![![-1, 0], ![-1, 1]], ![![-1, 1], ![1, 0]]] p\n                            1 1) *\n                      \u2191(![![![0, -1], ![1, -1]], ![![1, -1], ![0, 1]], ![![-1, 0], ![-1, 1]], ![![-1, 1], ![1, 0]]] p 0\n                          0) +\n                  y ^ 2 *\n                      \u2191(![![![0, -1], ![1, -1]], ![![1, -1], ![0, 1]], ![![-1, 0], ![-1, 1]], ![![-1, 1], ![1, 0]]] p 1\n                          1) *\n                    \u2191(![![![0, -1], ![1, -1]], ![![1, -1], ![0, 1]], ![![-1, 0], ![-1, 1]], ![![-1, 1], ![1, 0]]] p 0\n                        1) +\n                x ^ 2 *\n                    \u2191(![![![0, -1], ![1, -1]], ![![1, -1], ![0, 1]], ![![-1, 0], ![-1, 1]], ![![-1, 1], ![1, 0]]] p 1\n                        0) *\n                  \u2191(![![![0, -1], ![1, -1]], ![![1, -1], ![0, 1]], ![![-1, 0], ![-1, 1]], ![![-1, 1], ![1, 0]]] p 0\n                      0))\u207b\u00b9 -\n        y ^ 3 * x *\n            \u2191(![![![0, -1], ![1, -1]], ![![1, -1], ![0, 1]], ![![-1, 0], ![-1, 1]], ![![-1, 1], ![1, 0]]] p 1 1) *\n          (y * x *\n                      \u2191(![![![0, -1], ![1, -1]], ![![1, -1], ![0, 1]], ![![-1, 0], ![-1, 1]], ![![-1, 1], ![1, 0]]] p 1\n                          0) *\n                    \u2191(![![![0, -1], ![1, -1]], ![![1, -1], ![0, 1]], ![![-1, 0], ![-1, 1]], ![![-1, 1], ![1, 0]]] p 0\n                        1) +\n                  y * x *\n                      \u2191(![![![0, -1], ![1, -1]], ![![1, -1], ![0, 1]], ![![-1, 0], ![-1, 1]], ![![-1, 1], ![1, 0]]] p 1\n                          1) *\n                    \u2191(![![![0, -1], ![1, -1]], ![![1, -1], ![0, 1]], ![![-1, 0], ![-1, 1]], ![![-1, 1], ![1, 0]]] p 0\n                        0) +\n                y ^ 2 *\n                    \u2191(![![![0, -1], ![1, -1]], ![![1, -1], ![0, 1]], ![![-1, 0], ![-1, 1]], ![![-1, 1], ![1, 0]]] p 1\n                        1) *\n                  \u2191(![![![0, -1], ![1, -1]], ![![1, -1], ![0, 1]], ![![-1, 0], ![-1, 1]], ![![-1, 1], ![1, 0]]] p 0 1) +\n              x ^ 2 *\n                  \u2191(![![![0, -1], ![1, -1]], ![![1, -1], ![0, 1]], ![![-1, 0], ![-1, 1]], ![![-1, 1], ![1, 0]]] p 1 0) *\n                \u2191(![![![0, -1], ![1, -1]], ![![1, -1], ![0, 1]], ![![-1, 0], ![-1, 1]], ![![-1, 1], ![1, 0]]] p 0\n                    0))\u207b\u00b9 +\n      x ^ 3 * (-y + x)\u207b\u00b9 =\n    0\n/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroRegularity.lean:360:46: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`\n/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroRegularity.lean:367:20: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern\n  \u2211 p, HodgeDegreeZeroFullCoefficientReplay.OneBlowup.coefficients p 0 1 +\n    HodgeDegreeZeroFullCoefficientReplay.OneBlowup.coefficients ?m.11 1 0\nin the target expression\n  (MvPolynomial.map embed) regularLift =\n    MvPolynomial.C 0 +\n              MvPolynomial.C\n                  (\u2211 x, HodgeDegreeZeroFullCoefficientReplay.OneBlowup.coefficients x 0 1 +\n                    \u2211 x, HodgeDegreeZeroFullCoefficientReplay.OneBlowup.coefficients x 1 0) *\n                MvPolynomial.X 0 +\n            MvPolynomial.C\n                (\u2211 x, HodgeDegreeZeroFullCoefficientReplay.OneBlowup.coefficients x 0 2 +\n                  \u2211 x, HodgeDegreeZeroFullCoefficientReplay.OneBlowup.coefficients x 2 0) *\n              MvPolynomial.X 1 +\n          MvPolynomial.C (\u2211 x, HodgeDegreeZeroFullCoefficientReplay.OneBlowup.coefficients x 1 1) *\n            MvPolynomial.X 0 ^ 2 +\n        MvPolynomial.C\n              (\u2211 x, HodgeDegreeZeroFullCoefficientReplay.OneBlowup.coefficients x 1 2 +\n                \u2211 x, HodgeDegreeZeroFullCoefficientReplay.OneBlowup.coefficients x 2 1) *\n            MvPolynomial.X 0 *\n          MvPolynomial.X 1 +\n      MvPolynomial.C (\u2211 x, HodgeDegreeZeroFullCoefficientReplay.OneBlowup.coefficients x 2 2) * MvPolynomial.X 1 ^ 2\n\n\u22a2 (MvPolynomial.map embed) regularLift =\n    MvPolynomial.C 0 +\n              MvPolynomial.C\n                  (\u2211 x, HodgeDegreeZeroFullCoefficientReplay.OneBlowup.coefficients x 0 1 +\n                    \u2211 x, HodgeDegreeZeroFullCoefficientReplay.OneBlowup.coefficients x 1 0) *\n                MvPolynomial.X 0 +\n            MvPolynomial.C\n                (\u2211 x, HodgeDegreeZeroFullCoefficientReplay.OneBlowup.coefficients x 0 2 +\n                  \u2211 x, HodgeDegreeZeroFullCoefficientReplay.OneBlowup.coefficients x 2 0) *\n              MvPolynomial.X 1 +\n          MvPolynomial.C (\u2211 x, HodgeDegreeZeroFullCoefficientReplay.OneBlowup.coefficients x 1 1) *\n            MvPolynomial.X 0 ^ 2 +\n        MvPolynomial.C\n              (\u2211 x, HodgeDegreeZeroFullCoefficientReplay.OneBlowup.coefficients x 1 2 +\n                \u2211 x, HodgeDegreeZeroFullCoefficientReplay.OneBlowup.coefficients x 2 1) *\n            MvPolynomial.X 0 *\n          MvPolynomial.X 1 +\n      MvPolynomial.C (\u2211 x, HodgeDegreeZeroFullCoefficientReplay.OneBlowup.coefficients x 2 2) * MvPolynomial.X 1 ^ 2\n/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroRegularity.lean:375:64: error: unsolved goals\n\u22a2 (MvPolynomial.map (MvPolynomial.eval\u2082Hom (RingHom.id \u211a) 0)) 4 * MvPolynomial.X 0 ^ 2 = 4 * MvPolynomial.X 0 ^ 2\n/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroRegularity.lean:417:46: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`\nTry this:\n  [apply] ring_nf\n  \n  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.\n    \n  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.\n/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroRegularity.lean:424:11: error: unsolved goals\np : Fin 5\n\u22a2 -y + y * x * (-y + x)\u207b\u00b9 -\n                y * x *\n                      \u2191(![![![0, -1], ![1, -1]], ![![1, -1], ![0, 1]], ![![1, 0], ![-1, 1]], ![![0, 1], ![-1, 0]],\n                            ![![-1, 1], ![0, -1]]]\n                          p 0 0) *\n                    \u2191(![![![0, -1], ![1, -1]], ![![1, -1], ![0, 1]], ![![1, 0], ![-1, 1]], ![![0, 1], ![-1, 0]],\n                          ![![-1, 1], ![0, -1]]]\n                        p 1 1) *\n                  (y *\n                        \u2191(![![![0, -1], ![1, -1]], ![![1, -1], ![0, 1]], ![![1, 0], ![-1, 1]], ![![0, 1], ![-1, 0]],\n                              ![![-1, 1], ![0, -1]]]\n                            p 0 1) +\n                      x *\n                        \u2191(![![![0, -1], ![1, -1]], ![![1, -1], ![0, 1]], ![![1, 0], ![-1, 1]], ![![0, 1], ![-1, 0]],\n                              ![![-1, 1], ![0, -1]]]\n                            p 0 0))\u207b\u00b9 -\n              y * x *\n                    \u2191(![![![0, -1], ![1, -1]], ![![1, -1], ![0, 1]], ![![1, 0], ![-1, 1]], ![![0, 1], ![-1, 0]],\n                          ![![-1, 1], ![0, -1]]]\n                        p 0 1) *\n                  \u2191(![![![0, -1], ![1, -1]], ![![1, -1], ![0, 1]], ![![1, 0], ![-1, 1]], ![![0, 1], ![-1, 0]],\n                        ![![-1, 1], ![0, -1]]]\n                      p 1 0) *\n                (y *\n                      \u2191(![![![0, -1], ![1, -1]], ![![1, -1], ![0, 1]], ![![1, 0], ![-1, 1]], ![![0, 1], ![-1, 0]],\n                            ![![-1, 1], ![0, -1]]]\n                          p 0 1) +\n                    x *\n                      \u2191(![![![0, -1], ![1, -1]], ![![1, -1], ![0, 1]], ![![1, 0], ![-1, 1]], ![![0, 1], ![-1, 0]],\n                            ![![-1, 1], ![0, -1]]]\n                          p 0 0))\u207b\u00b9 -\n            y ^ 2 * (-y + x)\u207b\u00b9 -\n          y ^ 2 *\n                \u2191(![![![0, -1], ![1, -1]], ![![1, -1], ![0, 1]], ![![1, 0], ![-1, 1]], ![![0, 1], ![-1, 0]],\n                      ![![-1, 1], ![0, -1]]]\n                    p 0 1) *\n              \u2191(![![![0, -1], ![1, -1]], ![![1, -1], ![0, 1]], ![![1, 0], ![-1, 1]], ![![0, 1], ![-1, 0]],\n                    ![![-1, 1], ![0, -1]]]\n                  p 1 1) *\n            (y *\n                  \u2191(![![![0, -1], ![1, -1]], ![![1, -1], ![0, 1]], ![![1, 0], ![-1, 1]], ![![0, 1], ![-1, 0]],\n                        ![![-1, 1], ![0, -1]]]\n                      p 0 1) +\n                x *\n                  \u2191(![![![0, -1], ![1, -1]], ![![1, -1], ![0, 1]], ![![1, 0], ![-1, 1]], ![![0, 1], ![-1, 0]],\n                        ![![-1, 1], ![0, -1]]]\n                      p 0 0))\u207b\u00b9 -\n        x -\n      x ^ 2 *\n            \u2191(![![![0, -1], ![1, -1]], ![![1, -1], ![0, 1]], ![![1, 0], ![-1, 1]], ![![0, 1], ![-1, 0]],\n                  ![![-1, 1], ![0, -1]]]\n                p 0 0) *\n          \u2191(![![![0, -1], ![1, -1]], ![![1, -1], ![0, 1]], ![![1, 0], ![-1, 1]], ![![0, 1], ![-1, 0]],\n                ![![-1, 1], ![0, -1]]]\n              p 1 0) *\n        (y *\n              \u2191(![![![0, -1], ![1, -1]], ![![1, -1], ![0, 1]], ![![1, 0], ![-1, 1]], ![![0, 1], ![-1, 0]],\n                    ![![-1, 1], ![0, -1]]]\n                  p 0 1) +\n            x *\n              \u2191(![![![0, -1], ![1, -1]], ![![1, -1], ![0, 1]], ![![1, 0], ![-1, 1]], ![![0, 1], ![-1, 0]],\n                    ![![-1, 1], ![0, -1]]]\n                  p 0 0))\u207b\u00b9 =\n    0\nTry this:\n  [apply] ring_nf\n  \n  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.\n    \n  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.\n/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroRegularity.lean:446:12: error: unsolved goals\np : Fin 5\n\u22a2 y * x ^ 2 * 5 -\n                      y * x ^ 3 *\n                          \u2191(![![![0, -1], ![1, -1]], ![![1, -1], ![0, 1]], ![![1, 0], ![-1, 1]], ![![0, 1], ![-1, 0]],\n                                ![![-1, 1], ![0, -1]]]\n                              p 1 0) *\n                        (y *\n                              \u2191(![![![0, -1], ![1, -1]], ![![1, -1], ![0, 1]], ![![1, 0], ![-1, 1]],\n                                    ![![0, 1], ![-1, 0]], ![![-1, 1], ![0, -1]]]\n                                  p 0 1) +\n                            x *\n                              \u2191(![![![0, -1], ![1, -1]], ![![1, -1], ![0, 1]], ![![1, 0], ![-1, 1]],\n                                    ![![0, 1], ![-1, 0]], ![![-1, 1], ![0, -1]]]\n                                  p 0 0))\u207b\u00b9 -\n                    y ^ 2 * x +\n                  y ^ 2 * x ^ 2 * (-y + x)\u207b\u00b9 +\n                y ^ 2 * x ^ 2 *\n                    \u2191(![![![0, -1], ![1, -1]], ![![1, -1], ![0, 1]], ![![1, 0], ![-1, 1]], ![![0, 1], ![-1, 0]],\n                          ![![-1, 1], ![0, -1]]]\n                        p 1 0) *\n                  (y *\n                        \u2191(![![![0, -1], ![1, -1]], ![![1, -1], ![0, 1]], ![![1, 0], ![-1, 1]], ![![0, 1], ![-1, 0]],\n                              ![![-1, 1], ![0, -1]]]\n                            p 0 1) +\n                      x *\n                        \u2191(![![![0, -1], ![1, -1]], ![![1, -1], ![0, 1]], ![![1, 0], ![-1, 1]], ![![0, 1], ![-1, 0]],\n                              ![![-1, 1], ![0, -1]]]\n                            p 0 0))\u207b\u00b9 -\n              y ^ 2 * x ^ 2 *\n                  \u2191(![![![0, -1], ![1, -1]], ![![1, -1], ![0, 1]], ![![1, 0], ![-1, 1]], ![![0, 1], ![-1, 0]],\n                        ![![-1, 1], ![0, -1]]]\n                      p 1 1) *\n                (y *\n                      \u2191(![![![0, -1], ![1, -1]], ![![1, -1], ![0, 1]], ![![1, 0], ![-1, 1]], ![![0, 1], ![-1, 0]],\n                            ![![-1, 1], ![0, -1]]]\n                          p 0 1) +\n                    x *\n                      \u2191(![![![0, -1], ![1, -1]], ![![1, -1], ![0, 1]], ![![1, 0], ![-1, 1]], ![![0, 1], ![-1, 0]],\n                            ![![-1, 1], ![0, -1]]]\n                          p 0 0))\u207b\u00b9 -\n            y ^ 3 -\n          y ^ 3 * x * (-y + x)\u207b\u00b9 +\n        y ^ 3 * x *\n            \u2191(![![![0, -1], ![1, -1]], ![![1, -1], ![0, 1]], ![![1, 0], ![-1, 1]], ![![0, 1], ![-1, 0]],\n                  ![![-1, 1], ![0, -1]]]\n                p 1 1) *\n          (y *\n                \u2191(![![![0, -1], ![1, -1]], ![![1, -1], ![0, 1]], ![![1, 0], ![-1, 1]], ![![0, 1], ![-1, 0]],\n                      ![![-1, 1], ![0, -1]]]\n                    p 0 1) +\n              x *\n                \u2191(![![![0, -1], ![1, -1]], ![![1, -1], ![0, 1]], ![![1, 0], ![-1, 1]], ![![0, 1], ![-1, 0]],\n                      ![![-1, 1], ![0, -1]]]\n                    p 0 0))\u207b\u00b9 -\n      x ^ 3 * 2 =\n    y * x ^ 2 * 3 - y ^ 2 * x * 3\nTry this:\n  [apply] ring_nf\n  \n  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.\n    \n  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.\n/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroRegularity.lean:467:11: error: unsolved goals\n\u22a2 3 + x * (x - y)\u207b\u00b9 * 2 - y * (x - y)\u207b\u00b9 * 2 = 5\nTry this:\n  [apply] ring_nf\n  \n  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.\n    \n  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.\n/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroRegularity.lean:489:11: error: unsolved goals\np : Fin 5\n\u22a2 -(y * x) - y * x ^ 2 * (-y + x)\u207b\u00b9 +\n                  y * x ^ 3 *\n                      \u2191(![![![0, -1], ![1, -1]], ![![1, -1], ![0, 1]], ![![1, 0], ![-1, 1]], ![![0, 1], ![-1, 0]],\n                            ![![-1, 1], ![0, -1]]]\n                          p 1 0) *\n                    (y * x *\n                                \u2191(![![![0, -1], ![1, -1]], ![![1, -1], ![0, 1]], ![![1, 0], ![-1, 1]],\n                                      ![![0, 1], ![-1, 0]], ![![-1, 1], ![0, -1]]]\n                                    p 1 0) *\n                              \u2191(![![![0, -1], ![1, -1]], ![![1, -1], ![0, 1]], ![![1, 0], ![-1, 1]],\n                                    ![![0, 1], ![-1, 0]], ![![-1, 1], ![0, -1]]]\n                                  p 0 1) +\n                            y * x *\n                                \u2191(![![![0, -1], ![1, -1]], ![![1, -1], ![0, 1]], ![![1, 0], ![-1, 1]],\n                                      ![![0, 1], ![-1, 0]], ![![-1, 1], ![0, -1]]]\n                                    p 1 1) *\n                              \u2191(![![![0, -1], ![1, -1]], ![![1, -1], ![0, 1]], ![![1, 0], ![-1, 1]],\n                                    ![![0, 1], ![-1, 0]], ![![-1, 1], ![0, -1]]]\n                                  p 0 0) +\n                          y ^ 2 *\n                              \u2191(![![![0, -1], ![1, -1]], ![![1, -1], ![0, 1]], ![![1, 0], ![-1, 1]],\n                                    ![![0, 1], ![-1, 0]], ![![-1, 1], ![0, -1]]]\n                                  p 1 1) *\n                            \u2191(![![![0, -1], ![1, -1]], ![![1, -1], ![0, 1]], ![![1, 0], ![-1, 1]], ![![0, 1], ![-1, 0]],\n                                  ![![-1, 1], ![0, -1]]]\n                                p 0 1) +\n                        x ^ 2 *\n                            \u2191(![![![0, -1], ![1, -1]], ![![1, -1], ![0, 1]], ![![1, 0], ![-1, 1]], ![![0, 1], ![-1, 0]],\n                                  ![![-1, 1], ![0, -1]]]\n                                p 1 0) *\n                          \u2191(![![![0, -1], ![1, -1]], ![![1, -1], ![0, 1]], ![![1, 0], ![-1, 1]], ![![0, 1], ![-1, 0]],\n                                ![![-1, 1], ![0, -1]]]\n                              p 0 0))\u207b\u00b9 +\n                y ^ 2 -\n              y ^ 2 * x ^ 2 *\n                  \u2191(![![![0, -1], ![1, -1]], ![![1, -1], ![0, 1]], ![![1, 0], ![-1, 1]], ![![0, 1], ![-1, 0]],\n                        ![![-1, 1], ![0, -1]]]\n                      p 1 0) *\n                (y * x *\n                            \u2191(![![![0, -1], ![1, -1]], ![![1, -1], ![0, 1]], ![![1, 0], ![-1, 1]], ![![0, 1], ![-1, 0]],\n                                  ![![-1, 1], ![0, -1]]]\n                                p 1 0) *\n                          \u2191(![![![0, -1], ![1, -1]], ![![1, -1], ![0, 1]], ![![1, 0], ![-1, 1]], ![![0, 1], ![-1, 0]],\n                                ![![-1, 1], ![0, -1]]]\n                              p 0 1) +\n                        y * x *\n                            \u2191(![![![0, -1], ![1, -1]], ![![1, -1], ![0, 1]], ![![1, 0], ![-1, 1]], ![![0, 1], ![-1, 0]],\n                                  ![![-1, 1], ![0, -1]]]\n                                p 1 1) *\n                          \u2191(![![![0, -1], ![1, -1]], ![![1, -1], ![0, 1]], ![![1, 0], ![-1, 1]], ![![0, 1], ![-1, 0]],\n                                ![![-1, 1], ![0, -1]]]\n                              p 0 0) +\n                      y ^ 2 *\n                          \u2191(![![![0, -1], ![1, -1]], ![![1, -1], ![0, 1]], ![![1, 0], ![-1, 1]], ![![0, 1], ![-1, 0]],\n                                ![![-1, 1], ![0, -1]]]\n                              p 1 1) *\n                        \u2191(![![![0, -1], ![1, -1]], ![![1, -1], ![0, 1]], ![![1, 0], ![-1, 1]], ![![0, 1], ![-1, 0]],\n                              ![![-1, 1], ![0, -1]]]\n                            p 0 1) +\n                    x ^ 2 *\n                        \u2191(![![![0, -1], ![1, -1]], ![![1, -1], ![0, 1]], ![![1, 0], ![-1, 1]], ![![0, 1], ![-1, 0]],\n                              ![![-1, 1], ![0, -1]]]\n                            p 1 0) *\n                      \u2191(![![![0, -1], ![1, -1]], ![![1, -1], ![0, 1]], ![![1, 0], ![-1, 1]], ![![0, 1], ![-1, 0]],\n                            ![![-1, 1], ![0, -1]]]\n                          p 0 0))\u207b\u00b9 +\n            y ^ 2 * x ^ 2 *\n                \u2191(![![![0, -1], ![1, -1]], ![![1, -1], ![0, 1]], ![![1, 0], ![-1, 1]], ![![0, 1], ![-1, 0]],\n                      ![![-1, 1], ![0, -1]]]\n                    p 1 1) *\n              (y * x *\n                          \u2191(![![![0, -1], ![1, -1]], ![![1, -1], ![0, 1]], ![![1, 0], ![-1, 1]], ![![0, 1], ![-1, 0]],\n                                ![![-1, 1], ![0, -1]]]\n                              p 1 0) *\n                        \u2191(![![![0, -1], ![1, -1]], ![![1, -1], ![0, 1]], ![![1, 0], ![-1, 1]], ![![0, 1], ![-1, 0]],\n                              ![![-1, 1], ![0, -1]]]\n                            p 0 1) +\n                      y * x *\n                          \u2191(![![![0, -1], ![1, -1]], ![![1, -1], ![0, 1]], ![![1, 0], ![-1, 1]], ![![0, 1], ![-1, 0]],\n                                ![![-1, 1], ![0, -1]]]\n                              p 1 1) *\n                        \u2191(![![![0, -1], ![1, -1]], ![![1, -1], ![0, 1]], ![![1, 0], ![-1, 1]], ![![0, 1], ![-1, 0]],\n                              ![![-1, 1], ![0, -1]]]\n                            p 0 0) +\n                    y ^ 2 *\n                        \u2191(![![![0, -1], ![1, -1]], ![![1, -1], ![0, 1]], ![![1, 0], ![-1, 1]], ![![0, 1], ![-1, 0]],\n                              ![![-1, 1], ![0, -1]]]\n                            p 1 1) *\n                      \u2191(![![![0, -1], ![1, -1]], ![![1, -1], ![0, 1]], ![![1, 0], ![-1, 1]], ![![0, 1], ![-1, 0]],\n                            ![![-1, 1], ![0, -1]]]\n                          p 0 1) +\n                  x ^ 2 *\n                      \u2191(![![![0, -1], ![1, -1]], ![![1, -1], ![0, 1]], ![![1, 0], ![-1, 1]], ![![0, 1], ![-1, 0]],\n                            ![![-1, 1], ![0, -1]]]\n                          p 1 0) *\n                    \u2191(![![![0, -1], ![1, -1]], ![![1, -1], ![0, 1]], ![![1, 0], ![-1, 1]], ![![0, 1], ![-1, 0]],\n                          ![![-1, 1], ![0, -1]]]\n                        p 0 0))\u207b\u00b9 -\n          y ^ 3 * x *\n              \u2191(![![![0, -1], ![1, -1]], ![![1, -1], ![0, 1]], ![![1, 0], ![-1, 1]], ![![0, 1], ![-1, 0]],\n                    ![![-1, 1], ![0, -1]]]\n                  p 1 1) *\n            (y * x *\n                        \u2191(![![![0, -1], ![1, -1]], ![![1, -1], ![0, 1]], ![![1, 0], ![-1, 1]], ![![0, 1], ![-1, 0]],\n                              ![![-1, 1], ![0, -1]]]\n                            p 1 0) *\n                      \u2191(![![![0, -1], ![1, -1]], ![![1, -1], ![0, 1]], ![![1, 0], ![-1, 1]], ![![0, 1], ![-1, 0]],\n                            ![![-1, 1], ![0, -1]]]\n                          p 0 1) +\n                    y * x *\n                        \u2191(![![![0, -1], ![1, -1]], ![![1, -1], ![0, 1]], ![![1, 0], ![-1, 1]], ![![0, 1], ![-1, 0]],\n                              ![![-1, 1], ![0, -1]]]\n                            p 1 1) *\n                      \u2191(![![![0, -1], ![1, -1]], ![![1, -1], ![0, 1]], ![![1, 0], ![-1, 1]], ![![0, 1], ![-1, 0]],\n                            ![![-1, 1], ![0, -1]]]\n                          p 0 0) +\n                  y ^ 2 *\n                      \u2191(![![![0, -1], ![1, -1]], ![![1, -1], ![0, 1]], ![![1, 0], ![-1, 1]], ![![0, 1], ![-1, 0]],\n                            ![![-1, 1], ![0, -1]]]\n                          p 1 1) *\n                    \u2191(![![![0, -1], ![1, -1]], ![![1, -1], ![0, 1]], ![![1, 0], ![-1, 1]], ![![0, 1], ![-1, 0]],\n                          ![![-1, 1], ![0, -1]]]\n                        p 0 1) +\n                x ^ 2 *\n                    \u2191(![![![0, -1], ![1, -1]], ![![1, -1], ![0, 1]], ![![1, 0], ![-1, 1]], ![![0, 1], ![-1, 0]],\n                          ![![-1, 1], ![0, -1]]]\n                        p 1 0) *\n                  \u2191(![![![0, -1], ![1, -1]], ![![1, -1], ![0, 1]], ![![1, 0], ![-1, 1]], ![![0, 1], ![-1, 0]],\n                        ![![-1, 1], ![0, -1]]]\n                      p 0 0))\u207b\u00b9 -\n        x ^ 2 +\n      x ^ 3 * (-y + x)\u207b\u00b9 =\n    0\n/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroRegularity.lean:525:46: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`\n/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroRegularity.lean:532:20: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern\n  \u2211 p, HodgeDegreeZeroFullCoefficientReplay.TwoBlowups.coefficients p 0 1 +\n    HodgeDegreeZeroFullCoefficientReplay.TwoBlowups.coefficients ?m.11 1 0\nin the target expression\n  (MvPolynomial.map embed) regularLift =\n    MvPolynomial.C (-(x ^ 2 - x * y + y ^ 2)) +\n              MvPolynomial.C\n                  (\u2211 x, HodgeDegreeZeroFullCoefficientReplay.TwoBlowups.coefficients x 0 1 +\n                    \u2211 x, HodgeDegreeZeroFullCoefficientReplay.TwoBlowups.coefficients x 1 0) *\n                MvPolynomial.X 0 +\n            MvPolynomial.C\n                (\u2211 x, HodgeDegreeZeroFullCoefficientReplay.TwoBlowups.coefficients x 0 2 +\n                  \u2211 x, HodgeDegreeZeroFullCoefficientReplay.TwoBlowups.coefficients x 2 0) *\n              MvPolynomial.X 1 +\n          MvPolynomial.C (\u2211 x, HodgeDegreeZeroFullCoefficientReplay.TwoBlowups.coefficients x 1 1) *\n            MvPolynomial.X 0 ^ 2 +\n        MvPolynomial.C\n              (\u2211 x, HodgeDegreeZeroFullCoefficientReplay.TwoBlowups.coefficients x 1 2 +\n                \u2211 x, HodgeDegreeZeroFullCoefficientReplay.TwoBlowups.coefficients x 2 1) *\n            MvPolynomial.X 0 *\n          MvPolynomial.X 1 +\n      MvPolynomial.C (\u2211 x, HodgeDegreeZeroFullCoefficientReplay.TwoBlowups.coefficients x 2 2) * MvPolynomial.X 1 ^ 2\n\n\u22a2 (MvPolynomial.map embed) regularLift =\n    MvPolynomial.C (-(x ^ 2 - x * y + y ^ 2)) +\n              MvPolynomial.C\n                  (\u2211 x, HodgeDegreeZeroFullCoefficientReplay.TwoBlowups.coefficients x 0 1 +\n                    \u2211 x, HodgeDegreeZeroFullCoefficientReplay.TwoBlowups.coefficients x 1 0) *\n                MvPolynomial.X 0 +\n            MvPolynomial.C\n                (\u2211 x, HodgeDegreeZeroFullCoefficientReplay.TwoBlowups.coefficients x 0 2 +\n                  \u2211 x, HodgeDegreeZeroFullCoefficientReplay.TwoBlowups.coefficients x 2 0) *\n              MvPolynomial.X 1 +\n          MvPolynomial.C (\u2211 x, HodgeDegreeZeroFullCoefficientReplay.TwoBlowups.coefficients x 1 1) *\n            MvPolynomial.X 0 ^ 2 +\n        MvPolynomial.C\n              (\u2211 x, HodgeDegreeZeroFullCoefficientReplay.TwoBlowups.coefficients x 1 2 +\n                \u2211 x, HodgeDegreeZeroFullCoefficientReplay.TwoBlowups.coefficients x 2 1) *\n            MvPolynomial.X 0 *\n          MvPolynomial.X 1 +\n      MvPolynomial.C (\u2211 x, HodgeDegreeZeroFullCoefficientReplay.TwoBlowups.coefficients x 2 2) * MvPolynomial.X 1 ^ 2\n/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroRegularity.lean:540:64: error: unsolved goals\n\u22a2 (MvPolynomial.map (MvPolynomial.eval\u2082Hom (RingHom.id \u211a) 0)) 5 * MvPolynomial.X 0 ^ 2 +\n      -(MvPolynomial.map (MvPolynomial.eval\u2082Hom (RingHom.id \u211a) 0)) 3 * MvPolynomial.X 1 =\n    5 * MvPolynomial.X 0 ^ 2 + -3 * MvPolynomial.X 1\n{\"status\": \"public_module_failed\", \"manifest\": \"/private/tmp/gw_hodge_regularity_20261005/public-probe-manifest.json\", \"commands\": [{\"command\": [\"/Users/jma/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lean\", \"--memory=2048\", \"--root=/private/tmp/gw_blowup_public_probe_20261004\", \"-o\", \"/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroRegularity.olean\", \"/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroRegularity.lean\"], \"exit_code\": 1, \"elapsed_seconds\": 34.686}], \"elapsed_seconds\": 34.686, \"isolated_root\": \"/private/tmp/gw_blowup_public_probe_20261004\", \"scope\": \"Exact source modules and separate public imports; no repository edits\"}\n"
+        },
+        "metadata": {
+          "children_ru_maxrss_raw": 1308180480,
+          "children_ru_maxrss_unit": "bytes",
+          "command": [
+            "python3",
+            "/tmp/gw_hodge_regularity_probe_runner_20261005.py",
+            "/tmp/gw_hodge_regularity_20261005/public-probe-manifest.json"
+          ],
+          "elapsed_seconds": 35.467,
+          "exit_code": 1,
+          "log": "/tmp/gw_hodge_regularity_public_v1_20261005.log",
+          "resource_note": "Wrapper child usage may omit descendants on interrupted runs.",
+          "status": "failed"
+        },
+        "metadata_source": {
+          "path": "/tmp/gw_hodge_regularity_public_v1_20261005.json",
+          "sha256": "90ac848a70be29ff06b1398938874df6cbb2d28214b9e0487c5d5c1f6214695b"
+        }
+      }
+    },
+    {
+      "repair": "Close the two polynomial summand-order goals with ring; use ordinary single-goal tactic sequencing.",
+      "run": {
+        "log": {
+          "path": "/tmp/gw_hodge_regularity_public_v2_20261005.log",
+          "sha256": "c95553f6503a6ea4923dc5ec4750be072db4257760587c1f45b27ca55c9fb80a",
+          "text": "{\"start\": \"AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroRegularity.lean\", \"command\": [\"/Users/jma/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lean\", \"--memory=2048\", \"--root=/private/tmp/gw_blowup_public_probe_20261004\", \"-o\", \"/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroRegularity.olean\", \"/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroRegularity.lean\"]}\n/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroRegularity.lean:89:46: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`\n/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroRegularity.lean:112:46: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`\n/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroRegularity.lean:135:46: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`\n/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroRegularity.lean:157:46: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`\n/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroRegularity.lean:180:46: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`\n/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroRegularity.lean:202:46: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`\n/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroRegularity.lean:206:63: error: unsolved goals\n\u22a2 MvPolynomial.C x ^ 2 - MvPolynomial.C x * MvPolynomial.C y + MvPolynomial.C y ^ 2 + 3 * MvPolynomial.X 0 ^ 2 +\n      3 * MvPolynomial.X 1 =\n    MvPolynomial.C x ^ 2 - MvPolynomial.C x * MvPolynomial.C y + MvPolynomial.C y ^ 2 + 3 * MvPolynomial.X 1 +\n      3 * MvPolynomial.X 0 ^ 2\n/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroRegularity.lean:261:46: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`\n/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroRegularity.lean:284:46: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`\n/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroRegularity.lean:307:46: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`\n/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroRegularity.lean:329:46: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`\n/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroRegularity.lean:352:46: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`\n/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroRegularity.lean:374:46: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`\n/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroRegularity.lean:435:46: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`\n/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroRegularity.lean:458:46: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`\n/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroRegularity.lean:481:46: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`\n/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroRegularity.lean:503:46: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`\n/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroRegularity.lean:526:46: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`\n/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroRegularity.lean:548:46: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`\n/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroRegularity.lean:552:63: error: unsolved goals\n\u22a2 -(MvPolynomial.C x ^ 2 - MvPolynomial.C x * MvPolynomial.C y + MvPolynomial.C y ^ 2) + 5 * MvPolynomial.X 0 ^ 2 +\n      -3 * MvPolynomial.X 1 =\n    -(MvPolynomial.C x ^ 2 - MvPolynomial.C x * MvPolynomial.C y + MvPolynomial.C y ^ 2) + -3 * MvPolynomial.X 1 +\n      5 * MvPolynomial.X 0 ^ 2\n{\"status\": \"public_module_failed\", \"manifest\": \"/private/tmp/gw_hodge_regularity_v2_20261005/public-probe-manifest.json\", \"commands\": [{\"command\": [\"/Users/jma/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lean\", \"--memory=2048\", \"--root=/private/tmp/gw_blowup_public_probe_20261004\", \"-o\", \"/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroRegularity.olean\", \"/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroRegularity.lean\"], \"exit_code\": 1, \"elapsed_seconds\": 16.272}], \"elapsed_seconds\": 16.273, \"isolated_root\": \"/private/tmp/gw_blowup_public_probe_20261004\", \"scope\": \"Exact source modules and separate public imports; no repository edits\"}\n"
+        },
+        "metadata": {
+          "children_ru_maxrss_raw": 1324154880,
+          "children_ru_maxrss_unit": "bytes",
+          "command": [
+            "python3",
+            "/tmp/gw_hodge_regularity_probe_runner_20261005.py",
+            "/tmp/gw_hodge_regularity_v2_20261005/public-probe-manifest.json"
+          ],
+          "elapsed_seconds": 17.348,
+          "exit_code": 1,
+          "log": "/tmp/gw_hodge_regularity_public_v2_20261005.log",
+          "resource_note": "Wrapper child usage may omit descendants on interrupted runs.",
+          "status": "failed"
+        },
+        "metadata_source": {
+          "path": "/tmp/gw_hodge_regularity_public_v2_20261005.json",
+          "sha256": "3bb97294b2845d233768e3442aa18df10225a465967e280c5815766e5004514a"
+        }
+      }
+    }
+  ],
+  "exact_arithmetic_candidate_review": {
+    "contents": {
+      "boundary": "Read-only candidate arithmetic review, not Lean proof or geometric Hodge/GW acceptance. Every pole cancellation is tested on the complete fixed-point sum; no individual pole is specialized.",
+      "checked_exporter": {
+        "path": "/Users/jma/Documents/formalization/axiomatic_gw/scripts/export_gkm_hodge_coefficient_formula.py",
+        "sha256": "53d121bd07b6b266775f96ca01e558d9a220617ecf93d807598de6e7dc0f4e6f"
+      },
+      "input": {
+        "path": "/Users/jma/Documents/formalization/axiomatic_gw/environments/gkm-degree-zero-hodge-strata-factored-candidate.json",
+        "sha256": "5be60671ddc68304610987123f048a6c010504cf27f3b690cd1e4d4e39227399"
+      },
+      "lean_executed": false,
+      "producer_executed": false,
+      "repository_edits": false,
+      "sage_executed": false,
+      "script": {
+        "path": "/tmp/gw_hodge_global_regularity_review_20261005/check_global_sum.py",
+        "sha256": "91ab7787b68770027bd25735e5d83c9c7f4d71a7a724b0a879b506459e860feb"
+      },
+      "status": "all_proposed_complete_sum_identities_pass_exact_python_cross_products",
+      "targets": [
+        {
+          "actual_sums_before_exact_cross_product_comparison": [
+            {
+              "denominator": [
+                [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    1,
+                    1
+                  ]
+                ]
+              ],
+              "hodge_exponents": [
+                0,
+                0
+              ],
+              "numerator": [
+                [
+                  [
+                    0,
+                    2
+                  ],
+                  [
+                    1,
+                    1
+                  ]
+                ],
+                [
+                  [
+                    1,
+                    1
+                  ],
+                  [
+                    -1,
+                    1
+                  ]
+                ],
+                [
+                  [
+                    2,
+                    0
+                  ],
+                  [
+                    1,
+                    1
+                  ]
+                ]
+              ]
+            },
+            {
+              "denominator": [
+                [
+                  [
+                    2,
+                    4
+                  ],
+                  [
+                    1,
+                    1
+                  ]
+                ],
+                [
+                  [
+                    3,
+                    3
+                  ],
+                  [
+                    -2,
+                    1
+                  ]
+                ],
+                [
+                  [
+                    4,
+                    2
+                  ],
+                  [
+                    1,
+                    1
+                  ]
+                ]
+              ],
+              "hodge_exponents": [
+                0,
+                1
+              ],
+              "numerator": [
+                [
+                  [
+                    2,
+                    4
+                  ],
+                  [
+                    3,
+                    1
+                  ]
+                ],
+                [
+                  [
+                    3,
+                    3
+                  ],
+                  [
+                    -6,
+                    1
+                  ]
+                ],
+                [
+                  [
+                    4,
+                    2
+                  ],
+                  [
+                    3,
+                    1
+                  ]
+                ]
+              ]
+            },
+            {
+              "denominator": [
+                [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    1,
+                    1
+                  ]
+                ]
+              ],
+              "hodge_exponents": [
+                0,
+                2
+              ],
+              "numerator": []
+            },
+            {
+              "denominator": [
+                [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    1,
+                    1
+                  ]
+                ]
+              ],
+              "hodge_exponents": [
+                1,
+                0
+              ],
+              "numerator": []
+            },
+            {
+              "denominator": [
+                [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    1,
+                    1
+                  ]
+                ]
+              ],
+              "hodge_exponents": [
+                1,
+                1
+              ],
+              "numerator": []
+            },
+            {
+              "denominator": [
+                [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    1,
+                    1
+                  ]
+                ]
+              ],
+              "hodge_exponents": [
+                2,
+                0
+              ],
+              "numerator": [
+                [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    3,
+                    1
+                  ]
+                ]
+              ]
+            }
+          ],
+          "all_six_formal_coefficients_match_candidate": {
+            "(0, 0)": true,
+            "(0, 1)": true,
+            "(0, 2)": true,
+            "(1, 0)": true,
+            "(1, 1)": true,
+            "(2, 0)": true
+          },
+          "fixed_points": 3,
+          "regular_lift": {
+            "constant_hodge_coefficient": [
+              [
+                [
+                  0,
+                  2
+                ],
+                [
+                  1,
+                  1
+                ]
+              ],
+              [
+                [
+                  1,
+                  1
+                ],
+                [
+                  -1,
+                  1
+                ]
+              ],
+              [
+                [
+                  2,
+                  0
+                ],
+                [
+                  1,
+                  1
+                ]
+              ]
+            ],
+            "lambda1_squared": 3,
+            "lambda2": 3
+          },
+          "sum_tangent_euler_polynomial": [
+            [
+              [
+                0,
+                2
+              ],
+              [
+                1,
+                1
+              ]
+            ],
+            [
+              [
+                1,
+                1
+              ],
+              [
+                -1,
+                1
+              ]
+            ],
+            [
+              [
+                2,
+                0
+              ],
+              [
+                1,
+                1
+              ]
+            ]
+          ],
+          "target": "P2",
+          "zero_character_specialization": {
+            "lambda1_squared": 3,
+            "lambda2": 3
+          }
+        },
+        {
+          "actual_sums_before_exact_cross_product_comparison": [
+            {
+              "denominator": [
+                [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    1,
+                    1
+                  ]
+                ]
+              ],
+              "hodge_exponents": [
+                0,
+                0
+              ],
+              "numerator": []
+            },
+            {
+              "denominator": [
+                [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    1,
+                    1
+                  ]
+                ]
+              ],
+              "hodge_exponents": [
+                0,
+                1
+              ],
+              "numerator": []
+            },
+            {
+              "denominator": [
+                [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    1,
+                    1
+                  ]
+                ]
+              ],
+              "hodge_exponents": [
+                0,
+                2
+              ],
+              "numerator": []
+            },
+            {
+              "denominator": [
+                [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    1,
+                    1
+                  ]
+                ]
+              ],
+              "hodge_exponents": [
+                1,
+                0
+              ],
+              "numerator": []
+            },
+            {
+              "denominator": [
+                [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    1,
+                    1
+                  ]
+                ]
+              ],
+              "hodge_exponents": [
+                1,
+                1
+              ],
+              "numerator": []
+            },
+            {
+              "denominator": [
+                [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    1,
+                    1
+                  ]
+                ]
+              ],
+              "hodge_exponents": [
+                2,
+                0
+              ],
+              "numerator": [
+                [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    4,
+                    1
+                  ]
+                ]
+              ]
+            }
+          ],
+          "all_six_formal_coefficients_match_candidate": {
+            "(0, 0)": true,
+            "(0, 1)": true,
+            "(0, 2)": true,
+            "(1, 0)": true,
+            "(1, 1)": true,
+            "(2, 0)": true
+          },
+          "fixed_points": 4,
+          "regular_lift": {
+            "constant_hodge_coefficient": [],
+            "lambda1_squared": 4,
+            "lambda2": 0
+          },
+          "sum_tangent_euler_polynomial": [],
+          "target": "F1",
+          "zero_character_specialization": {
+            "lambda1_squared": 4,
+            "lambda2": 0
+          }
+        },
+        {
+          "actual_sums_before_exact_cross_product_comparison": [
+            {
+              "denominator": [
+                [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    1,
+                    1
+                  ]
+                ]
+              ],
+              "hodge_exponents": [
+                0,
+                0
+              ],
+              "numerator": [
+                [
+                  [
+                    0,
+                    2
+                  ],
+                  [
+                    -1,
+                    1
+                  ]
+                ],
+                [
+                  [
+                    1,
+                    1
+                  ],
+                  [
+                    1,
+                    1
+                  ]
+                ],
+                [
+                  [
+                    2,
+                    0
+                  ],
+                  [
+                    -1,
+                    1
+                  ]
+                ]
+              ]
+            },
+            {
+              "denominator": [
+                [
+                  [
+                    2,
+                    4
+                  ],
+                  [
+                    1,
+                    1
+                  ]
+                ],
+                [
+                  [
+                    3,
+                    3
+                  ],
+                  [
+                    -2,
+                    1
+                  ]
+                ],
+                [
+                  [
+                    4,
+                    2
+                  ],
+                  [
+                    1,
+                    1
+                  ]
+                ]
+              ],
+              "hodge_exponents": [
+                0,
+                1
+              ],
+              "numerator": [
+                [
+                  [
+                    2,
+                    4
+                  ],
+                  [
+                    -3,
+                    1
+                  ]
+                ],
+                [
+                  [
+                    3,
+                    3
+                  ],
+                  [
+                    6,
+                    1
+                  ]
+                ],
+                [
+                  [
+                    4,
+                    2
+                  ],
+                  [
+                    -3,
+                    1
+                  ]
+                ]
+              ]
+            },
+            {
+              "denominator": [
+                [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    1,
+                    1
+                  ]
+                ]
+              ],
+              "hodge_exponents": [
+                0,
+                2
+              ],
+              "numerator": []
+            },
+            {
+              "denominator": [
+                [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    1,
+                    1
+                  ]
+                ]
+              ],
+              "hodge_exponents": [
+                1,
+                0
+              ],
+              "numerator": []
+            },
+            {
+              "denominator": [
+                [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    1,
+                    1
+                  ]
+                ]
+              ],
+              "hodge_exponents": [
+                1,
+                1
+              ],
+              "numerator": []
+            },
+            {
+              "denominator": [
+                [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    1,
+                    1
+                  ]
+                ]
+              ],
+              "hodge_exponents": [
+                2,
+                0
+              ],
+              "numerator": [
+                [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    5,
+                    1
+                  ]
+                ]
+              ]
+            }
+          ],
+          "all_six_formal_coefficients_match_candidate": {
+            "(0, 0)": true,
+            "(0, 1)": true,
+            "(0, 2)": true,
+            "(1, 0)": true,
+            "(1, 1)": true,
+            "(2, 0)": true
+          },
+          "fixed_points": 5,
+          "regular_lift": {
+            "constant_hodge_coefficient": [
+              [
+                [
+                  0,
+                  2
+                ],
+                [
+                  -1,
+                  1
+                ]
+              ],
+              [
+                [
+                  1,
+                  1
+                ],
+                [
+                  1,
+                  1
+                ]
+              ],
+              [
+                [
+                  2,
+                  0
+                ],
+                [
+                  -1,
+                  1
+                ]
+              ]
+            ],
+            "lambda1_squared": 5,
+            "lambda2": -3
+          },
+          "sum_tangent_euler_polynomial": [
+            [
+              [
+                0,
+                2
+              ],
+              [
+                -1,
+                1
+              ]
+            ],
+            [
+              [
+                1,
+                1
+              ],
+              [
+                1,
+                1
+              ]
+            ],
+            [
+              [
+                2,
+                0
+              ],
+              [
+                -1,
+                1
+              ]
+            ]
+          ],
+          "target": "Bl2P2",
+          "zero_character_specialization": {
+            "lambda1_squared": 5,
+            "lambda2": -3
+          }
+        }
+      ]
+    },
+    "source": {
+      "path": "/tmp/gw_hodge_global_regularity_review_20261005/exact-candidate-review.json",
+      "sha256": "eae506788e8712f9b8f57244fa8ed46e3352270d4076a5572fc661856daef339"
+    }
+  },
+  "formal_symbols": {
+    "Q": "x^2-x*y+y^2",
+    "hodge_indeterminates": [
+      "L1",
+      "L2"
+    ],
+    "lambda0": 1,
+    "torus_characters": [
+      "x",
+      "y"
+    ]
+  },
+  "frozen_manifest": {
+    "contents": {
+      "authorized_bounded_public_probe_count": 3,
+      "boundaries": [
+        "Only formal Hodge polynomials, not a realization of raw strata products.",
+        "Zero characters are applied only to the polynomial lift via the existing atZero homomorphism.",
+        "No map from the full fraction field to QQ is introduced.",
+        "No geometric Hodge/Chern/GRR, Mumford relation, GW localization or CohFT identification.",
+        "No global instance, simp rule, geometric hypothesis or seed is introduced.",
+        "Source has autoImplicit false to prevent unnoticed free indices."
+      ],
+      "development_history": [
+        {
+          "log": {
+            "path": "/tmp/gw_hodge_regularity_public_v1_20261005.log",
+            "sha256": "2821d08bdf4e8f82ee6f63eeba1854ebe15ca1af743b0c1e80ccee06ae915f06"
+          },
+          "metadata": {
+            "path": "/tmp/gw_hodge_regularity_public_v1_20261005.json",
+            "sha256": "90ac848a70be29ff06b1398938874df6cbb2d28214b9e0487c5d5c1f6214695b"
+          },
+          "repair": "Explicitly parenthesize whole summands to correct accidental binder scope; normalize finite indices, fractions and map numerals; add autoImplicit false.",
+          "status": "failed"
+        },
+        {
+          "log": {
+            "path": "/tmp/gw_hodge_regularity_public_v2_20261005.log",
+            "sha256": "c95553f6503a6ea4923dc5ec4750be072db4257760587c1f45b27ca55c9fb80a"
+          },
+          "metadata": {
+            "path": "/tmp/gw_hodge_regularity_public_v2_20261005.json",
+            "sha256": "3bb97294b2845d233768e3442aa18df10225a465967e280c5815766e5004514a"
+          },
+          "repair": "Close the two polynomial summand-order goals with ring; use ordinary single-goal tactic sequencing.",
+          "status": "failed"
+        }
+      ],
+      "integrate": [
+        {
+          "bytes": 12353,
+          "destination": "scripts/export_gkm_hodge_regularity.py",
+          "sha256": "608f55c926e14a3c9797f61bfd7c385f9b42ab8f6797389c5c0485944e3a704f",
+          "source": "/tmp/gw_hodge_regularity_v3_20261005/scripts/export_gkm_hodge_regularity.py"
+        },
+        {
+          "bytes": 5236,
+          "destination": "scripts/test_gkm_hodge_regularity.py",
+          "sha256": "d4a72a8157ade0edf6fce35d19d3f7267b1b25208fb362a5042dd93bc11b3c7e",
+          "source": "/tmp/gw_hodge_regularity_v3_20261005/scripts/test_gkm_hodge_regularity.py"
+        },
+        {
+          "bytes": 29863,
+          "destination": "AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroRegularity.lean",
+          "sha256": "b44bcad2fd02afe2c39f130ef610065360a3149f0101a72ddd61c77f67d49cd6",
+          "source": "/tmp/gw_hodge_regularity_v3_20261005/AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroRegularity.lean"
+        },
+        {
+          "bytes": 1628,
+          "destination": "AxiomaticGWTest/GKM/HodgeDegreeZeroRegularity.lean",
+          "sha256": "12931cc76523416a23146a2247077a19380d70fe4caa44745fc2bf9c789c1ea7",
+          "source": "/tmp/gw_hodge_regularity_v3_20261005/AxiomaticGWTest/GKM/HodgeDegreeZeroRegularity.lean"
+        }
+      ],
+      "integrated_build_audit_and_python": "Pending root integration checks; isolated success alone is not claimed as an actual repository build.",
+      "public_acceptance": {
+        "path": "/tmp/gw_hodge_regularity_v3_20261005/public-acceptance.json",
+        "sha256": "ba00b50f5d66bb65c7c6f91e56ca4551692de641a721105d22d2430add3afef6"
+      },
+      "public_probe_manifest": {
+        "path": "/tmp/gw_hodge_regularity_v3_20261005/public-probe-manifest.json",
+        "sha256": "0450346b3e61478dafaded6fe1103438b3aca30f19e29361416315147e647179"
+      },
+      "pure_tests": {
+        "command": [
+          "python3",
+          "/tmp/gw_hodge_regularity_v3_20261005/scripts/test_gkm_hodge_regularity.py"
+        ],
+        "evidence": "Observed actual v3 tool-call unittest output; no separate original log.",
+        "exit_code": 0,
+        "tests": 8,
+        "unittest_elapsed_seconds": 6.135
+      },
+      "read_only_exact_review": {
+        "path": "/tmp/gw_hodge_global_regularity_review_20261005/exact-candidate-review.json",
+        "sha256": "eae506788e8712f9b8f57244fa8ed46e3352270d4076a5572fc661856daef339"
+      },
+      "regular_lifts": {
+        "OneBlowup": "4*L1^2",
+        "Plane": "C(x^2-x*y+y^2)+3*L1^2+3*L2",
+        "TwoBlowups": "-C(x^2-x*y+y^2)+5*L1^2-3*L2"
+      },
+      "repository_edits": false,
+      "sage_executed": false,
+      "source_binding": "All108 incoming coefficients are bound byte-for-byte to the prior actual Lean decoder and ordered-formula source. completePolynomial sums all fixed points and every ordered pair. The whole packet and all named helper/source pins are checked before helper execution.",
+      "staging_dependency_copies": "All files except the four integrate entries are unchanged existing dependencies or evidence; do not copy them over repository files.",
+      "status": "isolated_complete_sum_regularity_replay_passed_ready_for_integration",
+      "zero_character_images": {
+        "OneBlowup": "4*L1^2",
+        "Plane": "3*L1^2+3*L2",
+        "TwoBlowups": "5*L1^2-3*L2"
+      }
+    },
+    "source": {
+      "path": "/tmp/gw_hodge_regularity_v3_20261005/manifest.json",
+      "sha256": "728c8ebd2ef1364a7b7cc09f5d9d8e545486d98c69ccd9f453b66eda33b463d7"
+    }
+  },
+  "generator": {
+    "path": "/tmp/gw_hodge_regularity_record_20261005/record_hodge_regularity_validation.py",
+    "sha256": "8bc5b8abb63e0bb793ab4c43126bf9422313df5dd4531cdcb5f473ec6750ba2f"
+  },
+  "historical_binder_defect": "The first staged statements allowed a second summand outside the summation binder and an unintended free index; their proofs failed. The accepted source parenthesizes every entire summand and sets autoImplicit false. This corrected statement parsing before acceptance; no existing repository theorem was weakened or changed.",
+  "integration": {
+    "contents": {
+      "manifest": {
+        "path": "/tmp/gw_hodge_regularity_v3_20261005/manifest.json",
+        "sha256": "728c8ebd2ef1364a7b7cc09f5d9d8e545486d98c69ccd9f453b66eda33b463d7"
+      },
+      "scope": "Only four frozen regularity files and one umbrella import; validation and documentation pending.",
+      "sources": [
+        {
+          "bytes": 12353,
+          "path": "scripts/export_gkm_hodge_regularity.py",
+          "sha256": "608f55c926e14a3c9797f61bfd7c385f9b42ab8f6797389c5c0485944e3a704f"
+        },
+        {
+          "bytes": 5236,
+          "path": "scripts/test_gkm_hodge_regularity.py",
+          "sha256": "d4a72a8157ade0edf6fce35d19d3f7267b1b25208fb362a5042dd93bc11b3c7e"
+        },
+        {
+          "bytes": 29863,
+          "path": "AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroRegularity.lean",
+          "sha256": "b44bcad2fd02afe2c39f130ef610065360a3149f0101a72ddd61c77f67d49cd6"
+        },
+        {
+          "bytes": 1628,
+          "path": "AxiomaticGWTest/GKM/HodgeDegreeZeroRegularity.lean",
+          "sha256": "12931cc76523416a23146a2247077a19380d70fe4caa44745fc2bf9c789c1ea7"
+        }
+      ],
+      "umbrella": {
+        "after_sha256": "5310a6bbb46385960720f1e6190ff13cd397b9f50034356f499add5f8f546b89",
+        "before_sha256": "a88c9a93b5d224d28cb9faac6a899d4ad720c08f338116d6d2ea9d793ac6b5bf",
+        "exact_one_import_change_verified": true,
+        "inserted_line": "public import AxiomaticGW.GKM.Fixtures.HodgeDegreeZeroRegularity",
+        "path": "AxiomaticGW.lean"
+      }
+    },
+    "source": {
+      "path": "/tmp/gw_hodge_regularity_integration_20261005/integration.json",
+      "sha256": "1bd59bfeeaa2130c309b2ab9c797c219e974091ea478ae4e242f5c4babde4721"
+    }
+  },
+  "isolated_public_acceptance": {
+    "contents": {
+      "audit_declarations": 28,
+      "audit_source": {
+        "path": "/tmp/gw_blowup_public_probe_20261004/HodgeRegularityAudit.lean",
+        "sha256": "cab43e8d50f8992b5bbb64761876aad44954c0db04f8aad49c2358c1eec43b74",
+        "text": "module\n\npublic import AxiomaticGW.GKM.Fixtures.HodgeDegreeZeroRegularity\npublic import AxiomaticGWTest.GKM.HodgeDegreeZeroRegularity\n#print axioms AxiomaticGW.GKM.HodgeDegreeZeroRegularity.hodgePolynomial_expansion\n#print axioms AxiomaticGW.GKM.HodgeDegreeZeroRegularity.Plane.sum_constant\n#print axioms AxiomaticGW.GKM.HodgeDegreeZeroRegularity.Plane.sum_lambda1\n#print axioms AxiomaticGW.GKM.HodgeDegreeZeroRegularity.Plane.sum_lambda2\n#print axioms AxiomaticGW.GKM.HodgeDegreeZeroRegularity.Plane.sum_lambda1Squared\n#print axioms AxiomaticGW.GKM.HodgeDegreeZeroRegularity.Plane.sum_mixed\n#print axioms AxiomaticGW.GKM.HodgeDegreeZeroRegularity.Plane.sum_lambda2Squared\n#print axioms AxiomaticGW.GKM.HodgeDegreeZeroRegularity.Plane.map_embed_regularLift\n#print axioms AxiomaticGW.GKM.HodgeDegreeZeroRegularity.Plane.map_atZero_regularLift\n#print axioms AxiomaticGW.GKM.HodgeDegreeZeroRegularity.OneBlowup.sum_constant\n#print axioms AxiomaticGW.GKM.HodgeDegreeZeroRegularity.OneBlowup.sum_lambda1\n#print axioms AxiomaticGW.GKM.HodgeDegreeZeroRegularity.OneBlowup.sum_lambda2\n#print axioms AxiomaticGW.GKM.HodgeDegreeZeroRegularity.OneBlowup.sum_lambda1Squared\n#print axioms AxiomaticGW.GKM.HodgeDegreeZeroRegularity.OneBlowup.sum_mixed\n#print axioms AxiomaticGW.GKM.HodgeDegreeZeroRegularity.OneBlowup.sum_lambda2Squared\n#print axioms AxiomaticGW.GKM.HodgeDegreeZeroRegularity.OneBlowup.map_embed_regularLift\n#print axioms AxiomaticGW.GKM.HodgeDegreeZeroRegularity.OneBlowup.map_atZero_regularLift\n#print axioms AxiomaticGW.GKM.HodgeDegreeZeroRegularity.TwoBlowups.sum_constant\n#print axioms AxiomaticGW.GKM.HodgeDegreeZeroRegularity.TwoBlowups.sum_lambda1\n#print axioms AxiomaticGW.GKM.HodgeDegreeZeroRegularity.TwoBlowups.sum_lambda2\n#print axioms AxiomaticGW.GKM.HodgeDegreeZeroRegularity.TwoBlowups.sum_lambda1Squared\n#print axioms AxiomaticGW.GKM.HodgeDegreeZeroRegularity.TwoBlowups.sum_mixed\n#print axioms AxiomaticGW.GKM.HodgeDegreeZeroRegularity.TwoBlowups.sum_lambda2Squared\n#print axioms AxiomaticGW.GKM.HodgeDegreeZeroRegularity.TwoBlowups.map_embed_regularLift\n#print axioms AxiomaticGW.GKM.HodgeDegreeZeroRegularity.TwoBlowups.map_atZero_regularLift\n#print axioms AxiomaticGWTest.HodgeDegreeZeroRegularity.plane_regular_specialization\n#print axioms AxiomaticGWTest.HodgeDegreeZeroRegularity.oneBlowup_regular_specialization\n#print axioms AxiomaticGWTest.HodgeDegreeZeroRegularity.twoBlowups_regular_specialization\n"
+      },
+      "axioms": {
+        "AxiomaticGW.GKM.HodgeDegreeZeroRegularity.OneBlowup.map_atZero_regularLift": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.GKM.HodgeDegreeZeroRegularity.OneBlowup.map_embed_regularLift": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.GKM.HodgeDegreeZeroRegularity.OneBlowup.sum_constant": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.GKM.HodgeDegreeZeroRegularity.OneBlowup.sum_lambda1": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.GKM.HodgeDegreeZeroRegularity.OneBlowup.sum_lambda1Squared": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.GKM.HodgeDegreeZeroRegularity.OneBlowup.sum_lambda2": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.GKM.HodgeDegreeZeroRegularity.OneBlowup.sum_lambda2Squared": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.GKM.HodgeDegreeZeroRegularity.OneBlowup.sum_mixed": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.GKM.HodgeDegreeZeroRegularity.Plane.map_atZero_regularLift": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.GKM.HodgeDegreeZeroRegularity.Plane.map_embed_regularLift": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.GKM.HodgeDegreeZeroRegularity.Plane.sum_constant": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.GKM.HodgeDegreeZeroRegularity.Plane.sum_lambda1": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.GKM.HodgeDegreeZeroRegularity.Plane.sum_lambda1Squared": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.GKM.HodgeDegreeZeroRegularity.Plane.sum_lambda2": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.GKM.HodgeDegreeZeroRegularity.Plane.sum_lambda2Squared": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.GKM.HodgeDegreeZeroRegularity.Plane.sum_mixed": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.GKM.HodgeDegreeZeroRegularity.TwoBlowups.map_atZero_regularLift": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.GKM.HodgeDegreeZeroRegularity.TwoBlowups.map_embed_regularLift": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.GKM.HodgeDegreeZeroRegularity.TwoBlowups.sum_constant": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.GKM.HodgeDegreeZeroRegularity.TwoBlowups.sum_lambda1": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.GKM.HodgeDegreeZeroRegularity.TwoBlowups.sum_lambda1Squared": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.GKM.HodgeDegreeZeroRegularity.TwoBlowups.sum_lambda2": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.GKM.HodgeDegreeZeroRegularity.TwoBlowups.sum_lambda2Squared": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.GKM.HodgeDegreeZeroRegularity.TwoBlowups.sum_mixed": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.GKM.HodgeDegreeZeroRegularity.hodgePolynomial_expansion": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGWTest.HodgeDegreeZeroRegularity.oneBlowup_regular_specialization": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGWTest.HodgeDegreeZeroRegularity.plane_regular_specialization": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGWTest.HodgeDegreeZeroRegularity.twoBlowups_regular_specialization": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "integrated_repository_validation": false,
+      "log": {
+        "path": "/tmp/gw_hodge_regularity_public_v3_20261005.log",
+        "sha256": "59ec943c6f0efae1f81ee6b6af76fc2918b6249cdc89f62943f8e19d4777d396",
+        "text": "{\"start\": \"AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroRegularity.lean\", \"command\": [\"/Users/jma/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lean\", \"--memory=2048\", \"--root=/private/tmp/gw_blowup_public_probe_20261004\", \"-o\", \"/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroRegularity.olean\", \"/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroRegularity.lean\"]}\n{\"start\": \"AxiomaticGWTest/GKM/HodgeDegreeZeroRegularity.lean\", \"command\": [\"/Users/jma/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lean\", \"--memory=2048\", \"--root=/private/tmp/gw_blowup_public_probe_20261004\", \"-o\", \"/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGWTest/GKM/HodgeDegreeZeroRegularity.olean\", \"/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGWTest/GKM/HodgeDegreeZeroRegularity.lean\"]}\n'AxiomaticGW.GKM.HodgeDegreeZeroRegularity.hodgePolynomial_expansion' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeZeroRegularity.Plane.sum_constant' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeZeroRegularity.Plane.sum_lambda1' depends on axioms: [propext, Classical.choice, Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeZeroRegularity.Plane.sum_lambda2' depends on axioms: [propext, Classical.choice, Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeZeroRegularity.Plane.sum_lambda1Squared' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeZeroRegularity.Plane.sum_mixed' depends on axioms: [propext, Classical.choice, Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeZeroRegularity.Plane.sum_lambda2Squared' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeZeroRegularity.Plane.map_embed_regularLift' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeZeroRegularity.Plane.map_atZero_regularLift' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeZeroRegularity.OneBlowup.sum_constant' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeZeroRegularity.OneBlowup.sum_lambda1' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeZeroRegularity.OneBlowup.sum_lambda2' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeZeroRegularity.OneBlowup.sum_lambda1Squared' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeZeroRegularity.OneBlowup.sum_mixed' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeZeroRegularity.OneBlowup.sum_lambda2Squared' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeZeroRegularity.OneBlowup.map_embed_regularLift' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeZeroRegularity.OneBlowup.map_atZero_regularLift' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeZeroRegularity.TwoBlowups.sum_constant' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeZeroRegularity.TwoBlowups.sum_lambda1' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeZeroRegularity.TwoBlowups.sum_lambda2' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeZeroRegularity.TwoBlowups.sum_lambda1Squared' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeZeroRegularity.TwoBlowups.sum_mixed' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeZeroRegularity.TwoBlowups.sum_lambda2Squared' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeZeroRegularity.TwoBlowups.map_embed_regularLift' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeZeroRegularity.TwoBlowups.map_atZero_regularLift' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGWTest.HodgeDegreeZeroRegularity.plane_regular_specialization' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGWTest.HodgeDegreeZeroRegularity.oneBlowup_regular_specialization' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGWTest.HodgeDegreeZeroRegularity.twoBlowups_regular_specialization' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n{\"status\": \"passed\", \"manifest\": \"/private/tmp/gw_hodge_regularity_v3_20261005/public-probe-manifest.json\", \"commands\": [{\"command\": [\"/Users/jma/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lean\", \"--memory=2048\", \"--root=/private/tmp/gw_blowup_public_probe_20261004\", \"-o\", \"/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroRegularity.olean\", \"/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroRegularity.lean\"], \"exit_code\": 0, \"elapsed_seconds\": 17.925}, {\"command\": [\"/Users/jma/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lean\", \"--memory=2048\", \"--root=/private/tmp/gw_blowup_public_probe_20261004\", \"-o\", \"/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGWTest/GKM/HodgeDegreeZeroRegularity.olean\", \"/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGWTest/GKM/HodgeDegreeZeroRegularity.lean\"], \"exit_code\": 0, \"elapsed_seconds\": 1.863}, {\"command\": [\"/Users/jma/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lean\", \"--memory=2048\", \"--root=/private/tmp/gw_blowup_public_probe_20261004\", \"/private/tmp/gw_blowup_public_probe_20261004/HodgeRegularityAudit.lean\"], \"exit_code\": 0, \"elapsed_seconds\": 1.255}], \"elapsed_seconds\": 21.044, \"isolated_root\": \"/private/tmp/gw_blowup_public_probe_20261004\", \"scope\": \"Exact source modules and separate public imports; no repository edits\"}\n"
+      },
+      "metadata": {
+        "contents": {
+          "children_ru_maxrss_raw": 1293910016,
+          "children_ru_maxrss_unit": "bytes",
+          "command": [
+            "python3",
+            "/tmp/gw_hodge_regularity_probe_runner_20261005.py",
+            "/tmp/gw_hodge_regularity_v3_20261005/public-probe-manifest.json"
+          ],
+          "elapsed_seconds": 22.397,
+          "exit_code": 0,
+          "log": "/tmp/gw_hodge_regularity_public_v3_20261005.log",
+          "resource_note": "Wrapper child usage may omit descendants on interrupted runs.",
+          "status": "passed"
+        },
+        "source": {
+          "path": "/tmp/gw_hodge_regularity_public_v3_20261005.json",
+          "sha256": "0e8d0060b3d81fed8a7ebed75635cd3e0b8b3d574d54dfde73228c472f2c0016"
+        }
+      },
+      "source_manifest": {
+        "contents": {
+          "audit_names": [
+            "AxiomaticGW.GKM.HodgeDegreeZeroRegularity.hodgePolynomial_expansion",
+            "AxiomaticGW.GKM.HodgeDegreeZeroRegularity.Plane.sum_constant",
+            "AxiomaticGW.GKM.HodgeDegreeZeroRegularity.Plane.sum_lambda1",
+            "AxiomaticGW.GKM.HodgeDegreeZeroRegularity.Plane.sum_lambda2",
+            "AxiomaticGW.GKM.HodgeDegreeZeroRegularity.Plane.sum_lambda1Squared",
+            "AxiomaticGW.GKM.HodgeDegreeZeroRegularity.Plane.sum_mixed",
+            "AxiomaticGW.GKM.HodgeDegreeZeroRegularity.Plane.sum_lambda2Squared",
+            "AxiomaticGW.GKM.HodgeDegreeZeroRegularity.Plane.map_embed_regularLift",
+            "AxiomaticGW.GKM.HodgeDegreeZeroRegularity.Plane.map_atZero_regularLift",
+            "AxiomaticGW.GKM.HodgeDegreeZeroRegularity.OneBlowup.sum_constant",
+            "AxiomaticGW.GKM.HodgeDegreeZeroRegularity.OneBlowup.sum_lambda1",
+            "AxiomaticGW.GKM.HodgeDegreeZeroRegularity.OneBlowup.sum_lambda2",
+            "AxiomaticGW.GKM.HodgeDegreeZeroRegularity.OneBlowup.sum_lambda1Squared",
+            "AxiomaticGW.GKM.HodgeDegreeZeroRegularity.OneBlowup.sum_mixed",
+            "AxiomaticGW.GKM.HodgeDegreeZeroRegularity.OneBlowup.sum_lambda2Squared",
+            "AxiomaticGW.GKM.HodgeDegreeZeroRegularity.OneBlowup.map_embed_regularLift",
+            "AxiomaticGW.GKM.HodgeDegreeZeroRegularity.OneBlowup.map_atZero_regularLift",
+            "AxiomaticGW.GKM.HodgeDegreeZeroRegularity.TwoBlowups.sum_constant",
+            "AxiomaticGW.GKM.HodgeDegreeZeroRegularity.TwoBlowups.sum_lambda1",
+            "AxiomaticGW.GKM.HodgeDegreeZeroRegularity.TwoBlowups.sum_lambda2",
+            "AxiomaticGW.GKM.HodgeDegreeZeroRegularity.TwoBlowups.sum_lambda1Squared",
+            "AxiomaticGW.GKM.HodgeDegreeZeroRegularity.TwoBlowups.sum_mixed",
+            "AxiomaticGW.GKM.HodgeDegreeZeroRegularity.TwoBlowups.sum_lambda2Squared",
+            "AxiomaticGW.GKM.HodgeDegreeZeroRegularity.TwoBlowups.map_embed_regularLift",
+            "AxiomaticGW.GKM.HodgeDegreeZeroRegularity.TwoBlowups.map_atZero_regularLift",
+            "AxiomaticGWTest.HodgeDegreeZeroRegularity.plane_regular_specialization",
+            "AxiomaticGWTest.HodgeDegreeZeroRegularity.oneBlowup_regular_specialization",
+            "AxiomaticGWTest.HodgeDegreeZeroRegularity.twoBlowups_regular_specialization"
+          ],
+          "expected_audit_declarations": 28,
+          "public_modules": [
+            {
+              "destination": "AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroRegularity.lean",
+              "sha256": "b44bcad2fd02afe2c39f130ef610065360a3149f0101a72ddd61c77f67d49cd6",
+              "source": "/tmp/gw_hodge_regularity_v3_20261005/AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroRegularity.lean"
+            },
+            {
+              "destination": "AxiomaticGWTest/GKM/HodgeDegreeZeroRegularity.lean",
+              "sha256": "12931cc76523416a23146a2247077a19380d70fe4caa44745fc2bf9c789c1ea7",
+              "source": "/tmp/gw_hodge_regularity_v3_20261005/AxiomaticGWTest/GKM/HodgeDegreeZeroRegularity.lean"
+            }
+          ],
+          "scope": "Exact complete formal polynomial sums, regular polynomial lifts and zero-character images; no geometric Hodge/GW/CohFT identification."
+        },
+        "source": {
+          "path": "/tmp/gw_hodge_regularity_v3_20261005/public-probe-manifest.json",
+          "sha256": "0450346b3e61478dafaded6fe1103438b3aca30f19e29361416315147e647179"
+        }
+      },
+      "status": "isolated_public_replay_passed",
+      "warning_count": 0
+    },
+    "source": {
+      "path": "/tmp/gw_hodge_regularity_v3_20261005/public-acceptance.json",
+      "sha256": "ba00b50f5d66bb65c7c6f91e56ca4551692de641a721105d22d2430add3afef6"
+    }
+  },
+  "mathematical_effect": {
+    "GW_or_CohFT_identified": false,
+    "existing_public_statements_changed": false,
+    "full_fraction_field_to_QQ_map": false,
+    "geometric_Hodge_or_Mumford_relation": false,
+    "new_axioms": 0,
+    "new_geometric_hypotheses": 0,
+    "new_global_instances": 0,
+    "new_global_simp_rules": 0,
+    "new_result": "Exact regular polynomial lifts and their ordinary formal specializations for the complete fixed P2/F1/Bl2P2 sums.",
+    "new_seeds": 0,
+    "raw_strata_product_identified": false,
+    "scalar_normalization_inputs_unchanged": [
+      "D",
+      "A",
+      "hfund"
+    ]
+  },
+  "milestones": {
+    "GKM_geometric_gate_complete": false,
+    "R4_complete": false,
+    "R5_complete": false,
+    "fixed_applications_changed": false,
+    "full_project_accepted": false,
+    "goal_complete": false
+  },
+  "next_priority": "Connect the source-bound formal polynomials and actual raw ordered strata products to a normalized geometric realization; formal pole cancellation alone does not establish that comparison.",
+  "proof_mechanism": [
+    "Expand every actual nine-entry polynomial before summing all fixed points.",
+    "Prove all six collected coefficient sums separately for each of the three targets.",
+    "Use already proved ordered coefficient identities and nonzero tangent characters.",
+    "Map the explicit polynomial-coefficient lift by embed into the fraction field.",
+    "Apply atZero only to the polynomial lift; retain both independent formal Hodge symbols."
+  ],
+  "pure_controls": [
+    "Exact rational-function cross multiplication checks all six complete coefficient sums for each target.",
+    "The explicit polynomial lifts alone are evaluated at zero torus characters.",
+    "Removing one fixed point fails reciprocal-Euler cancellation.",
+    "Each of 108 coefficient mutations is rejected against actual upstream Lean data.",
+    "A stale helper is rejected before execution by a sentinel test.",
+    "Portable CLI replays byte-identical production/consumer sources and refuses overwrite.",
+    "No Sage or producer import is needed."
+  ],
+  "recorded_at_utc": "2026-10-05T05:55:38.483578+00:00",
+  "regular_lifts": {
+    "OneBlowup": "4*L1^2",
+    "Plane": "C(x^2-x*y+y^2)+3*L1^2+3*L2",
+    "TwoBlowups": "-C(x^2-x*y+y^2)+5*L1^2-3*L2"
+  },
+  "remaining": [
+    "Identify actual raw strata products with geometric Hodge classes and GRR/Chern formulas",
+    "Constant-map virtual Euler and stabilization comparison",
+    "Total equivariant grading and geometric ordinary comparison",
+    "Actual semisimple GKM CohFT, quantum product, R-matrix/translation and gluing/unit laws",
+    "Full-project build/test/lint checkpoint and every fixed research application suite"
+  ],
+  "schema_version": 1,
+  "source_binding_review": {
+    "actual_left_hand_side": "completePolynomial sums all fixed points of each actual FullCoefficientReplay.coefficients tensor.",
+    "generator_check_order": "Whole packet and all named helper/source pins are verified before importing the pinned formula exporter; its inherited pins precede dependent execution.",
+    "packet_pin": "5be60671ddc68304610987123f048a6c010504cf27f3b690cd1e4d4e39227399",
+    "preservation": "All 108 ordered fractions remain in the exact upstream decoder. No point, asymmetric coefficient or ordered pair is discarded before summation.",
+    "producer_or_sage_execution": false,
+    "semantic_binding": "Portable tests regenerate byte-identical c00, full coefficient and ordered formula modules before regularity generation."
+  },
+  "source_pins": {
+    "AxiomaticGW/GKM/EquivariantCoefficients.lean": {
+      "bytes": 6658,
+      "sha256": "a1d14af6c9e9f078acf3f7ae23f1c1632ff1f845fdb54ba323f4d1f0d0f7d848"
+    },
+    "AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroCoefficientFormula.lean": {
+      "bytes": 11491,
+      "sha256": "516d3d3a07e7411fb2f76f427829d329dd96ae9c4b1ea89b6ea150fdb11fc35c"
+    },
+    "AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroCoefficientReplay.lean": {
+      "bytes": 29784,
+      "sha256": "0b2ab996b5e331bef42e1465a4b6c99307a605393f12077d1c950824f0ea48c6"
+    },
+    "AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroFullCoefficientReplay.lean": {
+      "bytes": 22918,
+      "sha256": "648ac71eb16d06ca1b94b29ca2e1972ca2f360ce534fb864230933daa6c29ce8"
+    },
+    "AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroRegularity.lean": {
+      "bytes": 29863,
+      "sha256": "b44bcad2fd02afe2c39f130ef610065360a3149f0101a72ddd61c77f67d49cd6"
+    },
+    "AxiomaticGWTest/GKM/HodgeDegreeZeroCoefficientFormula.lean": {
+      "bytes": 2727,
+      "sha256": "563e9f19677d15ec45616c89d15ee5c5e02fdf6db0178464fb78a55b62fa10aa"
+    },
+    "AxiomaticGWTest/GKM/HodgeDegreeZeroRegularity.lean": {
+      "bytes": 1628,
+      "sha256": "12931cc76523416a23146a2247077a19380d70fe4caa44745fc2bf9c789c1ea7"
+    },
+    "environments/gkm-degree-zero-hodge-strata-factored-candidate.json": {
+      "bytes": 1169158,
+      "sha256": "5be60671ddc68304610987123f048a6c010504cf27f3b690cd1e4d4e39227399"
+    },
+    "scripts/check_gkm_inputs.py": {
+      "bytes": 19638,
+      "sha256": "ba2728773135a47a114b325287a098ece7165e95c6e7b5f8638f06e55c00376e"
+    },
+    "scripts/export_gkm_certificate.py": {
+      "bytes": 17990,
+      "sha256": "54c5052adbb569fb7ed4172ac1600b04a5b31506f8a77c16dface1bbfe10f19c"
+    },
+    "scripts/export_gkm_hodge_c00.py": {
+      "bytes": 16279,
+      "sha256": "40a111318d8fd8c42cfec82157690c60822df1fb23f12adb6062f7b6939d3cbe"
+    },
+    "scripts/export_gkm_hodge_coefficient_formula.py": {
+      "bytes": 12194,
+      "sha256": "53d121bd07b6b266775f96ca01e558d9a220617ecf93d807598de6e7dc0f4e6f"
+    },
+    "scripts/export_gkm_hodge_coefficients.py": {
+      "bytes": 11206,
+      "sha256": "0caee1d95f14791ed90b28b5b9b9a0e9a2501aab63192fdfb5f76231a87a6c47"
+    },
+    "scripts/export_gkm_hodge_regularity.py": {
+      "bytes": 12353,
+      "sha256": "608f55c926e14a3c9797f61bfd7c385f9b42ab8f6797389c5c0485944e3a704f"
+    },
+    "scripts/test_gkm_hodge_regularity.py": {
+      "bytes": 5236,
+      "sha256": "d4a72a8157ade0edf6fce35d19d3f7267b1b25208fb362a5042dd93bc11b3c7e"
+    }
+  },
+  "staging_provenance": {
+    "contents": {
+      "actual_coefficients": 108,
+      "input": {
+        "path": "/private/tmp/gw_hodge_regularity_v3_20261005/environments/gkm-degree-zero-hodge-strata-factored-candidate.json",
+        "sha256": "5be60671ddc68304610987123f048a6c010504cf27f3b690cd1e4d4e39227399"
+      },
+      "lean_executed": false,
+      "producer": {
+        "path": "/tmp/gw_hodge_regularity_v3_20261005/scripts/export_gkm_hodge_regularity.py",
+        "sha256": "608f55c926e14a3c9797f61bfd7c385f9b42ab8f6797389c5c0485944e3a704f"
+      },
+      "sage_executed": false,
+      "scope": "Complete actual formal polynomial sum, explicit polynomial lift and its zero-character image; no geometric Hodge/GW/CohFT identity.",
+      "source": {
+        "path": "/tmp/gw_hodge_regularity_v3_20261005/AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroRegularity.lean",
+        "sha256": "b44bcad2fd02afe2c39f130ef610065360a3149f0101a72ddd61c77f67d49cd6"
+      },
+      "status": "generated_uncompiled",
+      "tests": {
+        "path": "/tmp/gw_hodge_regularity_v3_20261005/AxiomaticGWTest/GKM/HodgeDegreeZeroRegularity.lean",
+        "sha256": "12931cc76523416a23146a2247077a19380d70fe4caa44745fc2bf9c789c1ea7"
+      },
+      "upstream_pins": {
+        "AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroCoefficientFormula.lean": "516d3d3a07e7411fb2f76f427829d329dd96ae9c4b1ea89b6ea150fdb11fc35c",
+        "AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroCoefficientReplay.lean": "0b2ab996b5e331bef42e1465a4b6c99307a605393f12077d1c950824f0ea48c6",
+        "AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroFullCoefficientReplay.lean": "648ac71eb16d06ca1b94b29ca2e1972ca2f360ce534fb864230933daa6c29ce8",
+        "AxiomaticGWTest/GKM/HodgeDegreeZeroCoefficientFormula.lean": "563e9f19677d15ec45616c89d15ee5c5e02fdf6db0178464fb78a55b62fa10aa",
+        "environments/gkm-degree-zero-hodge-strata-factored-candidate.json": "5be60671ddc68304610987123f048a6c010504cf27f3b690cd1e4d4e39227399",
+        "scripts/check_gkm_inputs.py": "ba2728773135a47a114b325287a098ece7165e95c6e7b5f8638f06e55c00376e",
+        "scripts/export_gkm_certificate.py": "54c5052adbb569fb7ed4172ac1600b04a5b31506f8a77c16dface1bbfe10f19c",
+        "scripts/export_gkm_hodge_c00.py": "40a111318d8fd8c42cfec82157690c60822df1fb23f12adb6062f7b6939d3cbe",
+        "scripts/export_gkm_hodge_coefficient_formula.py": "53d121bd07b6b266775f96ca01e558d9a220617ecf93d807598de6e7dc0f4e6f",
+        "scripts/export_gkm_hodge_coefficients.py": "0caee1d95f14791ed90b28b5b9b9a0e9a2501aab63192fdfb5f76231a87a6c47"
+      }
+    },
+    "source": {
+      "path": "/tmp/gw_hodge_regularity_v3_20261005/staging.json",
+      "sha256": "64dd2827df83b80088640674c76f46f3cb0ff15c38182fc9808786c2b68fe79b"
+    }
+  },
+  "status": "actual_complete_fixed_point_formal_polynomial_regularity_verified",
+  "test_boundary": "Python checks source preservation and exact arithmetic; the separate 28-result actual Lean audit covers proof terms. Neither supplies geometric Hodge or GW realization.",
+  "validation": {
+    "actual_integrated_python": {
+      "log": {
+        "path": "/tmp/gw_hodge_regularity_integrated_python_20261005.log",
+        "sha256": "699138ba3bb7a344b1a7892fd563500b80d6f6e38f5c970f029c40752aa5de3c",
+        "text": "........\n----------------------------------------------------------------------\nRan 8 tests in 4.513s\n\nOK\n"
+      },
+      "metadata": {
+        "children_ru_maxrss_raw": 29360128,
+        "children_ru_maxrss_unit": "bytes",
+        "command": [
+          "python3",
+          "scripts/test_gkm_hodge_regularity.py"
+        ],
+        "elapsed_seconds": 4.761,
+        "exit_code": 0,
+        "log": "/tmp/gw_hodge_regularity_integrated_python_20261005.log",
+        "resource_note": "Wrapper child usage may omit descendants on interrupted runs.",
+        "status": "passed"
+      },
+      "metadata_source": {
+        "path": "/tmp/gw_hodge_regularity_integrated_python_20261005.json",
+        "sha256": "793cda9b33a03a54c6ad7a52b12d5b85b8ca8a83c266dd7b2628a5b84eb1a935"
+      },
+      "test_count": 8,
+      "unittest_elapsed_seconds": 4.513
+    },
+    "actual_public_axiom_audit": {
+      "audit_source": {
+        "path": "/tmp/gw_hodge_regularity_integrated_audit_20261005.lean",
+        "sha256": "3bac623dae882c8a953782680763a2693ab0462f891665416bd2ddedd68807b5",
+        "text": "module\n\npublic import AxiomaticGW.GKM.Fixtures.HodgeDegreeZeroRegularity\npublic import AxiomaticGWTest.GKM.HodgeDegreeZeroRegularity\n\n#print axioms AxiomaticGW.GKM.HodgeDegreeZeroRegularity.hodgePolynomial_expansion\n#print axioms AxiomaticGW.GKM.HodgeDegreeZeroRegularity.Plane.sum_constant\n#print axioms AxiomaticGW.GKM.HodgeDegreeZeroRegularity.Plane.sum_lambda1\n#print axioms AxiomaticGW.GKM.HodgeDegreeZeroRegularity.Plane.sum_lambda2\n#print axioms AxiomaticGW.GKM.HodgeDegreeZeroRegularity.Plane.sum_lambda1Squared\n#print axioms AxiomaticGW.GKM.HodgeDegreeZeroRegularity.Plane.sum_mixed\n#print axioms AxiomaticGW.GKM.HodgeDegreeZeroRegularity.Plane.sum_lambda2Squared\n#print axioms AxiomaticGW.GKM.HodgeDegreeZeroRegularity.Plane.map_embed_regularLift\n#print axioms AxiomaticGW.GKM.HodgeDegreeZeroRegularity.Plane.map_atZero_regularLift\n#print axioms AxiomaticGW.GKM.HodgeDegreeZeroRegularity.OneBlowup.sum_constant\n#print axioms AxiomaticGW.GKM.HodgeDegreeZeroRegularity.OneBlowup.sum_lambda1\n#print axioms AxiomaticGW.GKM.HodgeDegreeZeroRegularity.OneBlowup.sum_lambda2\n#print axioms AxiomaticGW.GKM.HodgeDegreeZeroRegularity.OneBlowup.sum_lambda1Squared\n#print axioms AxiomaticGW.GKM.HodgeDegreeZeroRegularity.OneBlowup.sum_mixed\n#print axioms AxiomaticGW.GKM.HodgeDegreeZeroRegularity.OneBlowup.sum_lambda2Squared\n#print axioms AxiomaticGW.GKM.HodgeDegreeZeroRegularity.OneBlowup.map_embed_regularLift\n#print axioms AxiomaticGW.GKM.HodgeDegreeZeroRegularity.OneBlowup.map_atZero_regularLift\n#print axioms AxiomaticGW.GKM.HodgeDegreeZeroRegularity.TwoBlowups.sum_constant\n#print axioms AxiomaticGW.GKM.HodgeDegreeZeroRegularity.TwoBlowups.sum_lambda1\n#print axioms AxiomaticGW.GKM.HodgeDegreeZeroRegularity.TwoBlowups.sum_lambda2\n#print axioms AxiomaticGW.GKM.HodgeDegreeZeroRegularity.TwoBlowups.sum_lambda1Squared\n#print axioms AxiomaticGW.GKM.HodgeDegreeZeroRegularity.TwoBlowups.sum_mixed\n#print axioms AxiomaticGW.GKM.HodgeDegreeZeroRegularity.TwoBlowups.sum_lambda2Squared\n#print axioms AxiomaticGW.GKM.HodgeDegreeZeroRegularity.TwoBlowups.map_embed_regularLift\n#print axioms AxiomaticGW.GKM.HodgeDegreeZeroRegularity.TwoBlowups.map_atZero_regularLift\n#print axioms AxiomaticGWTest.HodgeDegreeZeroRegularity.plane_regular_specialization\n#print axioms AxiomaticGWTest.HodgeDegreeZeroRegularity.oneBlowup_regular_specialization\n#print axioms AxiomaticGWTest.HodgeDegreeZeroRegularity.twoBlowups_regular_specialization\n"
+      },
+      "axioms": {
+        "AxiomaticGW.GKM.HodgeDegreeZeroRegularity.OneBlowup.map_atZero_regularLift": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.GKM.HodgeDegreeZeroRegularity.OneBlowup.map_embed_regularLift": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.GKM.HodgeDegreeZeroRegularity.OneBlowup.sum_constant": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.GKM.HodgeDegreeZeroRegularity.OneBlowup.sum_lambda1": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.GKM.HodgeDegreeZeroRegularity.OneBlowup.sum_lambda1Squared": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.GKM.HodgeDegreeZeroRegularity.OneBlowup.sum_lambda2": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.GKM.HodgeDegreeZeroRegularity.OneBlowup.sum_lambda2Squared": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.GKM.HodgeDegreeZeroRegularity.OneBlowup.sum_mixed": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.GKM.HodgeDegreeZeroRegularity.Plane.map_atZero_regularLift": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.GKM.HodgeDegreeZeroRegularity.Plane.map_embed_regularLift": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.GKM.HodgeDegreeZeroRegularity.Plane.sum_constant": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.GKM.HodgeDegreeZeroRegularity.Plane.sum_lambda1": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.GKM.HodgeDegreeZeroRegularity.Plane.sum_lambda1Squared": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.GKM.HodgeDegreeZeroRegularity.Plane.sum_lambda2": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.GKM.HodgeDegreeZeroRegularity.Plane.sum_lambda2Squared": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.GKM.HodgeDegreeZeroRegularity.Plane.sum_mixed": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.GKM.HodgeDegreeZeroRegularity.TwoBlowups.map_atZero_regularLift": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.GKM.HodgeDegreeZeroRegularity.TwoBlowups.map_embed_regularLift": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.GKM.HodgeDegreeZeroRegularity.TwoBlowups.sum_constant": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.GKM.HodgeDegreeZeroRegularity.TwoBlowups.sum_lambda1": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.GKM.HodgeDegreeZeroRegularity.TwoBlowups.sum_lambda1Squared": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.GKM.HodgeDegreeZeroRegularity.TwoBlowups.sum_lambda2": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.GKM.HodgeDegreeZeroRegularity.TwoBlowups.sum_lambda2Squared": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.GKM.HodgeDegreeZeroRegularity.TwoBlowups.sum_mixed": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.GKM.HodgeDegreeZeroRegularity.hodgePolynomial_expansion": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGWTest.HodgeDegreeZeroRegularity.oneBlowup_regular_specialization": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGWTest.HodgeDegreeZeroRegularity.plane_regular_specialization": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGWTest.HodgeDegreeZeroRegularity.twoBlowups_regular_specialization": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "declaration_count": 28,
+      "log": {
+        "path": "/tmp/gw_hodge_regularity_integrated_axioms_20261005.log",
+        "sha256": "4e3481a4fd5c1f59cf045b931adfa657af8ae0085d9faf4dbc21092272bc3ba1",
+        "text": "'AxiomaticGW.GKM.HodgeDegreeZeroRegularity.hodgePolynomial_expansion' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeZeroRegularity.Plane.sum_constant' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeZeroRegularity.Plane.sum_lambda1' depends on axioms: [propext, Classical.choice, Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeZeroRegularity.Plane.sum_lambda2' depends on axioms: [propext, Classical.choice, Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeZeroRegularity.Plane.sum_lambda1Squared' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeZeroRegularity.Plane.sum_mixed' depends on axioms: [propext, Classical.choice, Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeZeroRegularity.Plane.sum_lambda2Squared' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeZeroRegularity.Plane.map_embed_regularLift' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeZeroRegularity.Plane.map_atZero_regularLift' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeZeroRegularity.OneBlowup.sum_constant' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeZeroRegularity.OneBlowup.sum_lambda1' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeZeroRegularity.OneBlowup.sum_lambda2' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeZeroRegularity.OneBlowup.sum_lambda1Squared' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeZeroRegularity.OneBlowup.sum_mixed' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeZeroRegularity.OneBlowup.sum_lambda2Squared' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeZeroRegularity.OneBlowup.map_embed_regularLift' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeZeroRegularity.OneBlowup.map_atZero_regularLift' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeZeroRegularity.TwoBlowups.sum_constant' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeZeroRegularity.TwoBlowups.sum_lambda1' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeZeroRegularity.TwoBlowups.sum_lambda2' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeZeroRegularity.TwoBlowups.sum_lambda1Squared' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeZeroRegularity.TwoBlowups.sum_mixed' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeZeroRegularity.TwoBlowups.sum_lambda2Squared' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeZeroRegularity.TwoBlowups.map_embed_regularLift' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeZeroRegularity.TwoBlowups.map_atZero_regularLift' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGWTest.HodgeDegreeZeroRegularity.plane_regular_specialization' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGWTest.HodgeDegreeZeroRegularity.oneBlowup_regular_specialization' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGWTest.HodgeDegreeZeroRegularity.twoBlowups_regular_specialization' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n"
+      },
+      "metadata": {
+        "children_ru_maxrss_raw": 1105379328,
+        "children_ru_maxrss_unit": "bytes",
+        "command": [
+          "lake",
+          "env",
+          "lean",
+          "--memory=2048",
+          "/tmp/gw_hodge_regularity_integrated_audit_20261005.lean"
+        ],
+        "elapsed_seconds": 1.305,
+        "exit_code": 0,
+        "log": "/tmp/gw_hodge_regularity_integrated_axioms_20261005.log",
+        "resource_note": "Wrapper child usage may omit descendants on interrupted runs.",
+        "status": "passed"
+      },
+      "metadata_source": {
+        "path": "/tmp/gw_hodge_regularity_integrated_axioms_20261005.json",
+        "sha256": "13d0f195b29c01f32b33f7941cf917d8e7df9b47bc95fef3d0d983ac9b1177b8"
+      }
+    },
+    "actual_targeted_build": {
+      "log": {
+        "path": "/tmp/gw_hodge_regularity_integrated_build_20261005.log",
+        "sha256": "b6751a765761e418a7f6252815c21a812e5b1990d7f677aa0554d635a116609a",
+        "text": "\u2714 [1821/1822] Built AxiomaticGW.GKM.Fixtures.HodgeDegreeZeroRegularity (15s)\n\u2714 [1822/1822] Built AxiomaticGWTest.GKM.HodgeDegreeZeroRegularity (988ms)\nBuild completed successfully (1822 jobs).\n"
+      },
+      "metadata": {
+        "children_ru_maxrss_raw": 1258078208,
+        "children_ru_maxrss_unit": "bytes",
+        "command": [
+          "lake",
+          "build",
+          "AxiomaticGW.GKM.Fixtures.HodgeDegreeZeroRegularity",
+          "AxiomaticGWTest.GKM.HodgeDegreeZeroRegularity"
+        ],
+        "elapsed_seconds": 17.74,
+        "exit_code": 0,
+        "log": "/tmp/gw_hodge_regularity_integrated_build_20261005.log",
+        "resource_note": "Wrapper child usage may omit descendants on interrupted runs.",
+        "status": "passed"
+      },
+      "metadata_source": {
+        "path": "/tmp/gw_hodge_regularity_integrated_build_20261005.json",
+        "sha256": "a20d1fb79cac97a4e393f81a7dd394acaffd7c4c1a1cb4dd6e30bf991491f28e"
+      }
+    }
+  },
+  "zero_character_images": {
+    "OneBlowup": "4*L1^2",
+    "Plane": "3*L1^2+3*L2",
+    "TwoBlowups": "5*L1^2-3*L2"
+  }
+}

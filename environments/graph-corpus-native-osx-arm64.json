@@ -1,0 +1,32 @@
+{
+  "archived_diagnostics": "environments/graph-corpus-native-osx-arm64.log",
+  "archived_output": "environments/graph-corpus-native-osx-arm64.jsonl",
+  "binary_sha256": "dd06d382598e7220d3d7131d2cd2bb44d17ac58d078ea3246ea29a5ecb32dc2f",
+  "case_count": 68,
+  "child_exit_code": 0,
+  "command": "LEAN_STACK_SIZE_KB=2097152 .lake/build/bin/graphCorpus",
+  "diagnostics": "/tmp/gw_graph_corpus_current_20261002.log",
+  "diagnostics_sha256": "81c4eec6f51efe685426dabd59e405b81f020ac5f51246866ee8675b422dc332",
+  "elapsed_seconds": 8601.484,
+  "expected_case_count": 68,
+  "finished_utc": "2026-10-02T12:52:21.191420+00:00",
+  "git_revision": "c6289b432a462612f834721c7be3f306c7211ac0",
+  "output": "/tmp/gw_graph_corpus_current_20261002.jsonl",
+  "output_sha256": "c3b12c00f6a1b4d0a45e420b6828f0786b702ec1a0be29f29fb2d8f7a5e3df09",
+  "purpose": "Single coherent native 68-case corpus, recording the child exit without the unavailable resource timing wrapper",
+  "range": "0 <= g <= 2, 0 <= n <= 6, 0 <= d <= 3, 3 <= 2*g+n",
+  "runner_sha256": "216acbd1150abc380118b363e161c9156782a209e35672916556448a362a6b37",
+  "scope": "Supplemental native execution of the proved finite enumerator; no kernel numeral or geometric relation claim",
+  "source_sha256": {
+    "AxiomaticGW/CohFT/StableCurve.lean": "12aed3192ef91e3220ec059d811bc2042e83c4d697937acaff0fb378cb8ccd78",
+    "AxiomaticGW/Combinatorics/StableArity.lean": "078a0d2cf8d7a31ed89429e6661cbd469fe4e8cc412adc3b55cccd3335724052",
+    "AxiomaticGW/Combinatorics/StableGraph.lean": "8ce882e57be59078d2aff6f58df1a9a280c807805f7eb1d600e47e89bc01ca2a",
+    "AxiomaticGW/Tautological/DecoratedStableGraph.lean": "b4d0408b1cfddafe145230aad311a76577b8feafe6f2ac187cd1524a07247b60",
+    "AxiomaticGW/Tautological/GraphBounds.lean": "69d1b5fe492e41ed328bc3d19797727f1cd1dc3885ba25de2d4fcb6decbcc679",
+    "AxiomaticGW/Tautological/GraphEnumeration.lean": "bbf9e878dc80e94b3e214e68b14e06dd370da516eb850b1c851d767cb7b01c6e",
+    "AxiomaticGW/Tautological/GraphIsomorphisms.lean": "5cd10ac37ec3390443ac5db4ef38bba59327491fa9f4708d13ea883ca258d0bf",
+    "scripts/GraphCorpus.lean": "9316531e728758e88ae8ce5456195b59d7c838c21b11b75cc093eb88ae5c326b"
+  },
+  "started_utc": "2026-10-02T09:53:23.345215+00:00",
+  "status": "passed_native_runtime"
+}

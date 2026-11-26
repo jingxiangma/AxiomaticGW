@@ -1,0 +1,1831 @@
+{
+  "comparison_scope": "Reuses the existing recursive reference normalizer and pinned GKM calibration. Original graph comparisons and numerical low-genus values are shared; they are not independently rechecked here.",
+  "equations": [
+    {
+      "equal_to_full_normalized_projection": true,
+      "family": "BP",
+      "leading_terms": [],
+      "name": "p2_zero_HH1"
+    },
+    {
+      "equal_to_full_normalized_projection": true,
+      "family": "BP",
+      "leading_terms": [
+        {
+          "coefficient": [
+            18,
+            1
+          ],
+          "monomial": [
+            [
+              "descendant",
+              2,
+              [
+                1
+              ],
+              [
+                [
+                  1,
+                  1
+                ],
+                [
+                  2,
+                  0
+                ],
+                [
+                  2,
+                  0
+                ],
+                [
+                  2,
+                  0
+                ]
+              ]
+            ]
+          ]
+        },
+        {
+          "coefficient": [
+            -18,
+            1
+          ],
+          "monomial": [
+            [
+              "descendant",
+              2,
+              [
+                1
+              ],
+              [
+                [
+                  2,
+                  0
+                ],
+                [
+                  2,
+                  0
+                ],
+                [
+                  2,
+                  1
+                ]
+              ]
+            ]
+          ]
+        }
+      ],
+      "name": "p2_line_HHH"
+    },
+    {
+      "equal_to_full_normalized_projection": true,
+      "family": "BP",
+      "leading_terms": [
+        {
+          "coefficient": [
+            -18,
+            1
+          ],
+          "monomial": [
+            [
+              "descendant",
+              2,
+              [
+                1,
+                0
+              ],
+              [
+                [
+                  2,
+                  0
+                ],
+                [
+                  3,
+                  1
+                ]
+              ]
+            ]
+          ]
+        },
+        {
+          "coefficient": [
+            -18,
+            1
+          ],
+          "monomial": [
+            [
+              "descendant",
+              2,
+              [
+                1,
+                0
+              ],
+              [
+                [
+                  2,
+                  1
+                ]
+              ]
+            ]
+          ]
+        }
+      ],
+      "name": "f1_E_EEE"
+    },
+    {
+      "equal_to_full_normalized_projection": true,
+      "family": "BP",
+      "leading_terms": [
+        {
+          "coefficient": [
+            18,
+            1
+          ],
+          "monomial": [
+            [
+              "descendant",
+              2,
+              [
+                0,
+                1
+              ],
+              [
+                [
+                  1,
+                  1
+                ],
+                [
+                  2,
+                  0
+                ],
+                [
+                  2,
+                  0
+                ]
+              ]
+            ]
+          ]
+        },
+        {
+          "coefficient": [
+            -18,
+            1
+          ],
+          "monomial": [
+            [
+              "descendant",
+              2,
+              [
+                0,
+                1
+              ],
+              [
+                [
+                  2,
+                  0
+                ],
+                [
+                  2,
+                  1
+                ]
+              ]
+            ]
+          ]
+        }
+      ],
+      "name": "f1_F_HHH"
+    },
+    {
+      "equal_to_full_normalized_projection": true,
+      "family": "BP",
+      "leading_terms": [
+        {
+          "coefficient": [
+            6,
+            1
+          ],
+          "monomial": [
+            [
+              "descendant",
+              2,
+              [
+                0,
+                1
+              ],
+              [
+                [
+                  2,
+                  0
+                ],
+                [
+                  2,
+                  0
+                ],
+                [
+                  3,
+                  1
+                ]
+              ]
+            ]
+          ]
+        },
+        {
+          "coefficient": [
+            -6,
+            1
+          ],
+          "monomial": [
+            [
+              "descendant",
+              2,
+              [
+                0,
+                1
+              ],
+              [
+                [
+                  2,
+                  0
+                ],
+                [
+                  2,
+                  1
+                ]
+              ]
+            ]
+          ]
+        }
+      ],
+      "name": "f1_F_EHH"
+    },
+    {
+      "equal_to_full_normalized_projection": true,
+      "family": "BP",
+      "leading_terms": [
+        {
+          "coefficient": [
+            -18,
+            1
+          ],
+          "monomial": [
+            [
+              "descendant",
+              2,
+              [
+                1,
+                0,
+                0
+              ],
+              [
+                [
+                  2,
+                  0
+                ],
+                [
+                  3,
+                  1
+                ]
+              ]
+            ]
+          ]
+        },
+        {
+          "coefficient": [
+            -18,
+            1
+          ],
+          "monomial": [
+            [
+              "descendant",
+              2,
+              [
+                1,
+                0,
+                0
+              ],
+              [
+                [
+                  2,
+                  1
+                ]
+              ]
+            ]
+          ]
+        }
+      ],
+      "name": "bl2_E1_E1E1E1"
+    },
+    {
+      "equal_to_full_normalized_projection": true,
+      "family": "BP",
+      "leading_terms": [
+        {
+          "coefficient": [
+            -18,
+            1
+          ],
+          "monomial": [
+            [
+              "descendant",
+              2,
+              [
+                0,
+                1,
+                0
+              ],
+              [
+                [
+                  2,
+                  0
+                ],
+                [
+                  3,
+                  1
+                ]
+              ]
+            ]
+          ]
+        }
+      ],
+      "name": "bl2_E2_E1E1E1"
+    },
+    {
+      "equal_to_full_normalized_projection": true,
+      "family": "BP",
+      "leading_terms": [
+        {
+          "coefficient": [
+            -18,
+            1
+          ],
+          "monomial": [
+            [
+              "descendant",
+              2,
+              [
+                0,
+                1,
+                0
+              ],
+              [
+                [
+                  2,
+                  0
+                ],
+                [
+                  4,
+                  1
+                ]
+              ]
+            ]
+          ]
+        },
+        {
+          "coefficient": [
+            -18,
+            1
+          ],
+          "monomial": [
+            [
+              "descendant",
+              2,
+              [
+                0,
+                1,
+                0
+              ],
+              [
+                [
+                  2,
+                  1
+                ]
+              ]
+            ]
+          ]
+        }
+      ],
+      "name": "bl2_E2_E2E2E2"
+    },
+    {
+      "equal_to_full_normalized_projection": true,
+      "family": "BP",
+      "leading_terms": [
+        {
+          "coefficient": [
+            18,
+            1
+          ],
+          "monomial": [
+            [
+              "descendant",
+              2,
+              [
+                0,
+                0,
+                1
+              ],
+              [
+                [
+                  1,
+                  1
+                ],
+                [
+                  2,
+                  0
+                ]
+              ]
+            ]
+          ]
+        },
+        {
+          "coefficient": [
+            -18,
+            1
+          ],
+          "monomial": [
+            [
+              "descendant",
+              2,
+              [
+                0,
+                0,
+                1
+              ],
+              [
+                [
+                  2,
+                  1
+                ]
+              ]
+            ]
+          ]
+        }
+      ],
+      "name": "bl2_L_HHH"
+    },
+    {
+      "equal_to_full_normalized_projection": true,
+      "family": "BP",
+      "leading_terms": [],
+      "name": "bl2_L_E1E2H"
+    },
+    {
+      "equal_to_full_normalized_projection": true,
+      "family": "L24",
+      "leading_terms": [],
+      "name": "p2_zero_HH11"
+    },
+    {
+      "equal_to_full_normalized_projection": true,
+      "family": "L24",
+      "leading_terms": [],
+      "name": "p2_line_HHHP"
+    },
+    {
+      "equal_to_full_normalized_projection": true,
+      "family": "L24",
+      "leading_terms": [
+        {
+          "coefficient": [
+            -3,
+            1
+          ],
+          "monomial": [
+            [
+              "descendant",
+              2,
+              [
+                1
+              ],
+              [
+                [
+                  2,
+                  0
+                ],
+                [
+                  2,
+                  0
+                ],
+                [
+                  2,
+                  1
+                ]
+              ]
+            ]
+          ]
+        }
+      ],
+      "name": "p2_line_HHHH_p"
+    },
+    {
+      "equal_to_full_normalized_projection": true,
+      "family": "L24",
+      "leading_terms": [],
+      "name": "f1_E_EEE1"
+    },
+    {
+      "equal_to_full_normalized_projection": true,
+      "family": "L24",
+      "leading_terms": [],
+      "name": "f1_F_EHHH"
+    },
+    {
+      "equal_to_full_normalized_projection": true,
+      "family": "L24",
+      "leading_terms": [],
+      "name": "bl2_E1_E1E1E11"
+    },
+    {
+      "equal_to_full_normalized_projection": true,
+      "family": "L24",
+      "leading_terms": [],
+      "name": "bl2_E2_E1E1E11"
+    },
+    {
+      "equal_to_full_normalized_projection": true,
+      "family": "L24",
+      "leading_terms": [],
+      "name": "bl2_L_E1E2H1"
+    },
+    {
+      "equal_to_full_normalized_projection": true,
+      "family": "L24",
+      "leading_terms": [
+        {
+          "coefficient": [
+            -1,
+            1
+          ],
+          "monomial": [
+            [
+              "descendant",
+              2,
+              [
+                1,
+                1,
+                0
+              ],
+              [
+                [
+                  2,
+                  0
+                ],
+                [
+                  2,
+                  1
+                ]
+              ]
+            ]
+          ]
+        }
+      ],
+      "name": "bl2_E1E2_E1E1E2E2"
+    }
+  ],
+  "input_sha256": {
+    "BP": "dddb622b1b3b8b2a5c15c8cf393b429dfd7d5d348b1b8a2198f9b87675cf44e3",
+    "L24": "2fb86e1c36ce730da3d0bb70a94461f0a935aebe2cb08a076b6aa29108dc905d"
+  },
+  "sage": "10.9",
+  "schema_version": 1,
+  "scope": "Finite sampled leading matrices, including absent canonical columns; no uniform pivot or finite-seed sufficiency claim.",
+  "source_sha256": {
+    "AxiomaticGW/Surfaces/GenusTwoNormalizedSupport.lean": "e8ac4a0ed70e1f8cf6c72c266411149224bd0853b1f3a0d7eff1ac519b6a506d",
+    "AxiomaticGW/Surfaces/OnePsiSupport.lean": "93c24f07b140b1db986d81bad1ff6d3c5fe76c97d49fc9d3314e98304a37bd71",
+    "environments/gkm-first-calibration-comparison.json": "e50d50dc43b8be23e15a33234503157cdc2fd293774555dc0339d0d7ee52474c",
+    "scripts/explore_genus_two_leading.py": "62794e5ff3ec1f8c23ccf1e093119a0d24b544c5cc2d95445696cbd755c73f77",
+    "scripts/explore_normalized_surface_bp.py": "ebbef714f1d09e01710687bb88e5b31f20563a41cc2825b683c1f33af27cf8a6",
+    "scripts/explore_surface_bp.py": "e957c8f3f03df60cb38640aeb2718886eec4a2f837a3daaab6f0487271485d42",
+    "scripts/explore_surface_l24.py": "981f6ec72a38bae0cf41cd17918e406b9f5ef2a4577e2b96aeac5e8fbbe79e06"
+  },
+  "systems": [
+    {
+      "additional_columns": [],
+      "blowups": 0,
+      "column_count": 2,
+      "combined_rank": 0,
+      "curve": [
+        0
+      ],
+      "family_ranks": {
+        "BP": 0,
+        "L24": 0
+      },
+      "matrix": [
+        [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            1
+          ]
+        ]
+      ],
+      "missing_rank": 2,
+      "required_columns": [
+        [
+          "descendant",
+          2,
+          [
+            0
+          ],
+          [
+            [
+              1,
+              1
+            ]
+          ]
+        ],
+        [
+          "descendant",
+          2,
+          [
+            0
+          ],
+          [
+            [
+              2,
+              0
+            ]
+          ]
+        ]
+      ],
+      "rows": [
+        {
+          "family": "BP",
+          "name": "p2_zero_HH1"
+        },
+        {
+          "family": "L24",
+          "name": "p2_zero_HH11"
+        }
+      ]
+    },
+    {
+      "additional_columns": [],
+      "blowups": 0,
+      "column_count": 3,
+      "combined_rank": 2,
+      "curve": [
+        1
+      ],
+      "family_ranks": {
+        "BP": 1,
+        "L24": 1
+      },
+      "matrix": [
+        [
+          [
+            18,
+            1
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            -18,
+            1
+          ]
+        ],
+        [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            -3,
+            1
+          ]
+        ]
+      ],
+      "missing_rank": 1,
+      "required_columns": [
+        [
+          "descendant",
+          2,
+          [
+            1
+          ],
+          [
+            [
+              1,
+              1
+            ],
+            [
+              2,
+              0
+            ],
+            [
+              2,
+              0
+            ],
+            [
+              2,
+              0
+            ]
+          ]
+        ],
+        [
+          "descendant",
+          2,
+          [
+            1
+          ],
+          [
+            [
+              2,
+              0
+            ],
+            [
+              2,
+              0
+            ],
+            [
+              2,
+              0
+            ],
+            [
+              2,
+              0
+            ]
+          ]
+        ],
+        [
+          "descendant",
+          2,
+          [
+            1
+          ],
+          [
+            [
+              2,
+              0
+            ],
+            [
+              2,
+              0
+            ],
+            [
+              2,
+              1
+            ]
+          ]
+        ]
+      ],
+      "rows": [
+        {
+          "family": "BP",
+          "name": "p2_line_HHH"
+        },
+        {
+          "family": "L24",
+          "name": "p2_line_HHHP"
+        },
+        {
+          "family": "L24",
+          "name": "p2_line_HHHH_p"
+        }
+      ]
+    },
+    {
+      "additional_columns": [],
+      "blowups": 1,
+      "column_count": 4,
+      "combined_rank": 2,
+      "curve": [
+        0,
+        1
+      ],
+      "family_ranks": {
+        "BP": 2,
+        "L24": 0
+      },
+      "matrix": [
+        [
+          [
+            18,
+            1
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            -18,
+            1
+          ]
+        ],
+        [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            6,
+            1
+          ],
+          [
+            -6,
+            1
+          ]
+        ],
+        [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            1
+          ]
+        ]
+      ],
+      "missing_rank": 2,
+      "required_columns": [
+        [
+          "descendant",
+          2,
+          [
+            0,
+            1
+          ],
+          [
+            [
+              1,
+              1
+            ],
+            [
+              2,
+              0
+            ],
+            [
+              2,
+              0
+            ]
+          ]
+        ],
+        [
+          "descendant",
+          2,
+          [
+            0,
+            1
+          ],
+          [
+            [
+              2,
+              0
+            ],
+            [
+              2,
+              0
+            ],
+            [
+              2,
+              0
+            ]
+          ]
+        ],
+        [
+          "descendant",
+          2,
+          [
+            0,
+            1
+          ],
+          [
+            [
+              2,
+              0
+            ],
+            [
+              2,
+              0
+            ],
+            [
+              3,
+              1
+            ]
+          ]
+        ],
+        [
+          "descendant",
+          2,
+          [
+            0,
+            1
+          ],
+          [
+            [
+              2,
+              0
+            ],
+            [
+              2,
+              1
+            ]
+          ]
+        ]
+      ],
+      "rows": [
+        {
+          "family": "BP",
+          "name": "f1_F_HHH"
+        },
+        {
+          "family": "BP",
+          "name": "f1_F_EHH"
+        },
+        {
+          "family": "L24",
+          "name": "f1_F_EHHH"
+        }
+      ]
+    },
+    {
+      "additional_columns": [],
+      "blowups": 1,
+      "column_count": 4,
+      "combined_rank": 1,
+      "curve": [
+        1,
+        0
+      ],
+      "family_ranks": {
+        "BP": 1,
+        "L24": 0
+      },
+      "matrix": [
+        [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            -18,
+            1
+          ],
+          [
+            -18,
+            1
+          ]
+        ],
+        [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            1
+          ]
+        ]
+      ],
+      "missing_rank": 3,
+      "required_columns": [
+        [
+          "descendant",
+          2,
+          [
+            1,
+            0
+          ],
+          [
+            [
+              1,
+              1
+            ],
+            [
+              2,
+              0
+            ]
+          ]
+        ],
+        [
+          "descendant",
+          2,
+          [
+            1,
+            0
+          ],
+          [
+            [
+              2,
+              0
+            ],
+            [
+              2,
+              0
+            ]
+          ]
+        ],
+        [
+          "descendant",
+          2,
+          [
+            1,
+            0
+          ],
+          [
+            [
+              2,
+              0
+            ],
+            [
+              3,
+              1
+            ]
+          ]
+        ],
+        [
+          "descendant",
+          2,
+          [
+            1,
+            0
+          ],
+          [
+            [
+              2,
+              1
+            ]
+          ]
+        ]
+      ],
+      "rows": [
+        {
+          "family": "BP",
+          "name": "f1_E_EEE"
+        },
+        {
+          "family": "L24",
+          "name": "f1_E_EEE1"
+        }
+      ]
+    },
+    {
+      "additional_columns": [],
+      "blowups": 2,
+      "column_count": 5,
+      "combined_rank": 1,
+      "curve": [
+        0,
+        0,
+        1
+      ],
+      "family_ranks": {
+        "BP": 1,
+        "L24": 0
+      },
+      "matrix": [
+        [
+          [
+            18,
+            1
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            -18,
+            1
+          ]
+        ],
+        [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            1
+          ]
+        ]
+      ],
+      "missing_rank": 4,
+      "required_columns": [
+        [
+          "descendant",
+          2,
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            [
+              1,
+              1
+            ],
+            [
+              2,
+              0
+            ]
+          ]
+        ],
+        [
+          "descendant",
+          2,
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            [
+              2,
+              0
+            ],
+            [
+              2,
+              0
+            ]
+          ]
+        ],
+        [
+          "descendant",
+          2,
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            [
+              2,
+              0
+            ],
+            [
+              3,
+              1
+            ]
+          ]
+        ],
+        [
+          "descendant",
+          2,
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            [
+              2,
+              0
+            ],
+            [
+              4,
+              1
+            ]
+          ]
+        ],
+        [
+          "descendant",
+          2,
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            [
+              2,
+              1
+            ]
+          ]
+        ]
+      ],
+      "rows": [
+        {
+          "family": "BP",
+          "name": "bl2_L_HHH"
+        },
+        {
+          "family": "BP",
+          "name": "bl2_L_E1E2H"
+        },
+        {
+          "family": "L24",
+          "name": "bl2_L_E1E2H1"
+        }
+      ]
+    },
+    {
+      "additional_columns": [],
+      "blowups": 2,
+      "column_count": 5,
+      "combined_rank": 2,
+      "curve": [
+        0,
+        1,
+        0
+      ],
+      "family_ranks": {
+        "BP": 2,
+        "L24": 0
+      },
+      "matrix": [
+        [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            -18,
+            1
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            -18,
+            1
+          ],
+          [
+            -18,
+            1
+          ]
+        ],
+        [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            1
+          ]
+        ]
+      ],
+      "missing_rank": 3,
+      "required_columns": [
+        [
+          "descendant",
+          2,
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            [
+              1,
+              1
+            ],
+            [
+              2,
+              0
+            ]
+          ]
+        ],
+        [
+          "descendant",
+          2,
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            [
+              2,
+              0
+            ],
+            [
+              2,
+              0
+            ]
+          ]
+        ],
+        [
+          "descendant",
+          2,
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            [
+              2,
+              0
+            ],
+            [
+              3,
+              1
+            ]
+          ]
+        ],
+        [
+          "descendant",
+          2,
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            [
+              2,
+              0
+            ],
+            [
+              4,
+              1
+            ]
+          ]
+        ],
+        [
+          "descendant",
+          2,
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            [
+              2,
+              1
+            ]
+          ]
+        ]
+      ],
+      "rows": [
+        {
+          "family": "BP",
+          "name": "bl2_E2_E1E1E1"
+        },
+        {
+          "family": "BP",
+          "name": "bl2_E2_E2E2E2"
+        },
+        {
+          "family": "L24",
+          "name": "bl2_E2_E1E1E11"
+        }
+      ]
+    },
+    {
+      "additional_columns": [],
+      "blowups": 2,
+      "column_count": 5,
+      "combined_rank": 1,
+      "curve": [
+        1,
+        0,
+        0
+      ],
+      "family_ranks": {
+        "BP": 1,
+        "L24": 0
+      },
+      "matrix": [
+        [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            -18,
+            1
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            -18,
+            1
+          ]
+        ],
+        [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            1
+          ]
+        ]
+      ],
+      "missing_rank": 4,
+      "required_columns": [
+        [
+          "descendant",
+          2,
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            [
+              1,
+              1
+            ],
+            [
+              2,
+              0
+            ]
+          ]
+        ],
+        [
+          "descendant",
+          2,
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            [
+              2,
+              0
+            ],
+            [
+              2,
+              0
+            ]
+          ]
+        ],
+        [
+          "descendant",
+          2,
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            [
+              2,
+              0
+            ],
+            [
+              3,
+              1
+            ]
+          ]
+        ],
+        [
+          "descendant",
+          2,
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            [
+              2,
+              0
+            ],
+            [
+              4,
+              1
+            ]
+          ]
+        ],
+        [
+          "descendant",
+          2,
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            [
+              2,
+              1
+            ]
+          ]
+        ]
+      ],
+      "rows": [
+        {
+          "family": "BP",
+          "name": "bl2_E1_E1E1E1"
+        },
+        {
+          "family": "L24",
+          "name": "bl2_E1_E1E1E11"
+        }
+      ]
+    },
+    {
+      "additional_columns": [],
+      "blowups": 2,
+      "column_count": 5,
+      "combined_rank": 1,
+      "curve": [
+        1,
+        1,
+        0
+      ],
+      "family_ranks": {
+        "BP": 0,
+        "L24": 1
+      },
+      "matrix": [
+        [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            -1,
+            1
+          ]
+        ]
+      ],
+      "missing_rank": 4,
+      "required_columns": [
+        [
+          "descendant",
+          2,
+          [
+            1,
+            1,
+            0
+          ],
+          [
+            [
+              1,
+              1
+            ],
+            [
+              2,
+              0
+            ],
+            [
+              2,
+              0
+            ]
+          ]
+        ],
+        [
+          "descendant",
+          2,
+          [
+            1,
+            1,
+            0
+          ],
+          [
+            [
+              2,
+              0
+            ],
+            [
+              2,
+              0
+            ],
+            [
+              2,
+              0
+            ]
+          ]
+        ],
+        [
+          "descendant",
+          2,
+          [
+            1,
+            1,
+            0
+          ],
+          [
+            [
+              2,
+              0
+            ],
+            [
+              2,
+              0
+            ],
+            [
+              3,
+              1
+            ]
+          ]
+        ],
+        [
+          "descendant",
+          2,
+          [
+            1,
+            1,
+            0
+          ],
+          [
+            [
+              2,
+              0
+            ],
+            [
+              2,
+              0
+            ],
+            [
+              4,
+              1
+            ]
+          ]
+        ],
+        [
+          "descendant",
+          2,
+          [
+            1,
+            1,
+            0
+          ],
+          [
+            [
+              2,
+              0
+            ],
+            [
+              2,
+              1
+            ]
+          ]
+        ]
+      ],
+      "rows": [
+        {
+          "family": "L24",
+          "name": "bl2_E1E2_E1E1E2E2"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,4126 @@
+{
+  "boundary": "The raw relation is not a geometric Mumford theorem. Finite Hodge class interpretation is a separate problem from obtaining an actual producer class-valued semisimple CohFT with all-genus gluing and unit laws.",
+  "complete_actual_candidate_identities": {
+    "Bl2P2": "(-Q) \u2022 U + 7 \u2022 W",
+    "F1": "8 \u2022 W",
+    "P2": "Q \u2022 U + 9 \u2022 W",
+    "notation": "Q=x^2-x*y+y^2; U=A(raw00); W=A(raw02)"
+  },
+  "frozen_manifest": {
+    "contents": {
+      "audit_names": [
+        "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso0",
+        "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso1",
+        "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso2",
+        "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso3",
+        "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso4",
+        "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso5",
+        "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso6",
+        "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso7",
+        "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso8",
+        "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso9",
+        "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso10",
+        "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso11",
+        "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso12",
+        "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso13",
+        "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso14",
+        "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso15",
+        "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso16",
+        "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso17",
+        "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso18",
+        "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso19",
+        "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso20",
+        "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso21",
+        "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso22",
+        "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso23",
+        "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso24",
+        "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso25",
+        "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso26",
+        "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso27",
+        "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso28",
+        "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso29",
+        "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso30",
+        "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.columns_1_1_eq",
+        "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.grouped_1_1_eq",
+        "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.raw_1_1_eq_collected",
+        "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.columns_0_2_eq",
+        "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.grouped_0_2_eq",
+        "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.raw_0_2_eq_collected",
+        "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.raw_degree_two_equal",
+        "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.map_raw_degree_two_equal",
+        "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.plane_candidateClass_eq_raw_degree_two",
+        "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.oneBlowup_candidateClass_eq_raw_degree_two",
+        "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.twoBlowups_candidateClass_eq_raw_degree_two",
+        "AxiomaticGWTest.HodgeDegreeTwoRawRelation.exact_relation_under_linear_map",
+        "AxiomaticGWTest.HodgeDegreeTwoRawRelation.common_expression_degree",
+        "AxiomaticGWTest.HodgeDegreeTwoRawRelation.oneBlowup_complete_class",
+        "AxiomaticGWTest.HodgeDegreeTwoRawRelation.blowup_complete_class_difference"
+      ],
+      "data_checks": [
+        "All28/16 original raw occurrences retained",
+        "All16 right-hand actual source columns are the frame",
+        "Every QQ coefficient retained",
+        "All kappa indices, external marking/psi, node incidence and oriented branch psi checked",
+        "Raw pushforward convention unchanged",
+        "Complete existing raw Lean source reproduced byte-for-byte before generation",
+        "All independent helper pins checked before source execution",
+        "Fixed witness only; no search or Sage imported during replay",
+        "No new hypothesis, global simp rule or instance"
+      ],
+      "files": [
+        {
+          "destination": "AxiomaticGW/GKM/Fixtures/HodgeDegreeTwoRawRelation.lean",
+          "sha256": "7b90fce2a06975a21ca2dd88c43032eb6e46387d5cf48fb4a6ab76b2543afb8c",
+          "source": "/private/tmp/gw_hodge_degree_two_v2_20261005/AxiomaticGW/GKM/Fixtures/HodgeDegreeTwoRawRelation.lean"
+        },
+        {
+          "destination": "AxiomaticGWTest/GKM/HodgeDegreeTwoRawRelation.lean",
+          "sha256": "5e45d9ebabd9030a3544f692b9d4e0f2cefa53e941cb994da74c662abaf967f7",
+          "source": "/private/tmp/gw_hodge_degree_two_v2_20261005/AxiomaticGWTest/GKM/HodgeDegreeTwoRawRelation.lean"
+        },
+        {
+          "destination": "scripts/export_admcycles_hodge_degree_two.py",
+          "sha256": "1a3eefa2ade6c90f0e379c18a34dc085aa8d9379b1efd9f165e23975aae12a53",
+          "source": "/private/tmp/gw_hodge_degree_two_v2_20261005/scripts/export_admcycles_hodge_degree_two.py"
+        },
+        {
+          "destination": "scripts/test_admcycles_hodge_degree_two.py",
+          "sha256": "ed7e310720264fd4a859d89d47df10086bbeea03aefd2fef2628a162a2915f7c",
+          "source": "/private/tmp/gw_hodge_degree_two_v2_20261005/scripts/test_admcycles_hodge_degree_two.py"
+        },
+        {
+          "destination": "environments/admcycles-hodge-degree-two-witness.json",
+          "sha256": "a68d166f6b3063ac4295b8104304e0644f2caca47d6f1a869a5d846fb591cef1",
+          "source": "/private/tmp/gw_hodge_degree_two_v2_20261005/environments/admcycles-hodge-degree-two-witness.json"
+        }
+      ],
+      "generation": {
+        "path": "/private/tmp/gw_hodge_degree_two_v2_20261005/generation.json",
+        "sha256": "303a3502f91ef52f63e4f437f0dae72ec2bfcb10161b565e7271366459bbc901"
+      },
+      "integration_notes": "Copy exactly five files after snapshot/pin checks. Do not modify umbrella while the full build is active. Source depends upward on the existing raw assembly module; no root import is needed for targeted validation.",
+      "primitive_review": {
+        "path": "/tmp/gw_hodge_geometric_bridge_review_20261005/review.json",
+        "sha256": "fdd6e66b2b6ed1a57eba01cb5ec390341fa6a6c4568805e7abeea316f607aa86"
+      },
+      "public_acceptance": {
+        "path": "/private/tmp/gw_hodge_degree_two_v2_20261005/public-acceptance.json",
+        "sha256": "00f1df4d23d41b789bc8654d7f70e4e80b3399de4e0b3779d1a358a1622c1fe8"
+      },
+      "public_probe_manifest": {
+        "path": "/private/tmp/gw_hodge_degree_two_v2_20261005/public-probe-manifest.json",
+        "sha256": "e01e34393fbdc29ae209d28ee14dfa4ea8bc8474c1106c4017f35c7d5c2b6352"
+      },
+      "scope": "Raw expression equality and rational-linear consequences only; no geometric Mumford/Hodge/product/GW/CohFT claim.",
+      "status": "frozen_isolated_passed_awaiting_repository_integration"
+    },
+    "source": {
+      "path": "/tmp/gw_hodge_degree_two_v2_20261005/manifest.json",
+      "sha256": "197a9604c8da055192b2e965d290f7e1d54d9eb1d1d61f1670b087218cfc9d54"
+    }
+  },
+  "generator": {
+    "path": "/tmp/gw_hodge_degree_two_record_20261005/record_hodge_degree_two_validation.py",
+    "sha256": "d27ce530d67a8eebae8e76e497da69001a3e4535fc2d4800df6f9176f2d6ea04"
+  },
+  "geometric_primitive_review": {
+    "derivable_from_current_named_primitives": [
+      {
+        "boundary": "Its image is one only with the separately justified fundamental realization law.",
+        "claim": "raw00 equals the fundamental raw stratum",
+        "reference": "AdmcyclesHodgeStrataNormalization.raw_0_0_degree0_eq_fundamental"
+      },
+      {
+        "boundary": "Only linearity and accepted finite raw degree-three isomorphisms; no product/Hodge hypothesis.",
+        "claim": "All 45-component assemblies reduce to the three currently integrated raw regular expressions",
+        "reference": "HodgeDegreeZeroRawAssembly.*_candidateClass_eq_raw_regular"
+      },
+      {
+        "boundary": "Requires the existing LegPsiCompatible generator law and relevant fundamental law.",
+        "claim": "Leg-psi decorations realize as psi multiplication",
+        "reference": "StrataRealization.map_addLegPsi, map_mulLegPsi"
+      },
+      {
+        "boundary": "Requires independently provided unit/relabel/separating/nonseparating/cotangent compatibility. The theorem has no kappa constructor and no boundary self-intersection rule.",
+        "claim": "Undecorated/psi-decorated gluing expressions realize as iterated raw pushforwards",
+        "reference": "GluingExpression.map_stratum_eq_classValue; map_decoratedStratum_eq_classValue"
+      },
+      {
+        "boundary": "Python candidate only at this review stage; 28 raw11 and 16 raw02 occurrences group into 16 identical decorated-graph isomorphism classes with coefficient ratio 2. This is not a geometric Mumford theorem.",
+        "claim": "A new finite raw degree-two identity is available for kernel replay",
+        "reference": "degree-two-candidate-comparison.json"
+      }
+    ],
+    "exact_degree_one_source": {
+      "formula": "raw01 = (-1/12)*external_psi + (1/12)*kappa1 + (1/24)*raw_nonseparating + (1/24)*raw_separating_mark_on_left + (1/24)*raw_separating_mark_on_right",
+      "normalization": "Raw ordered-node gluing pushforwards; no further automorphism division. The two separating terms are graph-isomorphic but both original occurrences are retained.",
+      "occurrences": [
+        {
+          "coefficient": [
+            -1,
+            12
+          ],
+          "graph": {
+            "admcycles_halfedge_labels": [],
+            "codimension": 1,
+            "endpoints": [],
+            "genus": [
+              2
+            ],
+            "half_psi": [],
+            "kappa": [
+              [
+                0,
+                0,
+                0,
+                0
+              ]
+            ],
+            "leg_psi": [
+              1
+            ],
+            "leg_vertices": [
+              0
+            ]
+          }
+        },
+        {
+          "coefficient": [
+            1,
+            12
+          ],
+          "graph": {
+            "admcycles_halfedge_labels": [],
+            "codimension": 1,
+            "endpoints": [],
+            "genus": [
+              2
+            ],
+            "half_psi": [],
+            "kappa": [
+              [
+                1,
+                0,
+                0,
+                0
+              ]
+            ],
+            "leg_psi": [
+              0
+            ],
+            "leg_vertices": [
+              0
+            ]
+          }
+        },
+        {
+          "coefficient": [
+            1,
+            24
+          ],
+          "graph": {
+            "admcycles_halfedge_labels": [
+              [
+                2,
+                3
+              ]
+            ],
+            "codimension": 1,
+            "endpoints": [
+              [
+                0,
+                0
+              ]
+            ],
+            "genus": [
+              1
+            ],
+            "half_psi": [
+              [
+                0,
+                0
+              ]
+            ],
+            "kappa": [
+              [
+                0,
+                0,
+                0,
+                0
+              ]
+            ],
+            "leg_psi": [
+              0
+            ],
+            "leg_vertices": [
+              0
+            ]
+          }
+        },
+        {
+          "coefficient": [
+            1,
+            24
+          ],
+          "graph": {
+            "admcycles_halfedge_labels": [
+              [
+                2,
+                3
+              ]
+            ],
+            "codimension": 1,
+            "endpoints": [
+              [
+                0,
+                1
+              ]
+            ],
+            "genus": [
+              1,
+              1
+            ],
+            "half_psi": [
+              [
+                0,
+                0
+              ]
+            ],
+            "kappa": [
+              [
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                0,
+                0
+              ]
+            ],
+            "leg_psi": [
+              0
+            ],
+            "leg_vertices": [
+              0
+            ]
+          }
+        },
+        {
+          "coefficient": [
+            1,
+            24
+          ],
+          "graph": {
+            "admcycles_halfedge_labels": [
+              [
+                2,
+                3
+              ]
+            ],
+            "codimension": 1,
+            "endpoints": [
+              [
+                0,
+                1
+              ]
+            ],
+            "genus": [
+              1,
+              1
+            ],
+            "half_psi": [
+              [
+                0,
+                0
+              ]
+            ],
+            "kappa": [
+              [
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                0,
+                0
+              ]
+            ],
+            "leg_psi": [
+              0
+            ],
+            "leg_vertices": [
+              1
+            ]
+          }
+        }
+      ]
+    },
+    "findings": [
+      {
+        "correction": "Retain current API and its honest scope. Use the existing independently named compatibility laws for unit/psi/gluing; do not infer geometric lambda classes from the object name.",
+        "declaration": "StrataRealization.map/map_basis_degree",
+        "evidence": "Only a rational linear map and basis homogeneity are required; even the zero map is allowed. Unit, psi, kappa, gluing and multiplicativity are not consequences of this type.",
+        "kind": "explicit_missing_geometric_input_not_detected_unsoundness",
+        "severity": "high"
+      },
+      {
+        "correction": "Introduce only the concrete missing raw forgetful/kappa operation and its independently justified geometric pushforward compatibility before identifying the raw kappa terms. A future finite product certificate must account for boundary common refinements and normal excess factors, not accept the desired product equality as its own proof.",
+        "declaration": "PsiClasses.kappa; DecoratedGluing; CertifiedStrataProduct",
+        "evidence": "Kappa is already defined as forgetful pushforward of an extra psi power. DecoratedGluing explicitly adds no kappa decorations. Search found no raw kappa realization compatibility or general forgetful-pushforward operation on raw strata. CertifiedStrataProduct is an uninstantiated algebraic contract, with no geometric excess-intersection realization.",
+        "kind": "missing_realization_operation",
+        "severity": "high"
+      },
+      {
+        "correction": "A true identification of the remaining positive raw class requires independent Hodge/GRR and product-realization input, followed by a derivation from those inputs; declaring map(raw02)=lambda2 as a field merely restates the open gate.",
+        "declaration": "StableCurveCohomology and GKM Hodge fixtures",
+        "evidence": "No Hodge bundle or Chern-character/GRR construction occurs in the reviewed primitives. Formal Hodge-polynomial coefficients and raw products are source-bound arithmetic data only.",
+        "kind": "missing_hodge_geometry",
+        "severity": "high"
+      },
+      {
+        "correction": "Obtain or construct actual class-valued Omega data with source-bound gluing/forgetting laws, and identify its degree-zero virtual Euler contribution independently. Finite descendants and TFT classification do not supply these laws.",
+        "declaration": "gkm_localization hodge_integral/stable_map; StableMapStabilization; StateSpaceTransport",
+        "evidence": "The current producer evaluates Hodge/psi expressions numerically. The held pre-integration compact packet is a candidate, not an exported all-genus class-valued CohFT. State-space transport consumes an existing CohFT; StableMapStabilization consumes pushforward and descendant-realization laws. Neither constructs the virtual constant-map class.",
+        "kind": "missing_class_valued_producer_or_geometric_GW_bridge",
+        "severity": "high"
+      }
+    ],
+    "lean_executed": false,
+    "overall_boundary": "No defect was found in the scoped accepted raw assembly claims. The high findings describe explicit missing bridges, not hidden accepted geometric results. The complete geometric CohFT and research reconstruction gates remain open.",
+    "primary_sources": [
+      {
+        "relevance": "Gives the Hodge Chern-character GRR expression and vanishing of positive even Chern characters. Its unpointed kappa convention must be converted before comparing with the packet log-kappa convention. No theorem from this paper is currently accepted merely by citation.",
+        "title": "Mumford, Towards an Enumerative Geometry of the Moduli Space of Curves",
+        "url": "https://www.dam.brown.edu/people/mumford/alg_geom/papers/1983b--EnumGeomModuli-NC.pdf",
+        "verified_location": "Section 5, formula (5.2), Corollary (5.3), formula (5.4), printed pages 304\u2013307"
+      },
+      {
+        "relevance": "Identifies the contracted-vertex obstruction contribution with the dual Hodge bundle tensored by tangent weights in the projective-space calculation. This supports the ordered formal Euler-factor convention, not a Lean virtual localization proof or an automatic extension to the two blowups.",
+        "title": "Graber\u2013Pandharipande, Localization of virtual classes",
+        "url": "https://arxiv.org/pdf/alg-geom/9708001",
+        "verified_location": "Section 4, PDF pages 16\u201318"
+      },
+      {
+        "relevance": "Documents raw boundary pushforwards and illustrates the negative node-psi excess terms. The software output is candidate data until finite operations and their geometric interpretation are checked.",
+        "title": "Delecroix\u2013Schmitt\u2013van Zelm, admcycles \u2014 a Sage package for calculations in the tautological ring of the moduli space of stable curves",
+        "url": "https://arxiv.org/pdf/2002.01709",
+        "verified_location": "Section 3.5, PDF pages 9\u201310, boundary pushforward and self-intersection example"
+      }
+    ],
+    "recommended_work_packages": [
+      {
+        "Q": "x^2-x*y+y^2",
+        "consequences": [
+          "Plane.candidateClass A = Q \u2022 A.map raw00 + 9 \u2022 A.map raw02",
+          "OneBlowup.candidateClass A = 8 \u2022 A.map raw02",
+          "TwoBlowups.candidateClass A = -Q \u2022 A.map raw00 + 7 \u2022 A.map raw02"
+        ],
+        "method": "Use all 44 source occurrences, explicit finite vertex/edge/branch bijections, GraphIsomorphismHint.check_sound, and RelationCertificate.interpret with exact rational grouping. Reuse AdmcyclesHodgeStrataIsomorphisms.interpret_grouped. No new geometric inputs.",
+        "name": "Exact degree-two raw replay",
+        "priority": 1,
+        "theorem": "raw_1_1_degree2 = (2 : Q) \u2022 raw_0_2_degree2",
+        "validation": "Source-bound generation and corruption tests first; bounded public Lean compilation and all public axiom checks only when the parent grants the memory lane."
+      },
+      {
+        "already_available": "Exact graph binding, psi/gluing realization lemmas, linearity, projection formulas, psi naturality, and the geometric definition of kappa.",
+        "minimality": "Only the actual degree-one square is needed after the new degree-two replay. Do not build a global strata algebra unless this finite computation genuinely needs it.",
+        "name": "Concrete raw degree-one realization and its finite square",
+        "new_input_or_implementation": "A raw forgetful-pushforward/kappa realization law at the actual required slots; finite common-refinement/excess-intersection formulas for products of these five terms. These laws must be independently justified or honestly treated as new geometric primitives; the target lambda/product equality cannot itself be the input.",
+        "priority": 2,
+        "theorem_target": "A.map raw01 = (kappa1 - psi_external)/12 + raw_nonseparating_push(1)/24 + (raw_separating_left(1)+raw_separating_right(1))/24; then A.map raw11 = (A.map raw01)^2 via the actual finite product expansion."
+      },
+      {
+        "missing": "Hodge/Chern/GRR semantics and virtual obstruction/Euler identification are not present in current primitives. General CohFT compatibility additionally requires all-genus class-valued data and derived gluing/forgetting laws.",
+        "name": "Identify the remaining degree-two class and the constant-map contribution",
+        "priority": 3,
+        "scope": "Even completion of this genus-two unit class comparison alone would not establish the full positive-degree semisimple CohFT or R4/R5.",
+        "theorem_target": "Identify A.map raw01 with c1(E) using the pointed GRR formula with the checked log-kappa and ordered-node conventions; derive A.map raw02=c2(E) from the finite square plus independently established ch2(E)=0 and the Chern-character/Chern-class identity. Then compare the fixed tangent Euler formula with an actual stabilization pushforward of the virtual constant-map class."
+      }
+    ],
+    "repository_source_edits": false,
+    "sage_executed": false,
+    "scope": "Exact genus-two one-marking raw00/raw11/raw02 and the immediate semantic boundary to the fixed GKM degree-zero candidates; not a comprehensive project review.",
+    "source_pins": [
+      {
+        "path": "/Users/jma/Documents/formalization/axiomatic_gw/AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroRawAssembly.lean",
+        "sha256": "a3d9c5ef4e56e42f246add66295653b2698974c9f16874e6a3b15bc5a9275e8b"
+      },
+      {
+        "path": "/Users/jma/Documents/formalization/axiomatic_gw/AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroRegularity.lean",
+        "sha256": "b44bcad2fd02afe2c39f130ef610065360a3149f0101a72ddd61c77f67d49cd6"
+      },
+      {
+        "path": "/Users/jma/Documents/formalization/axiomatic_gw/AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroCoefficientFormula.lean",
+        "sha256": "516d3d3a07e7411fb2f76f427829d329dd96ae9c4b1ea89b6ea150fdb11fc35c"
+      },
+      {
+        "path": "/Users/jma/Documents/formalization/axiomatic_gw/AxiomaticGW/GKM/Fixtures/AdmcyclesHodgeStrataCandidates.lean",
+        "sha256": "244eaf08f741057b92113ee4b0c4a48b2185b55350473bc28286460ea07b651c"
+      },
+      {
+        "path": "/Users/jma/Documents/formalization/axiomatic_gw/AxiomaticGW/GKM/Fixtures/AdmcyclesHodgeStrataIsomorphisms.lean",
+        "sha256": "ddb7e9cfb94ced658a96883782aed3072ae8d7fe1763ff4390e021dcafe3f26a"
+      },
+      {
+        "path": "/Users/jma/Documents/formalization/axiomatic_gw/AxiomaticGW/GKM/AdmcyclesHodgeStrataNormalization.lean",
+        "sha256": "d36565c19b0198d833caddfc755ba431660d2f84752fdd760cbcc38f37734ce3"
+      },
+      {
+        "path": "/Users/jma/Documents/formalization/axiomatic_gw/AxiomaticGW/Tautological/StrataRealization.lean",
+        "sha256": "ddf59186e35a331415f9cbb8713dbcfda209fbf9bf5530123a1ab87964cd308c"
+      },
+      {
+        "path": "/Users/jma/Documents/formalization/axiomatic_gw/AxiomaticGW/Tautological/StrataAlgebra.lean",
+        "sha256": "829732e328b4d4461cff4d106e2461fd72396a68b3882f8eae53c4d4e63f2d09"
+      },
+      {
+        "path": "/Users/jma/Documents/formalization/axiomatic_gw/AxiomaticGW/Tautological/LegPsiRealization.lean",
+        "sha256": "e8d6bff52045adf408f2d4439b5df73b44328a88d1f51d1807ff70da58a6b95a"
+      },
+      {
+        "path": "/Users/jma/Documents/formalization/axiomatic_gw/AxiomaticGW/Tautological/SeparatingRealization.lean",
+        "sha256": "e5ae34a58171024a17780469beafe6bd541e282ffc8537c562415e798659bfd0"
+      },
+      {
+        "path": "/Users/jma/Documents/formalization/axiomatic_gw/AxiomaticGW/Tautological/NonseparatingRealization.lean",
+        "sha256": "17d0072a0de621e5164ea39dfc46498b6d11388b0f5f278737a4f5baf1d89fda"
+      },
+      {
+        "path": "/Users/jma/Documents/formalization/axiomatic_gw/AxiomaticGW/Tautological/DecoratedGluing.lean",
+        "sha256": "bc6091840bc2deddadf788e8d3f56a7c0caaaac754a9b687cc132a7fbd39e276"
+      },
+      {
+        "path": "/Users/jma/Documents/formalization/axiomatic_gw/AxiomaticGW/Tautological/DecoratedGluingRealization.lean",
+        "sha256": "4a7835ce0f3fc828ea47142698ef2bc5e98cdcdcb9287da0cb4ef773951c8d3b"
+      },
+      {
+        "path": "/Users/jma/Documents/formalization/axiomatic_gw/AxiomaticGW/Tautological/GluingExpression.lean",
+        "sha256": "36c5e908f9d13273c739102d0d7c21363776db58d92e5fd49a363661fedc0db5"
+      },
+      {
+        "path": "/Users/jma/Documents/formalization/axiomatic_gw/AxiomaticGW/Tautological/GluingForgetful.lean",
+        "sha256": "9a1fb2b1be6198912dfccfa1dcd5b02f7aa9c2e406576443520ad670dd217b53"
+      },
+      {
+        "path": "/Users/jma/Documents/formalization/axiomatic_gw/AxiomaticGW/CohFT/Tautological.lean",
+        "sha256": "09a580ac3e481df0ba90bc30637e6bed2741dfc0e6599d8463a48b42861635ed"
+      },
+      {
+        "path": "/Users/jma/Documents/formalization/axiomatic_gw/AxiomaticGW/CohFT/GluingForgetful.lean",
+        "sha256": "702223851ca54f654842ef12eb14bb7d15ce7e0659e95a8ff71ad79653727e79"
+      },
+      {
+        "path": "/Users/jma/Documents/formalization/axiomatic_gw/AxiomaticGW/CohFT/NonseparatingPushforward.lean",
+        "sha256": "6f5b1137ee901aa7b3a7db1d6a919023cd78fe2b9ff4c22cb709fc3e8d910121"
+      },
+      {
+        "path": "/Users/jma/Documents/formalization/axiomatic_gw/AxiomaticGW/CohFT/SeparatingPushforward.lean",
+        "sha256": "7ef46b53841cad087888a34bfbcd0a089488a8f46f0d9048576c43e2c83c5000"
+      },
+      {
+        "path": "/Users/jma/Documents/formalization/axiomatic_gw/AxiomaticGW/CohFT/StableCurve.lean",
+        "sha256": "3102914691877889a1a67e76d8dd17897ba6474e2837247d8d9c9241d269a674"
+      },
+      {
+        "path": "/Users/jma/Documents/formalization/axiomatic_gw/AxiomaticGW/CohFT/Basic.lean",
+        "sha256": "8e42e96505c84bea43ada16ddc0d54644c0f4416a56db03a5baf4aace2117b66"
+      },
+      {
+        "path": "/Users/jma/Documents/formalization/axiomatic_gw/AxiomaticGW/CohFT/Classification.lean",
+        "sha256": "3b59eea9ebc91e9c85846f833c303a9959070da8e7d6b0d60c264fabb150d097"
+      },
+      {
+        "path": "/Users/jma/Documents/formalization/axiomatic_gw/AxiomaticGW/CohFT/Constant.lean",
+        "sha256": "2e88098c585d69f20c1ed77691298ee48c994cb3b13ab53dc7fb138677690721"
+      },
+      {
+        "path": "/Users/jma/Documents/formalization/axiomatic_gw/AxiomaticGW/CohFT/Transport.lean",
+        "sha256": "d414144b8b147bccc6e616d9de15a6ad1cee88bdcfd270676e7a6e1e438d11bf"
+      },
+      {
+        "path": "/Users/jma/Documents/formalization/axiomatic_gw/AxiomaticGW/GKM/StateSpaceTransport.lean",
+        "sha256": "6f0f5d3f7876ddcf9c99bd418cc9db2a5b8a63c7c9dd2435b38c8489f2fddcb8"
+      },
+      {
+        "path": "/Users/jma/Documents/formalization/axiomatic_gw/AxiomaticGW/GKM/FixedPointTFT.lean",
+        "sha256": "91ce8bc7ea085e2eb33596b44fb6e2ef5451cd8129ce79cdf28f44b60c2397e1"
+      },
+      {
+        "path": "/Users/jma/Documents/formalization/axiomatic_gw/AxiomaticGW/GKM/EquivariantCoefficients.lean",
+        "sha256": "a1d14af6c9e9f078acf3f7ae23f1c1632ff1f845fdb54ba323f4d1f0d0f7d848"
+      },
+      {
+        "path": "/Users/jma/Documents/formalization/axiomatic_gw/AxiomaticGW/Geometry/StableMapIntersection.lean",
+        "sha256": "52e9316e14684b31547fcf64ed7c0615b1689a50e9979d93f3b696a5c7d98a84"
+      },
+      {
+        "path": "/Users/jma/Documents/formalization/axiomatic_gw/environments/admcycles-hodge-strata-candidates.json",
+        "sha256": "1ec7e5df068bd9edbe896dc5bf6f20f59b0e42e81896d2e4364f11efc0c6ec32"
+      },
+      {
+        "path": "/Users/jma/Documents/formalization/axiomatic_gw/environments/gkm-degree-zero-hodge-strata-factored-candidate.json",
+        "sha256": "5be60671ddc68304610987123f048a6c010504cf27f3b690cd1e4d4e39227399"
+      },
+      {
+        "path": "/opt/homebrew/Caskroom/miniforge/base/envs/axiomatic-gw-sage/lib/python3.12/site-packages/admcycles/tautological_ring.py",
+        "sha256": "c9cf9b46fa8c7f2207d6d0ebc3f3565518f6f29d324bb6b280c1626a772bbd12"
+      },
+      {
+        "path": "/opt/homebrew/Caskroom/miniforge/base/envs/axiomatic-gw-sage/lib/python3.12/site-packages/admcycles/admcycles.py",
+        "sha256": "19e9e77c58299b387abadab76f2e1f1b1b2b63808f3dbbd0e44499a930db9a1b"
+      },
+      {
+        "path": "/Users/jma/Documents/gitlab/gkm_localisation/gkm_localization/stable_map.py",
+        "sha256": "4e88e18487577642f86bcf1d8762c8ac117d4bfe4329c095bbb6fdd38258c53a"
+      },
+      {
+        "path": "/Users/jma/Documents/gitlab/gkm_localisation/gkm_localization/hodge_integral.py",
+        "sha256": "862d4f8c9b4915b96ce9f62c789f079ea82c8fecdb43d5f1c407a00ba424d043"
+      }
+    ],
+    "status": "targeted_read_only_source_review",
+    "validation": {
+      "candidate_comparison": {
+        "path": "/private/tmp/gw_hodge_geometric_bridge_review_20261005/degree-two-candidate-comparison.json",
+        "sha256": "5f82516daf869efe451db0523b28f181f7309e13f548812954415b23100f5727"
+      },
+      "comparison_script": {
+        "path": "/private/tmp/gw_hodge_geometric_bridge_review_20261005/check_degree_two.py",
+        "sha256": "7577cd3cf70c519945c492f169419a442bb7535addde3326e01de17f24e2e252"
+      },
+      "performed": "Read-only project searches, installed producer/admcycles source inspection, primary-source PDF text verification, stdlib exact rational graph-isomorphism comparison. No repository changes or Lean/Sage builds."
+    }
+  },
+  "integration": {
+    "contents": {
+      "actual_umbrella_sha256": "05eb33874f1228688efea0cc16796454c9a61994bb29baeae3bd4cda40c939d5",
+      "files": [
+        {
+          "destination": "AxiomaticGW/GKM/Fixtures/HodgeDegreeTwoRawRelation.lean",
+          "sha256": "7b90fce2a06975a21ca2dd88c43032eb6e46387d5cf48fb4a6ab76b2543afb8c"
+        },
+        {
+          "destination": "AxiomaticGWTest/GKM/HodgeDegreeTwoRawRelation.lean",
+          "sha256": "5e45d9ebabd9030a3544f692b9d4e0f2cefa53e941cb994da74c662abaf967f7"
+        },
+        {
+          "destination": "scripts/export_admcycles_hodge_degree_two.py",
+          "sha256": "1a3eefa2ade6c90f0e379c18a34dc085aa8d9379b1efd9f165e23975aae12a53"
+        },
+        {
+          "destination": "scripts/test_admcycles_hodge_degree_two.py",
+          "sha256": "ed7e310720264fd4a859d89d47df10086bbeea03aefd2fef2628a162a2915f7c"
+        },
+        {
+          "destination": "environments/admcycles-hodge-degree-two-witness.json",
+          "sha256": "a68d166f6b3063ac4295b8104304e0644f2caca47d6f1a869a5d846fb591cef1"
+        }
+      ],
+      "manifest": {
+        "path": "/private/tmp/gw_hodge_degree_two_v2_20261005/manifest.json",
+        "sha256": "197a9604c8da055192b2e965d290f7e1d54d9eb1d1d61f1670b087218cfc9d54"
+      },
+      "prior_evidence": {
+        "path": "/private/tmp/gw_complete_cache_preintegration_20261005.json",
+        "sha256": "bc9ca506dce853cbca13622e1201c0045cb1a916868f0de36d01cc6fca877960"
+      },
+      "record_time_boundary": "This record is made after source copy; it does not invent a pre-copy file snapshot.",
+      "status": "exact_five_file_copy_verified_umbrella_unchanged",
+      "umbrella": {
+        "path": "/private/tmp/gw_hodge_degree_two_unchanged_umbrella_20261005.lean",
+        "sha256": "05eb33874f1228688efea0cc16796454c9a61994bb29baeae3bd4cda40c939d5"
+      },
+      "umbrella_evidence": "Exact equality of current git diff -- AxiomaticGW.lean and that file section of the previously captured git_diff; thus the copied umbrella bytes describe the unchanged earlier state.",
+      "umbrella_export_added": false
+    },
+    "source": {
+      "path": "/tmp/gw_hodge_degree_two_integration_20261005.json",
+      "sha256": "3638d5144500ae38b3aae39f079642c8e626ead66ebf322cbbaeccc3a5ce3604"
+    }
+  },
+  "mathematical_effect": {
+    "D_or_hfund_required": false,
+    "existing_public_statements_changed": false,
+    "identity_in_free_strata_module": true,
+    "new_axioms": 0,
+    "new_geometric_or_multiplicative_premises": 0,
+    "new_global_instances": 0,
+    "new_global_simp_rules": 0,
+    "new_realization_inputs": 0,
+    "new_seeds": 0,
+    "raw02_identified_as_geometric_lambda2": false,
+    "raw11_identified_as_geometric_square": false
+  },
+  "milestones": {
+    "GKM_geometric_gate_complete": false,
+    "R4_complete": false,
+    "R5_complete": false,
+    "full_project_accepted": false,
+    "goal_complete": false
+  },
+  "next_geometric_work": "Identify the actual degree-one raw expression via existing psi/gluing primitives plus independently justified raw-kappa/forgetful-pushforward compatibility; check its finite square using boundary excess/common refinements. Hodge GRR/Chern and constant-map virtual Euler identification remain independent inputs to justify, not fields asserting the requested conclusion.",
+  "pending_umbrella": {
+    "direct_public_import_validation_complete": true,
+    "earlier_and_current_exact_umbrella_diff": "diff --git a/AxiomaticGW.lean b/AxiomaticGW.lean\nindex b4d0b0d..fe79d89 100644\n--- a/AxiomaticGW.lean\n+++ b/AxiomaticGW.lean\n@@ -8,27 +8,225 @@ module\n public import AxiomaticGW.Frobenius.Examples\n public import AxiomaticGW.CohFT.Ancestors\n public import AxiomaticGW.CohFT.Classification\n+public import AxiomaticGW.CohFT.GluingForgetful\n+public import AxiomaticGW.CohFT.NonseparatingPushforward\n+public import AxiomaticGW.CohFT.PsiGluing\n+public import AxiomaticGW.CohFT.SeparatingPushforward\n+public import AxiomaticGW.CohFT.Transport\n public import AxiomaticGW.Combinatorics.StableGraph\n+public import AxiomaticGW.GKM.CurveConventionCertificate\n+public import AxiomaticGW.GKM.Fixtures.AdmcyclesHodgeStrataCandidates\n+public import AxiomaticGW.GKM.Fixtures.AdmcyclesHodgeStrataIsomorphisms\n+public import AxiomaticGW.GKM.AdmcyclesHodgeStrataNormalization\n+public import AxiomaticGW.GKM.Fixtures.HodgeDegreeZeroCoefficientReplay\n+public import AxiomaticGW.GKM.Fixtures.HodgeDegreeZeroFullCoefficientReplay\n+public import AxiomaticGW.GKM.Fixtures.HodgeDegreeZeroCoefficientFormula\n+public import AxiomaticGW.GKM.Fixtures.HodgeDegreeZeroRegularity\n+public import AxiomaticGW.GKM.Fixtures.CurveReplay\n+public import AxiomaticGW.GKM.Fixtures.GenusTwoDegreeZeroReplay\n+public import AxiomaticGW.GKM.Fixtures.PlaneGenusTwoLineReplay\n+public import AxiomaticGW.GKM.Fixtures.SurfaceReplay\n+public import AxiomaticGW.GKM.FixedPointAlgebra\n+public import AxiomaticGW.GKM.FixedPointTFT\n+public import AxiomaticGW.GKM.StateSpaceCertificate\n+public import AxiomaticGW.GKM.StateSpaceTransport\n public import AxiomaticGW.GW.Constant\n public import AxiomaticGW.GW.BigQuantumProduct\n+public import AxiomaticGW.GW.NonseparatingBoundary\n+public import AxiomaticGW.GW.SeparatingBoundary\n public import AxiomaticGW.GW.Descendants.FullPotential\n+public import AxiomaticGW.GW.Descendants.FullDivisor\n public import AxiomaticGW.GW.Descendants.Stabilization\n public import AxiomaticGW.GW.Descendants.Equations\n public import AxiomaticGW.Geometry.VirtualGWPackage\n+public import AxiomaticGW.Geometry.StableMapIntersection\n+public import AxiomaticGW.Geometry.EvaluationSupport\n+public import AxiomaticGW.Geometry.RationalTailComparison\n+public import AxiomaticGW.GW.Descendants.CalibrationRecursion\n+public import AxiomaticGW.Surfaces.CalibrationRecursion\n+public import AxiomaticGW.Surfaces.MixedAncestorReduction\n+public import AxiomaticGW.Surfaces.ThreePointDescendants\n+public import AxiomaticGW.Surfaces.AncestorMarkings\n+public import AxiomaticGW.Surfaces.GluingDegree\n+public import AxiomaticGW.Surfaces.GenusZeroAncestors\n+public import AxiomaticGW.Surfaces.GenusZeroDescendants\n+public import AxiomaticGW.Surfaces.GenusZeroFullDescendants\n+public import AxiomaticGW.Surfaces.GenusZeroExceptionalPoints\n+public import AxiomaticGW.Surfaces.GenusOneAncestors\n+public import AxiomaticGW.Surfaces.LowGenusAncestorDimension\n+public import AxiomaticGW.Surfaces.GenusOneDescendants\n+public import AxiomaticGW.Surfaces.GenusTwoOnePointAncestors\n+public import AxiomaticGW.Surfaces.GenusTwoDegreeZeroDescendants\n+public import AxiomaticGW.Surfaces.GenusTwoAncestors\n+public import AxiomaticGW.Surfaces.GenusTwoCachedAncestors\n+public import AxiomaticGW.Surfaces.GenusTwoCachedComponents\n+public import AxiomaticGW.Surfaces.BelorousskiPandharipande\n+public import AxiomaticGW.Surfaces.L24\n+public import AxiomaticGW.Surfaces.GenusTwoNormalizedL24\n+public import AxiomaticGW.Surfaces.GenusTwoNormalizedSupport\n+public import AxiomaticGW.Surfaces.GenusTwoLeadingRelations\n+public import AxiomaticGW.Surfaces.GenusTwoCoefficientRelations\n+public import AxiomaticGW.Surfaces.GenusTwoCanonicalQueries\n+public import AxiomaticGW.Surfaces.L24CotangentSupport\n+public import AxiomaticGW.Surfaces.GenusTwoCanonicalRelations\n+public import AxiomaticGW.Surfaces.ExceptionalEvaluationSupport\n+public import AxiomaticGW.Surfaces.GenusTwoBlowupHPivots\n+public import AxiomaticGW.Surfaces.GenusTwoBlowupHUniform\n+public import AxiomaticGW.Surfaces.GenusTwoBlowupHVanishing\n+public import AxiomaticGW.Surfaces.GenusTwoBlowupHContributions\n+public import AxiomaticGW.Surfaces.GenusTwoBlowupHSupport\n+public import AxiomaticGW.Surfaces.GenusTwoBlowupHCoupling\n+public import AxiomaticGW.Surfaces.GenusTwoBlowupHOtherFamilies\n+public import AxiomaticGW.Surfaces.GenusTwoBlowupHRow\n+public import AxiomaticGW.Surfaces.GenusTwoBlowupExceptionalComplement\n+public import AxiomaticGW.Surfaces.GenusTwoBlowupOrder\n+public import AxiomaticGW.Surfaces.GenusTwoBlowupValuation\n+public import AxiomaticGW.Surfaces.GenusTwoBlowupBoundary\n+public import AxiomaticGW.Surfaces.GenusTwoBlowupNRelation\n+public import AxiomaticGW.Surfaces.GenusTwoBlowupNSourcePrimary\n+public import AxiomaticGW.Surfaces.GenusTwoBlowupNExceptionalRational\n+public import AxiomaticGW.Surfaces.GenusTwoBlowupNEEEPrimary\n+public import AxiomaticGW.Surfaces.GenusTwoBlowupNEEEKSupport\n+public import AxiomaticGW.Surfaces.GenusTwoBlowupNCoefficients\n+public import AxiomaticGW.Surfaces.GenusTwoBlowupNForeignSupport\n+public import AxiomaticGW.Surfaces.GenusTwoBlowupNMixedKSupport\n+public import AxiomaticGW.Surfaces.GenusTwoBlowupNCanonicalSupport\n+public import AxiomaticGW.Surfaces.GenusTwoBlowupNRow\n+public import AxiomaticGW.Surfaces.GenusTwoBlowupRecursion\n+public import AxiomaticGW.Surfaces.GenusTwoBlowupLowPsi\n+public import AxiomaticGW.Surfaces.GenusTwoBlowupReconstruction\n+public import AxiomaticGW.Surfaces.GenusTwoBlowupDescendants\n+public import AxiomaticGW.Surfaces.GenusTwoBlowupDescendantReconstruction\n+public import AxiomaticGW.Surfaces.GenusTwoBlowupCertificate\n+public import AxiomaticGW.Surfaces.GenusTwoL24ConstantGuard\n+public import AxiomaticGW.Surfaces.GenusTwoL24FullFrame\n+public import AxiomaticGW.Surfaces.ScalarPointRootParts\n+public import AxiomaticGW.Surfaces.GenusTwoBlowupScalar\n+public import AxiomaticGW.Surfaces.GenusTwoBlowupDependencyEnergy\n+public import AxiomaticGW.Surfaces.GenusTwoBlowupBoundedCertificate\n+public import AxiomaticGW.Surfaces.GenusTwoBlowupOrderedCertificate\n+public import AxiomaticGW.Surfaces.LowGenusPointCache\n+public import AxiomaticGW.Surfaces.GenusTwoL24PointCache\n+public import AxiomaticGW.Surfaces.GenusTwoResidualPointCache\n+public import AxiomaticGW.Surfaces.GenusTwoResidualLookup\n+public import AxiomaticGW.Surfaces.GenusTwoBlowupPointCache\n+public import AxiomaticGW.Surfaces.GenusTwoL24Constant\n+public import AxiomaticGW.Surfaces.GenusTwoFirstCoefficients\n+public import AxiomaticGW.Surfaces.GenusTwoBlowupPCoefficients\n+public import AxiomaticGW.Surfaces.GenusTwoBlowupPPrimary\n+public import AxiomaticGW.Surfaces.GenusTwoBlowupPSupport\n+public import AxiomaticGW.Surfaces.GenusTwoBlowupPPrimarySupport\n+public import AxiomaticGW.Surfaces.GenusTwoBlowupPRow\n+public import AxiomaticGW.Surfaces.GenusTwoBlowupKCoefficients\n+public import AxiomaticGW.Surfaces.GenusTwoBlowupKRow\n+public import AxiomaticGW.Surfaces.GenusTwoPointTails\n+public import AxiomaticGW.Surfaces.PlanePointNormalization\n+public import AxiomaticGW.Surfaces.PlaneShiftedStep\n+public import AxiomaticGW.Surfaces.PlaneGenusTwoReconstruction\n+public import AxiomaticGW.Surfaces.PlaneGenusTwoCertificate\n+public import AxiomaticGW.Surfaces.PlaneGenusTwoScalarSymmetry\n+public import AxiomaticGW.Surfaces.PlaneGenusTwoFirstCoefficients\n+public import AxiomaticGW.Surfaces.PlaneGenusTwoClaim\n+public import AxiomaticGW.Surfaces.PlaneGenusTwoBenchmarks\n+public import AxiomaticGW.Surfaces.PlaneGenusTwoLowPsi\n+public import AxiomaticGW.Surfaces.PlaneGenusTwoDescendants\n+public import AxiomaticGW.Surfaces.PlaneGenusTwoQueryCertificate\n+public import AxiomaticGW.Surfaces.PlaneGenusTwoAncestorCache\n+public import AxiomaticGW.Surfaces.PlaneGenusTwoFewMarkings\n+public import AxiomaticGW.Surfaces.PlaneGenusTwoFewMarkingBenchmarks\n+public import AxiomaticGW.Surfaces.GenusTwoFewMarkings\n+public import AxiomaticGW.Surfaces.Fixtures.GenusTwoPlaneFewMarkingRequests\n+public import AxiomaticGW.Surfaces.Fixtures.GenusTwoShifted\n+public import AxiomaticGW.Surfaces.Fixtures.GenusTwoPlaneLine\n+public import AxiomaticGW.Surfaces.Fixtures.GenusTwoBP\n+public import AxiomaticGW.Surfaces.GenusTwoDerivedInitialValues\n+public import AxiomaticGW.Surfaces.GenusTwoExceptionalInitialValues\n public import AxiomaticGW.Linear.Contraction\n+public import AxiomaticGW.Linear.SeparatingContraction\n public import AxiomaticGW.PointTarget.Descendants\n+public import AxiomaticGW.Surfaces.Cohomology\n+public import AxiomaticGW.Surfaces.CurveClasses\n+public import AxiomaticGW.Surfaces.TargetData\n+public import AxiomaticGW.Surfaces.Queries\n+public import AxiomaticGW.Surfaces.Contraction\n+public import AxiomaticGW.Surfaces.GluingEvaluation\n+public import AxiomaticGW.Surfaces.AncestorPolynomial\n+public import AxiomaticGW.Surfaces.PrimaryReduction\n+public import AxiomaticGW.Surfaces.DescendantStabilization\n+public import AxiomaticGW.Surfaces.PolynomialReduction\n+public import AxiomaticGW.Surfaces.DegreeZero\n+public import AxiomaticGW.Surfaces.DegreeZeroPolynomial\n+public import AxiomaticGW.Surfaces.TermExpansion\n+public import AxiomaticGW.Surfaces.LowDegree\n+public import AxiomaticGW.Surfaces.Exceptional\n+public import AxiomaticGW.Surfaces.WDVV\n+public import AxiomaticGW.Surfaces.GenusZeroStep\n+public import AxiomaticGW.Surfaces.GenusZeroPivot\n+public import AxiomaticGW.Surfaces.GenusZeroUniform\n+public import AxiomaticGW.Surfaces.GenusZeroReconstruction\n+public import AxiomaticGW.Surfaces.GenusZeroCertificate\n+public import AxiomaticGW.Surfaces.GenusZeroBenchmarks\n+public import AxiomaticGW.Surfaces.GenusOneReconstruction\n+public import AxiomaticGW.Surfaces.GenusOneCertificate\n+public import AxiomaticGW.Surfaces.GenusOneBenchmarks\n+public import AxiomaticGW.Surfaces.PointBenchmarkCache\n+public import AxiomaticGW.Surfaces.PlanePrimaryBenchmarks\n+public import AxiomaticGW.Surfaces.GenusZeroExpansion\n+public import AxiomaticGW.Surfaces.GenusZeroCompactStep\n+public import AxiomaticGW.Surfaces.GenusZeroTable\n+public import AxiomaticGW.Surfaces.PlaneGenusZero\n+public import AxiomaticGW.Surfaces.BlowupGenusZero\n+public import AxiomaticGW.Surfaces.StrictLine\n public import AxiomaticGW.TFT.Correlator\n public import AxiomaticGW.TFT.Classification\n public import AxiomaticGW.TFT.Examples\n public import AxiomaticGW.TFT.Frobenius\n public import AxiomaticGW.TFT.Sewing\n public import AxiomaticGW.Tautological.BasicStrata\n+public import AxiomaticGW.Tautological.BelorousskiPandharipandeGW\n+public import AxiomaticGW.Tautological.BelorousskiPandharipandeForgetful\n public import AxiomaticGW.Tautological.DecoratedStableGraph\n public import AxiomaticGW.Tautological.Getzler\n+public import AxiomaticGW.Tautological.GetzlerAncestors\n+public import AxiomaticGW.Tautological.GetzlerForgetful\n+public import AxiomaticGW.Tautological.GetzlerGraphs\n+public import AxiomaticGW.Tautological.GetzlerGluing\n+public import AxiomaticGW.Tautological.GetzlerGW\n+public import AxiomaticGW.Tautological.GetzlerRealization\n+public import AxiomaticGW.Tautological.GluingExpression\n+public import AxiomaticGW.Tautological.GluingEvaluation\n+public import AxiomaticGW.Tautological.GluingAncestors\n+public import AxiomaticGW.Tautological.GluingMarking\n+public import AxiomaticGW.Tautological.GluingForgetful\n+public import AxiomaticGW.Tautological.PsiBoundaryExpansion\n+public import AxiomaticGW.Tautological.Fixtures.GenusOnePsiReplay\n+public import AxiomaticGW.Tautological.Fixtures.GenusTwoPsiSquareReplay\n+public import AxiomaticGW.Tautological.Fixtures.GenusTwoPsiProductReplay\n+public import AxiomaticGW.Tautological.Fixtures.GenusTwoPsiPullbacksReplay\n+public import AxiomaticGW.Tautological.GenusTwoPsiProductGluing\n+public import AxiomaticGW.Tautological.Fixtures.BelorousskiPandharipandeReplay\n+public import AxiomaticGW.GKM.Fixtures.FirstCalibrationReplay\n+public import AxiomaticGW.GKM.Fixtures.HigherCalibrationReplay\n+public import AxiomaticGW.Tautological.Fixtures.AdmcyclesGenusTwo\n+public import AxiomaticGW.Tautological.GraphEnumeration\n+public import AxiomaticGW.Tautological.GraphIsomorphisms\n+public import AxiomaticGW.Tautological.LegPsi\n+public import AxiomaticGW.Tautological.LegPsiRealization\n+public import AxiomaticGW.Tautological.L24GW\n public import AxiomaticGW.Tautological.LowGenus\n+public import AxiomaticGW.Tautological.NonseparatingGluing\n+public import AxiomaticGW.Tautological.NonseparatingRealization\n+public import AxiomaticGW.Tautological.Relabel\n+public import AxiomaticGW.Tautological.RelabelRealization\n+public import AxiomaticGW.Tautological.RelationCertificate\n+public import AxiomaticGW.Tautological.SeparatingGluing\n+public import AxiomaticGW.Tautological.SeparatingRealization\n public import AxiomaticGW.Tautological.StrataAlgebra\n public import AxiomaticGW.Tautological.StrataModule\n public import AxiomaticGW.Tautological.StrataRealization\n+public import AxiomaticGW.Tautological.StrataRealizationDegree\n+public import AxiomaticGW.Tautological.WDVV\n+public import AxiomaticGW.Tautological.WDVVRealization\n \n /-!\n # Public entry point\n",
+    "earlier_diff_evidence": {
+      "path": "/private/tmp/gw_complete_cache_preintegration_20261005.json",
+      "sha256": "bc9ca506dce853cbca13622e1201c0045cb1a916868f0de36d01cc6fca877960"
+    },
+    "exported_from_AxiomaticGW": false,
+    "next_action": "Parent adds the new public import after the full build, then rebuilds the root target.",
+    "not_an_original_pre_copy_snapshot": true,
+    "reason": "Preserve the import graph of the concurrent full build.",
+    "verified_unchanged_post_copy_bytes": {
+      "path": "/tmp/gw_hodge_degree_two_unchanged_umbrella_20261005.lean",
+      "sha256": "05eb33874f1228688efea0cc16796454c9a61994bb29baeae3bd4cda40c939d5"
+    }
+  },
+  "prior_isolated_acceptance_and_history": {
+    "generation": {
+      "contents": {
+        "audit_count": 46,
+        "audit_names": [
+          "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso0",
+          "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso1",
+          "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso2",
+          "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso3",
+          "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso4",
+          "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso5",
+          "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso6",
+          "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso7",
+          "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso8",
+          "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso9",
+          "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso10",
+          "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso11",
+          "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso12",
+          "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso13",
+          "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso14",
+          "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso15",
+          "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso16",
+          "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso17",
+          "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso18",
+          "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso19",
+          "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso20",
+          "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso21",
+          "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso22",
+          "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso23",
+          "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso24",
+          "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso25",
+          "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso26",
+          "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso27",
+          "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso28",
+          "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso29",
+          "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso30",
+          "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.columns_1_1_eq",
+          "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.grouped_1_1_eq",
+          "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.raw_1_1_eq_collected",
+          "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.columns_0_2_eq",
+          "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.grouped_0_2_eq",
+          "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.raw_0_2_eq_collected",
+          "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.raw_degree_two_equal",
+          "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.map_raw_degree_two_equal",
+          "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.plane_candidateClass_eq_raw_degree_two",
+          "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.oneBlowup_candidateClass_eq_raw_degree_two",
+          "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.twoBlowups_candidateClass_eq_raw_degree_two",
+          "AxiomaticGWTest.HodgeDegreeTwoRawRelation.exact_relation_under_linear_map",
+          "AxiomaticGWTest.HodgeDegreeTwoRawRelation.common_expression_degree",
+          "AxiomaticGWTest.HodgeDegreeTwoRawRelation.oneBlowup_complete_class",
+          "AxiomaticGWTest.HodgeDegreeTwoRawRelation.blowup_complete_class_difference"
+        ],
+        "checks": {
+          "all_decorations_and_flags_checked": true,
+          "exact_difference": 0,
+          "left_occurrences": 28,
+          "occurrences": 44,
+          "representatives": 16,
+          "right_occurrences": 16
+        },
+        "dependency_pins": [
+          {
+            "path": "/Users/jma/Documents/formalization/axiomatic_gw/AxiomaticGW/GKM/Fixtures/AdmcyclesHodgeStrataCandidates.lean",
+            "sha256": "244eaf08f741057b92113ee4b0c4a48b2185b55350473bc28286460ea07b651c"
+          },
+          {
+            "path": "/Users/jma/Documents/formalization/axiomatic_gw/AxiomaticGW/GKM/Fixtures/AdmcyclesHodgeStrataIsomorphisms.lean",
+            "sha256": "ddb7e9cfb94ced658a96883782aed3072ae8d7fe1763ff4390e021dcafe3f26a"
+          },
+          {
+            "path": "/Users/jma/Documents/formalization/axiomatic_gw/AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroRawAssembly.lean",
+            "sha256": "a3d9c5ef4e56e42f246add66295653b2698974c9f16874e6a3b15bc5a9275e8b"
+          },
+          {
+            "path": "/Users/jma/Documents/formalization/axiomatic_gw/scripts/export_admcycles_hodge_certificate.py",
+            "sha256": "adce4b8eaf05e29b952aa23d5c0528446653eb6c0d7f24fec16dbafaf954646d"
+          }
+        ],
+        "exact_actual_raw_source_reproduced": true,
+        "generator": {
+          "path": "/tmp/gw_hodge_degree_two_v2_20261005/scripts/export_admcycles_hodge_degree_two.py",
+          "sha256": "1a3eefa2ade6c90f0e379c18a34dc085aa8d9379b1efd9f165e23975aae12a53"
+        },
+        "input": {
+          "path": "/Users/jma/Documents/formalization/axiomatic_gw/environments/admcycles-hodge-strata-candidates.json",
+          "sha256": "1ec7e5df068bd9edbe896dc5bf6f20f59b0e42e81896d2e4364f11efc0c6ec32"
+        },
+        "lean_executed": false,
+        "occurrence_bindings": [
+          {
+            "admcycles_flag_map": [
+              [
+                1,
+                1
+              ],
+              [
+                2,
+                2
+              ],
+              [
+                3,
+                3
+              ]
+            ],
+            "coefficient": [
+              -1,
+              144
+            ],
+            "hint": {
+              "edges": [
+                0
+              ],
+              "swaps": [
+                false
+              ],
+              "vertices": [
+                0
+              ]
+            },
+            "isomorphism_theorem": "rawGraphIso0",
+            "representative_graph": "rawGraph8",
+            "representative_index": 2,
+            "source": {
+              "component_index": 2,
+              "pair_index": 4,
+              "term_index": 0
+            },
+            "source_graph": "rawGraph8"
+          },
+          {
+            "admcycles_flag_map": [
+              [
+                1,
+                1
+              ],
+              [
+                2,
+                2
+              ],
+              [
+                3,
+                3
+              ]
+            ],
+            "coefficient": [
+              -1,
+              144
+            ],
+            "hint": {
+              "edges": [
+                0
+              ],
+              "swaps": [
+                false
+              ],
+              "vertices": [
+                0,
+                1
+              ]
+            },
+            "isomorphism_theorem": "rawGraphIso1",
+            "representative_graph": "rawGraph6",
+            "representative_index": 0,
+            "source": {
+              "component_index": 2,
+              "pair_index": 4,
+              "term_index": 1
+            },
+            "source_graph": "rawGraph6"
+          },
+          {
+            "admcycles_flag_map": [
+              [
+                1,
+                1
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                3,
+                2
+              ]
+            ],
+            "coefficient": [
+              -1,
+              144
+            ],
+            "hint": {
+              "edges": [
+                0
+              ],
+              "swaps": [
+                true
+              ],
+              "vertices": [
+                1,
+                0
+              ]
+            },
+            "isomorphism_theorem": "rawGraphIso2",
+            "representative_graph": "rawGraph6",
+            "representative_index": 0,
+            "source": {
+              "component_index": 2,
+              "pair_index": 4,
+              "term_index": 2
+            },
+            "source_graph": "rawGraph22"
+          },
+          {
+            "admcycles_flag_map": [
+              [
+                1,
+                1
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                3,
+                2
+              ]
+            ],
+            "coefficient": [
+              -1,
+              288
+            ],
+            "hint": {
+              "edges": [
+                0
+              ],
+              "swaps": [
+                true
+              ],
+              "vertices": [
+                0
+              ]
+            },
+            "isomorphism_theorem": "rawGraphIso3",
+            "representative_graph": "rawGraph9",
+            "representative_index": 3,
+            "source": {
+              "component_index": 2,
+              "pair_index": 4,
+              "term_index": 3
+            },
+            "source_graph": "rawGraph23"
+          },
+          {
+            "admcycles_flag_map": [
+              [
+                1,
+                1
+              ],
+              [
+                2,
+                2
+              ],
+              [
+                3,
+                3
+              ]
+            ],
+            "coefficient": [
+              -1,
+              288
+            ],
+            "hint": {
+              "edges": [
+                0
+              ],
+              "swaps": [
+                false
+              ],
+              "vertices": [
+                0
+              ]
+            },
+            "isomorphism_theorem": "rawGraphIso4",
+            "representative_graph": "rawGraph9",
+            "representative_index": 3,
+            "source": {
+              "component_index": 2,
+              "pair_index": 4,
+              "term_index": 4
+            },
+            "source_graph": "rawGraph9"
+          },
+          {
+            "admcycles_flag_map": [
+              [
+                1,
+                1
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                3,
+                2
+              ]
+            ],
+            "coefficient": [
+              -1,
+              288
+            ],
+            "hint": {
+              "edges": [
+                0
+              ],
+              "swaps": [
+                true
+              ],
+              "vertices": [
+                1,
+                0
+              ]
+            },
+            "isomorphism_theorem": "rawGraphIso5",
+            "representative_graph": "rawGraph11",
+            "representative_index": 5,
+            "source": {
+              "component_index": 2,
+              "pair_index": 4,
+              "term_index": 5
+            },
+            "source_graph": "rawGraph24"
+          },
+          {
+            "admcycles_flag_map": [
+              [
+                1,
+                1
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                3,
+                2
+              ]
+            ],
+            "coefficient": [
+              -1,
+              288
+            ],
+            "hint": {
+              "edges": [
+                0
+              ],
+              "swaps": [
+                true
+              ],
+              "vertices": [
+                1,
+                0
+              ]
+            },
+            "isomorphism_theorem": "rawGraphIso6",
+            "representative_graph": "rawGraph10",
+            "representative_index": 4,
+            "source": {
+              "component_index": 2,
+              "pair_index": 4,
+              "term_index": 6
+            },
+            "source_graph": "rawGraph25"
+          },
+          {
+            "admcycles_flag_map": [
+              [
+                1,
+                1
+              ],
+              [
+                2,
+                2
+              ],
+              [
+                3,
+                3
+              ]
+            ],
+            "coefficient": [
+              -1,
+              288
+            ],
+            "hint": {
+              "edges": [
+                0
+              ],
+              "swaps": [
+                false
+              ],
+              "vertices": [
+                0,
+                1
+              ]
+            },
+            "isomorphism_theorem": "rawGraphIso7",
+            "representative_graph": "rawGraph10",
+            "representative_index": 4,
+            "source": {
+              "component_index": 2,
+              "pair_index": 4,
+              "term_index": 7
+            },
+            "source_graph": "rawGraph10"
+          },
+          {
+            "admcycles_flag_map": [
+              [
+                1,
+                1
+              ],
+              [
+                2,
+                2
+              ],
+              [
+                3,
+                3
+              ]
+            ],
+            "coefficient": [
+              -1,
+              288
+            ],
+            "hint": {
+              "edges": [
+                0
+              ],
+              "swaps": [
+                false
+              ],
+              "vertices": [
+                0,
+                1
+              ]
+            },
+            "isomorphism_theorem": "rawGraphIso8",
+            "representative_graph": "rawGraph11",
+            "representative_index": 5,
+            "source": {
+              "component_index": 2,
+              "pair_index": 4,
+              "term_index": 8
+            },
+            "source_graph": "rawGraph11"
+          },
+          {
+            "admcycles_flag_map": [
+              [
+                1,
+                1
+              ]
+            ],
+            "coefficient": [
+              -1,
+              72
+            ],
+            "hint": {
+              "edges": [],
+              "swaps": [],
+              "vertices": [
+                0
+              ]
+            },
+            "isomorphism_theorem": "rawGraphIso9",
+            "representative_graph": "rawGraph7",
+            "representative_index": 1,
+            "source": {
+              "component_index": 2,
+              "pair_index": 4,
+              "term_index": 9
+            },
+            "source_graph": "rawGraph7"
+          },
+          {
+            "admcycles_flag_map": [
+              [
+                1,
+                1
+              ],
+              [
+                2,
+                2
+              ],
+              [
+                3,
+                3
+              ]
+            ],
+            "coefficient": [
+              1,
+              144
+            ],
+            "hint": {
+              "edges": [
+                0
+              ],
+              "swaps": [
+                false
+              ],
+              "vertices": [
+                0
+              ]
+            },
+            "isomorphism_theorem": "rawGraphIso10",
+            "representative_graph": "rawGraph17",
+            "representative_index": 11,
+            "source": {
+              "component_index": 2,
+              "pair_index": 4,
+              "term_index": 10
+            },
+            "source_graph": "rawGraph17"
+          },
+          {
+            "admcycles_flag_map": [
+              [
+                1,
+                1
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                3,
+                2
+              ]
+            ],
+            "coefficient": [
+              1,
+              144
+            ],
+            "hint": {
+              "edges": [
+                0
+              ],
+              "swaps": [
+                true
+              ],
+              "vertices": [
+                1,
+                0
+              ]
+            },
+            "isomorphism_theorem": "rawGraphIso11",
+            "representative_graph": "rawGraph14",
+            "representative_index": 8,
+            "source": {
+              "component_index": 2,
+              "pair_index": 4,
+              "term_index": 11
+            },
+            "source_graph": "rawGraph26"
+          },
+          {
+            "admcycles_flag_map": [
+              [
+                1,
+                1
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                3,
+                2
+              ]
+            ],
+            "coefficient": [
+              1,
+              144
+            ],
+            "hint": {
+              "edges": [
+                0
+              ],
+              "swaps": [
+                true
+              ],
+              "vertices": [
+                1,
+                0
+              ]
+            },
+            "isomorphism_theorem": "rawGraphIso12",
+            "representative_graph": "rawGraph13",
+            "representative_index": 7,
+            "source": {
+              "component_index": 2,
+              "pair_index": 4,
+              "term_index": 12
+            },
+            "source_graph": "rawGraph27"
+          },
+          {
+            "admcycles_flag_map": [
+              [
+                1,
+                1
+              ],
+              [
+                2,
+                2
+              ],
+              [
+                3,
+                3
+              ]
+            ],
+            "coefficient": [
+              1,
+              144
+            ],
+            "hint": {
+              "edges": [
+                0
+              ],
+              "swaps": [
+                false
+              ],
+              "vertices": [
+                0,
+                1
+              ]
+            },
+            "isomorphism_theorem": "rawGraphIso13",
+            "representative_graph": "rawGraph13",
+            "representative_index": 7,
+            "source": {
+              "component_index": 2,
+              "pair_index": 4,
+              "term_index": 13
+            },
+            "source_graph": "rawGraph13"
+          },
+          {
+            "admcycles_flag_map": [
+              [
+                1,
+                1
+              ],
+              [
+                2,
+                2
+              ],
+              [
+                3,
+                3
+              ]
+            ],
+            "coefficient": [
+              1,
+              144
+            ],
+            "hint": {
+              "edges": [
+                0
+              ],
+              "swaps": [
+                false
+              ],
+              "vertices": [
+                0,
+                1
+              ]
+            },
+            "isomorphism_theorem": "rawGraphIso14",
+            "representative_graph": "rawGraph14",
+            "representative_index": 8,
+            "source": {
+              "component_index": 2,
+              "pair_index": 4,
+              "term_index": 14
+            },
+            "source_graph": "rawGraph14"
+          },
+          {
+            "admcycles_flag_map": [
+              [
+                1,
+                1
+              ]
+            ],
+            "coefficient": [
+              1,
+              144
+            ],
+            "hint": {
+              "edges": [],
+              "swaps": [],
+              "vertices": [
+                0
+              ]
+            },
+            "isomorphism_theorem": "rawGraphIso15",
+            "representative_graph": "rawGraph20",
+            "representative_index": 14,
+            "source": {
+              "component_index": 2,
+              "pair_index": 4,
+              "term_index": 15
+            },
+            "source_graph": "rawGraph20"
+          },
+          {
+            "admcycles_flag_map": [
+              [
+                1,
+                1
+              ]
+            ],
+            "coefficient": [
+              1,
+              144
+            ],
+            "hint": {
+              "edges": [],
+              "swaps": [],
+              "vertices": [
+                0
+              ]
+            },
+            "isomorphism_theorem": "rawGraphIso16",
+            "representative_graph": "rawGraph21",
+            "representative_index": 15,
+            "source": {
+              "component_index": 2,
+              "pair_index": 4,
+              "term_index": 16
+            },
+            "source_graph": "rawGraph21"
+          },
+          {
+            "admcycles_flag_map": [
+              [
+                1,
+                1
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                3,
+                4
+              ],
+              [
+                4,
+                5
+              ],
+              [
+                5,
+                6
+              ]
+            ],
+            "coefficient": [
+              1,
+              288
+            ],
+            "hint": {
+              "edges": [
+                0,
+                1
+              ],
+              "swaps": [
+                false,
+                false
+              ],
+              "vertices": [
+                0,
+                1
+              ]
+            },
+            "isomorphism_theorem": "rawGraphIso17",
+            "representative_graph": "rawGraph18",
+            "representative_index": 12,
+            "source": {
+              "component_index": 2,
+              "pair_index": 4,
+              "term_index": 17
+            },
+            "source_graph": "rawGraph18"
+          },
+          {
+            "admcycles_flag_map": [
+              [
+                1,
+                1
+              ],
+              [
+                2,
+                2
+              ],
+              [
+                3,
+                3
+              ],
+              [
+                4,
+                5
+              ],
+              [
+                5,
+                4
+              ]
+            ],
+            "coefficient": [
+              1,
+              288
+            ],
+            "hint": {
+              "edges": [
+                0,
+                1
+              ],
+              "swaps": [
+                false,
+                true
+              ],
+              "vertices": [
+                1,
+                0
+              ]
+            },
+            "isomorphism_theorem": "rawGraphIso18",
+            "representative_graph": "rawGraph15",
+            "representative_index": 9,
+            "source": {
+              "component_index": 2,
+              "pair_index": 4,
+              "term_index": 18
+            },
+            "source_graph": "rawGraph28"
+          },
+          {
+            "admcycles_flag_map": [
+              [
+                1,
+                1
+              ],
+              [
+                2,
+                4
+              ],
+              [
+                3,
+                5
+              ],
+              [
+                4,
+                2
+              ],
+              [
+                5,
+                3
+              ]
+            ],
+            "coefficient": [
+              1,
+              288
+            ],
+            "hint": {
+              "edges": [
+                1,
+                0
+              ],
+              "swaps": [
+                false,
+                false
+              ],
+              "vertices": [
+                0,
+                2,
+                1
+              ]
+            },
+            "isomorphism_theorem": "rawGraphIso19",
+            "representative_graph": "rawGraph16",
+            "representative_index": 10,
+            "source": {
+              "component_index": 2,
+              "pair_index": 4,
+              "term_index": 19
+            },
+            "source_graph": "rawGraph29"
+          },
+          {
+            "admcycles_flag_map": [
+              [
+                1,
+                1
+              ],
+              [
+                2,
+                2
+              ],
+              [
+                3,
+                3
+              ],
+              [
+                4,
+                5
+              ],
+              [
+                5,
+                4
+              ]
+            ],
+            "coefficient": [
+              1,
+              288
+            ],
+            "hint": {
+              "edges": [
+                0,
+                1
+              ],
+              "swaps": [
+                false,
+                true
+              ],
+              "vertices": [
+                2,
+                0,
+                1
+              ]
+            },
+            "isomorphism_theorem": "rawGraphIso20",
+            "representative_graph": "rawGraph16",
+            "representative_index": 10,
+            "source": {
+              "component_index": 2,
+              "pair_index": 4,
+              "term_index": 20
+            },
+            "source_graph": "rawGraph30"
+          },
+          {
+            "admcycles_flag_map": [
+              [
+                1,
+                1
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                3,
+                2
+              ],
+              [
+                4,
+                5
+              ],
+              [
+                5,
+                4
+              ]
+            ],
+            "coefficient": [
+              1,
+              288
+            ],
+            "hint": {
+              "edges": [
+                0,
+                1
+              ],
+              "swaps": [
+                true,
+                true
+              ],
+              "vertices": [
+                1,
+                0
+              ]
+            },
+            "isomorphism_theorem": "rawGraphIso21",
+            "representative_graph": "rawGraph15",
+            "representative_index": 9,
+            "source": {
+              "component_index": 2,
+              "pair_index": 4,
+              "term_index": 21
+            },
+            "source_graph": "rawGraph31"
+          },
+          {
+            "admcycles_flag_map": [
+              [
+                1,
+                1
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                3,
+                4
+              ],
+              [
+                4,
+                6
+              ],
+              [
+                5,
+                5
+              ]
+            ],
+            "coefficient": [
+              1,
+              288
+            ],
+            "hint": {
+              "edges": [
+                0,
+                1
+              ],
+              "swaps": [
+                false,
+                true
+              ],
+              "vertices": [
+                1,
+                0
+              ]
+            },
+            "isomorphism_theorem": "rawGraphIso22",
+            "representative_graph": "rawGraph19",
+            "representative_index": 13,
+            "source": {
+              "component_index": 2,
+              "pair_index": 4,
+              "term_index": 22
+            },
+            "source_graph": "rawGraph32"
+          },
+          {
+            "admcycles_flag_map": [
+              [
+                1,
+                1
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                3,
+                4
+              ],
+              [
+                4,
+                5
+              ],
+              [
+                5,
+                6
+              ]
+            ],
+            "coefficient": [
+              1,
+              576
+            ],
+            "hint": {
+              "edges": [
+                0,
+                1
+              ],
+              "swaps": [
+                false,
+                false
+              ],
+              "vertices": [
+                0
+              ]
+            },
+            "isomorphism_theorem": "rawGraphIso23",
+            "representative_graph": "rawGraph12",
+            "representative_index": 6,
+            "source": {
+              "component_index": 2,
+              "pair_index": 4,
+              "term_index": 23
+            },
+            "source_graph": "rawGraph12"
+          },
+          {
+            "admcycles_flag_map": [
+              [
+                1,
+                1
+              ],
+              [
+                2,
+                5
+              ],
+              [
+                3,
+                6
+              ],
+              [
+                4,
+                3
+              ],
+              [
+                5,
+                4
+              ]
+            ],
+            "coefficient": [
+              1,
+              576
+            ],
+            "hint": {
+              "edges": [
+                1,
+                0
+              ],
+              "swaps": [
+                false,
+                false
+              ],
+              "vertices": [
+                0,
+                1
+              ]
+            },
+            "isomorphism_theorem": "rawGraphIso24",
+            "representative_graph": "rawGraph18",
+            "representative_index": 12,
+            "source": {
+              "component_index": 2,
+              "pair_index": 4,
+              "term_index": 24
+            },
+            "source_graph": "rawGraph33"
+          },
+          {
+            "admcycles_flag_map": [
+              [
+                1,
+                1
+              ],
+              [
+                2,
+                5
+              ],
+              [
+                3,
+                6
+              ],
+              [
+                4,
+                3
+              ],
+              [
+                5,
+                4
+              ]
+            ],
+            "coefficient": [
+              1,
+              576
+            ],
+            "hint": {
+              "edges": [
+                1,
+                0
+              ],
+              "swaps": [
+                false,
+                false
+              ],
+              "vertices": [
+                0,
+                1
+              ]
+            },
+            "isomorphism_theorem": "rawGraphIso25",
+            "representative_graph": "rawGraph19",
+            "representative_index": 13,
+            "source": {
+              "component_index": 2,
+              "pair_index": 4,
+              "term_index": 25
+            },
+            "source_graph": "rawGraph34"
+          },
+          {
+            "admcycles_flag_map": [
+              [
+                1,
+                1
+              ],
+              [
+                2,
+                6
+              ],
+              [
+                3,
+                5
+              ],
+              [
+                4,
+                3
+              ],
+              [
+                5,
+                4
+              ]
+            ],
+            "coefficient": [
+              1,
+              576
+            ],
+            "hint": {
+              "edges": [
+                1,
+                0
+              ],
+              "swaps": [
+                true,
+                false
+              ],
+              "vertices": [
+                1,
+                0
+              ]
+            },
+            "isomorphism_theorem": "rawGraphIso26",
+            "representative_graph": "rawGraph19",
+            "representative_index": 13,
+            "source": {
+              "component_index": 2,
+              "pair_index": 4,
+              "term_index": 26
+            },
+            "source_graph": "rawGraph35"
+          },
+          {
+            "admcycles_flag_map": [
+              [
+                1,
+                1
+              ],
+              [
+                2,
+                6
+              ],
+              [
+                3,
+                5
+              ],
+              [
+                4,
+                3
+              ],
+              [
+                5,
+                4
+              ]
+            ],
+            "coefficient": [
+              1,
+              576
+            ],
+            "hint": {
+              "edges": [
+                1,
+                0
+              ],
+              "swaps": [
+                true,
+                false
+              ],
+              "vertices": [
+                1,
+                0
+              ]
+            },
+            "isomorphism_theorem": "rawGraphIso27",
+            "representative_graph": "rawGraph18",
+            "representative_index": 12,
+            "source": {
+              "component_index": 2,
+              "pair_index": 4,
+              "term_index": 27
+            },
+            "source_graph": "rawGraph36"
+          },
+          {
+            "admcycles_flag_map": [
+              [
+                1,
+                1
+              ],
+              [
+                2,
+                2
+              ],
+              [
+                3,
+                3
+              ]
+            ],
+            "coefficient": [
+              -1,
+              144
+            ],
+            "hint": {
+              "edges": [
+                0
+              ],
+              "swaps": [
+                false
+              ],
+              "vertices": [
+                0,
+                1
+              ]
+            },
+            "isomorphism_theorem": "rawGraphIso1",
+            "representative_graph": "rawGraph6",
+            "representative_index": 0,
+            "source": {
+              "component_index": 2,
+              "pair_index": 2,
+              "term_index": 0
+            },
+            "source_graph": "rawGraph6"
+          },
+          {
+            "admcycles_flag_map": [
+              [
+                1,
+                1
+              ]
+            ],
+            "coefficient": [
+              -1,
+              144
+            ],
+            "hint": {
+              "edges": [],
+              "swaps": [],
+              "vertices": [
+                0
+              ]
+            },
+            "isomorphism_theorem": "rawGraphIso9",
+            "representative_graph": "rawGraph7",
+            "representative_index": 1,
+            "source": {
+              "component_index": 2,
+              "pair_index": 2,
+              "term_index": 1
+            },
+            "source_graph": "rawGraph7"
+          },
+          {
+            "admcycles_flag_map": [
+              [
+                1,
+                1
+              ],
+              [
+                2,
+                2
+              ],
+              [
+                3,
+                3
+              ]
+            ],
+            "coefficient": [
+              -1,
+              288
+            ],
+            "hint": {
+              "edges": [
+                0
+              ],
+              "swaps": [
+                false
+              ],
+              "vertices": [
+                0
+              ]
+            },
+            "isomorphism_theorem": "rawGraphIso0",
+            "representative_graph": "rawGraph8",
+            "representative_index": 2,
+            "source": {
+              "component_index": 2,
+              "pair_index": 2,
+              "term_index": 2
+            },
+            "source_graph": "rawGraph8"
+          },
+          {
+            "admcycles_flag_map": [
+              [
+                1,
+                1
+              ],
+              [
+                2,
+                2
+              ],
+              [
+                3,
+                3
+              ]
+            ],
+            "coefficient": [
+              -1,
+              288
+            ],
+            "hint": {
+              "edges": [
+                0
+              ],
+              "swaps": [
+                false
+              ],
+              "vertices": [
+                0
+              ]
+            },
+            "isomorphism_theorem": "rawGraphIso4",
+            "representative_graph": "rawGraph9",
+            "representative_index": 3,
+            "source": {
+              "component_index": 2,
+              "pair_index": 2,
+              "term_index": 3
+            },
+            "source_graph": "rawGraph9"
+          },
+          {
+            "admcycles_flag_map": [
+              [
+                1,
+                1
+              ],
+              [
+                2,
+                2
+              ],
+              [
+                3,
+                3
+              ]
+            ],
+            "coefficient": [
+              -1,
+              288
+            ],
+            "hint": {
+              "edges": [
+                0
+              ],
+              "swaps": [
+                false
+              ],
+              "vertices": [
+                0,
+                1
+              ]
+            },
+            "isomorphism_theorem": "rawGraphIso7",
+            "representative_graph": "rawGraph10",
+            "representative_index": 4,
+            "source": {
+              "component_index": 2,
+              "pair_index": 2,
+              "term_index": 4
+            },
+            "source_graph": "rawGraph10"
+          },
+          {
+            "admcycles_flag_map": [
+              [
+                1,
+                1
+              ],
+              [
+                2,
+                2
+              ],
+              [
+                3,
+                3
+              ]
+            ],
+            "coefficient": [
+              -1,
+              288
+            ],
+            "hint": {
+              "edges": [
+                0
+              ],
+              "swaps": [
+                false
+              ],
+              "vertices": [
+                0,
+                1
+              ]
+            },
+            "isomorphism_theorem": "rawGraphIso8",
+            "representative_graph": "rawGraph11",
+            "representative_index": 5,
+            "source": {
+              "component_index": 2,
+              "pair_index": 2,
+              "term_index": 5
+            },
+            "source_graph": "rawGraph11"
+          },
+          {
+            "admcycles_flag_map": [
+              [
+                1,
+                1
+              ],
+              [
+                3,
+                3
+              ],
+              [
+                4,
+                4
+              ],
+              [
+                5,
+                5
+              ],
+              [
+                6,
+                6
+              ]
+            ],
+            "coefficient": [
+              1,
+              1152
+            ],
+            "hint": {
+              "edges": [
+                0,
+                1
+              ],
+              "swaps": [
+                false,
+                false
+              ],
+              "vertices": [
+                0
+              ]
+            },
+            "isomorphism_theorem": "rawGraphIso23",
+            "representative_graph": "rawGraph12",
+            "representative_index": 6,
+            "source": {
+              "component_index": 2,
+              "pair_index": 2,
+              "term_index": 6
+            },
+            "source_graph": "rawGraph12"
+          },
+          {
+            "admcycles_flag_map": [
+              [
+                1,
+                1
+              ],
+              [
+                2,
+                2
+              ],
+              [
+                3,
+                3
+              ]
+            ],
+            "coefficient": [
+              1,
+              144
+            ],
+            "hint": {
+              "edges": [
+                0
+              ],
+              "swaps": [
+                false
+              ],
+              "vertices": [
+                0,
+                1
+              ]
+            },
+            "isomorphism_theorem": "rawGraphIso13",
+            "representative_graph": "rawGraph13",
+            "representative_index": 7,
+            "source": {
+              "component_index": 2,
+              "pair_index": 2,
+              "term_index": 7
+            },
+            "source_graph": "rawGraph13"
+          },
+          {
+            "admcycles_flag_map": [
+              [
+                1,
+                1
+              ],
+              [
+                2,
+                2
+              ],
+              [
+                3,
+                3
+              ]
+            ],
+            "coefficient": [
+              1,
+              144
+            ],
+            "hint": {
+              "edges": [
+                0
+              ],
+              "swaps": [
+                false
+              ],
+              "vertices": [
+                0,
+                1
+              ]
+            },
+            "isomorphism_theorem": "rawGraphIso14",
+            "representative_graph": "rawGraph14",
+            "representative_index": 8,
+            "source": {
+              "component_index": 2,
+              "pair_index": 2,
+              "term_index": 8
+            },
+            "source_graph": "rawGraph14"
+          },
+          {
+            "admcycles_flag_map": [
+              [
+                1,
+                1
+              ],
+              [
+                2,
+                2
+              ],
+              [
+                3,
+                3
+              ],
+              [
+                4,
+                4
+              ],
+              [
+                5,
+                5
+              ]
+            ],
+            "coefficient": [
+              1,
+              288
+            ],
+            "hint": {
+              "edges": [
+                0,
+                1
+              ],
+              "swaps": [
+                false,
+                false
+              ],
+              "vertices": [
+                0,
+                1
+              ]
+            },
+            "isomorphism_theorem": "rawGraphIso28",
+            "representative_graph": "rawGraph15",
+            "representative_index": 9,
+            "source": {
+              "component_index": 2,
+              "pair_index": 2,
+              "term_index": 9
+            },
+            "source_graph": "rawGraph15"
+          },
+          {
+            "admcycles_flag_map": [
+              [
+                1,
+                1
+              ],
+              [
+                2,
+                2
+              ],
+              [
+                3,
+                3
+              ],
+              [
+                4,
+                4
+              ],
+              [
+                5,
+                5
+              ]
+            ],
+            "coefficient": [
+              1,
+              288
+            ],
+            "hint": {
+              "edges": [
+                0,
+                1
+              ],
+              "swaps": [
+                false,
+                false
+              ],
+              "vertices": [
+                0,
+                1,
+                2
+              ]
+            },
+            "isomorphism_theorem": "rawGraphIso29",
+            "representative_graph": "rawGraph16",
+            "representative_index": 10,
+            "source": {
+              "component_index": 2,
+              "pair_index": 2,
+              "term_index": 10
+            },
+            "source_graph": "rawGraph16"
+          },
+          {
+            "admcycles_flag_map": [
+              [
+                1,
+                1
+              ],
+              [
+                2,
+                2
+              ],
+              [
+                3,
+                3
+              ]
+            ],
+            "coefficient": [
+              1,
+              288
+            ],
+            "hint": {
+              "edges": [
+                0
+              ],
+              "swaps": [
+                false
+              ],
+              "vertices": [
+                0
+              ]
+            },
+            "isomorphism_theorem": "rawGraphIso10",
+            "representative_graph": "rawGraph17",
+            "representative_index": 11,
+            "source": {
+              "component_index": 2,
+              "pair_index": 2,
+              "term_index": 11
+            },
+            "source_graph": "rawGraph17"
+          },
+          {
+            "admcycles_flag_map": [
+              [
+                1,
+                1
+              ],
+              [
+                3,
+                3
+              ],
+              [
+                4,
+                4
+              ],
+              [
+                5,
+                5
+              ],
+              [
+                6,
+                6
+              ]
+            ],
+            "coefficient": [
+              1,
+              288
+            ],
+            "hint": {
+              "edges": [
+                0,
+                1
+              ],
+              "swaps": [
+                false,
+                false
+              ],
+              "vertices": [
+                0,
+                1
+              ]
+            },
+            "isomorphism_theorem": "rawGraphIso17",
+            "representative_graph": "rawGraph18",
+            "representative_index": 12,
+            "source": {
+              "component_index": 2,
+              "pair_index": 2,
+              "term_index": 12
+            },
+            "source_graph": "rawGraph18"
+          },
+          {
+            "admcycles_flag_map": [
+              [
+                1,
+                1
+              ],
+              [
+                3,
+                3
+              ],
+              [
+                4,
+                4
+              ],
+              [
+                5,
+                5
+              ],
+              [
+                6,
+                6
+              ]
+            ],
+            "coefficient": [
+              1,
+              288
+            ],
+            "hint": {
+              "edges": [
+                0,
+                1
+              ],
+              "swaps": [
+                false,
+                false
+              ],
+              "vertices": [
+                0,
+                1
+              ]
+            },
+            "isomorphism_theorem": "rawGraphIso30",
+            "representative_graph": "rawGraph19",
+            "representative_index": 13,
+            "source": {
+              "component_index": 2,
+              "pair_index": 2,
+              "term_index": 13
+            },
+            "source_graph": "rawGraph19"
+          },
+          {
+            "admcycles_flag_map": [
+              [
+                1,
+                1
+              ]
+            ],
+            "coefficient": [
+              1,
+              288
+            ],
+            "hint": {
+              "edges": [],
+              "swaps": [],
+              "vertices": [
+                0
+              ]
+            },
+            "isomorphism_theorem": "rawGraphIso15",
+            "representative_graph": "rawGraph20",
+            "representative_index": 14,
+            "source": {
+              "component_index": 2,
+              "pair_index": 2,
+              "term_index": 14
+            },
+            "source_graph": "rawGraph20"
+          },
+          {
+            "admcycles_flag_map": [
+              [
+                1,
+                1
+              ]
+            ],
+            "coefficient": [
+              1,
+              288
+            ],
+            "hint": {
+              "edges": [],
+              "swaps": [],
+              "vertices": [
+                0
+              ]
+            },
+            "isomorphism_theorem": "rawGraphIso16",
+            "representative_graph": "rawGraph21",
+            "representative_index": 15,
+            "source": {
+              "component_index": 2,
+              "pair_index": 2,
+              "term_index": 15
+            },
+            "source_graph": "rawGraph21"
+          }
+        ],
+        "scope": "Only raw11 = 2 * raw02 and its linear assembly consequences; no geometric Mumford, Hodge, GW, product or CohFT acceptance",
+        "source": {
+          "path": "/tmp/gw_hodge_degree_two_v2_20261005/AxiomaticGW/GKM/Fixtures/HodgeDegreeTwoRawRelation.lean",
+          "sha256": "7b90fce2a06975a21ca2dd88c43032eb6e46387d5cf48fb4a6ab76b2543afb8c"
+        },
+        "status": "staged_candidate_uncompiled",
+        "tests": {
+          "path": "/tmp/gw_hodge_degree_two_v2_20261005/AxiomaticGWTest/GKM/HodgeDegreeTwoRawRelation.lean",
+          "sha256": "5e45d9ebabd9030a3544f692b9d4e0f2cefa53e941cb994da74c662abaf967f7"
+        },
+        "unique_graph_isomorphisms": 31,
+        "witness": {
+          "path": "/tmp/gw_hodge_degree_two_v2_20261005/environments/admcycles-hodge-degree-two-witness.json",
+          "sha256": "a68d166f6b3063ac4295b8104304e0644f2caca47d6f1a869a5d846fb591cef1"
+        }
+      },
+      "source": {
+        "path": "/private/tmp/gw_hodge_degree_two_v2_20261005/generation.json",
+        "sha256": "303a3502f91ef52f63e4f437f0dae72ec2bfcb10161b565e7271366459bbc901"
+      }
+    },
+    "primitive_review": {
+      "contents": {
+        "derivable_from_current_named_primitives": [
+          {
+            "boundary": "Its image is one only with the separately justified fundamental realization law.",
+            "claim": "raw00 equals the fundamental raw stratum",
+            "reference": "AdmcyclesHodgeStrataNormalization.raw_0_0_degree0_eq_fundamental"
+          },
+          {
+            "boundary": "Only linearity and accepted finite raw degree-three isomorphisms; no product/Hodge hypothesis.",
+            "claim": "All 45-component assemblies reduce to the three currently integrated raw regular expressions",
+            "reference": "HodgeDegreeZeroRawAssembly.*_candidateClass_eq_raw_regular"
+          },
+          {
+            "boundary": "Requires the existing LegPsiCompatible generator law and relevant fundamental law.",
+            "claim": "Leg-psi decorations realize as psi multiplication",
+            "reference": "StrataRealization.map_addLegPsi, map_mulLegPsi"
+          },
+          {
+            "boundary": "Requires independently provided unit/relabel/separating/nonseparating/cotangent compatibility. The theorem has no kappa constructor and no boundary self-intersection rule.",
+            "claim": "Undecorated/psi-decorated gluing expressions realize as iterated raw pushforwards",
+            "reference": "GluingExpression.map_stratum_eq_classValue; map_decoratedStratum_eq_classValue"
+          },
+          {
+            "boundary": "Python candidate only at this review stage; 28 raw11 and 16 raw02 occurrences group into 16 identical decorated-graph isomorphism classes with coefficient ratio 2. This is not a geometric Mumford theorem.",
+            "claim": "A new finite raw degree-two identity is available for kernel replay",
+            "reference": "degree-two-candidate-comparison.json"
+          }
+        ],
+        "exact_degree_one_source": {
+          "formula": "raw01 = (-1/12)*external_psi + (1/12)*kappa1 + (1/24)*raw_nonseparating + (1/24)*raw_separating_mark_on_left + (1/24)*raw_separating_mark_on_right",
+          "normalization": "Raw ordered-node gluing pushforwards; no further automorphism division. The two separating terms are graph-isomorphic but both original occurrences are retained.",
+          "occurrences": [
+            {
+              "coefficient": [
+                -1,
+                12
+              ],
+              "graph": {
+                "admcycles_halfedge_labels": [],
+                "codimension": 1,
+                "endpoints": [],
+                "genus": [
+                  2
+                ],
+                "half_psi": [],
+                "kappa": [
+                  [
+                    0,
+                    0,
+                    0,
+                    0
+                  ]
+                ],
+                "leg_psi": [
+                  1
+                ],
+                "leg_vertices": [
+                  0
+                ]
+              }
+            },
+            {
+              "coefficient": [
+                1,
+                12
+              ],
+              "graph": {
+                "admcycles_halfedge_labels": [],
+                "codimension": 1,
+                "endpoints": [],
+                "genus": [
+                  2
+                ],
+                "half_psi": [],
+                "kappa": [
+                  [
+                    1,
+                    0,
+                    0,
+                    0
+                  ]
+                ],
+                "leg_psi": [
+                  0
+                ],
+                "leg_vertices": [
+                  0
+                ]
+              }
+            },
+            {
+              "coefficient": [
+                1,
+                24
+              ],
+              "graph": {
+                "admcycles_halfedge_labels": [
+                  [
+                    2,
+                    3
+                  ]
+                ],
+                "codimension": 1,
+                "endpoints": [
+                  [
+                    0,
+                    0
+                  ]
+                ],
+                "genus": [
+                  1
+                ],
+                "half_psi": [
+                  [
+                    0,
+                    0
+                  ]
+                ],
+                "kappa": [
+                  [
+                    0,
+                    0,
+                    0,
+                    0
+                  ]
+                ],
+                "leg_psi": [
+                  0
+                ],
+                "leg_vertices": [
+                  0
+                ]
+              }
+            },
+            {
+              "coefficient": [
+                1,
+                24
+              ],
+              "graph": {
+                "admcycles_halfedge_labels": [
+                  [
+                    2,
+                    3
+                  ]
+                ],
+                "codimension": 1,
+                "endpoints": [
+                  [
+                    0,
+                    1
+                  ]
+                ],
+                "genus": [
+                  1,
+                  1
+                ],
+                "half_psi": [
+                  [
+                    0,
+                    0
+                  ]
+                ],
+                "kappa": [
+                  [
+                    0,
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    0,
+                    0
+                  ]
+                ],
+                "leg_psi": [
+                  0
+                ],
+                "leg_vertices": [
+                  0
+                ]
+              }
+            },
+            {
+              "coefficient": [
+                1,
+                24
+              ],
+              "graph": {
+                "admcycles_halfedge_labels": [
+                  [
+                    2,
+                    3
+                  ]
+                ],
+                "codimension": 1,
+                "endpoints": [
+                  [
+                    0,
+                    1
+                  ]
+                ],
+                "genus": [
+                  1,
+                  1
+                ],
+                "half_psi": [
+                  [
+                    0,
+                    0
+                  ]
+                ],
+                "kappa": [
+                  [
+                    0,
+                    0,
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0,
+                    0,
+                    0
+                  ]
+                ],
+                "leg_psi": [
+                  0
+                ],
+                "leg_vertices": [
+                  1
+                ]
+              }
+            }
+          ]
+        },
+        "findings": [
+          {
+            "correction": "Retain current API and its honest scope. Use the existing independently named compatibility laws for unit/psi/gluing; do not infer geometric lambda classes from the object name.",
+            "declaration": "StrataRealization.map/map_basis_degree",
+            "evidence": "Only a rational linear map and basis homogeneity are required; even the zero map is allowed. Unit, psi, kappa, gluing and multiplicativity are not consequences of this type.",
+            "kind": "explicit_missing_geometric_input_not_detected_unsoundness",
+            "severity": "high"
+          },
+          {
+            "correction": "Introduce only the concrete missing raw forgetful/kappa operation and its independently justified geometric pushforward compatibility before identifying the raw kappa terms. A future finite product certificate must account for boundary common refinements and normal excess factors, not accept the desired product equality as its own proof.",
+            "declaration": "PsiClasses.kappa; DecoratedGluing; CertifiedStrataProduct",
+            "evidence": "Kappa is already defined as forgetful pushforward of an extra psi power. DecoratedGluing explicitly adds no kappa decorations. Search found no raw kappa realization compatibility or general forgetful-pushforward operation on raw strata. CertifiedStrataProduct is an uninstantiated algebraic contract, with no geometric excess-intersection realization.",
+            "kind": "missing_realization_operation",
+            "severity": "high"
+          },
+          {
+            "correction": "A true identification of the remaining positive raw class requires independent Hodge/GRR and product-realization input, followed by a derivation from those inputs; declaring map(raw02)=lambda2 as a field merely restates the open gate.",
+            "declaration": "StableCurveCohomology and GKM Hodge fixtures",
+            "evidence": "No Hodge bundle or Chern-character/GRR construction occurs in the reviewed primitives. Formal Hodge-polynomial coefficients and raw products are source-bound arithmetic data only.",
+            "kind": "missing_hodge_geometry",
+            "severity": "high"
+          },
+          {
+            "correction": "Obtain or construct actual class-valued Omega data with source-bound gluing/forgetting laws, and identify its degree-zero virtual Euler contribution independently. Finite descendants and TFT classification do not supply these laws.",
+            "declaration": "gkm_localization hodge_integral/stable_map; StableMapStabilization; StateSpaceTransport",
+            "evidence": "The current producer evaluates Hodge/psi expressions numerically. The held pre-integration compact packet is a candidate, not an exported all-genus class-valued CohFT. State-space transport consumes an existing CohFT; StableMapStabilization consumes pushforward and descendant-realization laws. Neither constructs the virtual constant-map class.",
+            "kind": "missing_class_valued_producer_or_geometric_GW_bridge",
+            "severity": "high"
+          }
+        ],
+        "lean_executed": false,
+        "overall_boundary": "No defect was found in the scoped accepted raw assembly claims. The high findings describe explicit missing bridges, not hidden accepted geometric results. The complete geometric CohFT and research reconstruction gates remain open.",
+        "primary_sources": [
+          {
+            "relevance": "Gives the Hodge Chern-character GRR expression and vanishing of positive even Chern characters. Its unpointed kappa convention must be converted before comparing with the packet log-kappa convention. No theorem from this paper is currently accepted merely by citation.",
+            "title": "Mumford, Towards an Enumerative Geometry of the Moduli Space of Curves",
+            "url": "https://www.dam.brown.edu/people/mumford/alg_geom/papers/1983b--EnumGeomModuli-NC.pdf",
+            "verified_location": "Section 5, formula (5.2), Corollary (5.3), formula (5.4), printed pages 304\u2013307"
+          },
+          {
+            "relevance": "Identifies the contracted-vertex obstruction contribution with the dual Hodge bundle tensored by tangent weights in the projective-space calculation. This supports the ordered formal Euler-factor convention, not a Lean virtual localization proof or an automatic extension to the two blowups.",
+            "title": "Graber\u2013Pandharipande, Localization of virtual classes",
+            "url": "https://arxiv.org/pdf/alg-geom/9708001",
+            "verified_location": "Section 4, PDF pages 16\u201318"
+          },
+          {
+            "relevance": "Documents raw boundary pushforwards and illustrates the negative node-psi excess terms. The software output is candidate data until finite operations and their geometric interpretation are checked.",
+            "title": "Delecroix\u2013Schmitt\u2013van Zelm, admcycles \u2014 a Sage package for calculations in the tautological ring of the moduli space of stable curves",
+            "url": "https://arxiv.org/pdf/2002.01709",
+            "verified_location": "Section 3.5, PDF pages 9\u201310, boundary pushforward and self-intersection example"
+          }
+        ],
+        "recommended_work_packages": [
+          {
+            "Q": "x^2-x*y+y^2",
+            "consequences": [
+              "Plane.candidateClass A = Q \u2022 A.map raw00 + 9 \u2022 A.map raw02",
+              "OneBlowup.candidateClass A = 8 \u2022 A.map raw02",
+              "TwoBlowups.candidateClass A = -Q \u2022 A.map raw00 + 7 \u2022 A.map raw02"
+            ],
+            "method": "Use all 44 source occurrences, explicit finite vertex/edge/branch bijections, GraphIsomorphismHint.check_sound, and RelationCertificate.interpret with exact rational grouping. Reuse AdmcyclesHodgeStrataIsomorphisms.interpret_grouped. No new geometric inputs.",
+            "name": "Exact degree-two raw replay",
+            "priority": 1,
+            "theorem": "raw_1_1_degree2 = (2 : Q) \u2022 raw_0_2_degree2",
+            "validation": "Source-bound generation and corruption tests first; bounded public Lean compilation and all public axiom checks only when the parent grants the memory lane."
+          },
+          {
+            "already_available": "Exact graph binding, psi/gluing realization lemmas, linearity, projection formulas, psi naturality, and the geometric definition of kappa.",
+            "minimality": "Only the actual degree-one square is needed after the new degree-two replay. Do not build a global strata algebra unless this finite computation genuinely needs it.",
+            "name": "Concrete raw degree-one realization and its finite square",
+            "new_input_or_implementation": "A raw forgetful-pushforward/kappa realization law at the actual required slots; finite common-refinement/excess-intersection formulas for products of these five terms. These laws must be independently justified or honestly treated as new geometric primitives; the target lambda/product equality cannot itself be the input.",
+            "priority": 2,
+            "theorem_target": "A.map raw01 = (kappa1 - psi_external)/12 + raw_nonseparating_push(1)/24 + (raw_separating_left(1)+raw_separating_right(1))/24; then A.map raw11 = (A.map raw01)^2 via the actual finite product expansion."
+          },
+          {
+            "missing": "Hodge/Chern/GRR semantics and virtual obstruction/Euler identification are not present in current primitives. General CohFT compatibility additionally requires all-genus class-valued data and derived gluing/forgetting laws.",
+            "name": "Identify the remaining degree-two class and the constant-map contribution",
+            "priority": 3,
+            "scope": "Even completion of this genus-two unit class comparison alone would not establish the full positive-degree semisimple CohFT or R4/R5.",
+            "theorem_target": "Identify A.map raw01 with c1(E) using the pointed GRR formula with the checked log-kappa and ordered-node conventions; derive A.map raw02=c2(E) from the finite square plus independently established ch2(E)=0 and the Chern-character/Chern-class identity. Then compare the fixed tangent Euler formula with an actual stabilization pushforward of the virtual constant-map class."
+          }
+        ],
+        "repository_source_edits": false,
+        "sage_executed": false,
+        "scope": "Exact genus-two one-marking raw00/raw11/raw02 and the immediate semantic boundary to the fixed GKM degree-zero candidates; not a comprehensive project review.",
+        "source_pins": [
+          {
+            "path": "/Users/jma/Documents/formalization/axiomatic_gw/AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroRawAssembly.lean",
+            "sha256": "a3d9c5ef4e56e42f246add66295653b2698974c9f16874e6a3b15bc5a9275e8b"
+          },
+          {
+            "path": "/Users/jma/Documents/formalization/axiomatic_gw/AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroRegularity.lean",
+            "sha256": "b44bcad2fd02afe2c39f130ef610065360a3149f0101a72ddd61c77f67d49cd6"
+          },
+          {
+            "path": "/Users/jma/Documents/formalization/axiomatic_gw/AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroCoefficientFormula.lean",
+            "sha256": "516d3d3a07e7411fb2f76f427829d329dd96ae9c4b1ea89b6ea150fdb11fc35c"
+          },
+          {
+            "path": "/Users/jma/Documents/formalization/axiomatic_gw/AxiomaticGW/GKM/Fixtures/AdmcyclesHodgeStrataCandidates.lean",
+            "sha256": "244eaf08f741057b92113ee4b0c4a48b2185b55350473bc28286460ea07b651c"
+          },
+          {
+            "path": "/Users/jma/Documents/formalization/axiomatic_gw/AxiomaticGW/GKM/Fixtures/AdmcyclesHodgeStrataIsomorphisms.lean",
+            "sha256": "ddb7e9cfb94ced658a96883782aed3072ae8d7fe1763ff4390e021dcafe3f26a"
+          },
+          {
+            "path": "/Users/jma/Documents/formalization/axiomatic_gw/AxiomaticGW/GKM/AdmcyclesHodgeStrataNormalization.lean",
+            "sha256": "d36565c19b0198d833caddfc755ba431660d2f84752fdd760cbcc38f37734ce3"
+          },
+          {
+            "path": "/Users/jma/Documents/formalization/axiomatic_gw/AxiomaticGW/Tautological/StrataRealization.lean",
+            "sha256": "ddf59186e35a331415f9cbb8713dbcfda209fbf9bf5530123a1ab87964cd308c"
+          },
+          {
+            "path": "/Users/jma/Documents/formalization/axiomatic_gw/AxiomaticGW/Tautological/StrataAlgebra.lean",
+            "sha256": "829732e328b4d4461cff4d106e2461fd72396a68b3882f8eae53c4d4e63f2d09"
+          },
+          {
+            "path": "/Users/jma/Documents/formalization/axiomatic_gw/AxiomaticGW/Tautological/LegPsiRealization.lean",
+            "sha256": "e8d6bff52045adf408f2d4439b5df73b44328a88d1f51d1807ff70da58a6b95a"
+          },
+          {
+            "path": "/Users/jma/Documents/formalization/axiomatic_gw/AxiomaticGW/Tautological/SeparatingRealization.lean",
+            "sha256": "e5ae34a58171024a17780469beafe6bd541e282ffc8537c562415e798659bfd0"
+          },
+          {
+            "path": "/Users/jma/Documents/formalization/axiomatic_gw/AxiomaticGW/Tautological/NonseparatingRealization.lean",
+            "sha256": "17d0072a0de621e5164ea39dfc46498b6d11388b0f5f278737a4f5baf1d89fda"
+          },
+          {
+            "path": "/Users/jma/Documents/formalization/axiomatic_gw/AxiomaticGW/Tautological/DecoratedGluing.lean",
+            "sha256": "bc6091840bc2deddadf788e8d3f56a7c0caaaac754a9b687cc132a7fbd39e276"
+          },
+          {
+            "path": "/Users/jma/Documents/formalization/axiomatic_gw/AxiomaticGW/Tautological/DecoratedGluingRealization.lean",
+            "sha256": "4a7835ce0f3fc828ea47142698ef2bc5e98cdcdcb9287da0cb4ef773951c8d3b"
+          },
+          {
+            "path": "/Users/jma/Documents/formalization/axiomatic_gw/AxiomaticGW/Tautological/GluingExpression.lean",
+            "sha256": "36c5e908f9d13273c739102d0d7c21363776db58d92e5fd49a363661fedc0db5"
+          },
+          {
+            "path": "/Users/jma/Documents/formalization/axiomatic_gw/AxiomaticGW/Tautological/GluingForgetful.lean",
+            "sha256": "9a1fb2b1be6198912dfccfa1dcd5b02f7aa9c2e406576443520ad670dd217b53"
+          },
+          {
+            "path": "/Users/jma/Documents/formalization/axiomatic_gw/AxiomaticGW/CohFT/Tautological.lean",
+            "sha256": "09a580ac3e481df0ba90bc30637e6bed2741dfc0e6599d8463a48b42861635ed"
+          },
+          {
+            "path": "/Users/jma/Documents/formalization/axiomatic_gw/AxiomaticGW/CohFT/GluingForgetful.lean",
+            "sha256": "702223851ca54f654842ef12eb14bb7d15ce7e0659e95a8ff71ad79653727e79"
+          },
+          {
+            "path": "/Users/jma/Documents/formalization/axiomatic_gw/AxiomaticGW/CohFT/NonseparatingPushforward.lean",
+            "sha256": "6f5b1137ee901aa7b3a7db1d6a919023cd78fe2b9ff4c22cb709fc3e8d910121"
+          },
+          {
+            "path": "/Users/jma/Documents/formalization/axiomatic_gw/AxiomaticGW/CohFT/SeparatingPushforward.lean",
+            "sha256": "7ef46b53841cad087888a34bfbcd0a089488a8f46f0d9048576c43e2c83c5000"
+          },
+          {
+            "path": "/Users/jma/Documents/formalization/axiomatic_gw/AxiomaticGW/CohFT/StableCurve.lean",
+            "sha256": "3102914691877889a1a67e76d8dd17897ba6474e2837247d8d9c9241d269a674"
+          },
+          {
+            "path": "/Users/jma/Documents/formalization/axiomatic_gw/AxiomaticGW/CohFT/Basic.lean",
+            "sha256": "8e42e96505c84bea43ada16ddc0d54644c0f4416a56db03a5baf4aace2117b66"
+          },
+          {
+            "path": "/Users/jma/Documents/formalization/axiomatic_gw/AxiomaticGW/CohFT/Classification.lean",
+            "sha256": "3b59eea9ebc91e9c85846f833c303a9959070da8e7d6b0d60c264fabb150d097"
+          },
+          {
+            "path": "/Users/jma/Documents/formalization/axiomatic_gw/AxiomaticGW/CohFT/Constant.lean",
+            "sha256": "2e88098c585d69f20c1ed77691298ee48c994cb3b13ab53dc7fb138677690721"
+          },
+          {
+            "path": "/Users/jma/Documents/formalization/axiomatic_gw/AxiomaticGW/CohFT/Transport.lean",
+            "sha256": "d414144b8b147bccc6e616d9de15a6ad1cee88bdcfd270676e7a6e1e438d11bf"
+          },
+          {
+            "path": "/Users/jma/Documents/formalization/axiomatic_gw/AxiomaticGW/GKM/StateSpaceTransport.lean",
+            "sha256": "6f0f5d3f7876ddcf9c99bd418cc9db2a5b8a63c7c9dd2435b38c8489f2fddcb8"
+          },
+          {
+            "path": "/Users/jma/Documents/formalization/axiomatic_gw/AxiomaticGW/GKM/FixedPointTFT.lean",
+            "sha256": "91ce8bc7ea085e2eb33596b44fb6e2ef5451cd8129ce79cdf28f44b60c2397e1"
+          },
+          {
+            "path": "/Users/jma/Documents/formalization/axiomatic_gw/AxiomaticGW/GKM/EquivariantCoefficients.lean",
+            "sha256": "a1d14af6c9e9f078acf3f7ae23f1c1632ff1f845fdb54ba323f4d1f0d0f7d848"
+          },
+          {
+            "path": "/Users/jma/Documents/formalization/axiomatic_gw/AxiomaticGW/Geometry/StableMapIntersection.lean",
+            "sha256": "52e9316e14684b31547fcf64ed7c0615b1689a50e9979d93f3b696a5c7d98a84"
+          },
+          {
+            "path": "/Users/jma/Documents/formalization/axiomatic_gw/environments/admcycles-hodge-strata-candidates.json",
+            "sha256": "1ec7e5df068bd9edbe896dc5bf6f20f59b0e42e81896d2e4364f11efc0c6ec32"
+          },
+          {
+            "path": "/Users/jma/Documents/formalization/axiomatic_gw/environments/gkm-degree-zero-hodge-strata-factored-candidate.json",
+            "sha256": "5be60671ddc68304610987123f048a6c010504cf27f3b690cd1e4d4e39227399"
+          },
+          {
+            "path": "/opt/homebrew/Caskroom/miniforge/base/envs/axiomatic-gw-sage/lib/python3.12/site-packages/admcycles/tautological_ring.py",
+            "sha256": "c9cf9b46fa8c7f2207d6d0ebc3f3565518f6f29d324bb6b280c1626a772bbd12"
+          },
+          {
+            "path": "/opt/homebrew/Caskroom/miniforge/base/envs/axiomatic-gw-sage/lib/python3.12/site-packages/admcycles/admcycles.py",
+            "sha256": "19e9e77c58299b387abadab76f2e1f1b1b2b63808f3dbbd0e44499a930db9a1b"
+          },
+          {
+            "path": "/Users/jma/Documents/gitlab/gkm_localisation/gkm_localization/stable_map.py",
+            "sha256": "4e88e18487577642f86bcf1d8762c8ac117d4bfe4329c095bbb6fdd38258c53a"
+          },
+          {
+            "path": "/Users/jma/Documents/gitlab/gkm_localisation/gkm_localization/hodge_integral.py",
+            "sha256": "862d4f8c9b4915b96ce9f62c789f079ea82c8fecdb43d5f1c407a00ba424d043"
+          }
+        ],
+        "status": "targeted_read_only_source_review",
+        "validation": {
+          "candidate_comparison": {
+            "path": "/private/tmp/gw_hodge_geometric_bridge_review_20261005/degree-two-candidate-comparison.json",
+            "sha256": "5f82516daf869efe451db0523b28f181f7309e13f548812954415b23100f5727"
+          },
+          "comparison_script": {
+            "path": "/private/tmp/gw_hodge_geometric_bridge_review_20261005/check_degree_two.py",
+            "sha256": "7577cd3cf70c519945c492f169419a442bb7535addde3326e01de17f24e2e252"
+          },
+          "performed": "Read-only project searches, installed producer/admcycles source inspection, primary-source PDF text verification, stdlib exact rational graph-isomorphism comparison. No repository changes or Lean/Sage builds."
+        }
+      },
+      "source": {
+        "path": "/tmp/gw_hodge_geometric_bridge_review_20261005/review.json",
+        "sha256": "fdd6e66b2b6ed1a57eba01cb5ec390341fa6a6c4568805e7abeea316f607aa86"
+      }
+    },
+    "public_acceptance": {
+      "contents": {
+        "actual_repository_build": false,
+        "audit_results": [
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "declaration": "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso0"
+          },
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "declaration": "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso1"
+          },
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "declaration": "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso2"
+          },
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "declaration": "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso3"
+          },
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "declaration": "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso4"
+          },
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "declaration": "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso5"
+          },
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "declaration": "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso6"
+          },
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "declaration": "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso7"
+          },
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "declaration": "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso8"
+          },
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "declaration": "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso9"
+          },
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "declaration": "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso10"
+          },
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "declaration": "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso11"
+          },
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "declaration": "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso12"
+          },
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "declaration": "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso13"
+          },
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "declaration": "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso14"
+          },
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "declaration": "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso15"
+          },
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "declaration": "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso16"
+          },
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "declaration": "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso17"
+          },
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "declaration": "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso18"
+          },
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "declaration": "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso19"
+          },
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "declaration": "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso20"
+          },
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "declaration": "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso21"
+          },
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "declaration": "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso22"
+          },
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "declaration": "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso23"
+          },
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "declaration": "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso24"
+          },
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "declaration": "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso25"
+          },
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "declaration": "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso26"
+          },
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "declaration": "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso27"
+          },
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "declaration": "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso28"
+          },
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "declaration": "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso29"
+          },
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "declaration": "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso30"
+          },
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "declaration": "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.columns_1_1_eq"
+          },
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "declaration": "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.grouped_1_1_eq"
+          },
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "declaration": "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.raw_1_1_eq_collected"
+          },
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "declaration": "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.columns_0_2_eq"
+          },
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "declaration": "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.grouped_0_2_eq"
+          },
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "declaration": "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.raw_0_2_eq_collected"
+          },
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "declaration": "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.raw_degree_two_equal"
+          },
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "declaration": "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.map_raw_degree_two_equal"
+          },
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "declaration": "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.plane_candidateClass_eq_raw_degree_two"
+          },
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "declaration": "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.oneBlowup_candidateClass_eq_raw_degree_two"
+          },
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "declaration": "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.twoBlowups_candidateClass_eq_raw_degree_two"
+          },
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "declaration": "AxiomaticGWTest.HodgeDegreeTwoRawRelation.exact_relation_under_linear_map"
+          },
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "declaration": "AxiomaticGWTest.HodgeDegreeTwoRawRelation.common_expression_degree"
+          },
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "declaration": "AxiomaticGWTest.HodgeDegreeTwoRawRelation.oneBlowup_complete_class"
+          },
+          {
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "declaration": "AxiomaticGWTest.HodgeDegreeTwoRawRelation.blowup_complete_class_difference"
+          }
+        ],
+        "audit_source": {
+          "path": "/private/tmp/gw_hodge_degree_two_v2_20261005/public-audit.lean",
+          "sha256": "2c028db12a52bf3950bec25598499539b4d4c90f994f254b6ad4386f065e4103"
+        },
+        "development_history": [
+          {
+            "failure": "Production passed; the independent consumer used unqualified add_smul, which selected the unit coefficient before the intended numeric coefficient.",
+            "log": "{\"start\": \"AxiomaticGW/GKM/Fixtures/HodgeDegreeTwoRawRelation.lean\", \"command\": [\"/Users/jma/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lean\", \"--memory=2048\", \"--root=/private/tmp/gw_blowup_public_probe_20261004\", \"-o\", \"/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGW/GKM/Fixtures/HodgeDegreeTwoRawRelation.olean\", \"/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGW/GKM/Fixtures/HodgeDegreeTwoRawRelation.lean\"]}\n{\"start\": \"AxiomaticGWTest/GKM/HodgeDegreeTwoRawRelation.lean\", \"command\": [\"/Users/jma/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lean\", \"--memory=2048\", \"--root=/private/tmp/gw_blowup_public_probe_20261004\", \"-o\", \"/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGWTest/GKM/HodgeDegreeTwoRawRelation.olean\", \"/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGWTest/GKM/HodgeDegreeTwoRawRelation.lean\"]}\n/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGWTest/GKM/HodgeDegreeTwoRawRelation.lean:47:81: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern\n  1 \u2022 ?b\nin the target expression\n  -(x ^ 2 - x * y + y ^ 2) \u2022 A.map raw_0_0_degree0 + 7 \u2022 A.map raw_0_2_degree2 +\n        ((x ^ 2 - x * y) \u2022 A.map raw_0_0_degree0 + y ^ 2 \u2022 A.map raw_0_0_degree0) -\n      (7 + 1) \u2022 A.map raw_0_2_degree2 =\n    -A.map raw_0_2_degree2\n\nC : StableCurveCohomology Coefficient\nA : StrataRealization C 2 (Fin 1)\n\u22a2 -(x ^ 2 - x * y + y ^ 2) \u2022 A.map raw_0_0_degree0 + 7 \u2022 A.map raw_0_2_degree2 +\n        ((x ^ 2 - x * y) \u2022 A.map raw_0_0_degree0 + y ^ 2 \u2022 A.map raw_0_0_degree0) -\n      (7 + 1) \u2022 A.map raw_0_2_degree2 =\n    -A.map raw_0_2_degree2\n{\"status\": \"public_module_failed\", \"manifest\": \"/private/tmp/gw_hodge_degree_two_v1_20261005/public-probe-manifest.json\", \"commands\": [{\"command\": [\"/Users/jma/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lean\", \"--memory=2048\", \"--root=/private/tmp/gw_blowup_public_probe_20261004\", \"-o\", \"/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGW/GKM/Fixtures/HodgeDegreeTwoRawRelation.olean\", \"/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGW/GKM/Fixtures/HodgeDegreeTwoRawRelation.lean\"], \"exit_code\": 0, \"elapsed_seconds\": 5.764}, {\"command\": [\"/Users/jma/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lean\", \"--memory=2048\", \"--root=/private/tmp/gw_blowup_public_probe_20261004\", \"-o\", \"/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGWTest/GKM/HodgeDegreeTwoRawRelation.olean\", \"/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGWTest/GKM/HodgeDegreeTwoRawRelation.lean\"], \"exit_code\": 1, \"elapsed_seconds\": 1.146}], \"elapsed_seconds\": 6.91, \"isolated_root\": \"/private/tmp/gw_blowup_public_probe_20261004\", \"scope\": \"Exact source modules and separate public imports; no repository edits\"}\n",
+            "metadata": {
+              "children_ru_maxrss_raw": 1171783680,
+              "children_ru_maxrss_unit": "bytes",
+              "command": [
+                "python3",
+                "/tmp/gw_hodge_degree_two_probe_runner_20261005.py",
+                "/tmp/gw_hodge_degree_two_v1_20261005/public-probe-manifest.json"
+              ],
+              "elapsed_seconds": 9.512,
+              "exit_code": 1,
+              "log": "/tmp/gw_hodge_degree_two_public_v1_20261005.log",
+              "resource_note": "Wrapper child usage may omit descendants on interrupted runs.",
+              "status": "failed"
+            },
+            "repair": "Specify add_smul (7 : Coefficient) 1 (A.map raw_0_2_degree2). V2 production is byte-identical.",
+            "version": "v1"
+          }
+        ],
+        "log": {
+          "pin": {
+            "path": "/tmp/gw_hodge_degree_two_public_v2_20261005.log",
+            "sha256": "e3f31dae34b0b1a8e6fac10ecf54ef5eb03ee5922082ab8ddba24b12256d1283"
+          },
+          "text": "{\"start\": \"AxiomaticGW/GKM/Fixtures/HodgeDegreeTwoRawRelation.lean\", \"command\": [\"/Users/jma/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lean\", \"--memory=2048\", \"--root=/private/tmp/gw_blowup_public_probe_20261004\", \"-o\", \"/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGW/GKM/Fixtures/HodgeDegreeTwoRawRelation.olean\", \"/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGW/GKM/Fixtures/HodgeDegreeTwoRawRelation.lean\"]}\n{\"start\": \"AxiomaticGWTest/GKM/HodgeDegreeTwoRawRelation.lean\", \"command\": [\"/Users/jma/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lean\", \"--memory=2048\", \"--root=/private/tmp/gw_blowup_public_probe_20261004\", \"-o\", \"/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGWTest/GKM/HodgeDegreeTwoRawRelation.olean\", \"/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGWTest/GKM/HodgeDegreeTwoRawRelation.lean\"]}\n'AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso0' depends on axioms: [propext, Classical.choice, Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso1' depends on axioms: [propext, Classical.choice, Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso2' depends on axioms: [propext, Classical.choice, Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso3' depends on axioms: [propext, Classical.choice, Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso4' depends on axioms: [propext, Classical.choice, Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso5' depends on axioms: [propext, Classical.choice, Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso6' depends on axioms: [propext, Classical.choice, Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso7' depends on axioms: [propext, Classical.choice, Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso8' depends on axioms: [propext, Classical.choice, Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso9' depends on axioms: [propext, Classical.choice, Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso10' depends on axioms: [propext, Classical.choice, Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso11' depends on axioms: [propext, Classical.choice, Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso12' depends on axioms: [propext, Classical.choice, Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso13' depends on axioms: [propext, Classical.choice, Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso14' depends on axioms: [propext, Classical.choice, Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso15' depends on axioms: [propext, Classical.choice, Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso16' depends on axioms: [propext, Classical.choice, Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso17' depends on axioms: [propext, Classical.choice, Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso18' depends on axioms: [propext, Classical.choice, Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso19' depends on axioms: [propext, Classical.choice, Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso20' depends on axioms: [propext, Classical.choice, Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso21' depends on axioms: [propext, Classical.choice, Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso22' depends on axioms: [propext, Classical.choice, Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso23' depends on axioms: [propext, Classical.choice, Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso24' depends on axioms: [propext, Classical.choice, Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso25' depends on axioms: [propext, Classical.choice, Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso26' depends on axioms: [propext, Classical.choice, Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso27' depends on axioms: [propext, Classical.choice, Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso28' depends on axioms: [propext, Classical.choice, Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso29' depends on axioms: [propext, Classical.choice, Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso30' depends on axioms: [propext, Classical.choice, Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.columns_1_1_eq' depends on axioms: [propext, Classical.choice, Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.grouped_1_1_eq' depends on axioms: [propext, Classical.choice, Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.raw_1_1_eq_collected' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.columns_0_2_eq' depends on axioms: [propext, Classical.choice, Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.grouped_0_2_eq' depends on axioms: [propext, Classical.choice, Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.raw_0_2_eq_collected' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.raw_degree_two_equal' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.map_raw_degree_two_equal' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.plane_candidateClass_eq_raw_degree_two' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.oneBlowup_candidateClass_eq_raw_degree_two' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.twoBlowups_candidateClass_eq_raw_degree_two' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGWTest.HodgeDegreeTwoRawRelation.exact_relation_under_linear_map' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGWTest.HodgeDegreeTwoRawRelation.common_expression_degree' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGWTest.HodgeDegreeTwoRawRelation.oneBlowup_complete_class' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGWTest.HodgeDegreeTwoRawRelation.blowup_complete_class_difference' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n{\"status\": \"passed\", \"manifest\": \"/private/tmp/gw_hodge_degree_two_v2_20261005/public-probe-manifest.json\", \"commands\": [{\"command\": [\"/Users/jma/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lean\", \"--memory=2048\", \"--root=/private/tmp/gw_blowup_public_probe_20261004\", \"-o\", \"/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGW/GKM/Fixtures/HodgeDegreeTwoRawRelation.olean\", \"/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGW/GKM/Fixtures/HodgeDegreeTwoRawRelation.lean\"], \"exit_code\": 0, \"elapsed_seconds\": 7.746}, {\"command\": [\"/Users/jma/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lean\", \"--memory=2048\", \"--root=/private/tmp/gw_blowup_public_probe_20261004\", \"-o\", \"/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGWTest/GKM/HodgeDegreeTwoRawRelation.olean\", \"/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGWTest/GKM/HodgeDegreeTwoRawRelation.lean\"], \"exit_code\": 0, \"elapsed_seconds\": 2.378}, {\"command\": [\"/Users/jma/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lean\", \"--memory=2048\", \"--root=/private/tmp/gw_blowup_public_probe_20261004\", \"/private/tmp/gw_blowup_public_probe_20261004/HodgeDegreeTwoAudit.lean\"], \"exit_code\": 0, \"elapsed_seconds\": 2.855}], \"elapsed_seconds\": 12.98, \"isolated_root\": \"/private/tmp/gw_blowup_public_probe_20261004\", \"scope\": \"Exact source modules and separate public imports; no repository edits\"}\n"
+        },
+        "pending": [
+          "Actual repository two-target build",
+          "Actual 46-name public audit",
+          "Actual integrated Python11 tests",
+          "Umbrella export and root target after concurrent full build",
+          "Geometric Hodge/product and GW/CohFT identification"
+        ],
+        "public_module_details": {
+          "commands": [
+            {
+              "command": [
+                "/Users/jma/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lean",
+                "--memory=2048",
+                "--root=/private/tmp/gw_blowup_public_probe_20261004",
+                "-o",
+                "/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGW/GKM/Fixtures/HodgeDegreeTwoRawRelation.olean",
+                "/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGW/GKM/Fixtures/HodgeDegreeTwoRawRelation.lean"
+              ],
+              "elapsed_seconds": 7.746,
+              "exit_code": 0
+            },
+            {
+              "command": [
+                "/Users/jma/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lean",
+                "--memory=2048",
+                "--root=/private/tmp/gw_blowup_public_probe_20261004",
+                "-o",
+                "/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGWTest/GKM/HodgeDegreeTwoRawRelation.olean",
+                "/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGWTest/GKM/HodgeDegreeTwoRawRelation.lean"
+              ],
+              "elapsed_seconds": 2.378,
+              "exit_code": 0
+            },
+            {
+              "command": [
+                "/Users/jma/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lean",
+                "--memory=2048",
+                "--root=/private/tmp/gw_blowup_public_probe_20261004",
+                "/private/tmp/gw_blowup_public_probe_20261004/HodgeDegreeTwoAudit.lean"
+              ],
+              "elapsed_seconds": 2.855,
+              "exit_code": 0
+            }
+          ],
+          "elapsed_seconds": 12.98,
+          "isolated_root": "/private/tmp/gw_blowup_public_probe_20261004",
+          "manifest": "/private/tmp/gw_hodge_degree_two_v2_20261005/public-probe-manifest.json",
+          "scope": "Exact source modules and separate public imports; no repository edits",
+          "status": "passed"
+        },
+        "python_checks": {
+          "command": [
+            "python3",
+            "/private/tmp/gw_hodge_degree_two_v2_20261005/scripts/test_admcycles_hodge_degree_two.py",
+            "--repository",
+            "/Users/jma/Documents/formalization/axiomatic_gw"
+          ],
+          "evidence": "Observed functions.exec tool output; no separate original persistent Python log.",
+          "exit_code": 0,
+          "tests": 11,
+          "unittest_seconds": 0.275
+        },
+        "scope": "Raw expression equality and rational-linear consequences only; no geometric Mumford/Hodge/product/GW/CohFT claim.",
+        "status": "isolated_public_modules_and_all_axioms_passed",
+        "warnings": [],
+        "wrapper": {
+          "data": {
+            "children_ru_maxrss_raw": 1098416128,
+            "children_ru_maxrss_unit": "bytes",
+            "command": [
+              "python3",
+              "/tmp/gw_hodge_degree_two_probe_runner_20261005.py",
+              "/tmp/gw_hodge_degree_two_v2_20261005/public-probe-manifest.json"
+            ],
+            "elapsed_seconds": 16.023,
+            "exit_code": 0,
+            "log": "/tmp/gw_hodge_degree_two_public_v2_20261005.log",
+            "resource_note": "Wrapper child usage may omit descendants on interrupted runs.",
+            "status": "passed"
+          },
+          "pin": {
+            "path": "/tmp/gw_hodge_degree_two_public_v2_20261005.json",
+            "sha256": "8628d07b6fc31b4d082d209702c2bb8522763b43b446c578fa882c9c9dc8d2c0"
+          }
+        }
+      },
+      "source": {
+        "path": "/private/tmp/gw_hodge_degree_two_v2_20261005/public-acceptance.json",
+        "sha256": "00f1df4d23d41b789bc8654d7f70e4e80b3399de4e0b3779d1a358a1622c1fe8"
+      }
+    },
+    "public_probe_manifest": {
+      "contents": {
+        "audit_names": [
+          "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso0",
+          "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso1",
+          "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso2",
+          "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso3",
+          "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso4",
+          "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso5",
+          "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso6",
+          "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso7",
+          "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso8",
+          "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso9",
+          "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso10",
+          "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso11",
+          "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso12",
+          "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso13",
+          "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso14",
+          "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso15",
+          "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso16",
+          "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso17",
+          "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso18",
+          "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso19",
+          "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso20",
+          "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso21",
+          "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso22",
+          "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso23",
+          "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso24",
+          "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso25",
+          "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso26",
+          "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso27",
+          "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso28",
+          "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso29",
+          "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso30",
+          "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.columns_1_1_eq",
+          "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.grouped_1_1_eq",
+          "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.raw_1_1_eq_collected",
+          "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.columns_0_2_eq",
+          "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.grouped_0_2_eq",
+          "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.raw_0_2_eq_collected",
+          "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.raw_degree_two_equal",
+          "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.map_raw_degree_two_equal",
+          "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.plane_candidateClass_eq_raw_degree_two",
+          "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.oneBlowup_candidateClass_eq_raw_degree_two",
+          "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.twoBlowups_candidateClass_eq_raw_degree_two",
+          "AxiomaticGWTest.HodgeDegreeTwoRawRelation.exact_relation_under_linear_map",
+          "AxiomaticGWTest.HodgeDegreeTwoRawRelation.common_expression_degree",
+          "AxiomaticGWTest.HodgeDegreeTwoRawRelation.oneBlowup_complete_class",
+          "AxiomaticGWTest.HodgeDegreeTwoRawRelation.blowup_complete_class_difference"
+        ],
+        "expected_audit_declarations": 46,
+        "public_modules": [
+          {
+            "destination": "AxiomaticGW/GKM/Fixtures/HodgeDegreeTwoRawRelation.lean",
+            "sha256": "7b90fce2a06975a21ca2dd88c43032eb6e46387d5cf48fb4a6ab76b2543afb8c",
+            "source": "/tmp/gw_hodge_degree_two_v2_20261005/AxiomaticGW/GKM/Fixtures/HodgeDegreeTwoRawRelation.lean"
+          },
+          {
+            "destination": "AxiomaticGWTest/GKM/HodgeDegreeTwoRawRelation.lean",
+            "sha256": "5e45d9ebabd9030a3544f692b9d4e0f2cefa53e941cb994da74c662abaf967f7",
+            "source": "/tmp/gw_hodge_degree_two_v2_20261005/AxiomaticGWTest/GKM/HodgeDegreeTwoRawRelation.lean"
+          }
+        ],
+        "scope": "Exact raw degree-two equality and complete linear assembly consequences; no Hodge/Mumford geometry."
+      },
+      "source": {
+        "path": "/private/tmp/gw_hodge_degree_two_v2_20261005/public-probe-manifest.json",
+        "sha256": "e01e34393fbdc29ae209d28ee14dfa4ea8bc8474c1106c4017f35c7d5c2b6352"
+      }
+    }
+  },
+  "recorded_at_utc": "2026-10-05T06:48:28.836872+00:00",
+  "remaining": [
+    "Hodge/GRR and finite raw-product geometric interpretation",
+    "Virtual Euler/stabilization and geometric ordinary comparison",
+    "Total equivariant grading",
+    "Actual class-valued producer semisimple CohFT",
+    "Fixed research suites",
+    "Umbrella export and full-project validation"
+  ],
+  "schema_version": 1,
+  "source_binding": {
+    "actual_left": "raw_1_1_degree2, all28 occurrences",
+    "actual_right": "(2:Q) \u2022 raw_0_2_degree2, all16 occurrences",
+    "checked_graph_identifications": 31,
+    "coefficient_convention": "Exact QQ coordinates with raw ordered gluing normalization",
+    "fixed_frame": "All16 actual raw (0,2) source columns",
+    "preserved": [
+      "Vertex genera",
+      "All kappa1..4 exponents",
+      "External marking and psi",
+      "Node incidence",
+      "Ordered branch psi",
+      "Halfedge-label provenance",
+      "Every original source occurrence and rational coefficient"
+    ],
+    "relation_search_or_heavy_runtime_at_replay": false,
+    "source_code_pins_checked_before_import": true,
+    "whole_raw_decoder_reproduced_byte_identical": true
+  },
+  "source_pins": {
+    "AxiomaticGW/GKM/Fixtures/AdmcyclesHodgeStrataCandidates.lean": {
+      "bytes": 496592,
+      "sha256": "244eaf08f741057b92113ee4b0c4a48b2185b55350473bc28286460ea07b651c"
+    },
+    "AxiomaticGW/GKM/Fixtures/AdmcyclesHodgeStrataIsomorphisms.lean": {
+      "bytes": 93380,
+      "sha256": "ddb7e9cfb94ced658a96883782aed3072ae8d7fe1763ff4390e021dcafe3f26a"
+    },
+    "AxiomaticGW/GKM/Fixtures/HodgeDegreeTwoRawRelation.lean": {
+      "bytes": 29250,
+      "sha256": "7b90fce2a06975a21ca2dd88c43032eb6e46387d5cf48fb4a6ab76b2543afb8c"
+    },
+    "AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroRawAssembly.lean": {
+      "bytes": 7057,
+      "sha256": "a3d9c5ef4e56e42f246add66295653b2698974c9f16874e6a3b15bc5a9275e8b"
+    },
+    "AxiomaticGWTest/GKM/HodgeDegreeTwoRawRelation.lean": {
+      "bytes": 2145,
+      "sha256": "5e45d9ebabd9030a3544f692b9d4e0f2cefa53e941cb994da74c662abaf967f7"
+    },
+    "environments/admcycles-hodge-degree-two-witness.json": {
+      "bytes": 30757,
+      "sha256": "a68d166f6b3063ac4295b8104304e0644f2caca47d6f1a869a5d846fb591cef1"
+    },
+    "environments/admcycles-hodge-strata-candidates.json": {
+      "bytes": 776909,
+      "sha256": "1ec7e5df068bd9edbe896dc5bf6f20f59b0e42e81896d2e4364f11efc0c6ec32"
+    },
+    "environments/gkm-degree-zero-hodge-strata-factored-candidate.json": {
+      "bytes": 1169158,
+      "sha256": "5be60671ddc68304610987123f048a6c010504cf27f3b690cd1e4d4e39227399"
+    },
+    "scripts/export_admcycles_certificate.py": {
+      "bytes": 14599,
+      "sha256": "28b9d7b9c81d10ef241f6a7a9082cf29047967ddf03ddf1d4433057b6b8d05f8"
+    },
+    "scripts/export_admcycles_hodge_certificate.py": {
+      "bytes": 20151,
+      "sha256": "adce4b8eaf05e29b952aa23d5c0528446653eb6c0d7f24fec16dbafaf954646d"
+    },
+    "scripts/export_admcycles_hodge_degree_two.py": {
+      "bytes": 21486,
+      "sha256": "1a3eefa2ade6c90f0e379c18a34dc085aa8d9379b1efd9f165e23975aae12a53"
+    },
+    "scripts/export_admcycles_hodge_strata.py": {
+      "bytes": 14789,
+      "sha256": "d17ea106eb0f4ae3b52c8929f205dc55f0c882caa996634ea6158f0dc806436e"
+    },
+    "scripts/test_admcycles_hodge_degree_two.py": {
+      "bytes": 6829,
+      "sha256": "ed7e310720264fd4a859d89d47df10086bbeea03aefd2fef2628a162a2915f7c"
+    }
+  },
+  "status": "actual_raw_degree_two_identity_and_complete_assemblies_verified_umbrella_pending",
+  "validation": {
+    "actual_public_axiom_audit": {
+      "audit_source": {
+        "path": "/tmp/gw_hodge_degree_two_integrated_audit_20261005.lean",
+        "sha256": "fdf48b79415ddf89e729452e3b8b1a49ea50ce13e451afc2df9949c356cb30fc",
+        "text": "module\npublic import AxiomaticGWTest.GKM.HodgeDegreeTwoRawRelation\n\n#print axioms AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso0\n#print axioms AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso1\n#print axioms AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso2\n#print axioms AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso3\n#print axioms AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso4\n#print axioms AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso5\n#print axioms AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso6\n#print axioms AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso7\n#print axioms AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso8\n#print axioms AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso9\n#print axioms AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso10\n#print axioms AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso11\n#print axioms AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso12\n#print axioms AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso13\n#print axioms AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso14\n#print axioms AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso15\n#print axioms AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso16\n#print axioms AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso17\n#print axioms AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso18\n#print axioms AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso19\n#print axioms AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso20\n#print axioms AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso21\n#print axioms AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso22\n#print axioms AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso23\n#print axioms AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso24\n#print axioms AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso25\n#print axioms AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso26\n#print axioms AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso27\n#print axioms AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso28\n#print axioms AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso29\n#print axioms AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso30\n#print axioms AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.columns_1_1_eq\n#print axioms AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.grouped_1_1_eq\n#print axioms AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.raw_1_1_eq_collected\n#print axioms AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.columns_0_2_eq\n#print axioms AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.grouped_0_2_eq\n#print axioms AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.raw_0_2_eq_collected\n#print axioms AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.raw_degree_two_equal\n#print axioms AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.map_raw_degree_two_equal\n#print axioms AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.plane_candidateClass_eq_raw_degree_two\n#print axioms AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.oneBlowup_candidateClass_eq_raw_degree_two\n#print axioms AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.twoBlowups_candidateClass_eq_raw_degree_two\n#print axioms AxiomaticGWTest.HodgeDegreeTwoRawRelation.exact_relation_under_linear_map\n#print axioms AxiomaticGWTest.HodgeDegreeTwoRawRelation.common_expression_degree\n#print axioms AxiomaticGWTest.HodgeDegreeTwoRawRelation.oneBlowup_complete_class\n#print axioms AxiomaticGWTest.HodgeDegreeTwoRawRelation.blowup_complete_class_difference\n"
+      },
+      "axioms": {
+        "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.columns_0_2_eq": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.columns_1_1_eq": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.grouped_0_2_eq": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.grouped_1_1_eq": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.map_raw_degree_two_equal": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.oneBlowup_candidateClass_eq_raw_degree_two": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.plane_candidateClass_eq_raw_degree_two": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso0": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso1": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso10": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso11": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso12": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso13": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso14": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso15": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso16": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso17": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso18": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso19": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso2": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso20": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso21": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso22": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso23": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso24": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso25": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso26": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso27": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso28": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso29": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso3": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso30": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso4": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso5": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso6": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso7": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso8": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso9": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.raw_0_2_eq_collected": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.raw_1_1_eq_collected": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.raw_degree_two_equal": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.twoBlowups_candidateClass_eq_raw_degree_two": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGWTest.HodgeDegreeTwoRawRelation.blowup_complete_class_difference": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGWTest.HodgeDegreeTwoRawRelation.common_expression_degree": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGWTest.HodgeDegreeTwoRawRelation.exact_relation_under_linear_map": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGWTest.HodgeDegreeTwoRawRelation.oneBlowup_complete_class": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "declaration_count": 46,
+      "log": {
+        "path": "/tmp/gw_hodge_degree_two_integrated_axioms_20261005.log",
+        "sha256": "5ce3ea0d540174876568f469f4a474b573955d6783092db1bc580f0f1502b3e9",
+        "text": "'AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso0' depends on axioms: [propext, Classical.choice, Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso1' depends on axioms: [propext, Classical.choice, Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso2' depends on axioms: [propext, Classical.choice, Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso3' depends on axioms: [propext, Classical.choice, Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso4' depends on axioms: [propext, Classical.choice, Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso5' depends on axioms: [propext, Classical.choice, Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso6' depends on axioms: [propext, Classical.choice, Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso7' depends on axioms: [propext, Classical.choice, Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso8' depends on axioms: [propext, Classical.choice, Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso9' depends on axioms: [propext, Classical.choice, Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso10' depends on axioms: [propext, Classical.choice, Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso11' depends on axioms: [propext, Classical.choice, Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso12' depends on axioms: [propext, Classical.choice, Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso13' depends on axioms: [propext, Classical.choice, Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso14' depends on axioms: [propext, Classical.choice, Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso15' depends on axioms: [propext, Classical.choice, Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso16' depends on axioms: [propext, Classical.choice, Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso17' depends on axioms: [propext, Classical.choice, Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso18' depends on axioms: [propext, Classical.choice, Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso19' depends on axioms: [propext, Classical.choice, Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso20' depends on axioms: [propext, Classical.choice, Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso21' depends on axioms: [propext, Classical.choice, Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso22' depends on axioms: [propext, Classical.choice, Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso23' depends on axioms: [propext, Classical.choice, Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso24' depends on axioms: [propext, Classical.choice, Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso25' depends on axioms: [propext, Classical.choice, Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso26' depends on axioms: [propext, Classical.choice, Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso27' depends on axioms: [propext, Classical.choice, Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso28' depends on axioms: [propext, Classical.choice, Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso29' depends on axioms: [propext, Classical.choice, Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.rawGraphIso30' depends on axioms: [propext, Classical.choice, Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.columns_1_1_eq' depends on axioms: [propext, Classical.choice, Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.grouped_1_1_eq' depends on axioms: [propext, Classical.choice, Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.raw_1_1_eq_collected' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.columns_0_2_eq' depends on axioms: [propext, Classical.choice, Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.grouped_0_2_eq' depends on axioms: [propext, Classical.choice, Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.raw_0_2_eq_collected' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.raw_degree_two_equal' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.map_raw_degree_two_equal' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.plane_candidateClass_eq_raw_degree_two' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.oneBlowup_candidateClass_eq_raw_degree_two' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeTwoRawRelation.twoBlowups_candidateClass_eq_raw_degree_two' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGWTest.HodgeDegreeTwoRawRelation.exact_relation_under_linear_map' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGWTest.HodgeDegreeTwoRawRelation.common_expression_degree' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGWTest.HodgeDegreeTwoRawRelation.oneBlowup_complete_class' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGWTest.HodgeDegreeTwoRawRelation.blowup_complete_class_difference' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n"
+      },
+      "metadata": {
+        "children_ru_maxrss_raw": 1072496640,
+        "children_ru_maxrss_unit": "bytes",
+        "command": [
+          "lake",
+          "env",
+          "lean",
+          "--memory=2048",
+          "/tmp/gw_hodge_degree_two_integrated_audit_20261005.lean"
+        ],
+        "elapsed_seconds": 3.819,
+        "exit_code": 0,
+        "log": "/tmp/gw_hodge_degree_two_integrated_axioms_20261005.log",
+        "resource_note": "Wrapper child usage may omit descendants on interrupted runs.",
+        "status": "passed"
+      },
+      "metadata_source": {
+        "path": "/tmp/gw_hodge_degree_two_integrated_axioms_20261005.json",
+        "sha256": "f3dbef01e12248306c72a340e39292856991923e6fc94d37febe4658bad9763d"
+      }
+    },
+    "actual_python_checks": {
+      "log": {
+        "path": "/tmp/gw_hodge_degree_two_integrated_python_20261005.log",
+        "sha256": "2ecdbd4c2b0e00c5af795cb2fc8683eaf642fa3348fbce263e8f9b1768cbe877",
+        "text": "...........\n----------------------------------------------------------------------\nRan 11 tests in 0.268s\n\nOK\n"
+      },
+      "metadata": {
+        "children_ru_maxrss_raw": 27377664,
+        "children_ru_maxrss_unit": "bytes",
+        "command": [
+          "python3",
+          "scripts/test_admcycles_hodge_degree_two.py"
+        ],
+        "elapsed_seconds": 0.383,
+        "exit_code": 0,
+        "log": "/tmp/gw_hodge_degree_two_integrated_python_20261005.log",
+        "resource_note": "Wrapper child usage may omit descendants on interrupted runs.",
+        "status": "passed"
+      },
+      "metadata_source": {
+        "path": "/tmp/gw_hodge_degree_two_integrated_python_20261005.json",
+        "sha256": "45a709b43eeb83d45bf042cd914a38599ebef46fe8ede8d82dc06a24b441f510"
+      },
+      "tests": 11,
+      "unittest_seconds": 0.268
+    },
+    "actual_targeted_build": {
+      "log": {
+        "path": "/tmp/gw_hodge_degree_two_integrated_build_20261005.log",
+        "sha256": "0d4abc0685fede4fac31d9a02bb0046287a9ec62cb8ff235f6df21f50879093e",
+        "text": "\u2714 [1825/1826] Built AxiomaticGW.GKM.Fixtures.HodgeDegreeTwoRawRelation (6.5s)\n\u2714 [1826/1826] Built AxiomaticGWTest.GKM.HodgeDegreeTwoRawRelation (2.1s)\nBuild completed successfully (1826 jobs).\n"
+      },
+      "metadata": {
+        "children_ru_maxrss_raw": 1013039104,
+        "children_ru_maxrss_unit": "bytes",
+        "command": [
+          "lake",
+          "build",
+          "AxiomaticGW.GKM.Fixtures.HodgeDegreeTwoRawRelation",
+          "AxiomaticGWTest.GKM.HodgeDegreeTwoRawRelation"
+        ],
+        "elapsed_seconds": 12.334,
+        "exit_code": 0,
+        "log": "/tmp/gw_hodge_degree_two_integrated_build_20261005.log",
+        "resource_note": "Wrapper child usage may omit descendants on interrupted runs.",
+        "status": "passed"
+      },
+      "metadata_source": {
+        "path": "/tmp/gw_hodge_degree_two_integrated_build_20261005.json",
+        "sha256": "accbd27e22e88cd399f30d7b983c264d1eada5d2f90d9918486976d8ed0da10d"
+      }
+    }
+  }
+}

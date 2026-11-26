@@ -1,0 +1,111 @@
+{
+  "command": "lake env lean /tmp/gw_gkm_curve_certificate_axioms_20261002.lean",
+  "declarations": [
+    {
+      "declaration": "AxiomaticGW.GKM.CurveConventionCertificate.latticeMatrix_mulVec",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "AxiomaticGW.GKM.CurveConventionCertificate.Accepts.transport_correct",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "AxiomaticGW.GKM.CurveConventionCertificate.Accepts.transport_injective",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "AxiomaticGW.GKM.CurveConventionCertificate.Accepts.transport_add",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "AxiomaticGW.GKM.CurveConventionCertificate.Accepts.energy_correct",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "AxiomaticGW.GKM.CurveConventionCertificate.Accepts.edge_firstChern",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "AxiomaticGW.GKM.CurveConventionCertificate.Accepts.intersection_trace",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "AxiomaticGW.GKM.CurveConventionCertificate.Accepts.intersections_specialize",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "AxiomaticGW.GKM.CurveReplay.Plane.accepted",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "AxiomaticGW.GKM.CurveReplay.OneBlowup.accepted",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "AxiomaticGW.GKM.CurveReplay.TwoBlowups.accepted",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    }
+  ],
+  "scope": "full curve and invariant-edge acceptance and surface-API interpretation; no geometric localization or GW values",
+  "source_sha256": {
+    "AxiomaticGW/GKM/CurveConventionCertificate.lean": "2e478448ca347d32e8ef13f657d5fa864a6f02f070351c3692de9f50f5dcef4a",
+    "AxiomaticGW/GKM/Fixtures/CurveFrames.lean": "f3033e230af729fa88f2f04452ccbe460ffa6077b47afe01a2f64daac09f2469",
+    "AxiomaticGW/GKM/Fixtures/CurveReplay.lean": "8ad5340f75c63df113332df14fadac3a2b1a34454532ec76764b9305fa3f7b26",
+    "AxiomaticGW/GKM/EquivariantCoefficients.lean": "a1d14af6c9e9f078acf3f7ae23f1c1632ff1f845fdb54ba323f4d1f0d0f7d848",
+    "AxiomaticGW/GKM/StateSpaceCertificate.lean": "06372f3bf119d269b7b2d1801a99b1358c61e36436e9d5b1b8d60cd5402a6070",
+    "AxiomaticGW/GKM/Fixtures/SurfaceFrames.lean": "62599ffc29694cebb18fa7703e3910cb20f22b5c89f136a43f729c06312c943a",
+    "AxiomaticGW/Surfaces/CurveClasses.lean": "30814002532e28140557e4f4d2b60a45665b31de95e5288a5cca4f6211073fb3",
+    "AxiomaticGW/Surfaces/TargetData.lean": "8f89f978fce57a80983a65aa46b91087ed9f2ad22aad16d7e3f9c8b190d13517",
+    "AxiomaticGW/Surfaces/Cohomology.lean": "7555f04a59f7594547ae85f73787534b94df2023ccfe61b78699ff28c5876d35",
+    "scripts/export_gkm_curve_certificate.py": "7d9465a2d098b0ae2084d186f26a559fbd323cbc68099bfa0efd3f016c243b63",
+    "scripts/test_gkm_curve_certificate.py": "bb02b1fe3cdbc9b4fe43c94b14e65dda75af8a4307d094383313aac50abb11eb",
+    "scripts/export_gkm_certificate.py": "54c5052adbb569fb7ed4172ac1600b04a5b31506f8a77c16dface1bbfe10f19c",
+    "scripts/check_gkm_inputs.py": "ba2728773135a47a114b325287a098ece7165e95c6e7b5f8638f06e55c00376e",
+    "AxiomaticGWTest/GKM/CurveReplay.lean": "c5da49da57d589978004f44e9a49529cae86dbd1832c0639ddc9cdff1d1d45cf"
+  },
+  "status": "passed"
+}

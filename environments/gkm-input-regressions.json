@@ -1,0 +1,178 @@
+{
+  "status": "passed",
+  "sage_required": false,
+  "scope": "GKM candidate-data regression tests; no geometric or Lean certificate claim",
+  "input_sha256": "062a32a9919fa5ddf806c353f5bb56256ca5dca31d170c246b9bfa39c3b11376",
+  "cases": [
+    {
+      "case": "baseline",
+      "expected": "accepted",
+      "status": "passed"
+    },
+    {
+      "case": "equivalent_rational_representative",
+      "expected": "accepted",
+      "status": "passed"
+    },
+    {
+      "case": "reversed_edge_orientation",
+      "expected": "accepted",
+      "status": "passed"
+    },
+    {
+      "case": "boolean_schema",
+      "expected": "rejected",
+      "status": "passed"
+    },
+    {
+      "case": "boolean_producer_schema",
+      "expected": "rejected",
+      "status": "passed"
+    },
+    {
+      "case": "boolean_coefficient_degree",
+      "expected": "rejected",
+      "status": "passed"
+    },
+    {
+      "case": "changed_coefficient_encoding",
+      "expected": "rejected",
+      "status": "passed"
+    },
+    {
+      "case": "unsupported_cohft_claim",
+      "expected": "rejected",
+      "status": "passed"
+    },
+    {
+      "case": "changed_target",
+      "expected": "rejected",
+      "status": "passed"
+    },
+    {
+      "case": "changed_fan_ray",
+      "expected": "rejected",
+      "status": "passed"
+    },
+    {
+      "case": "changed_point_cone",
+      "expected": "rejected",
+      "status": "passed"
+    },
+    {
+      "case": "changed_tangent_character",
+      "expected": "rejected",
+      "status": "passed"
+    },
+    {
+      "case": "changed_basis_restriction",
+      "expected": "rejected",
+      "status": "passed"
+    },
+    {
+      "case": "changed_inverse_basis",
+      "expected": "rejected",
+      "status": "passed"
+    },
+    {
+      "case": "changed_metric",
+      "expected": "rejected",
+      "status": "passed"
+    },
+    {
+      "case": "changed_product",
+      "expected": "rejected",
+      "status": "passed"
+    },
+    {
+      "case": "changed_c1",
+      "expected": "rejected",
+      "status": "passed"
+    },
+    {
+      "case": "changed_energy",
+      "expected": "rejected",
+      "status": "passed"
+    },
+    {
+      "case": "changed_curve_transport",
+      "expected": "rejected",
+      "status": "passed"
+    },
+    {
+      "case": "changed_divisor_intersection",
+      "expected": "rejected",
+      "status": "passed"
+    },
+    {
+      "case": "changed_edge_wall",
+      "expected": "rejected",
+      "status": "passed"
+    },
+    {
+      "case": "same_energy_different_exceptional_class",
+      "expected": "rejected",
+      "status": "passed"
+    },
+    {
+      "case": "changed_normal_branch",
+      "expected": "rejected",
+      "status": "passed"
+    },
+    {
+      "case": "changed_normal_degree",
+      "expected": "rejected",
+      "status": "passed"
+    },
+    {
+      "case": "changed_query_class",
+      "expected": "rejected",
+      "status": "passed"
+    },
+    {
+      "case": "changed_query_descendant",
+      "expected": "rejected",
+      "status": "passed"
+    },
+    {
+      "case": "changed_query_label",
+      "expected": "rejected",
+      "status": "passed"
+    },
+    {
+      "case": "changed_query_value",
+      "expected": "rejected",
+      "status": "passed"
+    },
+    {
+      "case": "changed_unstable_arity_flag",
+      "expected": "rejected",
+      "status": "passed"
+    },
+    {
+      "case": "zero_denominator",
+      "expected": "rejected",
+      "status": "passed"
+    },
+    {
+      "case": "incorrect_nonzero_witness",
+      "expected": "rejected",
+      "status": "passed"
+    },
+    {
+      "case": "floating_coefficient",
+      "expected": "rejected",
+      "status": "passed"
+    },
+    {
+      "case": "negative_rational_denominator",
+      "expected": "rejected",
+      "status": "passed"
+    },
+    {
+      "case": "duplicate_json_key",
+      "expected": "rejected",
+      "status": "passed"
+    }
+  ]
+}

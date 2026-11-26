@@ -1,0 +1,10 @@
+/- Original full batch API assembled from exact accepted partitions and repaired components. -/
+module
+
+public import AxiomaticGW.Surfaces.Fixtures.BlowupF1CompleteHComponentsBatch22AAA
+public import AxiomaticGW.Surfaces.Fixtures.BlowupF1CompleteHComponentsBatch22AABB
+public import AxiomaticGW.Surfaces.Fixtures.BlowupF1CompleteHComponentsBatch22AB
+public import AxiomaticGW.Surfaces.Fixtures.BlowupF1CompleteHComponentsBatch22BA
+public import AxiomaticGW.Surfaces.Fixtures.BlowupF1CompleteHComponentsBatch22BBAB
+public import AxiomaticGW.Surfaces.Fixtures.BlowupF1CompleteHComponentsBatch22BBB
+public import AxiomaticGW.Surfaces.Fixtures.BlowupF1CompleteHComponentsBatch22RepairedEntries

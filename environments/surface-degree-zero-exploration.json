@@ -1,0 +1,636 @@
+{
+  "cases": [
+    {
+      "constant_variables": 10,
+      "curve": [
+        1
+      ],
+      "extra_markings": 1,
+      "input_monomials": 13,
+      "input_variables": 12,
+      "leading_coefficient": [
+        -9,
+        1
+      ],
+      "leading_variable": [
+        "query",
+        1,
+        [
+          1
+        ],
+        [
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            0
+          ]
+        ]
+      ],
+      "output_monomials": 1,
+      "residual_point_queries": 1,
+      "target": "P2",
+      "terms": [
+        [
+          [
+            [
+              "query",
+              1,
+              [
+                1
+              ],
+              [
+                [
+                  2,
+                  0
+                ],
+                [
+                  2,
+                  0
+                ],
+                [
+                  2,
+                  0
+                ]
+              ]
+            ]
+          ],
+          [
+            -9,
+            1
+          ]
+        ]
+      ]
+    },
+    {
+      "constant_variables": 16,
+      "curve": [
+        1,
+        1
+      ],
+      "extra_markings": 1,
+      "input_monomials": 23,
+      "input_variables": 21,
+      "leading_coefficient": [
+        -9,
+        1
+      ],
+      "leading_variable": [
+        "query",
+        1,
+        [
+          1,
+          1
+        ],
+        [
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            0
+          ]
+        ]
+      ],
+      "output_monomials": 4,
+      "residual_point_queries": 5,
+      "target": "F1",
+      "terms": [
+        [
+          [
+            [
+              "query",
+              0,
+              [
+                0,
+                1
+              ],
+              [
+                [
+                  2,
+                  0
+                ]
+              ]
+            ],
+            [
+              "query",
+              0,
+              [
+                1,
+                0
+              ],
+              []
+            ]
+          ],
+          [
+            1,
+            8
+          ]
+        ],
+        [
+          [
+            [
+              "query",
+              0,
+              [
+                0,
+                1
+              ],
+              [
+                [
+                  2,
+                  0
+                ]
+              ]
+            ],
+            [
+              "query",
+              1,
+              [
+                1,
+                0
+              ],
+              [
+                [
+                  2,
+                  0
+                ]
+              ]
+            ]
+          ],
+          [
+            -21,
+            1
+          ]
+        ],
+        [
+          [
+            [
+              "query",
+              0,
+              [
+                1,
+                1
+              ],
+              [
+                [
+                  2,
+                  0
+                ],
+                [
+                  2,
+                  0
+                ]
+              ]
+            ]
+          ],
+          [
+            -1,
+            8
+          ]
+        ],
+        [
+          [
+            [
+              "query",
+              1,
+              [
+                1,
+                1
+              ],
+              [
+                [
+                  2,
+                  0
+                ],
+                [
+                  2,
+                  0
+                ],
+                [
+                  2,
+                  0
+                ]
+              ]
+            ]
+          ],
+          [
+            -9,
+            1
+          ]
+        ]
+      ]
+    },
+    {
+      "constant_variables": 22,
+      "curve": [
+        1,
+        1,
+        1
+      ],
+      "extra_markings": 1,
+      "input_monomials": 40,
+      "input_variables": 33,
+      "leading_coefficient": [
+        -9,
+        1
+      ],
+      "leading_variable": [
+        "query",
+        1,
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            0
+          ]
+        ]
+      ],
+      "output_monomials": 8,
+      "residual_point_queries": 11,
+      "target": "Bl2P2",
+      "terms": [
+        [
+          [
+            [
+              "query",
+              0,
+              [
+                0,
+                0,
+                1
+              ],
+              []
+            ],
+            [
+              "query",
+              0,
+              [
+                1,
+                1,
+                0
+              ],
+              [
+                [
+                  2,
+                  0
+                ]
+              ]
+            ]
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        [
+          [
+            [
+              "query",
+              0,
+              [
+                0,
+                0,
+                1
+              ],
+              []
+            ],
+            [
+              "query",
+              1,
+              [
+                1,
+                1,
+                0
+              ],
+              [
+                [
+                  2,
+                  0
+                ],
+                [
+                  2,
+                  0
+                ]
+              ]
+            ]
+          ],
+          [
+            -42,
+            1
+          ]
+        ],
+        [
+          [
+            [
+              "query",
+              0,
+              [
+                0,
+                1,
+                0
+              ],
+              []
+            ],
+            [
+              "query",
+              0,
+              [
+                1,
+                0,
+                1
+              ],
+              [
+                [
+                  2,
+                  0
+                ]
+              ]
+            ]
+          ],
+          [
+            1,
+            8
+          ]
+        ],
+        [
+          [
+            [
+              "query",
+              0,
+              [
+                0,
+                1,
+                1
+              ],
+              [
+                [
+                  2,
+                  0
+                ]
+              ]
+            ],
+            [
+              "query",
+              0,
+              [
+                1,
+                0,
+                0
+              ],
+              []
+            ]
+          ],
+          [
+            1,
+            8
+          ]
+        ],
+        [
+          [
+            [
+              "query",
+              0,
+              [
+                0,
+                1,
+                1
+              ],
+              [
+                [
+                  2,
+                  0
+                ]
+              ]
+            ],
+            [
+              "query",
+              1,
+              [
+                1,
+                0,
+                0
+              ],
+              [
+                [
+                  2,
+                  0
+                ]
+              ]
+            ]
+          ],
+          [
+            -21,
+            1
+          ]
+        ],
+        [
+          [
+            [
+              "query",
+              0,
+              [
+                1,
+                0,
+                1
+              ],
+              [
+                [
+                  2,
+                  0
+                ]
+              ]
+            ],
+            [
+              "query",
+              1,
+              [
+                0,
+                1,
+                0
+              ],
+              [
+                [
+                  2,
+                  0
+                ]
+              ]
+            ]
+          ],
+          [
+            -21,
+            1
+          ]
+        ],
+        [
+          [
+            [
+              "query",
+              0,
+              [
+                1,
+                1,
+                1
+              ],
+              [
+                [
+                  2,
+                  0
+                ],
+                [
+                  2,
+                  0
+                ]
+              ]
+            ]
+          ],
+          [
+            -1,
+            4
+          ]
+        ],
+        [
+          [
+            [
+              "query",
+              1,
+              [
+                1,
+                1,
+                1
+              ],
+              [
+                [
+                  2,
+                  0
+                ],
+                [
+                  2,
+                  0
+                ],
+                [
+                  2,
+                  0
+                ]
+              ]
+            ]
+          ],
+          [
+            -9,
+            1
+          ]
+        ]
+      ]
+    },
+    {
+      "constant_variables": 2,
+      "curve": [
+        1,
+        1,
+        0
+      ],
+      "extra_markings": 0,
+      "input_monomials": 2,
+      "input_variables": 4,
+      "leading_coefficient": [
+        -9,
+        1
+      ],
+      "leading_variable": [
+        "query",
+        1,
+        [
+          1,
+          1,
+          0
+        ],
+        [
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            0
+          ]
+        ]
+      ],
+      "output_monomials": 1,
+      "residual_point_queries": 1,
+      "target": "Bl2P2",
+      "terms": [
+        [
+          [
+            [
+              "query",
+              1,
+              [
+                1,
+                1,
+                0
+              ],
+              [
+                [
+                  2,
+                  0
+                ],
+                [
+                  2,
+                  0
+                ]
+              ]
+            ]
+          ],
+          [
+            -9,
+            1
+          ]
+        ]
+      ]
+    }
+  ],
+  "distinct_component_checks": 66,
+  "environment": {
+    "admcycles": "1.4",
+    "architecture": "arm64",
+    "python": "3.12.14",
+    "sage": "10.9"
+  },
+  "helper_sha256": "a0e96453cb0063df446ae9f3ddd6416e6308a8466a0d52d1a6316fb4fcf8e5e4",
+  "lean_replay_sha256": "450af04d4fed4f0158d03e9d516daac3cf52bd06cad295db599f4be36c31caee",
+  "nonclaims": [
+    "The generated Lean file must be compiled to establish its checks",
+    "The earlier raw sparse graph expansion is not certified by this replay",
+    "Geometric laws and elliptic seed equalities remain explicit inputs",
+    "The four leading coefficients do not prove a uniform recurrence or termination",
+    "No numerical GW value is proved by this exploration alone"
+  ],
+  "script_sha256": "65afcfe6fa0017a6bc5f1f1627a18c17d144b20ec4566d6e0283b972d122ba61",
+  "source": "environments/surface-primary-reduction-exploration.json",
+  "source_sha256": "f859e67febe1608b1b2897123a86a2c704c4ac2c891c9311cc8e1007b01b0048",
+  "status": "exploration_passed",
+  "symbolic_collection_checks": 4
+}

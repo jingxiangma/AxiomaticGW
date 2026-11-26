@@ -1,0 +1,1491 @@
+{
+  "admcycles": "1.4",
+  "admcycles_module_sha256": {
+    "admcycles.py": "19e9e77c58299b387abadab76f2e1f1b1b2b63808f3dbbd0e44499a930db9a1b",
+    "stable_graph.py": "aa9b81ae274660b2d44cf474390a8b0c3a7865cfa6deaa06d005ae96dfdbd3ca",
+    "tautological_ring.py": "c9cf9b46fa8c7f2207d6d0ebc3f3565518f6f29d324bb6b280c1626a772bbd12"
+  },
+  "ancestor_payload_sha256": "dddb622b1b3b8b2a5c15c8cf393b429dfd7d5d348b1b8a2198f9b87675cf44e3",
+  "calibration_gkm_sha256": "e50d50dc43b8be23e15a33234503157cdc2fd293774555dc0339d0d7ee52474c",
+  "cases": [
+    {
+      "equal": true,
+      "equation": [],
+      "individual_substitutions": 4,
+      "name": "p2_zero_HH1",
+      "normalized_monomials": 0,
+      "same_class_unknowns": 0,
+      "smaller_class_unknowns": 0,
+      "source_ancestor_monomials": 3
+    },
+    {
+      "equal": true,
+      "equation": [
+        {
+          "coefficient": [
+            1,
+            80
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            12,
+            1
+          ],
+          "monomial": [
+            [
+              "descendant",
+              2,
+              [
+                0
+              ],
+              [
+                [
+                  1,
+                  1
+                ]
+              ]
+            ]
+          ]
+        },
+        {
+          "coefficient": [
+            36,
+            1
+          ],
+          "monomial": [
+            [
+              "descendant",
+              2,
+              [
+                0
+              ],
+              [
+                [
+                  2,
+                  0
+                ]
+              ]
+            ]
+          ]
+        },
+        {
+          "coefficient": [
+            18,
+            1
+          ],
+          "monomial": [
+            [
+              "descendant",
+              2,
+              [
+                1
+              ],
+              [
+                [
+                  1,
+                  1
+                ],
+                [
+                  2,
+                  0
+                ],
+                [
+                  2,
+                  0
+                ],
+                [
+                  2,
+                  0
+                ]
+              ]
+            ]
+          ]
+        },
+        {
+          "coefficient": [
+            -18,
+            1
+          ],
+          "monomial": [
+            [
+              "descendant",
+              2,
+              [
+                1
+              ],
+              [
+                [
+                  2,
+                  0
+                ],
+                [
+                  2,
+                  0
+                ],
+                [
+                  2,
+                  1
+                ]
+              ]
+            ]
+          ]
+        }
+      ],
+      "individual_substitutions": 11,
+      "name": "p2_line_HHH",
+      "normalized_monomials": 5,
+      "same_class_unknowns": 2,
+      "smaller_class_unknowns": 2,
+      "source_ancestor_monomials": 11
+    },
+    {
+      "equal": true,
+      "equation": [
+        {
+          "coefficient": [
+            -1,
+            240
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            12,
+            1
+          ],
+          "monomial": [
+            [
+              "descendant",
+              2,
+              [
+                0,
+                0
+              ],
+              [
+                [
+                  2,
+                  0
+                ]
+              ]
+            ]
+          ]
+        },
+        {
+          "coefficient": [
+            -12,
+            1
+          ],
+          "monomial": [
+            [
+              "descendant",
+              2,
+              [
+                0,
+                0
+              ],
+              [
+                [
+                  3,
+                  1
+                ]
+              ]
+            ]
+          ]
+        },
+        {
+          "coefficient": [
+            -18,
+            1
+          ],
+          "monomial": [
+            [
+              "descendant",
+              2,
+              [
+                1,
+                0
+              ],
+              [
+                [
+                  2,
+                  0
+                ],
+                [
+                  3,
+                  1
+                ]
+              ]
+            ]
+          ]
+        },
+        {
+          "coefficient": [
+            -18,
+            1
+          ],
+          "monomial": [
+            [
+              "descendant",
+              2,
+              [
+                1,
+                0
+              ],
+              [
+                [
+                  2,
+                  1
+                ]
+              ]
+            ]
+          ]
+        }
+      ],
+      "individual_substitutions": 5,
+      "name": "f1_E_EEE",
+      "normalized_monomials": 5,
+      "same_class_unknowns": 2,
+      "smaller_class_unknowns": 2,
+      "source_ancestor_monomials": 5
+    },
+    {
+      "equal": true,
+      "equation": [
+        {
+          "coefficient": [
+            1,
+            120
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            12,
+            1
+          ],
+          "monomial": [
+            [
+              "descendant",
+              2,
+              [
+                0,
+                0
+              ],
+              [
+                [
+                  1,
+                  1
+                ]
+              ]
+            ]
+          ]
+        },
+        {
+          "coefficient": [
+            12,
+            1
+          ],
+          "monomial": [
+            [
+              "descendant",
+              2,
+              [
+                0,
+                0
+              ],
+              [
+                [
+                  2,
+                  0
+                ]
+              ]
+            ]
+          ]
+        },
+        {
+          "coefficient": [
+            -12,
+            1
+          ],
+          "monomial": [
+            [
+              "descendant",
+              2,
+              [
+                0,
+                0
+              ],
+              [
+                [
+                  3,
+                  1
+                ]
+              ]
+            ]
+          ]
+        },
+        {
+          "coefficient": [
+            18,
+            1
+          ],
+          "monomial": [
+            [
+              "descendant",
+              2,
+              [
+                0,
+                1
+              ],
+              [
+                [
+                  1,
+                  1
+                ],
+                [
+                  2,
+                  0
+                ],
+                [
+                  2,
+                  0
+                ]
+              ]
+            ]
+          ]
+        },
+        {
+          "coefficient": [
+            -18,
+            1
+          ],
+          "monomial": [
+            [
+              "descendant",
+              2,
+              [
+                0,
+                1
+              ],
+              [
+                [
+                  2,
+                  0
+                ],
+                [
+                  2,
+                  1
+                ]
+              ]
+            ]
+          ]
+        }
+      ],
+      "individual_substitutions": 13,
+      "name": "f1_F_HHH",
+      "normalized_monomials": 6,
+      "same_class_unknowns": 2,
+      "smaller_class_unknowns": 3,
+      "source_ancestor_monomials": 13
+    },
+    {
+      "equal": true,
+      "equation": [
+        {
+          "coefficient": [
+            1,
+            120
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            12,
+            1
+          ],
+          "monomial": [
+            [
+              "descendant",
+              2,
+              [
+                0,
+                0
+              ],
+              [
+                [
+                  1,
+                  1
+                ]
+              ]
+            ]
+          ]
+        },
+        {
+          "coefficient": [
+            12,
+            1
+          ],
+          "monomial": [
+            [
+              "descendant",
+              2,
+              [
+                0,
+                0
+              ],
+              [
+                [
+                  2,
+                  0
+                ]
+              ]
+            ]
+          ]
+        },
+        {
+          "coefficient": [
+            -12,
+            1
+          ],
+          "monomial": [
+            [
+              "descendant",
+              2,
+              [
+                0,
+                0
+              ],
+              [
+                [
+                  3,
+                  1
+                ]
+              ]
+            ]
+          ]
+        },
+        {
+          "coefficient": [
+            6,
+            1
+          ],
+          "monomial": [
+            [
+              "descendant",
+              2,
+              [
+                0,
+                1
+              ],
+              [
+                [
+                  2,
+                  0
+                ],
+                [
+                  2,
+                  0
+                ],
+                [
+                  3,
+                  1
+                ]
+              ]
+            ]
+          ]
+        },
+        {
+          "coefficient": [
+            -6,
+            1
+          ],
+          "monomial": [
+            [
+              "descendant",
+              2,
+              [
+                0,
+                1
+              ],
+              [
+                [
+                  2,
+                  0
+                ],
+                [
+                  2,
+                  1
+                ]
+              ]
+            ]
+          ]
+        }
+      ],
+      "individual_substitutions": 16,
+      "name": "f1_F_EHH",
+      "normalized_monomials": 6,
+      "same_class_unknowns": 2,
+      "smaller_class_unknowns": 3,
+      "source_ancestor_monomials": 15
+    },
+    {
+      "equal": true,
+      "equation": [
+        {
+          "coefficient": [
+            -1,
+            240
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            12,
+            1
+          ],
+          "monomial": [
+            [
+              "descendant",
+              2,
+              [
+                0,
+                0,
+                0
+              ],
+              [
+                [
+                  2,
+                  0
+                ]
+              ]
+            ]
+          ]
+        },
+        {
+          "coefficient": [
+            -12,
+            1
+          ],
+          "monomial": [
+            [
+              "descendant",
+              2,
+              [
+                0,
+                0,
+                0
+              ],
+              [
+                [
+                  3,
+                  1
+                ]
+              ]
+            ]
+          ]
+        },
+        {
+          "coefficient": [
+            -18,
+            1
+          ],
+          "monomial": [
+            [
+              "descendant",
+              2,
+              [
+                1,
+                0,
+                0
+              ],
+              [
+                [
+                  2,
+                  0
+                ],
+                [
+                  3,
+                  1
+                ]
+              ]
+            ]
+          ]
+        },
+        {
+          "coefficient": [
+            -18,
+            1
+          ],
+          "monomial": [
+            [
+              "descendant",
+              2,
+              [
+                1,
+                0,
+                0
+              ],
+              [
+                [
+                  2,
+                  1
+                ]
+              ]
+            ]
+          ]
+        }
+      ],
+      "individual_substitutions": 5,
+      "name": "bl2_E1_E1E1E1",
+      "normalized_monomials": 5,
+      "same_class_unknowns": 2,
+      "smaller_class_unknowns": 2,
+      "source_ancestor_monomials": 5
+    },
+    {
+      "equal": true,
+      "equation": [
+        {
+          "coefficient": [
+            -18,
+            1
+          ],
+          "monomial": [
+            [
+              "descendant",
+              2,
+              [
+                0,
+                1,
+                0
+              ],
+              [
+                [
+                  2,
+                  0
+                ],
+                [
+                  3,
+                  1
+                ]
+              ]
+            ]
+          ]
+        }
+      ],
+      "individual_substitutions": 2,
+      "name": "bl2_E2_E1E1E1",
+      "normalized_monomials": 1,
+      "same_class_unknowns": 1,
+      "smaller_class_unknowns": 0,
+      "source_ancestor_monomials": 2
+    },
+    {
+      "equal": true,
+      "equation": [
+        {
+          "coefficient": [
+            -1,
+            240
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            12,
+            1
+          ],
+          "monomial": [
+            [
+              "descendant",
+              2,
+              [
+                0,
+                0,
+                0
+              ],
+              [
+                [
+                  2,
+                  0
+                ]
+              ]
+            ]
+          ]
+        },
+        {
+          "coefficient": [
+            -12,
+            1
+          ],
+          "monomial": [
+            [
+              "descendant",
+              2,
+              [
+                0,
+                0,
+                0
+              ],
+              [
+                [
+                  4,
+                  1
+                ]
+              ]
+            ]
+          ]
+        },
+        {
+          "coefficient": [
+            -18,
+            1
+          ],
+          "monomial": [
+            [
+              "descendant",
+              2,
+              [
+                0,
+                1,
+                0
+              ],
+              [
+                [
+                  2,
+                  0
+                ],
+                [
+                  4,
+                  1
+                ]
+              ]
+            ]
+          ]
+        },
+        {
+          "coefficient": [
+            -18,
+            1
+          ],
+          "monomial": [
+            [
+              "descendant",
+              2,
+              [
+                0,
+                1,
+                0
+              ],
+              [
+                [
+                  2,
+                  1
+                ]
+              ]
+            ]
+          ]
+        }
+      ],
+      "individual_substitutions": 5,
+      "name": "bl2_E2_E2E2E2",
+      "normalized_monomials": 5,
+      "same_class_unknowns": 2,
+      "smaller_class_unknowns": 2,
+      "source_ancestor_monomials": 5
+    },
+    {
+      "equal": true,
+      "equation": [
+        {
+          "coefficient": [
+            1,
+            240
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            12,
+            1
+          ],
+          "monomial": [
+            [
+              "descendant",
+              2,
+              [
+                0,
+                0,
+                0
+              ],
+              [
+                [
+                  1,
+                  1
+                ]
+              ]
+            ]
+          ]
+        },
+        {
+          "coefficient": [
+            -12,
+            1
+          ],
+          "monomial": [
+            [
+              "descendant",
+              2,
+              [
+                0,
+                0,
+                0
+              ],
+              [
+                [
+                  2,
+                  0
+                ]
+              ]
+            ]
+          ]
+        },
+        {
+          "coefficient": [
+            -12,
+            1
+          ],
+          "monomial": [
+            [
+              "descendant",
+              2,
+              [
+                0,
+                0,
+                0
+              ],
+              [
+                [
+                  3,
+                  1
+                ]
+              ]
+            ]
+          ]
+        },
+        {
+          "coefficient": [
+            -12,
+            1
+          ],
+          "monomial": [
+            [
+              "descendant",
+              2,
+              [
+                0,
+                0,
+                0
+              ],
+              [
+                [
+                  4,
+                  1
+                ]
+              ]
+            ]
+          ]
+        },
+        {
+          "coefficient": [
+            18,
+            1
+          ],
+          "monomial": [
+            [
+              "descendant",
+              2,
+              [
+                0,
+                0,
+                1
+              ],
+              [
+                [
+                  1,
+                  1
+                ],
+                [
+                  2,
+                  0
+                ]
+              ]
+            ]
+          ]
+        },
+        {
+          "coefficient": [
+            -18,
+            1
+          ],
+          "monomial": [
+            [
+              "descendant",
+              2,
+              [
+                0,
+                0,
+                1
+              ],
+              [
+                [
+                  2,
+                  1
+                ]
+              ]
+            ]
+          ]
+        }
+      ],
+      "individual_substitutions": 11,
+      "name": "bl2_L_HHH",
+      "normalized_monomials": 7,
+      "same_class_unknowns": 2,
+      "smaller_class_unknowns": 4,
+      "source_ancestor_monomials": 11
+    },
+    {
+      "equal": true,
+      "equation": [
+        {
+          "coefficient": [
+            1,
+            240
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            12,
+            1
+          ],
+          "monomial": [
+            [
+              "descendant",
+              2,
+              [
+                0,
+                0,
+                0
+              ],
+              [
+                [
+                  1,
+                  1
+                ]
+              ]
+            ]
+          ]
+        },
+        {
+          "coefficient": [
+            -12,
+            1
+          ],
+          "monomial": [
+            [
+              "descendant",
+              2,
+              [
+                0,
+                0,
+                0
+              ],
+              [
+                [
+                  2,
+                  0
+                ]
+              ]
+            ]
+          ]
+        },
+        {
+          "coefficient": [
+            -12,
+            1
+          ],
+          "monomial": [
+            [
+              "descendant",
+              2,
+              [
+                0,
+                0,
+                0
+              ],
+              [
+                [
+                  3,
+                  1
+                ]
+              ]
+            ]
+          ]
+        },
+        {
+          "coefficient": [
+            -12,
+            1
+          ],
+          "monomial": [
+            [
+              "descendant",
+              2,
+              [
+                0,
+                0,
+                0
+              ],
+              [
+                [
+                  4,
+                  1
+                ]
+              ]
+            ]
+          ]
+        }
+      ],
+      "individual_substitutions": 13,
+      "name": "bl2_L_E1E2H",
+      "normalized_monomials": 5,
+      "same_class_unknowns": 0,
+      "smaller_class_unknowns": 4,
+      "source_ancestor_monomials": 9
+    }
+  ],
+  "independence": "Graph contraction is recomputed with admcycles; normalization uses recursive string/divisor/dilaton and pinned native GKM matrices. Original lower-genus BP values are shared Lean outputs. No independent genus-two values are asserted.",
+  "mutations_rejected": [
+    {
+      "distinguishing_substitutions": 4,
+      "name": "positive_rational_tail_sign"
+    },
+    {
+      "distinguishing_substitutions": 13,
+      "name": "missing_divisor_cup_term"
+    },
+    {
+      "distinguishing_substitutions": 7,
+      "name": "positive_exceptional_square"
+    }
+  ],
+  "normalized_payload_sha256": "1e02b8f07221e07a0c4f12e93936fb6173bbae31c116d87f22c2eb94c7de529f",
+  "online_lookup": false,
+  "original_graph_mutations_rejected": [
+    "positive_exceptional_metric",
+    "missing_five_marking_assignments",
+    "missing_rational_tail_corrections",
+    "replace_full_curve_by_energy"
+  ],
+  "probes": [
+    {
+      "equal": true,
+      "equation": [
+        {
+          "coefficient": [
+            -1,
+            1
+          ],
+          "monomial": [
+            [
+              "descendant",
+              2,
+              [
+                1,
+                0
+              ],
+              [
+                [
+                  2,
+                  0
+                ],
+                [
+                  2,
+                  0
+                ]
+              ]
+            ]
+          ]
+        },
+        {
+          "coefficient": [
+            1,
+            1
+          ],
+          "monomial": [
+            [
+              "descendant",
+              2,
+              [
+                2,
+                0
+              ],
+              [
+                [
+                  2,
+                  0
+                ],
+                [
+                  2,
+                  0
+                ],
+                [
+                  3,
+                  1
+                ]
+              ]
+            ]
+          ]
+        }
+      ],
+      "name": "f1_2E_psiE_ptpt"
+    },
+    {
+      "equal": true,
+      "equation": [
+        {
+          "coefficient": [
+            1,
+            1
+          ],
+          "monomial": [
+            [
+              "descendant",
+              2,
+              [
+                1,
+                0
+              ],
+              [
+                [
+                  2,
+                  0
+                ],
+                [
+                  2,
+                  0
+                ]
+              ]
+            ]
+          ]
+        },
+        {
+          "coefficient": [
+            -1,
+            1
+          ],
+          "monomial": [
+            [
+              "descendant",
+              2,
+              [
+                2,
+                0
+              ],
+              [
+                [
+                  2,
+                  0
+                ],
+                [
+                  2,
+                  0
+                ],
+                [
+                  2,
+                  0
+                ]
+              ]
+            ]
+          ]
+        },
+        {
+          "coefficient": [
+            -2,
+            1
+          ],
+          "monomial": [
+            [
+              "descendant",
+              2,
+              [
+                2,
+                0
+              ],
+              [
+                [
+                  2,
+                  0
+                ],
+                [
+                  2,
+                  0
+                ],
+                [
+                  3,
+                  1
+                ]
+              ]
+            ]
+          ]
+        }
+      ],
+      "name": "f1_2E_psiE_Eptpt"
+    },
+    {
+      "equal": true,
+      "equation": [
+        {
+          "coefficient": [
+            1,
+            1
+          ],
+          "monomial": [
+            [
+              "descendant",
+              2,
+              [
+                0,
+                1
+              ],
+              [
+                [
+                  2,
+                  0
+                ],
+                [
+                  2,
+                  0
+                ],
+                [
+                  2,
+                  0
+                ]
+              ]
+            ]
+          ]
+        },
+        {
+          "coefficient": [
+            1,
+            1
+          ],
+          "monomial": [
+            [
+              "descendant",
+              2,
+              [
+                1,
+                1
+              ],
+              [
+                [
+                  2,
+                  0
+                ],
+                [
+                  2,
+                  0
+                ],
+                [
+                  2,
+                  0
+                ],
+                [
+                  3,
+                  1
+                ]
+              ]
+            ]
+          ]
+        }
+      ],
+      "name": "f1_EF_psiE_ptptpt"
+    },
+    {
+      "equal": true,
+      "equation": [
+        {
+          "coefficient": [
+            -1,
+            1
+          ],
+          "monomial": [
+            [
+              "descendant",
+              2,
+              [
+                1,
+                0,
+                0
+              ],
+              [
+                [
+                  2,
+                  0
+                ],
+                [
+                  2,
+                  0
+                ]
+              ]
+            ]
+          ]
+        },
+        {
+          "coefficient": [
+            1,
+            1
+          ],
+          "monomial": [
+            [
+              "descendant",
+              2,
+              [
+                2,
+                0,
+                0
+              ],
+              [
+                [
+                  2,
+                  0
+                ],
+                [
+                  2,
+                  0
+                ],
+                [
+                  3,
+                  1
+                ]
+              ]
+            ]
+          ]
+        }
+      ],
+      "name": "bl2_2E1_psiE1_ptpt"
+    },
+    {
+      "equal": true,
+      "equation": [
+        {
+          "coefficient": [
+            1,
+            1
+          ],
+          "monomial": [
+            [
+              "ancestor",
+              2,
+              [
+                1
+              ],
+              [
+                [
+                  2,
+                  3
+                ]
+              ]
+            ]
+          ]
+        }
+      ],
+      "name": "p2_line_psi3pt_retained"
+    }
+  ],
+  "sage": "10.9",
+  "sample_matrix_ranks": [
+    {
+      "blowups": 0,
+      "curve": [
+        0
+      ],
+      "equations": 1,
+      "rank": 0,
+      "same_class_unknowns": 0
+    },
+    {
+      "blowups": 0,
+      "curve": [
+        1
+      ],
+      "equations": 1,
+      "rank": 1,
+      "same_class_unknowns": 2
+    },
+    {
+      "blowups": 1,
+      "curve": [
+        0,
+        1
+      ],
+      "equations": 2,
+      "rank": 2,
+      "same_class_unknowns": 3
+    },
+    {
+      "blowups": 1,
+      "curve": [
+        1,
+        0
+      ],
+      "equations": 1,
+      "rank": 1,
+      "same_class_unknowns": 2
+    },
+    {
+      "blowups": 2,
+      "curve": [
+        0,
+        0,
+        1
+      ],
+      "equations": 2,
+      "rank": 1,
+      "same_class_unknowns": 2
+    },
+    {
+      "blowups": 2,
+      "curve": [
+        0,
+        1,
+        0
+      ],
+      "equations": 2,
+      "rank": 2,
+      "same_class_unknowns": 3
+    },
+    {
+      "blowups": 2,
+      "curve": [
+        1,
+        0,
+        0
+      ],
+      "equations": 1,
+      "rank": 1,
+      "same_class_unknowns": 2
+    }
+  ],
+  "schema_version": 1,
+  "scope": "Finite normalized BP equations; no uniqueness claim",
+  "source_sha256": {
+    "scripts/SurfaceBPNormalized.lean": "2346b7e5b31c6bb9accc91d4ef3d1bb7cbfc28c4038822168c835959a80606c2",
+    "scripts/explore_normalized_surface_bp.py": "ebbef714f1d09e01710687bb88e5b31f20563a41cc2825b683c1f33af27cf8a6",
+    "scripts/explore_surface_bp.py": "e957c8f3f03df60cb38640aeb2718886eec4a2f837a3daaab6f0487271485d42"
+  }
+}

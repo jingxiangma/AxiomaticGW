@@ -1,0 +1,380 @@
+{
+  "admcycles": "1.4",
+  "admcycles_rows": 7,
+  "columns": [
+    "N_d",
+    "H_d",
+    "P_d"
+  ],
+  "determinant_coefficients": [
+    [
+      0,
+      1
+    ],
+    [
+      7776,
+      1
+    ]
+  ],
+  "input_sha256": "d540e18782b4a3194f61fc4e9f89ad52fed864028a6888a84fe10a4b6e8337e3",
+  "matrix_polynomials": [
+    [
+      [
+        [
+          0,
+          1
+        ],
+        [
+          -108,
+          1
+        ]
+      ],
+      [
+        [
+          12,
+          1
+        ],
+        [
+          27,
+          1
+        ],
+        [
+          -27,
+          1
+        ]
+      ],
+      [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          9,
+          1
+        ],
+        [
+          27,
+          1
+        ]
+      ]
+    ],
+    [
+      [
+        [
+          -36,
+          1
+        ]
+      ],
+      [
+        [
+          12,
+          1
+        ],
+        [
+          -36,
+          1
+        ]
+      ],
+      [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          36,
+          1
+        ]
+      ]
+    ],
+    [
+      [],
+      [
+        [
+          -18,
+          1
+        ]
+      ],
+      [
+        [
+          0,
+          1
+        ],
+        [
+          18,
+          1
+        ]
+      ]
+    ]
+  ],
+  "missing_signed_correction_detected": true,
+  "native_rows": 10,
+  "proof_boundary": {
+    "canonical_step_uniqueness_from_lower_degrees_proved_in_lean": true,
+    "closed_primary_point_placements_proved_in_lean": true,
+    "collected_remainder_strict_decrease_proved_in_lean": true,
+    "complete_reconstruction_or_new_invariant": false,
+    "effective_remainder_recursion_proved_in_lean": true,
+    "exact_shifted_block_solver_proved_in_lean": true,
+    "general_lean_coefficient_equality": true,
+    "geometric_validity_independently_certified": false,
+    "hhp_canonical_support_proved_in_lean": true,
+    "hpp_canonical_support_proved_in_lean": true,
+    "hpp_lower_degree_after_canonical_block_proved_in_lean": true,
+    "lower_degree_recursive_evaluation_proved_in_lean": false,
+    "mixed_rational_complement_formulas_proved_in_lean": true,
+    "mixed_rows_lower_degree_after_canonical_block_proved_in_lean": true,
+    "mixed_rows_source_degree_cancellation_proved_in_lean": true,
+    "mixed_rows_strict_source_degree_support_proved_in_lean": true,
+    "next": "Normalize and evaluate the lower-degree remainder, then prove finite-seed reconstruction, termination, soundness and uniqueness.",
+    "plane_calibration_tail_cancellation_proved_in_lean": true,
+    "plane_component_class_pruning_proved_in_lean": true,
+    "plane_one_degree_rational_complement_proved_in_lean": true,
+    "plane_one_psi_canonical_normalization_proved_in_lean": true,
+    "plane_one_psi_one_degree_remainder_formula_proved_in_lean": true,
+    "plane_one_psi_zero_remainder_formula_proved_in_lean": true,
+    "ppp_one_degree_remainder_support_proved_in_lean": true,
+    "recursive_signed_point_compression_proved_in_lean": true,
+    "shared_inputs": "BP source diagrams, primary plane conventions, genus-zero line value, calibration support",
+    "solved_step_from_original_geometry_proved_in_lean": true,
+    "uniform_hhp_row_proved_in_lean": true,
+    "uniform_hpp_row_proved_in_lean": true,
+    "uniform_ppp_row_proved_in_lean": true,
+    "uniform_shifted_determinant_proved_in_lean": true,
+    "uniform_symbolic_compression_proved_in_lean": true,
+    "uniform_symbolic_compression_scope": "Positive-degree HHP/HPP/PPP canonical block only"
+  },
+  "rows": [
+    {
+      "admcycles_equal": true,
+      "coefficients": [
+        [
+          -390,
+          1
+        ],
+        [
+          120,
+          1
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "name": "d1_HHH",
+      "symbolic_equal": true
+    },
+    {
+      "admcycles_equal": true,
+      "coefficients": [
+        [
+          -108,
+          1
+        ],
+        [
+          12,
+          1
+        ],
+        [
+          36,
+          1
+        ]
+      ],
+      "name": "d1_HHP",
+      "symbolic_equal": true
+    },
+    {
+      "admcycles_equal": true,
+      "coefficients": [
+        [
+          -36,
+          1
+        ],
+        [
+          -24,
+          1
+        ],
+        [
+          36,
+          1
+        ]
+      ],
+      "name": "d1_HPP",
+      "symbolic_equal": true
+    },
+    {
+      "admcycles_equal": true,
+      "coefficients": [
+        [
+          0,
+          1
+        ],
+        [
+          -18,
+          1
+        ],
+        [
+          18,
+          1
+        ]
+      ],
+      "name": "d1_PPP",
+      "symbolic_equal": true
+    },
+    {
+      "admcycles_equal": true,
+      "coefficients": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "name": "same_d2_HHP",
+      "symbolic_equal": true
+    },
+    {
+      "admcycles_equal": true,
+      "coefficients": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "name": "same_d2_HPP",
+      "symbolic_equal": true
+    },
+    {
+      "admcycles_equal": true,
+      "coefficients": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "name": "same_d2_PPP",
+      "symbolic_equal": true
+    },
+    {
+      "admcycles_equal": false,
+      "coefficients": [
+        [
+          -216,
+          1
+        ],
+        [
+          -42,
+          1
+        ],
+        [
+          252,
+          1
+        ]
+      ],
+      "name": "d2_HHP",
+      "symbolic_equal": true
+    },
+    {
+      "admcycles_equal": false,
+      "coefficients": [
+        [
+          -36,
+          1
+        ],
+        [
+          -60,
+          1
+        ],
+        [
+          144,
+          1
+        ]
+      ],
+      "name": "d2_HPP",
+      "symbolic_equal": true
+    },
+    {
+      "admcycles_equal": false,
+      "coefficients": [
+        [
+          0,
+          1
+        ],
+        [
+          -18,
+          1
+        ],
+        [
+          36,
+          1
+        ]
+      ],
+      "name": "d2_PPP",
+      "symbolic_equal": true
+    }
+  ],
+  "sage": "10.9",
+  "same_class_mixed_rows_zero": true,
+  "schema_version": 1,
+  "source_sha256": {
+    "AxiomaticGW/Coefficients/CollectedTerms.lean": "bff43b07a021d1318e7a79368d996d8509556306203d151aecbc8873edd81587",
+    "AxiomaticGW/Coefficients/RenamedCoefficient.lean": "7954e90eaa0b16006564532e93b2ee04a88d6de076299f35dd1e60721c44e5d7",
+    "AxiomaticGW/Coefficients/WeightedCurveSplitting.lean": "5909dd7c031aa4765bc946c060c5d00690b1938d4d8a88b0ff49d1474643b23a",
+    "AxiomaticGW/Surfaces/GenusTwoCoefficientSupport.lean": "f420c8175338c80606b0159f27245e9fffc06fde222f036534eb70c6b237e26a",
+    "AxiomaticGW/Surfaces/GenusTwoPointCoefficients.lean": "4dfec642df91e715b8ebd868dab814609ffd9ca4350621240448e73218dfade0",
+    "AxiomaticGW/Surfaces/GenusTwoPointTails.lean": "300ea295bce8faac047883ab770826cf5aaf98f988f2d95106e26607c00c1016",
+    "AxiomaticGW/Surfaces/GenusTwoPrimaryPoints.lean": "171ccd959680fd3274fd0180f0164c0d0f35f7a8b4f4150f734d62f484def0c6",
+    "AxiomaticGW/Surfaces/GenusTwoRemainder.lean": "6780c5b2d1e5519fe7da56070dcd64900f31f503fd3fc577fd0960c2ca054869",
+    "AxiomaticGW/Surfaces/GenusTwoZeroRemainder.lean": "b989d2eeb2c4f277018822fc42d308ae7a94ffe8b24e95821f9ba2fe9f899222",
+    "AxiomaticGW/Surfaces/PlaneCanonicalComponents.lean": "c0d3ef4cacb64851afea2913150b19229290dc39c2b0b4152b32ad1b5a6b4f8b",
+    "AxiomaticGW/Surfaces/PlaneGenusTwoCoefficients.lean": "1bbcb683721a8d6de8aadd706d0be6ee23a732e25d06e11b2232f3bf3d16defc",
+    "AxiomaticGW/Surfaces/PlaneGenusTwoRemainder.lean": "9549eed35e67aab75c74bb5d1d3f2f8adc4220a5d5adefd291f5a1c3f6bbb7ab",
+    "AxiomaticGW/Surfaces/PlaneHyperplaneRow.lean": "f7f632ddce8bd4493234948a5f6b390c3baba00ffcae71c08e3ce53a60ff2555",
+    "AxiomaticGW/Surfaces/PlaneMixedPointContractions.lean": "eab794461a3ddab696c9e18fc2f4264d63e9c681425cd9f5e6770944957d93b7",
+    "AxiomaticGW/Surfaces/PlaneMixedRows.lean": "0fab724374fde9efd36395b1c5d37b05d83e5bd38e9d6f173ec4834dc41089d7",
+    "AxiomaticGW/Surfaces/PlaneNormalization.lean": "7e278044ed10e0ce481a5ebbfaca37253f2fc16e4dd04036ad470ddacbd9db5f",
+    "AxiomaticGW/Surfaces/PlanePointContractions.lean": "cb66b338b1432f16966937f072bd37f7fe70eca28196d421ae75a5e60459c7a4",
+    "AxiomaticGW/Surfaces/PlanePointNormalization.lean": "9eb3f1a6fb64c2cb51801853daaed8ba6bd32d36572956ad3a9af0f1afb87a40",
+    "AxiomaticGW/Surfaces/PlaneShiftedRemainder.lean": "5976028c0b671028290ab703894b4ae3056a9679717329ea985049d30a5e2a31",
+    "AxiomaticGW/Surfaces/PlaneShiftedStep.lean": "df4d9bd5cf95e0a5ca055abf1c9e42c84a295c81270bb0eabf8cd0c4d8bfff13",
+    "AxiomaticGW/Surfaces/PlaneShiftedSystem.lean": "ba5ad7f81b084e8297bfeca24e9f5caafa4db3728767511bb796f2c9ca8e1746",
+    "AxiomaticGW/Surfaces/PlaneSourceDegree.lean": "0d7df98ef8f69aaf6b4ebfa9bc7961014658875c3267aae77bdebdf282cc7b39",
+    "AxiomaticGW/Surfaces/PointPullbackContraction.lean": "0fa3a019b892628c51d384876154efa901bf13e8a708cdb86b1499d2c1d4b1de",
+    "AxiomaticGW/Surfaces/PrimaryPointPullback.lean": "d330a3834881b1a79c380e247e0f3b9ccb0118e79e08aca7278edc72dbdcdada",
+    "environments/belorousski-pandharipande.json": "5868b2f3ef1e5a45e6175b6349566b72c778f4ab028ef941b43498fd0ee8d1bc",
+    "scripts/GenusTwoShifted.lean": "7b54f21ca60d0d7f5b8149274b4d68b7534de000c821cb67c481e58b2e4bb83c",
+    "scripts/explore_genus_two_shifted.py": "ada393c45753ad6b8ad054e27616b882f2eb4383030261acc0decd332142c5a2",
+    "scripts/explore_normalized_surface_bp.py": "ebbef714f1d09e01710687bb88e5b31f20563a41cc2825b683c1f33af27cf8a6",
+    "scripts/explore_surface_bp.py": "e957c8f3f03df60cb38640aeb2718886eec4a2f837a3daaab6f0487271485d42"
+  }
+}

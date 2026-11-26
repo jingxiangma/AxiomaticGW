@@ -1,0 +1,351 @@
+{
+  "status": "passed_scoped_checks",
+  "recorded_utc": "2026-10-02T11:28:21.774414+00:00",
+  "scope": "formal nonseparating graph gluing, genus and degree shifts, raw coefficient merging, and conditional CohFT/GW ancestor boundary evaluation and exact certificate transfer",
+  "milestones_accepted_as_complete": [],
+  "gates": [
+    {
+      "command": [
+        "lake",
+        "build",
+        "AxiomaticGWTest.Tautological.Nonseparating"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 4.143,
+      "log": "/tmp/gw_nonseparating_gate_0_20261002.log",
+      "log_sha256": "c53558c3ef5f4b2278efa96de9a66f7b1de21490263ff37db10275a2aa6d09fe"
+    },
+    {
+      "command": [
+        "lake",
+        "build"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 1.329,
+      "log": "/tmp/gw_nonseparating_gate_1_20261002.log",
+      "log_sha256": "0ba3954e7e65d6b126f676b9971bfbca70cc22b7008a2106a119cc3e36a1a228"
+    },
+    {
+      "command": [
+        "lake",
+        "test"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 1.406,
+      "log": "/tmp/gw_nonseparating_gate_2_20261002.log",
+      "log_sha256": "63a4654c7f63b18793b2dfa5c7010d399c35b4fbd19ab14b4a32f9b2c52e0ee2"
+    },
+    {
+      "command": [
+        "lake",
+        "lint"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 8.081,
+      "log": "/tmp/gw_nonseparating_gate_3_20261002.log",
+      "log_sha256": "8cb704e7f2acb11f508473f8f0a1ac324d56ac70cac206d0a94cbe2318027dce"
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "/tmp/gw_nonseparating_axioms_20261002.lean"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 5.235,
+      "log": "/tmp/gw_nonseparating_gate_4_20261002.log",
+      "log_sha256": "31a61312b2cee871208062e44ef51899805db3ff2a5cf4b057c8f60cf71d7b42"
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.02,
+      "log": "/tmp/gw_nonseparating_gate_5_20261002.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "axiom_audit": {
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "/tmp/gw_nonseparating_axioms_20261002.lean"
+    ],
+    "exit_code": 0,
+    "declaration_count": 26,
+    "declarations": [
+      {
+        "declaration": "AxiomaticGW.StableGraphCode.nonseparatingFlagsEquiv",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "AxiomaticGW.StableGraphCode.nonseparatingFlagFiberEquiv",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "AxiomaticGW.StableGraphCode.nonseparating",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "AxiomaticGW.StableGraphCode.nonseparating_firstBetti",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "AxiomaticGW.StableGraphCode.nonseparating_totalGenus",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "AxiomaticGW.StableGraphCode.Iso.nonseparating",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "AxiomaticGW.DecoratedStableGraph.nonseparating",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "AxiomaticGW.DecoratedStableGraph.nonseparating_codimension",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "AxiomaticGW.DecoratedStableGraph.Iso.nonseparating",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "AxiomaticGW.TautologicalStratum.nonseparating",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "AxiomaticGW.TautologicalStratum.nonseparating_codimension",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "AxiomaticGW.StrataModule.nonseparating",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "AxiomaticGW.StrataModule.nonseparating_mem_degree",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "AxiomaticGW.StrataModule.nonseparating_mem_dimensionRelations",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "AxiomaticGW.NonseparatingPushforward.integrate_mul_push",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "AxiomaticGW.CohFT.nonseparatingInvariant_eq_selfContract",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "AxiomaticGW.CohFT.nonseparatingInvariant_monomial",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "AxiomaticGW.GromovWittenTheory.nonseparatingInvariant_eq_selfContract",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "AxiomaticGW.GromovWittenTheory.nonseparatingInvariant_monomial",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "AxiomaticGW.RelationCertificate.nonseparating_interpret",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "AxiomaticGW.StrataRealization.map_nonseparating",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "AxiomaticGW.StrataRealization.nonseparating_mem_kernel",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "AxiomaticGW.StrataRealization.integrateAgainst_nonseparating",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "AxiomaticGW.StrataRealization.integrateAgainst_nonseparating_cohFT",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "AxiomaticGW.StrataRealization.integrateAgainst_nonseparating_gw",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "AxiomaticGW.StrataRealization.certificate_nonseparating_eq_zero",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    ]
+  },
+  "regressions": {
+    "examples": 15,
+    "nonzero_contraction": "rank-two Frobenius-derived CohFT ancestor contraction equals 5; no geometric Gysin model claimed",
+    "negative_fixture": "the degree-zero constant target with standard integration admits no nonseparating Gysin package",
+    "coverage": [
+      "loop and parallel-edge gluing",
+      "asymmetric node powers",
+      "retained external labels, kappa and old internal powers",
+      "automorphism changes and quotient noninjectivity",
+      "unchanged raw coefficients and merged output columns",
+      "degree and dimension relations",
+      "class-resolved graph-to-ancestor evaluation",
+      "exact fixed row witness with original dimension vanishing"
+    ],
+    "quotient_lemmas": 3,
+    "certificate_output_columns": "proved distinct glued classes: node powers (3,0) and (2,1)"
+  },
+  "geometric_inputs_remaining": [
+    "primitive proper nonseparating pushforward laws",
+    "raw graph-map composition for realizations",
+    "surface identification and actual CohFT/GW class package",
+    "stable-map descendant and ordinary-specialization comparisons"
+  ],
+  "not_established": [
+    "separating/general graph splitting",
+    "common-refinement/node excess calculus",
+    "geometric relation validity",
+    "seed sufficiency and terminating reconstruction",
+    "actual GKM CohFT import",
+    "fixed surface numerical applications"
+  ],
+  "placeholder_and_global_state_scan": "passed; no placeholders, declared axioms, global instances, simp attributes or native proof bypasses in new files",
+  "lean_toolchain": "leanprover/lean4:v4.32.0",
+  "lake_manifest_sha256": "e9d145b9e7338c66d20f6039ba5937818c5a1c3e085465391d3723315fec453d",
+  "source_sha256": {
+    "AxiomaticGW/Tautological/NonseparatingGluing.lean": "441bea8bc9e4935147b1b78ee29ae716006b5dba927add803941e837e3d66765",
+    "AxiomaticGW/CohFT/NonseparatingPushforward.lean": "6f5b1137ee901aa7b3a7db1d6a919023cd78fe2b9ff4c22cb709fc3e8d910121",
+    "AxiomaticGW/GW/NonseparatingBoundary.lean": "ddc777c76b70f0c057da39995a99f2ffdc1e1d71f37df684fdea9a6c33dcd8a4",
+    "AxiomaticGW/Tautological/NonseparatingRealization.lean": "17d0072a0de621e5164ea39dfc46498b6d11388b0f5f278737a4f5baf1d89fda",
+    "AxiomaticGWTest/Tautological/Nonseparating.lean": "e79cda0cc0810dc6deb76e55ce31350778239b07c0528597ad7365c11431eae3",
+    "AxiomaticGW.lean": "d948cb537590a0a569ab37a14f65445197c4a21adc9ebf4ef249ac3c54786e6f",
+    "AxiomaticGW/Tautological/LegPsi.lean": "9ca882b29db8f6dec38c510283aa9f4484839a8f1620232d20b65c61ecf3cb56",
+    "AxiomaticGW/Tautological/LegPsiRealization.lean": "e8d6bff52045adf408f2d4439b5df73b44328a88d1f51d1807ff70da58a6b95a",
+    "AxiomaticGW/Tautological/DecoratedStableGraph.lean": "b4d0408b1cfddafe145230aad311a76577b8feafe6f2ac187cd1524a07247b60",
+    "AxiomaticGW/Tautological/GraphBounds.lean": "69d1b5fe492e41ed328bc3d19797727f1cd1dc3885ba25de2d4fcb6decbcc679",
+    "AxiomaticGW/Tautological/GraphIsomorphisms.lean": "5cd10ac37ec3390443ac5db4ef38bba59327491fa9f4708d13ea883ca258d0bf",
+    "AxiomaticGW/Tautological/StrataModule.lean": "4cbd41c258dd6e0e03a691d8de21fd9021788e03b67d1df0127742553f53112f",
+    "AxiomaticGW/Tautological/StrataRealization.lean": "ddf59186e35a331415f9cbb8713dbcfda209fbf9bf5530123a1ab87964cd308c",
+    "AxiomaticGW/Tautological/RelationCertificate.lean": "665e0e9ed9aa8d16d8b86b30546623d4980a07a6add20dc771aafebaceee13d4",
+    "AxiomaticGW/CohFT/StableCurve.lean": "12aed3192ef91e3220ec059d811bc2042e83c4d697937acaff0fb378cb8ccd78",
+    "AxiomaticGW/CohFT/Tautological.lean": "09a580ac3e481df0ba90bc30637e6bed2741dfc0e6599d8463a48b42861635ed",
+    "AxiomaticGW/CohFT/Ancestors.lean": "d04f17b0a9a465e89d7c054a94b096cf81bf7ef22b931c61fdf73419e988c4a4",
+    "AxiomaticGW/CohFT/Basic.lean": "8e42e96505c84bea43ada16ddc0d54644c0f4416a56db03a5baf4aace2117b66",
+    "AxiomaticGW/GW/Basic.lean": "f55ca302b1bd3f7c09abd4c1a2b989dc04acf977be697e2776c3fddd77bd5420",
+    "AxiomaticGW/GW/Descendants/Basic.lean": "a5a0f765967ca3a39b93f476e8976fb30669aa66be7085adfd48d80f4f1a275e",
+    "AxiomaticGW/Linear/Contraction.lean": "fc378491866b7bfc81751957f5fa904a62d46d6d0b67b69e580eeb9e774fb1aa",
+    "AxiomaticGW/Combinatorics/StableArity.lean": "078a0d2cf8d7a31ed89429e6661cbd469fe4e8cc412adc3b55cccd3335724052",
+    "AxiomaticGW/Combinatorics/StableGraph.lean": "8ce882e57be59078d2aff6f58df1a9a280c807805f7eb1d600e47e89bc01ca2a"
+  }
+}

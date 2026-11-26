@@ -1,0 +1,711 @@
+{
+  "recorded_utc": "2026-10-02T12:05:14.270549+00:00",
+  "gates": [
+    {
+      "command": [
+        "lake",
+        "build",
+        "AxiomaticGWTest.Tautological.Separating"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 1.857,
+      "log": "/tmp/gw_separating_gate_0_20261002.log",
+      "log_sha256": "f2b3194fb298bdc6050f7ef42631ec9f5f219dc7888169e822e0587466a47260"
+    },
+    {
+      "command": [
+        "lake",
+        "build"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.959,
+      "log": "/tmp/gw_separating_gate_1_20261002.log",
+      "log_sha256": "f2b3194fb298bdc6050f7ef42631ec9f5f219dc7888169e822e0587466a47260"
+    },
+    {
+      "command": [
+        "lake",
+        "test"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 3.441,
+      "log": "/tmp/gw_separating_gate_2_20261002.log",
+      "log_sha256": "75160e3e464b0a450687db9890a01b8cb1e7f01b20122a1c8b154ff229732623"
+    },
+    {
+      "command": [
+        "lake",
+        "lint"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 6.936,
+      "log": "/tmp/gw_separating_gate_3_20261002.log",
+      "log_sha256": "8cb704e7f2acb11f508473f8f0a1ac324d56ac70cac206d0a94cbe2318027dce"
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "/tmp/gw_separating_axioms_20261002.lean"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 1.717,
+      "log": "/tmp/gw_separating_gate_4_20261002.log",
+      "log_sha256": "46ad318f061be3859d93927b7788a46e7006adef66510b6ca33b6125adc6fcef"
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.013,
+      "log": "/tmp/gw_separating_gate_5_20261002.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "source_sha256": {
+    "AxiomaticGW.lean": "cc05b9770900054a76963c781534db6a61b61ce0dc8b48f2c339e5b9928cc28c",
+    "AxiomaticGW/Linear/SeparatingContraction.lean": "7c3ff5fc077e70ca058764271c21f355d0fea12cea12957a8c562583cb1e63f8",
+    "AxiomaticGW/CohFT/SeparatingPushforward.lean": "7ef46b53841cad087888a34bfbcd0a089488a8f46f0d9048576c43e2c83c5000",
+    "AxiomaticGW/GW/SeparatingBoundary.lean": "455b91bbce74cac444d04395ab0fa3673cd095e2ee30202796f355add8d66bfc",
+    "AxiomaticGW/Tautological/SeparatingGluing.lean": "05b43b110eb97c226e07ab7e898d1e2da1d90dcabbe59bd5726c45889933cb78",
+    "AxiomaticGW/Tautological/SeparatingRealization.lean": "e5ae34a58171024a17780469beafe6bd541e282ffc8537c562415e798659bfd0",
+    "AxiomaticGWTest/Tautological/Separating.lean": "0f4614547d65146a2e1839cf7b8971572a2a9baad30ef5f52250416ed2d6cc60",
+    "AxiomaticGW/Linear/Contraction.lean": "fc378491866b7bfc81751957f5fa904a62d46d6d0b67b69e580eeb9e774fb1aa",
+    "AxiomaticGW/CohFT/StableCurve.lean": "12aed3192ef91e3220ec059d811bc2042e83c4d697937acaff0fb378cb8ccd78",
+    "AxiomaticGW/CohFT/Tautological.lean": "09a580ac3e481df0ba90bc30637e6bed2741dfc0e6599d8463a48b42861635ed",
+    "AxiomaticGW/CohFT/Ancestors.lean": "d04f17b0a9a465e89d7c054a94b096cf81bf7ef22b931c61fdf73419e988c4a4",
+    "AxiomaticGW/CohFT/Basic.lean": "8e42e96505c84bea43ada16ddc0d54644c0f4416a56db03a5baf4aace2117b66",
+    "AxiomaticGW/GW/Basic.lean": "f55ca302b1bd3f7c09abd4c1a2b989dc04acf977be697e2776c3fddd77bd5420",
+    "AxiomaticGW/GW/Descendants/Basic.lean": "a5a0f765967ca3a39b93f476e8976fb30669aa66be7085adfd48d80f4f1a275e",
+    "AxiomaticGW/Combinatorics/StableArity.lean": "078a0d2cf8d7a31ed89429e6661cbd469fe4e8cc412adc3b55cccd3335724052",
+    "AxiomaticGW/Tautological/DecoratedStableGraph.lean": "b4d0408b1cfddafe145230aad311a76577b8feafe6f2ac187cd1524a07247b60",
+    "AxiomaticGW/Tautological/GraphBounds.lean": "69d1b5fe492e41ed328bc3d19797727f1cd1dc3885ba25de2d4fcb6decbcc679",
+    "AxiomaticGW/Tautological/GraphIsomorphisms.lean": "5cd10ac37ec3390443ac5db4ef38bba59327491fa9f4708d13ea883ca258d0bf",
+    "AxiomaticGW/Tautological/StrataModule.lean": "4cbd41c258dd6e0e03a691d8de21fd9021788e03b67d1df0127742553f53112f",
+    "AxiomaticGW/Tautological/StrataRealization.lean": "ddf59186e35a331415f9cbb8713dbcfda209fbf9bf5530123a1ab87964cd308c",
+    "AxiomaticGW/Tautological/LegPsiRealization.lean": "e8d6bff52045adf408f2d4439b5df73b44328a88d1f51d1807ff70da58a6b95a",
+    "AxiomaticGW/Tautological/RelationCertificate.lean": "665e0e9ed9aa8d16d8b86b30546623d4980a07a6add20dc771aafebaceee13d4",
+    "AxiomaticGW/Surfaces/CurveClasses.lean": "30814002532e28140557e4f4d2b60a45665b31de95e5288a5cca4f6211073fb3",
+    "AxiomaticGW/Coefficients/WeightedCurveClass.lean": "3bc8645d07e903dd01653f88d301d745828566a60b2434d667fa894998bc79ca",
+    "lean-toolchain": "2773c517aa90b66ea8a2c52bddddf84393157797f8341be0df45294fff7fd32e",
+    "lakefile.toml": "58517e8c961d4a4fab407f323a7caa650f935a1202b30bd5becd0335fa0dafe1"
+  },
+  "status": "passed_scoped_checks",
+  "scope": "separating decorated-graph gluing, quotient and bilinear strata operations, linear product scalarization, conditional CohFT/GW full-class ancestor boundary equations, and exact certificate transfer from either component",
+  "milestones_accepted_as_complete": [],
+  "axiom_audit": {
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "/tmp/gw_separating_axioms_20261002.lean"
+    ],
+    "exit_code": 0,
+    "declaration_count": 61,
+    "declarations": [
+      {
+        "declaration": "AxiomaticGW.SymmetricPerfectPairing.pairContractTarget_comp_map",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "AxiomaticGW.StableCurveIntegration.tensorIntegral",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "AxiomaticGW.StableCurveIntegration.tensorIntegral_tmul",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "AxiomaticGW.StableCurveIntegration.tensorIntegral_mul_tmul",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "AxiomaticGW.SeparatingPushforward",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "AxiomaticGW.SeparatingPushforward.integrate_mul_push",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "AxiomaticGW.CohFT.separatingInvariant",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "AxiomaticGW.CohFT.separatingInvariant_apply",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "AxiomaticGW.CohFT.separatingInvariant_eq_contraction",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "AxiomaticGW.CohFT.separatingInvariant_tmul",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "AxiomaticGW.CohFT.separatingInvariant_monomial",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "AxiomaticGW.GromovWittenTheory.separatingInvariant",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "AxiomaticGW.GromovWittenTheory.separatingInvariant_apply",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "AxiomaticGW.GromovWittenTheory.separatingInvariant_eq_contraction",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "AxiomaticGW.GromovWittenTheory.separatingInvariant_tmul",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "AxiomaticGW.GromovWittenTheory.separatingInvariant_monomial",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "AxiomaticGW.StableGraphCode.separatingFlagsEquiv",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "AxiomaticGW.StableGraphCode.separatingEndpoint",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "AxiomaticGW.StableGraphCode.separatingSourceVertex",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "AxiomaticGW.StableGraphCode.separatingTargetVertex",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "AxiomaticGW.StableGraphCode.separating_flags_vertex",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "AxiomaticGW.StableGraphCode.separatingFlagFiberEquiv",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "AxiomaticGW.StableGraphCode.separating",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "AxiomaticGW.StableGraphCode.separating_firstBetti",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "AxiomaticGW.StableGraphCode.separating_totalGenus",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "AxiomaticGW.StableGraphCode.separatingBlocksEquiv",
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "AxiomaticGW.StableGraphCode.separatingBlocksEquiv_left",
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "AxiomaticGW.StableGraphCode.separatingBlocksEquiv_right",
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "AxiomaticGW.StableGraphCode.separatingEdgesEquiv",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "AxiomaticGW.StableGraphCode.separatingEdgesEquiv_last",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "AxiomaticGW.StableGraphCode.separatingEdgesEquiv_left",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "AxiomaticGW.StableGraphCode.separatingEdgesEquiv_right",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "AxiomaticGW.StableGraphCode.Iso.separating",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "AxiomaticGW.DecoratedStableGraph.separating",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "AxiomaticGW.DecoratedStableGraph.separating_halfEdgePsi_left",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "AxiomaticGW.DecoratedStableGraph.separating_halfEdgePsi_right",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "AxiomaticGW.DecoratedStableGraph.separating_halfEdgePsi_last_zero",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "AxiomaticGW.DecoratedStableGraph.separating_halfEdgePsi_last_one",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "AxiomaticGW.DecoratedStableGraph.separating_codimension",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "AxiomaticGW.DecoratedStableGraph.Iso.separating",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "AxiomaticGW.TautologicalStratum.separating",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "AxiomaticGW.TautologicalStratum.separating_mk",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "AxiomaticGW.TautologicalStratum.separating_codimension",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "AxiomaticGW.TautologicalStratum.separating_vertexCount",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "AxiomaticGW.TautologicalStratum.separating_edgeCount",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "AxiomaticGW.StrataModule.separating",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "AxiomaticGW.StrataModule.separating_single_single",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "AxiomaticGW.StrataModule.separating_basis_basis",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "AxiomaticGW.StrataModule.separating_mem_degree",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "AxiomaticGW.RelationCertificate.separating_left_interpret",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "AxiomaticGW.RelationCertificate.separating_right_interpret",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "AxiomaticGW.StrataRealization.SeparatingCompatible",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "AxiomaticGW.StrataRealization.map_separating",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "AxiomaticGW.StrataRealization.separating_left_mem_kernel",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "AxiomaticGW.StrataRealization.separating_right_mem_kernel",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "AxiomaticGW.StrataRealization.integrateAgainst_separating",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "AxiomaticGW.StrataRealization.integrateAgainst_separating_cohFT",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "AxiomaticGW.StrataRealization.integrateAgainst_separating_gw",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "AxiomaticGW.StrataRealization.integrateAgainst_separating_fundamental_gw",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "AxiomaticGW.StrataRealization.certificate_separating_left_eq_zero",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "AxiomaticGW.StrataRealization.certificate_separating_right_eq_zero",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    ]
+  },
+  "source_scan": {
+    "files": [
+      "AxiomaticGW/Linear/SeparatingContraction.lean",
+      "AxiomaticGW/CohFT/SeparatingPushforward.lean",
+      "AxiomaticGW/GW/SeparatingBoundary.lean",
+      "AxiomaticGW/Tautological/SeparatingGluing.lean",
+      "AxiomaticGW/Tautological/SeparatingRealization.lean",
+      "AxiomaticGWTest/Tautological/Separating.lean"
+    ],
+    "no_placeholders_or_substitute_axioms": true,
+    "no_native_proof_bypass": true,
+    "no_new_global_simp_lemmas_or_instances": true,
+    "line_lengths_at_most_100": true,
+    "no_trailing_whitespace": true
+  },
+  "regressions": {
+    "examples": 17,
+    "private_theorems": 8,
+    "component_exchange_automorphisms": 2,
+    "two_loop_automorphisms": 8,
+    "decorated_asymmetric_automorphisms": 1,
+    "preserved_markings_kappa_and_internal_powers": true,
+    "raw_coefficient_multiplication_and_signed_merging": true,
+    "distinct_certificate_outputs_below_target_dimension": true,
+    "original_certificate_transfer_from_both_components": true,
+    "rank_two_source_ancestor_contraction": 7057,
+    "nonmultiplicative_linear_functional": true,
+    "constant_target_separating_gysin_excluded": true,
+    "full_class": {
+      "target": "Bl_pq P2",
+      "generator_coordinates": [
+        1,
+        1,
+        0
+      ],
+      "ordered_splittings": [
+        [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            0
+          ]
+        ],
+        [
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ]
+        ],
+        [
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            1,
+            0,
+            0
+          ]
+        ],
+        [
+          [
+            1,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ]
+      ],
+      "arbitrary_source_psi_powers": true
+    }
+  },
+  "remaining_geometric_inputs": [
+    "proper separating Gysin laws",
+    "raw graph-map composition",
+    "cotangent realization compatibility",
+    "original relation validity",
+    "surface and GKM CohFT identification",
+    "stable-map descendant comparison"
+  ],
+  "remaining_research_work": [
+    "general graph splitting",
+    "common-refinement/node excess and forgetting",
+    "explicit reconstruction relation generators",
+    "finite seed sufficiency and termination",
+    "all fixed surface reconstruction benchmarks",
+    "GKM CohFT import and numerical derivation replay"
+  ],
+  "warnings": [
+    "pre-existing private-module warning in AxiomaticGWTest/Basic.lean"
+  ],
+  "references": [
+    {
+      "title": "admcycles separable boundary raw pushforward",
+      "url": "https://modulispaces.gitlab.io/admcycles/tautological_ring.html#admcycles.tautological_ring.TautologicalRing.separable_boundary_divisor",
+      "accessed": "2026-10-02"
+    }
+  ]
+}

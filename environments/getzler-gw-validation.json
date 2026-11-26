@@ -1,0 +1,449 @@
+{
+  "recorded_utc": "2026-10-02T15:07:19.174732+00:00",
+  "status": "passed_scoped_checks",
+  "scope": "Explicit raw gluing constructions for all 33 Getzler columns; recursive primary full-class GW contraction soundness and accepted-certificate consumer.",
+  "baseline": {
+    "command": [
+      "lake",
+      "build",
+      "AxiomaticGW.Tautological.GetzlerRealization",
+      "AxiomaticGWTest.Tautological.GetzlerReplay"
+    ],
+    "exit_code": 0,
+    "log_sha256": "baf372fa842c1af1a2c8b483ffad5c9f28ed87d1eb7e525a15a9b008dae0b235"
+  },
+  "targeted_test": {
+    "command": [
+      "lake",
+      "build",
+      "AxiomaticGWTest.Tautological.GetzlerGW"
+    ],
+    "exit_code": 0,
+    "log_sha256": "78719ccfe3393669d4b9154a142eded115f27cca15a8c537f3814c4a226d1579"
+  },
+  "gates": [
+    {
+      "command": [
+        "lake",
+        "build"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 2.506,
+      "log": "/tmp/gw_getzler_gw_final_20261002_0.log",
+      "log_sha256": "b485521483ba14adce96db02dc375b67b61257c697751a05a7cbf836ca3ba356"
+    },
+    {
+      "command": [
+        "lake",
+        "test"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 22.231,
+      "log": "/tmp/gw_getzler_gw_final_20261002_1.log",
+      "log_sha256": "a7cd27cce37ae5f030749c36e52378ad395c50c091980fa14d3938f0801ed2b4"
+    },
+    {
+      "command": [
+        "lake",
+        "lint"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 7.292,
+      "log": "/tmp/gw_getzler_gw_final_20261002_2.log",
+      "log_sha256": "8cb704e7f2acb11f508473f8f0a1ac324d56ac70cac206d0a94cbe2318027dce"
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "/tmp/gw_getzler_gw_axioms_20261002.lean"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 1.529,
+      "log": "/tmp/gw_getzler_gw_final_20261002_3.log",
+      "log_sha256": "eee727e7094b04c560bad79956caac0316ba875c578b789b8793c60ee889b3c2"
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.013,
+      "log": "/tmp/gw_getzler_gw_final_20261002_4.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "axiom_audit": [
+    {
+      "declaration": "AxiomaticGW.GluingExpression.stable",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "AxiomaticGW.GluingExpression.graph",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "AxiomaticGW.GluingExpression.graph_totalGenus",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "AxiomaticGW.GluingExpression.stratum",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "AxiomaticGW.GluingExpression.stratum_fundamental",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "AxiomaticGW.GluingExpression.stratum_relabel",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "AxiomaticGW.GluingExpression.stratum_separating",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "AxiomaticGW.GluingExpression.stratum_nonseparating",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "AxiomaticGW.GluingExpression.Compatible",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "AxiomaticGW.GluingExpression.gwIntegral",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "AxiomaticGW.GluingExpression.gwContraction",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "AxiomaticGW.GluingExpression.gwIntegral_eq_contraction",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "AxiomaticGW.GetzlerGraphs.join",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "AxiomaticGW.GetzlerGraphs.close",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "AxiomaticGW.GetzlerGraphs.delta23Labels",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "AxiomaticGW.GetzlerGraphs.delta24Labels",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "AxiomaticGW.GetzlerGraphs.delta22Expression",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "AxiomaticGW.GetzlerGraphs.delta23Expression",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "AxiomaticGW.GetzlerGraphs.delta24Expression",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "AxiomaticGW.GetzlerGraphs.delta34Expression",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "AxiomaticGW.GetzlerGraphs.delta03Expression",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "AxiomaticGW.GetzlerGraphs.delta04Expression",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "AxiomaticGW.GetzlerGraphs.deltaBetaExpression",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "AxiomaticGW.GetzlerGraphs.representativeExpression",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "AxiomaticGW.GetzlerGraphs.representativeExpression_stratum",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "AxiomaticGW.GetzlerGraphs.markingPermutation",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "AxiomaticGW.GetzlerGraphs.expression",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "AxiomaticGW.GetzlerGraphs.expression_stratum",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "AxiomaticGW.GetzlerGraphs.gwChannel",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "AxiomaticGW.GetzlerGraphs.integrate_column_gw",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "AxiomaticGW.GetzlerGraphs.certificate_gw_eq_zero",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "AxiomaticGW.GetzlerGraphs.exchange_gw_eq_zero",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    }
+  ],
+  "regressions": {
+    "file": "AxiomaticGWTest/Tautological/GetzlerGW.lean",
+    "examples": 6,
+    "scope": [
+      "Wrong node incidence yields a different valid loop-and-tail stratum",
+      "Wrong parallel-edge incidence rejected",
+      "Wrong external marking rejected",
+      "Nine full-class triple assignments of E1+E2",
+      "Executable assignments agree with the actual effective-class splits",
+      "Actual decoded Sage presentation yields the conditional full-class GW equation"
+    ]
+  },
+  "geometric_inputs": [
+    "Fundamental normalization in the strata realization",
+    "Primitive separating, nonseparating, and relabelling raw graph-map compatibility",
+    "Proper Gysin and integration laws",
+    "Supplied primary GW theory",
+    "Named GetzlerRelationGeometry and normalized-cycle identification"
+  ],
+  "unchanged_public_statements": true,
+  "new_global_instances_or_simp_attributes": false,
+  "new_lean_files": [
+    "AxiomaticGW/Tautological/GluingExpression.lean",
+    "AxiomaticGW/Tautological/GluingEvaluation.lean",
+    "AxiomaticGW/Tautological/GetzlerGluing.lean",
+    "AxiomaticGW/Tautological/GetzlerGW.lean",
+    "AxiomaticGWTest/Tautological/GetzlerGW.lean"
+  ],
+  "source_sha256": {
+    "AxiomaticGW.lean": "09ef90522f643932d6047eaa60a6d8d33ff967e9a48a613e1d04078bdac58803",
+    "AxiomaticGW/Coefficients/EffectiveCurveClass.lean": "d68ce5d44f0158b8df4cac5f347871e387ce5d17c937a04a702b5b94588819e0",
+    "AxiomaticGW/Coefficients/WeightedCurveClass.lean": "3bc8645d07e903dd01653f88d301d745828566a60b2434d667fa894998bc79ca",
+    "AxiomaticGW/CohFT/Ancestors.lean": "d04f17b0a9a465e89d7c054a94b096cf81bf7ef22b931c61fdf73419e988c4a4",
+    "AxiomaticGW/CohFT/Basic.lean": "8e42e96505c84bea43ada16ddc0d54644c0f4416a56db03a5baf4aace2117b66",
+    "AxiomaticGW/CohFT/Constant.lean": "2e88098c585d69f20c1ed77691298ee48c994cb3b13ab53dc7fb138677690721",
+    "AxiomaticGW/CohFT/NonseparatingPushforward.lean": "6f5b1137ee901aa7b3a7db1d6a919023cd78fe2b9ff4c22cb709fc3e8d910121",
+    "AxiomaticGW/CohFT/SeparatingPushforward.lean": "7ef46b53841cad087888a34bfbcd0a089488a8f46f0d9048576c43e2c83c5000",
+    "AxiomaticGW/CohFT/StableCurve.lean": "12aed3192ef91e3220ec059d811bc2042e83c4d697937acaff0fb378cb8ccd78",
+    "AxiomaticGW/CohFT/Tautological.lean": "09a580ac3e481df0ba90bc30637e6bed2741dfc0e6599d8463a48b42861635ed",
+    "AxiomaticGW/CohFT/Topological.lean": "41a27b98a4df8c38f0dd256c404ad6f45ed28c3cddf91c20eb1fa4048d62186a",
+    "AxiomaticGW/Combinatorics/StableArity.lean": "078a0d2cf8d7a31ed89429e6661cbd469fe4e8cc412adc3b55cccd3335724052",
+    "AxiomaticGW/Combinatorics/StableGraph.lean": "8ce882e57be59078d2aff6f58df1a9a280c807805f7eb1d600e47e89bc01ca2a",
+    "AxiomaticGW/Frobenius/Basic.lean": "c219c9f98197d6430b5a96fb0c9088fabfcd5e343008769d9da6a471f1f0472d",
+    "AxiomaticGW/Frobenius/Constructions.lean": "85353e37abba56fb40802acd39a922a2f45a6a93727c8f6518ce864db3fa501e",
+    "AxiomaticGW/GW/Basic.lean": "f55ca302b1bd3f7c09abd4c1a2b989dc04acf977be697e2776c3fddd77bd5420",
+    "AxiomaticGW/GW/Descendants/Basic.lean": "a5a0f765967ca3a39b93f476e8976fb30669aa66be7085adfd48d80f4f1a275e",
+    "AxiomaticGW/GW/NonseparatingBoundary.lean": "ddc777c76b70f0c057da39995a99f2ffdc1e1d71f37df684fdea9a6c33dcd8a4",
+    "AxiomaticGW/GW/SeparatingBoundary.lean": "455b91bbce74cac444d04395ab0fa3673cd095e2ee30202796f355add8d66bfc",
+    "AxiomaticGW/Linear/Contraction.lean": "fc378491866b7bfc81751957f5fa904a62d46d6d0b67b69e580eeb9e774fb1aa",
+    "AxiomaticGW/Linear/Copairing.lean": "bd2ff186a8c185f6549a3b52f3f15e1e7cbc4c8dbe71af46dc7515ef1cb5d787",
+    "AxiomaticGW/Linear/PerfectPairing.lean": "f79e560a89494afd439038f9dd4915f08c827db023b0dd51c5fad1c281fc13bf",
+    "AxiomaticGW/Linear/SeparatingContraction.lean": "7c3ff5fc077e70ca058764271c21f355d0fea12cea12957a8c562583cb1e63f8",
+    "AxiomaticGW/Surfaces/CurveClasses.lean": "30814002532e28140557e4f4d2b60a45665b31de95e5288a5cca4f6211073fb3",
+    "AxiomaticGW/TFT/Basic.lean": "546dd0d8236ca564f589ed910058d47807cafb3c952b37d5600dddc87c04a794",
+    "AxiomaticGW/TFT/Correlator.lean": "5d5866bfc13ff00feaa53ceda514347595d0a6dd37b3d8129dc05ce6551ddb9b",
+    "AxiomaticGW/TFT/FiniteProduct.lean": "ee36e5a4a4e982fe4996dac2511d1b92142f324578a1bed9887af52cdb7a8ff2",
+    "AxiomaticGW/TFT/Frobenius.lean": "fdfcd37bf3b6bb9003b941e1048d06756ebd704c8907b08d58c69a050737c564",
+    "AxiomaticGW/TFT/Sewing.lean": "8c40554b9cff20461b50623160997e95d785dbf62d873a3d9be23af33a1ed4d5",
+    "AxiomaticGW/Tautological/BasicStrata.lean": "aaff11f4110657b96e99a223e8cea032126e21f3f12f37226d7d8094bcbc2159",
+    "AxiomaticGW/Tautological/DecoratedStableGraph.lean": "b4d0408b1cfddafe145230aad311a76577b8feafe6f2ac187cd1524a07247b60",
+    "AxiomaticGW/Tautological/Getzler.lean": "a18166e27b5c95f77c9eaa44afe59e4e5a53a6d17fa2994429239b53e04470a1",
+    "AxiomaticGW/Tautological/GetzlerGW.lean": "1bad4e6f07612c853f9d58dcc42b0983f3c479aca6220d32e17dfd097fe26275",
+    "AxiomaticGW/Tautological/GetzlerGluing.lean": "026c9e76249ba5bb47aa21dab6c8f41d5d97d7e2acb862addd16143ca638b083",
+    "AxiomaticGW/Tautological/GetzlerGraphs.lean": "3caca7fd4cf0d0e3366b5229015eb9756ec4fe9d019cb805748071b48eaf52e3",
+    "AxiomaticGW/Tautological/GetzlerRealization.lean": "2cc561bb53679eb6235adad35f3b57a5195c8c6898e8c4ae6e765b9d2a089ab4",
+    "AxiomaticGW/Tautological/GluingEvaluation.lean": "79fa292114eb8499c2186d5bbd71bdfb6d15891a9ec5e00cd0eb4e5061fba67d",
+    "AxiomaticGW/Tautological/GluingExpression.lean": "36c5e908f9d13273c739102d0d7c21363776db58d92e5fd49a363661fedc0db5",
+    "AxiomaticGW/Tautological/GraphBounds.lean": "69d1b5fe492e41ed328bc3d19797727f1cd1dc3885ba25de2d4fcb6decbcc679",
+    "AxiomaticGW/Tautological/GraphEnumeration.lean": "bbf9e878dc80e94b3e214e68b14e06dd370da516eb850b1c851d767cb7b01c6e",
+    "AxiomaticGW/Tautological/GraphIsomorphisms.lean": "5cd10ac37ec3390443ac5db4ef38bba59327491fa9f4708d13ea883ca258d0bf",
+    "AxiomaticGW/Tautological/LegPsi.lean": "9ca882b29db8f6dec38c510283aa9f4484839a8f1620232d20b65c61ecf3cb56",
+    "AxiomaticGW/Tautological/LegPsiRealization.lean": "e8d6bff52045adf408f2d4439b5df73b44328a88d1f51d1807ff70da58a6b95a",
+    "AxiomaticGW/Tautological/NonseparatingGluing.lean": "441bea8bc9e4935147b1b78ee29ae716006b5dba927add803941e837e3d66765",
+    "AxiomaticGW/Tautological/NonseparatingRealization.lean": "17d0072a0de621e5164ea39dfc46498b6d11388b0f5f278737a4f5baf1d89fda",
+    "AxiomaticGW/Tautological/Relabel.lean": "cff8eaef48a5789c21a85d3b7f74072538494c0505069911963e85a58c0ea020",
+    "AxiomaticGW/Tautological/RelabelRealization.lean": "3d61514b0b4d21ecb807f82b8c66794c47de46408b3eae5b0d7bbb7fe2f48152",
+    "AxiomaticGW/Tautological/RelationCertificate.lean": "665e0e9ed9aa8d16d8b86b30546623d4980a07a6add20dc771aafebaceee13d4",
+    "AxiomaticGW/Tautological/SeparatingGluing.lean": "05b43b110eb97c226e07ab7e898d1e2da1d90dcabbe59bd5726c45889933cb78",
+    "AxiomaticGW/Tautological/SeparatingRealization.lean": "e5ae34a58171024a17780469beafe6bd541e282ffc8537c562415e798659bfd0",
+    "AxiomaticGW/Tautological/StrataModule.lean": "4cbd41c258dd6e0e03a691d8de21fd9021788e03b67d1df0127742553f53112f",
+    "AxiomaticGW/Tautological/StrataRealization.lean": "ddf59186e35a331415f9cbb8713dbcfda209fbf9bf5530123a1ab87964cd308c",
+    "AxiomaticGWTest/Tautological/GetzlerGW.lean": "25ddc0e72bc63108d2414ac424c85bed70f82b73ee6c0442a14e2926d9c3b676",
+    "AxiomaticGWTest/Tautological/GetzlerReplay.lean": "7b91d9e3ac47d934f418aa112dbc153f374e41e3f149ca9fee1202769f1ccbec",
+    "README.md": "d6883cc225a237ee19c0c642b7c764b67590e5416075ea6f08e5a4f4b5632664",
+    "environments/getzler-candidate-osx-arm64.json": "ccd8a8f941e9d2d503ec91e29b2be527bf0c91ce111599e6ec56118f6994ecb7",
+    "environments/getzler-certificate-regressions.json": "45d98645b040914e18021617121267b843cb11953a768e39efb5c9245c0b773a",
+    "environments/getzler-validation.json": "adfdd0f89daa82bd013f9fc1d1afc085bfcb32739a5d0667da4d9610bb9d2851",
+    "lake-manifest.json": "e9d145b9e7338c66d20f6039ba5937818c5a1c3e085465391d3723315fec453d",
+    "lakefile.toml": "58517e8c961d4a4fab407f323a7caa650f935a1202b30bd5becd0335fa0dafe1",
+    "lean-toolchain": "2773c517aa90b66ea8a2c52bddddf84393157797f8341be0df45294fff7fd32e",
+    "notes/MathematicsToLean.md": "c95b0eb5f62ab78eb63988bee833095d9dce25ff98e33dd7af00393c3cb58f89",
+    "notes/mathematics/M05TautologicalClassesAndAncestors.md": "84e7e88a11990faf5f1afc62334f763d7c997a4437b9858b0427f8b1c2442ebd",
+    "notes/mathematics/SurfaceReconstructionInputs.md": "95e75d1b124f9d6ff0c3c6f04e5d93711cc881598009402eaac36e64ba1bcbbf",
+    "notes/milestones/AxiomaticGWRoadmap.md": "df0be62cc7d36c6dc470d3371ea60fed276c78d4cfead8611e6515c3f3044e34",
+    "notes/milestones/GWReconstructionPlan.md": "8c7fcf63f4b23da5fe21689c55a1dddf30bfe59f463befca48831f614b464675",
+    "notes/milestones/ImplementationProgress.md": "a2e3f4b9a33e7f0d85f2f84c55f609c9a521dfef9045e881bd3ee65ad2233038",
+    "notes/milestones/MathlibInventory.md": "c0ea6ab7f0cce5b50f68490c4b89004fc134d9e9c26e9d6a249dba437c0e0ebe",
+    "notes/references/AdmcyclesEnvironment.md": "42674c749577c8f28513d0ec9a7752888451db20535990d1b25604ccb0d02222"
+  },
+  "remaining": [
+    "Additional markings and external ancestor evaluation",
+    "Stable-map descendant comparison",
+    "Geometric surface applicability and finite seed sufficiency",
+    "Genus-zero through genus-two reconstruction, termination, uniqueness, and every fixed benchmark",
+    "Actual GKM class-level CohFT/reconstruction import and complete compatibility gates"
+  ],
+  "nonclaims": [
+    "No numerical surface invariant is computed by these tests",
+    "The recursive contraction is an expression in supplied component invariants, not a numerical reconstruction algorithm",
+    "No independence of arbitrary decomposition is asserted without geometric compatibility"
+  ],
+  "goal_status": "active; full scope unchanged"
+}

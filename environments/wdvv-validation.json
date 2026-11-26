@@ -1,0 +1,817 @@
+{
+  "recorded_utc": "2026-10-02T12:39:00.810064+00:00",
+  "status": "passed_scoped_checks",
+  "gates": [
+    {
+      "command": [
+        "lake",
+        "build",
+        "AxiomaticGWTest.Tautological.WDVV"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 1.411,
+      "log": "/tmp/gw_wdvv_final_20261002_0.log",
+      "log_sha256": "77034e0801d9333a01c2fa229da97076a92cd0026d13328f8e9c02cbbd64ca12"
+    },
+    {
+      "command": [
+        "lake",
+        "build"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 1.626,
+      "log": "/tmp/gw_wdvv_final_20261002_1.log",
+      "log_sha256": "ceca00617d137d8125611ddc06bc9c616e128bd8a73be16a178acbe7d0a6f0c8"
+    },
+    {
+      "command": [
+        "lake",
+        "test"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 37.858,
+      "log": "/tmp/gw_wdvv_final_20261002_2.log",
+      "log_sha256": "8a4b157778762fd626e2968edff7d427fdb079ab8909ff4ed7123f04b3ba22eb"
+    },
+    {
+      "command": [
+        "lake",
+        "lint"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 9.04,
+      "log": "/tmp/gw_wdvv_final_20261002_3.log",
+      "log_sha256": "8cb704e7f2acb11f508473f8f0a1ac324d56ac70cac206d0a94cbe2318027dce"
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "/tmp/gw_wdvv_axioms_20261002.lean"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 2.343,
+      "log": "/tmp/gw_wdvv_final_20261002_4.log",
+      "log_sha256": "3a3d70f1b0d3687475f6556e67a6d10eb6b3fc681ff204278f61aec40d96fc74"
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/test_wdvv_certificate.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 27.796,
+      "log": "/tmp/gw_wdvv_final_20261002_5.log",
+      "log_sha256": "55b5334742ccffb73a8d93905ac3980d18c98c8f7dfb47531254a3032a5534ae"
+    },
+    {
+      "command": [
+        "/opt/homebrew/Caskroom/miniforge/base/envs/axiomatic-gw-sage/bin/python",
+        "scripts/search_wdvv_certificate.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 3.448,
+      "log": "/tmp/gw_wdvv_final_20261002_6.log",
+      "log_sha256": "45c3e958bc442fee6aeb9a9b16c1ace1a6eb6de8719463e064b741cd470c53ec"
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/export_wdvv_certificate.py",
+        "environments/wdvv-candidate-osx-arm64.json"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.036,
+      "log": "/tmp/gw_wdvv_final_20261002_7.log",
+      "log_sha256": "e98c44829aec5e40417419e3c35483ac72f5b2f6a672445b9c63f2840abccc88"
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.013,
+      "log": "/tmp/gw_wdvv_final_20261002_8.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "source_sha256": {
+    "AxiomaticGW.lean": "0dfda70a3a88cd4a30474dfbec8c0702bb78cae98d33317ca84fd36c87a7c3b1",
+    "AxiomaticGW/Coefficients/WeightedCurveClass.lean": "3bc8645d07e903dd01653f88d301d745828566a60b2434d667fa894998bc79ca",
+    "AxiomaticGW/CohFT/Ancestors.lean": "d04f17b0a9a465e89d7c054a94b096cf81bf7ef22b931c61fdf73419e988c4a4",
+    "AxiomaticGW/CohFT/Basic.lean": "8e42e96505c84bea43ada16ddc0d54644c0f4416a56db03a5baf4aace2117b66",
+    "AxiomaticGW/CohFT/SeparatingPushforward.lean": "7ef46b53841cad087888a34bfbcd0a089488a8f46f0d9048576c43e2c83c5000",
+    "AxiomaticGW/CohFT/StableCurve.lean": "12aed3192ef91e3220ec059d811bc2042e83c4d697937acaff0fb378cb8ccd78",
+    "AxiomaticGW/CohFT/Tautological.lean": "09a580ac3e481df0ba90bc30637e6bed2741dfc0e6599d8463a48b42861635ed",
+    "AxiomaticGW/Combinatorics/StableArity.lean": "078a0d2cf8d7a31ed89429e6661cbd469fe4e8cc412adc3b55cccd3335724052",
+    "AxiomaticGW/GW/Basic.lean": "f55ca302b1bd3f7c09abd4c1a2b989dc04acf977be697e2776c3fddd77bd5420",
+    "AxiomaticGW/GW/Descendants/Basic.lean": "a5a0f765967ca3a39b93f476e8976fb30669aa66be7085adfd48d80f4f1a275e",
+    "AxiomaticGW/GW/SeparatingBoundary.lean": "455b91bbce74cac444d04395ab0fa3673cd095e2ee30202796f355add8d66bfc",
+    "AxiomaticGW/Linear/Contraction.lean": "fc378491866b7bfc81751957f5fa904a62d46d6d0b67b69e580eeb9e774fb1aa",
+    "AxiomaticGW/Linear/SeparatingContraction.lean": "7c3ff5fc077e70ca058764271c21f355d0fea12cea12957a8c562583cb1e63f8",
+    "AxiomaticGW/Surfaces/CurveClasses.lean": "30814002532e28140557e4f4d2b60a45665b31de95e5288a5cca4f6211073fb3",
+    "AxiomaticGW/Tautological/DecoratedStableGraph.lean": "b4d0408b1cfddafe145230aad311a76577b8feafe6f2ac187cd1524a07247b60",
+    "AxiomaticGW/Tautological/GraphBounds.lean": "69d1b5fe492e41ed328bc3d19797727f1cd1dc3885ba25de2d4fcb6decbcc679",
+    "AxiomaticGW/Tautological/GraphIsomorphisms.lean": "5cd10ac37ec3390443ac5db4ef38bba59327491fa9f4708d13ea883ca258d0bf",
+    "AxiomaticGW/Tautological/LegPsiRealization.lean": "e8d6bff52045adf408f2d4439b5df73b44328a88d1f51d1807ff70da58a6b95a",
+    "AxiomaticGW/Tautological/Relabel.lean": "cff8eaef48a5789c21a85d3b7f74072538494c0505069911963e85a58c0ea020",
+    "AxiomaticGW/Tautological/RelabelRealization.lean": "3d61514b0b4d21ecb807f82b8c66794c47de46408b3eae5b0d7bbb7fe2f48152",
+    "AxiomaticGW/Tautological/RelationCertificate.lean": "665e0e9ed9aa8d16d8b86b30546623d4980a07a6add20dc771aafebaceee13d4",
+    "AxiomaticGW/Tautological/SeparatingGluing.lean": "05b43b110eb97c226e07ab7e898d1e2da1d90dcabbe59bd5726c45889933cb78",
+    "AxiomaticGW/Tautological/SeparatingRealization.lean": "e5ae34a58171024a17780469beafe6bd541e282ffc8537c562415e798659bfd0",
+    "AxiomaticGW/Tautological/StrataModule.lean": "4cbd41c258dd6e0e03a691d8de21fd9021788e03b67d1df0127742553f53112f",
+    "AxiomaticGW/Tautological/StrataRealization.lean": "ddf59186e35a331415f9cbb8713dbcfda209fbf9bf5530123a1ab87964cd308c",
+    "AxiomaticGW/Tautological/WDVV.lean": "fc09895cdaf341156ec36f152b4de544d1f8fea80b5957e4bde43d7eb87566d2",
+    "AxiomaticGW/Tautological/WDVVRealization.lean": "95dabaaf51282938a94b9b0915a7086e9c4f9824621313acaf6345497e105af7",
+    "AxiomaticGWTest/Tautological/Separating.lean": "0f4614547d65146a2e1839cf7b8971572a2a9baad30ef5f52250416ed2d6cc60",
+    "AxiomaticGWTest/Tautological/WDVV.lean": "008f53b393c114f1b3ab43b9b7143480c547982f8547bf298a7cc52a48d74588",
+    "AxiomaticGWTest/Tautological/WDVVReplay.lean": "e98c44829aec5e40417419e3c35483ac72f5b2f6a672445b9c63f2840abccc88",
+    "environments/wdvv-candidate-osx-arm64.json": "44ba7410c29fd82126c188d52e0203f7aaa38139c315c7317e6221a6d905284d",
+    "environments/wdvv-certificate-regressions.json": "4ac75e4db6a5140c9466036a5296ca78924972752690c737713750c5e56470fd",
+    "lake-manifest.json": "e9d145b9e7338c66d20f6039ba5937818c5a1c3e085465391d3723315fec453d",
+    "lakefile.toml": "58517e8c961d4a4fab407f323a7caa650f935a1202b30bd5becd0335fa0dafe1",
+    "lean-toolchain": "2773c517aa90b66ea8a2c52bddddf84393157797f8341be0df45294fff7fd32e",
+    "scripts/export_admcycles_certificate.py": "28b9d7b9c81d10ef241f6a7a9082cf29047967ddf03ddf1d4433057b6b8d05f8",
+    "scripts/export_wdvv_certificate.py": "d4a8487cacdb54242f86bbfc6d951c36989097e83e48d433e6036359bf47e714",
+    "scripts/search_wdvv_certificate.py": "98cf46341f9f71f175ef73b42fb51204724d980252c094b76b2d375e2e304a28",
+    "scripts/test_wdvv_certificate.py": "d4b821b906711d0aca24777e2f35d28ee61e18113a908706d82a30035d667bd2",
+    "README.md": "6dfac911aaedb41186379bb9fccea2840300427c595bdb5681ca28c161f309fd",
+    "notes/MathematicsToLean.md": "84a98cd813cc4ecaf9951cdecedec0caa963aa597b9aae50a86d9586b856482a",
+    "notes/milestones/GWReconstructionPlan.md": "aac1715b53e2a4a0adffaddb366064f2a06fb927ce4b68f74e968219b94efa55",
+    "notes/milestones/AxiomaticGWRoadmap.md": "e3d69ada15e7fdabbd949be3799c59ed1f2a051616068c74052e8ae7cfbdcef7",
+    "notes/milestones/ImplementationProgress.md": "5fed6c6bc58ace4e08a3ee028acecdc465aaac10a4ff9f271da79b5e2553f6dd",
+    "notes/references/AdmcyclesEnvironment.md": "470e34e38dae812303c7219b9c9cc78ec0544b190895dac539d4436089be2c21",
+    "notes/references/GKMExchange.md": "df52fbd556c30b1c4df27a541996393c3c9003c23b4e47314c0987ea53cf3c21",
+    "notes/mathematics/SurfaceReconstructionInputs.md": "6b723a85beea9aecd03df39e341c8ef2b6fe9884c51469aec8be620e64fe8c1e"
+  },
+  "scope": "Marked WDVV raw graph frame, external label transport, exact Sage row search, claim-bound offline certificate replay, and conditional full-curve-class GW evaluation",
+  "axiom_audit": {
+    "declaration_count": 80,
+    "declarations": [
+      {
+        "declaration": "AxiomaticGW.StableGraphCode.relabel",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "AxiomaticGW.StableGraphCode.relabel_totalGenus",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "AxiomaticGW.StableGraphCode.relabel_refl",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "AxiomaticGW.StableGraphCode.relabel_trans",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "AxiomaticGW.StableGraphCode.Iso.relabel",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "AxiomaticGW.DecoratedStableGraph.relabel",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "AxiomaticGW.DecoratedStableGraph.relabel_refl",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "AxiomaticGW.DecoratedStableGraph.relabel_trans",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "AxiomaticGW.DecoratedStableGraph.relabel_codimension",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "AxiomaticGW.DecoratedStableGraph.Iso.relabel",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "AxiomaticGW.DecoratedStableGraph.Iso.unrelabel",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "AxiomaticGW.DecoratedStableGraph.relabelIsoEquiv",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "AxiomaticGW.DecoratedStableGraph.relabel_automorphismCount",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "AxiomaticGW.TautologicalStratum.relabel",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "AxiomaticGW.TautologicalStratum.relabel_mk",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "AxiomaticGW.TautologicalStratum.relabel_refl",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "AxiomaticGW.TautologicalStratum.relabel_trans",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "AxiomaticGW.TautologicalStratum.relabel_codimension",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "AxiomaticGW.TautologicalStratum.relabel_injective",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "AxiomaticGW.StrataModule.relabel",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "AxiomaticGW.StrataModule.relabel_single",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "AxiomaticGW.StrataModule.relabel_basis",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "AxiomaticGW.StrataModule.relabel_mem_degree",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "AxiomaticGW.RelationCertificate.relabel_interpret",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "AxiomaticGW.StrataRealization.RelabelCompatible",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "AxiomaticGW.StrataRealization.map_relabel",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "AxiomaticGW.StrataRealization.relabel_mem_kernel",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "AxiomaticGW.StrataRealization.integrateAgainst_relabel",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "AxiomaticGW.StrataRealization.integrateAgainst_relabel_cohFT",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "AxiomaticGW.StrataRealization.integrateAgainst_relabel_gw",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "AxiomaticGW.StrataRealization.certificate_relabel_eq_zero",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "AxiomaticGW.WDVV.stableArity",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "AxiomaticGW.WDVV.component",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "AxiomaticGW.WDVV.sourceGraph",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "AxiomaticGW.WDVV.labels",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "AxiomaticGW.WDVV.graph",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "AxiomaticGW.WDVV.graph_totalGenus",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "AxiomaticGW.WDVV.graph_codimension",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "AxiomaticGW.WDVV.columns",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "AxiomaticGW.WDVV.columns_eq_relabel_separating",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "AxiomaticGW.WDVV.graph_automorphismCount",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "AxiomaticGW.WDVV.graph_isomorphic?_iff",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "AxiomaticGW.WDVV.columns_injective",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "AxiomaticGW.WDVV.rows",
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "AxiomaticGW.WDVV.requested",
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "AxiomaticGW.WDVV.certificate",
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "AxiomaticGW.WDVV.check_requested",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "AxiomaticGW.WDVV.relation",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "AxiomaticGW.WDVV.relation_mem_degree",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "AxiomaticGW.WDVV.requested_ne_zero",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "AxiomaticGW.WDVV.AcceptsExchange",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "AxiomaticGW.WDVV.boundaryClass",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "AxiomaticGW.WDVV.BoundaryClassesEqual",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "AxiomaticGW.WDVV.map_column",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "AxiomaticGW.WDVV.map_relation_eq_zero",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "AxiomaticGW.WDVV.certificate_integral_eq_zero",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "AxiomaticGW.WDVV.gwChannel",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "AxiomaticGW.WDVV.integrate_column_gw",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "AxiomaticGW.WDVV.certificate_gw_eq_zero",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "AxiomaticGW.WDVV.gw_channel_zero_eq_two",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "AxiomaticGW.WDVV.exchange_gw_eq_zero",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "AxiomaticGW.WDVVReplay.incomingGraph0Candidate",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "AxiomaticGW.WDVVReplay.incomingGraph0Valid",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "AxiomaticGW.WDVVReplay.incomingGraph0Exponents",
+        "axioms": [
+          "propext"
+        ]
+      },
+      {
+        "declaration": "AxiomaticGW.WDVVReplay.incomingGraph0",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "AxiomaticGW.WDVVReplay.incomingGraph0_eq",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "AxiomaticGW.WDVVReplay.incomingGraph1Candidate",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "AxiomaticGW.WDVVReplay.incomingGraph1Valid",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "AxiomaticGW.WDVVReplay.incomingGraph1Exponents",
+        "axioms": [
+          "propext"
+        ]
+      },
+      {
+        "declaration": "AxiomaticGW.WDVVReplay.incomingGraph1",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "AxiomaticGW.WDVVReplay.incomingGraph1_eq",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "AxiomaticGW.WDVVReplay.incomingGraph2Candidate",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "AxiomaticGW.WDVVReplay.incomingGraph2Valid",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "AxiomaticGW.WDVVReplay.incomingGraph2Exponents",
+        "axioms": [
+          "propext"
+        ]
+      },
+      {
+        "declaration": "AxiomaticGW.WDVVReplay.incomingGraph2",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "AxiomaticGW.WDVVReplay.incomingGraph2_eq",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "AxiomaticGW.WDVVReplay.incomingColumns",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "AxiomaticGW.WDVVReplay.presentation",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "AxiomaticGW.WDVVReplay.accepted",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "AxiomaticGW.WDVVReplay.requested_mem_relationSpan",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    ]
+  },
+  "regressions": {
+    "case_count": 30,
+    "accepted": 3,
+    "kernel_rejected": 10,
+    "parser_rejected": 17
+  },
+  "lean_regression_examples": 18,
+  "placeholder_and_global_state_scan": "No sorry/admit/native_decide, substitute axiom, new global simp lemma or instance in the six reviewed Lean files; lines <= 100.",
+  "sage_regeneration": "Exact byte equality with the frozen candidate report; isolated caches and online relation lookup disabled. Upstream Sage emits a category deprecation warning.",
+  "replay_regeneration": "Exact byte equality with the frozen Lean replay file; ordinary Python only.",
+  "milestones_accepted_as_complete": [],
+  "remaining_geometric_inputs": [
+    "Raw four-point boundary class equality on the full stable locus",
+    "Separating proper push-pull and integration",
+    "Raw graph-map composition",
+    "Relabelling naturality and fundamental normalization",
+    "Geometric surface/GKM class identification and stable-map descendant comparison"
+  ],
+  "remaining_programme": "Getzler and genus-two geometric relation provenance, remaining strata operations, seed sufficiency, terminating surface reconstruction, class-level GKM import, all fixed benchmarks and research release remain incomplete.",
+  "post_documentation_validation": {
+    "command": [
+      "git",
+      "diff",
+      "--check"
+    ],
+    "exit_code": 0,
+    "recorded_utc": "2026-10-02T12:46:04.912813+00:00",
+    "log": "/tmp/gw_wdvv_post_documentation_diff_20261002.log",
+    "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

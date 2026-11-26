@@ -191,6 +191,57 @@ theorem ancestorInvariant_eq_zero_of_total_degree_ne
     (Omega.ancestorClass P g S h beta k a)
     (Omega.ancestorClass_total_degree P g S h beta k p a q ha hq) hne
 
+/-- Ancestors vanish outside the signed virtual dimension. This also covers
+negative expected output degrees, without assuming a natural output degree. -/
+theorem ancestorInvariant_eq_zero_of_virtual_dimension_ne
+    (Omega : GromovWittenTheory R V B D C) (P : PsiClasses C)
+    (I : StableCurveIntegration C) (g : ℕ) (S : Type) [Fintype S]
+    (h : StableArity g S) (beta : B) (k p : S → ℕ) (a : S → V)
+    (ha : ∀ s, a s ∈ Omega.graded.degree (p s))
+    (hne : ((∑ s, p s : ℕ) : ℤ) + ((∑ s, k s : ℕ) : ℤ) ≠
+      GWVirtualDimension Omega.graded.dimension g (Fintype.card S)
+        (Omega.c1Degree beta)) :
+    Omega.ancestorInvariant P I g S h beta k a = 0 := by
+  by_cases hneg : ((∑ s, p s : ℕ) : ℤ) +
+      (g : ℤ) * (Omega.graded.dimension : ℤ) <
+        (Omega.graded.dimension : ℤ) + Omega.c1Degree beta
+  · change I.integrate g S h (Omega.ancestorClass P g S h beta k a) = 0
+    rw [Omega.ancestorClass_eq_zero_of_negative P g S h beta k p a ha hneg, map_zero]
+  · let q := Int.toNat (((∑ s, p s : ℕ) : ℤ) + ((∑ s, k s : ℕ) : ℤ) +
+      (g : ℤ) * (Omega.graded.dimension : ℤ) -
+        (Omega.graded.dimension : ℤ) - Omega.c1Degree beta)
+    have hq : GWOutputDegree Omega.graded.dimension g
+        ((∑ s, p s) + ∑ s, k s) q (Omega.c1Degree beta) := by
+      have hnonneg : 0 ≤ ((∑ s, p s : ℕ) : ℤ) + ((∑ s, k s : ℕ) : ℤ) +
+          (g : ℤ) * (Omega.graded.dimension : ℤ) -
+            (Omega.graded.dimension : ℤ) - Omega.c1Degree beta := by omega
+      unfold GWOutputDegree
+      simp only [Nat.cast_add]
+      change (q : ℤ) + _ + _ = _
+      dsimp only [q]
+      rw [Int.toNat_of_nonneg hnonneg]
+      omega
+    apply Omega.ancestorInvariant_eq_zero_of_total_degree_ne P I g S h beta k p a q ha hq
+    intro heq
+    apply hne
+    have hdim : (StableArity.dimension g S : ℤ) =
+        3 * (g : ℤ) + (Fintype.card S : ℤ) - 3 := by
+      unfold StableArity at h
+      unfold StableArity.dimension
+      omega
+    unfold GWOutputDegree at hq
+    simp only [Nat.cast_add] at hq
+    rw [heq] at hq
+    calc
+      ((∑ s, p s : ℕ) : ℤ) + ((∑ s, k s : ℕ) : ℤ) =
+          (StableArity.dimension g S : ℤ) + (Omega.graded.dimension : ℤ) +
+            Omega.c1Degree beta - (g : ℤ) * (Omega.graded.dimension : ℤ) := by omega
+      _ = GWVirtualDimension Omega.graded.dimension g (Fintype.card S)
+          (Omega.c1Degree beta) := by
+        rw [hdim]
+        unfold GWVirtualDimension
+        ring
+
 end GromovWittenTheory
 
 /-- Stable-map descendant classes after stabilization to the stable-curve
@@ -269,6 +320,58 @@ theorem invariant_apply (M : StableMapDescendants Omega)
     (h : StableArity g S) (beta : B) (k : S → ℕ) (a : S → V) :
     M.invariant I g S h beta k a =
       I.integrate g S h (M.descendantClass g S h beta k a) := rfl
+
+/-- A numerical descendant invariant vanishes unless the total codimension
+of its insertions equals the virtual dimension of the stable-map space. -/
+theorem invariant_eq_zero_of_degree_ne (M : StableMapDescendants Omega)
+    (I : StableCurveIntegration C) (g : ℕ) (S : Type) [Fintype S]
+    (h : StableArity g S) (beta : B) (k p : S → ℕ) (a : S → V)
+    (ha : ∀ s, a s ∈ Omega.graded.degree (p s))
+    (hne : ((∑ s, p s : ℕ) : ℤ) + ((∑ s, k s : ℕ) : ℤ) ≠
+      GWVirtualDimension Omega.graded.dimension g (Fintype.card S)
+        (Omega.c1Degree beta)) :
+    M.invariant I g S h beta k a = 0 := by
+  rw [invariant_apply]
+  by_cases hneg : ((∑ s, p s : ℕ) : ℤ) + ((∑ s, k s : ℕ) : ℤ) +
+      (g : ℤ) * (Omega.graded.dimension : ℤ) <
+        (Omega.graded.dimension : ℤ) + Omega.c1Degree beta
+  · rw [M.descendant_eq_zero_of_negative g S h beta k p a ha hneg, map_zero]
+  · let q := Int.toNat (((∑ s, p s : ℕ) : ℤ) + ((∑ s, k s : ℕ) : ℤ) +
+      (g : ℤ) * (Omega.graded.dimension : ℤ) -
+        (Omega.graded.dimension : ℤ) - Omega.c1Degree beta)
+    have hq : GWOutputDegree Omega.graded.dimension g
+        ((∑ s, p s) + ∑ s, k s) q (Omega.c1Degree beta) := by
+      have hnonneg : 0 ≤ ((∑ s, p s : ℕ) : ℤ) + ((∑ s, k s : ℕ) : ℤ) +
+          (g : ℤ) * (Omega.graded.dimension : ℤ) -
+            (Omega.graded.dimension : ℤ) - Omega.c1Degree beta := by omega
+      have hcast := Int.toNat_of_nonneg hnonneg
+      unfold GWOutputDegree
+      simp only [Nat.cast_add]
+      change (q : ℤ) + _ + _ = _
+      dsimp only [q]
+      rw [hcast]
+      omega
+    apply I.integrate_of_degree_ne g S h q _
+      (M.descendant_total_degree g S h beta k p a q ha hq)
+    intro heq
+    apply hne
+    have hdim : (StableArity.dimension g S : ℤ) =
+        3 * (g : ℤ) + (Fintype.card S : ℤ) - 3 := by
+      unfold StableArity at h
+      unfold StableArity.dimension
+      omega
+    unfold GWOutputDegree at hq
+    simp only [Nat.cast_add] at hq
+    rw [heq] at hq
+    calc
+      ((∑ s, p s : ℕ) : ℤ) + ((∑ s, k s : ℕ) : ℤ) =
+          (StableArity.dimension g S : ℤ) + (Omega.graded.dimension : ℤ) +
+            Omega.c1Degree beta - (g : ℤ) * (Omega.graded.dimension : ℤ) := by omega
+      _ = GWVirtualDimension Omega.graded.dimension g (Fintype.card S)
+          (Omega.c1Degree beta) := by
+        rw [hdim]
+        unfold GWVirtualDimension
+        ring
 
 /-- Numerical stable-map descendant invariants are invariant under
 simultaneous relabelling of markings, powers, and inputs. -/

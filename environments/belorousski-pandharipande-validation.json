@@ -1,0 +1,1271 @@
+{
+  "axiom_audit": {
+    "AxiomaticGW.BelorousskiPandharipande.automorphismOrders_correct": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "AxiomaticGW.BelorousskiPandharipande.boundary_row_coordinates": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "AxiomaticGW.BelorousskiPandharipande.boundary_row_gluing": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "AxiomaticGW.BelorousskiPandharipande.checked": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "AxiomaticGW.BelorousskiPandharipande.columns_codimension": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "AxiomaticGW.BelorousskiPandharipande.columns_injective": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "AxiomaticGW.BelorousskiPandharipande.columns_relabel": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "AxiomaticGW.BelorousskiPandharipande.conversion_inverse": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "AxiomaticGW.BelorousskiPandharipande.graph_totalGenus": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "AxiomaticGW.BelorousskiPandharipande.gw_relation_from_generators": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "AxiomaticGW.BelorousskiPandharipande.interpret_request": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "AxiomaticGW.BelorousskiPandharipande.interpret_symmetrize": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "AxiomaticGW.BelorousskiPandharipande.labelPermutation_bijective": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "AxiomaticGW.BelorousskiPandharipande.orbitTerm_stratum": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "AxiomaticGW.BelorousskiPandharipande.paperNormalization_correct": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "AxiomaticGW.BelorousskiPandharipande.paperRelation_as_terms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "AxiomaticGW.BelorousskiPandharipande.paperStratum_eq": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "AxiomaticGW.BelorousskiPandharipande.paperTerm_lower_genus": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "AxiomaticGW.BelorousskiPandharipande.paperTerm_stratum": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "AxiomaticGW.BelorousskiPandharipande.realized_relation_from_generators": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "AxiomaticGW.BelorousskiPandharipande.requested_coordinates": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "AxiomaticGW.BelorousskiPandharipande.requested_ne_zero": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "AxiomaticGW.BelorousskiPandharipande.rows_conversion": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "AxiomaticGW.BelorousskiPandharipande.rows_symmetrized": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "AxiomaticGW.BelorousskiPandharipande.sourceColumns_codimension": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "AxiomaticGW.BelorousskiPandharipande.sourceImage_columns": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "AxiomaticGW.BelorousskiPandharipande.sourceMap_columns": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "AxiomaticGW.BelorousskiPandharipande.sourceMap_interpret": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "AxiomaticGW.BelorousskiPandharipande.sourceMap_vanishes": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "AxiomaticGW.BelorousskiPandharipandeReplay.accepted": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "AxiomaticGW.BelorousskiPandharipandeReplay.requested_mem_relationSpan": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "axiom_query_sha256": "f476b6d06f9e0322d2918ee2711ed4bcd49e5c980f54a23143d71195dcde5930",
+  "certificate": {
+    "component_maps": "Actual raw separating gluings and necessary label transports.",
+    "diagnostic_external_psi_intersections": 15,
+    "diagnostics_prove_class_equality": false,
+    "kappa_conversion": "pushforward kappa_(1,1) = monomial kappa_1^2 + kappa_2; both directions proved.",
+    "marking_assignments": 6,
+    "original_component_rows": 16,
+    "original_interior_rows": 4,
+    "original_matrix_dimensions": [
+      65,
+      100
+    ],
+    "published_diagrams": 20,
+    "raw_columns": 100,
+    "request_support": 46,
+    "selected_rows": 20,
+    "source_frame_sizes": [
+      7,
+      8,
+      4,
+      3,
+      17,
+      5,
+      9
+    ]
+  },
+  "commands": [
+    {
+      "children_ru_maxrss_raw": 1093992448,
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "/tmp/gw_bp_axioms_20261003.lean"
+      ],
+      "elapsed_seconds": 3.625,
+      "exit_code": 0,
+      "log": "/tmp/gw_bp_axioms_20261003.log",
+      "log_sha256": "b53f0a2a867a58b2270002f6b19893bad0b8268718f968c293f03ae6d50e5f62"
+    },
+    {
+      "children_ru_maxrss_raw": 725303296,
+      "command": [
+        "lake",
+        "build",
+        "AxiomaticGW.Surfaces.GenusTwoOnePointAncestors",
+        "AxiomaticGW.Tautological.Fixtures.GenusTwoPsiSquareReplay"
+      ],
+      "elapsed_seconds": 1.049,
+      "exit_code": 0,
+      "log": "/tmp/gw_bp_baseline_20261003.log",
+      "log_sha256": "f23c222ca7ce1895a5fee4646a3cb96960923e2b27701176c97c4e73375c1b2b"
+    },
+    {
+      "children_ru_maxrss_raw": 21544960,
+      "command": [
+        "python3",
+        "-B",
+        "scripts/export_belorousski_pandharipande.py",
+        "environments/belorousski-pandharipande.json",
+        "--output",
+        "AxiomaticGW/Tautological/Fixtures/BelorousskiPandharipandeReplay.lean",
+        "--check"
+      ],
+      "elapsed_seconds": 0.087,
+      "exit_code": 0,
+      "log": "/tmp/gw_bp_export_check_20261003.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "children_ru_maxrss_raw": 1294745600,
+      "command": [
+        "lake",
+        "build"
+      ],
+      "elapsed_seconds": 7.961,
+      "exit_code": 0,
+      "log": "/tmp/gw_bp_full_build_20261003.log",
+      "log_sha256": "416a7d38185e0a6c6aa9e4cb7aede27fce1e2d3cea75039038e6f9c84e9bbda2"
+    },
+    {
+      "children_ru_maxrss_raw": 3426172928,
+      "command": [
+        "lake",
+        "build"
+      ],
+      "elapsed_seconds": 43.562,
+      "exit_code": 0,
+      "log": "/tmp/gw_bp_full_build_clean_20261003.log",
+      "log_sha256": "cd84465b375a57d5a355e7951feae37600e7ec23e5d036effcac0350ce9efea2"
+    },
+    {
+      "children_ru_maxrss_raw": 6337232896,
+      "command": [
+        "lake",
+        "test"
+      ],
+      "elapsed_seconds": 37.302,
+      "exit_code": 0,
+      "log": "/tmp/gw_bp_full_test_20261003.log",
+      "log_sha256": "e4ae63f49663bfd772a45d006de65cda413508b70965123bde130435f8322a7d"
+    },
+    {
+      "children_ru_maxrss_raw": 4468637696,
+      "command": [
+        "lake",
+        "build",
+        "AxiomaticGW.Tautological.BelorousskiPandharipandeGraphs"
+      ],
+      "elapsed_seconds": 31.036,
+      "exit_code": 0,
+      "log": "/tmp/gw_bp_graphs2_20261003.log",
+      "log_sha256": "5c964895a8c5aa3cb5b0688fb37f7573d27bb11a162201ec4114f9771e6ba7ce"
+    },
+    {
+      "children_ru_maxrss_raw": 1185185792,
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "AxiomaticGWTest/Tautological/BelorousskiPandharipande.lean"
+      ],
+      "elapsed_seconds": 1.475,
+      "exit_code": 0,
+      "log": "/tmp/gw_bp_lean_tests3_20261003.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "children_ru_maxrss_raw": 3816488960,
+      "command": [
+        "lake",
+        "lint"
+      ],
+      "elapsed_seconds": 9.514,
+      "exit_code": 0,
+      "log": "/tmp/gw_bp_lint_20261003.log",
+      "log_sha256": "8cb704e7f2acb11f508473f8f0a1ac324d56ac70cac206d0a94cbe2318027dce"
+    },
+    {
+      "children_ru_maxrss_raw": 292110336,
+      "command": [
+        "/opt/homebrew/Caskroom/miniforge/base/envs/axiomatic-gw-sage/bin/python",
+        "/tmp/gw_bp_probe_20261003.py"
+      ],
+      "elapsed_seconds": 3.201,
+      "exit_code": 0,
+      "log": "/tmp/gw_bp_probe_20261003.log",
+      "log_sha256": "c55a1a552727707f2b5b49c55dd8d4076da7fc5db32182a1b4cf1f3d44d15edb"
+    },
+    {
+      "children_ru_maxrss_raw": 296779776,
+      "command": [
+        "/opt/homebrew/Caskroom/miniforge/base/envs/axiomatic-gw-sage/bin/python",
+        "/tmp/gw_bp_probe_full_20261003.py"
+      ],
+      "elapsed_seconds": 1.55,
+      "exit_code": 0,
+      "log": "/tmp/gw_bp_probe_full_20261003.log",
+      "log_sha256": "c6ee4849336fa1081ebe817accf560efa5288ca1d837d36c825166512b8e6044"
+    },
+    {
+      "children_ru_maxrss_raw": 3416539136,
+      "command": [
+        "lake",
+        "build",
+        "AxiomaticGW.Tautological.Fixtures.BelorousskiPandharipandeReplay"
+      ],
+      "elapsed_seconds": 30.88,
+      "exit_code": 0,
+      "log": "/tmp/gw_bp_replay4_20261003.log",
+      "log_sha256": "21b6cde2acd5cf61c05a14270c9cb289af8b99af649f6ad11f08abf14ce2d316"
+    },
+    {
+      "children_ru_maxrss_raw": 305971200,
+      "command": [
+        "/opt/homebrew/Caskroom/miniforge/base/envs/axiomatic-gw-sage/bin/python",
+        "scripts/search_belorousski_pandharipande.py",
+        "--output",
+        "environments/belorousski-pandharipande.json"
+      ],
+      "elapsed_seconds": 1.771,
+      "exit_code": 0,
+      "log": "/tmp/gw_bp_search_20261003.log",
+      "log_sha256": "25233ec03f61d8f731226892297605377a43215b3a3508ee045fa4e804c59efa"
+    },
+    {
+      "children_ru_maxrss_raw": 306724864,
+      "command": [
+        "/opt/homebrew/Caskroom/miniforge/base/envs/axiomatic-gw-sage/bin/python",
+        "-B",
+        "scripts/search_belorousski_pandharipande.py",
+        "--output",
+        "/tmp/gw_bp_search_final_payload_20261003.json"
+      ],
+      "elapsed_seconds": 6.161,
+      "exit_code": 0,
+      "log": "/tmp/gw_bp_search_final_20261003.log",
+      "log_sha256": "25233ec03f61d8f731226892297605377a43215b3a3508ee045fa4e804c59efa"
+    },
+    {
+      "children_ru_maxrss_raw": 303988736,
+      "command": [
+        "/opt/homebrew/Caskroom/miniforge/base/envs/axiomatic-gw-sage/bin/python",
+        "scripts/search_belorousski_pandharipande.py",
+        "--output",
+        "/tmp/gw_bp_search_repeat_payload_20261003.json"
+      ],
+      "elapsed_seconds": 3.547,
+      "exit_code": 0,
+      "log": "/tmp/gw_bp_search_repeat_20261003.log",
+      "log_sha256": "25233ec03f61d8f731226892297605377a43215b3a3508ee045fa4e804c59efa"
+    },
+    {
+      "children_ru_maxrss_raw": 303693824,
+      "command": [
+        "/opt/homebrew/Caskroom/miniforge/base/envs/axiomatic-gw-sage/bin/python",
+        "/tmp/gw_bp_solve_20261003.py"
+      ],
+      "elapsed_seconds": 1.655,
+      "exit_code": 0,
+      "log": "/tmp/gw_bp_solve_20261003.log",
+      "log_sha256": "03fe64736b4795c2c0c41023681a11819e7215ae768943a85dc6ee955d1d3a4d"
+    },
+    {
+      "children_ru_maxrss_raw": 3456827392,
+      "command": [
+        "python3",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "scripts",
+        "-p",
+        "test_belorousski_pandharipande.py",
+        "-v"
+      ],
+      "elapsed_seconds": 489.773,
+      "exit_code": 0,
+      "log": "/tmp/gw_bp_tests_final_20261003.log",
+      "log_sha256": "898195532b393fab1f3de8ccd2a83b88a5c0ccc9e1a58d9f83049660a5f07ef3"
+    },
+    {
+      "children_ru_maxrss_raw": 76972032,
+      "command": [
+        "python3",
+        "-B",
+        "/tmp/gw_bp_review_20261003.py"
+      ],
+      "elapsed_seconds": 0.916,
+      "exit_code": 0,
+      "log": "/tmp/gw_bp_final_review_20261003.log",
+      "log_sha256": "1c4b00c3c7dc4a41f059aea7d6b22770310b2015a71603aebd75594ddf5abcd1"
+    }
+  ],
+  "date": "2026-10-03",
+  "development_attempts": [
+    {
+      "children_ru_maxrss_raw": 6649004032,
+      "command": [
+        "lake",
+        "build",
+        "AxiomaticGW.Tautological.BelorousskiPandharipande"
+      ],
+      "elapsed_seconds": 45.302,
+      "exit_code": 1,
+      "log": "/tmp/gw_bp_certificate_20261003.log",
+      "log_sha256": "038d425c74aaa1948cbdac4ccfd513e5c4c4648bdf08d57732308cc0de6dbbaf"
+    },
+    {
+      "children_ru_maxrss_raw": 3495821312,
+      "command": [
+        "lake",
+        "build"
+      ],
+      "elapsed_seconds": 35.223,
+      "exit_code": 0,
+      "log": "/tmp/gw_bp_full_build_final_20261003.log",
+      "log_sha256": "61a8b523bc4600020ea4085bc46752c1506db18f2a48247a3a2f7a2d230c62f0"
+    },
+    {
+      "children_ru_maxrss_raw": 3506733056,
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "AxiomaticGW/Tautological/BelorousskiPandharipandeGraphs.lean"
+      ],
+      "elapsed_seconds": 48.885,
+      "exit_code": 1,
+      "log": "/tmp/gw_bp_graphs_20261003.log",
+      "log_sha256": "7e67ba3e23d94dee12ae4885d36adc66453cc288bcf39ffc8f302ea9d8a7bbe3"
+    },
+    {
+      "children_ru_maxrss_raw": 6714277888,
+      "command": [
+        "lake",
+        "build",
+        "AxiomaticGW.Tautological.BelorousskiPandharipandeGW"
+      ],
+      "elapsed_seconds": 48.159,
+      "exit_code": 1,
+      "log": "/tmp/gw_bp_gw_20261003.log",
+      "log_sha256": "eae188869f8a353ae07908b55b302867f9e2235dd58718b2e81a771845a3db49"
+    },
+    {
+      "children_ru_maxrss_raw": 1182777344,
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "AxiomaticGWTest/Tautological/BelorousskiPandharipande.lean"
+      ],
+      "elapsed_seconds": 12.406,
+      "exit_code": 1,
+      "log": "/tmp/gw_bp_lean_tests2_20261003.log",
+      "log_sha256": "1cf9f7cb9136f3f75c1ce3f233745bd4d976ea03c1a9debefa479c04901c6229"
+    },
+    {
+      "children_ru_maxrss_raw": 1184153600,
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "AxiomaticGWTest/Tautological/BelorousskiPandharipande.lean"
+      ],
+      "elapsed_seconds": 2.353,
+      "exit_code": 1,
+      "log": "/tmp/gw_bp_lean_tests_20261003.log",
+      "log_sha256": "43f00adaf5fbdd511b6b5415dd3b5a4fad404b2eec127fa3bd1835b7375c95e8"
+    },
+    {
+      "children_ru_maxrss_raw": 3381379072,
+      "command": [
+        "lake",
+        "build",
+        "AxiomaticGW.Tautological.Fixtures.BelorousskiPandharipandeReplay"
+      ],
+      "elapsed_seconds": 30.114,
+      "exit_code": 1,
+      "log": "/tmp/gw_bp_replay3_20261003.log",
+      "log_sha256": "b0654bcb2a833f1e421f4f8d9b436b062c43d887f0bd73b6544722310c6969aa"
+    },
+    {
+      "children_ru_maxrss_raw": 3327148032,
+      "command": [
+        "lake",
+        "build",
+        "AxiomaticGW.Tautological.BelorousskiPandharipandeGW",
+        "AxiomaticGW.Tautological.Fixtures.BelorousskiPandharipandeReplay"
+      ],
+      "elapsed_seconds": 23.2,
+      "exit_code": 1,
+      "log": "/tmp/gw_bp_replay_gw2_20261003.log",
+      "log_sha256": "f536c51b85cbf4a8be14c1bf881b0fec362f583f8687b0b94e26935408d4d452"
+    },
+    {
+      "children_ru_maxrss_raw": 1141932032,
+      "command": [
+        "lake",
+        "build",
+        "AxiomaticGW.Tautological.BelorousskiPandharipandeGW",
+        "AxiomaticGW.Tautological.Fixtures.BelorousskiPandharipandeReplay"
+      ],
+      "elapsed_seconds": 4.676,
+      "exit_code": 1,
+      "log": "/tmp/gw_bp_replay_gw_20261003.log",
+      "log_sha256": "8c837812e98e23e05b0bd11ce6ad32a605fa6c971ccfbab4946c7b71547955c3"
+    },
+    {
+      "children_ru_maxrss_raw": 1105051648,
+      "command": [
+        "lake",
+        "build",
+        "AxiomaticGW.Tautological.BelorousskiPandharipandeSources"
+      ],
+      "elapsed_seconds": 1.883,
+      "exit_code": 1,
+      "log": "/tmp/gw_bp_sources2_20261003.log",
+      "log_sha256": "70850fbee58e269dfe038b3a92e8a8d2b90cfbf2c3a51b4c3c92884105d2a96c"
+    },
+    {
+      "children_ru_maxrss_raw": 1103216640,
+      "command": [
+        "lake",
+        "build",
+        "AxiomaticGW.Tautological.BelorousskiPandharipandeSources"
+      ],
+      "elapsed_seconds": 2.387,
+      "exit_code": 1,
+      "log": "/tmp/gw_bp_sources3_20261003.log",
+      "log_sha256": "6922d804435e030756c91f41e86a7d1bf8c1650706a28adaedb7d4a0fa9ce166"
+    },
+    {
+      "children_ru_maxrss_raw": 1102495744,
+      "command": [
+        "lake",
+        "build",
+        "AxiomaticGW.Tautological.BelorousskiPandharipandeSources"
+      ],
+      "elapsed_seconds": 2.228,
+      "exit_code": 1,
+      "log": "/tmp/gw_bp_sources4_20261003.log",
+      "log_sha256": "92387169196ff6f95cdd326e39b031bb949b246b0f87884849c17bacecf589b7"
+    },
+    {
+      "children_ru_maxrss_raw": 1140932608,
+      "command": [
+        "lake",
+        "build",
+        "AxiomaticGW.Tautological.BelorousskiPandharipandeSources"
+      ],
+      "elapsed_seconds": 3.206,
+      "exit_code": 1,
+      "log": "/tmp/gw_bp_sources5_20261003.log",
+      "log_sha256": "316e94708d3a83f5b0f0dd1e9d2c11cf3a1309b0942e6038a0cd8e1ff984fad2"
+    },
+    {
+      "children_ru_maxrss_raw": 1142325248,
+      "command": [
+        "lake",
+        "build",
+        "AxiomaticGW.Tautological.BelorousskiPandharipandeSources"
+      ],
+      "elapsed_seconds": 3.223,
+      "exit_code": 1,
+      "log": "/tmp/gw_bp_sources6_20261003.log",
+      "log_sha256": "b0322ede360f4dd2665396bbb778431bd23d0bfd640f9f85ac94657fa01fd911"
+    },
+    {
+      "children_ru_maxrss_raw": 1089273856,
+      "command": [
+        "lake",
+        "build",
+        "AxiomaticGW.Tautological.BelorousskiPandharipandeSources"
+      ],
+      "elapsed_seconds": 2.037,
+      "exit_code": 1,
+      "log": "/tmp/gw_bp_sources_20261003.log",
+      "log_sha256": "cdc12770ada7ce42953b91bcf34e990a02c5b9d38519420a85ffef499ead2780"
+    },
+    {
+      "children_ru_maxrss_raw": 7796834304,
+      "command": [
+        "python3",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "scripts",
+        "-p",
+        "test_belorousski_pandharipande.py",
+        "-v"
+      ],
+      "elapsed_seconds": 552.452,
+      "exit_code": 1,
+      "log": "/tmp/gw_bp_tests_20261003.log",
+      "log_sha256": "5541a66bba0c5303ae60d2da1ee20b6f15703626bff0bd9a36a1d8df542cbb59"
+    },
+    {
+      "children_ru_maxrss_raw": 4530274304,
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "/tmp/gw_bp_wrong_branch_20261003.lean"
+      ],
+      "elapsed_seconds": 55.87,
+      "exit_code": 1,
+      "log": "/tmp/gw_bp_wrong_branch_20261003.log",
+      "log_sha256": "c6f9b56d3f0900b63d5bafe7d9089e7fed9631499c35c6ef334747395556eda5"
+    },
+    {
+      "children_ru_maxrss_raw": 4849876992,
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-Dpp.maxSteps=100",
+        "-Dpp.deepTerms.threshold=8",
+        "/tmp/gw_bp_wrong_branch_20261003.lean"
+      ],
+      "elapsed_seconds": 61.716,
+      "exit_code": 1,
+      "log": "/tmp/gw_bp_wrong_branch_bounded_print_20261003.log",
+      "log_sha256": "c6f9b56d3f0900b63d5bafe7d9089e7fed9631499c35c6ef334747395556eda5"
+    },
+    {
+      "children_ru_maxrss_raw": 3412000768,
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "/tmp/gw_bp_wrong_branch_compact_20261003.lean"
+      ],
+      "elapsed_seconds": 41.17,
+      "exit_code": 1,
+      "log": "/tmp/gw_bp_wrong_branch_compact_20261003.log",
+      "log_sha256": "547a961f339f7a5e6b61a84e25fc0d96c7cc848c9660f903689eff6baa5bc78d"
+    }
+  ],
+  "development_notes": [
+    "Dependent finite indices and Fin.cases constructions were corrected; theorem statements were preserved.",
+    "Separate incoming matrix definitions resolved generated-code recursion depth without changing the data or checker.",
+    "Negative-test diagnostic printing exhausted budgets for four malformed inputs; concise failure branches now report non-acceptance and separate kernel counterexamples establish the semantic errors.",
+    "Diagnostic-branch unused/unreachable linter exceptions are local to generated proof declarations and exercised by the corruption suite.",
+    "A scratch graph equality attempt without the existing toDecoration_eq_mk lemma could not reduce vector internals; the replay uses that public lemma.",
+    "No pre-existing baseline build failure was found."
+  ],
+  "external_tools": {
+    "admcycles_source_sha256": {
+      "admcycles.py": "19e9e77c58299b387abadab76f2e1f1b1b2b63808f3dbbd0e44499a930db9a1b",
+      "algebra.py": "7d684ffc9c04d77434a9a2e9d52d4a7c79b159693bc5d5989ee443cbdcc724d1",
+      "graph.py": "3c4c4f833989177f055710c067e77817113efd4062cdab105e56162155949481",
+      "relations.py": "bd9f1f2476ceed08d745fce684cced8950b41746644162594dd00e7ee4b6b1a5",
+      "stable_graph.py": "aa9b81ae274660b2d44cf474390a8b0c3a7865cfa6deaa06d005ae96dfdbd3ca",
+      "tautological_ring.py": "c9cf9b46fa8c7f2207d6d0ebc3f3565518f6f29d324bb6b280c1626a772bbd12"
+    },
+    "cache_ephemeral": true,
+    "environment": {
+      "admcycles": "1.4",
+      "architecture": "arm64",
+      "python": "3.12.14",
+      "sage": "10.9"
+    },
+    "gkm_producer_modified": false,
+    "gkm_producer_source": {
+      "project": "gkm_localization",
+      "python_sources": {
+        "gkm_localization/__init__.py": "00d7e7813c8d1d60adc432430d35fa6a4806bceee008984c2b754091354375ec",
+        "gkm_localization/hodge_integral.py": "862d4f8c9b4915b96ce9f62c789f079ea82c8fecdb43d5f1c407a00ba424d043",
+        "gkm_localization/stable_map.py": "4e88e18487577642f86bcf1d8762c8ac117d4bfe4329c095bbb6fdd38258c53a",
+        "gkm_localization/target.py": "e0466e4ea6ba1db8c584051147831f2b11e59102fba533107623549b28bfc4e5",
+        "gkm_localization/target_builders.py": "b17fb2cfb2f9db8453601bf5e7e5a571a313f58bae7755915e890206fc06b9b5"
+      },
+      "reuse_license": "not established; no producer code is vendored",
+      "revision": "a09c6625b280312721c5e0f2f915791781339aa5",
+      "schema_version": 1
+    },
+    "online_lookup": false,
+    "primary_sources": [
+      {
+        "location": "Theorem 1, equation (4), page 4",
+        "pdf_sha256": "5dc095204aef68be2f74144eb29ca8656f05c31e59b5fd39e351ea1f4df4318e",
+        "url": "https://arxiv.org/pdf/math/9803072"
+      },
+      {
+        "scope": "Original 3-spin geometric generator source; validity remains explicit.",
+        "url": "https://arxiv.org/pdf/1303.1043"
+      },
+      {
+        "scope": "Sections 7 and 8 guide the surface route; primitive-part and approximate identities do not replace full relations.",
+        "url": "https://arxiv.org/html/2210.04038"
+      }
+    ],
+    "report_bytes": 362520,
+    "report_sha256": "5868b2f3ef1e5a45e6175b6349566b72c778f4ab028ef941b43498fd0ee8d1bc"
+  },
+  "findings": [
+    {
+      "file": "AxiomaticGW/Tautological/BelorousskiPandharipandeGW.lean",
+      "finding": "The one-point psi-square relation did not provide the complete three-marked BP equation.",
+      "kind": "Planned reconstruction gap",
+      "resolution": "Constructed all published decorated gluings and proved the full GW equation from original generators.",
+      "severity": "High"
+    },
+    {
+      "file": "AxiomaticGW/Tautological/BelorousskiPandharipandeGraphs.lean",
+      "finding": "Orbit averaging, omission of elliptic-tail exchange, or swapping a decorated node branch changes the published request.",
+      "kind": "Normalization obligations",
+      "resolution": "Kernel checks and semantic corruption counterexamples bind all six assignments, decorated automorphism orders and exact branches.",
+      "severity": "Medium"
+    },
+    {
+      "file": "scripts/export_belorousski_pandharipande.py",
+      "finding": "Printing rejected expanded expressions exhausted Lean diagnostic budgets.",
+      "kind": "Diagnostic fragility",
+      "resolution": "Concise failing diagnostic branches plus separate compiled counterexamples; no proof or acceptance condition is weakened.",
+      "severity": "Medium"
+    }
+  ],
+  "mathematical_effect": {
+    "existing_lean_definitions_or_theorem_statements_changed": false,
+    "genus_two_surface_recurrence_solved": false,
+    "geometric_3spin_construction_formalized": false,
+    "geometric_inputs": [
+      "Four original full-stable genus-two 3-spin rows on Mbar(2,3).",
+      "Sixteen original component row vanishings in seven held frames, reusing the existing elliptic rows.",
+      "Primitive separating gluing and relabelling realization compatibility.",
+      "Primitive decorated gluing, fundamental and cotangent compatibility for the twenty diagrams and their marking relabellings."
+    ],
+    "gkm_cohft_import_completed": false,
+    "milestone_acceptance_changed": false,
+    "new_global_simp_instance_or_coercion": false,
+    "new_seed_or_assumed_final_numerical_recurrence": false
+  },
+  "next_priority": "Derive the additional-marking and fixed-surface BP equations with proved leading coefficients and degree decrease.",
+  "regressions": {
+    "axiom_audits": 31,
+    "complete_exchange_corruptions_rejected_with_kernel_counterexamples": 15,
+    "equivalent_graph_changes_in_that_case": 3,
+    "equivalent_graph_presentations_accepted": 1,
+    "fresh_offline_reports_byte_identical": 3,
+    "full_build_jobs": 2766,
+    "full_test_jobs": 2826,
+    "kernel_checks": [
+      {
+        "case": "equivalent",
+        "elapsed_seconds": 32.52,
+        "exit_code": 0
+      },
+      {
+        "case": "wrong_node_branch",
+        "elapsed_seconds": 30.495,
+        "exit_code": 1
+      },
+      {
+        "case": "wrong_node_branch_counterexample",
+        "elapsed_seconds": 1.382,
+        "exit_code": 0
+      },
+      {
+        "case": "wrong_external_label",
+        "elapsed_seconds": 39.42,
+        "exit_code": 1
+      },
+      {
+        "case": "wrong_external_label_counterexample",
+        "elapsed_seconds": 2.023,
+        "exit_code": 0
+      },
+      {
+        "case": "wrong_component_decoration",
+        "elapsed_seconds": 31.401,
+        "exit_code": 1
+      },
+      {
+        "case": "wrong_component_decoration_counterexample",
+        "elapsed_seconds": 1.474,
+        "exit_code": 0
+      },
+      {
+        "case": "wrong_published_branch",
+        "elapsed_seconds": 30.407,
+        "exit_code": 1
+      },
+      {
+        "case": "wrong_published_branch_counterexample",
+        "elapsed_seconds": 1.288,
+        "exit_code": 0
+      },
+      {
+        "case": "changed_original_row",
+        "elapsed_seconds": 35.284,
+        "exit_code": 1
+      },
+      {
+        "case": "changed_original_row_counterexample",
+        "elapsed_seconds": 2.042,
+        "exit_code": 0
+      },
+      {
+        "case": "changed_glued_source_row",
+        "elapsed_seconds": 36.004,
+        "exit_code": 1
+      },
+      {
+        "case": "changed_glued_source_row_counterexample",
+        "elapsed_seconds": 1.232,
+        "exit_code": 0
+      },
+      {
+        "case": "changed_witness",
+        "elapsed_seconds": 24.972,
+        "exit_code": 1
+      },
+      {
+        "case": "changed_witness_counterexample",
+        "elapsed_seconds": 1.221,
+        "exit_code": 0
+      },
+      {
+        "case": "hidden_automorphism_division",
+        "elapsed_seconds": 30.613,
+        "exit_code": 1
+      },
+      {
+        "case": "hidden_automorphism_division_counterexample",
+        "elapsed_seconds": 1.249,
+        "exit_code": 0
+      },
+      {
+        "case": "lost_tail_exchange",
+        "elapsed_seconds": 30.13,
+        "exit_code": 1
+      },
+      {
+        "case": "lost_tail_exchange_counterexample",
+        "elapsed_seconds": 1.273,
+        "exit_code": 0
+      },
+      {
+        "case": "erased_kappa_correction",
+        "elapsed_seconds": 30.109,
+        "exit_code": 1
+      },
+      {
+        "case": "erased_kappa_correction_counterexample",
+        "elapsed_seconds": 1.271,
+        "exit_code": 0
+      },
+      {
+        "case": "wrong_permutation",
+        "elapsed_seconds": 28.094,
+        "exit_code": 1
+      },
+      {
+        "case": "wrong_permutation_counterexample",
+        "elapsed_seconds": 1.262,
+        "exit_code": 0
+      },
+      {
+        "case": "lost_repeated_assignment",
+        "elapsed_seconds": 29.921,
+        "exit_code": 1
+      },
+      {
+        "case": "lost_repeated_assignment_counterexample",
+        "elapsed_seconds": 1.278,
+        "exit_code": 0
+      },
+      {
+        "case": "wrong_gluing_destination",
+        "elapsed_seconds": 30.672,
+        "exit_code": 1
+      },
+      {
+        "case": "wrong_gluing_destination_counterexample",
+        "elapsed_seconds": 1.151,
+        "exit_code": 0
+      },
+      {
+        "case": "coherent_orbit_averaging",
+        "elapsed_seconds": 19.615,
+        "exit_code": 1
+      },
+      {
+        "case": "coherent_orbit_averaging_counterexample",
+        "elapsed_seconds": 1.244,
+        "exit_code": 0
+      },
+      {
+        "case": "coherent_zero_claim",
+        "elapsed_seconds": 8.676,
+        "exit_code": 1
+      },
+      {
+        "case": "coherent_zero_claim_counterexample",
+        "elapsed_seconds": 1.215,
+        "exit_code": 0
+      }
+    ],
+    "new_lean_examples": 15,
+    "python_tests_passed": 4,
+    "schema_provenance_corruptions_rejected": 22
+  },
+  "remaining": [
+    "Additional-marking BP pullback, fixed-surface contraction, nonzero pivots and full L2,4 equation.",
+    "Full genus-two numerical recursion, finite-seed sufficiency, termination, uniqueness and every fixed benchmark.",
+    "Genus-two stable-map descendant composition and geometric input applicability.",
+    "Complete semisimple GKM CohFT import, exact coefficient, reconstruction-action, descendant and ordinary comparisons and R8 release."
+  ],
+  "resource_notes": "Existing checkout and compiled dependencies. ru_maxrss retained in raw macOS units; concurrent processes can affect observed timings. No fresh-clone performance claim.",
+  "review": {
+    "baseline_files": 441,
+    "baseline_snapshot_sha256": "42442ce2dddc249e505012eea3093f0249feb76ae9644806eb90e58e9526646b",
+    "changed_baseline_file_count": 8,
+    "changed_baseline_files": [
+      "AxiomaticGW.lean",
+      "README.md",
+      "notes/MathematicsToLean.md",
+      "notes/mathematics/SurfaceReconstructionInputs.md",
+      "notes/milestones/AxiomaticGWRoadmap.md",
+      "notes/milestones/GWReconstructionPlan.md",
+      "notes/milestones/ImplementationProgress.md",
+      "notes/references/GKMExchange.md"
+    ],
+    "checks": {
+      "baseline_delta_sha256": "cb1ede530cf0cb405dd86dadc4da696125a10145b157bb7f410438da8855d4d5",
+      "baseline_edits_are_insertions_only": true,
+      "changed_baseline_file_count": 8,
+      "documents_checked": 7,
+      "git_diff_check": "passed",
+      "gkm_producer_files_verified": 5,
+      "gkm_producer_revision_verified": "a09c6625b280312721c5e0f2f915791781339aa5",
+      "lean_files_scanned": 257,
+      "local_documentation_links_verified": 723,
+      "new_code_substitute_axiom_or_native_decision_matches": 0,
+      "new_files_with_manifest": 11,
+      "previous_source_pins_matched": 261,
+      "project_code_placeholder_matches": 0,
+      "source_pins_verified": 271,
+      "touched_file_whitespace": "passed",
+      "unrelated_baseline_files_preserved": 433
+    },
+    "new_files_before_manifest": [
+      "AxiomaticGW/Tautological/BelorousskiPandharipande.lean",
+      "AxiomaticGW/Tautological/BelorousskiPandharipandeGW.lean",
+      "AxiomaticGW/Tautological/BelorousskiPandharipandeGraphs.lean",
+      "AxiomaticGW/Tautological/BelorousskiPandharipandeSources.lean",
+      "AxiomaticGW/Tautological/Fixtures/BelorousskiPandharipandeReplay.lean",
+      "AxiomaticGWTest/Tautological/BelorousskiPandharipande.lean",
+      "environments/belorousski-pandharipande.json",
+      "scripts/export_belorousski_pandharipande.py",
+      "scripts/search_belorousski_pandharipande.py",
+      "scripts/test_belorousski_pandharipande.py"
+    ],
+    "new_files_with_manifest": 11,
+    "previous_source_pins_matched": 261,
+    "previous_validation_sha256": "2654fcf0fccb9f12dfd1585c7ae512c7e87281c6490047e36644b391caafe31f",
+    "review_script_sha256": "9c41074c28419d9f66376b116721fdc6022f3e07b3111e7c2584250e1a279f08",
+    "scope": "Focused source, graph, certificate, provenance and GW-equation review; no comprehensive geometric audit.",
+    "unrelated_baseline_files_preserved": 433
+  },
+  "schema_version": 1,
+  "scope": [
+    "Twenty published stack-stratum diagrams, all six marking assignments and raw automorphism conversion.",
+    "Exact certificate on 100 raw columns with 46 nonzero requested coordinates.",
+    "Four original interior rows and sixteen original component rows through seven actual separating maps.",
+    "Three-marked full-class GW equation with arbitrary external ancestor powers.",
+    "Actual incoming offline replay; no new numerical invariant or imported GKM CohFT class."
+  ],
+  "source_sha256": {
+    "AxiomaticGW.lean": "8571e435d5f88c2e20c9865afac55d31318887cf58ddb33f79d5db263e9b91c3",
+    "AxiomaticGW/Coefficients/DescendantVariables.lean": "2997f88ee1cd6e4fc76168e3e7c73ba804ccdafb02a9a0c511d623662a716471",
+    "AxiomaticGW/Coefficients/EffectiveCurveClass.lean": "d68ce5d44f0158b8df4cac5f347871e387ce5d17c937a04a702b5b94588819e0",
+    "AxiomaticGW/Coefficients/GenusExpansion.lean": "3a62d0084f52e32870be6a14388faff41d368a7ca3ec63f2dba7da805d06f93f",
+    "AxiomaticGW/Coefficients/Novikov.lean": "3b438f570a09a602592499a9deab983dd86c1b086688d9d60ad7bb3ed9dbdc04",
+    "AxiomaticGW/Coefficients/RationalTerms.lean": "608137c1ea3feb9a44dd4867ac4e2bcb0080b55cb8032f5a5de38b72c645ebe0",
+    "AxiomaticGW/Coefficients/WeightedCurveClass.lean": "3bc8645d07e903dd01653f88d301d745828566a60b2434d667fa894998bc79ca",
+    "AxiomaticGW/CohFT/Ancestors.lean": "d04f17b0a9a465e89d7c054a94b096cf81bf7ef22b931c61fdf73419e988c4a4",
+    "AxiomaticGW/CohFT/Basic.lean": "8e42e96505c84bea43ada16ddc0d54644c0f4416a56db03a5baf4aace2117b66",
+    "AxiomaticGW/CohFT/Constant.lean": "2e88098c585d69f20c1ed77691298ee48c994cb3b13ab53dc7fb138677690721",
+    "AxiomaticGW/CohFT/GluingForgetful.lean": "702223851ca54f654842ef12eb14bb7d15ce7e0659e95a8ff71ad79653727e79",
+    "AxiomaticGW/CohFT/NonseparatingPushforward.lean": "6f5b1137ee901aa7b3a7db1d6a919023cd78fe2b9ff4c22cb709fc3e8d910121",
+    "AxiomaticGW/CohFT/PsiGluing.lean": "a10c0f8999f009e69dcc0755d3f6b33b3b577106c9e58c11fa7f58c162e73cfc",
+    "AxiomaticGW/CohFT/SeparatingPushforward.lean": "7ef46b53841cad087888a34bfbcd0a089488a8f46f0d9048576c43e2c83c5000",
+    "AxiomaticGW/CohFT/StableCurve.lean": "3102914691877889a1a67e76d8dd17897ba6474e2837247d8d9c9241d269a674",
+    "AxiomaticGW/CohFT/Tautological.lean": "09a580ac3e481df0ba90bc30637e6bed2741dfc0e6599d8463a48b42861635ed",
+    "AxiomaticGW/CohFT/Topological.lean": "41a27b98a4df8c38f0dd256c404ad6f45ed28c3cddf91c20eb1fa4048d62186a",
+    "AxiomaticGW/Combinatorics/StableArity.lean": "078a0d2cf8d7a31ed89429e6661cbd469fe4e8cc412adc3b55cccd3335724052",
+    "AxiomaticGW/Combinatorics/StableGraph.lean": "8ce882e57be59078d2aff6f58df1a9a280c807805f7eb1d600e47e89bc01ca2a",
+    "AxiomaticGW/Frobenius/Basic.lean": "c219c9f98197d6430b5a96fb0c9088fabfcd5e343008769d9da6a471f1f0472d",
+    "AxiomaticGW/Frobenius/Constructions.lean": "85353e37abba56fb40802acd39a922a2f45a6a93727c8f6518ce864db3fa501e",
+    "AxiomaticGW/GKM/Fixtures/FirstCalibrationReplay.lean": "4a7552b3f72e56da071b7e31825f2290c91b1b8d80de2dc550ad3158c781ab39",
+    "AxiomaticGW/GKM/Fixtures/GenusOneDescendantReplay.lean": "a6b072c5826844d724666cbd85fe1d50fbd184b905073aa09c18fe788091f7a3",
+    "AxiomaticGW/GKM/Fixtures/GenusZeroDescendantReplay.lean": "770f0ad2947d698ba352961d19a6a89320345dcca2a89735cbc14107d9a36884",
+    "AxiomaticGW/GKM/Fixtures/HigherCalibrationReplay.lean": "d103f5d803279679955a5c6833620548e74be9b49e5cfc5217f51aad40f58310",
+    "AxiomaticGW/GKM/Fixtures/ThreePointDescendantReplay.lean": "19f4762827f802f7c13607a6a02ac6d30ade047f6eef251528b2105b460727db",
+    "AxiomaticGW/GW/Basic.lean": "f55ca302b1bd3f7c09abd4c1a2b989dc04acf977be697e2776c3fddd77bd5420",
+    "AxiomaticGW/GW/Descendants/Basic.lean": "a2654d08f7cc4ae32953835a4e680a55a5d6d35b5e23c3bf57c15513c87c4d8d",
+    "AxiomaticGW/GW/Descendants/CalibrationRecursion.lean": "c4b6a06bc868daaa6009361d2e1a213584076a41066e9d0f84557a5b1f719d03",
+    "AxiomaticGW/GW/Descendants/Comparison.lean": "c844012ec6e6ee26d0e3f856fa0e1512e789a15e8bc4633b5d2549fe8669f08b",
+    "AxiomaticGW/GW/Descendants/DivisorAction.lean": "7eb4d42892280ce9d59aa3190f3610ad5b3bbdb1ed42c3a04b1ee969fb367e5b",
+    "AxiomaticGW/GW/Descendants/Equations.lean": "eca74e3828eadfec5c27f83608de2b27e1c77bd94f9c0eb049667013efd40652",
+    "AxiomaticGW/GW/Descendants/Exceptional.lean": "f58e46499486487f53c96d8f3dbb0356bbd4bb2406647ffab453d31a8334c3f8",
+    "AxiomaticGW/GW/Descendants/FullDivisor.lean": "2c2fa88b78111df6633a913991901378510fe023c75834466719db91295cdb94",
+    "AxiomaticGW/GW/Descendants/FullPotential.lean": "6b4bfc4585413f3bb181f1454c2b45f62e06b75dedcdbbdd5b7de9a207a2f85e",
+    "AxiomaticGW/GW/Descendants/MixedComparison.lean": "9e99c4f24248f43fc5002931242f0f3bca3e7c05e768047080b549a6a426e39c",
+    "AxiomaticGW/GW/Descendants/Potentials.lean": "b86e2b7aa05c0c260fca980174093b7b2071a153d4ddf51fe3afb7cc9659c8a0",
+    "AxiomaticGW/GW/Descendants/Stabilization.lean": "57f444b503b96e57adf61669870191c80a76b1b954c3c04a23020ac9e9e84fa0",
+    "AxiomaticGW/GW/Descendants/TwoPointCalibration.lean": "23aa932d61a89039c795f1c04fe82531c530ac3c5be7c6734480ac694237a775",
+    "AxiomaticGW/GW/NonseparatingBoundary.lean": "ddc777c76b70f0c057da39995a99f2ffdc1e1d71f37df684fdea9a6c33dcd8a4",
+    "AxiomaticGW/GW/SeparatingBoundary.lean": "455b91bbce74cac444d04395ab0fa3673cd095e2ee30202796f355add8d66bfc",
+    "AxiomaticGW/Geometry/RationalTailComparison.lean": "b9564dff67c164a562afb7ed6222a8db2004da4a140ea21ee0fdddec9ea22575",
+    "AxiomaticGW/Geometry/StableMapIntersection.lean": "52e9316e14684b31547fcf64ed7c0615b1689a50e9979d93f3b696a5c7d98a84",
+    "AxiomaticGW/Linear/Contraction.lean": "fc378491866b7bfc81751957f5fa904a62d46d6d0b67b69e580eeb9e774fb1aa",
+    "AxiomaticGW/Linear/Copairing.lean": "bd2ff186a8c185f6549a3b52f3f15e1e7cbc4c8dbe71af46dc7515ef1cb5d787",
+    "AxiomaticGW/Linear/PairingTransport.lean": "318a43462e7c23fbdf2e8722b291c7cb34b5487c9ff4458e9f404a06e29ce43e",
+    "AxiomaticGW/Linear/PerfectPairing.lean": "f79e560a89494afd439038f9dd4915f08c827db023b0dd51c5fad1c281fc13bf",
+    "AxiomaticGW/Linear/SeparatingContraction.lean": "7c3ff5fc077e70ca058764271c21f355d0fea12cea12957a8c562583cb1e63f8",
+    "AxiomaticGW/Linear/TwoPointOperator.lean": "2413c61c942ca7dab57a78e5457772883a218a696e37a637cdbb569ca1665f6a",
+    "AxiomaticGW/Surfaces/AncestorMarkings.lean": "e4e2ffca3fb58fa5b700f816c46fb7022f229b7c2752ea127bed9272b1724786",
+    "AxiomaticGW/Surfaces/AncestorPolynomial.lean": "680199089723296447b32a727da29e85942eb0648ec4bc7ac827f293b767e288",
+    "AxiomaticGW/Surfaces/BlowupGenusZero.lean": "c4f150fe38150aa78cf7a5860677e7c8385a34b17f805dcebad1f4ab2c6e6161",
+    "AxiomaticGW/Surfaces/CalibrationRecursion.lean": "5490259700261abbbb251afea4b5a7e2f2c7f914fa12f5aed5be0ae55f66a174",
+    "AxiomaticGW/Surfaces/Cohomology.lean": "7555f04a59f7594547ae85f73787534b94df2023ccfe61b78699ff28c5876d35",
+    "AxiomaticGW/Surfaces/Contraction.lean": "de70519312e1ea02ce82e16ec7bba33c4b1d60e8cccd12b66c4e086a346e68c1",
+    "AxiomaticGW/Surfaces/CurveClasses.lean": "30814002532e28140557e4f4d2b60a45665b31de95e5288a5cca4f6211073fb3",
+    "AxiomaticGW/Surfaces/CurveSum.lean": "8c032b515510abbe710f8a5a1a1d76e91d3b0d4cbc859ab195deaa0ceb482e51",
+    "AxiomaticGW/Surfaces/DecoratedGluingEvaluation.lean": "7107a7ab3cfd2554342fdd6afec30ffd1997a344eee53c731a14e7a809482d2a",
+    "AxiomaticGW/Surfaces/DegreeZero.lean": "25d9529b192523273e5d0d572d4a54eff063995de22fbcc1611a6287d3bb06bf",
+    "AxiomaticGW/Surfaces/DegreeZeroPolynomial.lean": "66874b3d87ffa459e48dc4f2f646e6cd3f68ea22473de4b377c962973191ffd3",
+    "AxiomaticGW/Surfaces/DescendantDivisor.lean": "62a93aee39164c1188bfa706d57e2905d2c51e67135f5ec26b2917344a103e52",
+    "AxiomaticGW/Surfaces/DescendantStabilization.lean": "87e122a0a5cfc71becf138a4b8706914ea9eeb3eaa8fde14a897b1f330d73d56",
+    "AxiomaticGW/Surfaces/Fixtures/BlowupWDVV.lean": "3e47a8441795be559f22a82204f2800ba8b31cc46bf096a0d9376bb0840c3971",
+    "AxiomaticGW/Surfaces/Fixtures/FirstCalibration.lean": "0f5f257df7bc9e85f18b6343f7b5d8bacd597e7ab12fd5c6cc49ba24508b2f88",
+    "AxiomaticGW/Surfaces/Fixtures/GenusOneBl2Table.lean": "84c6a10e16b6d57e4808bfb0646e490116c87722f717b4fcfb872b749baab4f8",
+    "AxiomaticGW/Surfaces/Fixtures/GenusOneDescendants.lean": "9720d026f7f769602ac76700d604909444658a4a585a12130fdb9a93c5beb883",
+    "AxiomaticGW/Surfaces/Fixtures/GenusOneF1Table.lean": "90d0df2f39e66bc89997f98eb764d33c895f6543ebaafda982d9ac7ab458d91e",
+    "AxiomaticGW/Surfaces/Fixtures/GenusOnePlaneTable.lean": "8d2c8d167886cff52411671439d1096f758a26f3151fd4dd249346c6ae43d0c2",
+    "AxiomaticGW/Surfaces/Fixtures/GenusZeroBl2Table.lean": "2308cd65862225c7a78fafc59af9f9be977c18d44aaef099ad4ce36a811c5709",
+    "AxiomaticGW/Surfaces/Fixtures/GenusZeroDescendants.lean": "6bab6be31cc78860be2d9e07656d5904e4194fc734686b2145cf77d36338d06a",
+    "AxiomaticGW/Surfaces/Fixtures/GenusZeroF1Table.lean": "3dcf45bfeecb0567f790a5759b24bae1bf6bfc3675a2ac56406bec0e0c8b1fd4",
+    "AxiomaticGW/Surfaces/Fixtures/GenusZeroPlaneTable.lean": "e8192a29ca8e79a0ce2e0106d480db3f92a4f9ad73dede729eb6a8763c8b0671",
+    "AxiomaticGW/Surfaces/Fixtures/HigherCalibration.lean": "e5bdc6365e7f6dab749a2f59d69cc611e7fae925a5d67ef12c38e025fe514574",
+    "AxiomaticGW/Surfaces/Fixtures/PlaneQuartic.lean": "3614dd99fe065baf43b566c198facbc88ec3355c1b5a52f2927962776eea89c1",
+    "AxiomaticGW/Surfaces/Fixtures/StrictLineGetzler.lean": "84c7d93e46117e710b69e6c4267a5e41593ca58d79cfbdf360d96de51c162057",
+    "AxiomaticGW/Surfaces/Fixtures/ThreePointDescendants.lean": "fe17951d87577f9346b2d3b7d3299dade46281c1c608d29a37beaa96b05bf395",
+    "AxiomaticGW/Surfaces/GenusOneAncestors.lean": "0e720c23efb9fd0c88458cb0d964b20e852bf55b665c8baf43de9eb06ced742d",
+    "AxiomaticGW/Surfaces/GenusOneBenchmarks.lean": "d09ee28f146b11ada88ddc9e87365270bb5190d5798fbcf30207dc2c38c0246e",
+    "AxiomaticGW/Surfaces/GenusOneCertificate.lean": "b0cb9a81b47eed1d760f50d32f687241c5ab1ef6eacf1d1bf4c6cad5a2e7ea02",
+    "AxiomaticGW/Surfaces/GenusOneCompactStep.lean": "d1c522b35cf465b05d6c774527797f8db7da07c8725d9f6ecc9dd014e09c0875",
+    "AxiomaticGW/Surfaces/GenusOneDescendants.lean": "b47bd4d51f3f9c0fd80b72b78368b699283c2da58a40ce4c62087bf202ac0484",
+    "AxiomaticGW/Surfaces/GenusOneDimension.lean": "ec7fbdc9212175d75fb4f0bc6d22bf12892dc22ddf2aa507583644329b6761bc",
+    "AxiomaticGW/Surfaces/GenusOneMarkings.lean": "cb646f51ee91cd2138d2c63ad6e5c601c779b46e4fa931d7bf0a5fe8822d004d",
+    "AxiomaticGW/Surfaces/GenusOnePivot.lean": "18acb7f9f848d043662cad61c4f0eb4223d4d269c464d0a2dbf7342cef1448b2",
+    "AxiomaticGW/Surfaces/GenusOneReconstruction.lean": "778bc9b57dda64387e4a268025212a0f3c1cd2c87636f6588bc7d2a30bd1212e",
+    "AxiomaticGW/Surfaces/GenusOneRecursion.lean": "7d64207d3d6c2033f612c7964482ca6dc146ce0c5bcc0011513861627d41a13b",
+    "AxiomaticGW/Surfaces/GenusOneScalar.lean": "69c804f95c5fef3ec724f4fb5f17756cccd66d6b1a2a23033d64355756106c8a",
+    "AxiomaticGW/Surfaces/GenusOneStep.lean": "babf0fb9e4728eb3e2dee3e3426820be03612a137446dc7743e744bc5abfa865",
+    "AxiomaticGW/Surfaces/GenusOneSupport.lean": "cb95c5d7221efb8f7d456753865263641e82d3bdb2176894e89165afd53762d4",
+    "AxiomaticGW/Surfaces/GenusOneSymmetry.lean": "585dc539f7eeacc9c08c93bc82e983c2661897bbeda102747400081dd702ab73",
+    "AxiomaticGW/Surfaces/GenusOneUniform.lean": "f17cd05f2d932050ad5d8d14f4c1db0d5ca9c0826003044df4d475bd3fd81686",
+    "AxiomaticGW/Surfaces/GenusTwoOnePointAncestors.lean": "bde4bd3f1ece355f3f1d4fb6110061b5521d93d13a989d9206f5caf39b2e27d7",
+    "AxiomaticGW/Surfaces/GenusZeroAncestors.lean": "529990adaf926e60e2d3adc66d38c1b98dcceeb6a6e4527c991242359f68270b",
+    "AxiomaticGW/Surfaces/GenusZeroBenchmarks.lean": "7e1948e938a8754115177c15bb358ceefb596a822d53c176639e003ffb413cf2",
+    "AxiomaticGW/Surfaces/GenusZeroCertificate.lean": "aa2db88746aa16194bef309362c58c6359cc439a617ac276752c43f7a21a1ea0",
+    "AxiomaticGW/Surfaces/GenusZeroCompactStep.lean": "f3bcae5dfd0db874ce31edbe10cbb7e96bb753862759eddebb334bf460553716",
+    "AxiomaticGW/Surfaces/GenusZeroDescendants.lean": "6d66f5c8fb27d57ff66802602dff871da6821f04164a4fd51e6c7956c2bdd899",
+    "AxiomaticGW/Surfaces/GenusZeroExpansion.lean": "02dbc25679d7aed2efb1760c375b2b100330be91fae19c13a5c95105982402c4",
+    "AxiomaticGW/Surfaces/GenusZeroFullDescendants.lean": "3fc75dd8b144ece626e6c23bf4f557aa13bfd2f075a041a76061016a2fb33858",
+    "AxiomaticGW/Surfaces/GenusZeroMarkings.lean": "d254d81521297a5b7448d34c17c6111a3202de0b8d52e5e9d425f581049132d8",
+    "AxiomaticGW/Surfaces/GenusZeroPivot.lean": "4e1a60477bdaf0ce5aba64d01f91f9ab8875ad9de70f265128a2926dc6937595",
+    "AxiomaticGW/Surfaces/GenusZeroReconstruction.lean": "3d4d1ab42a3b00787db402f82e586b75e264943c1cba237beb1a71bb26fa9f54",
+    "AxiomaticGW/Surfaces/GenusZeroRecursion.lean": "b178d2141128d839d416629fcfe26a039a847a71c0797df52089b7848bbe3093",
+    "AxiomaticGW/Surfaces/GenusZeroScalar.lean": "458725961b468f0c2d49d58b351134e0a9bdce811d6e7bde9cb7b7e9166cbad2",
+    "AxiomaticGW/Surfaces/GenusZeroStep.lean": "40dac816bad51c0cc49d04e15a9e040ea2fbd0e10c0d90148940841121dadc50",
+    "AxiomaticGW/Surfaces/GenusZeroSupport.lean": "275c1a3defea4df6903b683d6d47575c6f4f045f050e86d4c1da9df2f924f16b",
+    "AxiomaticGW/Surfaces/GenusZeroTable.lean": "5018031bf69a68e37b333d3d266c29971a8c3042f0ac236721f5e528ecc3e968",
+    "AxiomaticGW/Surfaces/GenusZeroUniform.lean": "8e1d311cd3e13d673cff6745dd45aa598b5af3677a88966cbfec057e5bef6b52",
+    "AxiomaticGW/Surfaces/GluingDegree.lean": "9e33be92f9062c4fb35dc05ece2f43d2a8cc00ff3b713eb3699cb8970eff6d26",
+    "AxiomaticGW/Surfaces/GluingEvaluation.lean": "874ab320372c34647a5a5edcc06ec0da2d5e1d7d86bd92e58d8484d25821dc76",
+    "AxiomaticGW/Surfaces/MixedAncestorReduction.lean": "e278d24554056121907b3a2577de11cdf65af71f838e8876c79d74444cf11ef3",
+    "AxiomaticGW/Surfaces/PlaneGenusZero.lean": "7bc9338c37ecc8a8325b06876c5f21e2dd62d3c0e013cb415fb9b1210c669bd9",
+    "AxiomaticGW/Surfaces/PlanePrimaryBenchmarks.lean": "194e6cec5f7a97e6537f023089b5e94252092d446f42b1c93e1a15d8467c8f42",
+    "AxiomaticGW/Surfaces/PointExpansion.lean": "239860af4ed726ad01e1ff477358ead1b184f3925ca6fb102b05f3cd9f1fd817",
+    "AxiomaticGW/Surfaces/PolynomialReduction.lean": "26fa29ad42621599bc51e52d6c40709b72c790aad86a0481d586429ea9e717a6",
+    "AxiomaticGW/Surfaces/PrimaryReduction.lean": "3685edd1fe22b43086883e67cf03f4faa0ad891c347f01dd75ac4358c9909273",
+    "AxiomaticGW/Surfaces/Queries.lean": "20f6ed05012601dab184156903938d789d328733dc22bc3279aea6195102d88d",
+    "AxiomaticGW/Surfaces/StrictLine.lean": "8cac8754060af5d435484383be8b0e7a7356771fef472681b5a9411560624f49",
+    "AxiomaticGW/Surfaces/TargetData.lean": "8f89f978fce57a80983a65aa46b91087ed9f2ad22aad16d7e3f9c8b190d13517",
+    "AxiomaticGW/Surfaces/TermExpansion.lean": "e91b19bde4ae930d4a1514ac10782272dcf9a396f02c48aff83656d757cb5c6e",
+    "AxiomaticGW/Surfaces/ThreePointDescendants.lean": "0887b6d93c363fe0b7e325a2f67015bd69602a98cde05745f5032db289a57dd5",
+    "AxiomaticGW/Surfaces/TwoPointCalibration.lean": "b6bc34bfbe22e8d5ad35a34cddfe09dbca3afea735755a412e73972514976260",
+    "AxiomaticGW/Surfaces/WDVV.lean": "e51f314d3fdca39ec9fadadab49703e36a43c75785200ff5d7271d30ffbb33a6",
+    "AxiomaticGW/TFT/Basic.lean": "546dd0d8236ca564f589ed910058d47807cafb3c952b37d5600dddc87c04a794",
+    "AxiomaticGW/TFT/Correlator.lean": "5d5866bfc13ff00feaa53ceda514347595d0a6dd37b3d8129dc05ce6551ddb9b",
+    "AxiomaticGW/TFT/FiniteProduct.lean": "ee36e5a4a4e982fe4996dac2511d1b92142f324578a1bed9887af52cdb7a8ff2",
+    "AxiomaticGW/TFT/Frobenius.lean": "fdfcd37bf3b6bb9003b941e1048d06756ebd704c8907b08d58c69a050737c564",
+    "AxiomaticGW/TFT/Sewing.lean": "8c40554b9cff20461b50623160997e95d785dbf62d873a3d9be23af33a1ed4d5",
+    "AxiomaticGW/Tautological/BasicStrata.lean": "aaff11f4110657b96e99a223e8cea032126e21f3f12f37226d7d8094bcbc2159",
+    "AxiomaticGW/Tautological/BelorousskiPandharipande.lean": "6b8c5651c9617b91fe9ab604379ec335280091fd8c146fa6dc82dfbb59a5e96c",
+    "AxiomaticGW/Tautological/BelorousskiPandharipandeGW.lean": "8c7f0fd679424735081455bc9dc994373e2b45eb82e2b3c186c477224e3ffa0a",
+    "AxiomaticGW/Tautological/BelorousskiPandharipandeGraphs.lean": "0f13728ac100cb6e49927b63fbad5c3e2970ac293a772661766a3203233ced09",
+    "AxiomaticGW/Tautological/BelorousskiPandharipandeSources.lean": "205517dc6199e7eb885a265a13329b0bde95789969cfe525e742c99038340f44",
+    "AxiomaticGW/Tautological/DecoratedGluing.lean": "bc6091840bc2deddadf788e8d3f56a7c0caaaac754a9b687cc132a7fbd39e276",
+    "AxiomaticGW/Tautological/DecoratedGluingEvaluation.lean": "b4abbf80a5f49c52c036d8aa7a7a8b3d941257873d6cd29c63b2063b61e89e67",
+    "AxiomaticGW/Tautological/DecoratedStableGraph.lean": "b4d0408b1cfddafe145230aad311a76577b8feafe6f2ac187cd1524a07247b60",
+    "AxiomaticGW/Tautological/Fixtures/BelorousskiPandharipandeReplay.lean": "28bdc935b632b669533c92cbaa1cfc2879a71255bc762280c2d69038e396bbed",
+    "AxiomaticGW/Tautological/Fixtures/GenusOnePsiReplay.lean": "b90afdfd6e809fff6c6da964b2584aae0a506db178b0d563934b464dac0616cd",
+    "AxiomaticGW/Tautological/Fixtures/GenusTwoPsiSquareReplay.lean": "030fb2ccb54bf7849fe2496597b02579f67943a20f3859454318a8d0b302106f",
+    "AxiomaticGW/Tautological/GenusOnePsi.lean": "f2bc531b4873ad45b5334729c9e1630e7118d25fadf69396cb7f3c7c92b54937",
+    "AxiomaticGW/Tautological/GenusTwoPsiGluing.lean": "13db9fa10f9b5eae6f8b27c74008b0c197c9e0c3f55029989d5aa984da59baa9",
+    "AxiomaticGW/Tautological/GenusTwoPsiSquare.lean": "9f3db1d84031d6b8c18b820da52ead97bc4684615c4be37b32f387d20e717281",
+    "AxiomaticGW/Tautological/Getzler.lean": "a18166e27b5c95f77c9eaa44afe59e4e5a53a6d17fa2994429239b53e04470a1",
+    "AxiomaticGW/Tautological/GetzlerAncestors.lean": "b55bebbb46947d4893b73c782905a2bf967f2a1a598a1344547f7ee251894c60",
+    "AxiomaticGW/Tautological/GetzlerForgetful.lean": "4b12803bac6e8de8fee1673ebdd103da6853d432b2e78855f8330c4db223d772",
+    "AxiomaticGW/Tautological/GetzlerGW.lean": "1bad4e6f07612c853f9d58dcc42b0983f3c479aca6220d32e17dfd097fe26275",
+    "AxiomaticGW/Tautological/GetzlerGluing.lean": "026c9e76249ba5bb47aa21dab6c8f41d5d97d7e2acb862addd16143ca638b083",
+    "AxiomaticGW/Tautological/GetzlerGraphs.lean": "3caca7fd4cf0d0e3366b5229015eb9756ec4fe9d019cb805748071b48eaf52e3",
+    "AxiomaticGW/Tautological/GetzlerRealization.lean": "2cc561bb53679eb6235adad35f3b57a5195c8c6898e8c4ae6e765b9d2a089ab4",
+    "AxiomaticGW/Tautological/GluingAncestors.lean": "2953e2715238bc0737786a08e7a9101a601d72de0195d1e37ba0fa5dacf6bbec",
+    "AxiomaticGW/Tautological/GluingEvaluation.lean": "79fa292114eb8499c2186d5bbd71bdfb6d15891a9ec5e00cd0eb4e5061fba67d",
+    "AxiomaticGW/Tautological/GluingExpression.lean": "36c5e908f9d13273c739102d0d7c21363776db58d92e5fd49a363661fedc0db5",
+    "AxiomaticGW/Tautological/GluingForgetful.lean": "9a1fb2b1be6198912dfccfa1dcd5b02f7aa9c2e406576443520ad670dd217b53",
+    "AxiomaticGW/Tautological/GluingMarking.lean": "a5afbbcb83fe40f662022b59d76c93884350a216b7849de7fb40889ca9c8ff9d",
+    "AxiomaticGW/Tautological/GraphBounds.lean": "69d1b5fe492e41ed328bc3d19797727f1cd1dc3885ba25de2d4fcb6decbcc679",
+    "AxiomaticGW/Tautological/GraphEnumeration.lean": "bbf9e878dc80e94b3e214e68b14e06dd370da516eb850b1c851d767cb7b01c6e",
+    "AxiomaticGW/Tautological/GraphIsomorphisms.lean": "5cd10ac37ec3390443ac5db4ef38bba59327491fa9f4708d13ea883ca258d0bf",
+    "AxiomaticGW/Tautological/LegPsi.lean": "9ca882b29db8f6dec38c510283aa9f4484839a8f1620232d20b65c61ecf3cb56",
+    "AxiomaticGW/Tautological/LegPsiRealization.lean": "e8d6bff52045adf408f2d4439b5df73b44328a88d1f51d1807ff70da58a6b95a",
+    "AxiomaticGW/Tautological/NonseparatingGluing.lean": "441bea8bc9e4935147b1b78ee29ae716006b5dba927add803941e837e3d66765",
+    "AxiomaticGW/Tautological/NonseparatingRealization.lean": "17d0072a0de621e5164ea39dfc46498b6d11388b0f5f278737a4f5baf1d89fda",
+    "AxiomaticGW/Tautological/PsiBoundaryExpansion.lean": "ada731e86d195afd7047390218e1c330fde7c8569e67e68cec901c5fb79f533d",
+    "AxiomaticGW/Tautological/Relabel.lean": "cff8eaef48a5789c21a85d3b7f74072538494c0505069911963e85a58c0ea020",
+    "AxiomaticGW/Tautological/RelabelRealization.lean": "3d61514b0b4d21ecb807f82b8c66794c47de46408b3eae5b0d7bbb7fe2f48152",
+    "AxiomaticGW/Tautological/RelationCertificate.lean": "665e0e9ed9aa8d16d8b86b30546623d4980a07a6add20dc771aafebaceee13d4",
+    "AxiomaticGW/Tautological/SeparatingGluing.lean": "05b43b110eb97c226e07ab7e898d1e2da1d90dcabbe59bd5726c45889933cb78",
+    "AxiomaticGW/Tautological/SeparatingRealization.lean": "e5ae34a58171024a17780469beafe6bd541e282ffc8537c562415e798659bfd0",
+    "AxiomaticGW/Tautological/StrataModule.lean": "4cbd41c258dd6e0e03a691d8de21fd9021788e03b67d1df0127742553f53112f",
+    "AxiomaticGW/Tautological/StrataRealization.lean": "ddf59186e35a331415f9cbb8713dbcfda209fbf9bf5530123a1ab87964cd308c",
+    "AxiomaticGW/Tautological/WDVV.lean": "fc09895cdaf341156ec36f152b4de544d1f8fea80b5957e4bde43d7eb87566d2",
+    "AxiomaticGW/Tautological/WDVVForgetful.lean": "8fc3a4da159b3b142ed233bb8051e9b4c9e93dd5ecd3829491243c521c057308",
+    "AxiomaticGW/Tautological/WDVVRealization.lean": "95dabaaf51282938a94b9b0915a7086e9c4f9824621313acaf6345497e105af7",
+    "AxiomaticGWTest/GKM/GenusOneDescendants.lean": "5da2236b7238c75e8024f20c096165c2c98796fdac85848eb228e5df3a8476a7",
+    "AxiomaticGWTest/GKM/GenusZeroDescendants.lean": "8b8eae286870adefff431d045dbcb0397b1ebdb5f16788a71cc42dc686f98f9b",
+    "AxiomaticGWTest/GKM/ThreePointDescendants.lean": "d04a834dc0fbb2d02ddd361dd4b6e5b3e8a4f49aa7a51ce6da711720caf7020a",
+    "AxiomaticGWTest/GW/MixedComparison.lean": "4ab9e435c55d5875cfe4641ed91981c393e497cbafb35e7be81550d7397bf962",
+    "AxiomaticGWTest/Surfaces/CalibrationRecursion.lean": "094b2ef4e8e61e59000fa0703057a456433fdd41e8e7f477f57b4cbf5ec203fa",
+    "AxiomaticGWTest/Surfaces/DescendantStabilization.lean": "d5ca28aca895b842d75748fc6f8ba06b02109eaa90fe7b3f040f85ac3364a32f",
+    "AxiomaticGWTest/Surfaces/GenusOneCertificate.lean": "6590ca59e672d7835bdbaf50db991272b75359e973b77248440b1108c7ff9b27",
+    "AxiomaticGWTest/Surfaces/GenusOneDescendants.lean": "f215717e7196b4bac86fb06d4510103714e48720bc53c41e6dee2c6e634ef0d6",
+    "AxiomaticGWTest/Surfaces/GenusOneReconstruction.lean": "7a82bd82c2a226fb6dcf5b6f8df7e7a46d7fcba11a784554bf1f391dd379b210",
+    "AxiomaticGWTest/Surfaces/GenusTwoOnePointAncestors.lean": "0873f537786d2d58423db76fe9b0be9c9bf0eba30048315921dfbc233ade48fe",
+    "AxiomaticGWTest/Surfaces/GenusZeroCertificate.lean": "af51883731729e44467ee1cbb527c02a8fda7eac306ec8545f315176d4ab7d69",
+    "AxiomaticGWTest/Surfaces/GenusZeroCompression.lean": "cc37e785f7f6a0a278a00cbfbf7676ec8f906308125d59efa8075bd22dd8fd87",
+    "AxiomaticGWTest/Surfaces/GenusZeroDescendants.lean": "ebaee9ab530ff82130cc1fc998e698f1cccbbc104722768f409d0ea81b8c2146",
+    "AxiomaticGWTest/Surfaces/GenusZeroPivot.lean": "04a52affcb278c844f8863fae1b147e0766e278cc7493662c7bd476b50f56cdd",
+    "AxiomaticGWTest/Surfaces/GenusZeroReconstruction.lean": "1eedf90fb608e3a5c099f6d52325639243a822ec936fdc49b8c2cfbe612e32a5",
+    "AxiomaticGWTest/Surfaces/GenusZeroStep.lean": "541f869eac26aabb8600822de81de72675998ca3d04975636b31897aec388175",
+    "AxiomaticGWTest/Surfaces/GenusZeroUniform.lean": "b3d8f00f7a790101d2f88d917ea0243b34901d564082903cfa27db9a0d44066a",
+    "AxiomaticGWTest/Surfaces/MixedAncestorReduction.lean": "2ad6b4955969cec9bb62b468e634fb27b1e26dc96a10a0c004ea72c46c25ec1e",
+    "AxiomaticGWTest/Surfaces/TwoPointCalibration.lean": "092f25b9ca93d9d74ac5d53fad3139c6b5a2ef7dda9db55b20880f50fc42ebb8",
+    "AxiomaticGWTest/Surfaces/WDVVBaseCases.lean": "49148b22e4d6ef5b16e63b8a2ac3efd447abc2be1d994cc5005391e8840e9c44",
+    "AxiomaticGWTest/Tautological/BelorousskiPandharipande.lean": "f1e0230ce73baa2ca3c53a2560d908b1369ddd69bdff779c1532fe99ad28e8ae",
+    "AxiomaticGWTest/Tautological/GenusTwoPsiSquare.lean": "7c1646aa81b81ca1fcbcb1c5ae438c2df476a892a384a461f637b3d96ba0c197",
+    "AxiomaticGWTest/Tautological/GetzlerReplay.lean": "7b91d9e3ac47d934f418aa112dbc153f374e41e3f149ca9fee1202769f1ccbec",
+    "AxiomaticGWTest/Tautological/PsiBoundaryExpansion.lean": "1db917957ca1cf9ad9e6f8532414505b47de1655bae281604ef7bb47db7d4549",
+    "AxiomaticGWTest/Tautological/WDVVForgetful.lean": "fd8c901334406f7e604ac1f5a45b3d1d0cb9768b07a2d7fb7818c33e60b58dff",
+    "AxiomaticGWTest/Tautological/WDVVReplay.lean": "e98c44829aec5e40417419e3c35483ac72f5b2f6a672445b9c63f2840abccc88",
+    "README.md": "e85dcbe1d6c1f7d0458e4682c312ad56503281bc81035603fe6d76b6724bdb5a",
+    "environments/belorousski-pandharipande.json": "5868b2f3ef1e5a45e6175b6349566b72c778f4ab028ef941b43498fd0ee8d1bc",
+    "environments/genus-one-psi-exploration.json": "61d59f804e3d891906288149ebfcecd7f03fb0eb115c62b509194606f7fb2c85",
+    "environments/genus-two-psi-square-exploration.json": "6b9c75fd1555575fd036348e943881f6ba5cb8e83b7b7f51e64f7448286e5e1d",
+    "environments/genus-zero-descendant-validation.json": "91ec90a8f60bc848032ffdf8ac4b327dc75fb786bd7cb9fe6b2cd25d43829731",
+    "environments/getzler-candidate-osx-arm64.json": "ccd8a8f941e9d2d503ec91e29b2be527bf0c91ce111599e6ec56118f6994ecb7",
+    "environments/gkm-first-calibration-comparison.json": "e50d50dc43b8be23e15a33234503157cdc2fd293774555dc0339d0d7ee52474c",
+    "environments/gkm-genus-one-descendants.json": "a491511628b617a08126dad54d214e37a9b562b8bb1842022f41f7565d16edb9",
+    "environments/gkm-genus-two-degree-zero.json": "d96ab1d950e42af002f3c1b0ec999881bd204d7faa5d6f07486675bc06732c2c",
+    "environments/gkm-genus-zero-descendants.json": "1123c7b21c528d78363ae1cf3ffb1c05e55864c649405bc186dd8f251b30fd39",
+    "environments/gkm-higher-calibration-comparison.json": "2cd61d6748927f230448f842136d26f176afc194a1c3b75b8a944367e153372a",
+    "environments/gkm-inputs-osx-arm64.json": "062a32a9919fa5ddf806c353f5bb56256ca5dca31d170c246b9bfa39c3b11376",
+    "environments/gkm-localization-source.json": "de3bea50b3f0a093fcfbe79ebb1d131b9bfce600f57407a69ff6b5f28f6e6a90",
+    "environments/gkm-three-point-descendants.json": "72b2dfb09ff86fd05a85111a88100e86b6d2316afbfc6e624fc54e2843f768f0",
+    "environments/low-genus-psi-validation.json": "e968fce4358abda4205a237ce2fe25a6bb7c905bc1a396b15c1b0baaddba62e0",
+    "environments/mixed-ancestor-reduction-validation.json": "8b1e4ba3d1ab12161efcfaa1b122c3f1e215c68c331bd8bf0bcc6cf4818bd9da",
+    "environments/mixed-descendant-comparison-validation.json": "e9d86c0d6dd04f87704c374fcfb250ed65cf5502ac0d066853a3326d254325a8",
+    "environments/plane-primary-genus-zero-benchmarks.json": "db6cc339e4c7a3d447e163dae13137f9a7a0a06555c5906a4082850406229600",
+    "environments/surface-genus-one-primary-tables.json": "69221d38c429ad7c466d40c03595ac979469171d719bb533fe4afdbb1d1a4a3d",
+    "environments/surface-genus-two-published-anchors.json": "2e037054a2f910be9a51ff94263790a08bae94244207dfe89ff416989c740621",
+    "environments/surface-genus-zero-primary-tables.json": "d710f97e36fee1f9a30b2e5993af87ee6fb6674c3447b5097c1137d41790ebff",
+    "environments/surface-wdvv-base-cases.json": "fd09b7623ab3778fcb9ad5245201b6b8964a228c66ca34967b38ae10abd47d04",
+    "environments/surface-wdvv-pivot-exploration.json": "fb02e2607cd082df59b7479f4d6656c744eec699b390849de180b433b24eae78",
+    "environments/two-point-calibration-validation.json": "84cbe51395d0d0be582b6d371d1819680349dddcd0560d3268e5e6742eb20b4e",
+    "environments/wdvv-candidate-osx-arm64.json": "44ba7410c29fd82126c188d52e0203f7aaa38139c315c7317e6221a6d905284d",
+    "lake-manifest.json": "e9d145b9e7338c66d20f6039ba5937818c5a1c3e085465391d3723315fec453d",
+    "lakefile.toml": "58517e8c961d4a4fab407f323a7caa650f935a1202b30bd5becd0335fa0dafe1",
+    "lean-toolchain": "2773c517aa90b66ea8a2c52bddddf84393157797f8341be0df45294fff7fd32e",
+    "notes/MathematicsToLean.md": "accc361f322f85f2f498869efb19b58b29002c4ca34c2e222827275591e22eae",
+    "notes/mathematics/M08DescendantsAndAncestors.md": "b3c2fede4e3591b74acf793e85fb1ea7914a1464631bee488596d9e1ee3ceab2",
+    "notes/mathematics/SurfaceReconstructionInputs.md": "b673055dda0b8b438907a73291feccf30bff578bbc9d1f4c6a747590040ff3e9",
+    "notes/milestones/AxiomaticGWRoadmap.md": "b5f99ff915ea269f63f27796c4987410f44a145774674159f61c102906b2499e",
+    "notes/milestones/GWReconstructionPlan.md": "c411307a14c992225707526e852aa9481f54f396bf62e25d7dff61ba1fec58de",
+    "notes/milestones/ImplementationProgress.md": "ff70ef3968b09b07278edbfc5181ffe78c60317926c40cee7317f0ee13868922",
+    "notes/references/AdmcyclesEnvironment.md": "2c712e97f88e9741ce7ca871fa15e596ca1414ea7e068a8bdfbfac22269431d8",
+    "notes/references/GKMExchange.md": "9efdc57cd0e92733769cec5b43a3f1af258e18222cfb4876b2ce6506fb89cc29",
+    "scripts/check_gkm_inputs.py": "ba2728773135a47a114b325287a098ece7165e95c6e7b5f8638f06e55c00376e",
+    "scripts/explore_gkm_first_calibration.py": "a9de85adc6fc0dc4306b13579a2e6bc45328319e767add26504a60bba586c07b",
+    "scripts/explore_surface_degree_zero.py": "65afcfe6fa0017a6bc5f1f1627a18c17d144b20ec4566d6e0283b972d122ba61",
+    "scripts/explore_surface_getzler.py": "f34f5288ef6b3a3b0a5417038f3d5e6b3f3f24c683c359431e7f0e39816fdd37",
+    "scripts/explore_surface_reduction.py": "a0e96453cb0063df446ae9f3ddd6416e6308a8466a0d52d1a6316fb4fcf8e5e4",
+    "scripts/explore_wdvv_base_cases.py": "e96fbc53fef2e76e1250c94d731299e0b24a4fa1c6e03af47617af8bc953b85c",
+    "scripts/explore_wdvv_pivots.py": "6e336e0acbe87ad7f6b95e86eabe43c902d8f258b8e8fcb67acb11a6f511ac6d",
+    "scripts/export_admcycles_certificate.py": "28b9d7b9c81d10ef241f6a7a9082cf29047967ddf03ddf1d4433057b6b8d05f8",
+    "scripts/export_belorousski_pandharipande.py": "28731fced1de47031cd20c4a2d4a26535ea7493764d83211e04ab0fc6604749d",
+    "scripts/export_genus_one_psi.py": "122f1cdf91657213b362ac2ef3a8662c9cecb71ab4f0e779c5d8b469bfe0243a",
+    "scripts/export_genus_two_psi_square.py": "b61111ed25f0b6f2bfec908173cd0830431496a5421b85cde6c6cd0377cd4922",
+    "scripts/export_gkm_first_calibration.py": "2f8509034949d75c81d06a9f2eee7a6a5c8457e08f9fd08e25b1858761419b1b",
+    "scripts/export_gkm_inputs.py": "b06278a00d024922951506d98b88b4637f7314afe7576d4ec5ab32e86741adc0",
+    "scripts/export_surface_equations.py": "820f45d308a9c8bb2f002e35a5e215646e3764c2d169686ffe4882f5cdb08a52",
+    "scripts/export_surface_genus_one_tables.py": "5d7f8c6d867b09be26ca2f416a51b266a91830e839904fa41d6caf2010f5e2e2",
+    "scripts/export_surface_genus_zero_tables.py": "bfd8ad3605fae9cddf9149a18f829facff9244cddd0d5007acae7cd18636db93",
+    "scripts/gkm_calibration_recursion.py": "d49e4a0ce4e05b1b68040868926517766a816c5f4a080916ba42faf417dd6b1d",
+    "scripts/gkm_genus_one_descendants.py": "daefffded302169bcd92a300a16ec3f955ff30c20c26861d71a7ab4fce487b70",
+    "scripts/gkm_genus_two_degree_zero.py": "22ab4163f4cc3998fbae5930a0b4f424b44edec753d32554fc83b86d8813c1b0",
+    "scripts/gkm_genus_zero_descendants.py": "e0902289a5ed2908a7ab5ede67288fe345396163047c386337d6549487cdbc43",
+    "scripts/gkm_three_point_descendants.py": "7be903c48f4fcba9b1bb5823b199bc15edaebf3b13874ec5110fb5e05437d8e8",
+    "scripts/search_belorousski_pandharipande.py": "f22ac5324be74a7172ed72e14a6494dd4808f17e35950346c7b689461f294ded",
+    "scripts/search_genus_one_psi.py": "473da07efcf96b84bb7498261c6d6848313741ffff9f02dcb145fcc0bd8e9a99",
+    "scripts/search_genus_two_psi_square.py": "cced37d6ac595a6285981ff19749c19ead0ba06046a4bf64cccf64ea1800192f",
+    "scripts/surface_genus_one_contractions.py": "11d708efc4d92c47070d2d4f41685c89bda39891c50c2a8471f1374c68abb8a9",
+    "scripts/test_belorousski_pandharipande.py": "f67e970738b938ffe5b8ed68237120a0abbd03ce69400341b99353ef0b6abfef",
+    "scripts/test_genus_one_psi.py": "fa46c3c739cab4f5bf63136f8de54e69e2e1de4f4d37cbd72328d777d18919c0",
+    "scripts/test_genus_two_psi_square.py": "2d78d975632b233d38b4f6da8428ff8be4e9572b9d580808455569c3b8ba7eb8",
+    "scripts/test_gkm_calibration_recursion.py": "376293b4efa525e32539b2696853b2e0fd9dfa6dbddf40cf0329af33ce9db218",
+    "scripts/test_gkm_first_calibration.py": "7c3d31e1274e89f7a954d8ddcc5993e84fe59f39673612dae8856cdcc3201a69",
+    "scripts/test_gkm_genus_one_descendants.py": "cfdb565dbdc60c307d9e77cc2c2057da0bc668a435b41c2ddb3ade8a28a9dcc7",
+    "scripts/test_gkm_genus_two_degree_zero.py": "0bedff50b65681a4d7ec5b717d8bb0634dc4f49f4de20bc04fa10220e4394ad6",
+    "scripts/test_gkm_genus_zero_descendants.py": "afc42014a32fb7d5aab8c87138b5759429ed4a18f0ffa7aff738c61eb8bb0efe",
+    "scripts/test_gkm_three_point_descendants.py": "82e7733767ec3d62dc724a546e30dbfabf6fca5b49738cc62d82762939110957",
+    "scripts/test_surface_equations.py": "d5b78c7addb20e8d983cec017340997cc26134bd8f184349e0a4462d27a62f60",
+    "scripts/test_surface_genus_one_tables.py": "c2a358a0539ad6b3aeba595881ab46fea553b1e1edec96ddd796c881f5dcbb98",
+    "scripts/test_surface_genus_zero_tables.py": "78b98a0a4419984eb97d828d2552189fdf4e3f816c4590f628392f83788086e8"
+  },
+  "status": "Verified complete published BP certificate and conditional decorated GW contraction equation. Goal active; R7 and full GKM integration remain open.",
+  "warnings": [
+    "Existing AxiomaticGWTest/Basic.lean privateModule warning.",
+    "Existing upstream Sage Algebras deprecation."
+  ]
+}

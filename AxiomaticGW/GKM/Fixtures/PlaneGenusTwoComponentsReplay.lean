@@ -1,0 +1,337 @@
+/-
+Copyright (c) 2026 JMA. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: JMA
+-/
+module
+
+public import AxiomaticGW.GKM.Fixtures.PlaneGenusTwoComponentsGenus0Psi0
+public import AxiomaticGW.GKM.Fixtures.PlaneGenusTwoComponentsGenus0Psi1
+public import AxiomaticGW.GKM.Fixtures.PlaneGenusTwoComponentsGenus0Psi2
+public import AxiomaticGW.GKM.Fixtures.PlaneGenusTwoComponentsGenus0Psi3
+public import AxiomaticGW.GKM.Fixtures.PlaneGenusTwoComponentsGenus0Psi4
+public import AxiomaticGW.GKM.Fixtures.PlaneGenusTwoComponentsGenus1Psi0
+public import AxiomaticGW.GKM.Fixtures.PlaneGenusTwoComponentsGenus1Psi1
+public import AxiomaticGW.GKM.Fixtures.PlaneGenusTwoComponentsGenus1Psi2
+public import AxiomaticGW.GKM.Fixtures.PlaneGenusTwoComponentsGenus1Psi3
+public import AxiomaticGW.GKM.Fixtures.PlaneGenusTwoComponentsGenus1Psi4
+public import AxiomaticGW.GKM.Fixtures.PlaneGenusTwoComponentsGenus1Psi5
+
+/-!
+# Certified shared plane components and partial caches
+
+Each candidate value is separately checked against the original residual algorithm.
+The symbolic rows only select cache entries; final equations require their own replay.
+
+Candidate input SHA256: 2001e7124121cf35e55daa7984cd86b3ac230a9d711f68b225941c4e7e3dbfc9
+-/
+
+@[expose] public section
+set_option Elab.async false
+set_option maxRecDepth 65536
+
+namespace AxiomaticGW.GKM.PlaneGenusTwoComponents
+open SurfaceGenusTwo
+
+/-- Every stored component is identified with the original algorithm. -/
+theorem computed (i : Fin 291) : residualTerms (key i) = entries i := by
+  fin_cases i
+  · exact Genus0Psi1.value_0
+  · exact Genus0Psi0.value_1
+  · exact Genus0Psi0.value_2
+  · exact Genus0Psi1.value_3
+  · exact Genus0Psi1.value_4
+  · exact Genus0Psi1.value_5
+  · exact Genus0Psi2.value_6
+  · exact Genus0Psi0.value_7
+  · exact Genus0Psi0.value_8
+  · exact Genus0Psi0.value_9
+  · exact Genus0Psi1.value_10
+  · exact Genus0Psi0.value_11
+  · exact Genus0Psi1.value_12
+  · exact Genus0Psi1.value_13
+  · exact Genus0Psi1.value_14
+  · exact Genus0Psi1.value_15
+  · exact Genus0Psi0.value_16
+  · exact Genus0Psi0.value_17
+  · exact Genus0Psi0.value_18
+  · exact Genus0Psi0.value_19
+  · exact Genus0Psi4.value_20
+  · exact Genus0Psi3.value_21
+  · exact Genus0Psi2.value_22
+  · exact Genus0Psi3.value_23
+  · exact Genus0Psi4.value_24
+  · exact Genus0Psi2.value_25
+  · exact Genus0Psi2.value_26
+  · exact Genus0Psi4.value_27
+  · exact Genus0Psi3.value_28
+  · exact Genus0Psi2.value_29
+  · exact Genus0Psi2.value_30
+  · exact Genus0Psi4.value_31
+  · exact Genus0Psi3.value_32
+  · exact Genus0Psi3.value_33
+  · exact Genus0Psi1.value_34
+  · exact Genus0Psi2.value_35
+  · exact Genus0Psi3.value_36
+  · exact Genus0Psi2.value_37
+  · exact Genus0Psi1.value_38
+  · exact Genus0Psi2.value_39
+  · exact Genus0Psi4.value_40
+  · exact Genus0Psi3.value_41
+  · exact Genus0Psi3.value_42
+  · exact Genus0Psi0.value_43
+  · exact Genus0Psi1.value_44
+  · exact Genus0Psi2.value_45
+  · exact Genus0Psi3.value_46
+  · exact Genus0Psi4.value_47
+  · exact Genus0Psi2.value_48
+  · exact Genus0Psi3.value_49
+  · exact Genus0Psi4.value_50
+  · exact Genus0Psi2.value_51
+  · exact Genus0Psi3.value_52
+  · exact Genus0Psi4.value_53
+  · exact Genus0Psi2.value_54
+  · exact Genus0Psi2.value_55
+  · exact Genus0Psi2.value_56
+  · exact Genus0Psi4.value_57
+  · exact Genus0Psi2.value_58
+  · exact Genus0Psi4.value_59
+  · exact Genus0Psi4.value_60
+  · exact Genus0Psi4.value_61
+  · exact Genus0Psi3.value_62
+  · exact Genus0Psi2.value_63
+  · exact Genus0Psi2.value_64
+  · exact Genus0Psi3.value_65
+  · exact Genus0Psi3.value_66
+  · exact Genus0Psi1.value_67
+  · exact Genus0Psi2.value_68
+  · exact Genus0Psi3.value_69
+  · exact Genus0Psi2.value_70
+  · exact Genus0Psi1.value_71
+  · exact Genus0Psi2.value_72
+  · exact Genus0Psi3.value_73
+  · exact Genus0Psi3.value_74
+  · exact Genus0Psi0.value_75
+  · exact Genus0Psi1.value_76
+  · exact Genus0Psi2.value_77
+  · exact Genus0Psi3.value_78
+  · exact Genus0Psi2.value_79
+  · exact Genus0Psi1.value_80
+  · exact Genus0Psi2.value_81
+  · exact Genus0Psi3.value_82
+  · exact Genus0Psi3.value_83
+  · exact Genus0Psi0.value_84
+  · exact Genus0Psi1.value_85
+  · exact Genus0Psi2.value_86
+  · exact Genus0Psi3.value_87
+  · exact Genus0Psi2.value_88
+  · exact Genus0Psi1.value_89
+  · exact Genus0Psi2.value_90
+  · exact Genus0Psi3.value_91
+  · exact Genus0Psi0.value_92
+  · exact Genus0Psi1.value_93
+  · exact Genus0Psi4.value_94
+  · exact Genus0Psi4.value_95
+  · exact Genus0Psi4.value_96
+  · exact Genus0Psi4.value_97
+  · exact Genus0Psi3.value_98
+  · exact Genus0Psi2.value_99
+  · exact Genus0Psi3.value_100
+  · exact Genus0Psi2.value_101
+  · exact Genus0Psi3.value_102
+  · exact Genus0Psi2.value_103
+  · exact Genus0Psi3.value_104
+  · exact Genus0Psi2.value_105
+  · exact Genus0Psi1.value_106
+  · exact Genus0Psi2.value_107
+  · exact Genus0Psi2.value_108
+  · exact Genus0Psi3.value_109
+  · exact Genus0Psi2.value_110
+  · exact Genus0Psi3.value_111
+  · exact Genus0Psi2.value_112
+  · exact Genus0Psi3.value_113
+  · exact Genus0Psi3.value_114
+  · exact Genus0Psi2.value_115
+  · exact Genus0Psi1.value_116
+  · exact Genus0Psi3.value_117
+  · exact Genus0Psi2.value_118
+  · exact Genus0Psi1.value_119
+  · exact Genus0Psi2.value_120
+  · exact Genus0Psi0.value_121
+  · exact Genus0Psi1.value_122
+  · exact Genus0Psi3.value_123
+  · exact Genus0Psi2.value_124
+  · exact Genus0Psi1.value_125
+  · exact Genus0Psi2.value_126
+  · exact Genus0Psi0.value_127
+  · exact Genus0Psi1.value_128
+  · exact Genus0Psi3.value_129
+  · exact Genus0Psi2.value_130
+  · exact Genus0Psi1.value_131
+  · exact Genus0Psi2.value_132
+  · exact Genus0Psi0.value_133
+  · exact Genus0Psi1.value_134
+  · exact Genus0Psi3.value_135
+  · exact Genus0Psi2.value_136
+  · exact Genus0Psi1.value_137
+  · exact Genus0Psi0.value_138
+  · exact Genus1Psi2.value_139
+  · exact Genus1Psi2.value_140
+  · exact Genus1Psi3.value_141
+  · exact Genus1Psi1.value_142
+  · exact Genus1Psi1.value_143
+  · exact Genus1Psi2.value_144
+  · exact Genus1Psi1.value_145
+  · exact Genus1Psi2.value_146
+  · exact Genus1Psi2.value_147
+  · exact Genus1Psi1.value_148
+  · exact Genus1Psi2.value_149
+  · exact Genus1Psi1.value_150
+  · exact Genus1Psi2.value_151
+  · exact Genus1Psi2.value_152
+  · exact Genus1Psi2.value_153
+  · exact Genus1Psi1.value_154
+  · exact Genus1Psi1.value_155
+  · exact Genus1Psi0.value_156
+  · exact Genus1Psi1.value_157
+  · exact Genus1Psi0.value_158
+  · exact Genus1Psi1.value_159
+  · exact Genus1Psi2.value_160
+  · exact Genus1Psi2.value_161
+  · exact Genus1Psi2.value_162
+  · exact Genus1Psi1.value_163
+  · exact Genus1Psi1.value_164
+  · exact Genus1Psi1.value_165
+  · exact Genus1Psi0.value_166
+  · exact Genus1Psi0.value_167
+  · exact Genus1Psi0.value_168
+  · exact Genus1Psi5.value_169
+  · exact Genus1Psi4.value_170
+  · exact Genus1Psi3.value_171
+  · exact Genus1Psi5.value_172
+  · exact Genus1Psi4.value_173
+  · exact Genus1Psi3.value_174
+  · exact Genus1Psi4.value_175
+  · exact Genus1Psi5.value_176
+  · exact Genus1Psi4.value_177
+  · exact Genus1Psi3.value_178
+  · exact Genus1Psi5.value_179
+  · exact Genus1Psi3.value_180
+  · exact Genus1Psi5.value_181
+  · exact Genus1Psi3.value_182
+  · exact Genus1Psi5.value_183
+  · exact Genus1Psi5.value_184
+  · exact Genus1Psi5.value_185
+  · exact Genus1Psi4.value_186
+  · exact Genus1Psi3.value_187
+  · exact Genus1Psi5.value_188
+  · exact Genus1Psi4.value_189
+  · exact Genus1Psi3.value_190
+  · exact Genus1Psi3.value_191
+  · exact Genus1Psi4.value_192
+  · exact Genus1Psi4.value_193
+  · exact Genus1Psi3.value_194
+  · exact Genus1Psi2.value_195
+  · exact Genus1Psi4.value_196
+  · exact Genus1Psi2.value_197
+  · exact Genus1Psi3.value_198
+  · exact Genus1Psi4.value_199
+  · exact Genus1Psi5.value_200
+  · exact Genus1Psi3.value_201
+  · exact Genus1Psi3.value_202
+  · exact Genus1Psi4.value_203
+  · exact Genus1Psi4.value_204
+  · exact Genus1Psi2.value_205
+  · exact Genus1Psi3.value_206
+  · exact Genus1Psi2.value_207
+  · exact Genus1Psi3.value_208
+  · exact Genus1Psi4.value_209
+  · exact Genus1Psi4.value_210
+  · exact Genus1Psi3.value_211
+  · exact Genus1Psi3.value_212
+  · exact Genus1Psi1.value_213
+  · exact Genus1Psi2.value_214
+  · exact Genus1Psi4.value_215
+  · exact Genus1Psi2.value_216
+  · exact Genus1Psi3.value_217
+  · exact Genus1Psi4.value_218
+  · exact Genus1Psi5.value_219
+  · exact Genus1Psi3.value_220
+  · exact Genus1Psi3.value_221
+  · exact Genus1Psi5.value_222
+  · exact Genus1Psi5.value_223
+  · exact Genus1Psi5.value_224
+  · exact Genus1Psi4.value_225
+  · exact Genus1Psi3.value_226
+  · exact Genus1Psi5.value_227
+  · exact Genus1Psi4.value_228
+  · exact Genus1Psi3.value_229
+  · exact Genus1Psi3.value_230
+  · exact Genus1Psi4.value_231
+  · exact Genus1Psi4.value_232
+  · exact Genus1Psi2.value_233
+  · exact Genus1Psi3.value_234
+  · exact Genus1Psi4.value_235
+  · exact Genus1Psi5.value_236
+  · exact Genus1Psi3.value_237
+  · exact Genus1Psi4.value_238
+  · exact Genus1Psi2.value_239
+  · exact Genus1Psi3.value_240
+  · exact Genus1Psi3.value_241
+  · exact Genus1Psi4.value_242
+  · exact Genus1Psi4.value_243
+  · exact Genus1Psi1.value_244
+  · exact Genus1Psi2.value_245
+  · exact Genus1Psi3.value_246
+  · exact Genus1Psi2.value_247
+  · exact Genus1Psi3.value_248
+  · exact Genus1Psi5.value_249
+  · exact Genus1Psi3.value_250
+  · exact Genus1Psi4.value_251
+  · exact Genus1Psi5.value_252
+  · exact Genus1Psi3.value_253
+  · exact Genus1Psi4.value_254
+  · exact Genus1Psi4.value_255
+  · exact Genus1Psi3.value_256
+  · exact Genus1Psi2.value_257
+  · exact Genus1Psi4.value_258
+  · exact Genus1Psi3.value_259
+  · exact Genus1Psi2.value_260
+  · exact Genus1Psi2.value_261
+  · exact Genus1Psi3.value_262
+  · exact Genus1Psi3.value_263
+  · exact Genus1Psi1.value_264
+  · exact Genus1Psi2.value_265
+  · exact Genus1Psi3.value_266
+  · exact Genus1Psi4.value_267
+  · exact Genus1Psi4.value_268
+  · exact Genus1Psi3.value_269
+  · exact Genus1Psi2.value_270
+  · exact Genus1Psi3.value_271
+  · exact Genus1Psi1.value_272
+  · exact Genus1Psi2.value_273
+  · exact Genus1Psi2.value_274
+  · exact Genus1Psi3.value_275
+  · exact Genus1Psi3.value_276
+  · exact Genus1Psi1.value_277
+  · exact Genus1Psi2.value_278
+  · exact Genus1Psi3.value_279
+  · exact Genus1Psi4.value_280
+  · exact Genus1Psi4.value_281
+  · exact Genus1Psi3.value_282
+  · exact Genus1Psi2.value_283
+  · exact Genus1Psi3.value_284
+  · exact Genus1Psi1.value_285
+  · exact Genus1Psi2.value_286
+  · exact Genus1Psi2.value_287
+  · exact Genus1Psi3.value_288
+  · exact Genus1Psi0.value_289
+  · exact Genus1Psi1.value_290
+
+/-- Select a smaller cache while preserving the original fallback at other keys. -/
+def cacheFor {n : ℕ} (indices : Fin n → Fin 291)
+    (hinj : Function.Injective (key ∘ indices)) : ResidualCache .plane :=
+  .ofEntries (key ∘ indices) (entries ∘ indices) hinj
+    (fun i ↦ (computed (indices i)).symm)
+
+end AxiomaticGW.GKM.PlaneGenusTwoComponents

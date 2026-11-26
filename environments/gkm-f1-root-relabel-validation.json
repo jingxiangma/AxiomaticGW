@@ -1,0 +1,935 @@
+{
+  "schema_version": 1,
+  "status": "actual_targeted_first_three_files_passed",
+  "integrated_sources": [
+    {
+      "path": "AxiomaticGW/Surfaces/ScalarPointRelabel.lean",
+      "sha256": "533320a02155227705d65c38a4b090572b769cd2580d8e3f8e6507047be46ef3",
+      "compiled_sha256": "49247d62dff8e6a0902ca4e2892284ab5f1f54d3525fcbf0ba495cfe16d9bcc8"
+    },
+    {
+      "path": "AxiomaticGW/Surfaces/Fixtures/BlowupF1RootRelabel.lean",
+      "sha256": "281bf03a1bf6c0032bf2d5da30f5bc1c1d5ffaf6c6b4be0b462398f60ce667cf",
+      "compiled_sha256": "de33ba060e4160f546ddc3ef4b920c597e8740a3528dc5d69a00575416713639"
+    },
+    {
+      "path": "AxiomaticGWTest/Surfaces/BlowupF1RootRelabel.lean",
+      "sha256": "44338844bcfc994ad714aef2a08b26855f91d2b1584de50c73aab38944bbedf8",
+      "compiled_sha256": "3b951c24a31a3a3027228fa0fd7dfe8f4845f161553651e3d08c95f8411eb4b2"
+    }
+  ],
+  "actual_runs": [
+    {
+      "phase": "production",
+      "metadata": {
+        "command": [
+          "lake",
+          "build",
+          "AxiomaticGW.Surfaces.Fixtures.BlowupF1RootRelabel"
+        ],
+        "status": "passed",
+        "exit_code": 0,
+        "elapsed_seconds": 6.723,
+        "log": "/tmp/gw_f1_relabel_integrated_production_20261005.log",
+        "children_ru_maxrss_raw": 1504755712,
+        "children_ru_maxrss_unit": "bytes",
+        "resource_note": "Wrapper child usage may omit descendants on interrupted runs."
+      },
+      "full_log": "\u26a0 [2796/2851] Replayed AxiomaticGW.Surfaces.Fixtures.BlowupF1H121ComponentsValue00\nwarning: AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue00.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in\nset_option maxHeartbeats 0 in\n-- reason for change\n...\n\nNote: This linter can be disabled with `set_option linter.style.maxHeartbeats false`\n\u26a0 [2797/2851] Replayed AxiomaticGW.Surfaces.Fixtures.BlowupF1H121ComponentsValue01\nwarning: AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue01.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in\nset_option maxHeartbeats 0 in\n-- reason for change\n...\n\nNote: This linter can be disabled with `set_option linter.style.maxHeartbeats false`\n\u26a0 [2798/2851] Replayed AxiomaticGW.Surfaces.Fixtures.BlowupF1H121ComponentsValue02\nwarning: AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue02.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in\nset_option maxHeartbeats 0 in\n-- reason for change\n...\n\nNote: This linter can be disabled with `set_option linter.style.maxHeartbeats false`\n\u26a0 [2799/2851] Replayed AxiomaticGW.Surfaces.Fixtures.BlowupF1H121ComponentsValue03\nwarning: AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue03.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in\nset_option maxHeartbeats 0 in\n-- reason for change\n...\n\nNote: This linter can be disabled with `set_option linter.style.maxHeartbeats false`\n\u26a0 [2800/2851] Replayed AxiomaticGW.Surfaces.Fixtures.BlowupF1H121ComponentsValue04\nwarning: AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue04.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in\nset_option maxHeartbeats 0 in\n-- reason for change\n...\n\nNote: This linter can be disabled with `set_option linter.style.maxHeartbeats false`\n\u26a0 [2801/2851] Replayed AxiomaticGW.Surfaces.Fixtures.BlowupF1H121ComponentsValue05\nwarning: AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue05.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in\nset_option maxHeartbeats 0 in\n-- reason for change\n...\n\nNote: This linter can be disabled with `set_option linter.style.maxHeartbeats false`\n\u26a0 [2802/2851] Replayed AxiomaticGW.Surfaces.Fixtures.BlowupF1H121ComponentsValue06\nwarning: AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue06.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in\nset_option maxHeartbeats 0 in\n-- reason for change\n...\n\nNote: This linter can be disabled with `set_option linter.style.maxHeartbeats false`\n\u26a0 [2803/2851] Replayed AxiomaticGW.Surfaces.Fixtures.BlowupF1H121ComponentsValue07\nwarning: AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue07.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in\nset_option maxHeartbeats 0 in\n-- reason for change\n...\n\nNote: This linter can be disabled with `set_option linter.style.maxHeartbeats false`\n\u26a0 [2804/2851] Replayed AxiomaticGW.Surfaces.Fixtures.BlowupF1H121ComponentsValue08\nwarning: AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue08.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in\nset_option maxHeartbeats 0 in\n-- reason for change\n...\n\nNote: This linter can be disabled with `set_option linter.style.maxHeartbeats false`\n\u26a0 [2805/2851] Replayed AxiomaticGW.Surfaces.Fixtures.BlowupF1H121ComponentsValue09\nwarning: AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue09.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in\nset_option maxHeartbeats 0 in\n-- reason for change\n...\n\nNote: This linter can be disabled with `set_option linter.style.maxHeartbeats false`\n\u26a0 [2806/2851] Replayed AxiomaticGW.Surfaces.Fixtures.BlowupF1H121ComponentsValue10\nwarning: AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue10.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in\nset_option maxHeartbeats 0 in\n-- reason for change\n...\n\nNote: This linter can be disabled with `set_option linter.style.maxHeartbeats false`\n\u26a0 [2807/2851] Replayed AxiomaticGW.Surfaces.Fixtures.BlowupF1H121ComponentsValue11\nwarning: AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue11.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in\nset_option maxHeartbeats 0 in\n-- reason for change\n...\n\nNote: This linter can be disabled with `set_option linter.style.maxHeartbeats false`\n\u26a0 [2808/2851] Replayed AxiomaticGW.Surfaces.Fixtures.BlowupF1H121ComponentsValue12\nwarning: AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue12.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in\nset_option maxHeartbeats 0 in\n-- reason for change\n...\n\nNote: This linter can be disabled with `set_option linter.style.maxHeartbeats false`\n\u26a0 [2809/2851] Replayed AxiomaticGW.Surfaces.Fixtures.BlowupF1H121ComponentsValue13\nwarning: AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue13.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in\nset_option maxHeartbeats 0 in\n-- reason for change\n...\n\nNote: This linter can be disabled with `set_option linter.style.maxHeartbeats false`\n\u26a0 [2810/2851] Replayed AxiomaticGW.Surfaces.Fixtures.BlowupF1H121ComponentsValue14\nwarning: AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue14.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in\nset_option maxHeartbeats 0 in\n-- reason for change\n...\n\nNote: This linter can be disabled with `set_option linter.style.maxHeartbeats false`\n\u26a0 [2811/2851] Replayed AxiomaticGW.Surfaces.Fixtures.BlowupF1H121ComponentsValue15\nwarning: AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue15.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in\nset_option maxHeartbeats 0 in\n-- reason for change\n...\n\nNote: This linter can be disabled with `set_option linter.style.maxHeartbeats false`\n\u26a0 [2812/2851] Replayed AxiomaticGW.Surfaces.Fixtures.BlowupF1H121ComponentsValue16\nwarning: AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue16.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in\nset_option maxHeartbeats 0 in\n-- reason for change\n...\n\nNote: This linter can be disabled with `set_option linter.style.maxHeartbeats false`\n\u26a0 [2813/2851] Replayed AxiomaticGW.Surfaces.Fixtures.BlowupF1H121ComponentsValue17\nwarning: AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue17.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in\nset_option maxHeartbeats 0 in\n-- reason for change\n...\n\nNote: This linter can be disabled with `set_option linter.style.maxHeartbeats false`\n\u26a0 [2814/2851] Replayed AxiomaticGW.Surfaces.Fixtures.BlowupF1H121ComponentsValue18\nwarning: AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue18.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in\nset_option maxHeartbeats 0 in\n-- reason for change\n...\n\nNote: This linter can be disabled with `set_option linter.style.maxHeartbeats false`\n\u26a0 [2815/2851] Replayed AxiomaticGW.Surfaces.Fixtures.BlowupF1H121ComponentsValue19\nwarning: AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue19.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in\nset_option maxHeartbeats 0 in\n-- reason for change\n...\n\nNote: This linter can be disabled with `set_option linter.style.maxHeartbeats false`\n\u26a0 [2816/2851] Replayed AxiomaticGW.Surfaces.Fixtures.BlowupF1H121ComponentsValue20\nwarning: AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue20.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in\nset_option maxHeartbeats 0 in\n-- reason for change\n...\n\nNote: This linter can be disabled with `set_option linter.style.maxHeartbeats false`\n\u26a0 [2817/2851] Replayed AxiomaticGW.Surfaces.Fixtures.BlowupF1H121ComponentsValue21\nwarning: AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue21.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in\nset_option maxHeartbeats 0 in\n-- reason for change\n...\n\nNote: This linter can be disabled with `set_option linter.style.maxHeartbeats false`\n\u26a0 [2818/2851] Replayed AxiomaticGW.Surfaces.Fixtures.BlowupF1H121ComponentsValue22\nwarning: AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue22.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in\nset_option maxHeartbeats 0 in\n-- reason for change\n...\n\nNote: This linter can be disabled with `set_option linter.style.maxHeartbeats false`\n\u26a0 [2819/2851] Replayed AxiomaticGW.Surfaces.Fixtures.BlowupF1H121ComponentsValue23\nwarning: AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue23.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in\nset_option maxHeartbeats 0 in\n-- reason for change\n...\n\nNote: This linter can be disabled with `set_option linter.style.maxHeartbeats false`\n\u26a0 [2820/2851] Replayed AxiomaticGW.Surfaces.Fixtures.BlowupF1H121ComponentsValue24\nwarning: AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue24.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in\nset_option maxHeartbeats 0 in\n-- reason for change\n...\n\nNote: This linter can be disabled with `set_option linter.style.maxHeartbeats false`\n\u26a0 [2821/2851] Replayed AxiomaticGW.Surfaces.Fixtures.BlowupF1H121ComponentsValue25\nwarning: AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue25.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in\nset_option maxHeartbeats 0 in\n-- reason for change\n...\n\nNote: This linter can be disabled with `set_option linter.style.maxHeartbeats false`\n\u26a0 [2822/2851] Replayed AxiomaticGW.Surfaces.Fixtures.BlowupF1H121ComponentsValue26\nwarning: AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue26.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in\nset_option maxHeartbeats 0 in\n-- reason for change\n...\n\nNote: This linter can be disabled with `set_option linter.style.maxHeartbeats false`\n\u26a0 [2823/2851] Replayed AxiomaticGW.Surfaces.Fixtures.BlowupF1H121ComponentsValue27\nwarning: AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue27.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in\nset_option maxHeartbeats 0 in\n-- reason for change\n...\n\nNote: This linter can be disabled with `set_option linter.style.maxHeartbeats false`\n\u26a0 [2824/2851] Replayed AxiomaticGW.Surfaces.Fixtures.BlowupF1H121ComponentsValue28\nwarning: AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue28.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in\nset_option maxHeartbeats 0 in\n-- reason for change\n...\n\nNote: This linter can be disabled with `set_option linter.style.maxHeartbeats false`\n\u26a0 [2825/2851] Replayed AxiomaticGW.Surfaces.Fixtures.BlowupF1H121ComponentsValue29\nwarning: AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue29.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in\nset_option maxHeartbeats 0 in\n-- reason for change\n...\n\nNote: This linter can be disabled with `set_option linter.style.maxHeartbeats false`\n\u26a0 [2826/2851] Replayed AxiomaticGW.Surfaces.Fixtures.BlowupF1H121ComponentsValue30\nwarning: AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue30.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in\nset_option maxHeartbeats 0 in\n-- reason for change\n...\n\nNote: This linter can be disabled with `set_option linter.style.maxHeartbeats false`\n\u26a0 [2827/2851] Replayed AxiomaticGW.Surfaces.Fixtures.BlowupF1H121ComponentsValue31\nwarning: AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue31.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in\nset_option maxHeartbeats 0 in\n-- reason for change\n...\n\nNote: This linter can be disabled with `set_option linter.style.maxHeartbeats false`\n\u26a0 [2828/2851] Replayed AxiomaticGW.Surfaces.Fixtures.BlowupF1H121ComponentsValue32\nwarning: AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue32.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in\nset_option maxHeartbeats 0 in\n-- reason for change\n...\n\nNote: This linter can be disabled with `set_option linter.style.maxHeartbeats false`\n\u26a0 [2829/2851] Replayed AxiomaticGW.Surfaces.Fixtures.BlowupF1H121ComponentsValue33\nwarning: AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue33.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in\nset_option maxHeartbeats 0 in\n-- reason for change\n...\n\nNote: This linter can be disabled with `set_option linter.style.maxHeartbeats false`\n\u26a0 [2830/2851] Replayed AxiomaticGW.Surfaces.Fixtures.BlowupF1H121ComponentsValue34\nwarning: AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue34.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in\nset_option maxHeartbeats 0 in\n-- reason for change\n...\n\nNote: This linter can be disabled with `set_option linter.style.maxHeartbeats false`\n\u26a0 [2831/2851] Replayed AxiomaticGW.Surfaces.Fixtures.BlowupF1H121ComponentsValue35\nwarning: AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue35.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in\nset_option maxHeartbeats 0 in\n-- reason for change\n...\n\nNote: This linter can be disabled with `set_option linter.style.maxHeartbeats false`\n\u26a0 [2832/2851] Replayed AxiomaticGW.Surfaces.Fixtures.BlowupF1H121ComponentsValue36\nwarning: AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue36.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in\nset_option maxHeartbeats 0 in\n-- reason for change\n...\n\nNote: This linter can be disabled with `set_option linter.style.maxHeartbeats false`\n\u26a0 [2833/2851] Replayed AxiomaticGW.Surfaces.Fixtures.BlowupF1H121ComponentsValue37\nwarning: AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue37.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in\nset_option maxHeartbeats 0 in\n-- reason for change\n...\n\nNote: This linter can be disabled with `set_option linter.style.maxHeartbeats false`\n\u26a0 [2834/2851] Replayed AxiomaticGW.Surfaces.Fixtures.BlowupF1H121ComponentsValue38\nwarning: AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue38.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in\nset_option maxHeartbeats 0 in\n-- reason for change\n...\n\nNote: This linter can be disabled with `set_option linter.style.maxHeartbeats false`\n\u26a0 [2835/2851] Replayed AxiomaticGW.Surfaces.Fixtures.BlowupF1H121ComponentsValue39\nwarning: AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue39.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in\nset_option maxHeartbeats 0 in\n-- reason for change\n...\n\nNote: This linter can be disabled with `set_option linter.style.maxHeartbeats false`\n\u26a0 [2836/2851] Replayed AxiomaticGW.Surfaces.Fixtures.BlowupF1H121ComponentsValue40\nwarning: AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue40.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in\nset_option maxHeartbeats 0 in\n-- reason for change\n...\n\nNote: This linter can be disabled with `set_option linter.style.maxHeartbeats false`\n\u26a0 [2837/2851] Replayed AxiomaticGW.Surfaces.Fixtures.BlowupF1H121ComponentsValue41\nwarning: AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue41.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in\nset_option maxHeartbeats 0 in\n-- reason for change\n...\n\nNote: This linter can be disabled with `set_option linter.style.maxHeartbeats false`\n\u26a0 [2838/2851] Replayed AxiomaticGW.Surfaces.Fixtures.BlowupF1H121ComponentsValue42\nwarning: AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue42.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in\nset_option maxHeartbeats 0 in\n-- reason for change\n...\n\nNote: This linter can be disabled with `set_option linter.style.maxHeartbeats false`\n\u26a0 [2839/2851] Replayed AxiomaticGW.Surfaces.Fixtures.BlowupF1H121ComponentsValue43\nwarning: AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue43.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in\nset_option maxHeartbeats 0 in\n-- reason for change\n...\n\nNote: This linter can be disabled with `set_option linter.style.maxHeartbeats false`\n\u26a0 [2840/2851] Replayed AxiomaticGW.Surfaces.Fixtures.BlowupF1H121ComponentsValue44\nwarning: AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue44.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in\nset_option maxHeartbeats 0 in\n-- reason for change\n...\n\nNote: This linter can be disabled with `set_option linter.style.maxHeartbeats false`\n\u26a0 [2841/2851] Replayed AxiomaticGW.Surfaces.Fixtures.BlowupF1H121ComponentsValue45\nwarning: AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue45.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in\nset_option maxHeartbeats 0 in\n-- reason for change\n...\n\nNote: This linter can be disabled with `set_option linter.style.maxHeartbeats false`\n\u26a0 [2842/2851] Replayed AxiomaticGW.Surfaces.Fixtures.BlowupF1H121ComponentsValue46\nwarning: AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue46.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in\nset_option maxHeartbeats 0 in\n-- reason for change\n...\n\nNote: This linter can be disabled with `set_option linter.style.maxHeartbeats false`\n\u26a0 [2843/2851] Replayed AxiomaticGW.Surfaces.Fixtures.BlowupF1H121ComponentsValue47\nwarning: AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue47.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in\nset_option maxHeartbeats 0 in\n-- reason for change\n...\n\nNote: This linter can be disabled with `set_option linter.style.maxHeartbeats false`\n\u26a0 [2844/2851] Replayed AxiomaticGW.Surfaces.Fixtures.BlowupF1H121ComponentsReplay\nwarning: AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsReplay.lean:74:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in\nset_option maxHeartbeats 0 in\n-- reason for change\n...\n\nNote: This linter can be disabled with `set_option linter.style.maxHeartbeats false`\n\u26a0 [2846/2851] Replayed AxiomaticGW.Surfaces.Fixtures.BlowupF1H121OuterReplay\nwarning: AxiomaticGW/Surfaces/Fixtures/BlowupF1H121OuterReplay.lean:23:0: Unscoped option maxHeartbeats is not allowed:\nPlease scope this to individual declarations, as in\n```\nset_option maxHeartbeats in\n-- comment explaining why this is necessary\nexample : ... := ...\n```\n\nNote: This linter can be disabled with `set_option linter.style.setOption false`\nwarning: AxiomaticGW/Surfaces/Fixtures/BlowupF1H121OuterReplay.lean:42:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`\n\u2714 [2850/2851] Built AxiomaticGW.Surfaces.ScalarPointRelabel (1.5s)\n\u2714 [2851/2851] Built AxiomaticGW.Surfaces.Fixtures.BlowupF1RootRelabel (3.1s)\nBuild completed successfully (2851 jobs).\n",
+      "warning_locations": [
+        "AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue00.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in",
+        "AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue01.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in",
+        "AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue02.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in",
+        "AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue03.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in",
+        "AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue04.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in",
+        "AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue05.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in",
+        "AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue06.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in",
+        "AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue07.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in",
+        "AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue08.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in",
+        "AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue09.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in",
+        "AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue10.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in",
+        "AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue11.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in",
+        "AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue12.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in",
+        "AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue13.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in",
+        "AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue14.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in",
+        "AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue15.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in",
+        "AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue16.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in",
+        "AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue17.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in",
+        "AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue18.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in",
+        "AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue19.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in",
+        "AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue20.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in",
+        "AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue21.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in",
+        "AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue22.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in",
+        "AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue23.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in",
+        "AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue24.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in",
+        "AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue25.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in",
+        "AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue26.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in",
+        "AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue27.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in",
+        "AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue28.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in",
+        "AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue29.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in",
+        "AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue30.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in",
+        "AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue31.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in",
+        "AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue32.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in",
+        "AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue33.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in",
+        "AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue34.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in",
+        "AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue35.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in",
+        "AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue36.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in",
+        "AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue37.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in",
+        "AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue38.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in",
+        "AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue39.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in",
+        "AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue40.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in",
+        "AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue41.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in",
+        "AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue42.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in",
+        "AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue43.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in",
+        "AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue44.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in",
+        "AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue45.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in",
+        "AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue46.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in",
+        "AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue47.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in",
+        "AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsReplay.lean:74:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in",
+        "AxiomaticGW/Surfaces/Fixtures/BlowupF1H121OuterReplay.lean:23:0: Unscoped option maxHeartbeats is not allowed:",
+        "AxiomaticGW/Surfaces/Fixtures/BlowupF1H121OuterReplay.lean:42:100: This line exceeds the 100 character limit, please shorten it!"
+      ],
+      "evidence": [
+        {
+          "path": "/tmp/gw_f1_relabel_integrated_production_20261005.json",
+          "sha256": "a4d289771307fdf32660465821bfb6f70de13c0397e1aa091a5d59e0d0fd134f"
+        },
+        {
+          "path": "/tmp/gw_f1_relabel_integrated_production_20261005.log",
+          "sha256": "0ba4e7f1357c453700f6d253d700741f755665d8cfac2dec6d8c6c3f7564c9e2"
+        }
+      ]
+    },
+    {
+      "phase": "tests",
+      "metadata": {
+        "command": [
+          "lake",
+          "build",
+          "AxiomaticGWTest.Surfaces.BlowupF1RootRelabel"
+        ],
+        "status": "passed",
+        "exit_code": 0,
+        "elapsed_seconds": 3.284,
+        "log": "/tmp/gw_f1_relabel_integrated_tests_20261005.log",
+        "children_ru_maxrss_raw": 1312555008,
+        "children_ru_maxrss_unit": "bytes",
+        "resource_note": "Wrapper child usage may omit descendants on interrupted runs."
+      },
+      "full_log": "\u26a0 [2797/2852] Replayed AxiomaticGW.Surfaces.Fixtures.BlowupF1H121ComponentsValue00\nwarning: AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue00.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in\nset_option maxHeartbeats 0 in\n-- reason for change\n...\n\nNote: This linter can be disabled with `set_option linter.style.maxHeartbeats false`\n\u26a0 [2798/2852] Replayed AxiomaticGW.Surfaces.Fixtures.BlowupF1H121ComponentsValue01\nwarning: AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue01.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in\nset_option maxHeartbeats 0 in\n-- reason for change\n...\n\nNote: This linter can be disabled with `set_option linter.style.maxHeartbeats false`\n\u26a0 [2799/2852] Replayed AxiomaticGW.Surfaces.Fixtures.BlowupF1H121ComponentsValue02\nwarning: AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue02.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in\nset_option maxHeartbeats 0 in\n-- reason for change\n...\n\nNote: This linter can be disabled with `set_option linter.style.maxHeartbeats false`\n\u26a0 [2800/2852] Replayed AxiomaticGW.Surfaces.Fixtures.BlowupF1H121ComponentsValue03\nwarning: AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue03.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in\nset_option maxHeartbeats 0 in\n-- reason for change\n...\n\nNote: This linter can be disabled with `set_option linter.style.maxHeartbeats false`\n\u26a0 [2801/2852] Replayed AxiomaticGW.Surfaces.Fixtures.BlowupF1H121ComponentsValue04\nwarning: AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue04.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in\nset_option maxHeartbeats 0 in\n-- reason for change\n...\n\nNote: This linter can be disabled with `set_option linter.style.maxHeartbeats false`\n\u26a0 [2802/2852] Replayed AxiomaticGW.Surfaces.Fixtures.BlowupF1H121ComponentsValue05\nwarning: AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue05.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in\nset_option maxHeartbeats 0 in\n-- reason for change\n...\n\nNote: This linter can be disabled with `set_option linter.style.maxHeartbeats false`\n\u26a0 [2803/2852] Replayed AxiomaticGW.Surfaces.Fixtures.BlowupF1H121ComponentsValue06\nwarning: AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue06.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in\nset_option maxHeartbeats 0 in\n-- reason for change\n...\n\nNote: This linter can be disabled with `set_option linter.style.maxHeartbeats false`\n\u26a0 [2804/2852] Replayed AxiomaticGW.Surfaces.Fixtures.BlowupF1H121ComponentsValue07\nwarning: AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue07.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in\nset_option maxHeartbeats 0 in\n-- reason for change\n...\n\nNote: This linter can be disabled with `set_option linter.style.maxHeartbeats false`\n\u26a0 [2805/2852] Replayed AxiomaticGW.Surfaces.Fixtures.BlowupF1H121ComponentsValue08\nwarning: AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue08.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in\nset_option maxHeartbeats 0 in\n-- reason for change\n...\n\nNote: This linter can be disabled with `set_option linter.style.maxHeartbeats false`\n\u26a0 [2806/2852] Replayed AxiomaticGW.Surfaces.Fixtures.BlowupF1H121ComponentsValue09\nwarning: AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue09.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in\nset_option maxHeartbeats 0 in\n-- reason for change\n...\n\nNote: This linter can be disabled with `set_option linter.style.maxHeartbeats false`\n\u26a0 [2807/2852] Replayed AxiomaticGW.Surfaces.Fixtures.BlowupF1H121ComponentsValue10\nwarning: AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue10.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in\nset_option maxHeartbeats 0 in\n-- reason for change\n...\n\nNote: This linter can be disabled with `set_option linter.style.maxHeartbeats false`\n\u26a0 [2808/2852] Replayed AxiomaticGW.Surfaces.Fixtures.BlowupF1H121ComponentsValue11\nwarning: AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue11.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in\nset_option maxHeartbeats 0 in\n-- reason for change\n...\n\nNote: This linter can be disabled with `set_option linter.style.maxHeartbeats false`\n\u26a0 [2809/2852] Replayed AxiomaticGW.Surfaces.Fixtures.BlowupF1H121ComponentsValue12\nwarning: AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue12.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in\nset_option maxHeartbeats 0 in\n-- reason for change\n...\n\nNote: This linter can be disabled with `set_option linter.style.maxHeartbeats false`\n\u26a0 [2810/2852] Replayed AxiomaticGW.Surfaces.Fixtures.BlowupF1H121ComponentsValue13\nwarning: AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue13.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in\nset_option maxHeartbeats 0 in\n-- reason for change\n...\n\nNote: This linter can be disabled with `set_option linter.style.maxHeartbeats false`\n\u26a0 [2811/2852] Replayed AxiomaticGW.Surfaces.Fixtures.BlowupF1H121ComponentsValue14\nwarning: AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue14.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in\nset_option maxHeartbeats 0 in\n-- reason for change\n...\n\nNote: This linter can be disabled with `set_option linter.style.maxHeartbeats false`\n\u26a0 [2812/2852] Replayed AxiomaticGW.Surfaces.Fixtures.BlowupF1H121ComponentsValue15\nwarning: AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue15.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in\nset_option maxHeartbeats 0 in\n-- reason for change\n...\n\nNote: This linter can be disabled with `set_option linter.style.maxHeartbeats false`\n\u26a0 [2813/2852] Replayed AxiomaticGW.Surfaces.Fixtures.BlowupF1H121ComponentsValue16\nwarning: AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue16.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in\nset_option maxHeartbeats 0 in\n-- reason for change\n...\n\nNote: This linter can be disabled with `set_option linter.style.maxHeartbeats false`\n\u26a0 [2814/2852] Replayed AxiomaticGW.Surfaces.Fixtures.BlowupF1H121ComponentsValue17\nwarning: AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue17.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in\nset_option maxHeartbeats 0 in\n-- reason for change\n...\n\nNote: This linter can be disabled with `set_option linter.style.maxHeartbeats false`\n\u26a0 [2815/2852] Replayed AxiomaticGW.Surfaces.Fixtures.BlowupF1H121ComponentsValue18\nwarning: AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue18.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in\nset_option maxHeartbeats 0 in\n-- reason for change\n...\n\nNote: This linter can be disabled with `set_option linter.style.maxHeartbeats false`\n\u26a0 [2816/2852] Replayed AxiomaticGW.Surfaces.Fixtures.BlowupF1H121ComponentsValue19\nwarning: AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue19.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in\nset_option maxHeartbeats 0 in\n-- reason for change\n...\n\nNote: This linter can be disabled with `set_option linter.style.maxHeartbeats false`\n\u26a0 [2817/2852] Replayed AxiomaticGW.Surfaces.Fixtures.BlowupF1H121ComponentsValue20\nwarning: AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue20.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in\nset_option maxHeartbeats 0 in\n-- reason for change\n...\n\nNote: This linter can be disabled with `set_option linter.style.maxHeartbeats false`\n\u26a0 [2818/2852] Replayed AxiomaticGW.Surfaces.Fixtures.BlowupF1H121ComponentsValue21\nwarning: AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue21.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in\nset_option maxHeartbeats 0 in\n-- reason for change\n...\n\nNote: This linter can be disabled with `set_option linter.style.maxHeartbeats false`\n\u26a0 [2819/2852] Replayed AxiomaticGW.Surfaces.Fixtures.BlowupF1H121ComponentsValue22\nwarning: AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue22.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in\nset_option maxHeartbeats 0 in\n-- reason for change\n...\n\nNote: This linter can be disabled with `set_option linter.style.maxHeartbeats false`\n\u26a0 [2820/2852] Replayed AxiomaticGW.Surfaces.Fixtures.BlowupF1H121ComponentsValue23\nwarning: AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue23.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in\nset_option maxHeartbeats 0 in\n-- reason for change\n...\n\nNote: This linter can be disabled with `set_option linter.style.maxHeartbeats false`\n\u26a0 [2821/2852] Replayed AxiomaticGW.Surfaces.Fixtures.BlowupF1H121ComponentsValue24\nwarning: AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue24.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in\nset_option maxHeartbeats 0 in\n-- reason for change\n...\n\nNote: This linter can be disabled with `set_option linter.style.maxHeartbeats false`\n\u26a0 [2822/2852] Replayed AxiomaticGW.Surfaces.Fixtures.BlowupF1H121ComponentsValue25\nwarning: AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue25.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in\nset_option maxHeartbeats 0 in\n-- reason for change\n...\n\nNote: This linter can be disabled with `set_option linter.style.maxHeartbeats false`\n\u26a0 [2823/2852] Replayed AxiomaticGW.Surfaces.Fixtures.BlowupF1H121ComponentsValue26\nwarning: AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue26.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in\nset_option maxHeartbeats 0 in\n-- reason for change\n...\n\nNote: This linter can be disabled with `set_option linter.style.maxHeartbeats false`\n\u26a0 [2824/2852] Replayed AxiomaticGW.Surfaces.Fixtures.BlowupF1H121ComponentsValue27\nwarning: AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue27.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in\nset_option maxHeartbeats 0 in\n-- reason for change\n...\n\nNote: This linter can be disabled with `set_option linter.style.maxHeartbeats false`\n\u26a0 [2825/2852] Replayed AxiomaticGW.Surfaces.Fixtures.BlowupF1H121ComponentsValue28\nwarning: AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue28.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in\nset_option maxHeartbeats 0 in\n-- reason for change\n...\n\nNote: This linter can be disabled with `set_option linter.style.maxHeartbeats false`\n\u26a0 [2826/2852] Replayed AxiomaticGW.Surfaces.Fixtures.BlowupF1H121ComponentsValue29\nwarning: AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue29.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in\nset_option maxHeartbeats 0 in\n-- reason for change\n...\n\nNote: This linter can be disabled with `set_option linter.style.maxHeartbeats false`\n\u26a0 [2827/2852] Replayed AxiomaticGW.Surfaces.Fixtures.BlowupF1H121ComponentsValue30\nwarning: AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue30.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in\nset_option maxHeartbeats 0 in\n-- reason for change\n...\n\nNote: This linter can be disabled with `set_option linter.style.maxHeartbeats false`\n\u26a0 [2828/2852] Replayed AxiomaticGW.Surfaces.Fixtures.BlowupF1H121ComponentsValue31\nwarning: AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue31.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in\nset_option maxHeartbeats 0 in\n-- reason for change\n...\n\nNote: This linter can be disabled with `set_option linter.style.maxHeartbeats false`\n\u26a0 [2829/2852] Replayed AxiomaticGW.Surfaces.Fixtures.BlowupF1H121ComponentsValue32\nwarning: AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue32.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in\nset_option maxHeartbeats 0 in\n-- reason for change\n...\n\nNote: This linter can be disabled with `set_option linter.style.maxHeartbeats false`\n\u26a0 [2830/2852] Replayed AxiomaticGW.Surfaces.Fixtures.BlowupF1H121ComponentsValue33\nwarning: AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue33.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in\nset_option maxHeartbeats 0 in\n-- reason for change\n...\n\nNote: This linter can be disabled with `set_option linter.style.maxHeartbeats false`\n\u26a0 [2831/2852] Replayed AxiomaticGW.Surfaces.Fixtures.BlowupF1H121ComponentsValue34\nwarning: AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue34.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in\nset_option maxHeartbeats 0 in\n-- reason for change\n...\n\nNote: This linter can be disabled with `set_option linter.style.maxHeartbeats false`\n\u26a0 [2832/2852] Replayed AxiomaticGW.Surfaces.Fixtures.BlowupF1H121ComponentsValue35\nwarning: AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue35.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in\nset_option maxHeartbeats 0 in\n-- reason for change\n...\n\nNote: This linter can be disabled with `set_option linter.style.maxHeartbeats false`\n\u26a0 [2833/2852] Replayed AxiomaticGW.Surfaces.Fixtures.BlowupF1H121ComponentsValue36\nwarning: AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue36.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in\nset_option maxHeartbeats 0 in\n-- reason for change\n...\n\nNote: This linter can be disabled with `set_option linter.style.maxHeartbeats false`\n\u26a0 [2834/2852] Replayed AxiomaticGW.Surfaces.Fixtures.BlowupF1H121ComponentsValue37\nwarning: AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue37.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in\nset_option maxHeartbeats 0 in\n-- reason for change\n...\n\nNote: This linter can be disabled with `set_option linter.style.maxHeartbeats false`\n\u26a0 [2835/2852] Replayed AxiomaticGW.Surfaces.Fixtures.BlowupF1H121ComponentsValue38\nwarning: AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue38.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in\nset_option maxHeartbeats 0 in\n-- reason for change\n...\n\nNote: This linter can be disabled with `set_option linter.style.maxHeartbeats false`\n\u26a0 [2836/2852] Replayed AxiomaticGW.Surfaces.Fixtures.BlowupF1H121ComponentsValue39\nwarning: AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue39.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in\nset_option maxHeartbeats 0 in\n-- reason for change\n...\n\nNote: This linter can be disabled with `set_option linter.style.maxHeartbeats false`\n\u26a0 [2837/2852] Replayed AxiomaticGW.Surfaces.Fixtures.BlowupF1H121ComponentsValue40\nwarning: AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue40.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in\nset_option maxHeartbeats 0 in\n-- reason for change\n...\n\nNote: This linter can be disabled with `set_option linter.style.maxHeartbeats false`\n\u26a0 [2838/2852] Replayed AxiomaticGW.Surfaces.Fixtures.BlowupF1H121ComponentsValue41\nwarning: AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue41.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in\nset_option maxHeartbeats 0 in\n-- reason for change\n...\n\nNote: This linter can be disabled with `set_option linter.style.maxHeartbeats false`\n\u26a0 [2839/2852] Replayed AxiomaticGW.Surfaces.Fixtures.BlowupF1H121ComponentsValue42\nwarning: AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue42.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in\nset_option maxHeartbeats 0 in\n-- reason for change\n...\n\nNote: This linter can be disabled with `set_option linter.style.maxHeartbeats false`\n\u26a0 [2840/2852] Replayed AxiomaticGW.Surfaces.Fixtures.BlowupF1H121ComponentsValue43\nwarning: AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue43.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in\nset_option maxHeartbeats 0 in\n-- reason for change\n...\n\nNote: This linter can be disabled with `set_option linter.style.maxHeartbeats false`\n\u26a0 [2841/2852] Replayed AxiomaticGW.Surfaces.Fixtures.BlowupF1H121ComponentsValue44\nwarning: AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue44.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in\nset_option maxHeartbeats 0 in\n-- reason for change\n...\n\nNote: This linter can be disabled with `set_option linter.style.maxHeartbeats false`\n\u26a0 [2842/2852] Replayed AxiomaticGW.Surfaces.Fixtures.BlowupF1H121ComponentsValue45\nwarning: AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue45.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in\nset_option maxHeartbeats 0 in\n-- reason for change\n...\n\nNote: This linter can be disabled with `set_option linter.style.maxHeartbeats false`\n\u26a0 [2843/2852] Replayed AxiomaticGW.Surfaces.Fixtures.BlowupF1H121ComponentsValue46\nwarning: AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue46.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in\nset_option maxHeartbeats 0 in\n-- reason for change\n...\n\nNote: This linter can be disabled with `set_option linter.style.maxHeartbeats false`\n\u26a0 [2844/2852] Replayed AxiomaticGW.Surfaces.Fixtures.BlowupF1H121ComponentsValue47\nwarning: AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue47.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in\nset_option maxHeartbeats 0 in\n-- reason for change\n...\n\nNote: This linter can be disabled with `set_option linter.style.maxHeartbeats false`\n\u26a0 [2845/2852] Replayed AxiomaticGW.Surfaces.Fixtures.BlowupF1H121ComponentsReplay\nwarning: AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsReplay.lean:74:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in\nset_option maxHeartbeats 0 in\n-- reason for change\n...\n\nNote: This linter can be disabled with `set_option linter.style.maxHeartbeats false`\n\u26a0 [2847/2852] Replayed AxiomaticGW.Surfaces.Fixtures.BlowupF1H121OuterReplay\nwarning: AxiomaticGW/Surfaces/Fixtures/BlowupF1H121OuterReplay.lean:23:0: Unscoped option maxHeartbeats is not allowed:\nPlease scope this to individual declarations, as in\n```\nset_option maxHeartbeats in\n-- comment explaining why this is necessary\nexample : ... := ...\n```\n\nNote: This linter can be disabled with `set_option linter.style.setOption false`\nwarning: AxiomaticGW/Surfaces/Fixtures/BlowupF1H121OuterReplay.lean:42:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`\n\u2714 [2852/2852] Built AxiomaticGWTest.Surfaces.BlowupF1RootRelabel (1.5s)\nBuild completed successfully (2852 jobs).\n",
+      "warning_locations": [
+        "AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue00.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in",
+        "AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue01.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in",
+        "AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue02.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in",
+        "AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue03.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in",
+        "AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue04.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in",
+        "AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue05.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in",
+        "AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue06.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in",
+        "AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue07.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in",
+        "AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue08.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in",
+        "AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue09.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in",
+        "AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue10.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in",
+        "AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue11.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in",
+        "AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue12.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in",
+        "AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue13.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in",
+        "AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue14.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in",
+        "AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue15.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in",
+        "AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue16.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in",
+        "AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue17.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in",
+        "AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue18.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in",
+        "AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue19.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in",
+        "AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue20.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in",
+        "AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue21.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in",
+        "AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue22.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in",
+        "AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue23.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in",
+        "AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue24.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in",
+        "AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue25.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in",
+        "AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue26.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in",
+        "AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue27.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in",
+        "AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue28.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in",
+        "AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue29.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in",
+        "AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue30.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in",
+        "AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue31.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in",
+        "AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue32.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in",
+        "AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue33.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in",
+        "AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue34.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in",
+        "AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue35.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in",
+        "AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue36.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in",
+        "AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue37.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in",
+        "AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue38.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in",
+        "AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue39.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in",
+        "AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue40.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in",
+        "AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue41.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in",
+        "AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue42.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in",
+        "AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue43.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in",
+        "AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue44.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in",
+        "AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue45.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in",
+        "AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue46.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in",
+        "AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsValue47.lean:27:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in",
+        "AxiomaticGW/Surfaces/Fixtures/BlowupF1H121ComponentsReplay.lean:74:0: Please, add a comment explaining the need for modifying the maxHeartbeat limit, as in",
+        "AxiomaticGW/Surfaces/Fixtures/BlowupF1H121OuterReplay.lean:23:0: Unscoped option maxHeartbeats is not allowed:",
+        "AxiomaticGW/Surfaces/Fixtures/BlowupF1H121OuterReplay.lean:42:100: This line exceeds the 100 character limit, please shorten it!"
+      ],
+      "evidence": [
+        {
+          "path": "/tmp/gw_f1_relabel_integrated_tests_20261005.json",
+          "sha256": "6b649c79a1bf5c1dd2771fbcadc07fc7a864cf7abd77b4348ad567ac7fbd903f"
+        },
+        {
+          "path": "/tmp/gw_f1_relabel_integrated_tests_20261005.log",
+          "sha256": "5e21f60355d36da0e859b7853f01d9490e2f76b9a7d7ee945cdb5178dd124fef"
+        }
+      ]
+    },
+    {
+      "phase": "audit",
+      "metadata": {
+        "command": [
+          "lake",
+          "env",
+          "lean",
+          "--memory=2048",
+          "/tmp/gw_f1_relabel_integrated_audit_20261005.lean"
+        ],
+        "status": "passed",
+        "exit_code": 0,
+        "elapsed_seconds": 2.75,
+        "log": "/tmp/gw_f1_relabel_integrated_audit_20261005.log",
+        "children_ru_maxrss_raw": 1447329792,
+        "children_ru_maxrss_unit": "bytes",
+        "resource_note": "Wrapper child usage may omit descendants on interrupted runs."
+      },
+      "full_log": "'AxiomaticGW.GluingExpression.scalarPointContraction_relabel_eq_of_labels' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGW.BlowupF1RootRelabel.insertions_flag01' depends on axioms: [propext, Classical.choice, Quot.sound]\n'AxiomaticGW.BlowupF1RootRelabel.insertions_flag02' depends on axioms: [propext, Classical.choice, Quot.sound]\n'AxiomaticGW.BlowupF1RootRelabel.scalar122_eq141' depends on axioms: [propext, Classical.choice, Quot.sound]\n'AxiomaticGW.BlowupF1RootRelabel.scalar122_eq156' depends on axioms: [propext, Classical.choice, Quot.sound]\n'AxiomaticGW.BlowupF1RootRelabel.guarded122_eq141' depends on axioms: [propext, Classical.choice, Quot.sound]\n'AxiomaticGW.BlowupF1RootRelabel.guarded122_eq156' depends on axioms: [propext, Classical.choice, Quot.sound]\n'AxiomaticGW.BlowupF1RootRelabel.coefficient122' depends on axioms: [propext, Classical.choice, Quot.sound]\n'AxiomaticGW.BlowupF1RootRelabel.coefficient141' depends on axioms: [propext, Classical.choice, Quot.sound]\n'AxiomaticGW.BlowupF1RootRelabel.coefficient156' depends on axioms: [propext, Classical.choice, Quot.sound]\n'AxiomaticGW.BlowupF1RootRelabel.originalWeighted141_eq_ratio122' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGW.BlowupF1RootRelabel.originalWeighted156_eq_ratio122' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGW.BlowupF1RootRelabel.rootSum141_eq_ratio122' depends on axioms: [propext, Classical.choice, Quot.sound]\n'AxiomaticGW.BlowupF1RootRelabel.rootSum156_eq_ratio122' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "warning_locations": [],
+      "evidence": [
+        {
+          "path": "/tmp/gw_f1_relabel_integrated_audit_20261005.json",
+          "sha256": "d93db63a539586983976a0e6beeb042c39b246814b61bf72c267988cf555ebe8"
+        },
+        {
+          "path": "/tmp/gw_f1_relabel_integrated_audit_20261005.log",
+          "sha256": "6965b9f1b76e3409b56a7ed4c1d448c631f0df6822d30d7075011b5f3ecbc255"
+        }
+      ]
+    }
+  ],
+  "actual_audit": {
+    "count": 14,
+    "results": [
+      {
+        "name": "AxiomaticGW.GluingExpression.scalarPointContraction_relabel_eq_of_labels",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "name": "AxiomaticGW.BlowupF1RootRelabel.insertions_flag01",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "name": "AxiomaticGW.BlowupF1RootRelabel.insertions_flag02",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "name": "AxiomaticGW.BlowupF1RootRelabel.scalar122_eq141",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "name": "AxiomaticGW.BlowupF1RootRelabel.scalar122_eq156",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "name": "AxiomaticGW.BlowupF1RootRelabel.guarded122_eq141",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "name": "AxiomaticGW.BlowupF1RootRelabel.guarded122_eq156",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "name": "AxiomaticGW.BlowupF1RootRelabel.coefficient122",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "name": "AxiomaticGW.BlowupF1RootRelabel.coefficient141",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "name": "AxiomaticGW.BlowupF1RootRelabel.coefficient156",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "name": "AxiomaticGW.BlowupF1RootRelabel.originalWeighted141_eq_ratio122",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "name": "AxiomaticGW.BlowupF1RootRelabel.originalWeighted156_eq_ratio122",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "name": "AxiomaticGW.BlowupF1RootRelabel.rootSum141_eq_ratio122",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "name": "AxiomaticGW.BlowupF1RootRelabel.rootSum156_eq_ratio122",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    ],
+    "source": {
+      "path": "/tmp/gw_f1_relabel_integrated_audit_20261005.lean",
+      "sha256": "4dafdb85ee0c5ce62e012e30e4d144f9e1501409c852ba5024ffe51997715ab6"
+    },
+    "source_text": "module\npublic import AxiomaticGWTest.Surfaces.BlowupF1RootRelabel\n\n#print axioms AxiomaticGW.GluingExpression.scalarPointContraction_relabel_eq_of_labels\n#print axioms AxiomaticGW.BlowupF1RootRelabel.insertions_flag01\n#print axioms AxiomaticGW.BlowupF1RootRelabel.insertions_flag02\n#print axioms AxiomaticGW.BlowupF1RootRelabel.scalar122_eq141\n#print axioms AxiomaticGW.BlowupF1RootRelabel.scalar122_eq156\n#print axioms AxiomaticGW.BlowupF1RootRelabel.guarded122_eq141\n#print axioms AxiomaticGW.BlowupF1RootRelabel.guarded122_eq156\n#print axioms AxiomaticGW.BlowupF1RootRelabel.coefficient122\n#print axioms AxiomaticGW.BlowupF1RootRelabel.coefficient141\n#print axioms AxiomaticGW.BlowupF1RootRelabel.coefficient156\n#print axioms AxiomaticGW.BlowupF1RootRelabel.originalWeighted141_eq_ratio122\n#print axioms AxiomaticGW.BlowupF1RootRelabel.originalWeighted156_eq_ratio122\n#print axioms AxiomaticGW.BlowupF1RootRelabel.rootSum141_eq_ratio122\n#print axioms AxiomaticGW.BlowupF1RootRelabel.rootSum156_eq_ratio122\n"
+  },
+  "warning_boundary": "Actual Lake builds replayed warnings only from imported frozen H121 fixture sources. The parent identified these as pre-existing maxHeartbeats/line-length warnings; no relabelling-source warning appears. All exact warning locations and logs are retained.",
+  "prior_isolated_evidence": {
+    "status": "passed_bounded_public_modules_and_axiom_audits",
+    "package_manifest": {
+      "path": "/private/tmp/gw_f1_root_relabel_split_v3_20261005/manifest.json",
+      "sha256": "c874f6291978a8a6a43c2456374e72179c15dbbd1f241c8e1ca13a5eddd3131c"
+    },
+    "new_files": [
+      {
+        "source": "/tmp/gw_f1_root_relabel_split_v3_20261005/AxiomaticGW/Surfaces/ScalarPointRelabel.lean",
+        "destination": "AxiomaticGW/Surfaces/ScalarPointRelabel.lean",
+        "sha256": "533320a02155227705d65c38a4b090572b769cd2580d8e3f8e6507047be46ef3"
+      },
+      {
+        "source": "/tmp/gw_f1_root_relabel_split_v3_20261005/AxiomaticGW/Surfaces/Fixtures/BlowupF1RootRelabel.lean",
+        "destination": "AxiomaticGW/Surfaces/Fixtures/BlowupF1RootRelabel.lean",
+        "sha256": "281bf03a1bf6c0032bf2d5da30f5bc1c1d5ffaf6c6b4be0b462398f60ce667cf"
+      },
+      {
+        "source": "/tmp/gw_f1_root_relabel_split_v3_20261005/AxiomaticGWTest/Surfaces/BlowupF1RootRelabel.lean",
+        "destination": "AxiomaticGWTest/Surfaces/BlowupF1RootRelabel.lean",
+        "sha256": "44338844bcfc994ad714aef2a08b26855f91d2b1584de50c73aab38944bbedf8"
+      },
+      {
+        "source": "/tmp/gw_f1_root_relabel_split_v3_20261005/AxiomaticGWTest/Surfaces/BlowupF1RootRelabelNumerical.lean",
+        "destination": "AxiomaticGWTest/Surfaces/BlowupF1RootRelabelNumerical.lean",
+        "sha256": "543ee6bec335700b33919b7fa1c815f0fa0299c6159a136b7290c58ed4f6fb40"
+      }
+    ],
+    "source_pins": [
+      {
+        "path": "AxiomaticGW/Tautological/L24Gluing.lean",
+        "sha256": "0bf7a0b35982faddbb69520c594a1e12061b3867121db9926daf090f278433c1"
+      },
+      {
+        "path": "AxiomaticGW/Tautological/Fixtures/L24Claims.lean",
+        "sha256": "5727452cb886c8d9deb5d583c7f6293b037803a431b6c74fb4e272129042a74e"
+      },
+      {
+        "path": "AxiomaticGW/Tautological/DecoratedGluing.lean",
+        "sha256": "bc6091840bc2deddadf788e8d3f56a7c0caaaac754a9b687cc132a7fbd39e276"
+      },
+      {
+        "path": "AxiomaticGW/Surfaces/ScalarPointRootParts.lean",
+        "sha256": "d775dc534020f823cf2153afd1fdbea79a4d5c8c834b07e1b7e5540d6294894d"
+      },
+      {
+        "path": "AxiomaticGW/Surfaces/ScalarPointContraction.lean",
+        "sha256": "0d85f45ce8a087b0378b8335f3e72825afb0644ac70e190f277e080e67a428b8"
+      },
+      {
+        "path": "AxiomaticGW/Surfaces/PointPullbackContraction.lean",
+        "sha256": "0fa3a019b892628c51d384876154efa901bf13e8a708cdb86b1499d2c1d4b1de"
+      },
+      {
+        "path": "AxiomaticGW/Surfaces/GenusTwoL24ConstantGuard.lean",
+        "sha256": "743e6d8fc02203f6650c986b278b7a423ae7e876221e386a754251169c8781d5"
+      },
+      {
+        "path": "AxiomaticGW/Surfaces/GenusTwoResidualLookup.lean",
+        "sha256": "dc7167c0b6b52e83d3a9cb5021550164d65a180e653653ed4e8c47b99f6c8f0d"
+      },
+      {
+        "path": "AxiomaticGW/Surfaces/Fixtures/BlowupF1RootAssembly.lean",
+        "sha256": "fef5c11e89db05732e2efc9a35101099808748929e935ab81245d50d860aa47d"
+      },
+      {
+        "path": "AxiomaticGW/Surfaces/PlaneGenusTwoScalarSymmetry.lean",
+        "sha256": "f3735ae79c4e7b2bce25a3a7ea1624414bc884cded8bbda6ce0b9c9a4b6d445a"
+      },
+      {
+        "path": "AxiomaticGW/Surfaces/GenusZeroScalar.lean",
+        "sha256": "7dac7ea7350958caa97b1d002094a1c699a1805d0b35664fdd78f91deb144a29"
+      },
+      {
+        "path": "AxiomaticGW/Surfaces/GenusOnePivot.lean",
+        "sha256": "18acb7f9f848d043662cad61c4f0eb4223d4d269c464d0a2dbf7342cef1448b2"
+      }
+    ],
+    "held_row122": [
+      {
+        "path": "/tmp/gw_f1_selected_row122_acceptance_v3_20261005.json",
+        "sha256": "81d84919eb11f0c6ffdfbdc9baa23e39d05177e1bbc75ac0ce3ca0ece8959456"
+      },
+      {
+        "path": "/tmp/gw_blowup_public_probe_20261004/AxiomaticGW/Surfaces/Fixtures/BlowupF1RootIndex0122.lean",
+        "sha256": "ca5094289ac3a0f0622ef399496434670deba7a57d585b5e891ffe5349bb2283"
+      },
+      {
+        "path": "/tmp/gw_blowup_public_probe_20261004/AxiomaticGW/Surfaces/Fixtures/BlowupF1RootIndex0122.olean",
+        "sha256": "425f3eac2e2ca58320f99c0ccc33190be8cc7f4e34666c6fd2d094ea670c155a"
+      }
+    ],
+    "held_row_modules_preserved": [
+      {
+        "source": "/private/tmp/gw_f1_full_root_replay_selected_v3_20261005/BlowupF1RootReplayFlatContext.lean",
+        "destination": "AxiomaticGW/Surfaces/Fixtures/BlowupF1RootReplayFlatContext.lean",
+        "sha256": "e88aa6a74f85e10e883a82166652a76931705714e8c929ffc74f75b6dd1c19da",
+        "reuse_passed_module": true,
+        "compiled": {
+          "path": "/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGW/Surfaces/Fixtures/BlowupF1RootReplayFlatContext.olean",
+          "sha256": "67567632ae11ac7d38b9c62000cf20155d75f48e787b35bf6c2eefa2c578f676"
+        }
+      },
+      {
+        "source": "/private/tmp/gw_f1_full_root_replay_selected_v3_20261005/BlowupF1RootIndex0122.lean",
+        "destination": "AxiomaticGW/Surfaces/Fixtures/BlowupF1RootIndex0122.lean",
+        "sha256": "ca5094289ac3a0f0622ef399496434670deba7a57d585b5e891ffe5349bb2283",
+        "compiled": {
+          "path": "/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGW/Surfaces/Fixtures/BlowupF1RootIndex0122.olean",
+          "sha256": "425f3eac2e2ca58320f99c0ccc33190be8cc7f4e34666c6fd2d094ea670c155a"
+        }
+      }
+    ],
+    "runs": [
+      {
+        "phase": "prototype",
+        "metadata": {
+          "command": [
+            "python3",
+            "/tmp/gw_f1_root_relabel_prototype_v2_20261005/run_public_probe.py",
+            "/tmp/gw_f1_root_relabel_prototype_v2_20261005/public_manifest.json"
+          ],
+          "status": "passed",
+          "exit_code": 0,
+          "elapsed_seconds": 7.71,
+          "log": "/tmp/gw_f1_root_relabel_public_v2_20261005.log",
+          "children_ru_maxrss_raw": 1657028608,
+          "children_ru_maxrss_unit": "bytes",
+          "resource_note": "Wrapper child usage may omit descendants on interrupted runs."
+        },
+        "runner_details": {
+          "status": "passed",
+          "manifest": "/private/tmp/gw_f1_root_relabel_prototype_v2_20261005/public_manifest.json",
+          "commands": [
+            {
+              "command": [
+                "/Users/jma/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lean",
+                "--memory=2048",
+                "--root=/private/tmp/gw_blowup_public_probe_20261004",
+                "-o",
+                "/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGW/Surfaces/Fixtures/BlowupF1RootRelabel.olean",
+                "/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGW/Surfaces/Fixtures/BlowupF1RootRelabel.lean"
+              ],
+              "exit_code": 0,
+              "elapsed_seconds": 4.103
+            },
+            {
+              "command": [
+                "/Users/jma/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lean",
+                "--memory=2048",
+                "--root=/private/tmp/gw_blowup_public_probe_20261004",
+                "-o",
+                "/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGWTest/Surfaces/BlowupF1RootRelabel.olean",
+                "/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGWTest/Surfaces/BlowupF1RootRelabel.lean"
+              ],
+              "exit_code": 0,
+              "elapsed_seconds": 1.362
+            },
+            {
+              "command": [
+                "/Users/jma/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lean",
+                "--memory=2048",
+                "--root=/private/tmp/gw_blowup_public_probe_20261004",
+                "/private/tmp/gw_blowup_public_probe_20261004/F1RootRelabelAudit.lean"
+              ],
+              "exit_code": 0,
+              "elapsed_seconds": 1.44
+            }
+          ],
+          "elapsed_seconds": 6.905,
+          "isolated_root": "/private/tmp/gw_blowup_public_probe_20261004",
+          "scope": "Exact source modules and separate public imports; no repository edits"
+        },
+        "audit": [
+          {
+            "declaration": "AxiomaticGW.GluingExpression.scalarPointContraction_relabel_eq_of_labels",
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ]
+          },
+          {
+            "declaration": "AxiomaticGW.BlowupF1RootRelabel.insertions_flag01",
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ]
+          },
+          {
+            "declaration": "AxiomaticGW.BlowupF1RootRelabel.insertions_flag02",
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ]
+          },
+          {
+            "declaration": "AxiomaticGW.BlowupF1RootRelabel.scalar122_eq141",
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ]
+          },
+          {
+            "declaration": "AxiomaticGW.BlowupF1RootRelabel.scalar122_eq156",
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ]
+          },
+          {
+            "declaration": "AxiomaticGW.BlowupF1RootRelabel.guarded122_eq141",
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ]
+          },
+          {
+            "declaration": "AxiomaticGW.BlowupF1RootRelabel.guarded122_eq156",
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ]
+          },
+          {
+            "declaration": "AxiomaticGW.BlowupF1RootRelabel.coefficient122",
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ]
+          },
+          {
+            "declaration": "AxiomaticGW.BlowupF1RootRelabel.coefficient141",
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ]
+          },
+          {
+            "declaration": "AxiomaticGW.BlowupF1RootRelabel.coefficient156",
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ]
+          },
+          {
+            "declaration": "AxiomaticGW.BlowupF1RootRelabel.originalWeighted141_eq_ratio122",
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ]
+          },
+          {
+            "declaration": "AxiomaticGW.BlowupF1RootRelabel.originalWeighted156_eq_ratio122",
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ]
+          },
+          {
+            "declaration": "AxiomaticGW.BlowupF1RootRelabel.rootSum141_eq_ratio122",
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ]
+          },
+          {
+            "declaration": "AxiomaticGW.BlowupF1RootRelabel.rootSum156_eq_ratio122",
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ]
+          }
+        ],
+        "log": "{\"start\": \"AxiomaticGW/Surfaces/Fixtures/BlowupF1RootRelabel.lean\", \"command\": [\"/Users/jma/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lean\", \"--memory=2048\", \"--root=/private/tmp/gw_blowup_public_probe_20261004\", \"-o\", \"/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGW/Surfaces/Fixtures/BlowupF1RootRelabel.olean\", \"/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGW/Surfaces/Fixtures/BlowupF1RootRelabel.lean\"]}\n{\"start\": \"AxiomaticGWTest/Surfaces/BlowupF1RootRelabel.lean\", \"command\": [\"/Users/jma/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lean\", \"--memory=2048\", \"--root=/private/tmp/gw_blowup_public_probe_20261004\", \"-o\", \"/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGWTest/Surfaces/BlowupF1RootRelabel.olean\", \"/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGWTest/Surfaces/BlowupF1RootRelabel.lean\"]}\n'AxiomaticGW.GluingExpression.scalarPointContraction_relabel_eq_of_labels' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGW.BlowupF1RootRelabel.insertions_flag01' depends on axioms: [propext, Classical.choice, Quot.sound]\n'AxiomaticGW.BlowupF1RootRelabel.insertions_flag02' depends on axioms: [propext, Classical.choice, Quot.sound]\n'AxiomaticGW.BlowupF1RootRelabel.scalar122_eq141' depends on axioms: [propext, Classical.choice, Quot.sound]\n'AxiomaticGW.BlowupF1RootRelabel.scalar122_eq156' depends on axioms: [propext, Classical.choice, Quot.sound]\n'AxiomaticGW.BlowupF1RootRelabel.guarded122_eq141' depends on axioms: [propext, Classical.choice, Quot.sound]\n'AxiomaticGW.BlowupF1RootRelabel.guarded122_eq156' depends on axioms: [propext, Classical.choice, Quot.sound]\n'AxiomaticGW.BlowupF1RootRelabel.coefficient122' depends on axioms: [propext, Classical.choice, Quot.sound]\n'AxiomaticGW.BlowupF1RootRelabel.coefficient141' depends on axioms: [propext, Classical.choice, Quot.sound]\n'AxiomaticGW.BlowupF1RootRelabel.coefficient156' depends on axioms: [propext, Classical.choice, Quot.sound]\n'AxiomaticGW.BlowupF1RootRelabel.originalWeighted141_eq_ratio122' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGW.BlowupF1RootRelabel.originalWeighted156_eq_ratio122' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGW.BlowupF1RootRelabel.rootSum141_eq_ratio122' depends on axioms: [propext, Classical.choice, Quot.sound]\n'AxiomaticGW.BlowupF1RootRelabel.rootSum156_eq_ratio122' depends on axioms: [propext, Classical.choice, Quot.sound]\n{\"status\": \"passed\", \"manifest\": \"/private/tmp/gw_f1_root_relabel_prototype_v2_20261005/public_manifest.json\", \"commands\": [{\"command\": [\"/Users/jma/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lean\", \"--memory=2048\", \"--root=/private/tmp/gw_blowup_public_probe_20261004\", \"-o\", \"/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGW/Surfaces/Fixtures/BlowupF1RootRelabel.olean\", \"/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGW/Surfaces/Fixtures/BlowupF1RootRelabel.lean\"], \"exit_code\": 0, \"elapsed_seconds\": 4.103}, {\"command\": [\"/Users/jma/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lean\", \"--memory=2048\", \"--root=/private/tmp/gw_blowup_public_probe_20261004\", \"-o\", \"/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGWTest/Surfaces/BlowupF1RootRelabel.olean\", \"/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGWTest/Surfaces/BlowupF1RootRelabel.lean\"], \"exit_code\": 0, \"elapsed_seconds\": 1.362}, {\"command\": [\"/Users/jma/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lean\", \"--memory=2048\", \"--root=/private/tmp/gw_blowup_public_probe_20261004\", \"/private/tmp/gw_blowup_public_probe_20261004/F1RootRelabelAudit.lean\"], \"exit_code\": 0, \"elapsed_seconds\": 1.44}], \"elapsed_seconds\": 6.905, \"isolated_root\": \"/private/tmp/gw_blowup_public_probe_20261004\", \"scope\": \"Exact source modules and separate public imports; no repository edits\"}\n",
+        "evidence_pins": [
+          {
+            "path": "/tmp/gw_f1_root_relabel_public_v2_20261005.json",
+            "sha256": "f504a72ebd7b125fecde6615299e68e7bac18366615c0d9c201d5cdb579e86a0"
+          },
+          {
+            "path": "/tmp/gw_f1_root_relabel_public_v2_20261005.log",
+            "sha256": "ae06af26e3a1938b70d2da8d378656e6354ea3554c8b784dd7ffa3cb4a7128b3"
+          },
+          {
+            "path": "/tmp/gw_f1_root_relabel_prototype_v2_20261005/public_details.json",
+            "sha256": "4d78ab542c6b8a5c616e83aad003ac837b12a7d1cbde100652da64c92b8818a8"
+          },
+          {
+            "path": "/tmp/gw_f1_root_relabel_prototype_v2_20261005/public_manifest.json",
+            "sha256": "903a49e19a99d2318a828434743585d04e19401954a3a0c76b3b1870cad43cf5"
+          }
+        ]
+      },
+      {
+        "phase": "split_with_numeric_consumers",
+        "metadata": {
+          "command": [
+            "python3",
+            "/tmp/gw_f1_root_relabel_split_v3_20261005/run_public_probe.py",
+            "/tmp/gw_f1_root_relabel_split_v3_20261005/public_manifest.json"
+          ],
+          "status": "passed",
+          "exit_code": 0,
+          "elapsed_seconds": 11.036,
+          "log": "/tmp/gw_f1_root_relabel_split_public_v3_20261005.log",
+          "children_ru_maxrss_raw": 1657896960,
+          "children_ru_maxrss_unit": "bytes",
+          "resource_note": "Wrapper child usage may omit descendants on interrupted runs."
+        },
+        "runner_details": {
+          "status": "passed",
+          "manifest": "/private/tmp/gw_f1_root_relabel_split_v3_20261005/public_manifest.json",
+          "commands": [
+            {
+              "command": [
+                "/Users/jma/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lean",
+                "--memory=2048",
+                "--root=/private/tmp/gw_blowup_public_probe_20261004",
+                "-o",
+                "/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGW/Surfaces/ScalarPointRelabel.olean",
+                "/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGW/Surfaces/ScalarPointRelabel.lean"
+              ],
+              "exit_code": 0,
+              "elapsed_seconds": 2.143
+            },
+            {
+              "command": [
+                "/Users/jma/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lean",
+                "--memory=2048",
+                "--root=/private/tmp/gw_blowup_public_probe_20261004",
+                "-o",
+                "/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGW/Surfaces/Fixtures/BlowupF1RootRelabel.olean",
+                "/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGW/Surfaces/Fixtures/BlowupF1RootRelabel.lean"
+              ],
+              "exit_code": 0,
+              "elapsed_seconds": 3.598
+            },
+            {
+              "command": [
+                "/Users/jma/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lean",
+                "--memory=2048",
+                "--root=/private/tmp/gw_blowup_public_probe_20261004",
+                "-o",
+                "/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGWTest/Surfaces/BlowupF1RootRelabel.olean",
+                "/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGWTest/Surfaces/BlowupF1RootRelabel.lean"
+              ],
+              "exit_code": 0,
+              "elapsed_seconds": 1.349
+            },
+            {
+              "command": [
+                "/Users/jma/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lean",
+                "--memory=2048",
+                "--root=/private/tmp/gw_blowup_public_probe_20261004",
+                "-o",
+                "/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGWTest/Surfaces/BlowupF1RootRelabelNumerical.olean",
+                "/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGWTest/Surfaces/BlowupF1RootRelabelNumerical.lean"
+              ],
+              "exit_code": 0,
+              "elapsed_seconds": 1.515
+            },
+            {
+              "command": [
+                "/Users/jma/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lean",
+                "--memory=2048",
+                "--root=/private/tmp/gw_blowup_public_probe_20261004",
+                "/private/tmp/gw_blowup_public_probe_20261004/F1RootRelabelAudit.lean"
+              ],
+              "exit_code": 0,
+              "elapsed_seconds": 1.434
+            }
+          ],
+          "elapsed_seconds": 10.041,
+          "isolated_root": "/private/tmp/gw_blowup_public_probe_20261004",
+          "scope": "Exact source modules and separate public imports; no repository edits"
+        },
+        "audit": [
+          {
+            "declaration": "AxiomaticGW.GluingExpression.scalarPointContraction_relabel_eq_of_labels",
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ]
+          },
+          {
+            "declaration": "AxiomaticGW.BlowupF1RootRelabel.insertions_flag01",
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ]
+          },
+          {
+            "declaration": "AxiomaticGW.BlowupF1RootRelabel.insertions_flag02",
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ]
+          },
+          {
+            "declaration": "AxiomaticGW.BlowupF1RootRelabel.scalar122_eq141",
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ]
+          },
+          {
+            "declaration": "AxiomaticGW.BlowupF1RootRelabel.scalar122_eq156",
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ]
+          },
+          {
+            "declaration": "AxiomaticGW.BlowupF1RootRelabel.guarded122_eq141",
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ]
+          },
+          {
+            "declaration": "AxiomaticGW.BlowupF1RootRelabel.guarded122_eq156",
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ]
+          },
+          {
+            "declaration": "AxiomaticGW.BlowupF1RootRelabel.coefficient122",
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ]
+          },
+          {
+            "declaration": "AxiomaticGW.BlowupF1RootRelabel.coefficient141",
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ]
+          },
+          {
+            "declaration": "AxiomaticGW.BlowupF1RootRelabel.coefficient156",
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ]
+          },
+          {
+            "declaration": "AxiomaticGW.BlowupF1RootRelabel.originalWeighted141_eq_ratio122",
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ]
+          },
+          {
+            "declaration": "AxiomaticGW.BlowupF1RootRelabel.originalWeighted156_eq_ratio122",
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ]
+          },
+          {
+            "declaration": "AxiomaticGW.BlowupF1RootRelabel.rootSum141_eq_ratio122",
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ]
+          },
+          {
+            "declaration": "AxiomaticGW.BlowupF1RootRelabel.rootSum156_eq_ratio122",
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ]
+          },
+          {
+            "declaration": "AxiomaticGWTest.BlowupF1RootRelabelNumerical.originalWeighted141",
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ]
+          },
+          {
+            "declaration": "AxiomaticGWTest.BlowupF1RootRelabelNumerical.originalWeighted156",
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ]
+          }
+        ],
+        "log": "{\"start\": \"AxiomaticGW/Surfaces/ScalarPointRelabel.lean\", \"command\": [\"/Users/jma/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lean\", \"--memory=2048\", \"--root=/private/tmp/gw_blowup_public_probe_20261004\", \"-o\", \"/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGW/Surfaces/ScalarPointRelabel.olean\", \"/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGW/Surfaces/ScalarPointRelabel.lean\"]}\n{\"start\": \"AxiomaticGW/Surfaces/Fixtures/BlowupF1RootRelabel.lean\", \"command\": [\"/Users/jma/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lean\", \"--memory=2048\", \"--root=/private/tmp/gw_blowup_public_probe_20261004\", \"-o\", \"/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGW/Surfaces/Fixtures/BlowupF1RootRelabel.olean\", \"/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGW/Surfaces/Fixtures/BlowupF1RootRelabel.lean\"]}\n{\"start\": \"AxiomaticGWTest/Surfaces/BlowupF1RootRelabel.lean\", \"command\": [\"/Users/jma/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lean\", \"--memory=2048\", \"--root=/private/tmp/gw_blowup_public_probe_20261004\", \"-o\", \"/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGWTest/Surfaces/BlowupF1RootRelabel.olean\", \"/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGWTest/Surfaces/BlowupF1RootRelabel.lean\"]}\n{\"start\": \"AxiomaticGWTest/Surfaces/BlowupF1RootRelabelNumerical.lean\", \"command\": [\"/Users/jma/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lean\", \"--memory=2048\", \"--root=/private/tmp/gw_blowup_public_probe_20261004\", \"-o\", \"/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGWTest/Surfaces/BlowupF1RootRelabelNumerical.olean\", \"/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGWTest/Surfaces/BlowupF1RootRelabelNumerical.lean\"]}\n'AxiomaticGW.GluingExpression.scalarPointContraction_relabel_eq_of_labels' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGW.BlowupF1RootRelabel.insertions_flag01' depends on axioms: [propext, Classical.choice, Quot.sound]\n'AxiomaticGW.BlowupF1RootRelabel.insertions_flag02' depends on axioms: [propext, Classical.choice, Quot.sound]\n'AxiomaticGW.BlowupF1RootRelabel.scalar122_eq141' depends on axioms: [propext, Classical.choice, Quot.sound]\n'AxiomaticGW.BlowupF1RootRelabel.scalar122_eq156' depends on axioms: [propext, Classical.choice, Quot.sound]\n'AxiomaticGW.BlowupF1RootRelabel.guarded122_eq141' depends on axioms: [propext, Classical.choice, Quot.sound]\n'AxiomaticGW.BlowupF1RootRelabel.guarded122_eq156' depends on axioms: [propext, Classical.choice, Quot.sound]\n'AxiomaticGW.BlowupF1RootRelabel.coefficient122' depends on axioms: [propext, Classical.choice, Quot.sound]\n'AxiomaticGW.BlowupF1RootRelabel.coefficient141' depends on axioms: [propext, Classical.choice, Quot.sound]\n'AxiomaticGW.BlowupF1RootRelabel.coefficient156' depends on axioms: [propext, Classical.choice, Quot.sound]\n'AxiomaticGW.BlowupF1RootRelabel.originalWeighted141_eq_ratio122' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGW.BlowupF1RootRelabel.originalWeighted156_eq_ratio122' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGW.BlowupF1RootRelabel.rootSum141_eq_ratio122' depends on axioms: [propext, Classical.choice, Quot.sound]\n'AxiomaticGW.BlowupF1RootRelabel.rootSum156_eq_ratio122' depends on axioms: [propext, Classical.choice, Quot.sound]\n'AxiomaticGWTest.BlowupF1RootRelabelNumerical.originalWeighted141' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGWTest.BlowupF1RootRelabelNumerical.originalWeighted156' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n{\"status\": \"passed\", \"manifest\": \"/private/tmp/gw_f1_root_relabel_split_v3_20261005/public_manifest.json\", \"commands\": [{\"command\": [\"/Users/jma/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lean\", \"--memory=2048\", \"--root=/private/tmp/gw_blowup_public_probe_20261004\", \"-o\", \"/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGW/Surfaces/ScalarPointRelabel.olean\", \"/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGW/Surfaces/ScalarPointRelabel.lean\"], \"exit_code\": 0, \"elapsed_seconds\": 2.143}, {\"command\": [\"/Users/jma/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lean\", \"--memory=2048\", \"--root=/private/tmp/gw_blowup_public_probe_20261004\", \"-o\", \"/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGW/Surfaces/Fixtures/BlowupF1RootRelabel.olean\", \"/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGW/Surfaces/Fixtures/BlowupF1RootRelabel.lean\"], \"exit_code\": 0, \"elapsed_seconds\": 3.598}, {\"command\": [\"/Users/jma/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lean\", \"--memory=2048\", \"--root=/private/tmp/gw_blowup_public_probe_20261004\", \"-o\", \"/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGWTest/Surfaces/BlowupF1RootRelabel.olean\", \"/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGWTest/Surfaces/BlowupF1RootRelabel.lean\"], \"exit_code\": 0, \"elapsed_seconds\": 1.349}, {\"command\": [\"/Users/jma/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lean\", \"--memory=2048\", \"--root=/private/tmp/gw_blowup_public_probe_20261004\", \"-o\", \"/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGWTest/Surfaces/BlowupF1RootRelabelNumerical.olean\", \"/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGWTest/Surfaces/BlowupF1RootRelabelNumerical.lean\"], \"exit_code\": 0, \"elapsed_seconds\": 1.515}, {\"command\": [\"/Users/jma/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lean\", \"--memory=2048\", \"--root=/private/tmp/gw_blowup_public_probe_20261004\", \"/private/tmp/gw_blowup_public_probe_20261004/F1RootRelabelAudit.lean\"], \"exit_code\": 0, \"elapsed_seconds\": 1.434}], \"elapsed_seconds\": 10.041, \"isolated_root\": \"/private/tmp/gw_blowup_public_probe_20261004\", \"scope\": \"Exact source modules and separate public imports; no repository edits\"}\n",
+        "evidence_pins": [
+          {
+            "path": "/tmp/gw_f1_root_relabel_split_public_v3_20261005.json",
+            "sha256": "d6747b9108dba120074617d86342cb7a394e71aa1694354c8c41e3159c5fa681"
+          },
+          {
+            "path": "/tmp/gw_f1_root_relabel_split_public_v3_20261005.log",
+            "sha256": "04874c70bc2032e95ddf644001916a025c0f4c9eb6a3d2c72b62c70b4011a4c4"
+          },
+          {
+            "path": "/private/tmp/gw_f1_root_relabel_split_v3_20261005/public_details.json",
+            "sha256": "1e6a0685cd65d1e1b222f1f7a9894069ffb6bfa8335379bc18ef5c67f11e7b45"
+          },
+          {
+            "path": "/private/tmp/gw_f1_root_relabel_split_v3_20261005/public_manifest.json",
+            "sha256": "752f2b8f8612ad4e29f5448b8892442ac15cc7983fc4196312544cc6dc1ab10c"
+          }
+        ]
+      }
+    ],
+    "compiled_modules": [
+      {
+        "path": "/tmp/gw_blowup_public_probe_20261004/AxiomaticGW/Surfaces/ScalarPointRelabel.olean",
+        "sha256": "a0e999cc56a409c9759f0a805b1b4f6422dd15cc9b6b14c992777d22a4c0e34b"
+      },
+      {
+        "path": "/tmp/gw_blowup_public_probe_20261004/AxiomaticGW/Surfaces/Fixtures/BlowupF1RootRelabel.olean",
+        "sha256": "d0272d1d603360f64302e6b7330ed117348624c32bb51ec45cfc0c822ba6d502"
+      },
+      {
+        "path": "/tmp/gw_blowup_public_probe_20261004/AxiomaticGWTest/Surfaces/BlowupF1RootRelabel.olean",
+        "sha256": "a1b274d004b563b8cfb36df8b59641c553937f9f632b2d8d1a70655e9e8a5b07"
+      },
+      {
+        "path": "/tmp/gw_blowup_public_probe_20261004/AxiomaticGWTest/Surfaces/BlowupF1RootRelabelNumerical.olean",
+        "sha256": "5835f2e96c5bf09769e413d93bc5855083e9c7c03c9e074835840e7e86acbe5c"
+      }
+    ],
+    "mathematical_effect": {
+      "generic": "External relabelling preserves scalar contraction when the actual transported insertion assignments agree, for arbitrary component data.",
+      "fixed": "Original122/141/156 share unchanged core, cotangent powers and label decisions. Original coefficients are4259/3510 and3527/5265, giving weighted ratio7054/12777.",
+      "numeric": "Accepted originalWeighted122=4259/505440 gives originalWeighted141=originalWeighted156=3527/758160. Both are separate occurrences.",
+      "new_hypotheses": false,
+      "backend_evaluated": false,
+      "source_row_or_artifact_modified": false
+    },
+    "boundaries": [
+      "No repository integration or full project build accepted by this record",
+      "Numeric consumer requires the accepted Index0122 module and its dependencies; its held source/artifact were verified unchanged",
+      "Only these two transfers are kernel accepted here; the414-transfer partition remains a source-based staging plan",
+      "No graph isomorphism beyond exact outer relabelling, vertex-equivariance premise or geometric theorem is introduced"
+    ],
+    "repository_edits": false,
+    "heavy_process_group_touched": false
+  },
+  "mathematical_effect": {
+    "generic": "External relabelling preserves scalar contraction when the actual transported insertion assignments agree, for arbitrary component data.",
+    "fixed": "Original122/141/156 share unchanged core, cotangent powers and label decisions. Original coefficients are4259/3510 and3527/5265, giving weighted ratio7054/12777.",
+    "numeric": "Accepted originalWeighted122=4259/505440 gives originalWeighted141=originalWeighted156=3527/758160. Both are separate occurrences.",
+    "new_hypotheses": false,
+    "backend_evaluated": false,
+    "source_row_or_artifact_modified": false
+  },
+  "numerical_consumer_boundary": "The fourth file, AxiomaticGWTest/Surfaces/BlowupF1RootRelabelNumerical.lean, passed its isolated public build and two axiom audits against accepted Index0122. This record does not claim an actual repository target build for that file. Its required original-row package remains a separate integration step.",
+  "scope_boundaries": [
+    "Targeted first3file validation, not a full project build",
+    "No claim that AxiomaticGW.lean already exports the new modules",
+    "The414 structural transfers are a separate uncompiled extension at this record time",
+    "Original relation occurrences and coefficients remain unchanged",
+    "No backend evaluation, new geometric law or complete F1 H-constant acceptance"
+  ],
+  "recorded_by": {
+    "path": "/private/tmp/gw_f1_relabel_integrated_record_20261005/record.py",
+    "sha256": "5bc7266508c67f87d17b54640b9001808d4e2de6a94d0cd6ef8865ecf89e4c1f"
+  }
+}

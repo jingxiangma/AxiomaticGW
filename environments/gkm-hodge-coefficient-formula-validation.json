@@ -1,0 +1,503 @@
+{
+  "accepted_axiom_declarations": 16,
+  "actual_coefficients": 108,
+  "allowed_axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "convention_review": {
+    "contents": {
+      "candidate_exporter": {
+        "path": "/tmp/gw_gkm_degree_zero_hodge_exporter_20261004.py",
+        "sha256": "84362759c0f5bb5e656e1c87f7a799bb4a9fe3613b831ee3a0b8743c9fb8d491"
+      },
+      "derivation": {
+        "a_b_range": [
+          0,
+          1,
+          2
+        ],
+        "coefficient": "(-1)^(a+b) w0^(1-a) w1^(1-b)",
+        "formal_generators": [
+          "lambda0=1",
+          "lambda1=X0",
+          "lambda2=X1"
+        ],
+        "formal_polynomial": "C((w0*w1)^(-1))*(C(w0^2)-C(w0)*X0+X1)*(C(w1^2)-C(w1)*X0+X1)",
+        "g": 2,
+        "nonnegative_power_form": "(-1)^(a+b) w0^(2-a) w1^(2-b)/(w0*w1)",
+        "nonzero_denominator_source": "Existing c00 tangent-product equality and accepted Euler unit; both original numerator/denominator fractions remain in the theorem.",
+        "ordered_vs_collected": "The 108 ordered pair identities are proved before the nine terms per fixed point collect into six bivariate monomials. Ordering information is not inferred from the collected polynomial."
+      },
+      "excluded_claims": [
+        "Hodge bundle identification",
+        "GRR/Chern geometry",
+        "product compatibility of raw strata",
+        "realization of the formal polynomial as the GW class",
+        "CohFT or localization laws"
+      ],
+      "exporter_lines": "Ordered loops a=0..2, then b=0..2 attach a to weights[0] and b to weights[1]; unit restriction is checked equal to one. weight_power implements exponents 1,0,-1.",
+      "factorizer": {
+        "path": "/tmp/gw_gkm_hodge_strata_factor_20261004.py",
+        "sha256": "d803d5683f07cc863c5b02bf4862d11ed082b8fcd3b9302e88b257bcdebeeba8"
+      },
+      "factorizer_behavior": "Copies each pair coefficient unchanged into the compact packet and checks exact re-expansion. It neither symmetrizes tangent branches nor changes lambda order.",
+      "held_producer_hash_matches_current_file": true,
+      "producer": {
+        "path": "/Users/jma/Documents/gitlab/gkm_localisation/gkm_localization/stable_map.py",
+        "sha256": "4e88e18487577642f86bcf1d8762c8ac117d4bfe4329c095bbb6fdd38258c53a"
+      },
+      "producer_lines": {
+        "1011-1017": "iv entries at target branches are bounded by g and paired by enumerate(v_target_weights), yielding product of (-1)^iv[i] times w^(g-iv[i]-1)",
+        "1420-1423": "degree-zero fixed loci consist of one vertex at each fixed point",
+        "979": "v_target_weights preserves the tangent_space_cohom list order"
+      },
+      "scope": "Read-only convention review; no producer, Sage, or geometric acceptance run."
+    },
+    "source": {
+      "path": "/tmp/gw_hodge_coefficient_formula_v2_20261005/convention-review.json",
+      "sha256": "cfca006b231c30ce49ddbb313bc6c8bda13823ba0cfd3512372bac0dfa95998c"
+    }
+  },
+  "development_history": {
+    "prior_proof_failure": {
+      "log": {
+        "path": "/tmp/gw_hodge_coefficient_formula_public_v1_20261005.log",
+        "sha256": "0857c7699a6fcd4a39904c12493f2c0522725896ccce4fee59440bd2ef565704",
+        "text": "{\"start\": \"AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroCoefficientFormula.lean\", \"command\": [\"/Users/jma/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lean\", \"--memory=2048\", \"--root=/private/tmp/gw_blowup_public_probe_20261004\", \"-o\", \"/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroCoefficientFormula.olean\", \"/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroCoefficientFormula.lean\"]}\nTry this:\n  [apply] ring_nf\n  \n  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.\n    \n  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.\n/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroCoefficientFormula.lean:55:80: error: unsolved goals\nw\u2080 w\u2081 : Coefficient\n\u22a2 MvPolynomial.C w\u2080 * MvPolynomial.C w\u2081 * MvPolynomial.C (w\u2080\u207b\u00b9 * w\u2081\u207b\u00b9) * MvPolynomial.X 0 ^ 2 -\n                    MvPolynomial.C w\u2080 * MvPolynomial.C w\u2081 ^ 2 * MvPolynomial.C (w\u2080\u207b\u00b9 * w\u2081\u207b\u00b9) * MvPolynomial.X 0 -\n                  MvPolynomial.C w\u2080 * MvPolynomial.C w\u2081 ^ (2 - \u21912) * MvPolynomial.C (w\u2080\u207b\u00b9 * w\u2081\u207b\u00b9) * MvPolynomial.X 0 *\n                      ![1, MvPolynomial.X 0, MvPolynomial.X 1] 2 *\n                    (-1) ^ \u21912 -\n                MvPolynomial.C w\u2080 ^ 2 * MvPolynomial.C w\u2081 * MvPolynomial.C (w\u2080\u207b\u00b9 * w\u2081\u207b\u00b9) * MvPolynomial.X 0 +\n              MvPolynomial.C w\u2080 ^ 2 * MvPolynomial.C w\u2081 ^ 2 * MvPolynomial.C (w\u2080\u207b\u00b9 * w\u2081\u207b\u00b9) +\n            MvPolynomial.C w\u2080 ^ 2 * MvPolynomial.C w\u2081 ^ (2 - \u21912) * MvPolynomial.C (w\u2080\u207b\u00b9 * w\u2081\u207b\u00b9) *\n                ![1, MvPolynomial.X 0, MvPolynomial.X 1] 2 *\n              (-1) ^ \u21912 -\n          MvPolynomial.C w\u2080 ^ (2 - \u21912) * MvPolynomial.C w\u2081 * MvPolynomial.C (w\u2080\u207b\u00b9 * w\u2081\u207b\u00b9) * MvPolynomial.X 0 *\n              ![1, MvPolynomial.X 0, MvPolynomial.X 1] 2 *\n            (-1) ^ \u21912 +\n        MvPolynomial.C w\u2080 ^ (2 - \u21912) * MvPolynomial.C w\u2081 ^ 2 * MvPolynomial.C (w\u2080\u207b\u00b9 * w\u2081\u207b\u00b9) *\n            ![1, MvPolynomial.X 0, MvPolynomial.X 1] 2 *\n          (-1) ^ \u21912 +\n      MvPolynomial.C w\u2080 ^ (2 - \u21912) * MvPolynomial.C w\u2081 ^ (2 - \u21912) * MvPolynomial.C (w\u2080\u207b\u00b9 * w\u2081\u207b\u00b9) *\n          ![1, MvPolynomial.X 0, MvPolynomial.X 1] 2 ^ 2 *\n        (-1) ^ (\u21912 * 2) =\n    MvPolynomial.C w\u2080 * MvPolynomial.C w\u2081 * MvPolynomial.C (w\u2080\u207b\u00b9 * w\u2081\u207b\u00b9) * MvPolynomial.X 0 ^ 2 -\n                    MvPolynomial.C w\u2080 * MvPolynomial.C w\u2081 ^ 2 * MvPolynomial.C (w\u2080\u207b\u00b9 * w\u2081\u207b\u00b9) * MvPolynomial.X 0 -\n                  MvPolynomial.C w\u2080 * MvPolynomial.C (w\u2080\u207b\u00b9 * w\u2081\u207b\u00b9) * MvPolynomial.X 0 * MvPolynomial.X 1 -\n                MvPolynomial.C w\u2080 ^ 2 * MvPolynomial.C w\u2081 * MvPolynomial.C (w\u2080\u207b\u00b9 * w\u2081\u207b\u00b9) * MvPolynomial.X 0 +\n              MvPolynomial.C w\u2080 ^ 2 * MvPolynomial.C w\u2081 ^ 2 * MvPolynomial.C (w\u2080\u207b\u00b9 * w\u2081\u207b\u00b9) +\n            MvPolynomial.C w\u2080 ^ 2 * MvPolynomial.C (w\u2080\u207b\u00b9 * w\u2081\u207b\u00b9) * MvPolynomial.X 1 -\n          MvPolynomial.C w\u2081 * MvPolynomial.C (w\u2080\u207b\u00b9 * w\u2081\u207b\u00b9) * MvPolynomial.X 0 * MvPolynomial.X 1 +\n        MvPolynomial.C w\u2081 ^ 2 * MvPolynomial.C (w\u2080\u207b\u00b9 * w\u2081\u207b\u00b9) * MvPolynomial.X 1 +\n      MvPolynomial.C (w\u2080\u207b\u00b9 * w\u2081\u207b\u00b9) * MvPolynomial.X 1 ^ 2\n{\"status\": \"public_module_failed\", \"manifest\": \"/private/tmp/gw_hodge_coefficient_formula_20261005/public-probe-manifest.json\", \"commands\": [{\"command\": [\"/Users/jma/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lean\", \"--memory=2048\", \"--root=/private/tmp/gw_blowup_public_probe_20261004\", \"-o\", \"/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroCoefficientFormula.olean\", \"/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroCoefficientFormula.lean\"], \"exit_code\": 1, \"elapsed_seconds\": 11.867}], \"elapsed_seconds\": 11.867, \"isolated_root\": \"/private/tmp/gw_blowup_public_probe_20261004\", \"scope\": \"Exact source modules and separate public imports; no repository edits\"}\n"
+      },
+      "metadata": {
+        "children_ru_maxrss_raw": 1267515392,
+        "children_ru_maxrss_unit": "bytes",
+        "command": [
+          "python3",
+          "/tmp/gw_hodge_coefficient_formula_probe_runner_20261005.py",
+          "/tmp/gw_hodge_coefficient_formula_20261005/public-probe-manifest.json"
+        ],
+        "elapsed_seconds": 13.03,
+        "exit_code": 1,
+        "log": "/tmp/gw_hodge_coefficient_formula_public_v1_20261005.log",
+        "resource_note": "Wrapper child usage may omit descendants on interrupted runs.",
+        "status": "failed"
+      },
+      "metadata_source": {
+        "path": "/tmp/gw_hodge_coefficient_formula_public_v1_20261005.json",
+        "sha256": "a1084a26e6d702444f4a37547091fdcf6d2700e4e1970a06707b240abba86752"
+      }
+    },
+    "proof_repair": "Replace Fin.sum_univ_three with recursive finite-sum expansion to expose successor/value rules. No mathematical statement changed.",
+    "style_repair": "Wrap two long generated consumer product lines; production source remains byte-identical and consumer tokens are unchanged."
+  },
+  "fixed_points": [
+    3,
+    4,
+    5
+  ],
+  "formal_hodge_symbols": [
+    "lambda1",
+    "lambda2"
+  ],
+  "formal_polynomials": 12,
+  "formula": {
+    "actual_left_hand_side": "Sum over all nine actual incoming coefficient entries times their formal lambda generators; every ordered equality is established before collecting monomials.",
+    "coefficient": "(-1)^(a+b)*w0^(2-a)*w1^(2-b)/(w0*w1), a,b:Fin3",
+    "formal_polynomial": "C((w0*w1)^(-1))*(C(w0^2)-C(w0)*X0+X1)*(C(w1^2)-C(w1)*X0+X1)",
+    "nonzero_source": "Actual tangent product equals the already accepted Euler unit.",
+    "ordered_binding": "a corresponds to actual tangent[0], b to actual tangent[1]"
+  },
+  "generator": {
+    "path": "/tmp/gw_hodge_formula_record_20261005/record_hodge_formula_validation.py",
+    "sha256": "7c67e22b25e291659e70947ba913936805667af7ac506adba02b1e84c829c6e8"
+  },
+  "integration": {
+    "contents": {
+      "audit_names": [
+        "AxiomaticGW.GKM.HodgeDegreeZeroCoefficientFormula.hodgePolynomial_orderedChernCoefficient",
+        "AxiomaticGW.GKM.HodgeDegreeZeroCoefficientFormula.Plane.tangentProduct_ne_zero",
+        "AxiomaticGW.GKM.HodgeDegreeZeroCoefficientFormula.Plane.coefficients_eq_orderedChern",
+        "AxiomaticGW.GKM.HodgeDegreeZeroCoefficientFormula.Plane.hodgePolynomial_eq",
+        "AxiomaticGW.GKM.HodgeDegreeZeroCoefficientFormula.OneBlowup.tangentProduct_ne_zero",
+        "AxiomaticGW.GKM.HodgeDegreeZeroCoefficientFormula.OneBlowup.coefficients_eq_orderedChern",
+        "AxiomaticGW.GKM.HodgeDegreeZeroCoefficientFormula.OneBlowup.hodgePolynomial_eq",
+        "AxiomaticGW.GKM.HodgeDegreeZeroCoefficientFormula.TwoBlowups.tangentProduct_ne_zero",
+        "AxiomaticGW.GKM.HodgeDegreeZeroCoefficientFormula.TwoBlowups.coefficients_eq_orderedChern",
+        "AxiomaticGW.GKM.HodgeDegreeZeroCoefficientFormula.TwoBlowups.hodgePolynomial_eq",
+        "AxiomaticGWTest.HodgeDegreeZeroCoefficientFormula.plane_all_coefficients",
+        "AxiomaticGWTest.HodgeDegreeZeroCoefficientFormula.plane_full_polynomial",
+        "AxiomaticGWTest.HodgeDegreeZeroCoefficientFormula.oneBlowup_all_coefficients",
+        "AxiomaticGWTest.HodgeDegreeZeroCoefficientFormula.oneBlowup_full_polynomial",
+        "AxiomaticGWTest.HodgeDegreeZeroCoefficientFormula.twoBlowups_all_coefficients",
+        "AxiomaticGWTest.HodgeDegreeZeroCoefficientFormula.twoBlowups_full_polynomial"
+      ],
+      "mathematical_effect": "Exact arithmetic identifies every actual positive and zero coefficient with the ordered formal Chern formula. Formal polynomial factorization uses two shared independent Hodge symbols; it does not identify a geometric Hodge/GW class.",
+      "original_staged_sources": [
+        {
+          "bytes": 12168,
+          "destination": "scripts/export_gkm_hodge_coefficient_formula.py",
+          "sha256": "ca35db80f8998122146b14c0b3ed2ddd4111fa6c4d2005a43d76d842cb2cb1e5",
+          "source": "/tmp/gw_hodge_coefficient_formula_v2_20261005/scripts/export_gkm_hodge_coefficient_formula.py"
+        },
+        {
+          "bytes": 6525,
+          "destination": "scripts/test_gkm_hodge_coefficient_formula.py",
+          "sha256": "1d3048829d79901f31466f9a84155d6f86e31d1b60c4a133948756ec463438da",
+          "source": "/tmp/gw_hodge_coefficient_formula_v2_20261005/scripts/test_gkm_hodge_coefficient_formula.py"
+        },
+        {
+          "bytes": 11491,
+          "destination": "AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroCoefficientFormula.lean",
+          "sha256": "516d3d3a07e7411fb2f76f427829d329dd96ae9c4b1ea89b6ea150fdb11fc35c",
+          "source": "/tmp/gw_hodge_coefficient_formula_v2_20261005/AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroCoefficientFormula.lean"
+        },
+        {
+          "bytes": 2697,
+          "destination": "AxiomaticGWTest/GKM/HodgeDegreeZeroCoefficientFormula.lean",
+          "sha256": "69465ba3d0eff55c46b15f0150c41b7ff286a4741f873ca54f32a8ba77e6b4de",
+          "source": "/tmp/gw_hodge_coefficient_formula_v2_20261005/AxiomaticGWTest/GKM/HodgeDegreeZeroCoefficientFormula.lean"
+        }
+      ],
+      "sources": [
+        {
+          "bytes": 12194,
+          "destination": "scripts/export_gkm_hodge_coefficient_formula.py",
+          "sha256": "53d121bd07b6b266775f96ca01e558d9a220617ecf93d807598de6e7dc0f4e6f",
+          "source": "/Users/jma/Documents/formalization/axiomatic_gw/scripts/export_gkm_hodge_coefficient_formula.py"
+        },
+        {
+          "bytes": 6525,
+          "destination": "scripts/test_gkm_hodge_coefficient_formula.py",
+          "sha256": "1d3048829d79901f31466f9a84155d6f86e31d1b60c4a133948756ec463438da",
+          "source": "/Users/jma/Documents/formalization/axiomatic_gw/scripts/test_gkm_hodge_coefficient_formula.py"
+        },
+        {
+          "bytes": 11491,
+          "destination": "AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroCoefficientFormula.lean",
+          "sha256": "516d3d3a07e7411fb2f76f427829d329dd96ae9c4b1ea89b6ea150fdb11fc35c",
+          "source": "/Users/jma/Documents/formalization/axiomatic_gw/AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroCoefficientFormula.lean"
+        },
+        {
+          "bytes": 2727,
+          "destination": "AxiomaticGWTest/GKM/HodgeDegreeZeroCoefficientFormula.lean",
+          "sha256": "563e9f19677d15ec45616c89d15ee5c5e02fdf6db0178464fb78a55b62fa10aa",
+          "source": "/Users/jma/Documents/formalization/axiomatic_gw/AxiomaticGWTest/GKM/HodgeDegreeZeroCoefficientFormula.lean"
+        }
+      ],
+      "umbrella_snapshot": "/tmp/gw_hodge_formula_umbrella_before_20261005.lean"
+    },
+    "source": {
+      "path": "/tmp/gw_hodge_formula_final_integration_20261005.json",
+      "sha256": "88180e53f9dd4fbf4113eca0cf5e964ceb2d26ae2a8d107c90b36261b6f58e3b"
+    }
+  },
+  "lambda0": 1,
+  "mathematical_effect": {
+    "existing_public_statements_changed": false,
+    "full_gw_class_identified": false,
+    "geometric_hodge_or_chern_identification": false,
+    "new_arithmetic_result": "All positive as well as zero coefficient entries agree with the fixed ordered formula; the complete formal polynomial factors exactly.",
+    "new_axioms": 0,
+    "new_geometric_hypotheses": 0,
+    "new_global_instances": 0,
+    "new_global_simp_rules": 0,
+    "new_numerical_seeds": 0,
+    "raw_strata_product_identified": false,
+    "scalar_normalization_inputs_unchanged": [
+      "D",
+      "A",
+      "hfund"
+    ]
+  },
+  "milestones": {
+    "GKM_geometric_gate_complete": false,
+    "R4_complete": false,
+    "R5_complete": false,
+    "fixed_applications_changed": false,
+    "goal_complete": false
+  },
+  "next_priority": "Construct or instantiate the normalized geometric realization and identify its actual raw Hodge products; the exact formal coefficient formula now removes the arithmetic ambiguity.",
+  "ordered_pair_count": 9,
+  "pure_controls": [
+    "All 108 exact field identities checked by rational-function cross multiplication.",
+    "All twelve complete bivariate coefficient dictionaries checked against both Chern factors.",
+    "Reversing tangent order and dropping the odd sign fail asymmetric coefficient controls.",
+    "Changing each of the 108 coefficients is rejected against actual upstream Lean data.",
+    "Changed tangent order or formula/source provenance is rejected.",
+    "Changed helper source is rejected before execution.",
+    "Portable CLI reproduces source/test bytes and rejects overwrite; no Sage/admcycles import."
+  ],
+  "python_test_count": 9,
+  "recorded_at_utc": "2026-10-05T05:29:52.738396+00:00",
+  "remaining": [
+    "Geometric realization of the Hodge bundle and GRR/Chern formulas",
+    "Identification of actual raw ordered strata expressions with geometric products",
+    "Constant-map virtual Euler and stabilization comparison",
+    "Total equivariant grading and ordinary comparison",
+    "Actual semisimple GKM CohFT, quantum product, R-matrix/translation and gluing/unit laws",
+    "Full-project build/test/lint checkpoint and every fixed research application suite"
+  ],
+  "schema_version": 1,
+  "source_pins": {
+    "AxiomaticGW/GKM/CurveConventionCertificate.lean": {
+      "bytes": 14058,
+      "sha256": "2e478448ca347d32e8ef13f657d5fa864a6f02f070351c3692de9f50f5dcef4a"
+    },
+    "AxiomaticGW/GKM/EquivariantCoefficients.lean": {
+      "bytes": 6658,
+      "sha256": "a1d14af6c9e9f078acf3f7ae23f1c1632ff1f845fdb54ba323f4d1f0d0f7d848"
+    },
+    "AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroCoefficientFormula.lean": {
+      "bytes": 11491,
+      "sha256": "516d3d3a07e7411fb2f76f427829d329dd96ae9c4b1ea89b6ea150fdb11fc35c"
+    },
+    "AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroCoefficientReplay.lean": {
+      "bytes": 29784,
+      "sha256": "0b2ab996b5e331bef42e1465a4b6c99307a605393f12077d1c950824f0ea48c6"
+    },
+    "AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroFullCoefficientReplay.lean": {
+      "bytes": 22918,
+      "sha256": "648ac71eb16d06ca1b94b29ca2e1972ca2f360ce534fb864230933daa6c29ce8"
+    },
+    "AxiomaticGW/GKM/Fixtures/SurfaceReplay.lean": {
+      "bytes": 123248,
+      "sha256": "7f3e3db071e51b69c4d620867c4da672b0a9dde8f1408ef86490ce019ceaa559"
+    },
+    "AxiomaticGWTest/GKM/HodgeDegreeZeroCoefficientFormula.lean": {
+      "bytes": 2727,
+      "sha256": "563e9f19677d15ec45616c89d15ee5c5e02fdf6db0178464fb78a55b62fa10aa"
+    },
+    "environments/gkm-degree-zero-hodge-strata-factored-candidate.json": {
+      "bytes": 1169158,
+      "sha256": "5be60671ddc68304610987123f048a6c010504cf27f3b690cd1e4d4e39227399"
+    },
+    "scripts/check_gkm_inputs.py": {
+      "bytes": 19638,
+      "sha256": "ba2728773135a47a114b325287a098ece7165e95c6e7b5f8638f06e55c00376e"
+    },
+    "scripts/export_gkm_certificate.py": {
+      "bytes": 17990,
+      "sha256": "54c5052adbb569fb7ed4172ac1600b04a5b31506f8a77c16dface1bbfe10f19c"
+    },
+    "scripts/export_gkm_hodge_c00.py": {
+      "bytes": 16279,
+      "sha256": "40a111318d8fd8c42cfec82157690c60822df1fb23f12adb6062f7b6939d3cbe"
+    },
+    "scripts/export_gkm_hodge_coefficient_formula.py": {
+      "bytes": 12194,
+      "sha256": "53d121bd07b6b266775f96ca01e558d9a220617ecf93d807598de6e7dc0f4e6f"
+    },
+    "scripts/export_gkm_hodge_coefficients.py": {
+      "bytes": 11206,
+      "sha256": "0caee1d95f14791ed90b28b5b9b9a0e9a2501aab63192fdfb5f76231a87a6c47"
+    },
+    "scripts/test_gkm_hodge_coefficient_formula.py": {
+      "bytes": 6525,
+      "sha256": "1d3048829d79901f31466f9a84155d6f86e31d1b60c4a133948756ec463438da"
+    }
+  },
+  "status": "all_actual_ordered_chern_coefficients_and_formal_polynomials_verified",
+  "test_boundary": "Python controls are source-preservation and exact arithmetic checks; the Lean audit separately covers the actual proof terms. Neither supplies a geometric realization theorem.",
+  "validation": {
+    "actual_public_axiom_audit": {
+      "audit_source": {
+        "path": "/tmp/gw_hodge_formula_integrated_audit_20261005.lean",
+        "sha256": "dbe687819cea35e22215afae57e5278faf5df452fc09d64290cb62c7375327ee",
+        "text": "module\npublic import AxiomaticGW.GKM.Fixtures.HodgeDegreeZeroCoefficientFormula\npublic import AxiomaticGWTest.GKM.HodgeDegreeZeroCoefficientFormula\n\n#print axioms AxiomaticGW.GKM.HodgeDegreeZeroCoefficientFormula.hodgePolynomial_orderedChernCoefficient\n#print axioms AxiomaticGW.GKM.HodgeDegreeZeroCoefficientFormula.Plane.tangentProduct_ne_zero\n#print axioms AxiomaticGW.GKM.HodgeDegreeZeroCoefficientFormula.Plane.coefficients_eq_orderedChern\n#print axioms AxiomaticGW.GKM.HodgeDegreeZeroCoefficientFormula.Plane.hodgePolynomial_eq\n#print axioms AxiomaticGW.GKM.HodgeDegreeZeroCoefficientFormula.OneBlowup.tangentProduct_ne_zero\n#print axioms AxiomaticGW.GKM.HodgeDegreeZeroCoefficientFormula.OneBlowup.coefficients_eq_orderedChern\n#print axioms AxiomaticGW.GKM.HodgeDegreeZeroCoefficientFormula.OneBlowup.hodgePolynomial_eq\n#print axioms AxiomaticGW.GKM.HodgeDegreeZeroCoefficientFormula.TwoBlowups.tangentProduct_ne_zero\n#print axioms AxiomaticGW.GKM.HodgeDegreeZeroCoefficientFormula.TwoBlowups.coefficients_eq_orderedChern\n#print axioms AxiomaticGW.GKM.HodgeDegreeZeroCoefficientFormula.TwoBlowups.hodgePolynomial_eq\n#print axioms AxiomaticGWTest.HodgeDegreeZeroCoefficientFormula.plane_all_coefficients\n#print axioms AxiomaticGWTest.HodgeDegreeZeroCoefficientFormula.plane_full_polynomial\n#print axioms AxiomaticGWTest.HodgeDegreeZeroCoefficientFormula.oneBlowup_all_coefficients\n#print axioms AxiomaticGWTest.HodgeDegreeZeroCoefficientFormula.oneBlowup_full_polynomial\n#print axioms AxiomaticGWTest.HodgeDegreeZeroCoefficientFormula.twoBlowups_all_coefficients\n#print axioms AxiomaticGWTest.HodgeDegreeZeroCoefficientFormula.twoBlowups_full_polynomial\n"
+      },
+      "axioms": {
+        "AxiomaticGW.GKM.HodgeDegreeZeroCoefficientFormula.OneBlowup.coefficients_eq_orderedChern": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.GKM.HodgeDegreeZeroCoefficientFormula.OneBlowup.hodgePolynomial_eq": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.GKM.HodgeDegreeZeroCoefficientFormula.OneBlowup.tangentProduct_ne_zero": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.GKM.HodgeDegreeZeroCoefficientFormula.Plane.coefficients_eq_orderedChern": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.GKM.HodgeDegreeZeroCoefficientFormula.Plane.hodgePolynomial_eq": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.GKM.HodgeDegreeZeroCoefficientFormula.Plane.tangentProduct_ne_zero": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.GKM.HodgeDegreeZeroCoefficientFormula.TwoBlowups.coefficients_eq_orderedChern": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.GKM.HodgeDegreeZeroCoefficientFormula.TwoBlowups.hodgePolynomial_eq": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.GKM.HodgeDegreeZeroCoefficientFormula.TwoBlowups.tangentProduct_ne_zero": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.GKM.HodgeDegreeZeroCoefficientFormula.hodgePolynomial_orderedChernCoefficient": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGWTest.HodgeDegreeZeroCoefficientFormula.oneBlowup_all_coefficients": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGWTest.HodgeDegreeZeroCoefficientFormula.oneBlowup_full_polynomial": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGWTest.HodgeDegreeZeroCoefficientFormula.plane_all_coefficients": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGWTest.HodgeDegreeZeroCoefficientFormula.plane_full_polynomial": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGWTest.HodgeDegreeZeroCoefficientFormula.twoBlowups_all_coefficients": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGWTest.HodgeDegreeZeroCoefficientFormula.twoBlowups_full_polynomial": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "declaration_count": 16,
+      "log": {
+        "path": "/tmp/gw_hodge_formula_integrated_axioms_20261005.log",
+        "sha256": "d75d9fafd89c1f770ba7449802f54ebfc3b6c290c56cf76d0aa31a43b72c801b",
+        "text": "'AxiomaticGW.GKM.HodgeDegreeZeroCoefficientFormula.hodgePolynomial_orderedChernCoefficient' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeZeroCoefficientFormula.Plane.tangentProduct_ne_zero' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeZeroCoefficientFormula.Plane.coefficients_eq_orderedChern' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeZeroCoefficientFormula.Plane.hodgePolynomial_eq' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeZeroCoefficientFormula.OneBlowup.tangentProduct_ne_zero' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeZeroCoefficientFormula.OneBlowup.coefficients_eq_orderedChern' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeZeroCoefficientFormula.OneBlowup.hodgePolynomial_eq' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeZeroCoefficientFormula.TwoBlowups.tangentProduct_ne_zero' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeZeroCoefficientFormula.TwoBlowups.coefficients_eq_orderedChern' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeZeroCoefficientFormula.TwoBlowups.hodgePolynomial_eq' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGWTest.HodgeDegreeZeroCoefficientFormula.plane_all_coefficients' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGWTest.HodgeDegreeZeroCoefficientFormula.plane_full_polynomial' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGWTest.HodgeDegreeZeroCoefficientFormula.oneBlowup_all_coefficients' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGWTest.HodgeDegreeZeroCoefficientFormula.oneBlowup_full_polynomial' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGWTest.HodgeDegreeZeroCoefficientFormula.twoBlowups_all_coefficients' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGWTest.HodgeDegreeZeroCoefficientFormula.twoBlowups_full_polynomial' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n"
+      },
+      "metadata": {
+        "children_ru_maxrss_raw": 1105543168,
+        "children_ru_maxrss_unit": "bytes",
+        "command": [
+          "lake",
+          "env",
+          "lean",
+          "--memory=2048",
+          "/tmp/gw_hodge_formula_integrated_audit_20261005.lean"
+        ],
+        "elapsed_seconds": 1.807,
+        "exit_code": 0,
+        "log": "/tmp/gw_hodge_formula_integrated_axioms_20261005.log",
+        "resource_note": "Wrapper child usage may omit descendants on interrupted runs.",
+        "status": "passed"
+      },
+      "metadata_source": {
+        "path": "/tmp/gw_hodge_formula_integrated_axioms_20261005.json",
+        "sha256": "983bd5fb5278c8986c1e4d8d81372a2c7729d425c9cb1fb6f229f25d43111a3f"
+      }
+    },
+    "final_integrated_python": {
+      "log": {
+        "path": "/tmp/gw_hodge_formula_integrated_python_v2_20261005.log",
+        "sha256": "160328c4177b6df296ed29f07e4f1e008d929be7ee6a15b939c2ce8bb75dc605",
+        "text": ".........\n----------------------------------------------------------------------\nRan 9 tests in 3.561s\n\nOK\n"
+      },
+      "metadata": {
+        "children_ru_maxrss_raw": 29458432,
+        "children_ru_maxrss_unit": "bytes",
+        "command": [
+          "python3",
+          "scripts/test_gkm_hodge_coefficient_formula.py"
+        ],
+        "elapsed_seconds": 3.668,
+        "exit_code": 0,
+        "log": "/tmp/gw_hodge_formula_integrated_python_v2_20261005.log",
+        "resource_note": "Wrapper child usage may omit descendants on interrupted runs.",
+        "status": "passed"
+      },
+      "metadata_source": {
+        "path": "/tmp/gw_hodge_formula_integrated_python_v2_20261005.json",
+        "sha256": "d420952368c6ca11ce17c69d7e3387781819c410741029c065f521a07f3726ee"
+      },
+      "source_sha256": "1d3048829d79901f31466f9a84155d6f86e31d1b60c4a133948756ec463438da",
+      "test_count": 9,
+      "unittest_elapsed_seconds": 3.561
+    },
+    "final_warning_free_build": {
+      "log": {
+        "path": "/tmp/gw_hodge_formula_integrated_build_v2_20261005.log",
+        "sha256": "e2a066a70342fffe17fdc2f945046ce267079c33f8be6558f4ea67d9457497c7",
+        "text": "\u2714 [1821/1821] Built AxiomaticGWTest.GKM.HodgeDegreeZeroCoefficientFormula (1.6s)\nBuild completed successfully (1821 jobs).\n"
+      },
+      "metadata": {
+        "children_ru_maxrss_raw": 1028063232,
+        "children_ru_maxrss_unit": "bytes",
+        "command": [
+          "lake",
+          "build",
+          "AxiomaticGW.GKM.Fixtures.HodgeDegreeZeroCoefficientFormula",
+          "AxiomaticGWTest.GKM.HodgeDegreeZeroCoefficientFormula"
+        ],
+        "elapsed_seconds": 3.41,
+        "exit_code": 0,
+        "log": "/tmp/gw_hodge_formula_integrated_build_v2_20261005.log",
+        "resource_note": "Wrapper child usage may omit descendants on interrupted runs.",
+        "status": "passed"
+      },
+      "metadata_source": {
+        "path": "/tmp/gw_hodge_formula_integrated_build_v2_20261005.json",
+        "sha256": "035aeab15b5d5d3af1c9023722d6e60534f60db1782ca6aa767e517744448f82"
+      },
+      "role": "Final warning-free build after consumer-only formatting repair",
+      "warnings": []
+    },
+    "initial_production_build": {
+      "log": {
+        "path": "/tmp/gw_hodge_formula_integrated_build_20261005.log",
+        "sha256": "4059c4d122b0197079a3cf98c8125997ed481650a58b896655642ce3ef92e2d8",
+        "text": "\u2714 [1820/1821] Built AxiomaticGW.GKM.Fixtures.HodgeDegreeZeroCoefficientFormula (11s)\n\u26a0 [1821/1821] Built AxiomaticGWTest.GKM.HodgeDegreeZeroCoefficientFormula (1.0s)\nwarning: AxiomaticGWTest/GKM/HodgeDegreeZeroCoefficientFormula.lean:34:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`\nwarning: AxiomaticGWTest/GKM/HodgeDegreeZeroCoefficientFormula.lean:47:100: This line exceeds the 100 character limit, please shorten it!\n\nNote: This linter can be disabled with `set_option linter.style.longLine false`\nBuild completed successfully (1821 jobs).\n"
+      },
+      "metadata": {
+        "children_ru_maxrss_raw": 1226670080,
+        "children_ru_maxrss_unit": "bytes",
+        "command": [
+          "lake",
+          "build",
+          "AxiomaticGW.GKM.Fixtures.HodgeDegreeZeroCoefficientFormula",
+          "AxiomaticGWTest.GKM.HodgeDegreeZeroCoefficientFormula"
+        ],
+        "elapsed_seconds": 14.561,
+        "exit_code": 0,
+        "log": "/tmp/gw_hodge_formula_integrated_build_20261005.log",
+        "resource_note": "Wrapper child usage may omit descendants on interrupted runs.",
+        "status": "passed"
+      },
+      "metadata_source": {
+        "path": "/tmp/gw_hodge_formula_integrated_build_20261005.json",
+        "sha256": "7e1646eff7051df7a3ff21eced226529f0771652f7ab473f1b2bb554081b5a65"
+      },
+      "role": "Initial full production/consumer build",
+      "warnings": [
+        "warning: AxiomaticGWTest/GKM/HodgeDegreeZeroCoefficientFormula.lean:34:100: This line exceeds the 100 character limit, please shorten it!",
+        "warning: AxiomaticGWTest/GKM/HodgeDegreeZeroCoefficientFormula.lean:47:100: This line exceeds the 100 character limit, please shorten it!"
+      ]
+    }
+  }
+}

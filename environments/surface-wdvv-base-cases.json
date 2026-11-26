@@ -1,0 +1,1215 @@
+{
+  "schema_version": 1,
+  "status": "exploration_only",
+  "sage_version": "10.9",
+  "sources_sha256": {
+    "environments/wdvv-candidate-osx-arm64.json": "44ba7410c29fd82126c188d52e0203f7aaa38139c315c7317e6221a6d905284d",
+    "environments/getzler-candidate-osx-arm64.json": "ccd8a8f941e9d2d503ec91e29b2be527bf0c91ce111599e6ec56118f6994ecb7",
+    "scripts/explore_surface_getzler.py": "f34f5288ef6b3a3b0a5417038f3d5e6b3f3f24c683c359431e7f0e39816fdd37",
+    "scripts/explore_surface_reduction.py": "a0e96453cb0063df446ae9f3ddd6416e6308a8466a0d52d1a6316fb4fcf8e5e4",
+    "scripts/explore_surface_degree_zero.py": "65afcfe6fa0017a6bc5f1f1627a18c17d144b20ec4566d6e0283b972d122ba61",
+    "scripts/explore_wdvv_base_cases.py": "e96fbc53fef2e76e1250c94d731299e0b24a4fa1c6e03af47617af8bc953b85c",
+    "scripts/export_surface_equations.py": "820f45d308a9c8bb2f002e35a5e215646e3764c2d169686ffe4882f5cdb08a52"
+  },
+  "cases": [
+    {
+      "id": "plane_conic",
+      "relation": "WDVV",
+      "target": "P2",
+      "curve": [
+        2
+      ],
+      "original_labels": [
+        1,
+        1,
+        2,
+        2
+      ],
+      "extra_markings": 2,
+      "added_labels": [
+        2,
+        2
+      ],
+      "powers": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "column_contributions": [
+        2,
+        0,
+        2
+      ],
+      "terms": [
+        [
+          [
+            [
+              "query",
+              0,
+              [
+                1
+              ],
+              [
+                [
+                  2,
+                  0
+                ],
+                [
+                  2,
+                  0
+                ]
+              ]
+            ],
+            [
+              "query",
+              0,
+              [
+                1
+              ],
+              [
+                [
+                  2,
+                  0
+                ],
+                [
+                  2,
+                  0
+                ]
+              ]
+            ]
+          ],
+          [
+            -1,
+            1
+          ]
+        ],
+        [
+          [
+            [
+              "query",
+              0,
+              [
+                2
+              ],
+              [
+                [
+                  2,
+                  0
+                ],
+                [
+                  2,
+                  0
+                ],
+                [
+                  2,
+                  0
+                ],
+                [
+                  2,
+                  0
+                ],
+                [
+                  2,
+                  0
+                ]
+              ]
+            ]
+          ],
+          [
+            1,
+            1
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "hirzebruch_line",
+      "relation": "WDVV",
+      "target": "F1",
+      "curve": [
+        1,
+        1
+      ],
+      "original_labels": [
+        1,
+        2,
+        3,
+        3
+      ],
+      "extra_markings": 0,
+      "added_labels": [],
+      "powers": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "column_contributions": [
+        2,
+        0,
+        0
+      ],
+      "terms": [
+        [
+          [
+            [
+              "query",
+              0,
+              [
+                0,
+                1
+              ],
+              [
+                [
+                  2,
+                  0
+                ]
+              ]
+            ],
+            [
+              "query",
+              0,
+              [
+                1,
+                0
+              ],
+              []
+            ]
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        [
+          [
+            [
+              "query",
+              0,
+              [
+                1,
+                1
+              ],
+              [
+                [
+                  2,
+                  0
+                ],
+                [
+                  2,
+                  0
+                ]
+              ]
+            ]
+          ],
+          [
+            -1,
+            1
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "blowup_mixed_line",
+      "relation": "WDVV",
+      "target": "Bl2P2",
+      "curve": [
+        1,
+        1,
+        1
+      ],
+      "original_labels": [
+        1,
+        1,
+        2,
+        3
+      ],
+      "extra_markings": 0,
+      "added_labels": [],
+      "powers": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "column_contributions": [
+        2,
+        0,
+        0
+      ],
+      "terms": [
+        [
+          [
+            [
+              "query",
+              0,
+              [
+                0,
+                0,
+                1
+              ],
+              []
+            ],
+            [
+              "query",
+              0,
+              [
+                1,
+                1,
+                0
+              ],
+              [
+                [
+                  2,
+                  0
+                ]
+              ]
+            ]
+          ],
+          [
+            -2,
+            1
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "blowup_line",
+      "relation": "WDVV",
+      "target": "Bl2P2",
+      "curve": [
+        1,
+        1,
+        1
+      ],
+      "original_labels": [
+        1,
+        2,
+        3,
+        3
+      ],
+      "extra_markings": 0,
+      "added_labels": [],
+      "powers": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "column_contributions": [
+        2,
+        0,
+        2
+      ],
+      "terms": [
+        [
+          [
+            [
+              "query",
+              0,
+              [
+                0,
+                0,
+                1
+              ],
+              []
+            ],
+            [
+              "query",
+              0,
+              [
+                1,
+                1,
+                0
+              ],
+              [
+                [
+                  2,
+                  0
+                ]
+              ]
+            ]
+          ],
+          [
+            2,
+            1
+          ]
+        ],
+        [
+          [
+            [
+              "query",
+              0,
+              [
+                0,
+                1,
+                1
+              ],
+              [
+                [
+                  2,
+                  0
+                ]
+              ]
+            ],
+            [
+              "query",
+              0,
+              [
+                1,
+                0,
+                0
+              ],
+              []
+            ]
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        [
+          [
+            [
+              "query",
+              0,
+              [
+                1,
+                1,
+                1
+              ],
+              [
+                [
+                  2,
+                  0
+                ],
+                [
+                  2,
+                  0
+                ]
+              ]
+            ]
+          ],
+          [
+            -1,
+            1
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "blowup_ruling_0",
+      "relation": "WDVV",
+      "target": "Bl2P2",
+      "curve": [
+        1,
+        0,
+        1
+      ],
+      "original_labels": [
+        1,
+        1,
+        3,
+        3
+      ],
+      "extra_markings": 0,
+      "added_labels": [],
+      "powers": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "column_contributions": [
+        2,
+        0,
+        0
+      ],
+      "terms": [
+        [
+          [
+            [
+              "query",
+              0,
+              [
+                0,
+                0,
+                1
+              ],
+              []
+            ],
+            [
+              "query",
+              0,
+              [
+                1,
+                0,
+                0
+              ],
+              []
+            ]
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        [
+          [
+            [
+              "query",
+              0,
+              [
+                1,
+                0,
+                1
+              ],
+              [
+                [
+                  2,
+                  0
+                ]
+              ]
+            ]
+          ],
+          [
+            -1,
+            1
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "blowup_ruling_1",
+      "relation": "WDVV",
+      "target": "Bl2P2",
+      "curve": [
+        0,
+        1,
+        1
+      ],
+      "original_labels": [
+        1,
+        1,
+        4,
+        4
+      ],
+      "extra_markings": 0,
+      "added_labels": [],
+      "powers": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "column_contributions": [
+        2,
+        0,
+        0
+      ],
+      "terms": [
+        [
+          [
+            [
+              "query",
+              0,
+              [
+                0,
+                0,
+                1
+              ],
+              []
+            ],
+            [
+              "query",
+              0,
+              [
+                0,
+                1,
+                0
+              ],
+              []
+            ]
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        [
+          [
+            [
+              "query",
+              0,
+              [
+                0,
+                1,
+                1
+              ],
+              [
+                [
+                  2,
+                  0
+                ]
+              ]
+            ]
+          ],
+          [
+            -1,
+            1
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "strict_line_four_h",
+      "relation": "Getzler",
+      "target": "Bl2P2",
+      "curve": [
+        0,
+        0,
+        2
+      ],
+      "original_labels": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "extra_markings": 0,
+      "added_labels": [],
+      "powers": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "column_contributions": [
+        7,
+        7,
+        7,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        11,
+        11,
+        11,
+        11,
+        9,
+        9,
+        9,
+        9,
+        14,
+        9,
+        9,
+        9
+      ],
+      "terms": [
+        [
+          [
+            [
+              "query",
+              0,
+              [
+                0,
+                0,
+                1
+              ],
+              []
+            ],
+            [
+              "query",
+              1,
+              [
+                0,
+                0,
+                1
+              ],
+              [
+                [
+                  2,
+                  0
+                ]
+              ]
+            ]
+          ],
+          [
+            24,
+            1
+          ]
+        ],
+        [
+          [
+            [
+              "query",
+              0,
+              [
+                0,
+                0,
+                2
+              ],
+              [
+                [
+                  2,
+                  0
+                ]
+              ]
+            ]
+          ],
+          [
+            -5,
+            1
+          ]
+        ],
+        [
+          [
+            [
+              "query",
+              1,
+              [
+                0,
+                0,
+                2
+              ],
+              [
+                [
+                  2,
+                  0
+                ],
+                [
+                  2,
+                  0
+                ]
+              ]
+            ]
+          ],
+          [
+            -9,
+            1
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "strict_line_three_h",
+      "relation": "Getzler",
+      "target": "Bl2P2",
+      "curve": [
+        0,
+        0,
+        2
+      ],
+      "original_labels": [
+        1,
+        1,
+        1,
+        3
+      ],
+      "extra_markings": 0,
+      "added_labels": [],
+      "powers": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "column_contributions": [
+        3,
+        3,
+        3,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        12,
+        12,
+        9,
+        12,
+        9,
+        9,
+        11,
+        11,
+        11,
+        11,
+        9,
+        9,
+        9,
+        9,
+        14,
+        9,
+        9,
+        9
+      ],
+      "terms": [
+        [
+          [
+            [
+              "query",
+              0,
+              [
+                0,
+                0,
+                1
+              ],
+              []
+            ],
+            [
+              "query",
+              1,
+              [
+                0,
+                0,
+                1
+              ],
+              [
+                [
+                  2,
+                  0
+                ]
+              ]
+            ]
+          ],
+          [
+            15,
+            1
+          ]
+        ],
+        [
+          [
+            [
+              "query",
+              0,
+              [
+                0,
+                0,
+                2
+              ],
+              [
+                [
+                  2,
+                  0
+                ]
+              ]
+            ]
+          ],
+          [
+            -11,
+            2
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "strict_line_one_h",
+      "relation": "Getzler",
+      "target": "Bl2P2",
+      "curve": [
+        0,
+        0,
+        2
+      ],
+      "original_labels": [
+        1,
+        3,
+        3,
+        3
+      ],
+      "extra_markings": 0,
+      "added_labels": [],
+      "powers": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "column_contributions": [
+        3,
+        3,
+        3,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        9,
+        9,
+        9,
+        12,
+        12,
+        12,
+        11,
+        11,
+        11,
+        11,
+        9,
+        9,
+        9,
+        9,
+        14,
+        9,
+        9,
+        9
+      ],
+      "terms": [
+        [
+          [
+            [
+              "query",
+              0,
+              [
+                0,
+                0,
+                1
+              ],
+              []
+            ],
+            [
+              "query",
+              1,
+              [
+                0,
+                0,
+                1
+              ],
+              [
+                [
+                  2,
+                  0
+                ]
+              ]
+            ]
+          ],
+          [
+            -3,
+            1
+          ]
+        ],
+        [
+          [
+            [
+              "query",
+              0,
+              [
+                0,
+                0,
+                2
+              ],
+              [
+                [
+                  2,
+                  0
+                ]
+              ]
+            ]
+          ],
+          [
+            -13,
+            2
+          ]
+        ]
+      ]
+    }
+  ],
+  "systems": {
+    "plane_conic": {
+      "matrix": [
+        [
+          [
+            1,
+            1
+          ]
+        ]
+      ],
+      "rhs": [
+        [
+          1,
+          1
+        ]
+      ],
+      "rank": 1,
+      "determinant": [
+        1,
+        1
+      ],
+      "solution": [
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    "hirzebruch_fiber": {
+      "matrix": [
+        [
+          [
+            1,
+            1
+          ]
+        ]
+      ],
+      "rhs": [
+        [
+          1,
+          1
+        ]
+      ],
+      "rank": 1,
+      "determinant": [
+        1,
+        1
+      ],
+      "solution": [
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    "blowup": {
+      "matrix": [
+        [
+          [
+            -2,
+            1
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        [
+          [
+            2,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            -1,
+            1
+          ]
+        ],
+        [
+          [
+            0,
+            1
+          ],
+          [
+            -1,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            0,
+            1
+          ]
+        ]
+      ],
+      "rhs": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "rank": 4,
+      "determinant": [
+        -2,
+        1
+      ],
+      "solution": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    "strict_line": {
+      "matrix": [
+        [
+          [
+            24,
+            1
+          ],
+          [
+            -5,
+            1
+          ],
+          [
+            -9,
+            1
+          ]
+        ],
+        [
+          [
+            15,
+            1
+          ],
+          [
+            -11,
+            2
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        [
+          [
+            -3,
+            1
+          ],
+          [
+            -13,
+            2
+          ],
+          [
+            0,
+            1
+          ]
+        ]
+      ],
+      "rhs": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "rank": 3,
+      "determinant": [
+        1026,
+        1
+      ],
+      "solution": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ]
+      ]
+    }
+  },
+  "blowup_unknown_order": [
+    "N0(L)*N0(E1+E2;1)",
+    "N0(E2+L;1)",
+    "N0(L)",
+    "N0(E1+L;1)"
+  ],
+  "strict_line_unknown_order": [
+    "N1(L;1)",
+    "N0(2L;1)",
+    "N1(2L;2)"
+  ],
+  "limitations": [
+    "Shared graph frame and component rules, not an independent GW computation.",
+    "Lean separately checks every complete selected expansion and numerical deduction.",
+    "Geometric compatibility and seed validity remain explicit inputs.",
+    "No uniform decreasing recursion or full benchmark coverage is asserted."
+  ]
+}

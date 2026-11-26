@@ -1,0 +1,250 @@
+{
+  "admcycles": "1.4",
+  "admcycles_module_sha256": {
+    "admcycles.py": "19e9e77c58299b387abadab76f2e1f1b1b2b63808f3dbbd0e44499a930db9a1b",
+    "stable_graph.py": "aa9b81ae274660b2d44cf474390a8b0c3a7865cfa6deaa06d005ae96dfdbd3ca",
+    "tautological_ring.py": "c9cf9b46fa8c7f2207d6d0ebc3f3565518f6f29d324bb6b280c1626a772bbd12"
+  },
+  "cases": [
+    {
+      "affine_monomials": 3,
+      "affine_sha256": "9f35ebf89136145425cd50517a4e6cf0535ee628256bf364f1bf7bfd21e6b4e0",
+      "constant": [
+        0,
+        1
+      ],
+      "name": "p2_zero_HH1",
+      "partial_reconstruction_equal": true,
+      "raw_equal": true,
+      "raw_monomials": 24,
+      "raw_sha256": "05d593acef653e5cb6d0afd8d2f31c2d7c0e37763a4377f1bfcd44801f1a49ef",
+      "same_class_unknowns": 3,
+      "smaller_class_unknowns": 0
+    },
+    {
+      "affine_monomials": 11,
+      "affine_sha256": "169e872fb84290f0648b6ef433c3fd288bdc8da4d6066801e4dba6e863bfbd42",
+      "constant": [
+        1,
+        80
+      ],
+      "name": "p2_line_HHH",
+      "partial_reconstruction_equal": true,
+      "raw_equal": true,
+      "raw_monomials": 70,
+      "raw_sha256": "e79496b76a6e45d8447cffbcc302fe85690877c7af9402660e9f7b1c9cd0db96",
+      "same_class_unknowns": 2,
+      "smaller_class_unknowns": 8
+    },
+    {
+      "affine_monomials": 5,
+      "affine_sha256": "e451fac121b77cf1d2312f3f0a19401fd0a2961ce8a128861b2445545c4f71fd",
+      "constant": [
+        -1,
+        240
+      ],
+      "name": "f1_E_EEE",
+      "partial_reconstruction_equal": true,
+      "raw_equal": true,
+      "raw_monomials": 105,
+      "raw_sha256": "3df06d3951daa8b21bfc109bee800cf54f000e169064974b98151c3e9ca27d8d",
+      "same_class_unknowns": 2,
+      "smaller_class_unknowns": 2
+    },
+    {
+      "affine_monomials": 13,
+      "affine_sha256": "5a422089db93cfde2e81ef289784e9fbf11a07f0d1bbdaca67bd239a6c5e5be6",
+      "constant": [
+        1,
+        120
+      ],
+      "name": "f1_F_HHH",
+      "partial_reconstruction_equal": true,
+      "raw_equal": true,
+      "raw_monomials": 145,
+      "raw_sha256": "6d5a040c4a672b90f6ac70145079d9273b010d6fa22104a3ac32a35f32420d79",
+      "same_class_unknowns": 2,
+      "smaller_class_unknowns": 10
+    },
+    {
+      "affine_monomials": 15,
+      "affine_sha256": "34e379ba9ce0c4e520e167db30cb1cd92cf91cd4f6ea927c59165e6de5cae619",
+      "constant": [
+        1,
+        120
+      ],
+      "name": "f1_F_EHH",
+      "partial_reconstruction_equal": true,
+      "raw_equal": true,
+      "raw_monomials": 208,
+      "raw_sha256": "100348642743a9c893957ffdd83fd36afae2697ef28175b20a055a6bb28e2591",
+      "same_class_unknowns": 2,
+      "smaller_class_unknowns": 12
+    },
+    {
+      "affine_monomials": 5,
+      "affine_sha256": "810c2e3c9c56d32c4dc65a3c1f67b25678a0d9d0c0dd1f4a0c122412496c2f74",
+      "constant": [
+        -1,
+        240
+      ],
+      "name": "bl2_E1_E1E1E1",
+      "partial_reconstruction_equal": true,
+      "raw_equal": true,
+      "raw_monomials": 195,
+      "raw_sha256": "99140552f9093c1a1c4dee43db373cd0cc87a58f94c15ff1ed5abb7f09b7defe",
+      "same_class_unknowns": 2,
+      "smaller_class_unknowns": 2
+    },
+    {
+      "affine_monomials": 2,
+      "affine_sha256": "35e504759e71dc7e957a8d4cd07d9a8355fd6e154d6d50d6e81b1111a612e92d",
+      "constant": [
+        0,
+        1
+      ],
+      "name": "bl2_E2_E1E1E1",
+      "partial_reconstruction_equal": true,
+      "raw_equal": true,
+      "raw_monomials": 195,
+      "raw_sha256": "c06b686b79d02e41a3f6e770609f5f0ba1f62437b1a014f331f01483ee293a1e",
+      "same_class_unknowns": 2,
+      "smaller_class_unknowns": 0
+    },
+    {
+      "affine_monomials": 5,
+      "affine_sha256": "55feb02d554acd8129ef8ff5602ec381aaa90502eea4db8591eedeea04465b5c",
+      "constant": [
+        -1,
+        240
+      ],
+      "name": "bl2_E2_E2E2E2",
+      "partial_reconstruction_equal": true,
+      "raw_equal": true,
+      "raw_monomials": 195,
+      "raw_sha256": "aa22c2a07b23a4c6f94a1b853543c8f2f546f8d973016f0ab5284eb1d7ec812d",
+      "same_class_unknowns": 2,
+      "smaller_class_unknowns": 2
+    },
+    {
+      "affine_monomials": 11,
+      "affine_sha256": "d1065e0754010b7c35669e5fba91675b444ac43dbd5cc7ca4fd8ec177ddcc145",
+      "constant": [
+        1,
+        240
+      ],
+      "name": "bl2_L_HHH",
+      "partial_reconstruction_equal": true,
+      "raw_equal": true,
+      "raw_monomials": 195,
+      "raw_sha256": "dc20155b3ff811e0a17719cbe327a2339f543ad895dd299a2e0bfdc54331ecbe",
+      "same_class_unknowns": 2,
+      "smaller_class_unknowns": 8
+    },
+    {
+      "affine_monomials": 9,
+      "affine_sha256": "69cbbad4097ca9b7e7544c72d8d11f2cb5b727c45781fb47e34a5386fc632388",
+      "constant": [
+        1,
+        240
+      ],
+      "name": "bl2_L_E1E2H",
+      "partial_reconstruction_equal": true,
+      "raw_equal": true,
+      "raw_monomials": 384,
+      "raw_sha256": "9ab43526f9e498fe5628c2359ec95e23fbc455a112ee799eb3f0a3dd06d1cdbd",
+      "same_class_unknowns": 0,
+      "smaller_class_unknowns": 8
+    }
+  ],
+  "lean_payload_sha256": "dddb622b1b3b8b2a5c15c8cf393b429dfd7d5d348b1b8a2198f9b87675cf44e3",
+  "mutations_rejected": [
+    "positive_exceptional_metric",
+    "missing_five_marking_assignments",
+    "missing_rational_tail_corrections",
+    "replace_full_curve_by_energy"
+  ],
+  "numerical_scope": "Lower-genus values are shared Lean algorithm outputs; only graph contraction and substitution are independently compared.",
+  "online_lookup": false,
+  "sage": "10.9",
+  "sample_matrix_ranks": [
+    {
+      "blowups": 0,
+      "curve": [
+        0
+      ],
+      "equations": 1,
+      "rank": 1,
+      "same_class_unknowns": 3
+    },
+    {
+      "blowups": 0,
+      "curve": [
+        1
+      ],
+      "equations": 1,
+      "rank": 1,
+      "same_class_unknowns": 2
+    },
+    {
+      "blowups": 1,
+      "curve": [
+        0,
+        1
+      ],
+      "equations": 2,
+      "rank": 2,
+      "same_class_unknowns": 4
+    },
+    {
+      "blowups": 1,
+      "curve": [
+        1,
+        0
+      ],
+      "equations": 1,
+      "rank": 1,
+      "same_class_unknowns": 2
+    },
+    {
+      "blowups": 2,
+      "curve": [
+        0,
+        0,
+        1
+      ],
+      "equations": 2,
+      "rank": 1,
+      "same_class_unknowns": 2
+    },
+    {
+      "blowups": 2,
+      "curve": [
+        0,
+        1,
+        0
+      ],
+      "equations": 2,
+      "rank": 2,
+      "same_class_unknowns": 4
+    },
+    {
+      "blowups": 2,
+      "curve": [
+        1,
+        0,
+        0
+      ],
+      "equations": 1,
+      "rank": 1,
+      "same_class_unknowns": 2
+    }
+  ],
+  "schema_version": 1,
+  "scope": "BP ancestor equations, not solved genus-two invariants",
+  "source_sha256": {
+    "environments/belorousski-pandharipande.json": "5868b2f3ef1e5a45e6175b6349566b72c778f4ab028ef941b43498fd0ee8d1bc",
+    "scripts/SurfaceBP.lean": "517b9cbdd9817728ad4f0762c77d178daf6169e1c9396b1653b7cae91cfc69e4",
+    "scripts/explore_surface_bp.py": "e957c8f3f03df60cb38640aeb2718886eec4a2f837a3daaab6f0487271485d42"
+  }
+}

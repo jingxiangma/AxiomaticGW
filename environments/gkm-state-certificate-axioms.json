@@ -1,0 +1,161 @@
+{
+  "command": "lake env lean /tmp/gw_gkm_state_certificate_axioms_20261002.lean",
+  "declarations": [
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "AxiomaticGW.GKM.EquivariantCoefficients.embed_ne_zero_of_eval"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "AxiomaticGW.GKM.EquivariantCoefficients.x_sub_y_ne_zero"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "AxiomaticGW.GKM.EquivariantCoefficients.regular_representatives_eq"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "AxiomaticGW.GKM.EquivariantCoefficients.Specializes.unique"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "AxiomaticGW.GKM.EquivariantCoefficients.specializes_of_eq_polynomial"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "AxiomaticGW.GKM.EquivariantCoefficients.not_specializes_inverse"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "AxiomaticGW.GKM.StateSpaceCertificate.Accepts.metric_correct"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "AxiomaticGW.GKM.StateSpaceCertificate.Accepts.metric_mul_inverse"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "AxiomaticGW.GKM.StateSpaceCertificate.Accepts.product_correct"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "AxiomaticGW.GKM.StateSpaceCertificate.Accepts.unit_correct"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "AxiomaticGW.GKM.StateSpaceCertificate.Accepts.ordinary_product_unique"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "AxiomaticGW.GKM.SurfaceFrames.Plane.states_unit"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "AxiomaticGW.GKM.SurfaceFrames.OneBlowup.states_unit"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "AxiomaticGW.GKM.SurfaceFrames.TwoBlowups.states_unit"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "AxiomaticGW.SurfaceCohomology.firstChernDivisor_val"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "AxiomaticGW.GKM.SurfaceReplay.Plane.accepted"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "AxiomaticGW.GKM.SurfaceReplay.OneBlowup.accepted"
+    },
+    {
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "declaration": "AxiomaticGW.GKM.SurfaceReplay.TwoBlowups.accepted"
+    }
+  ],
+  "scope": "Eighteen key coefficient, state interpretation, surface coordinate, and acceptance declarations; not a project-wide audit",
+  "source_sha256": {
+    "AxiomaticGW/GKM/EquivariantCoefficients.lean": "a1d14af6c9e9f078acf3f7ae23f1c1632ff1f845fdb54ba323f4d1f0d0f7d848",
+    "AxiomaticGW/GKM/FixedPointAlgebra.lean": "7501c0f4005b57efa99ab15442295fbf8d7992280ac2e4dac23e994779d6db8b",
+    "AxiomaticGW/GKM/Fixtures/SurfaceFrames.lean": "62599ffc29694cebb18fa7703e3910cb20f22b5c89f136a43f729c06312c943a",
+    "AxiomaticGW/GKM/Fixtures/SurfaceReplay.lean": "7f3e3db071e51b69c4d620867c4da672b0a9dde8f1408ef86490ce019ceaa559",
+    "AxiomaticGW/GKM/StateSpaceCertificate.lean": "06372f3bf119d269b7b2d1801a99b1358c61e36436e9d5b1b8d60cd5402a6070",
+    "AxiomaticGW/GKM/StateSpaceTransport.lean": "6f0f5d3f7876ddcf9c99bd418cc9db2a5b8a63c7c9dd2435b38c8489f2fddcb8",
+    "AxiomaticGW/Surfaces/Cohomology.lean": "7555f04a59f7594547ae85f73787534b94df2023ccfe61b78699ff28c5876d35",
+    "AxiomaticGW/Surfaces/TargetData.lean": "8f89f978fce57a80983a65aa46b91087ed9f2ad22aad16d7e3f9c8b190d13517"
+  },
+  "status": "passed"
+}

@@ -1,0 +1,180 @@
+{
+  "schema_version": 1,
+  "scope": "Lower-genus primary support for the unchanged genus-two plane quartic benchmark",
+  "source": [
+    {
+      "manifest": "environments/surface-genus-zero-primary-tables.json",
+      "sha256": "d710f97e36fee1f9a30b2e5993af87ee6fb6674c3447b5097c1137d41790ebff"
+    },
+    {
+      "manifest": "environments/surface-genus-one-primary-tables.json",
+      "sha256": "69221d38c429ad7c466d40c03595ac979469171d719bb533fe4afdbb1d1a4a3d"
+    }
+  ],
+  "comparison_limits": [
+    "Candidate recurrences reuse the existing WDVV/Getzler sources and initial data.",
+    "All six classes in each genus, including zero, require original kernel checks.",
+    "Energy fifteen is internal support, not a change to the fixed release benchmarks.",
+    "These tables do not certify any genus-two value or add a geometric seed."
+  ],
+  "cases": [
+    {
+      "target": "P2",
+      "genus": 0,
+      "energy_bound": 15,
+      "rows": [
+        {
+          "curve": [
+            0
+          ],
+          "energy": 0,
+          "point_count": 0,
+          "domain": "auxiliary_zero_class_empty_query",
+          "value": [
+            0,
+            1
+          ]
+        },
+        {
+          "curve": [
+            1
+          ],
+          "energy": 3,
+          "point_count": 2,
+          "domain": "geometric",
+          "value": [
+            1,
+            1
+          ]
+        },
+        {
+          "curve": [
+            2
+          ],
+          "energy": 6,
+          "point_count": 5,
+          "domain": "geometric",
+          "value": [
+            1,
+            1
+          ]
+        },
+        {
+          "curve": [
+            3
+          ],
+          "energy": 9,
+          "point_count": 8,
+          "domain": "geometric",
+          "value": [
+            12,
+            1
+          ]
+        },
+        {
+          "curve": [
+            4
+          ],
+          "energy": 12,
+          "point_count": 11,
+          "domain": "geometric",
+          "value": [
+            620,
+            1
+          ]
+        },
+        {
+          "curve": [
+            5
+          ],
+          "energy": 15,
+          "point_count": 14,
+          "domain": "geometric",
+          "value": [
+            87304,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "target": "P2",
+      "genus": 1,
+      "energy_bound": 15,
+      "rows": [
+        {
+          "curve": [
+            0
+          ],
+          "energy": 0,
+          "point_count": 0,
+          "domain": "auxiliary_zero_class_empty_query",
+          "value": [
+            0,
+            1
+          ]
+        },
+        {
+          "curve": [
+            1
+          ],
+          "energy": 3,
+          "point_count": 3,
+          "domain": "geometric",
+          "value": [
+            0,
+            1
+          ]
+        },
+        {
+          "curve": [
+            2
+          ],
+          "energy": 6,
+          "point_count": 6,
+          "domain": "geometric",
+          "value": [
+            0,
+            1
+          ]
+        },
+        {
+          "curve": [
+            3
+          ],
+          "energy": 9,
+          "point_count": 9,
+          "domain": "geometric",
+          "value": [
+            1,
+            1
+          ]
+        },
+        {
+          "curve": [
+            4
+          ],
+          "energy": 12,
+          "point_count": 12,
+          "domain": "geometric",
+          "value": [
+            225,
+            1
+          ]
+        },
+        {
+          "curve": [
+            5
+          ],
+          "energy": 15,
+          "point_count": 15,
+          "domain": "geometric",
+          "value": [
+            87192,
+            1
+          ]
+        }
+      ]
+    }
+  ]
+}

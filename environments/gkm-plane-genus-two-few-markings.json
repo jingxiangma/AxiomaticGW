@@ -1,0 +1,2180 @@
+{
+  "cache_ephemeral": true,
+  "cases": [
+    {
+      "class": [
+        1
+      ],
+      "equivariant": {
+        "denominator": [
+          [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ]
+        ],
+        "numerator": [
+          [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              128
+            ]
+          ]
+        ]
+      },
+      "genus": 2,
+      "labels": [
+        "unit"
+      ],
+      "ordinary": [
+        1,
+        128
+      ],
+      "powers": [
+        5
+      ],
+      "target": "X0"
+    },
+    {
+      "class": [
+        1
+      ],
+      "equivariant": {
+        "denominator": [
+          [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ]
+        ],
+        "numerator": [
+          [
+            [
+              0,
+              0
+            ],
+            [
+              -1,
+              960
+            ]
+          ]
+        ]
+      },
+      "genus": 2,
+      "labels": [
+        "H"
+      ],
+      "ordinary": [
+        -1,
+        960
+      ],
+      "powers": [
+        4
+      ],
+      "target": "X0"
+    },
+    {
+      "class": [
+        1
+      ],
+      "equivariant": {
+        "denominator": [
+          [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ]
+        ],
+        "numerator": [
+          [
+            [
+              0,
+              0
+            ],
+            [
+              -1,
+              240
+            ]
+          ]
+        ]
+      },
+      "genus": 2,
+      "labels": [
+        "pt"
+      ],
+      "ordinary": [
+        -1,
+        240
+      ],
+      "powers": [
+        3
+      ],
+      "target": "X0"
+    },
+    {
+      "class": [
+        1
+      ],
+      "equivariant": {
+        "denominator": [
+          [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ]
+        ],
+        "numerator": [
+          [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              128
+            ]
+          ]
+        ]
+      },
+      "genus": 2,
+      "labels": [
+        "unit",
+        "unit"
+      ],
+      "ordinary": [
+        1,
+        128
+      ],
+      "powers": [
+        0,
+        6
+      ],
+      "target": "X0"
+    },
+    {
+      "class": [
+        1
+      ],
+      "equivariant": {
+        "denominator": [
+          [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ]
+        ],
+        "numerator": [
+          [
+            [
+              0,
+              0
+            ],
+            [
+              3,
+              128
+            ]
+          ]
+        ]
+      },
+      "genus": 2,
+      "labels": [
+        "unit",
+        "unit"
+      ],
+      "ordinary": [
+        3,
+        128
+      ],
+      "powers": [
+        1,
+        5
+      ],
+      "target": "X0"
+    },
+    {
+      "class": [
+        1
+      ],
+      "equivariant": {
+        "denominator": [
+          [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ]
+        ],
+        "numerator": [
+          [
+            [
+              0,
+              0
+            ],
+            [
+              19,
+              640
+            ]
+          ]
+        ]
+      },
+      "genus": 2,
+      "labels": [
+        "unit",
+        "unit"
+      ],
+      "ordinary": [
+        19,
+        640
+      ],
+      "powers": [
+        2,
+        4
+      ],
+      "target": "X0"
+    },
+    {
+      "class": [
+        1
+      ],
+      "equivariant": {
+        "denominator": [
+          [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ]
+        ],
+        "numerator": [
+          [
+            [
+              0,
+              0
+            ],
+            [
+              7,
+              320
+            ]
+          ]
+        ]
+      },
+      "genus": 2,
+      "labels": [
+        "unit",
+        "unit"
+      ],
+      "ordinary": [
+        7,
+        320
+      ],
+      "powers": [
+        3,
+        3
+      ],
+      "target": "X0"
+    },
+    {
+      "class": [
+        1
+      ],
+      "equivariant": {
+        "denominator": [
+          [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ]
+        ],
+        "numerator": [
+          [
+            [
+              0,
+              0
+            ],
+            [
+              19,
+              640
+            ]
+          ]
+        ]
+      },
+      "genus": 2,
+      "labels": [
+        "unit",
+        "unit"
+      ],
+      "ordinary": [
+        19,
+        640
+      ],
+      "powers": [
+        4,
+        2
+      ],
+      "target": "X0"
+    },
+    {
+      "class": [
+        1
+      ],
+      "equivariant": {
+        "denominator": [
+          [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ]
+        ],
+        "numerator": [
+          [
+            [
+              0,
+              0
+            ],
+            [
+              3,
+              128
+            ]
+          ]
+        ]
+      },
+      "genus": 2,
+      "labels": [
+        "unit",
+        "unit"
+      ],
+      "ordinary": [
+        3,
+        128
+      ],
+      "powers": [
+        5,
+        1
+      ],
+      "target": "X0"
+    },
+    {
+      "class": [
+        1
+      ],
+      "equivariant": {
+        "denominator": [
+          [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ]
+        ],
+        "numerator": [
+          [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              128
+            ]
+          ]
+        ]
+      },
+      "genus": 2,
+      "labels": [
+        "unit",
+        "unit"
+      ],
+      "ordinary": [
+        1,
+        128
+      ],
+      "powers": [
+        6,
+        0
+      ],
+      "target": "X0"
+    },
+    {
+      "class": [
+        1
+      ],
+      "equivariant": {
+        "denominator": [
+          [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ]
+        ],
+        "numerator": [
+          [
+            [
+              0,
+              0
+            ],
+            [
+              -1,
+              960
+            ]
+          ]
+        ]
+      },
+      "genus": 2,
+      "labels": [
+        "unit",
+        "H"
+      ],
+      "ordinary": [
+        -1,
+        960
+      ],
+      "powers": [
+        0,
+        5
+      ],
+      "target": "X0"
+    },
+    {
+      "class": [
+        1
+      ],
+      "equivariant": {
+        "denominator": [
+          [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ]
+        ],
+        "numerator": [
+          [
+            [
+              0,
+              0
+            ],
+            [
+              -1,
+              320
+            ]
+          ]
+        ]
+      },
+      "genus": 2,
+      "labels": [
+        "unit",
+        "H"
+      ],
+      "ordinary": [
+        -1,
+        320
+      ],
+      "powers": [
+        1,
+        4
+      ],
+      "target": "X0"
+    },
+    {
+      "class": [
+        1
+      ],
+      "equivariant": {
+        "denominator": [
+          [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ]
+        ],
+        "numerator": [
+          [
+            [
+              0,
+              0
+            ],
+            [
+              7,
+              480
+            ]
+          ]
+        ]
+      },
+      "genus": 2,
+      "labels": [
+        "unit",
+        "H"
+      ],
+      "ordinary": [
+        7,
+        480
+      ],
+      "powers": [
+        2,
+        3
+      ],
+      "target": "X0"
+    },
+    {
+      "class": [
+        1
+      ],
+      "equivariant": {
+        "denominator": [
+          [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ]
+        ],
+        "numerator": [
+          [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              30
+            ]
+          ]
+        ]
+      },
+      "genus": 2,
+      "labels": [
+        "unit",
+        "H"
+      ],
+      "ordinary": [
+        1,
+        30
+      ],
+      "powers": [
+        3,
+        2
+      ],
+      "target": "X0"
+    },
+    {
+      "class": [
+        1
+      ],
+      "equivariant": {
+        "denominator": [
+          [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ]
+        ],
+        "numerator": [
+          [
+            [
+              0,
+              0
+            ],
+            [
+              13,
+              640
+            ]
+          ]
+        ]
+      },
+      "genus": 2,
+      "labels": [
+        "unit",
+        "H"
+      ],
+      "ordinary": [
+        13,
+        640
+      ],
+      "powers": [
+        4,
+        1
+      ],
+      "target": "X0"
+    },
+    {
+      "class": [
+        1
+      ],
+      "equivariant": {
+        "denominator": [
+          [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ]
+        ],
+        "numerator": [
+          [
+            [
+              0,
+              0
+            ],
+            [
+              13,
+              1920
+            ]
+          ]
+        ]
+      },
+      "genus": 2,
+      "labels": [
+        "unit",
+        "H"
+      ],
+      "ordinary": [
+        13,
+        1920
+      ],
+      "powers": [
+        5,
+        0
+      ],
+      "target": "X0"
+    },
+    {
+      "class": [
+        1
+      ],
+      "equivariant": {
+        "denominator": [
+          [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ]
+        ],
+        "numerator": [
+          [
+            [
+              0,
+              0
+            ],
+            [
+              -1,
+              240
+            ]
+          ]
+        ]
+      },
+      "genus": 2,
+      "labels": [
+        "unit",
+        "pt"
+      ],
+      "ordinary": [
+        -1,
+        240
+      ],
+      "powers": [
+        0,
+        4
+      ],
+      "target": "X0"
+    },
+    {
+      "class": [
+        1
+      ],
+      "equivariant": {
+        "denominator": [
+          [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ]
+        ],
+        "numerator": [
+          [
+            [
+              0,
+              0
+            ],
+            [
+              -1,
+              80
+            ]
+          ]
+        ]
+      },
+      "genus": 2,
+      "labels": [
+        "unit",
+        "pt"
+      ],
+      "ordinary": [
+        -1,
+        80
+      ],
+      "powers": [
+        1,
+        3
+      ],
+      "target": "X0"
+    },
+    {
+      "class": [
+        1
+      ],
+      "equivariant": {
+        "denominator": [
+          [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ]
+        ],
+        "numerator": [
+          [
+            [
+              0,
+              0
+            ],
+            [
+              -1,
+              48
+            ]
+          ]
+        ]
+      },
+      "genus": 2,
+      "labels": [
+        "unit",
+        "pt"
+      ],
+      "ordinary": [
+        -1,
+        48
+      ],
+      "powers": [
+        2,
+        2
+      ],
+      "target": "X0"
+    },
+    {
+      "class": [
+        1
+      ],
+      "equivariant": {
+        "denominator": [
+          [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ]
+        ],
+        "numerator": [
+          [
+            [
+              0,
+              0
+            ],
+            [
+              -23,
+              960
+            ]
+          ]
+        ]
+      },
+      "genus": 2,
+      "labels": [
+        "unit",
+        "pt"
+      ],
+      "ordinary": [
+        -23,
+        960
+      ],
+      "powers": [
+        3,
+        1
+      ],
+      "target": "X0"
+    },
+    {
+      "class": [
+        1
+      ],
+      "equivariant": {
+        "denominator": [
+          [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ]
+        ],
+        "numerator": [
+          [
+            [
+              0,
+              0
+            ],
+            [
+              -17,
+              1920
+            ]
+          ]
+        ]
+      },
+      "genus": 2,
+      "labels": [
+        "unit",
+        "pt"
+      ],
+      "ordinary": [
+        -17,
+        1920
+      ],
+      "powers": [
+        4,
+        0
+      ],
+      "target": "X0"
+    },
+    {
+      "class": [
+        1
+      ],
+      "equivariant": {
+        "denominator": [
+          [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ]
+        ],
+        "numerator": [
+          [
+            [
+              0,
+              0
+            ],
+            [
+              13,
+              1920
+            ]
+          ]
+        ]
+      },
+      "genus": 2,
+      "labels": [
+        "H",
+        "unit"
+      ],
+      "ordinary": [
+        13,
+        1920
+      ],
+      "powers": [
+        0,
+        5
+      ],
+      "target": "X0"
+    },
+    {
+      "class": [
+        1
+      ],
+      "equivariant": {
+        "denominator": [
+          [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ]
+        ],
+        "numerator": [
+          [
+            [
+              0,
+              0
+            ],
+            [
+              13,
+              640
+            ]
+          ]
+        ]
+      },
+      "genus": 2,
+      "labels": [
+        "H",
+        "unit"
+      ],
+      "ordinary": [
+        13,
+        640
+      ],
+      "powers": [
+        1,
+        4
+      ],
+      "target": "X0"
+    },
+    {
+      "class": [
+        1
+      ],
+      "equivariant": {
+        "denominator": [
+          [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ]
+        ],
+        "numerator": [
+          [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              30
+            ]
+          ]
+        ]
+      },
+      "genus": 2,
+      "labels": [
+        "H",
+        "unit"
+      ],
+      "ordinary": [
+        1,
+        30
+      ],
+      "powers": [
+        2,
+        3
+      ],
+      "target": "X0"
+    },
+    {
+      "class": [
+        1
+      ],
+      "equivariant": {
+        "denominator": [
+          [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ]
+        ],
+        "numerator": [
+          [
+            [
+              0,
+              0
+            ],
+            [
+              7,
+              480
+            ]
+          ]
+        ]
+      },
+      "genus": 2,
+      "labels": [
+        "H",
+        "unit"
+      ],
+      "ordinary": [
+        7,
+        480
+      ],
+      "powers": [
+        3,
+        2
+      ],
+      "target": "X0"
+    },
+    {
+      "class": [
+        1
+      ],
+      "equivariant": {
+        "denominator": [
+          [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ]
+        ],
+        "numerator": [
+          [
+            [
+              0,
+              0
+            ],
+            [
+              -1,
+              320
+            ]
+          ]
+        ]
+      },
+      "genus": 2,
+      "labels": [
+        "H",
+        "unit"
+      ],
+      "ordinary": [
+        -1,
+        320
+      ],
+      "powers": [
+        4,
+        1
+      ],
+      "target": "X0"
+    },
+    {
+      "class": [
+        1
+      ],
+      "equivariant": {
+        "denominator": [
+          [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ]
+        ],
+        "numerator": [
+          [
+            [
+              0,
+              0
+            ],
+            [
+              -1,
+              960
+            ]
+          ]
+        ]
+      },
+      "genus": 2,
+      "labels": [
+        "H",
+        "unit"
+      ],
+      "ordinary": [
+        -1,
+        960
+      ],
+      "powers": [
+        5,
+        0
+      ],
+      "target": "X0"
+    },
+    {
+      "class": [
+        1
+      ],
+      "equivariant": {
+        "denominator": [
+          [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ]
+        ],
+        "numerator": [
+          [
+            [
+              0,
+              0
+            ],
+            [
+              -1,
+              192
+            ]
+          ]
+        ]
+      },
+      "genus": 2,
+      "labels": [
+        "H",
+        "H"
+      ],
+      "ordinary": [
+        -1,
+        192
+      ],
+      "powers": [
+        0,
+        4
+      ],
+      "target": "X0"
+    },
+    {
+      "class": [
+        1
+      ],
+      "equivariant": {
+        "denominator": [
+          [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ]
+        ],
+        "numerator": [
+          [
+            [
+              0,
+              0
+            ],
+            [
+              -23,
+              960
+            ]
+          ]
+        ]
+      },
+      "genus": 2,
+      "labels": [
+        "H",
+        "H"
+      ],
+      "ordinary": [
+        -23,
+        960
+      ],
+      "powers": [
+        1,
+        3
+      ],
+      "target": "X0"
+    },
+    {
+      "class": [
+        1
+      ],
+      "equivariant": {
+        "denominator": [
+          [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ]
+        ],
+        "numerator": [
+          [
+            [
+              0,
+              0
+            ],
+            [
+              -29,
+              960
+            ]
+          ]
+        ]
+      },
+      "genus": 2,
+      "labels": [
+        "H",
+        "H"
+      ],
+      "ordinary": [
+        -29,
+        960
+      ],
+      "powers": [
+        2,
+        2
+      ],
+      "target": "X0"
+    },
+    {
+      "class": [
+        1
+      ],
+      "equivariant": {
+        "denominator": [
+          [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ]
+        ],
+        "numerator": [
+          [
+            [
+              0,
+              0
+            ],
+            [
+              -23,
+              960
+            ]
+          ]
+        ]
+      },
+      "genus": 2,
+      "labels": [
+        "H",
+        "H"
+      ],
+      "ordinary": [
+        -23,
+        960
+      ],
+      "powers": [
+        3,
+        1
+      ],
+      "target": "X0"
+    },
+    {
+      "class": [
+        1
+      ],
+      "equivariant": {
+        "denominator": [
+          [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ]
+        ],
+        "numerator": [
+          [
+            [
+              0,
+              0
+            ],
+            [
+              -1,
+              192
+            ]
+          ]
+        ]
+      },
+      "genus": 2,
+      "labels": [
+        "H",
+        "H"
+      ],
+      "ordinary": [
+        -1,
+        192
+      ],
+      "powers": [
+        4,
+        0
+      ],
+      "target": "X0"
+    },
+    {
+      "class": [
+        1
+      ],
+      "equivariant": {
+        "denominator": [
+          [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ]
+        ],
+        "numerator": [
+          [
+            [
+              0,
+              0
+            ],
+            [
+              -1,
+              240
+            ]
+          ]
+        ]
+      },
+      "genus": 2,
+      "labels": [
+        "H",
+        "pt"
+      ],
+      "ordinary": [
+        -1,
+        240
+      ],
+      "powers": [
+        0,
+        3
+      ],
+      "target": "X0"
+    },
+    {
+      "class": [
+        1
+      ],
+      "equivariant": {
+        "denominator": [
+          [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ]
+        ],
+        "numerator": [
+          [
+            [
+              0,
+              0
+            ],
+            [
+              -1,
+              240
+            ]
+          ]
+        ]
+      },
+      "genus": 2,
+      "labels": [
+        "H",
+        "pt"
+      ],
+      "ordinary": [
+        -1,
+        240
+      ],
+      "powers": [
+        1,
+        2
+      ],
+      "target": "X0"
+    },
+    {
+      "class": [
+        1
+      ],
+      "equivariant": {
+        "denominator": [
+          [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ]
+        ],
+        "numerator": [
+          [
+            [
+              0,
+              0
+            ],
+            [
+              -1,
+              160
+            ]
+          ]
+        ]
+      },
+      "genus": 2,
+      "labels": [
+        "H",
+        "pt"
+      ],
+      "ordinary": [
+        -1,
+        160
+      ],
+      "powers": [
+        2,
+        1
+      ],
+      "target": "X0"
+    },
+    {
+      "class": [
+        1
+      ],
+      "equivariant": {
+        "denominator": [
+          [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ]
+        ],
+        "numerator": [
+          [
+            [
+              0,
+              0
+            ],
+            [
+              -7,
+              960
+            ]
+          ]
+        ]
+      },
+      "genus": 2,
+      "labels": [
+        "H",
+        "pt"
+      ],
+      "ordinary": [
+        -7,
+        960
+      ],
+      "powers": [
+        3,
+        0
+      ],
+      "target": "X0"
+    },
+    {
+      "class": [
+        1
+      ],
+      "equivariant": {
+        "denominator": [
+          [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ]
+        ],
+        "numerator": [
+          [
+            [
+              0,
+              0
+            ],
+            [
+              -17,
+              1920
+            ]
+          ]
+        ]
+      },
+      "genus": 2,
+      "labels": [
+        "pt",
+        "unit"
+      ],
+      "ordinary": [
+        -17,
+        1920
+      ],
+      "powers": [
+        0,
+        4
+      ],
+      "target": "X0"
+    },
+    {
+      "class": [
+        1
+      ],
+      "equivariant": {
+        "denominator": [
+          [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ]
+        ],
+        "numerator": [
+          [
+            [
+              0,
+              0
+            ],
+            [
+              -23,
+              960
+            ]
+          ]
+        ]
+      },
+      "genus": 2,
+      "labels": [
+        "pt",
+        "unit"
+      ],
+      "ordinary": [
+        -23,
+        960
+      ],
+      "powers": [
+        1,
+        3
+      ],
+      "target": "X0"
+    },
+    {
+      "class": [
+        1
+      ],
+      "equivariant": {
+        "denominator": [
+          [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ]
+        ],
+        "numerator": [
+          [
+            [
+              0,
+              0
+            ],
+            [
+              -1,
+              48
+            ]
+          ]
+        ]
+      },
+      "genus": 2,
+      "labels": [
+        "pt",
+        "unit"
+      ],
+      "ordinary": [
+        -1,
+        48
+      ],
+      "powers": [
+        2,
+        2
+      ],
+      "target": "X0"
+    },
+    {
+      "class": [
+        1
+      ],
+      "equivariant": {
+        "denominator": [
+          [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ]
+        ],
+        "numerator": [
+          [
+            [
+              0,
+              0
+            ],
+            [
+              -1,
+              80
+            ]
+          ]
+        ]
+      },
+      "genus": 2,
+      "labels": [
+        "pt",
+        "unit"
+      ],
+      "ordinary": [
+        -1,
+        80
+      ],
+      "powers": [
+        3,
+        1
+      ],
+      "target": "X0"
+    },
+    {
+      "class": [
+        1
+      ],
+      "equivariant": {
+        "denominator": [
+          [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ]
+        ],
+        "numerator": [
+          [
+            [
+              0,
+              0
+            ],
+            [
+              -1,
+              240
+            ]
+          ]
+        ]
+      },
+      "genus": 2,
+      "labels": [
+        "pt",
+        "unit"
+      ],
+      "ordinary": [
+        -1,
+        240
+      ],
+      "powers": [
+        4,
+        0
+      ],
+      "target": "X0"
+    },
+    {
+      "class": [
+        1
+      ],
+      "equivariant": {
+        "denominator": [
+          [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ]
+        ],
+        "numerator": [
+          [
+            [
+              0,
+              0
+            ],
+            [
+              -7,
+              960
+            ]
+          ]
+        ]
+      },
+      "genus": 2,
+      "labels": [
+        "pt",
+        "H"
+      ],
+      "ordinary": [
+        -7,
+        960
+      ],
+      "powers": [
+        0,
+        3
+      ],
+      "target": "X0"
+    },
+    {
+      "class": [
+        1
+      ],
+      "equivariant": {
+        "denominator": [
+          [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ]
+        ],
+        "numerator": [
+          [
+            [
+              0,
+              0
+            ],
+            [
+              -1,
+              160
+            ]
+          ]
+        ]
+      },
+      "genus": 2,
+      "labels": [
+        "pt",
+        "H"
+      ],
+      "ordinary": [
+        -1,
+        160
+      ],
+      "powers": [
+        1,
+        2
+      ],
+      "target": "X0"
+    },
+    {
+      "class": [
+        1
+      ],
+      "equivariant": {
+        "denominator": [
+          [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ]
+        ],
+        "numerator": [
+          [
+            [
+              0,
+              0
+            ],
+            [
+              -1,
+              240
+            ]
+          ]
+        ]
+      },
+      "genus": 2,
+      "labels": [
+        "pt",
+        "H"
+      ],
+      "ordinary": [
+        -1,
+        240
+      ],
+      "powers": [
+        2,
+        1
+      ],
+      "target": "X0"
+    },
+    {
+      "class": [
+        1
+      ],
+      "equivariant": {
+        "denominator": [
+          [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ]
+        ],
+        "numerator": [
+          [
+            [
+              0,
+              0
+            ],
+            [
+              -1,
+              240
+            ]
+          ]
+        ]
+      },
+      "genus": 2,
+      "labels": [
+        "pt",
+        "H"
+      ],
+      "ordinary": [
+        -1,
+        240
+      ],
+      "powers": [
+        3,
+        0
+      ],
+      "target": "X0"
+    },
+    {
+      "class": [
+        1
+      ],
+      "equivariant": {
+        "denominator": [
+          [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ]
+        ],
+        "numerator": [
+          [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              240
+            ]
+          ]
+        ]
+      },
+      "genus": 2,
+      "labels": [
+        "pt",
+        "pt"
+      ],
+      "ordinary": [
+        1,
+        240
+      ],
+      "powers": [
+        0,
+        2
+      ],
+      "target": "X0"
+    },
+    {
+      "class": [
+        1
+      ],
+      "equivariant": {
+        "denominator": [
+          [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ]
+        ],
+        "numerator": [
+          [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              144
+            ]
+          ]
+        ]
+      },
+      "genus": 2,
+      "labels": [
+        "pt",
+        "pt"
+      ],
+      "ordinary": [
+        1,
+        144
+      ],
+      "powers": [
+        1,
+        1
+      ],
+      "target": "X0"
+    },
+    {
+      "class": [
+        1
+      ],
+      "equivariant": {
+        "denominator": [
+          [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ]
+        ],
+        "numerator": [
+          [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              240
+            ]
+          ]
+        ]
+      },
+      "genus": 2,
+      "labels": [
+        "pt",
+        "pt"
+      ],
+      "ordinary": [
+        1,
+        240
+      ],
+      "powers": [
+        2,
+        0
+      ],
+      "target": "X0"
+    }
+  ],
+  "environment": {
+    "admcycles": "1.4",
+    "sage": "10.9"
+  },
+  "input_sha256": "062a32a9919fa5ddf806c353f5bb56256ca5dca31d170c246b9bfa39c3b11376",
+  "kind": "gkm_localization.plane_genus_two_few_markings",
+  "online_lookup": false,
+  "schema_version": 1,
+  "source": {
+    "project": "gkm_localization",
+    "python_sources": {
+      "gkm_localization/__init__.py": "00d7e7813c8d1d60adc432430d35fa6a4806bceee008984c2b754091354375ec",
+      "gkm_localization/hodge_integral.py": "862d4f8c9b4915b96ce9f62c789f079ea82c8fecdb43d5f1c407a00ba424d043",
+      "gkm_localization/stable_map.py": "4e88e18487577642f86bcf1d8762c8ac117d4bfe4329c095bbb6fdd38258c53a",
+      "gkm_localization/target.py": "e0466e4ea6ba1db8c584051147831f2b11e59102fba533107623549b28bfc4e5",
+      "gkm_localization/target_builders.py": "b17fb2cfb2f9db8453601bf5e7e5a571a313f58bae7755915e890206fc06b9b5"
+    },
+    "reuse_license": "not established; no producer code is vendored",
+    "revision": "a09c6625b280312721c5e0f2f915791781339aa5",
+    "schema_version": 1
+  }
+}

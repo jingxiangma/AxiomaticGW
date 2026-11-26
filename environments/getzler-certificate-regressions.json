@@ -1,0 +1,172 @@
+{
+  "cases": [
+    {
+      "case": "valid",
+      "kernel": "accepted",
+      "parser": "accepted"
+    },
+    {
+      "case": "equivalent_vertex_permutation",
+      "kernel": "accepted",
+      "parser": "accepted"
+    },
+    {
+      "case": "equivalent_edge_branch_permutation",
+      "kernel": "accepted",
+      "parser": "accepted"
+    },
+    {
+      "case": "equivalent_rational_witness",
+      "kernel": "accepted",
+      "parser": "accepted"
+    },
+    {
+      "case": "different_valid_marking_partition",
+      "kernel": "rejected",
+      "parser": "accepted"
+    },
+    {
+      "case": "loop_replaces_parallel_edges",
+      "kernel": "rejected",
+      "parser": "accepted"
+    },
+    {
+      "case": "disconnected_graph",
+      "kernel": "rejected",
+      "parser": "accepted"
+    },
+    {
+      "case": "wrong_vertex_genus",
+      "kernel": "rejected",
+      "parser": "accepted"
+    },
+    {
+      "case": "added_kappa",
+      "kernel": "rejected",
+      "parser": "accepted"
+    },
+    {
+      "case": "added_external_psi",
+      "kernel": "rejected",
+      "parser": "accepted"
+    },
+    {
+      "case": "added_node_psi",
+      "kernel": "rejected",
+      "parser": "accepted"
+    },
+    {
+      "case": "raw_column_factor",
+      "kernel": "rejected",
+      "parser": "accepted"
+    },
+    {
+      "case": "elliptic_stabilizer_double_counted",
+      "kernel": "rejected",
+      "parser": "accepted"
+    },
+    {
+      "case": "loop_factor_omitted",
+      "kernel": "rejected",
+      "parser": "accepted"
+    },
+    {
+      "case": "wrong_named_cycle",
+      "kernel": "rejected",
+      "parser": "accepted"
+    },
+    {
+      "case": "changed_original_row",
+      "kernel": "rejected",
+      "parser": "accepted"
+    },
+    {
+      "case": "changed_requested_claim",
+      "kernel": "rejected",
+      "parser": "accepted"
+    },
+    {
+      "case": "zero_witness",
+      "kernel": "rejected",
+      "parser": "accepted"
+    },
+    {
+      "case": "wrong_locus",
+      "parser": "rejected"
+    },
+    {
+      "case": "wrong_frame",
+      "parser": "rejected"
+    },
+    {
+      "case": "wrong_labels",
+      "parser": "rejected"
+    },
+    {
+      "case": "wrong_source_labels",
+      "parser": "rejected"
+    },
+    {
+      "case": "boolean_source_label",
+      "parser": "rejected"
+    },
+    {
+      "case": "wrong_reference",
+      "parser": "rejected"
+    },
+    {
+      "case": "wrong_normalization",
+      "parser": "rejected"
+    },
+    {
+      "case": "float_coefficient",
+      "parser": "rejected"
+    },
+    {
+      "case": "boolean_coefficient",
+      "parser": "rejected"
+    },
+    {
+      "case": "zero_denominator",
+      "parser": "rejected"
+    },
+    {
+      "case": "boolean_incidence",
+      "parser": "rejected"
+    },
+    {
+      "case": "vertex_out_of_range",
+      "parser": "rejected"
+    },
+    {
+      "case": "reordered_graph_slots",
+      "parser": "rejected"
+    },
+    {
+      "case": "missing_graph_field",
+      "parser": "rejected"
+    },
+    {
+      "case": "unknown_graph_field",
+      "parser": "rejected"
+    },
+    {
+      "case": "unknown_report_field",
+      "parser": "rejected"
+    },
+    {
+      "case": "wrong_tool_pin",
+      "parser": "rejected"
+    },
+    {
+      "case": "duplicate_json_key",
+      "parser": "rejected"
+    }
+  ],
+  "frame": "getzler_mbar_1_4_v1",
+  "offline": true,
+  "report_sha256": "ccd8a8f941e9d2d503ec91e29b2be527bf0c91ce111599e6ec56118f6994ecb7",
+  "sage_used": false,
+  "schema_version": 1,
+  "scope": "Fixed 33-column Getzler exchange; geometric validity is a separate input."
+}

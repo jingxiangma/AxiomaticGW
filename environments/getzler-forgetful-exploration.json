@@ -1,0 +1,879 @@
+{
+  "cache_ephemeral": true,
+  "cases": [
+    {
+      "additional_markings": 1,
+      "columns": [
+        {
+          "placements": 3,
+          "raw_indices": [
+            243,
+            245,
+            249
+          ],
+          "source_column": 0,
+          "vertices": 3
+        },
+        {
+          "placements": 3,
+          "raw_indices": [
+            267,
+            269,
+            273
+          ],
+          "source_column": 1,
+          "vertices": 3
+        },
+        {
+          "placements": 3,
+          "raw_indices": [
+            281,
+            283,
+            287
+          ],
+          "source_column": 2,
+          "vertices": 3
+        },
+        {
+          "placements": 3,
+          "raw_indices": [
+            328,
+            329,
+            333
+          ],
+          "source_column": 3,
+          "vertices": 3
+        },
+        {
+          "placements": 3,
+          "raw_indices": [
+            326,
+            327,
+            332
+          ],
+          "source_column": 4,
+          "vertices": 3
+        },
+        {
+          "placements": 3,
+          "raw_indices": [
+            314,
+            315,
+            319
+          ],
+          "source_column": 5,
+          "vertices": 3
+        },
+        {
+          "placements": 3,
+          "raw_indices": [
+            312,
+            313,
+            318
+          ],
+          "source_column": 6,
+          "vertices": 3
+        },
+        {
+          "placements": 3,
+          "raw_indices": [
+            304,
+            305,
+            309
+          ],
+          "source_column": 7,
+          "vertices": 3
+        },
+        {
+          "placements": 3,
+          "raw_indices": [
+            302,
+            303,
+            308
+          ],
+          "source_column": 8,
+          "vertices": 3
+        },
+        {
+          "placements": 3,
+          "raw_indices": [
+            278,
+            280,
+            286
+          ],
+          "source_column": 9,
+          "vertices": 3
+        },
+        {
+          "placements": 3,
+          "raw_indices": [
+            276,
+            277,
+            285
+          ],
+          "source_column": 10,
+          "vertices": 3
+        },
+        {
+          "placements": 3,
+          "raw_indices": [
+            264,
+            266,
+            272
+          ],
+          "source_column": 11,
+          "vertices": 3
+        },
+        {
+          "placements": 3,
+          "raw_indices": [
+            262,
+            263,
+            271
+          ],
+          "source_column": 12,
+          "vertices": 3
+        },
+        {
+          "placements": 3,
+          "raw_indices": [
+            240,
+            242,
+            248
+          ],
+          "source_column": 13,
+          "vertices": 3
+        },
+        {
+          "placements": 3,
+          "raw_indices": [
+            237,
+            239,
+            247
+          ],
+          "source_column": 14,
+          "vertices": 3
+        },
+        {
+          "placements": 3,
+          "raw_indices": [
+            330,
+            331,
+            334
+          ],
+          "source_column": 15,
+          "vertices": 3
+        },
+        {
+          "placements": 3,
+          "raw_indices": [
+            316,
+            317,
+            320
+          ],
+          "source_column": 16,
+          "vertices": 3
+        },
+        {
+          "placements": 3,
+          "raw_indices": [
+            306,
+            307,
+            310
+          ],
+          "source_column": 17,
+          "vertices": 3
+        },
+        {
+          "placements": 3,
+          "raw_indices": [
+            282,
+            284,
+            288
+          ],
+          "source_column": 18,
+          "vertices": 3
+        },
+        {
+          "placements": 3,
+          "raw_indices": [
+            268,
+            270,
+            274
+          ],
+          "source_column": 19,
+          "vertices": 3
+        },
+        {
+          "placements": 3,
+          "raw_indices": [
+            244,
+            246,
+            250
+          ],
+          "source_column": 20,
+          "vertices": 3
+        },
+        {
+          "placements": 3,
+          "raw_indices": [
+            290,
+            292,
+            293
+          ],
+          "source_column": 21,
+          "vertices": 3
+        },
+        {
+          "placements": 3,
+          "raw_indices": [
+            322,
+            323,
+            324
+          ],
+          "source_column": 22,
+          "vertices": 3
+        },
+        {
+          "placements": 3,
+          "raw_indices": [
+            336,
+            337,
+            338
+          ],
+          "source_column": 23,
+          "vertices": 3
+        },
+        {
+          "placements": 3,
+          "raw_indices": [
+            340,
+            341,
+            342
+          ],
+          "source_column": 24,
+          "vertices": 3
+        },
+        {
+          "placements": 2,
+          "raw_indices": [
+            362,
+            363
+          ],
+          "source_column": 25,
+          "vertices": 2
+        },
+        {
+          "placements": 2,
+          "raw_indices": [
+            369,
+            370
+          ],
+          "source_column": 26,
+          "vertices": 2
+        },
+        {
+          "placements": 2,
+          "raw_indices": [
+            373,
+            374
+          ],
+          "source_column": 27,
+          "vertices": 2
+        },
+        {
+          "placements": 2,
+          "raw_indices": [
+            375,
+            376
+          ],
+          "source_column": 28,
+          "vertices": 2
+        },
+        {
+          "placements": 2,
+          "raw_indices": [
+            377,
+            378
+          ],
+          "source_column": 29,
+          "vertices": 2
+        },
+        {
+          "placements": 2,
+          "raw_indices": [
+            384,
+            385
+          ],
+          "source_column": 30,
+          "vertices": 2
+        },
+        {
+          "placements": 2,
+          "raw_indices": [
+            388,
+            389
+          ],
+          "source_column": 31,
+          "vertices": 2
+        },
+        {
+          "placements": 2,
+          "raw_indices": [
+            390,
+            391
+          ],
+          "source_column": 32,
+          "vertices": 2
+        }
+      ],
+      "held_request_nonzero": true,
+      "raw_equalities_checked": true,
+      "raw_support": 91,
+      "source_row_nonzero": true,
+      "witness": [
+        -1,
+        4
+      ]
+    },
+    {
+      "additional_markings": 2,
+      "columns": [
+        {
+          "placements": 9,
+          "raw_indices": [
+            704,
+            706,
+            719,
+            708,
+            710,
+            721,
+            730,
+            732,
+            736
+          ],
+          "source_column": 0,
+          "vertices": 3
+        },
+        {
+          "placements": 9,
+          "raw_indices": [
+            806,
+            808,
+            820,
+            810,
+            812,
+            822,
+            830,
+            832,
+            836
+          ],
+          "source_column": 1,
+          "vertices": 3
+        },
+        {
+          "placements": 9,
+          "raw_indices": [
+            852,
+            854,
+            866,
+            856,
+            858,
+            868,
+            876,
+            878,
+            882
+          ],
+          "source_column": 2,
+          "vertices": 3
+        },
+        {
+          "placements": 9,
+          "raw_indices": [
+            1025,
+            1026,
+            1036,
+            1027,
+            1028,
+            1037,
+            1043,
+            1044,
+            1048
+          ],
+          "source_column": 3,
+          "vertices": 3
+        },
+        {
+          "placements": 9,
+          "raw_indices": [
+            1021,
+            1022,
+            1034,
+            1023,
+            1024,
+            1035,
+            1041,
+            1042,
+            1047
+          ],
+          "source_column": 4,
+          "vertices": 3
+        },
+        {
+          "placements": 9,
+          "raw_indices": [
+            979,
+            980,
+            990,
+            981,
+            982,
+            991,
+            997,
+            998,
+            1002
+          ],
+          "source_column": 5,
+          "vertices": 3
+        },
+        {
+          "placements": 9,
+          "raw_indices": [
+            975,
+            976,
+            988,
+            977,
+            978,
+            989,
+            995,
+            996,
+            1001
+          ],
+          "source_column": 6,
+          "vertices": 3
+        },
+        {
+          "placements": 9,
+          "raw_indices": [
+            947,
+            948,
+            958,
+            949,
+            950,
+            959,
+            965,
+            966,
+            970
+          ],
+          "source_column": 7,
+          "vertices": 3
+        },
+        {
+          "placements": 9,
+          "raw_indices": [
+            943,
+            944,
+            956,
+            945,
+            946,
+            957,
+            963,
+            964,
+            969
+          ],
+          "source_column": 8,
+          "vertices": 3
+        },
+        {
+          "placements": 9,
+          "raw_indices": [
+            845,
+            847,
+            863,
+            849,
+            851,
+            865,
+            873,
+            875,
+            881
+          ],
+          "source_column": 9,
+          "vertices": 3
+        },
+        {
+          "placements": 9,
+          "raw_indices": [
+            841,
+            842,
+            861,
+            843,
+            844,
+            862,
+            871,
+            872,
+            880
+          ],
+          "source_column": 10,
+          "vertices": 3
+        },
+        {
+          "placements": 9,
+          "raw_indices": [
+            799,
+            801,
+            817,
+            803,
+            805,
+            819,
+            827,
+            829,
+            835
+          ],
+          "source_column": 11,
+          "vertices": 3
+        },
+        {
+          "placements": 9,
+          "raw_indices": [
+            795,
+            796,
+            815,
+            797,
+            798,
+            816,
+            825,
+            826,
+            834
+          ],
+          "source_column": 12,
+          "vertices": 3
+        },
+        {
+          "placements": 9,
+          "raw_indices": [
+            697,
+            699,
+            716,
+            701,
+            703,
+            718,
+            727,
+            729,
+            735
+          ],
+          "source_column": 13,
+          "vertices": 3
+        },
+        {
+          "placements": 9,
+          "raw_indices": [
+            690,
+            692,
+            713,
+            694,
+            696,
+            715,
+            724,
+            726,
+            734
+          ],
+          "source_column": 14,
+          "vertices": 3
+        },
+        {
+          "placements": 9,
+          "raw_indices": [
+            1029,
+            1030,
+            1038,
+            1031,
+            1032,
+            1039,
+            1045,
+            1046,
+            1049
+          ],
+          "source_column": 15,
+          "vertices": 3
+        },
+        {
+          "placements": 9,
+          "raw_indices": [
+            983,
+            984,
+            992,
+            985,
+            986,
+            993,
+            999,
+            1000,
+            1003
+          ],
+          "source_column": 16,
+          "vertices": 3
+        },
+        {
+          "placements": 9,
+          "raw_indices": [
+            951,
+            952,
+            960,
+            953,
+            954,
+            961,
+            967,
+            968,
+            971
+          ],
+          "source_column": 17,
+          "vertices": 3
+        },
+        {
+          "placements": 9,
+          "raw_indices": [
+            853,
+            855,
+            867,
+            857,
+            859,
+            869,
+            877,
+            879,
+            883
+          ],
+          "source_column": 18,
+          "vertices": 3
+        },
+        {
+          "placements": 9,
+          "raw_indices": [
+            807,
+            809,
+            821,
+            811,
+            813,
+            823,
+            831,
+            833,
+            837
+          ],
+          "source_column": 19,
+          "vertices": 3
+        },
+        {
+          "placements": 9,
+          "raw_indices": [
+            705,
+            707,
+            720,
+            709,
+            711,
+            722,
+            731,
+            733,
+            737
+          ],
+          "source_column": 20,
+          "vertices": 3
+        },
+        {
+          "placements": 9,
+          "raw_indices": [
+            887,
+            889,
+            895,
+            891,
+            893,
+            897,
+            899,
+            901,
+            902
+          ],
+          "source_column": 21,
+          "vertices": 3
+        },
+        {
+          "placements": 9,
+          "raw_indices": [
+            1007,
+            1008,
+            1012,
+            1009,
+            1010,
+            1013,
+            1015,
+            1016,
+            1017
+          ],
+          "source_column": 22,
+          "vertices": 3
+        },
+        {
+          "placements": 9,
+          "raw_indices": [
+            1053,
+            1054,
+            1058,
+            1055,
+            1056,
+            1059,
+            1061,
+            1062,
+            1063
+          ],
+          "source_column": 23,
+          "vertices": 3
+        },
+        {
+          "placements": 9,
+          "raw_indices": [
+            1067,
+            1068,
+            1072,
+            1069,
+            1070,
+            1073,
+            1075,
+            1076,
+            1077
+          ],
+          "source_column": 24,
+          "vertices": 3
+        },
+        {
+          "placements": 4,
+          "raw_indices": [
+            1115,
+            1116,
+            1117,
+            1118
+          ],
+          "source_column": 25,
+          "vertices": 2
+        },
+        {
+          "placements": 4,
+          "raw_indices": [
+            1130,
+            1131,
+            1132,
+            1133
+          ],
+          "source_column": 26,
+          "vertices": 2
+        },
+        {
+          "placements": 4,
+          "raw_indices": [
+            1138,
+            1139,
+            1140,
+            1141
+          ],
+          "source_column": 27,
+          "vertices": 2
+        },
+        {
+          "placements": 4,
+          "raw_indices": [
+            1142,
+            1143,
+            1144,
+            1145
+          ],
+          "source_column": 28,
+          "vertices": 2
+        },
+        {
+          "placements": 4,
+          "raw_indices": [
+            1146,
+            1147,
+            1148,
+            1149
+          ],
+          "source_column": 29,
+          "vertices": 2
+        },
+        {
+          "placements": 4,
+          "raw_indices": [
+            1161,
+            1162,
+            1163,
+            1164
+          ],
+          "source_column": 30,
+          "vertices": 2
+        },
+        {
+          "placements": 4,
+          "raw_indices": [
+            1169,
+            1170,
+            1171,
+            1172
+          ],
+          "source_column": 31,
+          "vertices": 2
+        },
+        {
+          "placements": 4,
+          "raw_indices": [
+            1173,
+            1174,
+            1175,
+            1176
+          ],
+          "source_column": 32,
+          "vertices": 2
+        }
+      ],
+      "held_request_nonzero": true,
+      "raw_equalities_checked": true,
+      "raw_support": 257,
+      "source_row_nonzero": true,
+      "witness": [
+        -1,
+        4
+      ]
+    }
+  ],
+  "decorated_countercheck": {
+    "class": "psi_2 on Mbar(1,2)",
+    "extra_marking": 3,
+    "rational_tail_coefficient": [
+      -1,
+      1
+    ]
+  },
+  "environment": {
+    "admcycles": "1.4",
+    "architecture": "arm64",
+    "python": "3.12.14",
+    "sage": "10.9"
+  },
+  "locus": "full_stable",
+  "normalization": "raw_gluing_pushforward",
+  "online_lookup": false,
+  "producer_source_sha256": {
+    "admcycles.py": "19e9e77c58299b387abadab76f2e1f1b1b2b63808f3dbbd0e44499a930db9a1b",
+    "stable_graph.py": "aa9b81ae274660b2d44cf474390a8b0c3a7865cfa6deaa06d005ae96dfdbd3ca",
+    "tautological_ring.py": "c9cf9b46fa8c7f2207d6d0ebc3f3565518f6f29d324bb6b280c1626a772bbd12"
+  },
+  "remaining": "Lean graph construction and geometric forgetful compatibility; this diagnostic is not a proof of Getzler vanishing or numerical GW reconstruction.",
+  "schema_version": 1,
+  "scope": "Independent incidence construction agrees with admcycles in raw coordinates for one and two additional markings. No relation quotient or zero oracle used.",
+  "script_sha256": "ed77b6fb701fdf3d8fb1409d58bf32d4a6ed9d6fba1e22642e16580201d949df",
+  "source": "environments/getzler-candidate-osx-arm64.json",
+  "source_sha256": "ccd8a8f941e9d2d503ec91e29b2be527bf0c91ce111599e6ec56118f6994ecb7",
+  "status": "passed_exploration_checks",
+  "symmetric_graph_check": {
+    "coincident_placements": 2,
+    "genus": 2,
+    "initial_markings": 0,
+    "resulting_raw_coefficient": [
+      2,
+      1
+    ]
+  }
+}

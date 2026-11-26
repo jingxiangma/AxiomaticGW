@@ -1,0 +1,969 @@
+{
+  "recorded_utc": "2026-10-02T14:45:28.954172+00:00",
+  "status": "passed_scoped_checks",
+  "scope": "Explicit 33-column Getzler encoding and normalized seven-cycle relation; claim-bound offline replay and conditional integral consumer. R2 finite-computation corpus accepted.",
+  "gates": [
+    {
+      "command": [
+        "lake",
+        "build"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 2.21,
+      "log": "/tmp/gw_getzler_validation_20261002_0.log",
+      "log_sha256": "5b3b2ca7f8c7332ff8bf3b763883fde15b09b352aa08dca7b20a2443c6414948"
+    },
+    {
+      "command": [
+        "lake",
+        "test"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 23.483,
+      "log": "/tmp/gw_getzler_validation_20261002_1.log",
+      "log_sha256": "0aa019ae00218c0c4f051fa48ea74ca0c41ba2ab95e835f0e7e61fd87b3bd769"
+    },
+    {
+      "command": [
+        "lake",
+        "lint"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 7.996,
+      "log": "/tmp/gw_getzler_validation_20261002_2.log",
+      "log_sha256": "8cb704e7f2acb11f508473f8f0a1ac324d56ac70cac206d0a94cbe2318027dce"
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "/tmp/gw_getzler_axioms_20261002.lean"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 1.41,
+      "log": "/tmp/gw_getzler_validation_20261002_3.log",
+      "log_sha256": "e4c2a41e06bbdf01ba12adb93dd3c0ac4548e6242e305266a7729c061c1485e8"
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/verify_graph_corpus.py",
+        "--verify-executable"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.087,
+      "log": "/tmp/gw_getzler_validation_20261002_4.log",
+      "log_sha256": "395199082ae0cdd8dafddb416b77fe4733cb9c25f0b06e7697a7030467dfb24a"
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.013,
+      "log": "/tmp/gw_getzler_validation_20261002_5.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "reproduction": [
+    {
+      "command": [
+        "/opt/homebrew/Caskroom/miniforge/base/envs/axiomatic-gw-sage/bin/python",
+        "scripts/search_getzler_certificate.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 2.943,
+      "compared_to": "environments/getzler-candidate-osx-arm64.json",
+      "identical_bytes": true,
+      "output_sha256": "ccd8a8f941e9d2d503ec91e29b2be527bf0c91ce111599e6ec56118f6994ecb7"
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/export_getzler_certificate.py",
+        "environments/getzler-candidate-osx-arm64.json"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.034,
+      "compared_to": "AxiomaticGWTest/Tautological/GetzlerReplay.lean",
+      "identical_bytes": true,
+      "output_sha256": "7b91d9e3ac47d934f418aa112dbc153f374e41e3f149ca9fee1202769f1ccbec"
+    }
+  ],
+  "exchange_regressions": {
+    "report": "environments/getzler-certificate-regressions.json",
+    "accepted": 4,
+    "kernel_rejected": 14,
+    "parser_rejected": 18,
+    "log_sha256": "3eacd12ea8cb355cf6acc66b13b440dee27a62c8be6a50a99cb3691143912abe"
+  },
+  "axiom_audit": [
+    {
+      "declaration": "AxiomaticGW.GetzlerGraphs.stableArity",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "AxiomaticGW.GetzlerGraphs.treeCandidate_valid",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "AxiomaticGW.GetzlerGraphs.cyclicCandidate_valid",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "AxiomaticGW.GetzlerGraphs.graph_totalGenus",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "AxiomaticGW.GetzlerGraphs.graph_codimension",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "AxiomaticGW.GetzlerGraphs.graph_automorphismCount",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "AxiomaticGW.GetzlerGraphs.normalization_eq_inverse_automorphism",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "AxiomaticGW.GetzlerGraphs.columns_injective",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "AxiomaticGW.GetzlerGraphs.orbit_eq_permutations",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "AxiomaticGW.GetzlerGraphs.orbit_card",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "AxiomaticGW.GetzlerGraphs.cycle_mem_degree",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "AxiomaticGW.GetzlerGraphs.sum_cycleCoordinates",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "AxiomaticGW.GetzlerGraphs.encoding_relation_eq",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "AxiomaticGW.GetzlerGraphs.check_requested",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "AxiomaticGW.GetzlerGraphs.row_ne_zero",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "AxiomaticGW.GetzlerGraphs.requested_ne_zero",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "AxiomaticGW.GetzlerGraphs.map_row_eq_zero",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "AxiomaticGW.GetzlerGraphs.certificate_integral_eq_zero",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "AxiomaticGW.GetzlerGraphs.exchange_integral_eq_zero",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "AxiomaticGW.GetzlerGraphs.certificate_integral_sum_eq_zero",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "AxiomaticGW.GetzlerGraphs.ancestor_integral_sum_eq_zero",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "AxiomaticGW.GetzlerReplay.incomingGraph0Valid",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "AxiomaticGW.GetzlerReplay.incomingGraph0_eq",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "AxiomaticGW.GetzlerReplay.incomingGraph1Valid",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "AxiomaticGW.GetzlerReplay.incomingGraph1_eq",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "AxiomaticGW.GetzlerReplay.incomingGraph2Valid",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "AxiomaticGW.GetzlerReplay.incomingGraph2_eq",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "AxiomaticGW.GetzlerReplay.incomingGraph3Valid",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "AxiomaticGW.GetzlerReplay.incomingGraph3_eq",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "AxiomaticGW.GetzlerReplay.incomingGraph4Valid",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "AxiomaticGW.GetzlerReplay.incomingGraph4_eq",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "AxiomaticGW.GetzlerReplay.incomingGraph5Valid",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "AxiomaticGW.GetzlerReplay.incomingGraph5_eq",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "AxiomaticGW.GetzlerReplay.incomingGraph6Valid",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "AxiomaticGW.GetzlerReplay.incomingGraph6_eq",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "AxiomaticGW.GetzlerReplay.incomingGraph7Valid",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "AxiomaticGW.GetzlerReplay.incomingGraph7_eq",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "AxiomaticGW.GetzlerReplay.incomingGraph8Valid",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "AxiomaticGW.GetzlerReplay.incomingGraph8_eq",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "AxiomaticGW.GetzlerReplay.incomingGraph9Valid",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "AxiomaticGW.GetzlerReplay.incomingGraph9_eq",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "AxiomaticGW.GetzlerReplay.incomingGraph10Valid",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "AxiomaticGW.GetzlerReplay.incomingGraph10_eq",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "AxiomaticGW.GetzlerReplay.incomingGraph11Valid",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "AxiomaticGW.GetzlerReplay.incomingGraph11_eq",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "AxiomaticGW.GetzlerReplay.incomingGraph12Valid",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "AxiomaticGW.GetzlerReplay.incomingGraph12_eq",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "AxiomaticGW.GetzlerReplay.incomingGraph13Valid",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "AxiomaticGW.GetzlerReplay.incomingGraph13_eq",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "AxiomaticGW.GetzlerReplay.incomingGraph14Valid",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "AxiomaticGW.GetzlerReplay.incomingGraph14_eq",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "AxiomaticGW.GetzlerReplay.incomingGraph15Valid",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "AxiomaticGW.GetzlerReplay.incomingGraph15_eq",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "AxiomaticGW.GetzlerReplay.incomingGraph16Valid",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "AxiomaticGW.GetzlerReplay.incomingGraph16_eq",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "AxiomaticGW.GetzlerReplay.incomingGraph17Valid",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "AxiomaticGW.GetzlerReplay.incomingGraph17_eq",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "AxiomaticGW.GetzlerReplay.incomingGraph18Valid",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "AxiomaticGW.GetzlerReplay.incomingGraph18_eq",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "AxiomaticGW.GetzlerReplay.incomingGraph19Valid",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "AxiomaticGW.GetzlerReplay.incomingGraph19_eq",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "AxiomaticGW.GetzlerReplay.incomingGraph20Valid",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "AxiomaticGW.GetzlerReplay.incomingGraph20_eq",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "AxiomaticGW.GetzlerReplay.incomingGraph21Valid",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "AxiomaticGW.GetzlerReplay.incomingGraph21_eq",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "AxiomaticGW.GetzlerReplay.incomingGraph22Valid",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "AxiomaticGW.GetzlerReplay.incomingGraph22_eq",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "AxiomaticGW.GetzlerReplay.incomingGraph23Valid",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "AxiomaticGW.GetzlerReplay.incomingGraph23_eq",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "AxiomaticGW.GetzlerReplay.incomingGraph24Valid",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "AxiomaticGW.GetzlerReplay.incomingGraph24_eq",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "AxiomaticGW.GetzlerReplay.incomingGraph25Valid",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "AxiomaticGW.GetzlerReplay.incomingGraph25_eq",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "AxiomaticGW.GetzlerReplay.incomingGraph26Valid",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "AxiomaticGW.GetzlerReplay.incomingGraph26_eq",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "AxiomaticGW.GetzlerReplay.incomingGraph27Valid",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "AxiomaticGW.GetzlerReplay.incomingGraph27_eq",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "AxiomaticGW.GetzlerReplay.incomingGraph28Valid",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "AxiomaticGW.GetzlerReplay.incomingGraph28_eq",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "AxiomaticGW.GetzlerReplay.incomingGraph29Valid",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "AxiomaticGW.GetzlerReplay.incomingGraph29_eq",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "AxiomaticGW.GetzlerReplay.incomingGraph30Valid",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "AxiomaticGW.GetzlerReplay.incomingGraph30_eq",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "AxiomaticGW.GetzlerReplay.incomingGraph31Valid",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "AxiomaticGW.GetzlerReplay.incomingGraph31_eq",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "AxiomaticGW.GetzlerReplay.incomingGraph32Valid",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "AxiomaticGW.GetzlerReplay.incomingGraph32_eq",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "AxiomaticGW.GetzlerReplay.names_correct",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "AxiomaticGW.GetzlerReplay.conversion_correct",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "AxiomaticGW.GetzlerReplay.accepted",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "AxiomaticGW.GetzlerReplay.requested_mem_relationSpan",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "AxiomaticGW.WeightedCurveClass.mem_bounded",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "AxiomaticGW.WeightedCurveClass.splittings_eq",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "AxiomaticGW.DecoratedStableGraph.isomorphic?_eq_true_iff",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "AxiomaticGW.DecoratedStableGraph.automorphismCount_eq_card",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "AxiomaticGW.DecoratedStableGraph.Iso.automorphismCount_eq",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "declaration": "AxiomaticGW.TautologicalStratum.mem_boundedStrata",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    }
+  ],
+  "continuation_baseline": {
+    "command": [
+      "lake",
+      "build",
+      "AxiomaticGW.Tautological.GetzlerRealization",
+      "AxiomaticGWTest.Tautological.GetzlerReplay"
+    ],
+    "exit_code": 0,
+    "log_sha256": "baf372fa842c1af1a2c8b483ffad5c9f28ed87d1eb7e525a15a9b008dae0b235"
+  },
+  "remaining_geometric_inputs": [
+    "GetzlerRelationGeometry",
+    "Normalized-cycle identification",
+    "Supplied cohomology, integration, and GW theory"
+  ],
+  "remaining_work": [
+    "Iterated graph contractions",
+    "Geometric surface models and finite seeds",
+    "Reconstruction, termination, uniqueness and fixed numerical corpus",
+    "GKM class-level CohFT comparison and ordinary specialization workflow"
+  ],
+  "diagnostic_boundary": "The published intersection matrix reproduced in Sage is a normalization diagnostic, not a geometric proof. Native corpus counts are supplemental execution evidence.",
+  "source_sha256": {
+    "AxiomaticGW.lean": "44236b6fb992354aab605f8a364fbbe242e5ebfeca44eff33e2e0cca17998599",
+    "AxiomaticGW/Coefficients/EffectiveCurveClass.lean": "d68ce5d44f0158b8df4cac5f347871e387ce5d17c937a04a702b5b94588819e0",
+    "AxiomaticGW/CohFT/Ancestors.lean": "d04f17b0a9a465e89d7c054a94b096cf81bf7ef22b931c61fdf73419e988c4a4",
+    "AxiomaticGW/CohFT/Basic.lean": "8e42e96505c84bea43ada16ddc0d54644c0f4416a56db03a5baf4aace2117b66",
+    "AxiomaticGW/CohFT/Constant.lean": "2e88098c585d69f20c1ed77691298ee48c994cb3b13ab53dc7fb138677690721",
+    "AxiomaticGW/CohFT/StableCurve.lean": "12aed3192ef91e3220ec059d811bc2042e83c4d697937acaff0fb378cb8ccd78",
+    "AxiomaticGW/CohFT/Tautological.lean": "09a580ac3e481df0ba90bc30637e6bed2741dfc0e6599d8463a48b42861635ed",
+    "AxiomaticGW/CohFT/Topological.lean": "41a27b98a4df8c38f0dd256c404ad6f45ed28c3cddf91c20eb1fa4048d62186a",
+    "AxiomaticGW/Combinatorics/StableArity.lean": "078a0d2cf8d7a31ed89429e6661cbd469fe4e8cc412adc3b55cccd3335724052",
+    "AxiomaticGW/Combinatorics/StableGraph.lean": "8ce882e57be59078d2aff6f58df1a9a280c807805f7eb1d600e47e89bc01ca2a",
+    "AxiomaticGW/Frobenius/Basic.lean": "c219c9f98197d6430b5a96fb0c9088fabfcd5e343008769d9da6a471f1f0472d",
+    "AxiomaticGW/Frobenius/Constructions.lean": "85353e37abba56fb40802acd39a922a2f45a6a93727c8f6518ce864db3fa501e",
+    "AxiomaticGW/GW/Basic.lean": "f55ca302b1bd3f7c09abd4c1a2b989dc04acf977be697e2776c3fddd77bd5420",
+    "AxiomaticGW/GW/Descendants/Basic.lean": "a5a0f765967ca3a39b93f476e8976fb30669aa66be7085adfd48d80f4f1a275e",
+    "AxiomaticGW/Linear/Contraction.lean": "fc378491866b7bfc81751957f5fa904a62d46d6d0b67b69e580eeb9e774fb1aa",
+    "AxiomaticGW/Linear/Copairing.lean": "bd2ff186a8c185f6549a3b52f3f15e1e7cbc4c8dbe71af46dc7515ef1cb5d787",
+    "AxiomaticGW/Linear/PerfectPairing.lean": "f79e560a89494afd439038f9dd4915f08c827db023b0dd51c5fad1c281fc13bf",
+    "AxiomaticGW/TFT/Basic.lean": "546dd0d8236ca564f589ed910058d47807cafb3c952b37d5600dddc87c04a794",
+    "AxiomaticGW/TFT/Correlator.lean": "5d5866bfc13ff00feaa53ceda514347595d0a6dd37b3d8129dc05ce6551ddb9b",
+    "AxiomaticGW/TFT/FiniteProduct.lean": "ee36e5a4a4e982fe4996dac2511d1b92142f324578a1bed9887af52cdb7a8ff2",
+    "AxiomaticGW/TFT/Frobenius.lean": "fdfcd37bf3b6bb9003b941e1048d06756ebd704c8907b08d58c69a050737c564",
+    "AxiomaticGW/TFT/Sewing.lean": "8c40554b9cff20461b50623160997e95d785dbf62d873a3d9be23af33a1ed4d5",
+    "AxiomaticGW/Tautological/BasicStrata.lean": "aaff11f4110657b96e99a223e8cea032126e21f3f12f37226d7d8094bcbc2159",
+    "AxiomaticGW/Tautological/DecoratedStableGraph.lean": "b4d0408b1cfddafe145230aad311a76577b8feafe6f2ac187cd1524a07247b60",
+    "AxiomaticGW/Tautological/Getzler.lean": "a18166e27b5c95f77c9eaa44afe59e4e5a53a6d17fa2994429239b53e04470a1",
+    "AxiomaticGW/Tautological/GetzlerGraphs.lean": "3caca7fd4cf0d0e3366b5229015eb9756ec4fe9d019cb805748071b48eaf52e3",
+    "AxiomaticGW/Tautological/GetzlerRealization.lean": "2cc561bb53679eb6235adad35f3b57a5195c8c6898e8c4ae6e765b9d2a089ab4",
+    "AxiomaticGW/Tautological/GraphBounds.lean": "69d1b5fe492e41ed328bc3d19797727f1cd1dc3885ba25de2d4fcb6decbcc679",
+    "AxiomaticGW/Tautological/GraphEnumeration.lean": "bbf9e878dc80e94b3e214e68b14e06dd370da516eb850b1c851d767cb7b01c6e",
+    "AxiomaticGW/Tautological/GraphIsomorphisms.lean": "5cd10ac37ec3390443ac5db4ef38bba59327491fa9f4708d13ea883ca258d0bf",
+    "AxiomaticGW/Tautological/LegPsi.lean": "9ca882b29db8f6dec38c510283aa9f4484839a8f1620232d20b65c61ecf3cb56",
+    "AxiomaticGW/Tautological/LegPsiRealization.lean": "e8d6bff52045adf408f2d4439b5df73b44328a88d1f51d1807ff70da58a6b95a",
+    "AxiomaticGW/Tautological/Relabel.lean": "cff8eaef48a5789c21a85d3b7f74072538494c0505069911963e85a58c0ea020",
+    "AxiomaticGW/Tautological/RelationCertificate.lean": "665e0e9ed9aa8d16d8b86b30546623d4980a07a6add20dc771aafebaceee13d4",
+    "AxiomaticGW/Tautological/StrataModule.lean": "4cbd41c258dd6e0e03a691d8de21fd9021788e03b67d1df0127742553f53112f",
+    "AxiomaticGW/Tautological/StrataRealization.lean": "ddf59186e35a331415f9cbb8713dbcfda209fbf9bf5530123a1ab87964cd308c",
+    "AxiomaticGWTest/Tautological/GetzlerReplay.lean": "7b91d9e3ac47d934f418aa112dbc153f374e41e3f149ca9fee1202769f1ccbec",
+    "README.md": "463aa8f4e4aa3ade9b29503f372af2805c8869eaf809e823db204b4b4a9a9c21",
+    "environments/getzler-candidate-osx-arm64.json": "ccd8a8f941e9d2d503ec91e29b2be527bf0c91ce111599e6ec56118f6994ecb7",
+    "environments/getzler-certificate-regressions.json": "45d98645b040914e18021617121267b843cb11953a768e39efb5c9245c0b773a",
+    "environments/graph-corpus-native-osx-arm64.json": "5d1afb4f3ff41f9707bb7c0ca1be91b601ec35373f74a576969f9ba31c32517b",
+    "environments/graph-corpus-native-osx-arm64.jsonl": "c3b12c00f6a1b4d0a45e420b6828f0786b702ec1a0be29f29fb2d8f7a5e3df09",
+    "environments/graph-corpus-native-osx-arm64.log": "81c4eec6f51efe685426dabd59e405b81f020ac5f51246866ee8675b422dc332",
+    "lake-manifest.json": "e9d145b9e7338c66d20f6039ba5937818c5a1c3e085465391d3723315fec453d",
+    "lakefile.toml": "58517e8c961d4a4fab407f323a7caa650f935a1202b30bd5becd0335fa0dafe1",
+    "lean-toolchain": "2773c517aa90b66ea8a2c52bddddf84393157797f8341be0df45294fff7fd32e",
+    "notes/milestones/GWReconstructionPlan.md": "8b9fd7ebf57b2c31c82c8958f54cd8e3a9b88f4b25137eb3279f7193ee0bdf85",
+    "notes/milestones/ImplementationProgress.md": "16712dddec306eae916180f75615c7757d73dc310194ab7f0eb225791e4cda3b",
+    "notes/references/AdmcyclesEnvironment.md": "f50d16d7951cd2bf8333c663fc760dcead8cfb266c83b4a718c9954188396b5c",
+    "scripts/export_admcycles_certificate.py": "28b9d7b9c81d10ef241f6a7a9082cf29047967ddf03ddf1d4433057b6b8d05f8",
+    "scripts/export_getzler_certificate.py": "46a3dddc65bf686d1498b4949dfd4bcef6531813f5e84872f053c1973182583b",
+    "scripts/export_wdvv_certificate.py": "d4a8487cacdb54242f86bbfc6d951c36989097e83e48d433e6036359bf47e714",
+    "scripts/search_getzler_certificate.py": "ef950fc511f54269c9a90c7f0907b3ecb791ab470a6eed79344d06a552cada2e",
+    "scripts/test_getzler_certificate.py": "d07916dcd156d712b3e1d05cff103d9889646933d7b251c858d21cd76f1ad37e",
+    "scripts/verify_graph_corpus.py": "8d4578581b2e0dd1ed354018297b0977f495040e2800ede8fef88de396e4271f"
+  },
+  "post_documentation_diff_check": {
+    "command": [
+      "git",
+      "diff",
+      "--check"
+    ],
+    "exit_code": 0
+  },
+  "goal": "Active; scope unchanged; R1 and R3-R8 incomplete."
+}

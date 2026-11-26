@@ -1,0 +1,297 @@
+{
+  "schema_version": 1,
+  "status": "targeted_repository_builds_and_14_axiom_audits_passed",
+  "recorded_at_utc": "2026-10-05T07:30:54.174070+00:00",
+  "source_pins": [
+    {
+      "path": "AxiomaticGW/Tautological/KappaRealization.lean",
+      "sha256": "6518bf302ecf6d536681411cf9c182477209e12101d976678d6b290a74c87524"
+    },
+    {
+      "path": "AxiomaticGW/GKM/Fixtures/HodgeDegreeOneRealization.lean",
+      "sha256": "29274b1ed67aae656e75292ae1fd10f37a6d4df61abe8485a33019712e1bf545"
+    },
+    {
+      "path": "AxiomaticGWTest/Tautological/KappaRealization.lean",
+      "sha256": "fb60620513703da79b5bfc18c39d8a33c0cb9cdb5aa411acde8469e0a09941b7"
+    },
+    {
+      "path": "AxiomaticGW/GKM/Fixtures/AdmcyclesHodgeStrataCandidates.lean",
+      "sha256": "244eaf08f741057b92113ee4b0c4a48b2185b55350473bc28286460ea07b651c"
+    },
+    {
+      "path": "AxiomaticGW/Tautological/LegPsiRealization.lean",
+      "sha256": "e8d6bff52045adf408f2d4439b5df73b44328a88d1f51d1807ff70da58a6b95a"
+    },
+    {
+      "path": "AxiomaticGW/Tautological/GraphEnumeration.lean",
+      "sha256": "bbf9e878dc80e94b3e214e68b14e06dd370da516eb850b1c851d767cb7b01c6e"
+    },
+    {
+      "path": "AxiomaticGW/Tautological/GluingForgetful.lean",
+      "sha256": "9a1fb2b1be6198912dfccfa1dcd5b02f7aa9c2e406576443520ad670dd217b53"
+    },
+    {
+      "path": "AxiomaticGW/CohFT/Tautological.lean",
+      "sha256": "09a580ac3e481df0ba90bc30637e6bed2741dfc0e6599d8463a48b42861635ed"
+    },
+    {
+      "path": "environments/admcycles-hodge-strata-candidates.json",
+      "sha256": "1ec7e5df068bd9edbe896dc5bf6f20f59b0e42e81896d2e4364f11efc0c6ec32"
+    },
+    {
+      "path": "lakefile.toml",
+      "sha256": "a8f203925b36cbdc419ad33fd14c7b901393a2508c33f263e667618097dd5740"
+    },
+    {
+      "path": "lake-manifest.json",
+      "sha256": "e9d145b9e7338c66d20f6039ba5937818c5a1c3e085465391d3723315fec453d"
+    },
+    {
+      "path": "lean-toolchain",
+      "sha256": "2773c517aa90b66ea8a2c52bddddf84393157797f8341be0df45294fff7fd32e"
+    }
+  ],
+  "source_binding": {
+    "actual_source": "AdmcyclesHodgeStrataCandidates.raw_0_1_degree1",
+    "columns": [
+      "rawGraph1",
+      "rawGraph2",
+      "rawGraph3",
+      "rawGraph4",
+      "rawGraph5"
+    ],
+    "coefficients": [
+      [
+        -1,
+        12
+      ],
+      [
+        1,
+        12
+      ],
+      [
+        1,
+        24
+      ],
+      [
+        1,
+        24
+      ],
+      [
+        1,
+        24
+      ]
+    ],
+    "interpretation": [
+      "external psi at original marking0",
+      "positive kappa1 generator",
+      "raw genus1 nonseparating gluing",
+      "ordered genus1/genus1 separating gluing, marked left",
+      "ordered genus1/genus1 separating gluing, marked right"
+    ],
+    "forgotten_marking": "none",
+    "surviving_marking": "some0",
+    "forgotten_psi_power": 2,
+    "extra_automorphism_division": false
+  },
+  "mathematical_effect": "Adds a positive-kappa generator compatibility proposition independent of PsiClasses, then derives its image from upstairs psi realization and fundamental normalization. Identifies all five actual raw degree-one columns and derives their complete linear image formula. Existing definitions, assumptions and public theorem statements are unchanged.",
+  "explicit_geometric_inputs": [
+    "Generator-level kappa/forgetful realization compatibility",
+    "Existing external psi realization and fundamental normalization",
+    "Existing primitive graph gluing/relabelling compatibility"
+  ],
+  "validation": {
+    "baseline": {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--memory=2048",
+        "AxiomaticGW/Tautological/LegPsiRealization.lean"
+      ],
+      "elapsed_seconds": 2.919,
+      "exit_code": 0,
+      "stdout": "",
+      "historical_log": {
+        "path": "/tmp/gw_kappa_baseline_20261005.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    "production": {
+      "command": [
+        "lake",
+        "build",
+        "AxiomaticGW.GKM.Fixtures.HodgeDegreeOneRealization"
+      ],
+      "elapsed_seconds": 3.807,
+      "exit_code": 0,
+      "stdout": "\u2714 [1812/1813] Built AxiomaticGW.Tautological.KappaRealization (1.4s)\n\u2714 [1813/1813] Built AxiomaticGW.GKM.Fixtures.HodgeDegreeOneRealization (1.3s)\nBuild completed successfully (1813 jobs).\n",
+      "historical_log": {
+        "path": "/tmp/gw_kappa_integrated_production_20261005.log",
+        "sha256": "9aed0f727f054819ae8bcc780f0f07e5f8aeea916262b2dbcbe8c2b8daff5fd1"
+      }
+    },
+    "consumer": {
+      "command": [
+        "lake",
+        "build",
+        "AxiomaticGWTest.Tautological.KappaRealization"
+      ],
+      "elapsed_seconds": 2.413,
+      "exit_code": 0,
+      "stdout": "\u2714 [1714/1714] Built AxiomaticGWTest.Tautological.KappaRealization (1.4s)\nBuild completed successfully (1714 jobs).\n",
+      "historical_log": {
+        "path": "/tmp/gw_kappa_integrated_tests_20261005.log",
+        "sha256": "91d507bcb4d87013a27236bf04b233d2794ad55e3d4be5d6cf16ac42a5297911"
+      }
+    },
+    "axiom_audit": {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--memory=2048",
+        "/tmp/gw_kappa_integrated_audit_20261005.lean"
+      ],
+      "elapsed_seconds": 2.005,
+      "exit_code": 0,
+      "stdout": "'AxiomaticGW.TautologicalStratum.kappaGenerator_codimension' depends on axioms: [propext, Classical.choice, Quot.sound]\n'AxiomaticGW.TautologicalStratum.newMarkingPsiGenerator_codimension' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGW.StrataRealization.map_kappaGenerator' depends on axioms: [propext, Classical.choice, Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeOneRealization.stable' depends on axioms: [propext, Classical.choice, Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeOneRealization.rawGraph1_eq_psi' depends on axioms: [propext, Classical.choice, Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeOneRealization.rawGraph2_eq_kappa' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeOneRealization.rawGraph3_eq_loop' depends on axioms: [propext, Classical.choice, Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeOneRealization.rawGraph4_eq_left' depends on axioms: [propext, Classical.choice, Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeOneRealization.rawGraph5_eq_right' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeOneRealization.map_raw_degree_one' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGWTest.Tautological.KappaRealization.kappa_ne_external_psi' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGWTest.Tautological.KappaRealization.forgotten_ne_old_marking' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGWTest.Tautological.KappaRealization.empty_old_markings' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGWTest.Tautological.KappaRealization.stable' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "historical_log": {
+        "path": "/tmp/gw_kappa_integrated_audit_20261005.log",
+        "sha256": "02265f180e420f246b6be1aac9c8f5c8f73342141080728a110ee5598c38bbd6"
+      }
+    },
+    "axioms_by_name": {
+      "AxiomaticGW.TautologicalStratum.kappaGenerator_codimension": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "AxiomaticGW.TautologicalStratum.newMarkingPsiGenerator_codimension": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "AxiomaticGW.StrataRealization.map_kappaGenerator": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "AxiomaticGW.GKM.HodgeDegreeOneRealization.stable": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "AxiomaticGW.GKM.HodgeDegreeOneRealization.rawGraph1_eq_psi": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "AxiomaticGW.GKM.HodgeDegreeOneRealization.rawGraph2_eq_kappa": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "AxiomaticGW.GKM.HodgeDegreeOneRealization.rawGraph3_eq_loop": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "AxiomaticGW.GKM.HodgeDegreeOneRealization.rawGraph4_eq_left": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "AxiomaticGW.GKM.HodgeDegreeOneRealization.rawGraph5_eq_right": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "AxiomaticGW.GKM.HodgeDegreeOneRealization.map_raw_degree_one": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "AxiomaticGWTest.Tautological.KappaRealization.kappa_ne_external_psi": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "AxiomaticGWTest.Tautological.KappaRealization.forgotten_ne_old_marking": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "AxiomaticGWTest.Tautological.KappaRealization.empty_old_markings": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "AxiomaticGWTest.Tautological.KappaRealization.stable": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "audit_source": "module\n\npublic import AxiomaticGW.Tautological.KappaRealization\npublic import AxiomaticGW.GKM.Fixtures.HodgeDegreeOneRealization\npublic import AxiomaticGWTest.Tautological.KappaRealization\n\n#print axioms AxiomaticGW.TautologicalStratum.kappaGenerator_codimension\n#print axioms AxiomaticGW.TautologicalStratum.newMarkingPsiGenerator_codimension\n#print axioms AxiomaticGW.StrataRealization.map_kappaGenerator\n#print axioms AxiomaticGW.GKM.HodgeDegreeOneRealization.stable\n#print axioms AxiomaticGW.GKM.HodgeDegreeOneRealization.rawGraph1_eq_psi\n#print axioms AxiomaticGW.GKM.HodgeDegreeOneRealization.rawGraph2_eq_kappa\n#print axioms AxiomaticGW.GKM.HodgeDegreeOneRealization.rawGraph3_eq_loop\n#print axioms AxiomaticGW.GKM.HodgeDegreeOneRealization.rawGraph4_eq_left\n#print axioms AxiomaticGW.GKM.HodgeDegreeOneRealization.rawGraph5_eq_right\n#print axioms AxiomaticGW.GKM.HodgeDegreeOneRealization.map_raw_degree_one\n#print axioms AxiomaticGWTest.Tautological.KappaRealization.kappa_ne_external_psi\n#print axioms AxiomaticGWTest.Tautological.KappaRealization.forgotten_ne_old_marking\n#print axioms AxiomaticGWTest.Tautological.KappaRealization.empty_old_markings\n#print axioms AxiomaticGWTest.Tautological.KappaRealization.stable\n",
+    "isolated_final": {
+      "command": [
+        "python3",
+        "/tmp/gw_blowup_public_probe_runner_20261004.py",
+        "/tmp/gw_kappa_realization_v4_20261005/public_manifest.json"
+      ],
+      "elapsed_seconds": 5.416,
+      "exit_code": 0,
+      "stdout": "{\"start\": \"AxiomaticGW/Tautological/KappaRealization.lean\", \"command\": [\"/Users/jma/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lean\", \"--memory=2048\", \"--root=/private/tmp/gw_blowup_public_probe_20261004\", \"-o\", \"/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGW/Tautological/KappaRealization.olean\", \"/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGW/Tautological/KappaRealization.lean\"]}\n{\"start\": \"AxiomaticGW/GKM/Fixtures/HodgeDegreeOneRealization.lean\", \"command\": [\"/Users/jma/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lean\", \"--memory=2048\", \"--root=/private/tmp/gw_blowup_public_probe_20261004\", \"-o\", \"/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGW/GKM/Fixtures/HodgeDegreeOneRealization.olean\", \"/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGW/GKM/Fixtures/HodgeDegreeOneRealization.lean\"]}\n{\"start\": \"AxiomaticGWTest/Tautological/KappaRealization.lean\", \"command\": [\"/Users/jma/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lean\", \"--memory=2048\", \"--root=/private/tmp/gw_blowup_public_probe_20261004\", \"-o\", \"/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGWTest/Tautological/KappaRealization.olean\", \"/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGWTest/Tautological/KappaRealization.lean\"]}\n'AxiomaticGW.TautologicalStratum.kappaGenerator_codimension' depends on axioms: [propext, Classical.choice, Quot.sound]\n'AxiomaticGW.TautologicalStratum.newMarkingPsiGenerator_codimension' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGW.StrataRealization.map_kappaGenerator' depends on axioms: [propext, Classical.choice, Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeOneRealization.stable' depends on axioms: [propext, Classical.choice, Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeOneRealization.rawGraph1_eq_psi' depends on axioms: [propext, Classical.choice, Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeOneRealization.rawGraph2_eq_kappa' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeOneRealization.rawGraph3_eq_loop' depends on axioms: [propext, Classical.choice, Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeOneRealization.rawGraph4_eq_left' depends on axioms: [propext, Classical.choice, Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeOneRealization.rawGraph5_eq_right' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeOneRealization.map_raw_degree_one' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGWTest.Tautological.KappaRealization.kappa_ne_external_psi' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGWTest.Tautological.KappaRealization.forgotten_ne_old_marking' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGWTest.Tautological.KappaRealization.empty_old_markings' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGWTest.Tautological.KappaRealization.stable' depends on axioms: [propext, Classical.choice, Quot.sound]\n{\"status\": \"passed\", \"manifest\": \"/private/tmp/gw_kappa_realization_v4_20261005/public_manifest.json\", \"commands\": [{\"command\": [\"/Users/jma/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lean\", \"--memory=2048\", \"--root=/private/tmp/gw_blowup_public_probe_20261004\", \"-o\", \"/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGW/Tautological/KappaRealization.olean\", \"/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGW/Tautological/KappaRealization.lean\"], \"exit_code\": 0, \"elapsed_seconds\": 0.813}, {\"command\": [\"/Users/jma/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lean\", \"--memory=2048\", \"--root=/private/tmp/gw_blowup_public_probe_20261004\", \"-o\", \"/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGW/GKM/Fixtures/HodgeDegreeOneRealization.olean\", \"/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGW/GKM/Fixtures/HodgeDegreeOneRealization.lean\"], \"exit_code\": 0, \"elapsed_seconds\": 1.194}, {\"command\": [\"/Users/jma/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lean\", \"--memory=2048\", \"--root=/private/tmp/gw_blowup_public_probe_20261004\", \"-o\", \"/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGWTest/Tautological/KappaRealization.olean\", \"/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGWTest/Tautological/KappaRealization.lean\"], \"exit_code\": 0, \"elapsed_seconds\": 1.663}, {\"command\": [\"/Users/jma/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lean\", \"--memory=2048\", \"--root=/private/tmp/gw_blowup_public_probe_20261004\", \"/private/tmp/gw_blowup_public_probe_20261004/PublicAudit.lean\"], \"exit_code\": 0, \"elapsed_seconds\": 1.114}], \"elapsed_seconds\": 4.785, \"isolated_root\": \"/private/tmp/gw_blowup_public_probe_20261004\", \"scope\": \"Exact source modules and separate public imports; no repository edits\"}\n",
+      "historical_log": {
+        "path": "/tmp/gw_kappa_public_v4_20261005.log",
+        "sha256": "1e3fbe9b476cc0d74f7852912a046c91623a5590e1f104b2b32be529fa45faa5"
+      }
+    },
+    "prior_failed_probes": [
+      {
+        "probe": {
+          "path": "/tmp/gw_kappa_public_v1_20261005.json",
+          "sha256": "ff633e9192c20de28a233b65abbf393fc1b1913e71185bf020cc7fdf4d016a7e"
+        },
+        "elapsed_seconds": 2.397,
+        "scope": "Unresolved dependent Pi.single type inference; no accepted production source."
+      },
+      {
+        "probe": {
+          "path": "/tmp/gw_kappa_public_v2_20261005.json",
+          "sha256": "0ab085cdbde82b5f9266c2ff8a0473371dc0a324fb8653b43388cd38427bd14d"
+        },
+        "elapsed_seconds": 3.635,
+        "scope": "Foundation passed; application stability decisions and noncomputable singleton normalization failed."
+      },
+      {
+        "probe": {
+          "path": "/tmp/gw_kappa_public_v3_20261005.json",
+          "sha256": "8270c25d00d15b335532c54b0f1a0c05daa4c69cf146f0a39ddb3e0eba6d7d00"
+        },
+        "elapsed_seconds": 5.024,
+        "scope": "Both production modules passed; public consumer referred to a private stability proof."
+      }
+    ],
+    "new_warnings": []
+  },
+  "regressions": [
+    "A positive kappa generator is distinct from equal-degree external psi",
+    "The forgotten-label psi power is distinct from the same power at an old marking",
+    "Stable genus2 with no original markings is supported"
+  ],
+  "integration": {
+    "sources_copied_exactly": true,
+    "umbrella_changed": false,
+    "umbrella_import_pending": "AxiomaticGW.GKM.Fixtures.HodgeDegreeOneRealization",
+    "full_project_build_passed": false
+  },
+  "remaining": [
+    "Satisfy the explicit compatibility inputs in actual geometry",
+    "Boundary/product and Hodge identification",
+    "Class-valued GKM CohFT construction with gluing and unit laws",
+    "Complete original numerical benchmark suites and full-project validation"
+  ]
+}

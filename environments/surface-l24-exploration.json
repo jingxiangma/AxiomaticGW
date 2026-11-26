@@ -1,0 +1,291 @@
+{
+  "admcycles": "1.4",
+  "admcycles_module_sha256": {
+    "admcycles.py": "19e9e77c58299b387abadab76f2e1f1b1b2b63808f3dbbd0e44499a930db9a1b",
+    "stable_graph.py": "aa9b81ae274660b2d44cf474390a8b0c3a7865cfa6deaa06d005ae96dfdbd3ca",
+    "tautological_ring.py": "c9cf9b46fa8c7f2207d6d0ebc3f3565518f6f29d324bb6b280c1626a772bbd12"
+  },
+  "cases": [
+    {
+      "affine_monomials": 2,
+      "affine_sha256": "81d9f2e7772e14b075fb4c1df6b0ec0efbf3a3a1f492b5d3990395abbb07e433",
+      "constant": [
+        0,
+        1
+      ],
+      "lower_genus_substitutions": 56,
+      "name": "p2_zero_HH11",
+      "partial_reconstruction_equal": true,
+      "raw_equal": true,
+      "raw_monomials": 200,
+      "raw_sha256": "c74ca1c63a2b371214f88f087f63d2d4af7146594d246cdd106b1857d3c2df6c",
+      "same_class_unknowns": 2,
+      "signed_graph_occurrences": 721,
+      "smaller_class_unknowns": 0
+    },
+    {
+      "affine_monomials": 5,
+      "affine_sha256": "1fd9506c449d3bdad23ed15f0ca0499198df737c653264f96a250298422c0a1e",
+      "constant": [
+        -1,
+        960
+      ],
+      "lower_genus_substitutions": 79,
+      "name": "p2_line_HHHP",
+      "partial_reconstruction_equal": true,
+      "raw_equal": true,
+      "raw_monomials": 180,
+      "raw_sha256": "bd3987638ccab10419bfdb3ea639a42e3188b8785f96f6212db348b372341667",
+      "same_class_unknowns": 0,
+      "signed_graph_occurrences": 721,
+      "smaller_class_unknowns": 4
+    },
+    {
+      "affine_monomials": 9,
+      "affine_sha256": "301b41403b00f01ebaa515f82fe01ec80f67c5c5c6b24ab29bac7895337b1e48",
+      "constant": [
+        -1,
+        960
+      ],
+      "lower_genus_substitutions": 84,
+      "name": "p2_line_HHHH_p",
+      "partial_reconstruction_equal": true,
+      "raw_equal": true,
+      "raw_monomials": 235,
+      "raw_sha256": "356b7f06299e99548eccf490c2fc657c76ef2e5142589f55a9a6cb9d7141cfd7",
+      "same_class_unknowns": 1,
+      "signed_graph_occurrences": 2558,
+      "smaller_class_unknowns": 7
+    },
+    {
+      "affine_monomials": 2,
+      "affine_sha256": "bb03a9facd82a0672fb4d15e1ab3a58d94bd2746fcd2f856687f9272cf1c9b4e",
+      "constant": [
+        0,
+        1
+      ],
+      "lower_genus_substitutions": 314,
+      "name": "f1_E_EEE1",
+      "partial_reconstruction_equal": true,
+      "raw_equal": true,
+      "raw_monomials": 1463,
+      "raw_sha256": "26989bc7a0535bc36ec513b1aee800f308bb472478335e75f3474d470613cf5d",
+      "same_class_unknowns": 0,
+      "signed_graph_occurrences": 721,
+      "smaller_class_unknowns": 2
+    },
+    {
+      "affine_monomials": 9,
+      "affine_sha256": "7563594b97f77cbf8b448413731ab55f5452c874aad3ae7a58055626c73280ac",
+      "constant": [
+        -1,
+        480
+      ],
+      "lower_genus_substitutions": 264,
+      "name": "f1_F_EHHH",
+      "partial_reconstruction_equal": true,
+      "raw_equal": true,
+      "raw_monomials": 935,
+      "raw_sha256": "5947b5a71e0eacba4e3b80639f9c1569f6f97784ad449e525d1b0958fd4fbb18",
+      "same_class_unknowns": 0,
+      "signed_graph_occurrences": 721,
+      "smaller_class_unknowns": 8
+    },
+    {
+      "affine_monomials": 2,
+      "affine_sha256": "53a0e200fae9ae059eac18d44261f930d768e0d97ede80a3a5420d37ab0764f3",
+      "constant": [
+        0,
+        1
+      ],
+      "lower_genus_substitutions": 671,
+      "name": "bl2_E1_E1E1E11",
+      "partial_reconstruction_equal": true,
+      "raw_equal": true,
+      "raw_monomials": 3569,
+      "raw_sha256": "2f30e3ade09a5adf4f49ebaad2da1945f81264bcb13f605248ca03e9505482c9",
+      "same_class_unknowns": 0,
+      "signed_graph_occurrences": 721,
+      "smaller_class_unknowns": 2
+    },
+    {
+      "affine_monomials": 0,
+      "affine_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "constant": [
+        0,
+        1
+      ],
+      "lower_genus_substitutions": 671,
+      "name": "bl2_E2_E1E1E11",
+      "partial_reconstruction_equal": true,
+      "raw_equal": true,
+      "raw_monomials": 3569,
+      "raw_sha256": "bdc736f9e226c6be892a2597538e6634c91539eacc23004d26ca869e72687b1d",
+      "same_class_unknowns": 0,
+      "signed_graph_occurrences": 721,
+      "smaller_class_unknowns": 0
+    },
+    {
+      "affine_monomials": 2,
+      "affine_sha256": "fcbc8d8398bd70ef8c9c0891c0d5d0a18daaee86cb9c1c1916f3d6f812ef5068",
+      "constant": [
+        0,
+        1
+      ],
+      "lower_genus_substitutions": 1017,
+      "name": "bl2_L_E1E2H1",
+      "partial_reconstruction_equal": true,
+      "raw_equal": true,
+      "raw_monomials": 8870,
+      "raw_sha256": "359b7a023812d551801d36338202c47e548cce47165ef44eb0338e8be4e47084",
+      "same_class_unknowns": 0,
+      "signed_graph_occurrences": 721,
+      "smaller_class_unknowns": 2
+    },
+    {
+      "affine_monomials": 4,
+      "affine_sha256": "c21d8330b288ed6bc70fc02fdb09dd7a025dba3032a6ab53d98dfd9adaec8ca4",
+      "constant": [
+        0,
+        1
+      ],
+      "lower_genus_substitutions": 1361,
+      "name": "bl2_E1E2_E1E1E2E2",
+      "partial_reconstruction_equal": true,
+      "raw_equal": true,
+      "raw_monomials": 11090,
+      "raw_sha256": "483de9e715453c3c601f73dbd51d8967961a83ea720be2fdf3e7bec86a98d433",
+      "same_class_unknowns": 1,
+      "signed_graph_occurrences": 721,
+      "smaller_class_unknowns": 3
+    }
+  ],
+  "lean_payload_sha256": "2fb86e1c36ce730da3d0bb70a94461f0a935aebe2cb08a076b6aa29108dc905d",
+  "lean_source_sha256": "fc2e6ab4b9c6b0371d42b4ecb55b07ac2cdeff66580b2b44693fd37f6c73726f",
+  "mutations_rejected": [
+    {
+      "detected_by": "p2_zero_HH11",
+      "mutation": "omit_703_nonprimitive_terms"
+    },
+    {
+      "detected_by": "p2_zero_HH11",
+      "mutation": "erase_node_powers"
+    },
+    {
+      "detected_by": "f1_E_EEE1",
+      "mutation": "positive_exceptional_metric"
+    },
+    {
+      "detected_by": "p2_line_HHHH_p",
+      "mutation": "omit_negative_tail_corrections"
+    },
+    {
+      "detected_by": [
+        "bl2_E1_E1E1E11",
+        "bl2_E2_E1E1E11"
+      ],
+      "mutation": "replace_full_curve_by_energy"
+    }
+  ],
+  "numerical_scope": "Lower-genus values are shared Lean algorithm outputs. Graph contraction, signed pullback and rational substitution are independently compared.",
+  "online_lookup": false,
+  "sage": "10.9",
+  "sample_matrix_ranks": [
+    {
+      "blowups": 0,
+      "curve": [
+        0
+      ],
+      "equations": 1,
+      "rank": 1,
+      "same_class_unknowns": 2
+    },
+    {
+      "blowups": 0,
+      "curve": [
+        1
+      ],
+      "equations": 2,
+      "rank": 1,
+      "same_class_unknowns": 1
+    },
+    {
+      "blowups": 1,
+      "curve": [
+        0,
+        1
+      ],
+      "equations": 1,
+      "rank": 0,
+      "same_class_unknowns": 0
+    },
+    {
+      "blowups": 1,
+      "curve": [
+        1,
+        0
+      ],
+      "equations": 1,
+      "rank": 0,
+      "same_class_unknowns": 0
+    },
+    {
+      "blowups": 2,
+      "curve": [
+        0,
+        0,
+        1
+      ],
+      "equations": 1,
+      "rank": 0,
+      "same_class_unknowns": 0
+    },
+    {
+      "blowups": 2,
+      "curve": [
+        0,
+        1,
+        0
+      ],
+      "equations": 1,
+      "rank": 0,
+      "same_class_unknowns": 0
+    },
+    {
+      "blowups": 2,
+      "curve": [
+        1,
+        0,
+        0
+      ],
+      "equations": 1,
+      "rank": 0,
+      "same_class_unknowns": 0
+    },
+    {
+      "blowups": 2,
+      "curve": [
+        1,
+        1,
+        0
+      ],
+      "equations": 1,
+      "rank": 1,
+      "same_class_unknowns": 1
+    }
+  ],
+  "schema_version": 1,
+  "scope": "Full L24 ancestor equations; no solved genus-two recursion.",
+  "source_sha256": {
+    "AxiomaticGW/Surfaces/GenusTwoCachedTerms.lean": "52bd9fbe376f8209a94e1ed1d3e62f8f44840458c08da1b26ef75ee9d2be6b9c",
+    "AxiomaticGW/Surfaces/L24.lean": "77939b253b1097086ae853b18bfcfdc1b2d9a13f7b821229e3218e3e3c9804af",
+    "AxiomaticGW/Surfaces/L24Terms.lean": "e7027eb27e14c729e1e3e30954da27cca8ece2588c922463d157c97fe12a3e48",
+    "AxiomaticGW/Tautological/Fixtures/L24Claims.lean": "5727452cb886c8d9deb5d583c7f6293b037803a431b6c74fb4e272129042a74e",
+    "AxiomaticGW/Tautological/L24GW.lean": "6bc10b6d8abad0607309fd112fb6577938b2558242c46ec8a31f3b36ae1fa488",
+    "AxiomaticGW/Tautological/L24Gluing.lean": "0bf7a0b35982faddbb69520c594a1e12061b3867121db9926daf090f278433c1",
+    "AxiomaticGW/Tautological/L24Terms.lean": "27b4f3725dd8c33f9c56cc003f309cafd8045c7112bedcaa24120ec298b0c4d3",
+    "environments/l24-normalization-exploration.json": "227cd365a71aa1377c2b6c79c5a15b3217edbaf348cab6bcc8f4ab2c543cebe7",
+    "scripts/explore_surface_bp.py": "e957c8f3f03df60cb38640aeb2718886eec4a2f837a3daaab6f0487271485d42",
+    "scripts/explore_surface_l24.py": "981f6ec72a38bae0cf41cd17918e406b9f5ef2a4577e2b96aeac5e8fbbe79e06"
+  }
+}

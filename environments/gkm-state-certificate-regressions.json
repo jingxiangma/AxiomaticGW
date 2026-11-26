@@ -1,0 +1,133 @@
+{
+  "case_count": 18,
+  "cases": [
+    {
+      "case": "baseline_all_three_surfaces",
+      "export_seconds": 0.108,
+      "gate": "kernel",
+      "proof_bytes": 123248,
+      "proof_check_seconds": 179.464,
+      "proof_sha256": "7f3e3db071e51b69c4d620867c4da672b0a9dde8f1408ef86490ce019ceaa559",
+      "result": "accepted",
+      "targets": [
+        "X0",
+        "X1",
+        "X2"
+      ]
+    },
+    {
+      "case": "equivalent_symbolic_metric_representative",
+      "export_seconds": 0.099,
+      "gate": "kernel",
+      "proof_bytes": 39666,
+      "proof_check_seconds": 28.184,
+      "proof_sha256": "17197d7ec6d3e8d314b085892748eb9d6675b7e833a81821efec2c60251dbdd2",
+      "result": "accepted",
+      "targets": [
+        "X0"
+      ]
+    },
+    {
+      "case": "regular_representative_vanishing_at_initial_sample",
+      "export_seconds": 0.08,
+      "gate": "kernel",
+      "proof_bytes": 40147,
+      "proof_check_seconds": 28.023,
+      "proof_sha256": "253696c81f581ff44b9ad274b62b4543fab00a93b342ea493e9e92cb6b48c8da",
+      "result": "accepted",
+      "targets": [
+        "X0"
+      ]
+    },
+    {
+      "case": "changed_metric",
+      "gate": "export",
+      "result": "rejected"
+    },
+    {
+      "case": "changed_inverse",
+      "gate": "export",
+      "result": "rejected"
+    },
+    {
+      "case": "changed_restrictions",
+      "gate": "export",
+      "result": "rejected"
+    },
+    {
+      "case": "zero_euler",
+      "gate": "export",
+      "result": "rejected"
+    },
+    {
+      "case": "rebind_zero_metric",
+      "gate": "kernel",
+      "result": "rejected"
+    },
+    {
+      "case": "rebind_zero_inverse",
+      "gate": "kernel",
+      "result": "rejected"
+    },
+    {
+      "case": "rebind_zero_product",
+      "gate": "kernel",
+      "result": "rejected"
+    },
+    {
+      "case": "rebind_c1",
+      "gate": "kernel",
+      "result": "rejected"
+    },
+    {
+      "case": "rebind_unit_label",
+      "gate": "kernel",
+      "result": "rejected"
+    },
+    {
+      "case": "rebind_ordinary_metric",
+      "gate": "kernel",
+      "result": "rejected"
+    },
+    {
+      "case": "rebind_ordinary_product",
+      "gate": "kernel",
+      "result": "rejected"
+    },
+    {
+      "case": "rebind_ordinary_c1",
+      "gate": "kernel",
+      "result": "rejected"
+    },
+    {
+      "case": "rebind_restriction_request",
+      "gate": "kernel",
+      "result": "rejected"
+    },
+    {
+      "case": "rebind_euler_request",
+      "gate": "kernel",
+      "result": "rejected"
+    },
+    {
+      "case": "rebind_tangent_request",
+      "gate": "kernel",
+      "result": "rejected"
+    }
+  ],
+  "final_regular_variant_recheck": {
+    "command": "lake env lean /tmp/gw_gkm_regular_denominator_variant_final.lean",
+    "proof_sha256": "0d42c25f6f3c86c404b80486b1935cec597e9f56cd54a8e0e290a387ab638f24",
+    "scope": "The denominator-conversion sequence was shortened after its unnecessary-sequence warning; the final source was replayed successfully with no warnings.",
+    "status": "passed"
+  },
+  "input_sha256": "062a32a9919fa5ddf806c353f5bb56256ca5dca31d170c246b9bfa39c3b11376",
+  "scope": "classical state tables for X0/X1/X2, equivalent representation, export rejection and kernel claim-binding rejection; no GW values",
+  "source_sha256": {
+    "AxiomaticGW/GKM/Fixtures/SurfaceFrames.lean": "62599ffc29694cebb18fa7703e3910cb20f22b5c89f136a43f729c06312c943a",
+    "AxiomaticGW/GKM/Fixtures/SurfaceReplay.lean": "7f3e3db071e51b69c4d620867c4da672b0a9dde8f1408ef86490ce019ceaa559",
+    "scripts/export_gkm_certificate.py": "54c5052adbb569fb7ed4172ac1600b04a5b31506f8a77c16dface1bbfe10f19c",
+    "scripts/test_gkm_certificate.py": "31212027daac5d46c858d680e5167e2b82361da7348805ad72521b0484acccb3"
+  },
+  "status": "passed"
+}

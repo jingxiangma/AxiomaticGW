@@ -28,6 +28,11 @@ def GWOutputDegree (dimension g inputDegree q : ℕ) (c1Degree : ℤ) : Prop :=
   (q : ℤ) + (dimension : ℤ) + c1Degree =
     (inputDegree : ℤ) + (g : ℤ) * (dimension : ℤ)
 
+/-- Complex virtual dimension of the moduli space of stable maps. Integer
+arithmetic also records negative virtual dimensions without truncation. -/
+def GWVirtualDimension (dimension g n : ℕ) (c1Degree : ℤ) : ℤ :=
+  ((dimension : ℤ) - 3) * (1 - (g : ℤ)) + c1Degree + (n : ℤ)
+
 /-- An all-genus primary Gromov--Witten theory resolved by effective numerical
 curve class. This is an axiomatic class package; it does not construct
 stable-map spaces or virtual fundamental classes. -/

@@ -1,0 +1,113 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-05",
+  "status": "targeted_repository_validation_passed_full_project_pending",
+  "scope": "Reusable root-only decomposition of the existing scalar point contraction and exact original 815-index L24 point-constant assembly; no new numerical or geometric acceptance.",
+  "source_sha256": {
+    "AxiomaticGW/Surfaces/ScalarPointRootParts.lean": "d775dc534020f823cf2153afd1fdbea79a4d5c8c834b07e1b7e5540d6294894d",
+    "AxiomaticGW/Surfaces/GenusTwoL24FullFrame.lean": "29ce7289b70c538e71c1c5414d153301a97e6cfe40c295e25f3b6291c1b1135e",
+    "AxiomaticGWTest/Surfaces/ScalarPointRootParts.lean": "462c00e4d9c54758be0094745443627b8fe59dbaf52eb2d86610b584d8efb25c"
+  },
+  "mathematical_effect": "Exact decomposition of the existing evaluator, for arbitrary targets, full curves, markings and vertex data. No mathematical hypothesis, coefficient, seed, public existing API, global instance or simp rule changed.",
+  "findings": [
+    {
+      "severity": "medium",
+      "declaration": "GluingExpression.scalarPointContraction",
+      "consequence": "A complete finite contraction can exceed the fixed memory cap even when its component values are already certified.",
+      "correction": "Expose independent root summands and prove their exact sum; preserve recursive child contraction and full relation frame."
+    }
+  ],
+  "commands": [
+    {
+      "command": [
+        "lake",
+        "build",
+        "AxiomaticGW.Surfaces.ScalarPointRootParts",
+        "AxiomaticGW.Surfaces.GenusTwoL24FullFrame",
+        "AxiomaticGWTest.Surfaces.ScalarPointRootParts"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "elapsed_seconds": 7.152,
+      "log": "/tmp/gw_scalar_point_root_parts_integrated_build_20261005.log",
+      "children_ru_maxrss_raw": 1346174976,
+      "children_ru_maxrss_unit": "bytes",
+      "resource_note": "Wrapper child usage may omit descendants on interrupted runs.",
+      "metadata_sha256": "5543749fbc01082e1db6dc3626381f79e5ed6d3dbe459d3b3a7893206884bf0f",
+      "log_sha256": "370c3754f99cd5b2df9b0b277bcc1ab404876446930245715f087aa5f404c8ac",
+      "complete_log": "\u2714 [2772/2774] Built AxiomaticGW.Surfaces.GenusTwoL24FullFrame (1.9s)\n\u2714 [2773/2774] Built AxiomaticGW.Surfaces.ScalarPointRootParts (4.1s)\n\u2714 [2774/2774] Built AxiomaticGWTest.Surfaces.ScalarPointRootParts (1.2s)\nBuild completed successfully (2774 jobs).\n"
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--memory=2048",
+        "/tmp/gw_scalar_point_root_parts_integrated_audit_20261005.lean"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "elapsed_seconds": 1.985,
+      "log": "/tmp/gw_scalar_point_root_parts_integrated_axioms_20261005.log",
+      "children_ru_maxrss_raw": 1440284672,
+      "children_ru_maxrss_unit": "bytes",
+      "resource_note": "Wrapper child usage may omit descendants on interrupted runs.",
+      "metadata_sha256": "b873ef0df44062d08b955182244b7772b392a3014215657beac27f298d755dfe",
+      "log_sha256": "75f306d1e3787e0b4539da383c7a0d5f9d586116602ec1e87580422f99c0ad3e",
+      "complete_log": "'AxiomaticGW.GluingExpression.scalarPointContraction_eq_root_parts' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGW.GluingExpression.weighted_scalarPointContraction_eq_root_parts' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGW.L24Relation.pointConstantGuarded_eq_fullFrame' depends on axioms: [propext, Classical.choice, Quot.sound]\n'AxiomaticGWTest.ScalarPointRootParts.signed_binomial_slot' depends on axioms: [propext, Classical.choice, Quot.sound]\n'AxiomaticGWTest.ScalarPointRootParts.signed_nonseparating_slot' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGWTest.ScalarPointRootParts.nonseparating_has_no_separating_slot' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGWTest.ScalarPointRootParts.relabel_preserves_slots' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n"
+    }
+  ],
+  "axiom_audit": {
+    "AxiomaticGW.GluingExpression.scalarPointContraction_eq_root_parts": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "AxiomaticGW.GluingExpression.weighted_scalarPointContraction_eq_root_parts": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "AxiomaticGW.L24Relation.pointConstantGuarded_eq_fullFrame": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "AxiomaticGWTest.ScalarPointRootParts.signed_binomial_slot": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "AxiomaticGWTest.ScalarPointRootParts.signed_nonseparating_slot": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "AxiomaticGWTest.ScalarPointRootParts.nonseparating_has_no_separating_slot": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "AxiomaticGWTest.ScalarPointRootParts.relabel_preserves_slots": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "audit_source": "module\npublic import AxiomaticGW.Surfaces.GenusTwoL24FullFrame\npublic import AxiomaticGWTest.Surfaces.ScalarPointRootParts\n\n#print axioms AxiomaticGW.GluingExpression.scalarPointContraction_eq_root_parts\n#print axioms AxiomaticGW.GluingExpression.weighted_scalarPointContraction_eq_root_parts\n#print axioms AxiomaticGW.L24Relation.pointConstantGuarded_eq_fullFrame\n#print axioms AxiomaticGWTest.ScalarPointRootParts.signed_binomial_slot\n#print axioms AxiomaticGWTest.ScalarPointRootParts.signed_nonseparating_slot\n#print axioms AxiomaticGWTest.ScalarPointRootParts.nonseparating_has_no_separating_slot\n#print axioms AxiomaticGWTest.ScalarPointRootParts.relabel_preserves_slots\n",
+  "regressions": [
+    "signed separating binomial multiplicity",
+    "signed nonseparating state",
+    "nonseparating root has no separating slot",
+    "outer relabelling retains original assignments"
+  ],
+  "development_notes": [
+    "Staged consumers required explicit decidable-label instances; theorem statements were unchanged.",
+    "A test line wrap addressed formatting before integration."
+  ],
+  "remaining": [
+    "Numerical certificates for the complete first F1 H row remain pending.",
+    "Full project build, tests and lint remain pending.",
+    "All fixed application suites and the actual class-valued semisimple GKM bridge remain required."
+  ]
+}

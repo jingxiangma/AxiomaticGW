@@ -1,6 +1,6 @@
 # Mathlib dependency and project-ownership inventory
 
-This note records which parts of M3--M10 are supplied by the pinned mathlib dependency and which parts belong to this project. It was checked against the source tree for mathlib `v4.32.0`, the revision in `lakefile.toml`, on 2026-07-16 and synchronized with the project source, including the tautological-strata layer, on 2026-07-18. The “must be built here” column is an ownership statement, not a current-status statement; each milestone section below distinguishes implemented project APIs from remaining gaps.
+This note records which parts of M3--M10 are supplied by the pinned mathlib dependency and which parts belong to this project. It was checked against the source tree for mathlib `v4.32.0`, the revision in `lakefile.toml`, on 2026-07-16 and synchronized with the project source, including the tautological-strata layer, on 2026-07-18. The M9/R0 status was updated on 2026-10-01. The “must be built here” column is an ownership statement, not a current-status statement; each milestone section below distinguishes implemented project APIs from remaining gaps.
 
 The distinction matters: a nearby general-purpose definition is not counted as an implementation of a GW-theoretic object. In particular, mathlib contains schemes, algebraic cycles, formal series, and graphs, but no stable-curve moduli spaces, CohFTs, or Gromov--Witten invariants.
 
@@ -17,7 +17,7 @@ The distinction matters: a nearby general-purpose definition is not counted as a
 | M9 potentials | `PowerSeries`, `MvPowerSeries`, `LaurentSeries`, Hahn-series summability tools, factorials, exponentials, renaming and substitution | Multivariable formal partial derivatives, the mixed completion in all variables, genus/marking bookkeeping, equations, and a completion large enough for `exp(F)` when `F` starts with `hbar^-1` |
 | M10 realization | Schemes and many morphism properties; fiber products; a basic `AlgebraicCycle` with quasicompact pushforward | Moduli stacks of curves/maps, Chow or suitable cohomology, rational equivalence, products and Gysin maps, Chern classes, perfect obstruction theories and virtual classes; initially, only an abstract virtual-GW interface should be attempted |
 
-The realistic conclusion is that mathlib supplies most of the algebraic language but almost none of the GW-specific structures or geometric theorems. The repository now implements the stated axiomatic layers through M9, with explicit optional hypotheses where geometry is independent input. A first-principles M10 remains a separate large formalization project.
+The realistic conclusion is that mathlib supplies most of the algebraic language but almost none of the GW-specific structures or geometric theorems. The repository implements the stable axiomatic layers through M9, with explicit optional hypotheses where geometry is independent input. The R0 numerical-extension repair is implemented and verified within its interface and finite-fixture scope. A first-principles M10 remains a separate large formalization project.
 
 ## Cross-cutting mathlib infrastructure
 
@@ -105,9 +105,9 @@ The implemented abstract intersection layer contains:
 - one-vertex and fundamental strata, the free rational strata module, homogeneous submodules, dimension relations, and quotients by explicitly supplied relation submodules;
 - `CertifiedStrataProduct`, which records bilinearity, grading, commutativity, associativity, and unit laws without installing an unproved product;
 - `StrataRealization`, whose kernel condition gives a verified factorization through a relation quotient;
-- the exact seven coefficients of Getzler's relation, with its orbifold normalization delegated to an explicit encoding, and the standard executable genus-zero psi-value formula.
+- the exact seven coefficients of Getzler's relation, its explicit 33-column marked graph encoding, checked orbit multiplicities and inverse-automorphism factors, claim-bound replay, explicit gluing constructions with derived GW contractions for primary insertions and arbitrary ancestor powers, finite additional-marking placements with derived forgetful realization under primitive base change, and the standard executable genus-zero psi-value formula.
 
-General pushforward composition and base change, Hodge/`lambda` classes, a native common-refinement and excess-intersection product, an explicit normalized stable-graph encoding of Getzler's seven cycles, geometric relation proofs, and a concrete realization of the quotient remain absent. Mathlib `v4.32.0` has no general Chow ring, rational equivalence, cup/cap product package for these moduli spaces, applicable Chern-class package, or integration theorem.
+General pushforward composition and base change, Hodge/`lambda` classes, a native common-refinement and excess-intersection product, geometric relation proofs, and a concrete realization of the quotient remain absent. Mathlib `v4.32.0` has no general Chow ring, rational equivalence, cup/cap product package for these moduli spaces, applicable Chern-class package, or integration theorem.
 
 ## M6. Curve-class-resolved GW axioms
 
@@ -172,7 +172,8 @@ The coefficientwise `TwoPointCalibration`, its separately assumed boundary ident
 - The project-owned `MvPowerSeries.pderiv` includes linearity, Leibniz, commutation, and iterated-derivative lemmas.
 - `FormalPotential` nests formal insertion variables over `NovikovSeries`, while `totalFreeEnergy` uses a Laurent genus expansion; every completed convolution remains coefficientwise.
 - Factorial denominators use `Algebra ℚ R` and the explicit `profileWeight` normalization.
-- Stable string/dilaton and divisor laws are separate optional packages. `UnstableDescendantConventions` extends numerical correlators to all arities and derives global correlator-level string and dilaton equations.
+- Stable string/dilaton and divisor laws are separate optional packages and remain unchanged by R0. The revised `UnstableDescendantConventions` supplies multilinear numerical unstable data with relabelling and integer virtual-dimension laws. Degree-zero unstable values are auxiliary zeros; the metric string correction and target-dependent genus-one dilaton scalar are explicit exceptional terms, and the full dilaton coefficient is signed.
+- `FullDescendantDivisorLaw` separately supplies the unstable-base divisor recurrence. Its derived `global_divisor` includes the actual integrated primary cubic at degree-zero genus zero, and an explicit genus-one linear functional. These R0 additions are implemented and verified; finite numerical fixtures check normalization and support, without supplying full geometric models.
 
 Most importantly, `F = sum_g hbar^(g-1) F_g` is Laurent-bounded below by `-1`, but `exp(F)` generally contains arbitrarily negative powers of `hbar` because of powers of the genus-zero term. Decision D13 therefore leaves `exp(F)` outside the first axiomatic endpoint. M9 implements genus potentials and the honest Laurent-series total free energy; a mixed completion for the exponential will be introduced only when a concrete theorem consumes it.
 
@@ -205,5 +206,5 @@ This is not a realization construction and does not encode boundary support for 
 5. **M6 (complete core):** require finite class antidiagonals and settle grading conventions.
 6. **M7a (complete):** implement the finite-support inclusion and completed Novikov coefficient ring.
 7. **M7b/M9a (complete for the current endpoint):** prove the beta-preserving convolution ring and the Laurent-bounded total free energy.
-8. **M8/M9 (complete axiomatic layer):** descendant families, rational-tail comparison data, stable/full generating functions, and global correlator equations are implemented as explicit optional packages.
+8. **M8/M9 (axiomatic numerical layer implemented and verified):** descendant families, rational-tail comparison data, stable/full generating functions, and corrected full numerical equations are implemented. R0 supplies explicit exceptional terms and coherence laws; geometric models remain separate obligations.
 9. **M10 (carrier only):** retain the algebraic output carrier while recording that a realization theorem requires external geometric foundations.

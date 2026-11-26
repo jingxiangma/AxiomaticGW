@@ -1,0 +1,26 @@
+{
+  "status": "passed",
+  "sage_required": false,
+  "scope": "GKM candidate input arithmetic; no geometric or Lean certificate claim",
+  "input_sha256": "062a32a9919fa5ddf806c353f5bb56256ca5dca31d170c246b9bfa39c3b11376",
+  "targets": [
+    {
+      "target": "X0",
+      "fixed_points": 3,
+      "queries": 3,
+      "symbolic_basis_metric_product_checks": "passed"
+    },
+    {
+      "target": "X1",
+      "fixed_points": 4,
+      "queries": 3,
+      "symbolic_basis_metric_product_checks": "passed"
+    },
+    {
+      "target": "X2",
+      "fixed_points": 5,
+      "queries": 3,
+      "symbolic_basis_metric_product_checks": "passed"
+    }
+  ]
+}

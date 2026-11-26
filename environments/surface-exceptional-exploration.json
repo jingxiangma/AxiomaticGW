@@ -1,0 +1,1030 @@
+{
+  "schema_version": 1,
+  "status": "exploration_only",
+  "sage_version": "10.9",
+  "python_version": "3.12.14",
+  "machine": "arm64",
+  "sources_sha256": {
+    "environments/getzler-candidate-osx-arm64.json": "ccd8a8f941e9d2d503ec91e29b2be527bf0c91ce111599e6ec56118f6994ecb7",
+    "scripts/explore_surface_getzler.py": "f34f5288ef6b3a3b0a5417038f3d5e6b3f3f24c683c359431e7f0e39816fdd37",
+    "scripts/explore_surface_reduction.py": "a0e96453cb0063df446ae9f3ddd6416e6308a8466a0d52d1a6316fb4fcf8e5e4",
+    "scripts/explore_surface_degree_zero.py": "65afcfe6fa0017a6bc5f1f1627a18c17d144b20ec4566d6e0283b972d122ba61",
+    "scripts/explore_exceptional_getzler.py": "2fa4506c7ad5651f0baa221ff13d1262eb7465e5062fab50b8afd78ffc683877",
+    "scripts/export_surface_equations.py": "c7d132e81a287b6b4ac0e865a857ecf9d6b6cf753365b725b9a45a963218f1a8"
+  },
+  "unknown_order": [
+    "N0(E;0) * N1(E;1)",
+    "N0(2E;1)",
+    "N1(2E;2)"
+  ],
+  "coefficient_matrix": [
+    [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        -9,
+        1
+      ]
+    ],
+    [
+      [
+        0,
+        1
+      ],
+      [
+        -3,
+        2
+      ],
+      [
+        0,
+        1
+      ]
+    ],
+    [
+      [
+        3,
+        1
+      ],
+      [
+        -1,
+        6
+      ],
+      [
+        3,
+        1
+      ]
+    ]
+  ],
+  "rank": 3,
+  "determinant": [
+    -81,
+    2
+  ],
+  "cases": [
+    {
+      "target": "F1",
+      "curve": [
+        2,
+        0
+      ],
+      "original_labels": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "extra_markings": 0,
+      "powers": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "column_contributions": [
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "terms": [
+        [
+          [
+            [
+              "query",
+              1,
+              [
+                2,
+                0
+              ],
+              [
+                [
+                  2,
+                  0
+                ],
+                [
+                  2,
+                  0
+                ]
+              ]
+            ]
+          ],
+          [
+            -9,
+            1
+          ]
+        ]
+      ]
+    },
+    {
+      "target": "F1",
+      "curve": [
+        2,
+        0
+      ],
+      "original_labels": [
+        1,
+        3,
+        3,
+        3
+      ],
+      "extra_markings": 0,
+      "powers": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "column_contributions": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "terms": [
+        [
+          [
+            [
+              "query",
+              0,
+              [
+                2,
+                0
+              ],
+              [
+                [
+                  2,
+                  0
+                ]
+              ]
+            ]
+          ],
+          [
+            -3,
+            2
+          ]
+        ]
+      ]
+    },
+    {
+      "target": "F1",
+      "curve": [
+        2,
+        0
+      ],
+      "original_labels": [
+        1,
+        1,
+        3,
+        3
+      ],
+      "extra_markings": 0,
+      "powers": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "column_contributions": [
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "terms": [
+        [
+          [
+            [
+              "query",
+              0,
+              [
+                1,
+                0
+              ],
+              []
+            ],
+            [
+              "query",
+              1,
+              [
+                1,
+                0
+              ],
+              [
+                [
+                  2,
+                  0
+                ]
+              ]
+            ]
+          ],
+          [
+            3,
+            1
+          ]
+        ],
+        [
+          [
+            [
+              "query",
+              0,
+              [
+                2,
+                0
+              ],
+              [
+                [
+                  2,
+                  0
+                ]
+              ]
+            ]
+          ],
+          [
+            -1,
+            6
+          ]
+        ],
+        [
+          [
+            [
+              "query",
+              1,
+              [
+                2,
+                0
+              ],
+              [
+                [
+                  2,
+                  0
+                ],
+                [
+                  2,
+                  0
+                ]
+              ]
+            ]
+          ],
+          [
+            3,
+            1
+          ]
+        ]
+      ]
+    },
+    {
+      "target": "Bl2P2",
+      "curve": [
+        2,
+        0,
+        0
+      ],
+      "original_labels": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "extra_markings": 0,
+      "powers": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "column_contributions": [
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "terms": [
+        [
+          [
+            [
+              "query",
+              1,
+              [
+                2,
+                0,
+                0
+              ],
+              [
+                [
+                  2,
+                  0
+                ],
+                [
+                  2,
+                  0
+                ]
+              ]
+            ]
+          ],
+          [
+            -9,
+            1
+          ]
+        ]
+      ]
+    },
+    {
+      "target": "Bl2P2",
+      "curve": [
+        2,
+        0,
+        0
+      ],
+      "original_labels": [
+        1,
+        3,
+        3,
+        3
+      ],
+      "extra_markings": 0,
+      "powers": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "column_contributions": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "terms": [
+        [
+          [
+            [
+              "query",
+              0,
+              [
+                2,
+                0,
+                0
+              ],
+              [
+                [
+                  2,
+                  0
+                ]
+              ]
+            ]
+          ],
+          [
+            -3,
+            2
+          ]
+        ]
+      ]
+    },
+    {
+      "target": "Bl2P2",
+      "curve": [
+        2,
+        0,
+        0
+      ],
+      "original_labels": [
+        1,
+        1,
+        3,
+        3
+      ],
+      "extra_markings": 0,
+      "powers": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "column_contributions": [
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "terms": [
+        [
+          [
+            [
+              "query",
+              0,
+              [
+                1,
+                0,
+                0
+              ],
+              []
+            ],
+            [
+              "query",
+              1,
+              [
+                1,
+                0,
+                0
+              ],
+              [
+                [
+                  2,
+                  0
+                ]
+              ]
+            ]
+          ],
+          [
+            3,
+            1
+          ]
+        ],
+        [
+          [
+            [
+              "query",
+              0,
+              [
+                2,
+                0,
+                0
+              ],
+              [
+                [
+                  2,
+                  0
+                ]
+              ]
+            ]
+          ],
+          [
+            -1,
+            6
+          ]
+        ],
+        [
+          [
+            [
+              "query",
+              1,
+              [
+                2,
+                0,
+                0
+              ],
+              [
+                [
+                  2,
+                  0
+                ],
+                [
+                  2,
+                  0
+                ]
+              ]
+            ]
+          ],
+          [
+            3,
+            1
+          ]
+        ]
+      ]
+    },
+    {
+      "target": "Bl2P2",
+      "curve": [
+        0,
+        2,
+        0
+      ],
+      "original_labels": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "extra_markings": 0,
+      "powers": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "column_contributions": [
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "terms": [
+        [
+          [
+            [
+              "query",
+              1,
+              [
+                0,
+                2,
+                0
+              ],
+              [
+                [
+                  2,
+                  0
+                ],
+                [
+                  2,
+                  0
+                ]
+              ]
+            ]
+          ],
+          [
+            -9,
+            1
+          ]
+        ]
+      ]
+    },
+    {
+      "target": "Bl2P2",
+      "curve": [
+        0,
+        2,
+        0
+      ],
+      "original_labels": [
+        1,
+        4,
+        4,
+        4
+      ],
+      "extra_markings": 0,
+      "powers": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "column_contributions": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "terms": [
+        [
+          [
+            [
+              "query",
+              0,
+              [
+                0,
+                2,
+                0
+              ],
+              [
+                [
+                  2,
+                  0
+                ]
+              ]
+            ]
+          ],
+          [
+            -3,
+            2
+          ]
+        ]
+      ]
+    },
+    {
+      "target": "Bl2P2",
+      "curve": [
+        0,
+        2,
+        0
+      ],
+      "original_labels": [
+        1,
+        1,
+        4,
+        4
+      ],
+      "extra_markings": 0,
+      "powers": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "column_contributions": [
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "terms": [
+        [
+          [
+            [
+              "query",
+              0,
+              [
+                0,
+                1,
+                0
+              ],
+              []
+            ],
+            [
+              "query",
+              1,
+              [
+                0,
+                1,
+                0
+              ],
+              [
+                [
+                  2,
+                  0
+                ]
+              ]
+            ]
+          ],
+          [
+            3,
+            1
+          ]
+        ],
+        [
+          [
+            [
+              "query",
+              0,
+              [
+                0,
+                2,
+                0
+              ],
+              [
+                [
+                  2,
+                  0
+                ]
+              ]
+            ]
+          ],
+          [
+            -1,
+            6
+          ]
+        ],
+        [
+          [
+            [
+              "query",
+              1,
+              [
+                0,
+                2,
+                0
+              ],
+              [
+                [
+                  2,
+                  0
+                ],
+                [
+                  2,
+                  0
+                ]
+              ]
+            ]
+          ],
+          [
+            3,
+            1
+          ]
+        ]
+      ]
+    }
+  ],
+  "energy_one_probes": [
+    {
+      "target": "F1",
+      "curve": [
+        1,
+        0
+      ],
+      "tested_basis_multisets": 6,
+      "nonzero_equations": []
+    },
+    {
+      "target": "Bl2P2",
+      "curve": [
+        1,
+        0,
+        0
+      ],
+      "tested_basis_multisets": 13,
+      "nonzero_equations": []
+    },
+    {
+      "target": "Bl2P2",
+      "curve": [
+        0,
+        1,
+        0
+      ],
+      "tested_basis_multisets": 13,
+      "nonzero_equations": []
+    },
+    {
+      "target": "Bl2P2",
+      "curve": [
+        0,
+        0,
+        1
+      ],
+      "tested_basis_multisets": 13,
+      "nonzero_equations": []
+    }
+  ],
+  "limitations": [
+    "Finite exact coefficient search; not a geometric GW computation.",
+    "Lean checks each selected graph expansion independently.",
+    "Geometric laws and finite seeds remain explicit inputs.",
+    "The class L is probed but its GW values are not reconstructed."
+  ]
+}

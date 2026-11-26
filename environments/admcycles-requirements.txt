@@ -1,0 +1,4 @@
+# Install with Sage's Python in the dedicated environment; conda supplies psutil.
+admcycles==1.4 \
+    --hash=sha256:273ca218a2ec2a7f87f5939989b681a5b42eb55b891630ffb2bdf227ca8eed73 \
+    --hash=sha256:f60b95ec19408c27d85a4fe695130e20e0a7a6b61f8c6011cb80828772821ff6

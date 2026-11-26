@@ -1,0 +1,181 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-05",
+  "status": "targeted_repository_validation_passed_full_project_pending",
+  "scope": "Exact first-match lookup in the unchanged ResidualCache, with original complete-query fallback and full L24 constant equality.",
+  "mathematical_effect": "No original definitions, theorem statements, hypotheses, seed values, curve keys, point-pullback signs or weights changed. No global instances or simp rules added.",
+  "source_sha256": {
+    "AxiomaticGW/Surfaces/GenusTwoResidualLookup.lean": "dc7167c0b6b52e83d3a9cb5021550164d65a180e653653ed4e8c47b99f6c8f0d",
+    "AxiomaticGWTest/Surfaces/GenusTwoResidualLookup.lean": "3e523a9093f556c2c9e91640ca6d80a5675e0ce1709ffb5f8ca78f732f23118b"
+  },
+  "commands": [
+    {
+      "command": [
+        "lake",
+        "build",
+        "AxiomaticGW.Surfaces.GenusTwoResidualLookup",
+        "AxiomaticGWTest.Surfaces.GenusTwoResidualLookup"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "elapsed_seconds": 4.869,
+      "log": "/tmp/gw_residual_lookup_integrated_build_20261005.log",
+      "children_ru_maxrss_raw": 1476526080,
+      "children_ru_maxrss_unit": "bytes",
+      "resource_note": "Wrapper child usage may omit descendants on interrupted runs.",
+      "metadata_sha256": "8482aeb8accac38811d528c2d8f83b92faa072deb39271cf01f108072b5d7be2",
+      "log_sha256": "6278a88b4392933da68d141ed1ba1b5c60014e30c864af26d781edb60b2c22bd"
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "--memory=2048",
+        "/tmp/gw_residual_lookup_integrated_audit_v2_20261005.lean"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "elapsed_seconds": 2.145,
+      "log": "/tmp/gw_residual_lookup_integrated_axioms_v2_20261005.log",
+      "children_ru_maxrss_raw": 1441611776,
+      "children_ru_maxrss_unit": "bytes",
+      "resource_note": "Wrapper child usage may omit descendants on interrupted runs.",
+      "metadata_sha256": "2ac1a910957badb0561e3392362a76bc282e1715bb37e89d4467d9f9e3b8fcca",
+      "log_sha256": "66eda4b6f251ee41afbd23150233d793776b72d7765610839ea1674407770ade"
+    }
+  ],
+  "axiom_audit": {
+    "AxiomaticGW.SurfaceGenusTwo.ResidualCache.mem_values_iff": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "AxiomaticGW.SurfaceGenusTwo.ResidualCache.matching_entries_subsingleton": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "AxiomaticGW.SurfaceGenusTwo.ResidualCache.lookup?_of_mem": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "AxiomaticGW.SurfaceGenusTwo.ResidualCache.lookup?_of_not_mem": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "AxiomaticGW.SurfaceGenusTwo.ResidualCache.lookup?_eq": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "AxiomaticGW.SurfaceGenusTwo.cachedLowerValueLookupWithPoints_eq": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "AxiomaticGW.SurfaceGenusTwo.cachedLowerValueLookupWithPoints_eq_cached": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "AxiomaticGW.SurfaceGenusTwo.constantVertexWithPointLookup_eq": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "AxiomaticGW.SurfaceGenusTwo.guardedConstantPointContractionWithPointLookup_eq": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "AxiomaticGW.L24Relation.pointConstantWithPointLookup_eq": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "AxiomaticGW.L24Relation.pointConstantWithPointLookup_eq_normalized": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "AxiomaticGWTest.Surfaces.GenusTwoResidualLookup.lookup_classical_negative": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "AxiomaticGWTest.Surfaces.GenusTwoResidualLookup.lookup_stored_zero": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "AxiomaticGWTest.Surfaces.GenusTwoResidualLookup.lookup_distinct_divisor_states": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "AxiomaticGWTest.Surfaces.GenusTwoResidualLookup.lookup_unlisted_full_class": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "AxiomaticGWTest.Surfaces.GenusTwoResidualLookup.empty_cache_lookup": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "AxiomaticGWTest.Surfaces.GenusTwoResidualLookup.scalar_hit_sign": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "AxiomaticGWTest.Surfaces.GenusTwoResidualLookup.scalar_miss_uses_backend": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "AxiomaticGWTest.Surfaces.GenusTwoResidualLookup.complete_first_h_constant": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "regressions": [
+    "negative class-zero scalar",
+    "stored zero distinguished from miss",
+    "same-class different divisor states",
+    "unlisted full curve",
+    "empty selection",
+    "actual backend fallback",
+    "complete original first F1 H constant equality without numerical evaluation"
+  ],
+  "findings": [
+    {
+      "severity": "medium",
+      "declaration": "SurfaceGenusTwo.cachedLowerValueWithPoints",
+      "consequence": "A cache hit invokes membership and full-value summation in the previous scalar cache implementation.",
+      "correction": "New upward lookup uses mathlib Multiset.find? with matching-entry uniqueness proved from the existing values_eq; explicit Option match avoids evaluating the fallback on a hit."
+    }
+  ],
+  "development_failures": [
+    {
+      "metadata": "/tmp/gw_genus_two_residual_lookup_core_public_v2_20261005.json",
+      "reason": "New independent consumer used private data in public theorem statements; repaired by exposing test data in its test namespace."
+    },
+    {
+      "metadata": "/tmp/gw_residual_lookup_integrated_axioms_20261005.json",
+      "reason": "Audit used legacy import rather than repository module/public-import convention and exceeded 2GB during import; corrected audit passed at unchanged limit."
+    },
+    {
+      "metadata": "/tmp/gw_genus_two_residual_lookup_public_v1_20261005.json",
+      "reason": "Standalone full F1 weighted term still exceeds 2GB; neither numerical term nor full positive constant accepted."
+    }
+  ],
+  "remaining": [
+    "Full-project build/test/lint pending.",
+    "The 722 native candidate values and the complete first F1 H constant require kernel replay.",
+    "All fixed application bounds, suites and class-valued GKM goal remain unchanged."
+  ]
+}

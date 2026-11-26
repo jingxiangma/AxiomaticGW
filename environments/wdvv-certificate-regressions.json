@@ -1,0 +1,141 @@
+{
+  "case_count": 30,
+  "cases": [
+    {
+      "case": "valid",
+      "kernel": "accepted",
+      "parser": "accepted"
+    },
+    {
+      "case": "equivalent_vertex_swap",
+      "kernel": "accepted",
+      "parser": "accepted"
+    },
+    {
+      "case": "equivalent_branch_swap",
+      "kernel": "accepted",
+      "parser": "accepted"
+    },
+    {
+      "case": "changed_external_partition",
+      "kernel": "rejected",
+      "parser": "accepted"
+    },
+    {
+      "case": "different_valid_kappa_column",
+      "kernel": "rejected",
+      "parser": "accepted"
+    },
+    {
+      "case": "wrong_raw_factor",
+      "kernel": "rejected",
+      "parser": "accepted"
+    },
+    {
+      "case": "changed_row_coefficient",
+      "kernel": "rejected",
+      "parser": "accepted"
+    },
+    {
+      "case": "swapped_generator_rows",
+      "kernel": "rejected",
+      "parser": "accepted"
+    },
+    {
+      "case": "changed_claim",
+      "kernel": "rejected",
+      "parser": "accepted"
+    },
+    {
+      "case": "wrong_witness",
+      "kernel": "rejected",
+      "parser": "accepted"
+    },
+    {
+      "case": "wrong_vertex_genus",
+      "kernel": "rejected",
+      "parser": "accepted"
+    },
+    {
+      "case": "disconnected_loop",
+      "kernel": "rejected",
+      "parser": "accepted"
+    },
+    {
+      "case": "extra_leg_psi",
+      "kernel": "rejected",
+      "parser": "accepted"
+    },
+    {
+      "case": "wrong_locus",
+      "parser": "rejected"
+    },
+    {
+      "case": "wrong_label_domain",
+      "parser": "rejected"
+    },
+    {
+      "case": "wrong_genus_frame",
+      "parser": "rejected"
+    },
+    {
+      "case": "wrong_label_conversion",
+      "parser": "rejected"
+    },
+    {
+      "case": "wrong_normalization",
+      "parser": "rejected"
+    },
+    {
+      "case": "wrong_generator_reference",
+      "parser": "rejected"
+    },
+    {
+      "case": "floating_coefficient",
+      "parser": "rejected"
+    },
+    {
+      "case": "boolean_coefficient",
+      "parser": "rejected"
+    },
+    {
+      "case": "boolean_label_conversion",
+      "parser": "rejected"
+    },
+    {
+      "case": "floating_label_conversion",
+      "parser": "rejected"
+    },
+    {
+      "case": "zero_denominator",
+      "parser": "rejected"
+    },
+    {
+      "case": "missing_graph_field",
+      "parser": "rejected"
+    },
+    {
+      "case": "unknown_graph_field",
+      "parser": "rejected"
+    },
+    {
+      "case": "out_of_range_edge",
+      "parser": "rejected"
+    },
+    {
+      "case": "reordered_graph_slots",
+      "parser": "rejected"
+    },
+    {
+      "case": "changed_tool_pin",
+      "parser": "rejected"
+    },
+    {
+      "case": "duplicate_json_key",
+      "parser": "rejected"
+    }
+  ],
+  "report_sha256": "44ba7410c29fd82126c188d52e0203f7aaa38139c315c7317e6221a6d905284d",
+  "scope": "Fixed marked WDVV candidate exchange and offline Lean replay; geometric boundary equality and surface GW applicability remain inputs.",
+  "status": "passed"
+}

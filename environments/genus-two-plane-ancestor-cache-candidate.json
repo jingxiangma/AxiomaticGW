@@ -1,0 +1,8174 @@
+{
+  "ancestor_rows": [
+    {
+      "key": [
+        2,
+        0,
+        2,
+        0
+      ],
+      "terms": [],
+      "value": [
+        0,
+        1
+      ]
+    },
+    {
+      "key": [
+        2,
+        0,
+        1,
+        0,
+        2,
+        0
+      ],
+      "terms": [],
+      "value": [
+        0,
+        1
+      ]
+    },
+    {
+      "key": [
+        2,
+        0,
+        1,
+        1
+      ],
+      "terms": [],
+      "value": [
+        -1,
+        960
+      ]
+    },
+    {
+      "key": [
+        2,
+        0,
+        0,
+        0,
+        2,
+        1
+      ],
+      "terms": [],
+      "value": [
+        0,
+        1
+      ]
+    },
+    {
+      "key": [
+        2,
+        0,
+        0,
+        1,
+        2,
+        0
+      ],
+      "terms": [],
+      "value": [
+        0,
+        1
+      ]
+    },
+    {
+      "key": [
+        2,
+        0,
+        1,
+        0,
+        1,
+        1
+      ],
+      "terms": [],
+      "value": [
+        0,
+        1
+      ]
+    },
+    {
+      "key": [
+        2,
+        0,
+        0,
+        2
+      ],
+      "terms": [
+        {
+          "coefficient": [
+            155,
+            22464
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            23,
+            24960
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            35,
+            11232
+          ],
+          "monomial": []
+        }
+      ],
+      "value": [
+        7,
+        640
+      ]
+    },
+    {
+      "key": [
+        2,
+        0,
+        0,
+        0,
+        1,
+        2
+      ],
+      "terms": [
+        {
+          "coefficient": [
+            1,
+            1
+          ],
+          "monomial": [
+            [
+              2,
+              0,
+              1,
+              1
+            ]
+          ]
+        }
+      ],
+      "value": [
+        -1,
+        960
+      ]
+    },
+    {
+      "key": [
+        2,
+        0,
+        0,
+        1,
+        1,
+        1
+      ],
+      "terms": [
+        {
+          "coefficient": [
+            3,
+            1
+          ],
+          "monomial": [
+            [
+              2,
+              0,
+              1,
+              1
+            ]
+          ]
+        }
+      ],
+      "value": [
+        -1,
+        320
+      ]
+    },
+    {
+      "key": [
+        2,
+        0,
+        1,
+        0,
+        0,
+        2
+      ],
+      "terms": [
+        {
+          "coefficient": [
+            1,
+            1
+          ],
+          "monomial": [
+            [
+              2,
+              0,
+              1,
+              1
+            ]
+          ]
+        }
+      ],
+      "value": [
+        -1,
+        960
+      ]
+    },
+    {
+      "key": [
+        2,
+        1,
+        2,
+        0,
+        2,
+        2
+      ],
+      "terms": [
+        {
+          "coefficient": [
+            -3,
+            8320
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -31,
+            16848
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -7,
+            33696
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            1,
+            1
+          ],
+          "monomial": [
+            [
+              2,
+              0,
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "coefficient": [
+            1,
+            56160
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            155,
+            33696
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            23,
+            24960
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            35,
+            16848
+          ],
+          "monomial": []
+        }
+      ],
+      "value": [
+        1,
+        240
+      ]
+    },
+    {
+      "key": [
+        2,
+        1,
+        2,
+        1,
+        2,
+        1
+      ],
+      "terms": [
+        {
+          "coefficient": [
+            -161,
+            8640
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -161,
+            8640
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -37,
+            5760
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -7,
+            432
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            1,
+            720
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            13,
+            1920
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            3,
+            1
+          ],
+          "monomial": [
+            [
+              2,
+              0,
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "coefficient": [
+            5,
+            108
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            67,
+            8640
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            67,
+            8640
+          ],
+          "monomial": []
+        }
+      ],
+      "value": [
+        1,
+        144
+      ]
+    },
+    {
+      "key": [
+        2,
+        1,
+        2,
+        3
+      ],
+      "terms": [
+        {
+          "coefficient": [
+            -101,
+            5728320
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -101,
+            5728320
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -101,
+            5728320
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -155,
+            22464
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -3,
+            8320
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -3,
+            8320
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -3,
+            8320
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -31,
+            16848
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -31,
+            16848
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -35,
+            11232
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -7,
+            16848
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -7,
+            16848
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -7,
+            33696
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            1,
+            56160
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            1,
+            56160
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            1,
+            56160
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            1,
+            56160
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            1,
+            56160
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            41,
+            23868
+          ],
+          "monomial": []
+        }
+      ],
+      "value": [
+        -9,
+        640
+      ]
+    },
+    {
+      "key": [
+        2,
+        0,
+        0,
+        0,
+        0,
+        3
+      ],
+      "terms": [
+        {
+          "coefficient": [
+            -35,
+            11232
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -41,
+            15912
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            155,
+            22464
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            23,
+            24960
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            35,
+            5616
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            41,
+            15912
+          ],
+          "monomial": []
+        }
+      ],
+      "value": [
+        7,
+        640
+      ]
+    },
+    {
+      "key": [
+        2,
+        0,
+        0,
+        1,
+        0,
+        2
+      ],
+      "terms": [
+        {
+          "coefficient": [
+            155,
+            11232
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            155,
+            22464
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            23,
+            24960
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            23,
+            24960
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            23,
+            24960
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            35,
+            11232
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            35,
+            5616
+          ],
+          "monomial": []
+        }
+      ],
+      "value": [
+        21,
+        640
+      ]
+    },
+    {
+      "key": [
+        2,
+        1,
+        1,
+        0,
+        2,
+        3
+      ],
+      "terms": [
+        {
+          "coefficient": [
+            -101,
+            5728320
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -101,
+            5728320
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -101,
+            5728320
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -3,
+            8320
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -3,
+            8320
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -3,
+            8320
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -31,
+            16848
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -31,
+            16848
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -35,
+            16848
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -41,
+            23868
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -7,
+            11232
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -7,
+            16848
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -7,
+            16848
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            1,
+            56160
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            1,
+            56160
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            1,
+            56160
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            1,
+            56160
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            1,
+            56160
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            23,
+            24960
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            35,
+            16848
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            41,
+            23868
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            41,
+            23868
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            7,
+            33696
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            7,
+            33696
+          ],
+          "monomial": []
+        }
+      ],
+      "value": [
+        -1,
+        320
+      ]
+    },
+    {
+      "key": [
+        2,
+        1,
+        1,
+        1,
+        2,
+        2
+      ],
+      "terms": [
+        {
+          "coefficient": [
+            -101,
+            5728320
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -101,
+            5728320
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -101,
+            5728320
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -3,
+            4160
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -3,
+            8320
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -3,
+            8320
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -3,
+            8320
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -31,
+            8424
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -31,
+            8424
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -31,
+            8424
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -7,
+            11232
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -7,
+            11232
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -7,
+            16848
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -749,
+            168480
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            1,
+            18720
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            1,
+            56160
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            1,
+            56160
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            1,
+            56160
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            1,
+            56160
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            155,
+            33696
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            155,
+            33696
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            23,
+            24960
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            23,
+            24960
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            23,
+            24960
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            35,
+            16848
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            35,
+            16848
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            41,
+            23868
+          ],
+          "monomial": []
+        }
+      ],
+      "value": [
+        -1,
+        960
+      ]
+    },
+    {
+      "key": [
+        2,
+        1,
+        1,
+        2,
+        2,
+        1
+      ],
+      "terms": [
+        {
+          "coefficient": [
+            -101,
+            5728320
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -101,
+            5728320
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -101,
+            5728320
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -3,
+            8320
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -3,
+            8320
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -3,
+            8320
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -31,
+            8424
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -31,
+            8424
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -31,
+            8424
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -7,
+            11232
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -7,
+            16848
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -7,
+            16848
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -749,
+            168480
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -749,
+            168480
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            1,
+            56160
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            1,
+            56160
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            1,
+            56160
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            1,
+            56160
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            1,
+            56160
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            155,
+            33696
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            155,
+            33696
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            23,
+            24960
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            23,
+            37440
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            23,
+            37440
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            35,
+            16848
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            35,
+            16848
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            41,
+            23868
+          ],
+          "monomial": []
+        }
+      ],
+      "value": [
+        -1,
+        192
+      ]
+    },
+    {
+      "key": [
+        2,
+        1,
+        2,
+        0,
+        1,
+        3
+      ],
+      "terms": [
+        {
+          "coefficient": [
+            -101,
+            3818880
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -101,
+            5728320
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -101,
+            5728320
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -101,
+            5728320
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -155,
+            67392
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -3,
+            4160
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -3,
+            8320
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -3,
+            8320
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -31,
+            16848
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -31,
+            16848
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -31,
+            33696
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -35,
+            11232
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -41,
+            23868
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -7,
+            11232
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -7,
+            11232
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -7,
+            16848
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            1,
+            18720
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            1,
+            56160
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            1,
+            56160
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            1,
+            56160
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            1,
+            56160
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            23,
+            24960
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            35,
+            16848
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            41,
+            15912
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            41,
+            23868
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            7,
+            33696
+          ],
+          "monomial": []
+        }
+      ],
+      "value": [
+        -7,
+        960
+      ]
+    },
+    {
+      "key": [
+        2,
+        1,
+        1,
+        4
+      ],
+      "terms": [
+        {
+          "coefficient": [
+            -41,
+            15912
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            1,
+            56160
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            1,
+            56160
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            1,
+            56160
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            1,
+            56160
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            1,
+            56160
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            1,
+            56160
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            1,
+            56160
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            1,
+            56160
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            1,
+            56160
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            101,
+            3818880
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            101,
+            3818880
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            101,
+            3818880
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            31,
+            11232
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            31,
+            11232
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            31,
+            11232
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            7,
+            11232
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            7,
+            11232
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            7,
+            11232
+          ],
+          "monomial": []
+        }
+      ],
+      "value": [
+        1,
+        128
+      ]
+    },
+    {
+      "key": [
+        2,
+        1,
+        0,
+        0,
+        2,
+        4
+      ],
+      "terms": [
+        {
+          "coefficient": [
+            -101,
+            5728320
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -101,
+            5728320
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -101,
+            5728320
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -155,
+            22464
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -3,
+            8320
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -3,
+            8320
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -3,
+            8320
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -31,
+            16848
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -31,
+            16848
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -35,
+            5616
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -41,
+            15912
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -7,
+            11232
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -7,
+            11232
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -7,
+            33696
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            1,
+            56160
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            1,
+            56160
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            1,
+            56160
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            1,
+            56160
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            1,
+            56160
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            35,
+            11232
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            41,
+            15912
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            41,
+            23868
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            7,
+            33696
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            7,
+            33696
+          ],
+          "monomial": []
+        }
+      ],
+      "value": [
+        -9,
+        640
+      ]
+    },
+    {
+      "key": [
+        2,
+        1,
+        0,
+        1,
+        2,
+        3
+      ],
+      "terms": [
+        {
+          "coefficient": [
+            -101,
+            2864160
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -101,
+            2864160
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -101,
+            2864160
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -101,
+            5728320
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -101,
+            5728320
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -101,
+            5728320
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -155,
+            11232
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -155,
+            22464
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -3,
+            4160
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -3,
+            4160
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -3,
+            4160
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -3,
+            8320
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -3,
+            8320
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -3,
+            8320
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -31,
+            5616
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -31,
+            5616
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -35,
+            11232
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -35,
+            5616
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -7,
+            11232
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -7,
+            5616
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -7,
+            5616
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            1,
+            18720
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            1,
+            18720
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            1,
+            18720
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            1,
+            18720
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            1,
+            18720
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            41,
+            11934
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            41,
+            23868
+          ],
+          "monomial": []
+        }
+      ],
+      "value": [
+        -27,
+        640
+      ]
+    },
+    {
+      "key": [
+        2,
+        1,
+        0,
+        2,
+        2,
+        2
+      ],
+      "terms": [
+        {
+          "coefficient": [
+            -101,
+            5728320
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -101,
+            5728320
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -101,
+            5728320
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -155,
+            11232
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -155,
+            22464
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -23,
+            24960
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -23,
+            24960
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -3,
+            8320
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -3,
+            8320
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -3,
+            8320
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -31,
+            5616
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -31,
+            5616
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -35,
+            11232
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -35,
+            5616
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -7,
+            11232
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -7,
+            11232
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -7,
+            33696
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -749,
+            168480
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -749,
+            168480
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            1,
+            56160
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            1,
+            56160
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            1,
+            56160
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            1,
+            56160
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            1,
+            56160
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            41,
+            23868
+          ],
+          "monomial": []
+        }
+      ],
+      "value": [
+        -101,
+        1920
+      ]
+    },
+    {
+      "key": [
+        2,
+        1,
+        2,
+        1,
+        0,
+        3
+      ],
+      "terms": [
+        {
+          "coefficient": [
+            -1,
+            4160
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -1,
+            4160
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -1,
+            4160
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -101,
+            2864160
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -101,
+            2864160
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -101,
+            2864160
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -101,
+            3818880
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -101,
+            3818880
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -101,
+            3818880
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -155,
+            11232
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -155,
+            33696
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -155,
+            33696
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -155,
+            33696
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -3,
+            4160
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -3,
+            4160
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -3,
+            4160
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -35,
+            16848
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -35,
+            5616
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -7,
+            11232
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -7,
+            5616
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -7,
+            5616
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            1,
+            18720
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            1,
+            18720
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            1,
+            18720
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            1,
+            18720
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            1,
+            18720
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            31,
+            33696
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            41,
+            11934
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            41,
+            15912
+          ],
+          "monomial": []
+        }
+      ],
+      "value": [
+        -67,
+        1920
+      ]
+    },
+    {
+      "key": [
+        2,
+        1,
+        2,
+        0,
+        0,
+        4
+      ],
+      "terms": [
+        {
+          "coefficient": [
+            -101,
+            11456640
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -101,
+            11456640
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -101,
+            11456640
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -155,
+            22464
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -3,
+            8320
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -3,
+            8320
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -3,
+            8320
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -31,
+            33696
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -31,
+            33696
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -35,
+            5616
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -35,
+            67392
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -41,
+            15912
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -7,
+            22464
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            1,
+            18720
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            1,
+            28080
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            1,
+            28080
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            1,
+            28080
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            1,
+            28080
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            101,
+            3818880
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            31,
+            8424
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            35,
+            11232
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            41,
+            23868
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            41,
+            47736
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            7,
+            22464
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            7,
+            22464
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            7,
+            22464
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            7,
+            67392
+          ],
+          "monomial": []
+        }
+      ],
+      "value": [
+        -17,
+        1920
+      ]
+    },
+    {
+      "key": [
+        2,
+        1,
+        1,
+        0,
+        1,
+        4
+      ],
+      "terms": [
+        {
+          "coefficient": [
+            -155,
+            22464
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -3,
+            8320
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -3,
+            8320
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -3,
+            8320
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -35,
+            5616
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -41,
+            15912
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -41,
+            47736
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -7,
+            67392
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -7,
+            67392
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -7,
+            67392
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            1,
+            28080
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            1,
+            28080
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            1,
+            28080
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            1,
+            28080
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            1,
+            28080
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            1,
+            56160
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            1,
+            56160
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            1,
+            56160
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            1,
+            56160
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            101,
+            11456640
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            101,
+            11456640
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            101,
+            11456640
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            31,
+            11232
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            31,
+            33696
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            31,
+            33696
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            35,
+            11232
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            35,
+            67392
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            41,
+            15912
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            7,
+            22464
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            7,
+            22464
+          ],
+          "monomial": []
+        }
+      ],
+      "value": [
+        -1,
+        160
+      ]
+    },
+    {
+      "key": [
+        2,
+        1,
+        1,
+        1,
+        1,
+        3
+      ],
+      "terms": [
+        {
+          "coefficient": [
+            -101,
+            3818880
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -101,
+            3818880
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -101,
+            3818880
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -101,
+            5728320
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -101,
+            5728320
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -101,
+            5728320
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -155,
+            11232
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -155,
+            22464
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -3,
+            4160
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -3,
+            4160
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -3,
+            4160
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -3,
+            8320
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -3,
+            8320
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -3,
+            8320
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -31,
+            33696
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -31,
+            33696
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -35,
+            11232
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -35,
+            5616
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -7,
+            11232
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -7,
+            11232
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            1,
+            14040
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            1,
+            14040
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            1,
+            14040
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            1,
+            14040
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            1,
+            28080
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            1,
+            28080
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            1,
+            28080
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            1,
+            28080
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            1,
+            9360
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            155,
+            33696
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            41,
+            15912
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            41,
+            23868
+          ],
+          "monomial": []
+        }
+      ],
+      "value": [
+        -13,
+        480
+      ]
+    },
+    {
+      "key": [
+        2,
+        1,
+        1,
+        2,
+        1,
+        2
+      ],
+      "terms": [
+        {
+          "coefficient": [
+            -155,
+            11232
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -155,
+            22464
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -23,
+            24960
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -23,
+            24960
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -3,
+            8320
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -3,
+            8320
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -3,
+            8320
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -31,
+            33696
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -31,
+            33696
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -35,
+            11232
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -35,
+            5616
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -41,
+            47736
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -7,
+            67392
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -749,
+            112320
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            1,
+            28080
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            1,
+            28080
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            1,
+            28080
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            1,
+            28080
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            1,
+            28080
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            1,
+            56160
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            1,
+            56160
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            1,
+            56160
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            1,
+            56160
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            101,
+            11456640
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            101,
+            11456640
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            101,
+            11456640
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            155,
+            33696
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            35,
+            67392
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            7,
+            22464
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            749,
+            336960
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            749,
+            336960
+          ],
+          "monomial": []
+        }
+      ],
+      "value": [
+        -31,
+        960
+      ]
+    },
+    {
+      "key": [
+        2,
+        1,
+        0,
+        5
+      ],
+      "terms": [],
+      "value": [
+        0,
+        1
+      ]
+    },
+    {
+      "key": [
+        2,
+        1,
+        0,
+        0,
+        1,
+        5
+      ],
+      "terms": [
+        {
+          "coefficient": [
+            -41,
+            15912
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -7,
+            22464
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -7,
+            22464
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -7,
+            22464
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            1,
+            56160
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            1,
+            56160
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            1,
+            56160
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            1,
+            56160
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            1,
+            56160
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            1,
+            56160
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            1,
+            56160
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            1,
+            56160
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            1,
+            56160
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            101,
+            3818880
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            101,
+            3818880
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            101,
+            3818880
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            31,
+            11232
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            31,
+            11232
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            31,
+            11232
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            7,
+            7488
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            7,
+            7488
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            7,
+            7488
+          ],
+          "monomial": []
+        }
+      ],
+      "value": [
+        1,
+        128
+      ]
+    },
+    {
+      "key": [
+        2,
+        1,
+        0,
+        1,
+        1,
+        4
+      ],
+      "terms": [
+        {
+          "coefficient": [
+            -41,
+            15912
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -41,
+            7956
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            1,
+            18720
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            1,
+            18720
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            1,
+            18720
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            1,
+            18720
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            1,
+            18720
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            1,
+            18720
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            1,
+            18720
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            1,
+            18720
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            1,
+            18720
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            101,
+            1909440
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            101,
+            1909440
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            101,
+            1909440
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            101,
+            3818880
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            101,
+            3818880
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            101,
+            3818880
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            31,
+            3744
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            31,
+            3744
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            31,
+            3744
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            7,
+            3744
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            7,
+            3744
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            7,
+            3744
+          ],
+          "monomial": []
+        }
+      ],
+      "value": [
+        3,
+        128
+      ]
+    },
+    {
+      "key": [
+        2,
+        1,
+        0,
+        2,
+        1,
+        3
+      ],
+      "terms": [
+        {
+          "coefficient": [
+            -41,
+            15912
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            1,
+            56160
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            1,
+            56160
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            1,
+            56160
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            1,
+            56160
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            1,
+            56160
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            1,
+            56160
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            1,
+            56160
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            1,
+            56160
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            1,
+            56160
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            101,
+            3818880
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            101,
+            3818880
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            101,
+            3818880
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            31,
+            3744
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            31,
+            3744
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            31,
+            3744
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            7,
+            7488
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            7,
+            7488
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            7,
+            7488
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            749,
+            112320
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            749,
+            112320
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            749,
+            112320
+          ],
+          "monomial": []
+        }
+      ],
+      "value": [
+        29,
+        640
+      ]
+    },
+    {
+      "key": [
+        2,
+        1,
+        1,
+        2,
+        0,
+        3
+      ],
+      "terms": [
+        {
+          "coefficient": [
+            -41,
+            15912
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            1,
+            56160
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            1,
+            56160
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            1,
+            56160
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            1,
+            56160
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            1,
+            56160
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            1,
+            56160
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            1,
+            56160
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            1,
+            56160
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            1,
+            56160
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            101,
+            3818880
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            101,
+            3818880
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            101,
+            3818880
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            31,
+            3744
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            31,
+            3744
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            31,
+            3744
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            7,
+            7488
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            7,
+            7488
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            7,
+            7488
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            749,
+            112320
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            749,
+            112320
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            749,
+            112320
+          ],
+          "monomial": []
+        }
+      ],
+      "value": [
+        29,
+        640
+      ]
+    },
+    {
+      "key": [
+        2,
+        1,
+        1,
+        1,
+        0,
+        4
+      ],
+      "terms": [
+        {
+          "coefficient": [
+            -41,
+            15912
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -41,
+            7956
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            1,
+            18720
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            1,
+            18720
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            1,
+            18720
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            1,
+            18720
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            1,
+            18720
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            1,
+            18720
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            1,
+            18720
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            1,
+            18720
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            1,
+            18720
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            101,
+            1909440
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            101,
+            1909440
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            101,
+            1909440
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            101,
+            3818880
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            101,
+            3818880
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            101,
+            3818880
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            31,
+            3744
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            31,
+            3744
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            31,
+            3744
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            7,
+            3744
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            7,
+            3744
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            7,
+            3744
+          ],
+          "monomial": []
+        }
+      ],
+      "value": [
+        3,
+        128
+      ]
+    },
+    {
+      "key": [
+        2,
+        1,
+        1,
+        0,
+        0,
+        5
+      ],
+      "terms": [
+        {
+          "coefficient": [
+            -41,
+            15912
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -7,
+            22464
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -7,
+            22464
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            -7,
+            22464
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            1,
+            56160
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            1,
+            56160
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            1,
+            56160
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            1,
+            56160
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            1,
+            56160
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            1,
+            56160
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            1,
+            56160
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            1,
+            56160
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            1,
+            56160
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            101,
+            3818880
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            101,
+            3818880
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            101,
+            3818880
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            31,
+            11232
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            31,
+            11232
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            31,
+            11232
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            7,
+            7488
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            7,
+            7488
+          ],
+          "monomial": []
+        },
+        {
+          "coefficient": [
+            7,
+            7488
+          ],
+          "monomial": []
+        }
+      ],
+      "value": [
+        1,
+        128
+      ]
+    },
+    {
+      "key": [
+        2,
+        1,
+        0,
+        0,
+        0,
+        6
+      ],
+      "terms": [],
+      "value": [
+        0,
+        1
+      ]
+    },
+    {
+      "key": [
+        2,
+        1,
+        0,
+        1,
+        0,
+        5
+      ],
+      "terms": [],
+      "value": [
+        0,
+        1
+      ]
+    },
+    {
+      "key": [
+        2,
+        1,
+        0,
+        2,
+        0,
+        4
+      ],
+      "terms": [],
+      "value": [
+        0,
+        1
+      ]
+    },
+    {
+      "key": [
+        2,
+        1,
+        0,
+        3,
+        0,
+        3
+      ],
+      "terms": [],
+      "value": [
+        0,
+        1
+      ]
+    }
+  ],
+  "kind": "axiomatic_gw.plane_genus_two_ancestor_cache",
+  "proof_status": "candidate_data",
+  "requests": [
+    {
+      "query": {
+        "curve": [
+          1
+        ],
+        "genus": 2,
+        "insertions": [
+          [
+            0,
+            5
+          ]
+        ]
+      },
+      "terms": [
+        {
+          "coefficient": [
+            1,
+            1
+          ],
+          "monomial": [
+            [
+              2,
+              0,
+              0,
+              2
+            ]
+          ]
+        },
+        {
+          "coefficient": [
+            1,
+            1
+          ],
+          "monomial": [
+            [
+              2,
+              1,
+              0,
+              5
+            ]
+          ]
+        },
+        {
+          "coefficient": [
+            3,
+            1
+          ],
+          "monomial": [
+            [
+              2,
+              0,
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "coefficient": [
+            6,
+            1
+          ],
+          "monomial": [
+            [
+              2,
+              0,
+              2,
+              0
+            ]
+          ]
+        }
+      ],
+      "value": [
+        1,
+        128
+      ]
+    },
+    {
+      "query": {
+        "curve": [
+          1
+        ],
+        "genus": 2,
+        "insertions": [
+          [
+            1,
+            4
+          ]
+        ]
+      },
+      "terms": [
+        {
+          "coefficient": [
+            -1,
+            1
+          ],
+          "monomial": [
+            [
+              2,
+              0,
+              0,
+              2
+            ]
+          ]
+        },
+        {
+          "coefficient": [
+            -2,
+            1
+          ],
+          "monomial": [
+            [
+              2,
+              0,
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "coefficient": [
+            -3,
+            1
+          ],
+          "monomial": [
+            [
+              2,
+              0,
+              2,
+              0
+            ]
+          ]
+        },
+        {
+          "coefficient": [
+            1,
+            1
+          ],
+          "monomial": [
+            [
+              2,
+              1,
+              1,
+              4
+            ]
+          ]
+        }
+      ],
+      "value": [
+        -1,
+        960
+      ]
+    },
+    {
+      "query": {
+        "curve": [
+          1
+        ],
+        "genus": 2,
+        "insertions": [
+          [
+            2,
+            3
+          ]
+        ]
+      },
+      "terms": [
+        {
+          "coefficient": [
+            1,
+            1
+          ],
+          "monomial": [
+            [
+              2,
+              0,
+              0,
+              2
+            ]
+          ]
+        },
+        {
+          "coefficient": [
+            1,
+            1
+          ],
+          "monomial": [
+            [
+              2,
+              0,
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "coefficient": [
+            1,
+            1
+          ],
+          "monomial": [
+            [
+              2,
+              0,
+              2,
+              0
+            ]
+          ]
+        },
+        {
+          "coefficient": [
+            1,
+            1
+          ],
+          "monomial": [
+            [
+              2,
+              1,
+              2,
+              3
+            ]
+          ]
+        }
+      ],
+      "value": [
+        -1,
+        240
+      ]
+    },
+    {
+      "query": {
+        "curve": [
+          1
+        ],
+        "genus": 2,
+        "insertions": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            6
+          ]
+        ]
+      },
+      "terms": [
+        {
+          "coefficient": [
+            1,
+            1
+          ],
+          "monomial": [
+            [
+              2,
+              0,
+              0,
+              0,
+              0,
+              3
+            ]
+          ]
+        },
+        {
+          "coefficient": [
+            1,
+            1
+          ],
+          "monomial": [
+            [
+              2,
+              1,
+              0,
+              0,
+              0,
+              6
+            ]
+          ]
+        },
+        {
+          "coefficient": [
+            3,
+            1
+          ],
+          "monomial": [
+            [
+              2,
+              0,
+              0,
+              0,
+              1,
+              2
+            ]
+          ]
+        },
+        {
+          "coefficient": [
+            6,
+            1
+          ],
+          "monomial": [
+            [
+              2,
+              0,
+              0,
+              0,
+              2,
+              1
+            ]
+          ]
+        }
+      ],
+      "value": [
+        1,
+        128
+      ]
+    },
+    {
+      "query": {
+        "curve": [
+          1
+        ],
+        "genus": 2,
+        "insertions": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            5
+          ]
+        ]
+      },
+      "terms": [
+        {
+          "coefficient": [
+            1,
+            1
+          ],
+          "monomial": [
+            [
+              2,
+              0,
+              0,
+              1,
+              0,
+              2
+            ]
+          ]
+        },
+        {
+          "coefficient": [
+            1,
+            1
+          ],
+          "monomial": [
+            [
+              2,
+              1,
+              0,
+              1,
+              0,
+              5
+            ]
+          ]
+        },
+        {
+          "coefficient": [
+            3,
+            1
+          ],
+          "monomial": [
+            [
+              2,
+              0,
+              0,
+              1,
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "coefficient": [
+            6,
+            1
+          ],
+          "monomial": [
+            [
+              2,
+              0,
+              0,
+              1,
+              2,
+              0
+            ]
+          ]
+        }
+      ],
+      "value": [
+        3,
+        128
+      ]
+    },
+    {
+      "query": {
+        "curve": [
+          1
+        ],
+        "genus": 2,
+        "insertions": [
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            4
+          ]
+        ]
+      },
+      "terms": [
+        {
+          "coefficient": [
+            1,
+            1
+          ],
+          "monomial": [
+            [
+              2,
+              0,
+              0,
+              1,
+              0,
+              2
+            ]
+          ]
+        },
+        {
+          "coefficient": [
+            1,
+            1
+          ],
+          "monomial": [
+            [
+              2,
+              1,
+              0,
+              2,
+              0,
+              4
+            ]
+          ]
+        },
+        {
+          "coefficient": [
+            3,
+            1
+          ],
+          "monomial": [
+            [
+              2,
+              0,
+              1,
+              0,
+              0,
+              2
+            ]
+          ]
+        }
+      ],
+      "value": [
+        19,
+        640
+      ]
+    },
+    {
+      "query": {
+        "curve": [
+          1
+        ],
+        "genus": 2,
+        "insertions": [
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            3
+          ]
+        ]
+      },
+      "terms": [
+        {
+          "coefficient": [
+            1,
+            1
+          ],
+          "monomial": [
+            [
+              2,
+              0,
+              0,
+              0,
+              0,
+              3
+            ]
+          ]
+        },
+        {
+          "coefficient": [
+            1,
+            1
+          ],
+          "monomial": [
+            [
+              2,
+              0,
+              0,
+              0,
+              0,
+              3
+            ]
+          ]
+        },
+        {
+          "coefficient": [
+            1,
+            1
+          ],
+          "monomial": [
+            [
+              2,
+              1,
+              0,
+              3,
+              0,
+              3
+            ]
+          ]
+        }
+      ],
+      "value": [
+        7,
+        320
+      ]
+    },
+    {
+      "query": {
+        "curve": [
+          1
+        ],
+        "genus": 2,
+        "insertions": [
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            2
+          ]
+        ]
+      },
+      "terms": [
+        {
+          "coefficient": [
+            1,
+            1
+          ],
+          "monomial": [
+            [
+              2,
+              0,
+              0,
+              1,
+              0,
+              2
+            ]
+          ]
+        },
+        {
+          "coefficient": [
+            1,
+            1
+          ],
+          "monomial": [
+            [
+              2,
+              1,
+              0,
+              2,
+              0,
+              4
+            ]
+          ]
+        },
+        {
+          "coefficient": [
+            3,
+            1
+          ],
+          "monomial": [
+            [
+              2,
+              0,
+              1,
+              0,
+              0,
+              2
+            ]
+          ]
+        }
+      ],
+      "value": [
+        19,
+        640
+      ]
+    },
+    {
+      "query": {
+        "curve": [
+          1
+        ],
+        "genus": 2,
+        "insertions": [
+          [
+            0,
+            5
+          ],
+          [
+            0,
+            1
+          ]
+        ]
+      },
+      "terms": [
+        {
+          "coefficient": [
+            1,
+            1
+          ],
+          "monomial": [
+            [
+              2,
+              0,
+              0,
+              1,
+              0,
+              2
+            ]
+          ]
+        },
+        {
+          "coefficient": [
+            1,
+            1
+          ],
+          "monomial": [
+            [
+              2,
+              1,
+              0,
+              1,
+              0,
+              5
+            ]
+          ]
+        },
+        {
+          "coefficient": [
+            3,
+            1
+          ],
+          "monomial": [
+            [
+              2,
+              0,
+              0,
+              1,
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "coefficient": [
+            6,
+            1
+          ],
+          "monomial": [
+            [
+              2,
+              0,
+              0,
+              1,
+              2,
+              0
+            ]
+          ]
+        }
+      ],
+      "value": [
+        3,
+        128
+      ]
+    },
+    {
+      "query": {
+        "curve": [
+          1
+        ],
+        "genus": 2,
+        "insertions": [
+          [
+            0,
+            6
+          ],
+          [
+            0,
+            0
+          ]
+        ]
+      },
+      "terms": [
+        {
+          "coefficient": [
+            1,
+            1
+          ],
+          "monomial": [
+            [
+              2,
+              0,
+              0,
+              0,
+              0,
+              3
+            ]
+          ]
+        },
+        {
+          "coefficient": [
+            1,
+            1
+          ],
+          "monomial": [
+            [
+              2,
+              1,
+              0,
+              0,
+              0,
+              6
+            ]
+          ]
+        },
+        {
+          "coefficient": [
+            3,
+            1
+          ],
+          "monomial": [
+            [
+              2,
+              0,
+              0,
+              0,
+              1,
+              2
+            ]
+          ]
+        },
+        {
+          "coefficient": [
+            6,
+            1
+          ],
+          "monomial": [
+            [
+              2,
+              0,
+              0,
+              0,
+              2,
+              1
+            ]
+          ]
+        }
+      ],
+      "value": [
+        1,
+        128
+      ]
+    },
+    {
+      "query": {
+        "curve": [
+          1
+        ],
+        "genus": 2,
+        "insertions": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            5
+          ]
+        ]
+      },
+      "terms": [
+        {
+          "coefficient": [
+            -1,
+            1
+          ],
+          "monomial": [
+            [
+              2,
+              0,
+              0,
+              0,
+              0,
+              3
+            ]
+          ]
+        },
+        {
+          "coefficient": [
+            -2,
+            1
+          ],
+          "monomial": [
+            [
+              2,
+              0,
+              0,
+              0,
+              1,
+              2
+            ]
+          ]
+        },
+        {
+          "coefficient": [
+            -3,
+            1
+          ],
+          "monomial": [
+            [
+              2,
+              0,
+              0,
+              0,
+              2,
+              1
+            ]
+          ]
+        },
+        {
+          "coefficient": [
+            1,
+            1
+          ],
+          "monomial": [
+            [
+              2,
+              1,
+              0,
+              0,
+              1,
+              5
+            ]
+          ]
+        }
+      ],
+      "value": [
+        -1,
+        960
+      ]
+    },
+    {
+      "query": {
+        "curve": [
+          1
+        ],
+        "genus": 2,
+        "insertions": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            4
+          ]
+        ]
+      },
+      "terms": [
+        {
+          "coefficient": [
+            -1,
+            1
+          ],
+          "monomial": [
+            [
+              2,
+              0,
+              0,
+              1,
+              0,
+              2
+            ]
+          ]
+        },
+        {
+          "coefficient": [
+            -2,
+            1
+          ],
+          "monomial": [
+            [
+              2,
+              0,
+              0,
+              1,
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "coefficient": [
+            -3,
+            1
+          ],
+          "monomial": [
+            [
+              2,
+              0,
+              0,
+              1,
+              2,
+              0
+            ]
+          ]
+        },
+        {
+          "coefficient": [
+            1,
+            1
+          ],
+          "monomial": [
+            [
+              2,
+              1,
+              0,
+              1,
+              1,
+              4
+            ]
+          ]
+        }
+      ],
+      "value": [
+        -1,
+        320
+      ]
+    },
+    {
+      "query": {
+        "curve": [
+          1
+        ],
+        "genus": 2,
+        "insertions": [
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            3
+          ]
+        ]
+      },
+      "terms": [
+        {
+          "coefficient": [
+            -1,
+            1
+          ],
+          "monomial": [
+            [
+              2,
+              0,
+              0,
+              1,
+              0,
+              2
+            ]
+          ]
+        },
+        {
+          "coefficient": [
+            -2,
+            1
+          ],
+          "monomial": [
+            [
+              2,
+              0,
+              1,
+              0,
+              0,
+              2
+            ]
+          ]
+        },
+        {
+          "coefficient": [
+            1,
+            1
+          ],
+          "monomial": [
+            [
+              2,
+              1,
+              0,
+              2,
+              1,
+              3
+            ]
+          ]
+        }
+      ],
+      "value": [
+        7,
+        480
+      ]
+    },
+    {
+      "query": {
+        "curve": [
+          1
+        ],
+        "genus": 2,
+        "insertions": [
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ]
+        ]
+      },
+      "terms": [
+        {
+          "coefficient": [
+            -1,
+            1
+          ],
+          "monomial": [
+            [
+              2,
+              0,
+              0,
+              0,
+              0,
+              3
+            ]
+          ]
+        },
+        {
+          "coefficient": [
+            1,
+            1
+          ],
+          "monomial": [
+            [
+              2,
+              0,
+              0,
+              0,
+              1,
+              2
+            ]
+          ]
+        },
+        {
+          "coefficient": [
+            1,
+            1
+          ],
+          "monomial": [
+            [
+              2,
+              1,
+              1,
+              2,
+              0,
+              3
+            ]
+          ]
+        }
+      ],
+      "value": [
+        1,
+        30
+      ]
+    },
+    {
+      "query": {
+        "curve": [
+          1
+        ],
+        "genus": 2,
+        "insertions": [
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            1
+          ]
+        ]
+      },
+      "terms": [
+        {
+          "coefficient": [
+            1,
+            1
+          ],
+          "monomial": [
+            [
+              2,
+              0,
+              0,
+              1,
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "coefficient": [
+            1,
+            1
+          ],
+          "monomial": [
+            [
+              2,
+              1,
+              1,
+              1,
+              0,
+              4
+            ]
+          ]
+        },
+        {
+          "coefficient": [
+            3,
+            1
+          ],
+          "monomial": [
+            [
+              2,
+              0,
+              1,
+              0,
+              1,
+              1
+            ]
+          ]
+        }
+      ],
+      "value": [
+        13,
+        640
+      ]
+    },
+    {
+      "query": {
+        "curve": [
+          1
+        ],
+        "genus": 2,
+        "insertions": [
+          [
+            0,
+            5
+          ],
+          [
+            1,
+            0
+          ]
+        ]
+      },
+      "terms": [
+        {
+          "coefficient": [
+            1,
+            1
+          ],
+          "monomial": [
+            [
+              2,
+              0,
+              1,
+              0,
+              0,
+              2
+            ]
+          ]
+        },
+        {
+          "coefficient": [
+            1,
+            1
+          ],
+          "monomial": [
+            [
+              2,
+              1,
+              1,
+              0,
+              0,
+              5
+            ]
+          ]
+        },
+        {
+          "coefficient": [
+            3,
+            1
+          ],
+          "monomial": [
+            [
+              2,
+              0,
+              1,
+              0,
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "coefficient": [
+            6,
+            1
+          ],
+          "monomial": [
+            [
+              2,
+              0,
+              1,
+              0,
+              2,
+              0
+            ]
+          ]
+        }
+      ],
+      "value": [
+        13,
+        1920
+      ]
+    },
+    {
+      "query": {
+        "curve": [
+          1
+        ],
+        "genus": 2,
+        "insertions": [
+          [
+            0,
+            0
+          ],
+          [
+            2,
+            4
+          ]
+        ]
+      },
+      "terms": [
+        {
+          "coefficient": [
+            1,
+            1
+          ],
+          "monomial": [
+            [
+              2,
+              0,
+              0,
+              0,
+              0,
+              3
+            ]
+          ]
+        },
+        {
+          "coefficient": [
+            1,
+            1
+          ],
+          "monomial": [
+            [
+              2,
+              0,
+              0,
+              0,
+              1,
+              2
+            ]
+          ]
+        },
+        {
+          "coefficient": [
+            1,
+            1
+          ],
+          "monomial": [
+            [
+              2,
+              0,
+              0,
+              0,
+              2,
+              1
+            ]
+          ]
+        },
+        {
+          "coefficient": [
+            1,
+            1
+          ],
+          "monomial": [
+            [
+              2,
+              1,
+              0,
+              0,
+              2,
+              4
+            ]
+          ]
+        }
+      ],
+      "value": [
+        -1,
+        240
+      ]
+    },
+    {
+      "query": {
+        "curve": [
+          1
+        ],
+        "genus": 2,
+        "insertions": [
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            3
+          ]
+        ]
+      },
+      "terms": [
+        {
+          "coefficient": [
+            1,
+            1
+          ],
+          "monomial": [
+            [
+              2,
+              0,
+              0,
+              1,
+              0,
+              2
+            ]
+          ]
+        },
+        {
+          "coefficient": [
+            1,
+            1
+          ],
+          "monomial": [
+            [
+              2,
+              0,
+              0,
+              1,
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "coefficient": [
+            1,
+            1
+          ],
+          "monomial": [
+            [
+              2,
+              0,
+              0,
+              1,
+              2,
+              0
+            ]
+          ]
+        },
+        {
+          "coefficient": [
+            1,
+            1
+          ],
+          "monomial": [
+            [
+              2,
+              1,
+              0,
+              1,
+              2,
+              3
+            ]
+          ]
+        }
+      ],
+      "value": [
+        -1,
+        80
+      ]
+    },
+    {
+      "query": {
+        "curve": [
+          1
+        ],
+        "genus": 2,
+        "insertions": [
+          [
+            0,
+            2
+          ],
+          [
+            2,
+            2
+          ]
+        ]
+      },
+      "terms": [
+        {
+          "coefficient": [
+            1,
+            1
+          ],
+          "monomial": [
+            [
+              2,
+              0,
+              0,
+              1,
+              0,
+              2
+            ]
+          ]
+        },
+        {
+          "coefficient": [
+            1,
+            1
+          ],
+          "monomial": [
+            [
+              2,
+              0,
+              1,
+              0,
+              0,
+              2
+            ]
+          ]
+        },
+        {
+          "coefficient": [
+            1,
+            1
+          ],
+          "monomial": [
+            [
+              2,
+              1,
+              0,
+              2,
+              2,
+              2
+            ]
+          ]
+        }
+      ],
+      "value": [
+        -1,
+        48
+      ]
+    },
+    {
+      "query": {
+        "curve": [
+          1
+        ],
+        "genus": 2,
+        "insertions": [
+          [
+            0,
+            3
+          ],
+          [
+            2,
+            1
+          ]
+        ]
+      },
+      "terms": [
+        {
+          "coefficient": [
+            1,
+            1
+          ],
+          "monomial": [
+            [
+              2,
+              0,
+              0,
+              0,
+              0,
+              3
+            ]
+          ]
+        },
+        {
+          "coefficient": [
+            1,
+            1
+          ],
+          "monomial": [
+            [
+              2,
+              0,
+              0,
+              0,
+              2,
+              1
+            ]
+          ]
+        },
+        {
+          "coefficient": [
+            1,
+            1
+          ],
+          "monomial": [
+            [
+              2,
+              1,
+              2,
+              1,
+              0,
+              3
+            ]
+          ]
+        }
+      ],
+      "value": [
+        -23,
+        960
+      ]
+    },
+    {
+      "query": {
+        "curve": [
+          1
+        ],
+        "genus": 2,
+        "insertions": [
+          [
+            0,
+            4
+          ],
+          [
+            2,
+            0
+          ]
+        ]
+      },
+      "terms": [
+        {
+          "coefficient": [
+            1,
+            1
+          ],
+          "monomial": [
+            [
+              2,
+              0,
+              0,
+              1,
+              2,
+              0
+            ]
+          ]
+        },
+        {
+          "coefficient": [
+            1,
+            1
+          ],
+          "monomial": [
+            [
+              2,
+              1,
+              2,
+              0,
+              0,
+              4
+            ]
+          ]
+        },
+        {
+          "coefficient": [
+            3,
+            1
+          ],
+          "monomial": [
+            [
+              2,
+              0,
+              1,
+              0,
+              2,
+              0
+            ]
+          ]
+        }
+      ],
+      "value": [
+        -17,
+        1920
+      ]
+    },
+    {
+      "query": {
+        "curve": [
+          1
+        ],
+        "genus": 2,
+        "insertions": [
+          [
+            1,
+            0
+          ],
+          [
+            0,
+            5
+          ]
+        ]
+      },
+      "terms": [
+        {
+          "coefficient": [
+            1,
+            1
+          ],
+          "monomial": [
+            [
+              2,
+              0,
+              1,
+              0,
+              0,
+              2
+            ]
+          ]
+        },
+        {
+          "coefficient": [
+            1,
+            1
+          ],
+          "monomial": [
+            [
+              2,
+              1,
+              1,
+              0,
+              0,
+              5
+            ]
+          ]
+        },
+        {
+          "coefficient": [
+            3,
+            1
+          ],
+          "monomial": [
+            [
+              2,
+              0,
+              1,
+              0,
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "coefficient": [
+            6,
+            1
+          ],
+          "monomial": [
+            [
+              2,
+              0,
+              1,
+              0,
+              2,
+              0
+            ]
+          ]
+        }
+      ],
+      "value": [
+        13,
+        1920
+      ]
+    },
+    {
+      "query": {
+        "curve": [
+          1
+        ],
+        "genus": 2,
+        "insertions": [
+          [
+            1,
+            1
+          ],
+          [
+            0,
+            4
+          ]
+        ]
+      },
+      "terms": [
+        {
+          "coefficient": [
+            1,
+            1
+          ],
+          "monomial": [
+            [
+              2,
+              0,
+              0,
+              1,
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "coefficient": [
+            1,
+            1
+          ],
+          "monomial": [
+            [
+              2,
+              1,
+              1,
+              1,
+              0,
+              4
+            ]
+          ]
+        },
+        {
+          "coefficient": [
+            3,
+            1
+          ],
+          "monomial": [
+            [
+              2,
+              0,
+              1,
+              0,
+              1,
+              1
+            ]
+          ]
+        }
+      ],
+      "value": [
+        13,
+        640
+      ]
+    },
+    {
+      "query": {
+        "curve": [
+          1
+        ],
+        "genus": 2,
+        "insertions": [
+          [
+            1,
+            2
+          ],
+          [
+            0,
+            3
+          ]
+        ]
+      },
+      "terms": [
+        {
+          "coefficient": [
+            -1,
+            1
+          ],
+          "monomial": [
+            [
+              2,
+              0,
+              0,
+              0,
+              0,
+              3
+            ]
+          ]
+        },
+        {
+          "coefficient": [
+            1,
+            1
+          ],
+          "monomial": [
+            [
+              2,
+              0,
+              0,
+              0,
+              1,
+              2
+            ]
+          ]
+        },
+        {
+          "coefficient": [
+            1,
+            1
+          ],
+          "monomial": [
+            [
+              2,
+              1,
+              1,
+              2,
+              0,
+              3
+            ]
+          ]
+        }
+      ],
+      "value": [
+        1,
+        30
+      ]
+    },
+    {
+      "query": {
+        "curve": [
+          1
+        ],
+        "genus": 2,
+        "insertions": [
+          [
+            1,
+            3
+          ],
+          [
+            0,
+            2
+          ]
+        ]
+      },
+      "terms": [
+        {
+          "coefficient": [
+            -1,
+            1
+          ],
+          "monomial": [
+            [
+              2,
+              0,
+              0,
+              1,
+              0,
+              2
+            ]
+          ]
+        },
+        {
+          "coefficient": [
+            -2,
+            1
+          ],
+          "monomial": [
+            [
+              2,
+              0,
+              1,
+              0,
+              0,
+              2
+            ]
+          ]
+        },
+        {
+          "coefficient": [
+            1,
+            1
+          ],
+          "monomial": [
+            [
+              2,
+              1,
+              0,
+              2,
+              1,
+              3
+            ]
+          ]
+        }
+      ],
+      "value": [
+        7,
+        480
+      ]
+    },
+    {
+      "query": {
+        "curve": [
+          1
+        ],
+        "genus": 2,
+        "insertions": [
+          [
+            1,
+            4
+          ],
+          [
+            0,
+            1
+          ]
+        ]
+      },
+      "terms": [
+        {
+          "coefficient": [
+            -1,
+            1
+          ],
+          "monomial": [
+            [
+              2,
+              0,
+              0,
+              1,
+              0,
+              2
+            ]
+          ]
+        },
+        {
+          "coefficient": [
+            -2,
+            1
+          ],
+          "monomial": [
+            [
+              2,
+              0,
+              0,
+              1,
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "coefficient": [
+            -3,
+            1
+          ],
+          "monomial": [
+            [
+              2,
+              0,
+              0,
+              1,
+              2,
+              0
+            ]
+          ]
+        },
+        {
+          "coefficient": [
+            1,
+            1
+          ],
+          "monomial": [
+            [
+              2,
+              1,
+              0,
+              1,
+              1,
+              4
+            ]
+          ]
+        }
+      ],
+      "value": [
+        -1,
+        320
+      ]
+    },
+    {
+      "query": {
+        "curve": [
+          1
+        ],
+        "genus": 2,
+        "insertions": [
+          [
+            1,
+            5
+          ],
+          [
+            0,
+            0
+          ]
+        ]
+      },
+      "terms": [
+        {
+          "coefficient": [
+            -1,
+            1
+          ],
+          "monomial": [
+            [
+              2,
+              0,
+              0,
+              0,
+              0,
+              3
+            ]
+          ]
+        },
+        {
+          "coefficient": [
+            -2,
+            1
+          ],
+          "monomial": [
+            [
+              2,
+              0,
+              0,
+              0,
+              1,
+              2
+            ]
+          ]
+        },
+        {
+          "coefficient": [
+            -3,
+            1
+          ],
+          "monomial": [
+            [
+              2,
+              0,
+              0,
+              0,
+              2,
+              1
+            ]
+          ]
+        },
+        {
+          "coefficient": [
+            1,
+            1
+          ],
+          "monomial": [
+            [
+              2,
+              1,
+              0,
+              0,
+              1,
+              5
+            ]
+          ]
+        }
+      ],
+      "value": [
+        -1,
+        960
+      ]
+    },
+    {
+      "query": {
+        "curve": [
+          1
+        ],
+        "genus": 2,
+        "insertions": [
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            4
+          ]
+        ]
+      },
+      "terms": [
+        {
+          "coefficient": [
+            -1,
+            1
+          ],
+          "monomial": [
+            [
+              2,
+              0,
+              1,
+              0,
+              0,
+              2
+            ]
+          ]
+        },
+        {
+          "coefficient": [
+            -2,
+            1
+          ],
+          "monomial": [
+            [
+              2,
+              0,
+              1,
+              0,
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "coefficient": [
+            -3,
+            1
+          ],
+          "monomial": [
+            [
+              2,
+              0,
+              1,
+              0,
+              2,
+              0
+            ]
+          ]
+        },
+        {
+          "coefficient": [
+            1,
+            1
+          ],
+          "monomial": [
+            [
+              2,
+              1,
+              1,
+              0,
+              1,
+              4
+            ]
+          ]
+        }
+      ],
+      "value": [
+        -1,
+        192
+      ]
+    },
+    {
+      "query": {
+        "curve": [
+          1
+        ],
+        "genus": 2,
+        "insertions": [
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            3
+          ]
+        ]
+      },
+      "terms": [
+        {
+          "coefficient": [
+            -1,
+            1
+          ],
+          "monomial": [
+            [
+              2,
+              0,
+              0,
+              1,
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "coefficient": [
+            -2,
+            1
+          ],
+          "monomial": [
+            [
+              2,
+              0,
+              1,
+              0,
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "coefficient": [
+            1,
+            1
+          ],
+          "monomial": [
+            [
+              2,
+              1,
+              1,
+              1,
+              1,
+              3
+            ]
+          ]
+        }
+      ],
+      "value": [
+        -23,
+        960
+      ]
+    },
+    {
+      "query": {
+        "curve": [
+          1
+        ],
+        "genus": 2,
+        "insertions": [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            2
+          ]
+        ]
+      },
+      "terms": [
+        {
+          "coefficient": [
+            -1,
+            1
+          ],
+          "monomial": [
+            [
+              2,
+              0,
+              0,
+              0,
+              1,
+              2
+            ]
+          ]
+        },
+        {
+          "coefficient": [
+            -1,
+            1
+          ],
+          "monomial": [
+            [
+              2,
+              0,
+              0,
+              0,
+              1,
+              2
+            ]
+          ]
+        },
+        {
+          "coefficient": [
+            1,
+            1
+          ],
+          "monomial": [
+            [
+              2,
+              1,
+              1,
+              2,
+              1,
+              2
+            ]
+          ]
+        }
+      ],
+      "value": [
+        -29,
+        960
+      ]
+    },
+    {
+      "query": {
+        "curve": [
+          1
+        ],
+        "genus": 2,
+        "insertions": [
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            1
+          ]
+        ]
+      },
+      "terms": [
+        {
+          "coefficient": [
+            -1,
+            1
+          ],
+          "monomial": [
+            [
+              2,
+              0,
+              0,
+              1,
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "coefficient": [
+            -2,
+            1
+          ],
+          "monomial": [
+            [
+              2,
+              0,
+              1,
+              0,
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "coefficient": [
+            1,
+            1
+          ],
+          "monomial": [
+            [
+              2,
+              1,
+              1,
+              1,
+              1,
+              3
+            ]
+          ]
+        }
+      ],
+      "value": [
+        -23,
+        960
+      ]
+    },
+    {
+      "query": {
+        "curve": [
+          1
+        ],
+        "genus": 2,
+        "insertions": [
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            0
+          ]
+        ]
+      },
+      "terms": [
+        {
+          "coefficient": [
+            -1,
+            1
+          ],
+          "monomial": [
+            [
+              2,
+              0,
+              1,
+              0,
+              0,
+              2
+            ]
+          ]
+        },
+        {
+          "coefficient": [
+            -2,
+            1
+          ],
+          "monomial": [
+            [
+              2,
+              0,
+              1,
+              0,
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "coefficient": [
+            -3,
+            1
+          ],
+          "monomial": [
+            [
+              2,
+              0,
+              1,
+              0,
+              2,
+              0
+            ]
+          ]
+        },
+        {
+          "coefficient": [
+            1,
+            1
+          ],
+          "monomial": [
+            [
+              2,
+              1,
+              1,
+              0,
+              1,
+              4
+            ]
+          ]
+        }
+      ],
+      "value": [
+        -1,
+        192
+      ]
+    },
+    {
+      "query": {
+        "curve": [
+          1
+        ],
+        "genus": 2,
+        "insertions": [
+          [
+            1,
+            0
+          ],
+          [
+            2,
+            3
+          ]
+        ]
+      },
+      "terms": [
+        {
+          "coefficient": [
+            1,
+            1
+          ],
+          "monomial": [
+            [
+              2,
+              0,
+              1,
+              0,
+              0,
+              2
+            ]
+          ]
+        },
+        {
+          "coefficient": [
+            1,
+            1
+          ],
+          "monomial": [
+            [
+              2,
+              0,
+              1,
+              0,
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "coefficient": [
+            1,
+            1
+          ],
+          "monomial": [
+            [
+              2,
+              0,
+              1,
+              0,
+              2,
+              0
+            ]
+          ]
+        },
+        {
+          "coefficient": [
+            1,
+            1
+          ],
+          "monomial": [
+            [
+              2,
+              1,
+              1,
+              0,
+              2,
+              3
+            ]
+          ]
+        }
+      ],
+      "value": [
+        -1,
+        240
+      ]
+    },
+    {
+      "query": {
+        "curve": [
+          1
+        ],
+        "genus": 2,
+        "insertions": [
+          [
+            1,
+            1
+          ],
+          [
+            2,
+            2
+          ]
+        ]
+      },
+      "terms": [
+        {
+          "coefficient": [
+            1,
+            1
+          ],
+          "monomial": [
+            [
+              2,
+              0,
+              0,
+              1,
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "coefficient": [
+            1,
+            1
+          ],
+          "monomial": [
+            [
+              2,
+              0,
+              1,
+              0,
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "coefficient": [
+            1,
+            1
+          ],
+          "monomial": [
+            [
+              2,
+              1,
+              1,
+              1,
+              2,
+              2
+            ]
+          ]
+        }
+      ],
+      "value": [
+        -1,
+        240
+      ]
+    },
+    {
+      "query": {
+        "curve": [
+          1
+        ],
+        "genus": 2,
+        "insertions": [
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            1
+          ]
+        ]
+      },
+      "terms": [
+        {
+          "coefficient": [
+            -1,
+            1
+          ],
+          "monomial": [
+            [
+              2,
+              0,
+              0,
+              0,
+              2,
+              1
+            ]
+          ]
+        },
+        {
+          "coefficient": [
+            1,
+            1
+          ],
+          "monomial": [
+            [
+              2,
+              0,
+              0,
+              0,
+              1,
+              2
+            ]
+          ]
+        },
+        {
+          "coefficient": [
+            1,
+            1
+          ],
+          "monomial": [
+            [
+              2,
+              1,
+              1,
+              2,
+              2,
+              1
+            ]
+          ]
+        }
+      ],
+      "value": [
+        -1,
+        160
+      ]
+    },
+    {
+      "query": {
+        "curve": [
+          1
+        ],
+        "genus": 2,
+        "insertions": [
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            0
+          ]
+        ]
+      },
+      "terms": [
+        {
+          "coefficient": [
+            -1,
+            1
+          ],
+          "monomial": [
+            [
+              2,
+              0,
+              0,
+              1,
+              2,
+              0
+            ]
+          ]
+        },
+        {
+          "coefficient": [
+            -2,
+            1
+          ],
+          "monomial": [
+            [
+              2,
+              0,
+              1,
+              0,
+              2,
+              0
+            ]
+          ]
+        },
+        {
+          "coefficient": [
+            1,
+            1
+          ],
+          "monomial": [
+            [
+              2,
+              1,
+              2,
+              0,
+              1,
+              3
+            ]
+          ]
+        }
+      ],
+      "value": [
+        -7,
+        960
+      ]
+    },
+    {
+      "query": {
+        "curve": [
+          1
+        ],
+        "genus": 2,
+        "insertions": [
+          [
+            2,
+            0
+          ],
+          [
+            0,
+            4
+          ]
+        ]
+      },
+      "terms": [
+        {
+          "coefficient": [
+            1,
+            1
+          ],
+          "monomial": [
+            [
+              2,
+              0,
+              0,
+              1,
+              2,
+              0
+            ]
+          ]
+        },
+        {
+          "coefficient": [
+            1,
+            1
+          ],
+          "monomial": [
+            [
+              2,
+              1,
+              2,
+              0,
+              0,
+              4
+            ]
+          ]
+        },
+        {
+          "coefficient": [
+            3,
+            1
+          ],
+          "monomial": [
+            [
+              2,
+              0,
+              1,
+              0,
+              2,
+              0
+            ]
+          ]
+        }
+      ],
+      "value": [
+        -17,
+        1920
+      ]
+    },
+    {
+      "query": {
+        "curve": [
+          1
+        ],
+        "genus": 2,
+        "insertions": [
+          [
+            2,
+            1
+          ],
+          [
+            0,
+            3
+          ]
+        ]
+      },
+      "terms": [
+        {
+          "coefficient": [
+            1,
+            1
+          ],
+          "monomial": [
+            [
+              2,
+              0,
+              0,
+              0,
+              0,
+              3
+            ]
+          ]
+        },
+        {
+          "coefficient": [
+            1,
+            1
+          ],
+          "monomial": [
+            [
+              2,
+              0,
+              0,
+              0,
+              2,
+              1
+            ]
+          ]
+        },
+        {
+          "coefficient": [
+            1,
+            1
+          ],
+          "monomial": [
+            [
+              2,
+              1,
+              2,
+              1,
+              0,
+              3
+            ]
+          ]
+        }
+      ],
+      "value": [
+        -23,
+        960
+      ]
+    },
+    {
+      "query": {
+        "curve": [
+          1
+        ],
+        "genus": 2,
+        "insertions": [
+          [
+            2,
+            2
+          ],
+          [
+            0,
+            2
+          ]
+        ]
+      },
+      "terms": [
+        {
+          "coefficient": [
+            1,
+            1
+          ],
+          "monomial": [
+            [
+              2,
+              0,
+              0,
+              1,
+              0,
+              2
+            ]
+          ]
+        },
+        {
+          "coefficient": [
+            1,
+            1
+          ],
+          "monomial": [
+            [
+              2,
+              0,
+              1,
+              0,
+              0,
+              2
+            ]
+          ]
+        },
+        {
+          "coefficient": [
+            1,
+            1
+          ],
+          "monomial": [
+            [
+              2,
+              1,
+              0,
+              2,
+              2,
+              2
+            ]
+          ]
+        }
+      ],
+      "value": [
+        -1,
+        48
+      ]
+    },
+    {
+      "query": {
+        "curve": [
+          1
+        ],
+        "genus": 2,
+        "insertions": [
+          [
+            2,
+            3
+          ],
+          [
+            0,
+            1
+          ]
+        ]
+      },
+      "terms": [
+        {
+          "coefficient": [
+            1,
+            1
+          ],
+          "monomial": [
+            [
+              2,
+              0,
+              0,
+              1,
+              0,
+              2
+            ]
+          ]
+        },
+        {
+          "coefficient": [
+            1,
+            1
+          ],
+          "monomial": [
+            [
+              2,
+              0,
+              0,
+              1,
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "coefficient": [
+            1,
+            1
+          ],
+          "monomial": [
+            [
+              2,
+              0,
+              0,
+              1,
+              2,
+              0
+            ]
+          ]
+        },
+        {
+          "coefficient": [
+            1,
+            1
+          ],
+          "monomial": [
+            [
+              2,
+              1,
+              0,
+              1,
+              2,
+              3
+            ]
+          ]
+        }
+      ],
+      "value": [
+        -1,
+        80
+      ]
+    },
+    {
+      "query": {
+        "curve": [
+          1
+        ],
+        "genus": 2,
+        "insertions": [
+          [
+            2,
+            4
+          ],
+          [
+            0,
+            0
+          ]
+        ]
+      },
+      "terms": [
+        {
+          "coefficient": [
+            1,
+            1
+          ],
+          "monomial": [
+            [
+              2,
+              0,
+              0,
+              0,
+              0,
+              3
+            ]
+          ]
+        },
+        {
+          "coefficient": [
+            1,
+            1
+          ],
+          "monomial": [
+            [
+              2,
+              0,
+              0,
+              0,
+              1,
+              2
+            ]
+          ]
+        },
+        {
+          "coefficient": [
+            1,
+            1
+          ],
+          "monomial": [
+            [
+              2,
+              0,
+              0,
+              0,
+              2,
+              1
+            ]
+          ]
+        },
+        {
+          "coefficient": [
+            1,
+            1
+          ],
+          "monomial": [
+            [
+              2,
+              1,
+              0,
+              0,
+              2,
+              4
+            ]
+          ]
+        }
+      ],
+      "value": [
+        -1,
+        240
+      ]
+    },
+    {
+      "query": {
+        "curve": [
+          1
+        ],
+        "genus": 2,
+        "insertions": [
+          [
+            2,
+            0
+          ],
+          [
+            1,
+            3
+          ]
+        ]
+      },
+      "terms": [
+        {
+          "coefficient": [
+            -1,
+            1
+          ],
+          "monomial": [
+            [
+              2,
+              0,
+              0,
+              1,
+              2,
+              0
+            ]
+          ]
+        },
+        {
+          "coefficient": [
+            -2,
+            1
+          ],
+          "monomial": [
+            [
+              2,
+              0,
+              1,
+              0,
+              2,
+              0
+            ]
+          ]
+        },
+        {
+          "coefficient": [
+            1,
+            1
+          ],
+          "monomial": [
+            [
+              2,
+              1,
+              2,
+              0,
+              1,
+              3
+            ]
+          ]
+        }
+      ],
+      "value": [
+        -7,
+        960
+      ]
+    },
+    {
+      "query": {
+        "curve": [
+          1
+        ],
+        "genus": 2,
+        "insertions": [
+          [
+            2,
+            1
+          ],
+          [
+            1,
+            2
+          ]
+        ]
+      },
+      "terms": [
+        {
+          "coefficient": [
+            -1,
+            1
+          ],
+          "monomial": [
+            [
+              2,
+              0,
+              0,
+              0,
+              2,
+              1
+            ]
+          ]
+        },
+        {
+          "coefficient": [
+            1,
+            1
+          ],
+          "monomial": [
+            [
+              2,
+              0,
+              0,
+              0,
+              1,
+              2
+            ]
+          ]
+        },
+        {
+          "coefficient": [
+            1,
+            1
+          ],
+          "monomial": [
+            [
+              2,
+              1,
+              1,
+              2,
+              2,
+              1
+            ]
+          ]
+        }
+      ],
+      "value": [
+        -1,
+        160
+      ]
+    },
+    {
+      "query": {
+        "curve": [
+          1
+        ],
+        "genus": 2,
+        "insertions": [
+          [
+            2,
+            2
+          ],
+          [
+            1,
+            1
+          ]
+        ]
+      },
+      "terms": [
+        {
+          "coefficient": [
+            1,
+            1
+          ],
+          "monomial": [
+            [
+              2,
+              0,
+              0,
+              1,
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "coefficient": [
+            1,
+            1
+          ],
+          "monomial": [
+            [
+              2,
+              0,
+              1,
+              0,
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "coefficient": [
+            1,
+            1
+          ],
+          "monomial": [
+            [
+              2,
+              1,
+              1,
+              1,
+              2,
+              2
+            ]
+          ]
+        }
+      ],
+      "value": [
+        -1,
+        240
+      ]
+    },
+    {
+      "query": {
+        "curve": [
+          1
+        ],
+        "genus": 2,
+        "insertions": [
+          [
+            2,
+            3
+          ],
+          [
+            1,
+            0
+          ]
+        ]
+      },
+      "terms": [
+        {
+          "coefficient": [
+            1,
+            1
+          ],
+          "monomial": [
+            [
+              2,
+              0,
+              1,
+              0,
+              0,
+              2
+            ]
+          ]
+        },
+        {
+          "coefficient": [
+            1,
+            1
+          ],
+          "monomial": [
+            [
+              2,
+              0,
+              1,
+              0,
+              1,
+              1
+            ]
+          ]
+        },
+        {
+          "coefficient": [
+            1,
+            1
+          ],
+          "monomial": [
+            [
+              2,
+              0,
+              1,
+              0,
+              2,
+              0
+            ]
+          ]
+        },
+        {
+          "coefficient": [
+            1,
+            1
+          ],
+          "monomial": [
+            [
+              2,
+              1,
+              1,
+              0,
+              2,
+              3
+            ]
+          ]
+        }
+      ],
+      "value": [
+        -1,
+        240
+      ]
+    },
+    {
+      "query": {
+        "curve": [
+          1
+        ],
+        "genus": 2,
+        "insertions": [
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            2
+          ]
+        ]
+      },
+      "terms": [
+        {
+          "coefficient": [
+            1,
+            1
+          ],
+          "monomial": [
+            [
+              2,
+              0,
+              0,
+              1,
+              2,
+              0
+            ]
+          ]
+        },
+        {
+          "coefficient": [
+            1,
+            1
+          ],
+          "monomial": [
+            [
+              2,
+              0,
+              1,
+              0,
+              2,
+              0
+            ]
+          ]
+        },
+        {
+          "coefficient": [
+            1,
+            1
+          ],
+          "monomial": [
+            [
+              2,
+              1,
+              2,
+              0,
+              2,
+              2
+            ]
+          ]
+        }
+      ],
+      "value": [
+        1,
+        240
+      ]
+    },
+    {
+      "query": {
+        "curve": [
+          1
+        ],
+        "genus": 2,
+        "insertions": [
+          [
+            2,
+            1
+          ],
+          [
+            2,
+            1
+          ]
+        ]
+      },
+      "terms": [
+        {
+          "coefficient": [
+            1,
+            1
+          ],
+          "monomial": [
+            [
+              2,
+              0,
+              0,
+              0,
+              2,
+              1
+            ]
+          ]
+        },
+        {
+          "coefficient": [
+            1,
+            1
+          ],
+          "monomial": [
+            [
+              2,
+              0,
+              0,
+              0,
+              2,
+              1
+            ]
+          ]
+        },
+        {
+          "coefficient": [
+            1,
+            1
+          ],
+          "monomial": [
+            [
+              2,
+              1,
+              2,
+              1,
+              2,
+              1
+            ]
+          ]
+        }
+      ],
+      "value": [
+        1,
+        144
+      ]
+    },
+    {
+      "query": {
+        "curve": [
+          1
+        ],
+        "genus": 2,
+        "insertions": [
+          [
+            2,
+            2
+          ],
+          [
+            2,
+            0
+          ]
+        ]
+      },
+      "terms": [
+        {
+          "coefficient": [
+            1,
+            1
+          ],
+          "monomial": [
+            [
+              2,
+              0,
+              0,
+              1,
+              2,
+              0
+            ]
+          ]
+        },
+        {
+          "coefficient": [
+            1,
+            1
+          ],
+          "monomial": [
+            [
+              2,
+              0,
+              1,
+              0,
+              2,
+              0
+            ]
+          ]
+        },
+        {
+          "coefficient": [
+            1,
+            1
+          ],
+          "monomial": [
+            [
+              2,
+              1,
+              2,
+              0,
+              2,
+              2
+            ]
+          ]
+        }
+      ],
+      "value": [
+        1,
+        240
+      ]
+    }
+  ],
+  "schema_version": 1
+}

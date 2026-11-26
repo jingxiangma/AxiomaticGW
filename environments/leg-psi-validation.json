@@ -1,0 +1,283 @@
+{
+  "status": "passed_scoped_checks",
+  "scope": "formal external psi operations, unchanged automorphism normalization, and conditional stable-curve realization and integrated relation equations; no general graph splitting or surface GW reconstruction",
+  "milestones_accepted_as_complete": [],
+  "gates": [
+    {
+      "command": [
+        "lake",
+        "build",
+        "AxiomaticGWTest.Tautological.LegPsi"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 2.687,
+      "log": "/tmp/gw_leg_psi_final_gate_0_20261002.log",
+      "log_sha256": "b61c329665e901c912f2c47833a18160aa2aeb392694fcd3cca2f03423a136ab"
+    },
+    {
+      "command": [
+        "lake",
+        "build"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 1.091,
+      "log": "/tmp/gw_leg_psi_final_gate_1_20261002.log",
+      "log_sha256": "32eef7808df1312c8783765c0c676a522ace8d9394c8ff0f31bbebd70c8fb8ab"
+    },
+    {
+      "command": [
+        "lake",
+        "test"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 4.563,
+      "log": "/tmp/gw_leg_psi_final_gate_2_20261002.log",
+      "log_sha256": "755b36370afd2747f3f38548d81ed15eb771656dbb7088ff6da5a1e060d9006f"
+    },
+    {
+      "command": [
+        "lake",
+        "lint"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 9.257,
+      "log": "/tmp/gw_leg_psi_final_gate_3_20261002.log",
+      "log_sha256": "8cb704e7f2acb11f508473f8f0a1ac324d56ac70cac206d0a94cbe2318027dce"
+    }
+  ],
+  "axiom_audit": {
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "/tmp/gw_leg_psi_axioms_20261002.lean"
+    ],
+    "exit_code": 0,
+    "log_sha256": "edd94e405a93a6899c0d7c18543f611aa9596ef91230b6fc41de3982e57a061c",
+    "declaration_count": 24,
+    "declarations": [
+      {
+        "declaration": "AxiomaticGW.DecoratedStableGraph.addLegPsi",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "AxiomaticGW.DecoratedStableGraph.addLegPsi_codimension",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "AxiomaticGW.DecoratedStableGraph.addLegPsiIsoEquiv",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "AxiomaticGW.DecoratedStableGraph.addLegPsi_automorphismCount",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "AxiomaticGW.TautologicalStratum.addLegPsi",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "AxiomaticGW.TautologicalStratum.addLegPsi_add",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "AxiomaticGW.TautologicalStratum.addLegPsi_codimension",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "AxiomaticGW.TautologicalStratum.addLegPsi_injective",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "AxiomaticGW.StrataModule.mulLegPsi_basis",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "AxiomaticGW.StrataModule.mulLegPsi_zero",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "AxiomaticGW.StrataModule.mulLegPsi_add",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "AxiomaticGW.StrataModule.mulLegPsi_mem_degree",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "AxiomaticGW.StrataModule.mulLegPsi_mem_dimensionRelations",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "AxiomaticGW.PsiClasses.monomial_add",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "AxiomaticGW.PsiClasses.monomial_single",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "AxiomaticGW.RelationCertificate.mulLegPsi_interpret",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "AxiomaticGW.RelationCertificate.mulLegPsi_check_sound",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "AxiomaticGW.StrataRealization.map_addLegPsi_one",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "AxiomaticGW.StrataRealization.map_addLegPsi_single",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "AxiomaticGW.StrataRealization.map_addLegPsi",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "AxiomaticGW.StrataRealization.map_mulLegPsi",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "AxiomaticGW.StrataRealization.integrateAgainst_mulLegPsi",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "AxiomaticGW.StrataRealization.certificate_mulLegPsi_eq_zero",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      {
+        "declaration": "AxiomaticGW.StrataRealization.integrateAgainst_fundamental",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      }
+    ]
+  },
+  "regressions": {
+    "file": "AxiomaticGWTest/Tautological/LegPsi.lean",
+    "example_count": 12,
+    "additional_negative_fixed_label_lemma": true,
+    "concrete_cohft_ancestor": {
+      "inputs": [
+        2,
+        3,
+        5
+      ],
+      "value": 30,
+      "scope": "Frobenius-derived constant interface fixture; no surface invariant claim"
+    }
+  },
+  "lean_toolchain": "leanprover/lean4:v4.32.0",
+  "lake_manifest_sha256": "e9d145b9e7338c66d20f6039ba5937818c5a1c3e085465391d3723315fec453d",
+  "source_sha256": {
+    "AxiomaticGW/Tautological/LegPsi.lean": "9ca882b29db8f6dec38c510283aa9f4484839a8f1620232d20b65c61ecf3cb56",
+    "AxiomaticGW/Tautological/LegPsiRealization.lean": "e8d6bff52045adf408f2d4439b5df73b44328a88d1f51d1807ff70da58a6b95a",
+    "AxiomaticGWTest/Tautological/LegPsi.lean": "0d477a74f24c7a74cd3e604fbe5bc9574272f9737af664953be6c27b232df01f",
+    "AxiomaticGW/Tautological/DecoratedStableGraph.lean": "b4d0408b1cfddafe145230aad311a76577b8feafe6f2ac187cd1524a07247b60",
+    "AxiomaticGW/Tautological/GraphIsomorphisms.lean": "5cd10ac37ec3390443ac5db4ef38bba59327491fa9f4708d13ea883ca258d0bf",
+    "AxiomaticGW/Tautological/BasicStrata.lean": "aaff11f4110657b96e99a223e8cea032126e21f3f12f37226d7d8094bcbc2159",
+    "AxiomaticGW/Tautological/StrataModule.lean": "4cbd41c258dd6e0e03a691d8de21fd9021788e03b67d1df0127742553f53112f",
+    "AxiomaticGW/Tautological/StrataRealization.lean": "ddf59186e35a331415f9cbb8713dbcfda209fbf9bf5530123a1ab87964cd308c",
+    "AxiomaticGW/Tautological/RelationCertificate.lean": "665e0e9ed9aa8d16d8b86b30546623d4980a07a6add20dc771aafebaceee13d4",
+    "AxiomaticGW/CohFT/Tautological.lean": "09a580ac3e481df0ba90bc30637e6bed2741dfc0e6599d8463a48b42861635ed",
+    "AxiomaticGW/CohFT/Ancestors.lean": "d04f17b0a9a465e89d7c054a94b096cf81bf7ef22b931c61fdf73419e988c4a4",
+    "AxiomaticGW.lean": "b3951da883236096634a00d2507e30563e4076b30fb86b9ddc51f261d5538bb8"
+  }
+}

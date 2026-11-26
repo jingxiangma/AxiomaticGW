@@ -22,3 +22,43 @@ name = "AxiomaticGW"
 [[lean_lib]]
 name = "AxiomaticGWTest"
 globs = ["AxiomaticGWTest.+"]
+
+[[lean_exe]]
+name = "graphCorpus"
+root = "scripts.GraphCorpus"
+
+[[lean_exe]]
+name = "decoratedPullback"
+root = "scripts.DecoratedPullback"
+
+[[lean_exe]]
+name = "surfaceBP"
+root = "scripts.SurfaceBP"
+
+[[lean_exe]]
+name = "surfaceBPNormalized"
+root = "scripts.SurfaceBPNormalized"
+
+[[lean_exe]]
+name = "surfaceL24"
+root = "scripts.SurfaceL24"
+
+[[lean_exe]]
+name = "genusTwoLeading"
+root = "scripts.GenusTwoLeading"
+
+[[lean_exe]]
+name = "genusTwoShifted"
+root = "scripts.GenusTwoShifted"
+
+[[lean_exe]]
+name = "planeGenusTwoFewMarkings"
+root = "scripts.PlaneGenusTwoFewMarkings"
+
+[[lean_exe]]
+name = "planeGenusTwoAncestorCache"
+root = "scripts.PlaneGenusTwoAncestorCache"
+
+[[lean_exe]]
+name = "planeGenusTwoComponents"
+root = "scripts.PlaneGenusTwoComponents"

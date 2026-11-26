@@ -552,8 +552,9 @@ example {R V B : Type} [CommRing R] [Algebra ℚ R]
     U.invariant g (Option S) beta
         (fun | none => 0 | some s => k s)
         (fun | none => Omega.unit | some s => a s) =
-      ∑ s, if k s = 0 then 0 else
-        U.invariant g S beta (AxiomaticGW.lowerPower k s) a :=
+      (∑ s, if k s = 0 then 0 else
+        U.invariant g S beta (AxiomaticGW.lowerPower k s) a) +
+        AxiomaticGW.stringCorrection Omega.pairing g S beta k a :=
   U.global_string L g S beta k a
 
 /-- Positive-tail support excludes the zero class on the tail component. -/

@@ -1,0 +1,1324 @@
+{
+  "boundary": "The class identities hold in every existing abstract realization. They do not identify the exact raw expressions with geometric Hodge classes, a GW class, an ordinary geometric specialization, or an actual semisimple CohFT.",
+  "complete_actual_candidate_identities": {
+    "Bl2P2": "(-Q) \u2022 U + (5:Coefficient) \u2022 V + (-3:Coefficient) \u2022 W",
+    "F1": "(4:Coefficient) \u2022 V",
+    "P2": "Q \u2022 U + (3:Coefficient) \u2022 V + (3:Coefficient) \u2022 W"
+  },
+  "consumer_checks": [
+    "Remove the explicit P2 degree-zero contribution and retain both independent raw degree-two expressions.",
+    "Compare complete F1 and Bl2P2 classes with the negative raw (0,2) term.",
+    "The original raw degree-four expression is preserved by reduction before its coefficient cancels."
+  ],
+  "frozen_manifest": {
+    "contents": {
+      "development_history": {
+        "path": "/tmp/gw_hodge_raw_assembly_v3_20261005/development-history.json",
+        "sha256": "bc67b811ee57fc0ab5d2fd736d5a4261704de6c73c69e065972210f986f6e2de"
+      },
+      "integrate": [
+        {
+          "bytes": 7057,
+          "destination": "AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroRawAssembly.lean",
+          "sha256": "a3d9c5ef4e56e42f246add66295653b2698974c9f16874e6a3b15bc5a9275e8b",
+          "source": "/tmp/gw_hodge_raw_assembly_v3_20261005/AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroRawAssembly.lean"
+        },
+        {
+          "bytes": 1954,
+          "destination": "AxiomaticGWTest/GKM/HodgeDegreeZeroRawAssembly.lean",
+          "sha256": "222bd35abc8053324633a84aee1cd20e930bdf464409e12eda141abc755ff1b6",
+          "source": "/tmp/gw_hodge_raw_assembly_v3_20261005/AxiomaticGWTest/GKM/HodgeDegreeZeroRawAssembly.lean"
+        }
+      ],
+      "integration_and_actual_checks_pending": true,
+      "maintainability": "Only two compact Lean files are integration artifacts. The original stage.py is development scaffolding, not a runtime generator; no Python tool or generated-template maintenance is added.",
+      "public_acceptance": {
+        "path": "/tmp/gw_hodge_raw_assembly_v3_20261005/public-acceptance.json",
+        "sha256": "a3afc7d75181ae0e822d9fd186f7e85a6787b713176fa08aeb2e0457107e77a0"
+      },
+      "public_probe_manifest": {
+        "path": "/tmp/gw_hodge_raw_assembly_v3_20261005/public-probe-manifest.json",
+        "sha256": "983899322348f8097f7f0698be87ad60651e61f1a6b5423694d651ede68dbc96"
+      },
+      "repository_edits": false,
+      "review": {
+        "path": "/tmp/gw_hodge_raw_assembly_review_20261005/review-and-statements.json",
+        "sha256": "36f0dbd76dc72a2d59f7f4dbdd6cb0ee7e745bea4568071a923cf355686e6f18"
+      },
+      "sage_executed": false,
+      "scope": "Additive equality of complete actual class under every existing StrataRealization; no D, hfund, multiplication law or geometric premise. Raw (1,1)/(0,2) remain exact source expressions.",
+      "source_binding": {
+        "actual_LHS": "The unchanged FullCoefficientReplay target candidateClass, hence all fixed points, nine ordered coefficients and five raw components.",
+        "actual_coefficients": 108,
+        "explicit_empty_components": 36,
+        "nonempty_components": 9,
+        "nontrivial_symmetry": "AdmcyclesHodgeStrataIsomorphisms.raw_ordered_degree3_equal",
+        "raw_components": 45,
+        "raw_occurrences_preserved": 553
+      },
+      "source_pins": {
+        "AxiomaticGW/GKM/AdmcyclesHodgeStrataNormalization.lean": "d36565c19b0198d833caddfc755ba431660d2f84752fdd760cbcc38f37734ce3",
+        "AxiomaticGW/GKM/Fixtures/AdmcyclesHodgeStrataCandidates.lean": "244eaf08f741057b92113ee4b0c4a48b2185b55350473bc28286460ea07b651c",
+        "AxiomaticGW/GKM/Fixtures/AdmcyclesHodgeStrataIsomorphisms.lean": "ddb7e9cfb94ced658a96883782aed3072ae8d7fe1763ff4390e021dcafe3f26a",
+        "AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroFullCoefficientReplay.lean": "648ac71eb16d06ca1b94b29ca2e1972ca2f360ce534fb864230933daa6c29ce8",
+        "AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroRegularity.lean": "b44bcad2fd02afe2c39f130ef610065360a3149f0101a72ddd61c77f67d49cd6",
+        "AxiomaticGW/Tautological/StrataModule.lean": "4cbd41c258dd6e0e03a691d8de21fd9021788e03b67d1df0127742553f53112f",
+        "AxiomaticGW/Tautological/StrataRealization.lean": "ddf59186e35a331415f9cbb8713dbcfda209fbf9bf5530123a1ab87964cd308c"
+      },
+      "status": "frozen_two_file_raw_assembly_package_public_checks_passed",
+      "validation": {
+        "allowed_axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "audit_declarations": 10,
+        "bounded_wrapper_seconds": 9.742,
+        "memory_cap_MiB": 2048,
+        "production_unchanged_since_v2": true,
+        "warnings": 0
+      }
+    },
+    "source": {
+      "path": "/tmp/gw_hodge_raw_assembly_v3_20261005/manifest.json",
+      "sha256": "4c7f518fb959491cc708e86ba7d75a28a88805a7b32196acb08090e0d40e65c8"
+    }
+  },
+  "generator": {
+    "path": "/tmp/gw_hodge_raw_assembly_record_20261005/record_hodge_raw_assembly_validation.py",
+    "sha256": "c2b26e5a6db96b6deeafbb45198cd1e1f19ce66d9adb27ea130276faae77f27a"
+  },
+  "identity_conventions": {
+    "Q": "x^2-x*y+y^2",
+    "U": "A.map raw_0_0_degree0",
+    "V": "A.map raw_1_1_degree2",
+    "W": "A.map raw_0_2_degree2"
+  },
+  "integration": {
+    "contents": {
+      "manifest": {
+        "path": "/tmp/gw_hodge_raw_assembly_v3_20261005/manifest.json",
+        "sha256": "4c7f518fb959491cc708e86ba7d75a28a88805a7b32196acb08090e0d40e65c8"
+      },
+      "scope": "Only two frozen Lean files copied; no umbrella or docs edits.",
+      "sources": [
+        {
+          "bytes": 7057,
+          "destination": "AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroRawAssembly.lean",
+          "sha256": "a3d9c5ef4e56e42f246add66295653b2698974c9f16874e6a3b15bc5a9275e8b",
+          "source": "/tmp/gw_hodge_raw_assembly_v3_20261005/AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroRawAssembly.lean"
+        },
+        {
+          "bytes": 1954,
+          "destination": "AxiomaticGWTest/GKM/HodgeDegreeZeroRawAssembly.lean",
+          "sha256": "222bd35abc8053324633a84aee1cd20e930bdf464409e12eda141abc755ff1b6",
+          "source": "/tmp/gw_hodge_raw_assembly_v3_20261005/AxiomaticGWTest/GKM/HodgeDegreeZeroRawAssembly.lean"
+        }
+      ],
+      "umbrella": {
+        "new_module_import_present": false,
+        "path": "AxiomaticGW.lean",
+        "snapshot_sha256": "05eb33874f1228688efea0cc16796454c9a61994bb29baeae3bd4cda40c939d5",
+        "status": "Pending root addition after current full build finishes; root target must then be rebuilt.",
+        "unchanged_at_integration": true
+      }
+    },
+    "source": {
+      "path": "/tmp/gw_hodge_raw_assembly_integration_20261005/integration.json",
+      "sha256": "6e8050996f6a6045b09552a8554a8ab90a47ad93633053989b4f82441515ecd7"
+    }
+  },
+  "maintenance": "Two compact Lean modules; no additional portable exporter or runtime producer dependency.",
+  "mathematical_effect": {
+    "D_required": false,
+    "complete_class_equality": true,
+    "existing_public_statements_changed": false,
+    "hfund_required": false,
+    "new_axioms": 0,
+    "new_geometric_hypotheses": 0,
+    "new_global_instances": 0,
+    "new_global_simp_rules": 0,
+    "new_seeds": 0,
+    "only_scalar_projection": false,
+    "product_preservation_required": false,
+    "raw_0_2_replaced_by_geometric_class": false,
+    "raw_1_1_replaced_by_square": false,
+    "realization_input": "The existing homogeneous QQ-linear StrataRealization A only."
+  },
+  "milestones": {
+    "GKM_geometric_gate_complete": false,
+    "R4_complete": false,
+    "R5_complete": false,
+    "full_project_accepted": false,
+    "goal_complete": false
+  },
+  "pending_umbrella": {
+    "exported_from_AxiomaticGW": false,
+    "reason": "Parent retains the import graph of the concurrently running full build.",
+    "required_next_action": "After that build, parent adds the public raw-assembly import and rebuilds the root target.",
+    "snapshot": {
+      "path": "/tmp/gw_hodge_raw_assembly_integration_20261005/AxiomaticGW.before.lean",
+      "sha256": "05eb33874f1228688efea0cc16796454c9a61994bb29baeae3bd4cda40c939d5"
+    },
+    "targeted_direct_import_validation_complete": true
+  },
+  "prior_public_acceptance_and_history": {
+    "development_history": {
+      "contents": [
+        {
+          "full_log": {
+            "path": "/tmp/gw_hodge_raw_assembly_public_v1_20261005.log",
+            "sha256": "899293f6b2ad255854607b333a22f7ef09507cad8706809394e450799bd44954",
+            "text": "{\"start\": \"AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroRawAssembly.lean\", \"command\": [\"/Users/jma/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lean\", \"--memory=2048\", \"--root=/private/tmp/gw_blowup_public_probe_20261004\", \"-o\", \"/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroRawAssembly.olean\", \"/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroRawAssembly.lean\"]}\n/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroRawAssembly.lean:42:20: error: don't know how to synthesize placeholder for argument `f`\ncontext:\ncolumns : Fin 0 \u2192 TautologicalStratum 2 (Fin 1)\ncoordinates : RelationCertificate.Coordinates 0\n\u22a2 Fin 0 \u2192 StrataModule 2 (Fin 1)\n/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroRawAssembly.lean:53:50: warning: This simp argument is unused:\n  Matrix.cons_val_one\n\nHint: Omit it from the simp argument list.\n  simp only [rawComponent, Fin.sum_univ_succ, Fin.sum_univ_zero,\n  \u0335  \u0335 \u0335 \u0335 \u0335 \u0335Matrix.cons_val_zero,\n  \u0332  \u0332 \u0332 \u0332 \u0332 \u0332Matrix.cons_val_succ, Matrix.cons_val_o\u0335n\u0335e\u0335,\u0335\n  \u0335 \u0335 \u0335 \u0335 \u0335 \u0335 \u0335M\u0335a\u0335tr\u0335i\u0335x\u0335.\u0335c\u0335o\u0335n\u0335s\u0335_\u0335v\u0335a\u0335l\u0335_\u0335t\u0335wo, Matrix.head_cons, Matrix.tail_cons,\n        Matrix.cons_val_zero', Matrix.cons_val_succ', Matrix.cons_val_fin_one,\n  \u0335  \u0335 \u0335 \u0335 \u0335 \u0335Fin.isValue,\n        raw_0_0_degree1, raw_0_0_degree2, raw_0_0_degree3, \u0332r\u0332a\u0332w\u0332_\u03320\u0332_\u03320\u0332_\u0332d\u0332e\u0332g\u0332r\u0332e\u0332e\u03324\u0332,\u0332 \u0332r\u0332a\u0332w\u0332_\u03320\u0332_\u03321\u0332_\u0332d\u0332e\u0332g\u0332r\u0332e\u0332e\u03320\u0332,\u0332\n        raw_0_0\u0335_\u0335d\u0335e\u0335g\u0335r\u0335e\u0335e\u03354\u0335,\u0335 \u0335r\u0335a\u0335w\u0335_\u03350\u0335_\u03351_degree0\u0335,\u0335 \u0335r\u0335a\u0335w\u0335_\u03350\u0335_\u03351\u0335_\u0335d\u0335e\u0335g\u0335r\u0335e\u0335e\u03352,\n  \u0335  \u0335 \u0335 \u0335 \u0335 \u0335raw_0_1_degree3, raw_0_1_degree4, raw_0_2_degree0,\n  \u0335  \u0335 \u0335 \u0335 \u0335 \u0335raw_0_2_degree1,\n  \u0332  \u0332 \u0332 \u0332 \u0332 \u0332raw_0_2_degree3, raw_0_2_degree4,\n  \u0335  \u0335 \u0335 \u0335 \u0335 \u0335raw_1_0_degree0, raw_1_0_degree2, raw_1_0_degree3,\n        raw_1_0_degree4, raw_1_1_degree0, raw_1_1_degree1,\n  \u0335  \u0335 \u0335 \u0335 \u0335 \u0335raw_1_1_degree3, raw_1_1_degree4,\n  \u0332  \u0332 \u0332 \u0332 \u0332 \u0332raw_1_2_degree0,\n  \u0335  \u0335 \u0335 \u0335 \u0335 \u0335raw_1_2_degree1, raw_1_2_degree2, raw_1_2_degree4,\n  \u0335  \u0335 \u0335 \u0335 \u0335 \u0335raw_2_0_degree0,\n  \u0332  \u0332 \u0332 \u0332 \u0332 \u0332raw_2_0_degree1, raw_2_0_degree3,\n  \u0335  \u0335 \u0335 \u0335 \u0335 \u0335raw_2_0_degree4, raw_2_1_degree0, raw_2_1_degree1,\n        raw_2_1_degree2, raw_2_1_degree4, raw_2_2_degree0,\n  \u0335  \u0335 \u0335 \u0335 \u0335 \u0335raw_2_2_degree1, raw_2_2_degree2,\n  \u0332  \u0332 \u0332 \u0332 \u0332 \u0332raw_2_2_degree3,\n  \u0335  \u0335 \u0335 \u0335 \u0335 \u0335interpret_empty, add_zero, zero_add]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`\n/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroRawAssembly.lean:54:6: warning: This simp argument is unused:\n  Matrix.cons_val_two\n\nHint: Omit it from the simp argument list.\n  simp only [rawComponent, Fin.sum_univ_succ, Fin.sum_univ_zero,\n  \u0335  \u0335 \u0335 \u0335 \u0335 \u0335Matrix.cons_val_zero,\n  \u0332  \u0332 \u0332 \u0332 \u0332 \u0332Matrix.cons_val_succ, Matrix.cons_val_one,\n  \u0335  \u0335 \u0335 \u0335 \u0335 \u0335Matrix.c\u0335o\u0335n\u0335s\u0335_\u0335v\u0335a\u0335l\u0335_\u0335t\u0335w\u0335o\u0335,\u0335 \u0335M\u0335a\u0335t\u0335r\u0335i\u0335x\u0335.\u0335head_cons, Matrix.tail_cons,\n        Matrix.cons_val_zero', Matrix.cons_val_succ', Matrix.cons_val_fin_one,\n  \u0335  \u0335 \u0335 \u0335 \u0335 \u0335Fin.isValue,\n        raw_0_0_degree1, raw_0_0_degree2, raw_0_0_degree3, \u0332r\u0332a\u0332w\u0332_\u03320\u0332_\u03320\u0332_\u0332d\u0332e\u0332g\u0332r\u0332e\u0332e\u03324\u0332,\u0332 \u0332r\u0332a\u0332w\u0332_\u03320\u0332_\u03321\u0332_\u0332d\u0332e\u0332g\u0332r\u0332e\u0332e\u03320\u0332,\u0332\n        raw_0_0\u0335_\u0335d\u0335e\u0335g\u0335r\u0335e\u0335e\u03354\u0335,\u0335 \u0335r\u0335a\u0335w\u0335_\u03350\u0335_\u03351_degree0\u0335,\u0335 \u0335r\u0335a\u0335w\u0335_\u03350\u0335_\u03351\u0335_\u0335d\u0335e\u0335g\u0335r\u0335e\u0335e\u03352,\n  \u0335  \u0335 \u0335 \u0335 \u0335 \u0335raw_0_1_degree3, raw_0_1_degree4, raw_0_2_degree0,\n  \u0335  \u0335 \u0335 \u0335 \u0335 \u0335raw_0_2_degree1,\n  \u0332  \u0332 \u0332 \u0332 \u0332 \u0332raw_0_2_degree3, raw_0_2_degree4,\n  \u0335  \u0335 \u0335 \u0335 \u0335 \u0335raw_1_0_degree0, raw_1_0_degree2, raw_1_0_degree3,\n        raw_1_0_degree4, raw_1_1_degree0, raw_1_1_degree1,\n  \u0335  \u0335 \u0335 \u0335 \u0335 \u0335raw_1_1_degree3, raw_1_1_degree4,\n  \u0332  \u0332 \u0332 \u0332 \u0332 \u0332raw_1_2_degree0,\n  \u0335  \u0335 \u0335 \u0335 \u0335 \u0335raw_1_2_degree1, raw_1_2_degree2, raw_1_2_degree4,\n  \u0335  \u0335 \u0335 \u0335 \u0335 \u0335raw_2_0_degree0,\n  \u0332  \u0332 \u0332 \u0332 \u0332 \u0332raw_2_0_degree1, raw_2_0_degree3,\n  \u0335  \u0335 \u0335 \u0335 \u0335 \u0335raw_2_0_degree4, raw_2_1_degree0, raw_2_1_degree1,\n        raw_2_1_degree2, raw_2_1_degree4, raw_2_2_degree0,\n  \u0335  \u0335 \u0335 \u0335 \u0335 \u0335raw_2_2_degree1, raw_2_2_degree2,\n  \u0332  \u0332 \u0332 \u0332 \u0332 \u0332raw_2_2_degree3,\n  \u0335  \u0335 \u0335 \u0335 \u0335 \u0335interpret_empty, add_zero, zero_add]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`\n/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroRawAssembly.lean:54:27: warning: This simp argument is unused:\n  Matrix.head_cons\n\nHint: Omit it from the simp argument list.\n  simp only [rawComponent, Fin.sum_univ_succ, Fin.sum_univ_zero,\n  \u0335  \u0335 \u0335 \u0335 \u0335 \u0335Matrix.cons_val_zero,\n  \u0332  \u0332 \u0332 \u0332 \u0332 \u0332Matrix.cons_val_succ, Matrix.cons_val_one,\n  \u0335  \u0335 \u0335 \u0335 \u0335 \u0335Matrix.cons_val_two, Matrix.h\u0335e\u0335a\u0335d\u0335_\u0335c\u0335o\u0335n\u0335s\u0335,\u0335 \u0335M\u0335a\u0335tr\u0335i\u0335x\u0335.\u0335t\u0335ail_cons,\n        Matrix.cons_val_zero', Matrix.cons_val_succ', Matrix.cons_val_fin_one,\n  \u0335  \u0335 \u0335 \u0335 \u0335 \u0335Fin.isValue,\n        raw_0_0_degree1, raw_0_0_degree2, raw_0_0_degree3, \u0332r\u0332a\u0332w\u0332_\u03320\u0332_\u03320\u0332_\u0332d\u0332e\u0332g\u0332r\u0332e\u0332e\u03324\u0332,\u0332 \u0332r\u0332a\u0332w\u0332_\u03320\u0332_\u03321\u0332_\u0332d\u0332e\u0332g\u0332r\u0332e\u0332e\u03320\u0332,\u0332\n        raw_0_0\u0335_\u0335d\u0335e\u0335g\u0335r\u0335e\u0335e\u03354\u0335,\u0335 \u0335r\u0335a\u0335w\u0335_\u03350\u0335_\u03351_degree0\u0335,\u0335 \u0335r\u0335a\u0335w\u0335_\u03350\u0335_\u03351\u0335_\u0335d\u0335e\u0335g\u0335r\u0335e\u0335e\u03352,\n  \u0335  \u0335 \u0335 \u0335 \u0335 \u0335raw_0_1_degree3, raw_0_1_degree4, raw_0_2_degree0,\n  \u0335  \u0335 \u0335 \u0335 \u0335 \u0335raw_0_2_degree1,\n  \u0332  \u0332 \u0332 \u0332 \u0332 \u0332raw_0_2_degree3, raw_0_2_degree4,\n  \u0335  \u0335 \u0335 \u0335 \u0335 \u0335raw_1_0_degree0, raw_1_0_degree2, raw_1_0_degree3,\n        raw_1_0_degree4, raw_1_1_degree0, raw_1_1_degree1,\n  \u0335  \u0335 \u0335 \u0335 \u0335 \u0335raw_1_1_degree3, raw_1_1_degree4,\n  \u0332  \u0332 \u0332 \u0332 \u0332 \u0332raw_1_2_degree0,\n  \u0335  \u0335 \u0335 \u0335 \u0335 \u0335raw_1_2_degree1, raw_1_2_degree2, raw_1_2_degree4,\n  \u0335  \u0335 \u0335 \u0335 \u0335 \u0335raw_2_0_degree0,\n  \u0332  \u0332 \u0332 \u0332 \u0332 \u0332raw_2_0_degree1, raw_2_0_degree3,\n  \u0335  \u0335 \u0335 \u0335 \u0335 \u0335raw_2_0_degree4, raw_2_1_degree0, raw_2_1_degree1,\n        raw_2_1_degree2, raw_2_1_degree4, raw_2_2_degree0,\n  \u0335  \u0335 \u0335 \u0335 \u0335 \u0335raw_2_2_degree1, raw_2_2_degree2,\n  \u0332  \u0332 \u0332 \u0332 \u0332 \u0332raw_2_2_degree3,\n  \u0335  \u0335 \u0335 \u0335 \u0335 \u0335interpret_empty, add_zero, zero_add]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`\n/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroRawAssembly.lean:54:45: warning: This simp argument is unused:\n  Matrix.tail_cons\n\nHint: Omit it from the simp argument list.\n  simp only [rawComponent, Fin.sum_univ_succ, Fin.sum_univ_zero,\n  \u0335  \u0335 \u0335 \u0335 \u0335 \u0335Matrix.cons_val_zero,\n  \u0332  \u0332 \u0332 \u0332 \u0332 \u0332Matrix.cons_val_succ, Matrix.cons_val_one,\n  \u0335  \u0335 \u0335 \u0335 \u0335 \u0335Matrix.cons_val_two, Matrix.head_cons, \u0335M\u0335a\u0335t\u0335r\u0335i\u0335x\u0335.\u0335t\u0335a\u0335i\u0335l\u0335_\u0335c\u0335o\u0335n\u0335s\u0335,\u0335\n        Matrix.cons_val_zero', Matrix.cons_val_succ', Matrix.cons_val_fin_one,\n  \u0335  \u0335 \u0335 \u0335 \u0335 \u0335Fin.isValue,\n        raw_0_0_degree1, raw_0_0_degree2, raw_0_0_degree3, \u0332r\u0332a\u0332w\u0332_\u03320\u0332_\u03320\u0332_\u0332d\u0332e\u0332g\u0332r\u0332e\u0332e\u03324\u0332,\u0332 \u0332r\u0332a\u0332w\u0332_\u03320\u0332_\u03321\u0332_\u0332d\u0332e\u0332g\u0332r\u0332e\u0332e\u03320\u0332,\u0332\n        raw_0_0\u0335_\u0335d\u0335e\u0335g\u0335r\u0335e\u0335e\u03354\u0335,\u0335 \u0335r\u0335a\u0335w\u0335_\u03350\u0335_\u03351_degree0\u0335,\u0335 \u0335r\u0335a\u0335w\u0335_\u03350\u0335_\u03351\u0335_\u0335d\u0335e\u0335g\u0335r\u0335e\u0335e\u03352,\n  \u0335  \u0335 \u0335 \u0335 \u0335 \u0335raw_0_1_degree3, raw_0_1_degree4, raw_0_2_degree0,\n  \u0335  \u0335 \u0335 \u0335 \u0335 \u0335raw_0_2_degree1,\n  \u0332  \u0332 \u0332 \u0332 \u0332 \u0332raw_0_2_degree3, raw_0_2_degree4,\n  \u0335  \u0335 \u0335 \u0335 \u0335 \u0335raw_1_0_degree0, raw_1_0_degree2, raw_1_0_degree3,\n        raw_1_0_degree4, raw_1_1_degree0, raw_1_1_degree1,\n  \u0335  \u0335 \u0335 \u0335 \u0335 \u0335raw_1_1_degree3, raw_1_1_degree4,\n  \u0332  \u0332 \u0332 \u0332 \u0332 \u0332raw_1_2_degree0,\n  \u0335  \u0335 \u0335 \u0335 \u0335 \u0335raw_1_2_degree1, raw_1_2_degree2, raw_1_2_degree4,\n  \u0335  \u0335 \u0335 \u0335 \u0335 \u0335raw_2_0_degree0,\n  \u0332  \u0332 \u0332 \u0332 \u0332 \u0332raw_2_0_degree1, raw_2_0_degree3,\n  \u0335  \u0335 \u0335 \u0335 \u0335 \u0335raw_2_0_degree4, raw_2_1_degree0, raw_2_1_degree1,\n        raw_2_1_degree2, raw_2_1_degree4, raw_2_2_degree0,\n  \u0335  \u0335 \u0335 \u0335 \u0335 \u0335raw_2_2_degree1, raw_2_2_degree2,\n  \u0332  \u0332 \u0332 \u0332 \u0332 \u0332raw_2_2_degree3,\n  \u0335  \u0335 \u0335 \u0335 \u0335 \u0335interpret_empty, add_zero, zero_add]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`\n/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroRawAssembly.lean:93:25: error(lean.unknownIdentifier): Unknown identifier `smul_sum`\n/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroRawAssembly.lean:98:37: error(lean.unknownIdentifier): Unknown identifier `sum_smul`\nTry this:\n  [apply] abel_nf\n/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroRawAssembly.lean:92:52: error: unsolved goals\nK : Type u\ninst\u271d\u00b2 : Field K\ninst\u271d\u00b9 : Algebra \u211a K\nC : StableCurveCohomology K\n\u03b9 : Type u_1\ninst\u271d : Fintype \u03b9\nA : StrataRealization C 2 (Fin 1)\ncoeff : \u03b9 \u2192 Fin 3 \u2192 Fin 3 \u2192 K\n\u22a2 \u2211 x, \u2211 d, coeff x 0 0 \u2022 A.map (rawComponent 0 0 d) +\n      (\u2211 x, \u2211 d, coeff x 0 1 \u2022 A.map (rawComponent 0 1 d) +\n        (\u2211 x, \u2211 d, coeff x 0 2 \u2022 A.map (rawComponent 0 2 d) +\n          (\u2211 x, \u2211 d, coeff x 1 0 \u2022 A.map (rawComponent 1 0 d) +\n            (\u2211 x, \u2211 d, coeff x 1 1 \u2022 A.map (rawComponent 1 1 d) +\n              (\u2211 x, \u2211 d, coeff x 1 2 \u2022 A.map (rawComponent 1 2 d) +\n                (\u2211 x, \u2211 d, coeff x 2 0 \u2022 A.map (rawComponent 2 0 d) +\n                  (\u2211 x, \u2211 d, coeff x 2 1 \u2022 A.map (rawComponent 2 1 d) +\n                    \u2211 x, \u2211 d, coeff x 2 2 \u2022 A.map (rawComponent 2 2 d)))))))) =\n    (\u2211 p, coeff p 0 0) \u2022 A.map raw_0_0_degree0 +\n      ((\u2211 x, coeff x 0 1) \u2022 A.map raw_0_1_degree1 +\n        ((\u2211 x, coeff x 1 0) \u2022 A.map raw_0_1_degree1 +\n          ((\u2211 x, coeff x 0 2) \u2022 A.map raw_0_2_degree2 +\n            ((\u2211 x, coeff x 2 0) \u2022 A.map raw_0_2_degree2 +\n              ((\u2211 p, coeff p 1 1) \u2022 A.map raw_1_1_degree2 +\n                ((\u2211 x, coeff x 1 2) \u2022 A.map raw_1_2_degree3 +\n                  ((\u2211 x, coeff x 2 1) \u2022 A.map raw_1_2_degree3 + (\u2211 p, coeff p 2 2) \u2022 A.map raw_2_2_degree4)))))))\n/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroRawAssembly.lean:93:35: warning: This simp argument is unused:\n  \u2190 map_sum\n\nHint: Omit it from the simp argument list.\n  simp only [assembly, \u2190 smul_sum, \u2190\u0335 \u0335m\u0335a\u0335p\u0335_\u0335s\u0335u\u0335m\u0335,\u0335 \u0335sum_rawComponent]\n\nNote: Simp arguments with `\u2190` have the additional effect of removing the other direction from the simp set, even if the simp argument itself is unused. If the hint above does not work, try replacing `\u2190` with `-` to only get that effect and silence this warning.\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`\n/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroRawAssembly.lean:93:46: warning: This simp argument is unused:\n  sum_rawComponent\n\nHint: Omit it from the simp argument list.\n  simp only [assembly, \u2190 smul_sum, \u2190 map_sum,\u0335 \u0335s\u0335u\u0335m\u0335_\u0335r\u0335a\u0335w\u0335C\u0335o\u0335m\u0335p\u0335o\u0335n\u0335e\u0335n\u0335t\u0335]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`\n/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroRawAssembly.lean:94:33: warning: This simp argument is unused:\n  Matrix.cons_val_zero\n\nHint: Omit it from the simp argument list.\n  simp only [Fin.sum_univ_three, Matrix.cons_val_z\u0335e\u0335r\u0335o,\u0335 \u0335M\u0335a\u0335t\u0335r\u0335i\u0335x\u0335.\u0335c\u0335o\u0335ns\u0335_\u0335v\u0335a\u0335l\u0335_\u0335o\u0335n\u0335e,\n  \u0335  \u0335 \u0335 \u0335Matrix.cons_val_two, Matrix.head_cons,\n  \u0332  \u0332 \u0332 \u0332Matrix.tail_cons,\n  \u0335  \u0335 \u0335 \u0335raw_single_factor_one_symm, raw_single_factor_two_symm,\n      \u2190 AdmcyclesHodgeStrataIsomorphisms.raw_ordered_degree3_equal]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`\n/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroRawAssembly.lean:94:55: warning: This simp argument is unused:\n  Matrix.cons_val_one\n\nHint: Omit it from the simp argument list.\n  simp only [Fin.sum_univ_three, Matrix.cons_val_zero, Matrix.cons_val_o\u0335n\u0335e\u0335,\u0335\n  \u0335 \u0335 \u0335 \u0335 \u0335M\u0335a\u0335tr\u0335i\u0335x\u0335.\u0335c\u0335o\u0335n\u0335s\u0335_\u0335v\u0335a\u0335l\u0335_\u0335t\u0335wo, Matrix.head_cons,\n  \u0332  \u0332 \u0332 \u0332Matrix.tail_cons,\n  \u0335  \u0335 \u0335 \u0335raw_single_factor_one_symm, raw_single_factor_two_symm,\n      \u2190 AdmcyclesHodgeStrataIsomorphisms.raw_ordered_degree3_equal]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`\n/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroRawAssembly.lean:95:4: warning: This simp argument is unused:\n  Matrix.cons_val_two\n\nHint: Omit it from the simp argument list.\n  simp only [Fin.sum_univ_three, Matrix.cons_val_zero, Matrix.cons_val_one,\n  \u0335  \u0335 \u0335 \u0335Matrix.c\u0335o\u0335n\u0335s\u0335_\u0335v\u0335a\u0335l\u0335_\u0335t\u0335w\u0335o\u0335,\u0335 \u0335M\u0335a\u0335t\u0335r\u0335i\u0335x\u0335.\u0335head_cons,\n  \u0332  \u0332 \u0332 \u0332Matrix.tail_cons,\n  \u0335  \u0335 \u0335 \u0335raw_single_factor_one_symm, raw_single_factor_two_symm,\n      \u2190 AdmcyclesHodgeStrataIsomorphisms.raw_ordered_degree3_equal]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`\n/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroRawAssembly.lean:95:25: warning: This simp argument is unused:\n  Matrix.head_cons\n\nHint: Omit it from the simp argument list.\n  simp only [Fin.sum_univ_three, Matrix.cons_val_zero, Matrix.cons_val_one, Matrix.cons_val_two,\n  \u0332  \u0332 \u0332 \u0332M\u0335a\u0335t\u0335r\u0335i\u0335x\u0335.\u0335h\u0335e\u0335a\u0335d\u0335_\u0335c\u0335o\u0335n\u0335s\u0335,\u0335 \u0335Matrix.tail_cons, raw_single_factor_one_symm, raw_single_factor_two_symm,\n      \u2190 AdmcyclesHodgeStrataIsomorphisms.raw_ordered_degree3_equal]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`\n/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroRawAssembly.lean:95:43: warning: This simp argument is unused:\n  Matrix.tail_cons\n\nHint: Omit it from the simp argument list.\n  simp only [Fin.sum_univ_three, Matrix.cons_val_zero, Matrix.cons_val_one,\n  \u0335  \u0335 \u0335 \u0335Matrix.cons_val_two,\n  \u0332  \u0332 \u0332 \u0332Matrix.head_cons, M\u0335a\u0335t\u0335ri\u0335x\u0335.\u0335t\u0335ai\u0335l\u0335_\u0335c\u0335o\u0335n\u0335s\u0335,\u0335\n  \u0335 \u0335 \u0335 \u0335 \u0335r\u0335a\u0335w_single_factor_one_symm, raw_single_factor_two_symm,\n      \u2190 AdmcyclesHodgeStrataIsomorphisms.raw_ordered_degree3_equal]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`\n/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroRawAssembly.lean:96:4: warning: This simp argument is unused:\n  raw_single_factor_one_symm\n\nHint: Omit it from the simp argument list.\n  simp only [Fin.sum_univ_three, Matrix.cons_val_zero, Matrix.cons_val_one,\n  \u0335  \u0335 \u0335 \u0335Matrix.cons_val_two,\n  \u0332  \u0332 \u0332 \u0332Matrix.head_cons, Matrix.tail_cons,\n  \u0335  \u0335 \u0335 \u0335raw_single_factor_o\u0335n\u0335e\u0335_\u0335s\u0335y\u0335m\u0335m\u0335,\u0335 \u0335r\u0335a\u0335w\u0335_\u0335s\u0335i\u0335n\u0335g\u0335l\u0335e\u0335_\u0335f\u0335a\u0335c\u0335to\u0335r\u0335_\u0335t\u0335wo_symm,\n      \u2190 AdmcyclesHodgeStrataIsomorphisms.raw_ordered_degree3_equal]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`\n/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroRawAssembly.lean:96:32: warning: This simp argument is unused:\n  raw_single_factor_two_symm\n\nHint: Omit it from the simp argument list.\n  simp only [Fin.sum_univ_three, Matrix.cons_val_zero, Matrix.cons_val_one,\n  \u0335  \u0335 \u0335 \u0335Matrix.cons_val_two,\n  \u0332  \u0332 \u0332 \u0332Matrix.head_cons, Matrix.tail_cons,\n  \u0335  \u0335 \u0335 \u0335raw_single_factor_on\u0335e\u0335n\u0332e\u0332_symm, \u0335r\u0335a\u0335w\u0335_\u0335s\u0335i\u0335n\u0335g\u0335l\u0335e\u0335_\u0335f\u0335a\u0335c\u0335t\u0335o\u0335r\u0335_\u0335t\u0335w\u0335o\u0335_\u0335s\u0335y\u0335m\u0335m\u0335,\u0335\n      \u2190 AdmcyclesHodgeStrataIsomorphisms.raw_ordered_degree3_equal]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`\n/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroRawAssembly.lean:97:4: warning: This simp argument is unused:\n  \u2190 AdmcyclesHodgeStrataIsomorphisms.raw_ordered_degree3_equal\n\nHint: Omit it from the simp argument list.\n  s\u0335i\u0335m\u0335p\u0335 \u0335o\u0335n\u0335l\u0335y\u0335 \u0335[\u0335F\u0335i\u0335n\u0335.\u0335s\u0335u\u0335m\u0335_\u0335u\u0335n\u0335i\u0335v\u0335_\u0335t\u0335h\u0335r\u0335e\u0335e\u0335,\u0335 \u0335M\u0335a\u0335t\u0335r\u0335i\u0335x\u0335.\u0335c\u0335o\u0335n\u0335s\u0335_\u0335v\u0335a\u0335l\u0335_\u0335z\u0335e\u0335r\u0335o\u0335,\u0335 \u0335M\u0335a\u0335t\u0335r\u0335i\u0335x\u0335.\u0335c\u0335o\u0335n\u0335s\u0335_\u0335v\u0335a\u0335l\u0335_\u0335o\u0335n\u0335e\u0335,\u0335\n  \u0335 \u0335 \u0335 \u0335 \u0335M\u0335a\u0335t\u0335r\u0335i\u0335x\u0335.\u0335c\u0335o\u0335n\u0335s\u0335_\u0335v\u0335a\u0335l\u0335_\u0335t\u0335w\u0335o\u0335,\u0335 \u0335M\u0335a\u0335t\u0335r\u0335i\u0335x\u0335.\u0335h\u0335e\u0335a\u0335d\u0335_\u0335c\u0335o\u0335n\u0335s\u0335,\u0335 \u0335M\u0335a\u0335t\u0335r\u0335i\u0335x\u0335.\u0335t\u0335a\u0335i\u0335l\u0335_\u0335c\u0335o\u0335n\u0335s\u0335,\u0335\n  \u0335 \u0335 \u0335 \u0335 \u0335r\u0335a\u0335w\u0335_\u0335s\u0335i\u0335n\u0335g\u0335l\u0335e\u0335_\u0335f\u0335a\u0335c\u0335t\u0335o\u0335r\u0335_\u0335o\u0335n\u0335e\u0335_\u0335s\u0335y\u0335m\u0335m\u0335,\u0335 \u0335r\u0335a\u0335w\u0335_\u0335s\u0335i\u0335n\u0335g\u0335l\u0335e\u0335_\u0335f\u0335a\u0335c\u0335t\u0335o\u0335r\u0335_\u0335t\u0335w\u0335o\u0335_\u0335s\u0335y\u0335m\u0335m\u0335,\u0335\n  \u0335 \u0335 \u0335 \u0335 \u0335\u2190\u0335 \u0335A\u0335d\u0335m\u0335c\u0335y\u0335c\u0335l\u0335e\u0335s\u0335H\u0335o\u0335d\u0335g\u0335e\u0335S\u0335t\u0335r\u0335a\u0335t\u0335a\u0335I\u0335s\u0335o\u0335m\u0335o\u0335r\u0335p\u0335h\u0335i\u0335s\u0335m\u0335s\u0335.\u0335r\u0335a\u0335w\u0335_\u0335o\u0335r\u0335d\u0335e\u0335r\u0335e\u0335d\u0335_\u0335d\u0335e\u0335g\u0335r\u0335e\u0335e\u03353\u0335_\u0335e\u0335q\u0335u\u0335a\u0335l\u0335]\u0335s\u0332i\u0332m\u0332p\u0332 \u0332o\u0332n\u0332l\u0332y\u0332 \u0332[\u0332F\u0332i\u0332n\u0332.\u0332s\u0332u\u0332m\u0332_\u0332u\u0332n\u0332i\u0332v\u0332_\u0332t\u0332h\u0332r\u0332e\u0332e\u0332,\u0332 \u0332M\u0332a\u0332t\u0332r\u0332i\u0332x\u0332.\u0332c\u0332o\u0332n\u0332s\u0332_\u0332v\u0332a\u0332l\u0332_\u0332z\u0332e\u0332r\u0332o\u0332,\u0332 \u0332M\u0332a\u0332t\u0332r\u0332i\u0332x\u0332.\u0332c\u0332o\u0332n\u0332s\u0332_\u0332v\u0332a\u0332l\u0332_\u0332o\u0332n\u0332e\u0332,\u0332 \u0332M\u0332a\u0332t\u0332r\u0332i\u0332x\u0332.\u0332c\u0332o\u0332n\u0332s\u0332_\u0332v\u0332a\u0332l\u0332_\u0332t\u0332w\u0332o\u0332,\u0332\n  \u0332 \u0332 \u0332 \u0332 \u0332M\u0332a\u0332t\u0332r\u0332i\u0332x\u0332.\u0332h\u0332e\u0332a\u0332d\u0332_\u0332c\u0332o\u0332n\u0332s\u0332,\u0332 \u0332M\u0332a\u0332t\u0332r\u0332i\u0332x\u0332.\u0332t\u0332a\u0332i\u0332l\u0332_\u0332c\u0332o\u0332n\u0332s\u0332,\u0332 \u0332r\u0332a\u0332w\u0332_\u0332s\u0332i\u0332n\u0332g\u0332l\u0332e\u0332_\u0332f\u0332a\u0332c\u0332t\u0332o\u0332r\u0332_\u0332o\u0332n\u0332e\u0332_\u0332s\u0332y\u0332m\u0332m\u0332,\u0332 \u0332r\u0332a\u0332w\u0332_\u0332s\u0332i\u0332n\u0332g\u0332l\u0332e\u0332_\u0332f\u0332a\u0332c\u0332t\u0332o\u0332r\u0332_\u0332t\u0332w\u0332o\u0332_\u0332s\u0332y\u0332m\u0332m\u0332]\u0332\n\nNote: Simp arguments with `\u2190` have the additional effect of removing the other direction from the simp set, even if the simp argument itself is unused. If the hint above does not work, try replacing `\u2190` with `-` to only get that effect and silence this warning.\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`\n{\"status\": \"public_module_failed\", \"manifest\": \"/private/tmp/gw_hodge_raw_assembly_20261005/public-probe-manifest.json\", \"commands\": [{\"command\": [\"/Users/jma/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lean\", \"--memory=2048\", \"--root=/private/tmp/gw_blowup_public_probe_20261004\", \"-o\", \"/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroRawAssembly.olean\", \"/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroRawAssembly.lean\"], \"exit_code\": 1, \"elapsed_seconds\": 3.95}], \"elapsed_seconds\": 3.951, \"isolated_root\": \"/private/tmp/gw_blowup_public_probe_20261004\", \"scope\": \"Exact source modules and separate public imports; no repository edits\"}\n"
+          },
+          "metadata": {
+            "contents": {
+              "children_ru_maxrss_raw": 1098579968,
+              "children_ru_maxrss_unit": "bytes",
+              "command": [
+                "python3",
+                "/tmp/gw_hodge_raw_assembly_probe_runner_20261005.py",
+                "/tmp/gw_hodge_raw_assembly_20261005/public-probe-manifest.json"
+              ],
+              "elapsed_seconds": 6.785,
+              "exit_code": 1,
+              "log": "/tmp/gw_hodge_raw_assembly_public_v1_20261005.log",
+              "resource_note": "Wrapper child usage may omit descendants on interrupted runs.",
+              "status": "failed"
+            },
+            "source": {
+              "path": "/tmp/gw_hodge_raw_assembly_public_v1_20261005.json",
+              "sha256": "c10ad567aaa3231f4ebdfd2ffccfac2cc61184c0dc661721d224530b6f814e3d"
+            }
+          },
+          "repair": "Use the explicit empty-coordinate interpretation equality and qualify Finset scalar-sum APIs; remove unused finite-index simplifier arguments. Statements unchanged."
+        },
+        {
+          "full_log": {
+            "path": "/tmp/gw_hodge_raw_assembly_public_v2_20261005.log",
+            "sha256": "1d248f863cdca2b2607f9118d49a772b312693ffc9e5a29680233992da1519ea",
+            "text": "{\"start\": \"AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroRawAssembly.lean\", \"command\": [\"/Users/jma/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lean\", \"--memory=2048\", \"--root=/private/tmp/gw_blowup_public_probe_20261004\", \"-o\", \"/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroRawAssembly.olean\", \"/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroRawAssembly.lean\"]}\n{\"start\": \"AxiomaticGWTest/GKM/HodgeDegreeZeroRawAssembly.lean\", \"command\": [\"/Users/jma/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lean\", \"--memory=2048\", \"--root=/private/tmp/gw_blowup_public_probe_20261004\", \"-o\", \"/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGWTest/GKM/HodgeDegreeZeroRawAssembly.olean\", \"/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGWTest/GKM/HodgeDegreeZeroRawAssembly.lean\"]}\n/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGWTest/GKM/HodgeDegreeZeroRawAssembly.lean:38:2: error: match_scalars failed: \u2115 is not an Coefficient-algebra and Coefficient is not an \u2115-algebra\n{\"status\": \"public_module_failed\", \"manifest\": \"/private/tmp/gw_hodge_raw_assembly_v2_20261005/public-probe-manifest.json\", \"commands\": [{\"command\": [\"/Users/jma/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lean\", \"--memory=2048\", \"--root=/private/tmp/gw_blowup_public_probe_20261004\", \"-o\", \"/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroRawAssembly.olean\", \"/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroRawAssembly.lean\"], \"exit_code\": 0, \"elapsed_seconds\": 3.412}, {\"command\": [\"/Users/jma/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lean\", \"--memory=2048\", \"--root=/private/tmp/gw_blowup_public_probe_20261004\", \"-o\", \"/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGWTest/GKM/HodgeDegreeZeroRawAssembly.olean\", \"/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGWTest/GKM/HodgeDegreeZeroRawAssembly.lean\"], \"exit_code\": 1, \"elapsed_seconds\": 2.339}], \"elapsed_seconds\": 5.751, \"isolated_root\": \"/private/tmp/gw_blowup_public_probe_20261004\", \"scope\": \"Exact source modules and separate public imports; no repository edits\"}\n"
+          },
+          "metadata": {
+            "contents": {
+              "children_ru_maxrss_raw": 1130381312,
+              "children_ru_maxrss_unit": "bytes",
+              "command": [
+                "python3",
+                "/tmp/gw_hodge_raw_assembly_probe_runner_20261005.py",
+                "/tmp/gw_hodge_raw_assembly_v2_20261005/public-probe-manifest.json"
+              ],
+              "elapsed_seconds": 9.061,
+              "exit_code": 1,
+              "log": "/tmp/gw_hodge_raw_assembly_public_v2_20261005.log",
+              "resource_note": "Wrapper child usage may omit descendants on interrupted runs.",
+              "status": "failed"
+            },
+            "source": {
+              "path": "/tmp/gw_hodge_raw_assembly_public_v2_20261005.json",
+              "sha256": "805c842e7c1c4a62eabc1b8bf5f678d915636a5981df107550d14cbb819d38cd"
+            }
+          },
+          "repair": "Production already compiled without warnings. Replace the consumer module tactic, whose scalar coercion failed, with explicit 5=4+1 distribution and additive normalization; remove its now-unused tactic import."
+        }
+      ],
+      "source": {
+        "path": "/tmp/gw_hodge_raw_assembly_v3_20261005/development-history.json",
+        "sha256": "bc67b811ee57fc0ab5d2fd736d5a4261704de6c73c69e065972210f986f6e2de"
+      }
+    },
+    "public_acceptance": {
+      "contents": {
+        "actual_repository_validation": "Not yet integrated or run; no full-project acceptance.",
+        "audit_declarations": 10,
+        "audit_source": {
+          "path": "/tmp/gw_blowup_public_probe_20261004/HodgeRawAssemblyAudit.lean",
+          "sha256": "52f342e1b3143061492fc0ee99c012802d4f73e7df799dcc73d1ba4ec4558b28",
+          "text": "module\n\npublic import AxiomaticGW.GKM.Fixtures.HodgeDegreeZeroRawAssembly\npublic import AxiomaticGWTest.GKM.HodgeDegreeZeroRawAssembly\n#print axioms AxiomaticGW.GKM.HodgeDegreeZeroRawAssembly.sum_rawComponent\n#print axioms AxiomaticGW.GKM.HodgeDegreeZeroRawAssembly.raw_single_factor_one_symm\n#print axioms AxiomaticGW.GKM.HodgeDegreeZeroRawAssembly.raw_single_factor_two_symm\n#print axioms AxiomaticGW.GKM.HodgeDegreeZeroRawAssembly.assembly_eq_collected_raw\n#print axioms AxiomaticGW.GKM.HodgeDegreeZeroRawAssembly.plane_candidateClass_eq_raw_regular\n#print axioms AxiomaticGW.GKM.HodgeDegreeZeroRawAssembly.oneBlowup_candidateClass_eq_raw_regular\n#print axioms AxiomaticGW.GKM.HodgeDegreeZeroRawAssembly.twoBlowups_candidateClass_eq_raw_regular\n#print axioms AxiomaticGWTest.HodgeDegreeZeroRawAssembly.plane_full_class\n#print axioms AxiomaticGWTest.HodgeDegreeZeroRawAssembly.blowup_full_class_comparison\n#print axioms AxiomaticGWTest.HodgeDegreeZeroRawAssembly.degree_four_input_retained\n"
+        },
+        "axioms": {
+          "AxiomaticGW.GKM.HodgeDegreeZeroRawAssembly.assembly_eq_collected_raw": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "AxiomaticGW.GKM.HodgeDegreeZeroRawAssembly.oneBlowup_candidateClass_eq_raw_regular": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "AxiomaticGW.GKM.HodgeDegreeZeroRawAssembly.plane_candidateClass_eq_raw_regular": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "AxiomaticGW.GKM.HodgeDegreeZeroRawAssembly.raw_single_factor_one_symm": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "AxiomaticGW.GKM.HodgeDegreeZeroRawAssembly.raw_single_factor_two_symm": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "AxiomaticGW.GKM.HodgeDegreeZeroRawAssembly.sum_rawComponent": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "AxiomaticGW.GKM.HodgeDegreeZeroRawAssembly.twoBlowups_candidateClass_eq_raw_regular": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "AxiomaticGWTest.HodgeDegreeZeroRawAssembly.blowup_full_class_comparison": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "AxiomaticGWTest.HodgeDegreeZeroRawAssembly.degree_four_input_retained": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "AxiomaticGWTest.HodgeDegreeZeroRawAssembly.plane_full_class": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        "full_log": {
+          "path": "/tmp/gw_hodge_raw_assembly_public_v3_20261005.log",
+          "sha256": "4c9262e7ec9f9ef5d52b04f7454187fec3ed589525a7bc921e8d533efb1a90ab",
+          "text": "{\"start\": \"AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroRawAssembly.lean\", \"command\": [\"/Users/jma/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lean\", \"--memory=2048\", \"--root=/private/tmp/gw_blowup_public_probe_20261004\", \"-o\", \"/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroRawAssembly.olean\", \"/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroRawAssembly.lean\"]}\n{\"start\": \"AxiomaticGWTest/GKM/HodgeDegreeZeroRawAssembly.lean\", \"command\": [\"/Users/jma/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lean\", \"--memory=2048\", \"--root=/private/tmp/gw_blowup_public_probe_20261004\", \"-o\", \"/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGWTest/GKM/HodgeDegreeZeroRawAssembly.olean\", \"/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGWTest/GKM/HodgeDegreeZeroRawAssembly.lean\"]}\n'AxiomaticGW.GKM.HodgeDegreeZeroRawAssembly.sum_rawComponent' depends on axioms: [propext, Classical.choice, Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeZeroRawAssembly.raw_single_factor_one_symm' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeZeroRawAssembly.raw_single_factor_two_symm' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeZeroRawAssembly.assembly_eq_collected_raw' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeZeroRawAssembly.plane_candidateClass_eq_raw_regular' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeZeroRawAssembly.oneBlowup_candidateClass_eq_raw_regular' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeZeroRawAssembly.twoBlowups_candidateClass_eq_raw_regular' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGWTest.HodgeDegreeZeroRawAssembly.plane_full_class' depends on axioms: [propext, Classical.choice, Quot.sound]\n'AxiomaticGWTest.HodgeDegreeZeroRawAssembly.blowup_full_class_comparison' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGWTest.HodgeDegreeZeroRawAssembly.degree_four_input_retained' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n{\"status\": \"passed\", \"manifest\": \"/private/tmp/gw_hodge_raw_assembly_v3_20261005/public-probe-manifest.json\", \"commands\": [{\"command\": [\"/Users/jma/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lean\", \"--memory=2048\", \"--root=/private/tmp/gw_blowup_public_probe_20261004\", \"-o\", \"/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroRawAssembly.olean\", \"/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroRawAssembly.lean\"], \"exit_code\": 0, \"elapsed_seconds\": 3.734}, {\"command\": [\"/Users/jma/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lean\", \"--memory=2048\", \"--root=/private/tmp/gw_blowup_public_probe_20261004\", \"-o\", \"/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGWTest/GKM/HodgeDegreeZeroRawAssembly.olean\", \"/private/tmp/gw_blowup_public_probe_20261004/AxiomaticGWTest/GKM/HodgeDegreeZeroRawAssembly.lean\"], \"exit_code\": 0, \"elapsed_seconds\": 1.789}, {\"command\": [\"/Users/jma/.elan/toolchains/leanprover--lean4---v4.32.0/bin/lean\", \"--memory=2048\", \"--root=/private/tmp/gw_blowup_public_probe_20261004\", \"/private/tmp/gw_blowup_public_probe_20261004/HodgeRawAssemblyAudit.lean\"], \"exit_code\": 0, \"elapsed_seconds\": 0.973}], \"elapsed_seconds\": 6.497, \"isolated_root\": \"/private/tmp/gw_blowup_public_probe_20261004\", \"scope\": \"Exact source modules and separate public imports; no repository edits\"}\n"
+        },
+        "metadata": {
+          "contents": {
+            "children_ru_maxrss_raw": 1109835776,
+            "children_ru_maxrss_unit": "bytes",
+            "command": [
+              "python3",
+              "/tmp/gw_hodge_raw_assembly_probe_runner_20261005.py",
+              "/tmp/gw_hodge_raw_assembly_v3_20261005/public-probe-manifest.json"
+            ],
+            "elapsed_seconds": 9.742,
+            "exit_code": 0,
+            "log": "/tmp/gw_hodge_raw_assembly_public_v3_20261005.log",
+            "resource_note": "Wrapper child usage may omit descendants on interrupted runs.",
+            "status": "passed"
+          },
+          "source": {
+            "path": "/tmp/gw_hodge_raw_assembly_public_v3_20261005.json",
+            "sha256": "e79f9fd4209921b99d6009bd9aa2d7913a0f211946f5f8e34285515da5f6c7dd"
+          }
+        },
+        "review": {
+          "contents": {
+            "accepted_nontrivial_symmetry": {
+              "scope": "Equality of actual QQ-valued free strata expressions from graph isomorphisms, before imposing geometric tautological relations.",
+              "statement": "raw_1_2_degree3 = raw_2_1_degree3",
+              "theorem": "AxiomaticGW.AdmcyclesHodgeStrataIsomorphisms.raw_ordered_degree3_equal"
+            },
+            "actual_component_inventory": [
+              {
+                "a": 0,
+                "b": 0,
+                "degree": 0,
+                "occurrences": 1
+              },
+              {
+                "a": 0,
+                "b": 0,
+                "degree": 1,
+                "occurrences": 0
+              },
+              {
+                "a": 0,
+                "b": 0,
+                "degree": 2,
+                "occurrences": 0
+              },
+              {
+                "a": 0,
+                "b": 0,
+                "degree": 3,
+                "occurrences": 0
+              },
+              {
+                "a": 0,
+                "b": 0,
+                "degree": 4,
+                "occurrences": 0
+              },
+              {
+                "a": 0,
+                "b": 1,
+                "degree": 0,
+                "occurrences": 0
+              },
+              {
+                "a": 0,
+                "b": 1,
+                "degree": 1,
+                "occurrences": 5
+              },
+              {
+                "a": 0,
+                "b": 1,
+                "degree": 2,
+                "occurrences": 0
+              },
+              {
+                "a": 0,
+                "b": 1,
+                "degree": 3,
+                "occurrences": 0
+              },
+              {
+                "a": 0,
+                "b": 1,
+                "degree": 4,
+                "occurrences": 0
+              },
+              {
+                "a": 0,
+                "b": 2,
+                "degree": 0,
+                "occurrences": 0
+              },
+              {
+                "a": 0,
+                "b": 2,
+                "degree": 1,
+                "occurrences": 0
+              },
+              {
+                "a": 0,
+                "b": 2,
+                "degree": 2,
+                "occurrences": 16
+              },
+              {
+                "a": 0,
+                "b": 2,
+                "degree": 3,
+                "occurrences": 0
+              },
+              {
+                "a": 0,
+                "b": 2,
+                "degree": 4,
+                "occurrences": 0
+              },
+              {
+                "a": 1,
+                "b": 0,
+                "degree": 0,
+                "occurrences": 0
+              },
+              {
+                "a": 1,
+                "b": 0,
+                "degree": 1,
+                "occurrences": 5
+              },
+              {
+                "a": 1,
+                "b": 0,
+                "degree": 2,
+                "occurrences": 0
+              },
+              {
+                "a": 1,
+                "b": 0,
+                "degree": 3,
+                "occurrences": 0
+              },
+              {
+                "a": 1,
+                "b": 0,
+                "degree": 4,
+                "occurrences": 0
+              },
+              {
+                "a": 1,
+                "b": 1,
+                "degree": 0,
+                "occurrences": 0
+              },
+              {
+                "a": 1,
+                "b": 1,
+                "degree": 1,
+                "occurrences": 0
+              },
+              {
+                "a": 1,
+                "b": 1,
+                "degree": 2,
+                "occurrences": 28
+              },
+              {
+                "a": 1,
+                "b": 1,
+                "degree": 3,
+                "occurrences": 0
+              },
+              {
+                "a": 1,
+                "b": 1,
+                "degree": 4,
+                "occurrences": 0
+              },
+              {
+                "a": 1,
+                "b": 2,
+                "degree": 0,
+                "occurrences": 0
+              },
+              {
+                "a": 1,
+                "b": 2,
+                "degree": 1,
+                "occurrences": 0
+              },
+              {
+                "a": 1,
+                "b": 2,
+                "degree": 2,
+                "occurrences": 0
+              },
+              {
+                "a": 1,
+                "b": 2,
+                "degree": 3,
+                "occurrences": 122
+              },
+              {
+                "a": 1,
+                "b": 2,
+                "degree": 4,
+                "occurrences": 0
+              },
+              {
+                "a": 2,
+                "b": 0,
+                "degree": 0,
+                "occurrences": 0
+              },
+              {
+                "a": 2,
+                "b": 0,
+                "degree": 1,
+                "occurrences": 0
+              },
+              {
+                "a": 2,
+                "b": 0,
+                "degree": 2,
+                "occurrences": 16
+              },
+              {
+                "a": 2,
+                "b": 0,
+                "degree": 3,
+                "occurrences": 0
+              },
+              {
+                "a": 2,
+                "b": 0,
+                "degree": 4,
+                "occurrences": 0
+              },
+              {
+                "a": 2,
+                "b": 1,
+                "degree": 0,
+                "occurrences": 0
+              },
+              {
+                "a": 2,
+                "b": 1,
+                "degree": 1,
+                "occurrences": 0
+              },
+              {
+                "a": 2,
+                "b": 1,
+                "degree": 2,
+                "occurrences": 0
+              },
+              {
+                "a": 2,
+                "b": 1,
+                "degree": 3,
+                "occurrences": 108
+              },
+              {
+                "a": 2,
+                "b": 1,
+                "degree": 4,
+                "occurrences": 0
+              },
+              {
+                "a": 2,
+                "b": 2,
+                "degree": 0,
+                "occurrences": 0
+              },
+              {
+                "a": 2,
+                "b": 2,
+                "degree": 1,
+                "occurrences": 0
+              },
+              {
+                "a": 2,
+                "b": 2,
+                "degree": 2,
+                "occurrences": 0
+              },
+              {
+                "a": 2,
+                "b": 2,
+                "degree": 3,
+                "occurrences": 0
+              },
+              {
+                "a": 2,
+                "b": 2,
+                "degree": 4,
+                "occurrences": 252
+              }
+            ],
+            "concrete_statements": {
+              "OneBlowup": "theorem oneBlowup_candidateClass_eq_raw_regular\n    {C : StableCurveCohomology Coefficient}\n    (A : StrataRealization C 2 (Fin 1)) :\n    HodgeDegreeZeroFullCoefficientReplay.OneBlowup.candidateClass A =\n      (4 : Coefficient) \u2022 A.map raw_1_1_degree2",
+              "Plane": "theorem plane_candidateClass_eq_raw_regular\n    {C : StableCurveCohomology Coefficient}\n    (A : StrataRealization C 2 (Fin 1)) :\n    HodgeDegreeZeroFullCoefficientReplay.Plane.candidateClass A =\n      (x ^ 2 - x * y + y ^ 2) \u2022 A.map raw_0_0_degree0 +\n      (3 : Coefficient) \u2022 A.map raw_1_1_degree2 +\n      (3 : Coefficient) \u2022 A.map raw_0_2_degree2",
+              "TwoBlowups": "theorem twoBlowups_candidateClass_eq_raw_regular\n    {C : StableCurveCohomology Coefficient}\n    (A : StrataRealization C 2 (Fin 1)) :\n    HodgeDegreeZeroFullCoefficientReplay.TwoBlowups.candidateClass A =\n      (-(x ^ 2 - x * y + y ^ 2)) \u2022 A.map raw_0_0_degree0 +\n      (5 : Coefficient) \u2022 A.map raw_1_1_degree2 +\n      (-3 : Coefficient) \u2022 A.map raw_0_2_degree2"
+            },
+            "direct_symmetries": [
+              {
+                "definition_body_identical": true,
+                "left": "raw_0_1_degree1Columns",
+                "right": "raw_1_0_degree1Columns"
+              },
+              {
+                "definition_body_identical": true,
+                "left": "raw_0_1_degree1Coordinates",
+                "right": "raw_1_0_degree1Coordinates"
+              },
+              {
+                "definition_body_identical": true,
+                "left": "raw_0_2_degree2Columns",
+                "right": "raw_2_0_degree2Columns"
+              },
+              {
+                "definition_body_identical": true,
+                "left": "raw_0_2_degree2Coordinates",
+                "right": "raw_2_0_degree2Coordinates"
+              }
+            ],
+            "findings": [
+              {
+                "claim": "No additional geometric premise is required for the stated additive assembly identity.",
+                "evidence": "The same abstract StrataRealization A already supplies a QQ-linear map, and its target has the existing coefficient-field module action.",
+                "severity": "none"
+              },
+              {
+                "claim": "Do not evaluate formal Hodge polynomials multiplicatively in A.map raw classes.",
+                "evidence": "A is linear, not a ring homomorphism; raw_1_1_degree2 is not proved equal to a geometric or target-ring square, and raw_1_2_degree3 is not identified with a product.",
+                "severity": "medium_boundary"
+              }
+            ],
+            "generic_statement": "theorem assembly_eq_collected_raw\n    {K : Type u} [Field K] [Algebra \u211a K]\n    {C : StableCurveCohomology K} {\u03b9 : Type*} [Fintype \u03b9]\n    (A : StrataRealization C 2 (Fin 1))\n    (coeff : \u03b9 \u2192 Fin 3 \u2192 Fin 3 \u2192 K) :\n    assembly A coeff =\n      (\u2211 p, coeff p 0 0) \u2022 A.map raw_0_0_degree0 +\n      (\u2211 p, (coeff p 0 1 + coeff p 1 0)) \u2022 A.map raw_0_1_degree1 +\n      (\u2211 p, (coeff p 0 2 + coeff p 2 0)) \u2022 A.map raw_0_2_degree2 +\n      (\u2211 p, coeff p 1 1) \u2022 A.map raw_1_1_degree2 +\n      (\u2211 p, (coeff p 1 2 + coeff p 2 1)) \u2022 A.map raw_1_2_degree3 +\n      (\u2211 p, coeff p 2 2) \u2022 A.map raw_2_2_degree4",
+            "inventory_summary": {
+              "components": 45,
+              "empty": 36,
+              "nonempty": 9,
+              "nonempty_degree_equals_a_plus_b": true,
+              "occurrences": 553
+            },
+            "mathematical_effect": "The conclusion is equality of the complete actual class under every existing homogeneous QQ-linear realization A, not merely equality of its scalar projection. It preserves raw_1_1_degree2 and raw_0_2_degree2 as the exact source expressions.",
+            "no_new_inputs": [
+              "No ConnectedDegreeZero D",
+              "No fundamental normalization hfund",
+              "No product-preserving map assumption",
+              "No geometric Hodge/GRR identification",
+              "No field-to-QQ specialization",
+              "No tensor-product or equivariant strata redesign",
+              "No new global instance or simp attribute"
+            ],
+            "proof_plan": [
+              "Prove the 36 explicitly empty components zero by RelationCertificate.interpret_apply and Fin.sum_univ_zero, keeping every nonempty raw expression opaque.",
+              "Prove the two small ordered symmetries by definitional equality of their actual columns and coordinates; reuse the existing graph-isomorphism proof for (1,2)/(2,1).",
+              "Regroup assembly using map_sum, map_zero, Finset.sum_comm, smul_sum, sum_smul and add_smul. Expand only Fin3/Fin5 index frames and collect the six actual raw basis expressions.",
+              "For each actual tensor, apply the six accepted HodgeDegreeZeroRegularity sum_* identities and eliminate zero coefficients. Retain all original fixed-point/ordered inputs on the theorem left-hand side.",
+              "Add independent public consumers that use these full class identities without D or hfund; do not use scalar projection in the proof.",
+              "Stage source-bound portable generation and tests if generated; use pinned original modules and raw input before helper execution. Run bounded targeted build and exact public axiom audit only after parent approval."
+            ],
+            "proposed_production": "AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroRawAssembly.lean",
+            "proposed_public_consumer": "AxiomaticGWTest/GKM/HodgeDegreeZeroRawAssembly.lean",
+            "scope": "Transport complete fixed-point cancellation to the existing 45-component candidateClass through additive and scalar operations only.",
+            "source_pins": {
+              "AxiomaticGW/GKM/AdmcyclesHodgeStrataNormalization.lean": "d36565c19b0198d833caddfc755ba431660d2f84752fdd760cbcc38f37734ce3",
+              "AxiomaticGW/GKM/Fixtures/AdmcyclesHodgeStrataCandidates.lean": "244eaf08f741057b92113ee4b0c4a48b2185b55350473bc28286460ea07b651c",
+              "AxiomaticGW/GKM/Fixtures/AdmcyclesHodgeStrataIsomorphisms.lean": "ddb7e9cfb94ced658a96883782aed3072ae8d7fe1763ff4390e021dcafe3f26a",
+              "AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroFullCoefficientReplay.lean": "648ac71eb16d06ca1b94b29ca2e1972ca2f360ce534fb864230933daa6c29ce8",
+              "AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroRegularity.lean": "b44bcad2fd02afe2c39f130ef610065360a3149f0101a72ddd61c77f67d49cd6",
+              "AxiomaticGW/Tautological/StrataModule.lean": "4cbd41c258dd6e0e03a691d8de21fd9021788e03b67d1df0127742553f53112f",
+              "AxiomaticGW/Tautological/StrataRealization.lean": "ddf59186e35a331415f9cbb8713dbcfda209fbf9bf5530123a1ab87964cd308c"
+            },
+            "statement_context": "open AxiomaticGW, AdmcyclesHodgeStrataCandidates, AdmcyclesHodgeStrataNormalization and GKM.EquivariantCoefficients; local strataRealizationModule instance as in the existing assembly module. These are planned statements, not compiled declarations.",
+            "status": "reviewed_sound_linear_transport_plan_not_implemented",
+            "unchanged_geometric_gate": [
+              "Identify raw representatives with Hodge classes and prove product compatibility",
+              "Geometric Hodge/GRR and constant-map virtual Euler/stabilization comparison",
+              "Total equivariant grading and geometric ordinary specialization",
+              "Actual semisimple GKM CohFT laws and fixed research applications"
+            ],
+            "validation": "Read source and compared exact declaration bodies/counts. No Lean/Sage execution, repo edits, or proof acceptance claimed for this proposed follow-up."
+          },
+          "source": {
+            "path": "/tmp/gw_hodge_raw_assembly_review_20261005/review-and-statements.json",
+            "sha256": "36f0dbd76dc72a2d59f7f4dbdd6cb0ee7e745bea4568071a923cf355686e6f18"
+          }
+        },
+        "source_manifest": {
+          "contents": {
+            "audit_names": [
+              "AxiomaticGW.GKM.HodgeDegreeZeroRawAssembly.sum_rawComponent",
+              "AxiomaticGW.GKM.HodgeDegreeZeroRawAssembly.raw_single_factor_one_symm",
+              "AxiomaticGW.GKM.HodgeDegreeZeroRawAssembly.raw_single_factor_two_symm",
+              "AxiomaticGW.GKM.HodgeDegreeZeroRawAssembly.assembly_eq_collected_raw",
+              "AxiomaticGW.GKM.HodgeDegreeZeroRawAssembly.plane_candidateClass_eq_raw_regular",
+              "AxiomaticGW.GKM.HodgeDegreeZeroRawAssembly.oneBlowup_candidateClass_eq_raw_regular",
+              "AxiomaticGW.GKM.HodgeDegreeZeroRawAssembly.twoBlowups_candidateClass_eq_raw_regular",
+              "AxiomaticGWTest.HodgeDegreeZeroRawAssembly.plane_full_class",
+              "AxiomaticGWTest.HodgeDegreeZeroRawAssembly.blowup_full_class_comparison",
+              "AxiomaticGWTest.HodgeDegreeZeroRawAssembly.degree_four_input_retained"
+            ],
+            "expected_audit_declarations": 10,
+            "public_modules": [
+              {
+                "destination": "AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroRawAssembly.lean",
+                "sha256": "a3d9c5ef4e56e42f246add66295653b2698974c9f16874e6a3b15bc5a9275e8b",
+                "source": "/tmp/gw_hodge_raw_assembly_v3_20261005/AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroRawAssembly.lean"
+              },
+              {
+                "destination": "AxiomaticGWTest/GKM/HodgeDegreeZeroRawAssembly.lean",
+                "sha256": "222bd35abc8053324633a84aee1cd20e930bdf464409e12eda141abc755ff1b6",
+                "source": "/tmp/gw_hodge_raw_assembly_v3_20261005/AxiomaticGWTest/GKM/HodgeDegreeZeroRawAssembly.lean"
+              }
+            ],
+            "scope": "Additive equality of complete actual raw assemblies; no geometric or multiplicative premise."
+          },
+          "source": {
+            "path": "/tmp/gw_hodge_raw_assembly_v3_20261005/public-probe-manifest.json",
+            "sha256": "983899322348f8097f7f0698be87ad60651e61f1a6b5423694d651ede68dbc96"
+          }
+        },
+        "status": "isolated_full_raw_assembly_identity_passed",
+        "warning_count": 0
+      },
+      "source": {
+        "path": "/tmp/gw_hodge_raw_assembly_v3_20261005/public-acceptance.json",
+        "sha256": "a3afc7d75181ae0e822d9fd186f7e85a6787b713176fa08aeb2e0457107e77a0"
+      }
+    },
+    "public_probe_manifest": {
+      "contents": {
+        "audit_names": [
+          "AxiomaticGW.GKM.HodgeDegreeZeroRawAssembly.sum_rawComponent",
+          "AxiomaticGW.GKM.HodgeDegreeZeroRawAssembly.raw_single_factor_one_symm",
+          "AxiomaticGW.GKM.HodgeDegreeZeroRawAssembly.raw_single_factor_two_symm",
+          "AxiomaticGW.GKM.HodgeDegreeZeroRawAssembly.assembly_eq_collected_raw",
+          "AxiomaticGW.GKM.HodgeDegreeZeroRawAssembly.plane_candidateClass_eq_raw_regular",
+          "AxiomaticGW.GKM.HodgeDegreeZeroRawAssembly.oneBlowup_candidateClass_eq_raw_regular",
+          "AxiomaticGW.GKM.HodgeDegreeZeroRawAssembly.twoBlowups_candidateClass_eq_raw_regular",
+          "AxiomaticGWTest.HodgeDegreeZeroRawAssembly.plane_full_class",
+          "AxiomaticGWTest.HodgeDegreeZeroRawAssembly.blowup_full_class_comparison",
+          "AxiomaticGWTest.HodgeDegreeZeroRawAssembly.degree_four_input_retained"
+        ],
+        "expected_audit_declarations": 10,
+        "public_modules": [
+          {
+            "destination": "AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroRawAssembly.lean",
+            "sha256": "a3d9c5ef4e56e42f246add66295653b2698974c9f16874e6a3b15bc5a9275e8b",
+            "source": "/tmp/gw_hodge_raw_assembly_v3_20261005/AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroRawAssembly.lean"
+          },
+          {
+            "destination": "AxiomaticGWTest/GKM/HodgeDegreeZeroRawAssembly.lean",
+            "sha256": "222bd35abc8053324633a84aee1cd20e930bdf464409e12eda141abc755ff1b6",
+            "source": "/tmp/gw_hodge_raw_assembly_v3_20261005/AxiomaticGWTest/GKM/HodgeDegreeZeroRawAssembly.lean"
+          }
+        ],
+        "scope": "Additive equality of complete actual raw assemblies; no geometric or multiplicative premise."
+      },
+      "source": {
+        "path": "/tmp/gw_hodge_raw_assembly_v3_20261005/public-probe-manifest.json",
+        "sha256": "983899322348f8097f7f0698be87ad60651e61f1a6b5423694d651ede68dbc96"
+      }
+    },
+    "review": {
+      "contents": {
+        "accepted_nontrivial_symmetry": {
+          "scope": "Equality of actual QQ-valued free strata expressions from graph isomorphisms, before imposing geometric tautological relations.",
+          "statement": "raw_1_2_degree3 = raw_2_1_degree3",
+          "theorem": "AxiomaticGW.AdmcyclesHodgeStrataIsomorphisms.raw_ordered_degree3_equal"
+        },
+        "actual_component_inventory": [
+          {
+            "a": 0,
+            "b": 0,
+            "degree": 0,
+            "occurrences": 1
+          },
+          {
+            "a": 0,
+            "b": 0,
+            "degree": 1,
+            "occurrences": 0
+          },
+          {
+            "a": 0,
+            "b": 0,
+            "degree": 2,
+            "occurrences": 0
+          },
+          {
+            "a": 0,
+            "b": 0,
+            "degree": 3,
+            "occurrences": 0
+          },
+          {
+            "a": 0,
+            "b": 0,
+            "degree": 4,
+            "occurrences": 0
+          },
+          {
+            "a": 0,
+            "b": 1,
+            "degree": 0,
+            "occurrences": 0
+          },
+          {
+            "a": 0,
+            "b": 1,
+            "degree": 1,
+            "occurrences": 5
+          },
+          {
+            "a": 0,
+            "b": 1,
+            "degree": 2,
+            "occurrences": 0
+          },
+          {
+            "a": 0,
+            "b": 1,
+            "degree": 3,
+            "occurrences": 0
+          },
+          {
+            "a": 0,
+            "b": 1,
+            "degree": 4,
+            "occurrences": 0
+          },
+          {
+            "a": 0,
+            "b": 2,
+            "degree": 0,
+            "occurrences": 0
+          },
+          {
+            "a": 0,
+            "b": 2,
+            "degree": 1,
+            "occurrences": 0
+          },
+          {
+            "a": 0,
+            "b": 2,
+            "degree": 2,
+            "occurrences": 16
+          },
+          {
+            "a": 0,
+            "b": 2,
+            "degree": 3,
+            "occurrences": 0
+          },
+          {
+            "a": 0,
+            "b": 2,
+            "degree": 4,
+            "occurrences": 0
+          },
+          {
+            "a": 1,
+            "b": 0,
+            "degree": 0,
+            "occurrences": 0
+          },
+          {
+            "a": 1,
+            "b": 0,
+            "degree": 1,
+            "occurrences": 5
+          },
+          {
+            "a": 1,
+            "b": 0,
+            "degree": 2,
+            "occurrences": 0
+          },
+          {
+            "a": 1,
+            "b": 0,
+            "degree": 3,
+            "occurrences": 0
+          },
+          {
+            "a": 1,
+            "b": 0,
+            "degree": 4,
+            "occurrences": 0
+          },
+          {
+            "a": 1,
+            "b": 1,
+            "degree": 0,
+            "occurrences": 0
+          },
+          {
+            "a": 1,
+            "b": 1,
+            "degree": 1,
+            "occurrences": 0
+          },
+          {
+            "a": 1,
+            "b": 1,
+            "degree": 2,
+            "occurrences": 28
+          },
+          {
+            "a": 1,
+            "b": 1,
+            "degree": 3,
+            "occurrences": 0
+          },
+          {
+            "a": 1,
+            "b": 1,
+            "degree": 4,
+            "occurrences": 0
+          },
+          {
+            "a": 1,
+            "b": 2,
+            "degree": 0,
+            "occurrences": 0
+          },
+          {
+            "a": 1,
+            "b": 2,
+            "degree": 1,
+            "occurrences": 0
+          },
+          {
+            "a": 1,
+            "b": 2,
+            "degree": 2,
+            "occurrences": 0
+          },
+          {
+            "a": 1,
+            "b": 2,
+            "degree": 3,
+            "occurrences": 122
+          },
+          {
+            "a": 1,
+            "b": 2,
+            "degree": 4,
+            "occurrences": 0
+          },
+          {
+            "a": 2,
+            "b": 0,
+            "degree": 0,
+            "occurrences": 0
+          },
+          {
+            "a": 2,
+            "b": 0,
+            "degree": 1,
+            "occurrences": 0
+          },
+          {
+            "a": 2,
+            "b": 0,
+            "degree": 2,
+            "occurrences": 16
+          },
+          {
+            "a": 2,
+            "b": 0,
+            "degree": 3,
+            "occurrences": 0
+          },
+          {
+            "a": 2,
+            "b": 0,
+            "degree": 4,
+            "occurrences": 0
+          },
+          {
+            "a": 2,
+            "b": 1,
+            "degree": 0,
+            "occurrences": 0
+          },
+          {
+            "a": 2,
+            "b": 1,
+            "degree": 1,
+            "occurrences": 0
+          },
+          {
+            "a": 2,
+            "b": 1,
+            "degree": 2,
+            "occurrences": 0
+          },
+          {
+            "a": 2,
+            "b": 1,
+            "degree": 3,
+            "occurrences": 108
+          },
+          {
+            "a": 2,
+            "b": 1,
+            "degree": 4,
+            "occurrences": 0
+          },
+          {
+            "a": 2,
+            "b": 2,
+            "degree": 0,
+            "occurrences": 0
+          },
+          {
+            "a": 2,
+            "b": 2,
+            "degree": 1,
+            "occurrences": 0
+          },
+          {
+            "a": 2,
+            "b": 2,
+            "degree": 2,
+            "occurrences": 0
+          },
+          {
+            "a": 2,
+            "b": 2,
+            "degree": 3,
+            "occurrences": 0
+          },
+          {
+            "a": 2,
+            "b": 2,
+            "degree": 4,
+            "occurrences": 252
+          }
+        ],
+        "concrete_statements": {
+          "OneBlowup": "theorem oneBlowup_candidateClass_eq_raw_regular\n    {C : StableCurveCohomology Coefficient}\n    (A : StrataRealization C 2 (Fin 1)) :\n    HodgeDegreeZeroFullCoefficientReplay.OneBlowup.candidateClass A =\n      (4 : Coefficient) \u2022 A.map raw_1_1_degree2",
+          "Plane": "theorem plane_candidateClass_eq_raw_regular\n    {C : StableCurveCohomology Coefficient}\n    (A : StrataRealization C 2 (Fin 1)) :\n    HodgeDegreeZeroFullCoefficientReplay.Plane.candidateClass A =\n      (x ^ 2 - x * y + y ^ 2) \u2022 A.map raw_0_0_degree0 +\n      (3 : Coefficient) \u2022 A.map raw_1_1_degree2 +\n      (3 : Coefficient) \u2022 A.map raw_0_2_degree2",
+          "TwoBlowups": "theorem twoBlowups_candidateClass_eq_raw_regular\n    {C : StableCurveCohomology Coefficient}\n    (A : StrataRealization C 2 (Fin 1)) :\n    HodgeDegreeZeroFullCoefficientReplay.TwoBlowups.candidateClass A =\n      (-(x ^ 2 - x * y + y ^ 2)) \u2022 A.map raw_0_0_degree0 +\n      (5 : Coefficient) \u2022 A.map raw_1_1_degree2 +\n      (-3 : Coefficient) \u2022 A.map raw_0_2_degree2"
+        },
+        "direct_symmetries": [
+          {
+            "definition_body_identical": true,
+            "left": "raw_0_1_degree1Columns",
+            "right": "raw_1_0_degree1Columns"
+          },
+          {
+            "definition_body_identical": true,
+            "left": "raw_0_1_degree1Coordinates",
+            "right": "raw_1_0_degree1Coordinates"
+          },
+          {
+            "definition_body_identical": true,
+            "left": "raw_0_2_degree2Columns",
+            "right": "raw_2_0_degree2Columns"
+          },
+          {
+            "definition_body_identical": true,
+            "left": "raw_0_2_degree2Coordinates",
+            "right": "raw_2_0_degree2Coordinates"
+          }
+        ],
+        "findings": [
+          {
+            "claim": "No additional geometric premise is required for the stated additive assembly identity.",
+            "evidence": "The same abstract StrataRealization A already supplies a QQ-linear map, and its target has the existing coefficient-field module action.",
+            "severity": "none"
+          },
+          {
+            "claim": "Do not evaluate formal Hodge polynomials multiplicatively in A.map raw classes.",
+            "evidence": "A is linear, not a ring homomorphism; raw_1_1_degree2 is not proved equal to a geometric or target-ring square, and raw_1_2_degree3 is not identified with a product.",
+            "severity": "medium_boundary"
+          }
+        ],
+        "generic_statement": "theorem assembly_eq_collected_raw\n    {K : Type u} [Field K] [Algebra \u211a K]\n    {C : StableCurveCohomology K} {\u03b9 : Type*} [Fintype \u03b9]\n    (A : StrataRealization C 2 (Fin 1))\n    (coeff : \u03b9 \u2192 Fin 3 \u2192 Fin 3 \u2192 K) :\n    assembly A coeff =\n      (\u2211 p, coeff p 0 0) \u2022 A.map raw_0_0_degree0 +\n      (\u2211 p, (coeff p 0 1 + coeff p 1 0)) \u2022 A.map raw_0_1_degree1 +\n      (\u2211 p, (coeff p 0 2 + coeff p 2 0)) \u2022 A.map raw_0_2_degree2 +\n      (\u2211 p, coeff p 1 1) \u2022 A.map raw_1_1_degree2 +\n      (\u2211 p, (coeff p 1 2 + coeff p 2 1)) \u2022 A.map raw_1_2_degree3 +\n      (\u2211 p, coeff p 2 2) \u2022 A.map raw_2_2_degree4",
+        "inventory_summary": {
+          "components": 45,
+          "empty": 36,
+          "nonempty": 9,
+          "nonempty_degree_equals_a_plus_b": true,
+          "occurrences": 553
+        },
+        "mathematical_effect": "The conclusion is equality of the complete actual class under every existing homogeneous QQ-linear realization A, not merely equality of its scalar projection. It preserves raw_1_1_degree2 and raw_0_2_degree2 as the exact source expressions.",
+        "no_new_inputs": [
+          "No ConnectedDegreeZero D",
+          "No fundamental normalization hfund",
+          "No product-preserving map assumption",
+          "No geometric Hodge/GRR identification",
+          "No field-to-QQ specialization",
+          "No tensor-product or equivariant strata redesign",
+          "No new global instance or simp attribute"
+        ],
+        "proof_plan": [
+          "Prove the 36 explicitly empty components zero by RelationCertificate.interpret_apply and Fin.sum_univ_zero, keeping every nonempty raw expression opaque.",
+          "Prove the two small ordered symmetries by definitional equality of their actual columns and coordinates; reuse the existing graph-isomorphism proof for (1,2)/(2,1).",
+          "Regroup assembly using map_sum, map_zero, Finset.sum_comm, smul_sum, sum_smul and add_smul. Expand only Fin3/Fin5 index frames and collect the six actual raw basis expressions.",
+          "For each actual tensor, apply the six accepted HodgeDegreeZeroRegularity sum_* identities and eliminate zero coefficients. Retain all original fixed-point/ordered inputs on the theorem left-hand side.",
+          "Add independent public consumers that use these full class identities without D or hfund; do not use scalar projection in the proof.",
+          "Stage source-bound portable generation and tests if generated; use pinned original modules and raw input before helper execution. Run bounded targeted build and exact public axiom audit only after parent approval."
+        ],
+        "proposed_production": "AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroRawAssembly.lean",
+        "proposed_public_consumer": "AxiomaticGWTest/GKM/HodgeDegreeZeroRawAssembly.lean",
+        "scope": "Transport complete fixed-point cancellation to the existing 45-component candidateClass through additive and scalar operations only.",
+        "source_pins": {
+          "AxiomaticGW/GKM/AdmcyclesHodgeStrataNormalization.lean": "d36565c19b0198d833caddfc755ba431660d2f84752fdd760cbcc38f37734ce3",
+          "AxiomaticGW/GKM/Fixtures/AdmcyclesHodgeStrataCandidates.lean": "244eaf08f741057b92113ee4b0c4a48b2185b55350473bc28286460ea07b651c",
+          "AxiomaticGW/GKM/Fixtures/AdmcyclesHodgeStrataIsomorphisms.lean": "ddb7e9cfb94ced658a96883782aed3072ae8d7fe1763ff4390e021dcafe3f26a",
+          "AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroFullCoefficientReplay.lean": "648ac71eb16d06ca1b94b29ca2e1972ca2f360ce534fb864230933daa6c29ce8",
+          "AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroRegularity.lean": "b44bcad2fd02afe2c39f130ef610065360a3149f0101a72ddd61c77f67d49cd6",
+          "AxiomaticGW/Tautological/StrataModule.lean": "4cbd41c258dd6e0e03a691d8de21fd9021788e03b67d1df0127742553f53112f",
+          "AxiomaticGW/Tautological/StrataRealization.lean": "ddf59186e35a331415f9cbb8713dbcfda209fbf9bf5530123a1ab87964cd308c"
+        },
+        "statement_context": "open AxiomaticGW, AdmcyclesHodgeStrataCandidates, AdmcyclesHodgeStrataNormalization and GKM.EquivariantCoefficients; local strataRealizationModule instance as in the existing assembly module. These are planned statements, not compiled declarations.",
+        "status": "reviewed_sound_linear_transport_plan_not_implemented",
+        "unchanged_geometric_gate": [
+          "Identify raw representatives with Hodge classes and prove product compatibility",
+          "Geometric Hodge/GRR and constant-map virtual Euler/stabilization comparison",
+          "Total equivariant grading and geometric ordinary specialization",
+          "Actual semisimple GKM CohFT laws and fixed research applications"
+        ],
+        "validation": "Read source and compared exact declaration bodies/counts. No Lean/Sage execution, repo edits, or proof acceptance claimed for this proposed follow-up."
+      },
+      "source": {
+        "path": "/tmp/gw_hodge_raw_assembly_review_20261005/review-and-statements.json",
+        "sha256": "36f0dbd76dc72a2d59f7f4dbdd6cb0ee7e745bea4568071a923cf355686e6f18"
+      }
+    }
+  },
+  "proof_mechanism": [
+    "Prove all 36 explicitly empty components zero and retain the nine nonempty sums.",
+    "Use definitional equality of actual single-factor columns/coordinates.",
+    "Reuse the accepted raw mixed-pair equality proved by graph isomorphisms.",
+    "Collect all fixed points, ordered pairs and five degrees through map_sum and scalar distribution.",
+    "Apply the accepted 18 complete coefficient-sum identities; normalize only addition."
+  ],
+  "recorded_at_utc": "2026-10-05T06:12:36.033793+00:00",
+  "remaining": [
+    "Geometric Hodge/GRR and raw product identification",
+    "Constant-map virtual Euler and stabilization comparisons",
+    "Total equivariant grading and geometric ordinary comparison",
+    "Actual semisimple GKM CohFT laws and the fixed research applications",
+    "Umbrella export/root rebuild and full-project validation checkpoint"
+  ],
+  "schema_version": 1,
+  "source_binding": {
+    "actual_LHS": "The unchanged FullCoefficientReplay target candidateClass, hence all fixed points, nine ordered coefficients and five raw components.",
+    "actual_coefficients": 108,
+    "explicit_empty_components": 36,
+    "nonempty_components": 9,
+    "nontrivial_symmetry": "AdmcyclesHodgeStrataIsomorphisms.raw_ordered_degree3_equal",
+    "raw_components": 45,
+    "raw_occurrences_preserved": 553
+  },
+  "source_pins": {
+    "AxiomaticGW/GKM/AdmcyclesHodgeStrataNormalization.lean": {
+      "bytes": 9676,
+      "sha256": "d36565c19b0198d833caddfc755ba431660d2f84752fdd760cbcc38f37734ce3"
+    },
+    "AxiomaticGW/GKM/Fixtures/AdmcyclesHodgeStrataCandidates.lean": {
+      "bytes": 496592,
+      "sha256": "244eaf08f741057b92113ee4b0c4a48b2185b55350473bc28286460ea07b651c"
+    },
+    "AxiomaticGW/GKM/Fixtures/AdmcyclesHodgeStrataIsomorphisms.lean": {
+      "bytes": 93380,
+      "sha256": "ddb7e9cfb94ced658a96883782aed3072ae8d7fe1763ff4390e021dcafe3f26a"
+    },
+    "AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroFullCoefficientReplay.lean": {
+      "bytes": 22918,
+      "sha256": "648ac71eb16d06ca1b94b29ca2e1972ca2f360ce534fb864230933daa6c29ce8"
+    },
+    "AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroRawAssembly.lean": {
+      "bytes": 7057,
+      "sha256": "a3d9c5ef4e56e42f246add66295653b2698974c9f16874e6a3b15bc5a9275e8b"
+    },
+    "AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroRegularity.lean": {
+      "bytes": 29863,
+      "sha256": "b44bcad2fd02afe2c39f130ef610065360a3149f0101a72ddd61c77f67d49cd6"
+    },
+    "AxiomaticGW/Tautological/StrataModule.lean": {
+      "bytes": 3104,
+      "sha256": "4cbd41c258dd6e0e03a691d8de21fd9021788e03b67d1df0127742553f53112f"
+    },
+    "AxiomaticGW/Tautological/StrataRealization.lean": {
+      "bytes": 3706,
+      "sha256": "ddf59186e35a331415f9cbb8713dbcfda209fbf9bf5530123a1ab87964cd308c"
+    },
+    "AxiomaticGWTest/GKM/HodgeDegreeZeroRawAssembly.lean": {
+      "bytes": 1954,
+      "sha256": "222bd35abc8053324633a84aee1cd20e930bdf464409e12eda141abc755ff1b6"
+    },
+    "environments/admcycles-hodge-strata-candidates.json": {
+      "bytes": 776909,
+      "sha256": "1ec7e5df068bd9edbe896dc5bf6f20f59b0e42e81896d2e4364f11efc0c6ec32"
+    },
+    "environments/gkm-degree-zero-hodge-strata-factored-candidate.json": {
+      "bytes": 1169158,
+      "sha256": "5be60671ddc68304610987123f048a6c010504cf27f3b690cd1e4d4e39227399"
+    },
+    "environments/gkm-hodge-regularity-validation.json": {
+      "bytes": 143545,
+      "sha256": "c5b2235211361c6262b6cefc6c5b61d10875882e6824becdf7d1a695f85a7207"
+    }
+  },
+  "status": "actual_complete_raw_assembly_equalities_verified_umbrella_pending",
+  "validation": {
+    "actual_public_axiom_audit": {
+      "audit_source": {
+        "path": "/tmp/gw_hodge_raw_assembly_integrated_audit_20261005.lean",
+        "sha256": "52db83aa383ae2ed4cf5b97cdc010eb33821b9604f690d47c06f1c5f3a67cccf",
+        "text": "module\n\npublic import AxiomaticGW.GKM.Fixtures.HodgeDegreeZeroRawAssembly\npublic import AxiomaticGWTest.GKM.HodgeDegreeZeroRawAssembly\n\n#print axioms AxiomaticGW.GKM.HodgeDegreeZeroRawAssembly.sum_rawComponent\n#print axioms AxiomaticGW.GKM.HodgeDegreeZeroRawAssembly.raw_single_factor_one_symm\n#print axioms AxiomaticGW.GKM.HodgeDegreeZeroRawAssembly.raw_single_factor_two_symm\n#print axioms AxiomaticGW.GKM.HodgeDegreeZeroRawAssembly.assembly_eq_collected_raw\n#print axioms AxiomaticGW.GKM.HodgeDegreeZeroRawAssembly.plane_candidateClass_eq_raw_regular\n#print axioms AxiomaticGW.GKM.HodgeDegreeZeroRawAssembly.oneBlowup_candidateClass_eq_raw_regular\n#print axioms AxiomaticGW.GKM.HodgeDegreeZeroRawAssembly.twoBlowups_candidateClass_eq_raw_regular\n#print axioms AxiomaticGWTest.HodgeDegreeZeroRawAssembly.plane_full_class\n#print axioms AxiomaticGWTest.HodgeDegreeZeroRawAssembly.blowup_full_class_comparison\n#print axioms AxiomaticGWTest.HodgeDegreeZeroRawAssembly.degree_four_input_retained\n"
+      },
+      "axioms": {
+        "AxiomaticGW.GKM.HodgeDegreeZeroRawAssembly.assembly_eq_collected_raw": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.GKM.HodgeDegreeZeroRawAssembly.oneBlowup_candidateClass_eq_raw_regular": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.GKM.HodgeDegreeZeroRawAssembly.plane_candidateClass_eq_raw_regular": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.GKM.HodgeDegreeZeroRawAssembly.raw_single_factor_one_symm": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.GKM.HodgeDegreeZeroRawAssembly.raw_single_factor_two_symm": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.GKM.HodgeDegreeZeroRawAssembly.sum_rawComponent": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGW.GKM.HodgeDegreeZeroRawAssembly.twoBlowups_candidateClass_eq_raw_regular": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGWTest.HodgeDegreeZeroRawAssembly.blowup_full_class_comparison": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGWTest.HodgeDegreeZeroRawAssembly.degree_four_input_retained": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "AxiomaticGWTest.HodgeDegreeZeroRawAssembly.plane_full_class": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "declaration_count": 10,
+      "log": {
+        "path": "/tmp/gw_hodge_raw_assembly_integrated_axioms_20261005.log",
+        "sha256": "a9200baecb1a9f665ecbaf4442012141c5cfcbac23bbe56bbeed4f4e92863405",
+        "text": "'AxiomaticGW.GKM.HodgeDegreeZeroRawAssembly.sum_rawComponent' depends on axioms: [propext, Classical.choice, Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeZeroRawAssembly.raw_single_factor_one_symm' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeZeroRawAssembly.raw_single_factor_two_symm' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeZeroRawAssembly.assembly_eq_collected_raw' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeZeroRawAssembly.plane_candidateClass_eq_raw_regular' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeZeroRawAssembly.oneBlowup_candidateClass_eq_raw_regular' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGW.GKM.HodgeDegreeZeroRawAssembly.twoBlowups_candidateClass_eq_raw_regular' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGWTest.HodgeDegreeZeroRawAssembly.plane_full_class' depends on axioms: [propext, Classical.choice, Quot.sound]\n'AxiomaticGWTest.HodgeDegreeZeroRawAssembly.blowup_full_class_comparison' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'AxiomaticGWTest.HodgeDegreeZeroRawAssembly.degree_four_input_retained' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n"
+      },
+      "metadata": {
+        "children_ru_maxrss_raw": 1061961728,
+        "children_ru_maxrss_unit": "bytes",
+        "command": [
+          "lake",
+          "env",
+          "lean",
+          "--memory=2048",
+          "/tmp/gw_hodge_raw_assembly_integrated_audit_20261005.lean"
+        ],
+        "elapsed_seconds": 7.492,
+        "exit_code": 0,
+        "log": "/tmp/gw_hodge_raw_assembly_integrated_axioms_20261005.log",
+        "resource_note": "Wrapper child usage may omit descendants on interrupted runs.",
+        "status": "passed"
+      },
+      "metadata_source": {
+        "path": "/tmp/gw_hodge_raw_assembly_integrated_axioms_20261005.json",
+        "sha256": "125c3a8869ec7cac2a854d65e3ed938773823502bd06e09bff941f63e15494fd"
+      }
+    },
+    "actual_targeted_build": {
+      "log": {
+        "path": "/tmp/gw_hodge_raw_assembly_integrated_build_20261005.log",
+        "sha256": "4e09b534195e46fcd7eefec9d0ee2539eba74e2379f8c7b10645e27c6715dd3a",
+        "text": "\u2714 [1824/1825] Built AxiomaticGW.GKM.Fixtures.HodgeDegreeZeroRawAssembly (3.3s)\n\u2714 [1825/1825] Built AxiomaticGWTest.GKM.HodgeDegreeZeroRawAssembly (2.4s)\nBuild completed successfully (1825 jobs).\n"
+      },
+      "metadata": {
+        "children_ru_maxrss_raw": 1031651328,
+        "children_ru_maxrss_unit": "bytes",
+        "command": [
+          "lake",
+          "build",
+          "AxiomaticGW.GKM.Fixtures.HodgeDegreeZeroRawAssembly",
+          "AxiomaticGWTest.GKM.HodgeDegreeZeroRawAssembly"
+        ],
+        "elapsed_seconds": 9.348,
+        "exit_code": 0,
+        "log": "/tmp/gw_hodge_raw_assembly_integrated_build_20261005.log",
+        "resource_note": "Wrapper child usage may omit descendants on interrupted runs.",
+        "status": "passed"
+      },
+      "metadata_source": {
+        "path": "/tmp/gw_hodge_raw_assembly_integrated_build_20261005.json",
+        "sha256": "00e0606874852519860ffada57cf58f4e2f576669702eecb08556e5145e7a789"
+      }
+    }
+  }
+}

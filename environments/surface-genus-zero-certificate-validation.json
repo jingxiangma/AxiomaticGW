@@ -1,0 +1,799 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-03",
+  "status": "Complete fixed positive-class genus-zero primary benchmark subset; full research goal remains active",
+  "scope": [
+    "AxiomaticGW.lean",
+    "README.md",
+    "notes/MathematicsToLean.md",
+    "notes/mathematics/SurfaceReconstructionInputs.md",
+    "notes/milestones/GWReconstructionPlan.md",
+    "notes/milestones/ImplementationProgress.md",
+    "AxiomaticGW/Surfaces/Fixtures/GenusZeroBl2Table.lean",
+    "AxiomaticGW/Surfaces/Fixtures/GenusZeroF1Table.lean",
+    "AxiomaticGW/Surfaces/Fixtures/GenusZeroPlaneTable.lean",
+    "AxiomaticGW/Surfaces/GenusZeroBenchmarks.lean",
+    "AxiomaticGW/Surfaces/GenusZeroCertificate.lean",
+    "AxiomaticGW/Surfaces/GenusZeroScalar.lean",
+    "AxiomaticGWTest/Surfaces/GenusZeroCertificate.lean",
+    "environments/surface-genus-zero-primary-tables.json",
+    "scripts/export_surface_genus_zero_tables.py",
+    "scripts/test_surface_genus_zero_tables.py"
+  ],
+  "findings": [
+    {
+      "severity": "medium",
+      "finding": "Repeated table and polynomial evaluation made bounded kernel replay impractical.",
+      "resolution": "Saved candidate values checked by separate equations using proved scalar evaluation and exact first-component splitting sums."
+    },
+    {
+      "severity": "medium",
+      "finding": "Direct large function-valued finite-set equality and list assembly exceeded practical replay limits.",
+      "resolution": "Coverage via adjacent increasing keys, inclusion and cardinality; local recursion-depth allowance for the 455-row proof assembly."
+    },
+    {
+      "severity": "medium",
+      "finding": "The fixed blowup genus-zero primary benchmark gates were incomplete.",
+      "resolution": "Every required positive full class through energy twelve now has an exact kernel-checked result and conditional geometric interpretation."
+    },
+    {
+      "severity": "none",
+      "finding": "No mathematical defect found in the scoped original support, pivot or soundness statements.",
+      "scope_limit": "No comprehensive geometric-model or imported CohFT-class verification."
+    }
+  ],
+  "proved": [
+    "Direct primary scalar evaluation equals the original compact graph evaluation for every full-class candidate valuation.",
+    "Complete bounded coverage and the original strict-energy equations identify every accepted candidate with pointValue.",
+    "All 509 rows, including 506 positive-class requests and three auxiliary empty zero-class entries, pass kernel replay.",
+    "Positive held claims and public bounded lookup retain the full target, curve coordinates and rational answer.",
+    "Geometric checked-query theorems use the original named laws, WDVV presentation and finite genus-zero line/exceptional seeds."
+  ],
+  "mathematical_effect": {
+    "existing_public_statements": "unchanged",
+    "geometric_hypotheses": "unchanged",
+    "finite_seed_package": "unchanged",
+    "new_global_simp_or_typeclass_instances": false,
+    "recurrence_assumption_added": false,
+    "higher_genera_descendants_and_gkm": "unchanged obligations"
+  },
+  "commands": [
+    {
+      "command": [
+        "lake",
+        "build",
+        "AxiomaticGWTest.Surfaces.GenusZeroCompression"
+      ],
+      "exit_code": 0,
+      "log": "/tmp/gw_table_certificate_baseline_20261003.log",
+      "log_sha256": "d4db0d6cc83b774d5e4a40a766a731c448135316cb8826d25241f99e294f8938"
+    },
+    {
+      "command": [
+        "lake",
+        "build",
+        "AxiomaticGW.Surfaces.GenusZeroBenchmarks"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 1.841,
+      "children_ru_maxrss_raw": 1308999680,
+      "log": "/tmp/gw_table_certificate_benchmarks_public_final_20261003.log",
+      "log_sha256": "4b6cf89579321da93d1b59fff6236b96c67000111ff71a10f8f17744e3b6e4d8",
+      "jobs": 2667
+    },
+    {
+      "command": [
+        "lake",
+        "build",
+        "AxiomaticGWTest.Surfaces.GenusZeroCertificate"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 1.92,
+      "children_ru_maxrss_raw": 1340178432,
+      "log": "/tmp/gw_table_certificate_regressions_final_20261003.log",
+      "log_sha256": "c727d6f3894106b497690a738490c27fb474750ceff56ed58202597046461fd9",
+      "jobs": 2669
+    },
+    {
+      "command": [
+        "lake",
+        "build"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 1.683,
+      "children_ru_maxrss_raw": 1285996544,
+      "log": "/tmp/gw_table_certificate_full_build_20261003.log",
+      "log_sha256": "fb407dc37cc5c165942f5d14de3897bbfb1e1459968fc8bcc8c5d787ee68eefd",
+      "jobs": 2709
+    },
+    {
+      "command": [
+        "lake",
+        "test"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 32.561,
+      "children_ru_maxrss_raw": 4956782592,
+      "log": "/tmp/gw_table_certificate_full_tests_20261003.log",
+      "log_sha256": "2541dee8e181e4c93390f39f038eed02933dd58b45d3275dd93394818c3d3afe",
+      "jobs": 2747
+    },
+    {
+      "command": [
+        "lake",
+        "lint"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 6.57,
+      "children_ru_maxrss_raw": 3663921152,
+      "log": "/tmp/gw_table_certificate_lint_20261003.log",
+      "log_sha256": "8cb704e7f2acb11f508473f8f0a1ac324d56ac70cac206d0a94cbe2318027dce"
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "/tmp/gw_table_certificate_axioms_20261003.lean"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 20.494,
+      "children_ru_maxrss_raw": 2161573888,
+      "log": "/tmp/gw_table_certificate_axioms_20261003.log",
+      "log_sha256": "f900c237415430b8ff36ca92c9c9b30f6f868323cde95a653184214b97a88db2"
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "/tmp/gw_table_certificate_readme_20261003.lean"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 20.6,
+      "children_ru_maxrss_raw": 2162524160,
+      "log": "/tmp/gw_table_certificate_readme_20261003.log",
+      "log_sha256": "e3be08cf1402562622a1da5c5953b78d37fcffefa0522bfbf1007c6722b7ea15"
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/export_surface_genus_zero_tables.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.181,
+      "children_ru_maxrss_raw": 15073280,
+      "log": "/tmp/gw_table_certificate_reproducibility_final_20261003.log",
+      "log_sha256": "2bdc887c0ad803ad02b6f03372145777241b739f9e528bab96282a47d7aa2840"
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/test_surface_genus_zero_tables.py",
+        "-v"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.52,
+      "children_ru_maxrss_raw": 19922944,
+      "log": "/tmp/gw_table_certificate_python_script_final_20261003.log",
+      "log_sha256": "c81996e1bb5bb22894db980b40354cb9e818c0845e8cd0ec120269c2b15cd319"
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exit_code": 0,
+      "log": "/tmp/gw_table_certificate_diffcheck_20261003.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "axiom_audit": {
+    "AxiomaticGW.SurfaceGenusZero.eval_primaryTerms_curve": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "AxiomaticGW.SurfaceGenusZero.primaryScalar_eq": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "AxiomaticGW.SurfaceGenusZero.compactEval_eq": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "AxiomaticGW.SurfaceGenusZero.scalarReconstructionStep_eq": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "AxiomaticGW.SurfaceGenusZero.checkEnumeratedValues_sound": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "AxiomaticGW.SurfaceGenusZero.checkBoundedValues_sound": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "AxiomaticGW.SurfaceGenusZero.checkPointClaim_sound": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "AxiomaticGW.SurfaceGenusZero.checkBoundedValues_eq_eval": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "AxiomaticGW.SurfaceGenusZero.checkPointClaim_checkedEval": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "AxiomaticGW.GenusZeroPlaneTable.covers": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "AxiomaticGW.GenusZeroPlaneTable.rows_checked": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "AxiomaticGW.GenusZeroPlaneTable.accepted": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "AxiomaticGW.GenusZeroPlaneTable.values_eq": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "AxiomaticGW.GenusZeroF1Table.covers": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "AxiomaticGW.GenusZeroF1Table.rows_checked": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "AxiomaticGW.GenusZeroF1Table.accepted": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "AxiomaticGW.GenusZeroF1Table.values_eq": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "AxiomaticGW.GenusZeroBl2Table.covers": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "AxiomaticGW.GenusZeroBl2Table.rows_checked": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "AxiomaticGW.GenusZeroBl2Table.accepted": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "AxiomaticGW.GenusZeroBl2Table.values_eq": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "AxiomaticGW.SurfaceGenusZero.pointBenchmarkValues_checked": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "AxiomaticGW.SurfaceGenusZero.pointBenchmarkValues_eq": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "AxiomaticGW.SurfaceGenusZero.pointBenchmark_checkedEval": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "AxiomaticGW.SurfaceGenusZero.pointBenchmark?_sound": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "axiom_query_sha256": "d95fa33bb7f9565463c8932e236ff8ed58d1e108486b9e5bf2643c638b8874b3",
+  "warnings": [
+    "Pre-existing AxiomaticGWTest/Basic.lean privateModule warning; no new final warnings."
+  ],
+  "regressions": {
+    "lean_file": "AxiomaticGWTest/Surfaces/GenusZeroCertificate.lean",
+    "lean_examples": 18,
+    "python_file": "scripts/test_surface_genus_zero_tables.py",
+    "python_tests": 10,
+    "existing_gkm_numerical_cases": 3,
+    "coverage": [
+      "changed seeds and claims",
+      "missing/extra classes",
+      "class and energy bounds",
+      "zero-class domain rejection",
+      "equal-energy full-class distinctions",
+      "classical negative exceptional pairing",
+      "nontrivial blowup values",
+      "actual Sage-exported WDVV replay consumed by geometric deductions"
+    ]
+  },
+  "corpus": {
+    "manifest": "environments/surface-genus-zero-primary-tables.json",
+    "manifest_sha256": "d710f97e36fee1f9a30b2e5993af87ee6fb6674c3447b5097c1137d41790ebff",
+    "targets": [
+      {
+        "target": "P2",
+        "rows": 5,
+        "geometric_queries": 4,
+        "nonzero_values": 4,
+        "positive_class_zeros": 0
+      },
+      {
+        "target": "F1",
+        "rows": 49,
+        "geometric_queries": 48,
+        "nonzero_values": 14,
+        "positive_class_zeros": 34
+      },
+      {
+        "target": "Bl2P2",
+        "rows": 455,
+        "geometric_queries": 454,
+        "nonzero_values": 49,
+        "positive_class_zeros": 405
+      }
+    ],
+    "all_zero_answers_retained": true,
+    "source": {
+      "title": "Gromov-Witten classes, quantum cohomology, and enumerative geometry",
+      "authors": [
+        "Maxim Kontsevich",
+        "Yuri Manin"
+      ],
+      "url": "https://arxiv.org/abs/hep-th/9402147",
+      "formula": "5.18, used at anticanonical energy at least four",
+      "archive_sha256": "21415c4dc2dde4a7e4caacac53bf921f55a2ecc06e5daae2d20cfc807e124b11",
+      "coordinate_conversion": "H,E_i coefficients; exceptional coordinates may be positive",
+      "binomial_convention": "zero outside 0 <= k <= n; n is nonnegative"
+    },
+    "comparison_limits": [
+      "The Python recurrence does not import or reuse the Lean graph evaluator.",
+      "Both mathematical calculations ultimately use WDVV.",
+      "Energy at most three uses the shared normalized line, exceptional, ruling and strict-line base cases; other values in that sector are zero.",
+      "Generated data are candidates until the Lean checker accepts every class; hashes do not prove mathematical acceptance.",
+      "Higher genera and descendant benchmarks are not covered."
+    ],
+    "example_values": {
+      "F1_2_5": "640",
+      "Bl2P2_3_4_5": "18132"
+    },
+    "gkm_limits": "Frozen native primary normalizations only; no new producer run or class-level CohFT certification."
+  },
+  "resource_observations": {
+    "successful_probes": [
+      {
+        "command": [
+          "lake",
+          "env",
+          "lean",
+          "/tmp/gw_table_certificate_native_check_20261003.lean"
+        ],
+        "exit_code": 0,
+        "elapsed_seconds": 135.848,
+        "children_ru_maxrss_raw": 1606385664,
+        "log": "/tmp/gw_table_certificate_native_check_20261003.log",
+        "log_sha256": "21d91041c5d1a59661f8936571ee5c87e96f6f0c7a532b52ec17c5b9bea8220b"
+      },
+      {
+        "command": [
+          "lake",
+          "build",
+          "AxiomaticGW.Surfaces.Fixtures.GenusZeroF1Table"
+        ],
+        "exit_code": 0,
+        "elapsed_seconds": 16.343,
+        "children_ru_maxrss_raw": 1669726208,
+        "log": "/tmp/gw_table_certificate_f1_rows_20261003.log",
+        "log_sha256": "e6e158507131b1994c7c765d4dd5e8f54e3e00056e4581641f2a6950803c11d7",
+        "jobs": 2664
+      },
+      {
+        "command": [
+          "lake",
+          "env",
+          "lean",
+          "-Dprofiler=true",
+          "/tmp/gw_table_certificate_bl2_card_coverage_20261003.lean"
+        ],
+        "exit_code": 0,
+        "elapsed_seconds": 21.066,
+        "children_ru_maxrss_raw": 7703773184,
+        "log": "/tmp/gw_table_certificate_bl2_card_coverage_20261003.log",
+        "log_sha256": "6b566758d81f33a9c0f8edd73401a918f1121f07eff43ac1e0825325af5fc27f"
+      },
+      {
+        "command": [
+          "lake",
+          "env",
+          "lean",
+          "-Dprofiler=true",
+          "/tmp/gw_table_certificate_bl2_chain_coverage_20261003.lean"
+        ],
+        "exit_code": 0,
+        "elapsed_seconds": 7.616,
+        "children_ru_maxrss_raw": 2896232448,
+        "log": "/tmp/gw_table_certificate_bl2_chain_coverage_20261003.log",
+        "log_sha256": "38599b4c7edd19da70b66dd68c652611486dc04d14800ef5ff60a8d13705c2fa"
+      },
+      {
+        "command": [
+          "lake",
+          "env",
+          "lean",
+          "/tmp/gw_table_scalar_box_20261003.lean"
+        ],
+        "exit_code": 0,
+        "elapsed_seconds": 11.204,
+        "children_ru_maxrss_raw": 4421992448,
+        "log": "/tmp/gw_table_scalar_box_20261003.log",
+        "log_sha256": "9338a25ee510124b7819443ef7f1edfa7e2994e6751e4a0c8941bfd8ec7a217d"
+      },
+      {
+        "command": [
+          "lake",
+          "env",
+          "lean",
+          "/tmp/gw_table_certificate_assembly_20261003.lean"
+        ],
+        "exit_code": 0,
+        "elapsed_seconds": 4.719,
+        "children_ru_maxrss_raw": 1746075648,
+        "log": "/tmp/gw_table_certificate_assembly_20261003.log",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    ],
+    "interrupted_runs": [
+      {
+        "observed_at": "2026-10-03T05:06:09.186757+00:00",
+        "reason": "Parallel kernel replay remained live while the host had substantial compressed memory (see raw VM statistics). Stopped the parallel attempt and prepared explicit literal-class replay to reduce reduction and memory costs.",
+        "memory_log": "/tmp/gw_table_certificate_memory_pressure_20261003.log",
+        "accepted_targets_so_far": [
+          "P2"
+        ],
+        "unverified_targets": [
+          "F1",
+          "Bl2P2"
+        ],
+        "compressor_bytes": 7968145408,
+        "exit_code": 130
+      },
+      {
+        "observed_at": "2026-10-03T05:14:29.988895+00:00",
+        "session_id": 99697,
+        "exit_code": 130,
+        "reason": "Monolithic row replay was stopped to replace intermediate polynomial construction with a proved scalar evaluator after coverage was isolated and host memory pressure persisted. No F1 kernel acceptance was obtained.",
+        "host_compressor_bytes": 7915339776,
+        "memory_scope": "Host-wide vm_stat, not attribution to the compiler alone.",
+        "log": "/tmp/gw_table_certificate_f1_literal_20261003.log",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "observed_at": "2026-10-03T05:26:52.487343+00:00",
+        "session_id": 96942,
+        "exit_code": 130,
+        "reason": "Replaced monolithic scalar row replay by independently checked literal rows to bound reduction-cache memory, after the isolated energy-twelve row succeeded. Added proved zero short circuits; no full F1 acceptance was obtained by this interrupted run.",
+        "successful_isolated_row": "/tmp/gw_table_certificate_f1_scalar_row_20261003.json",
+        "log": "/tmp/gw_table_certificate_f1_scalar_20261003.log",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "session_id": 3499,
+        "log": "/tmp/gw_table_certificate_benchmarks_20261003.log",
+        "reason": "Replace expensive direct finite-set equality in Bl2 coverage by nodup, inclusion and cardinality; the already accepted plane and F1 results are retained.",
+        "exit_code": 130,
+        "observed_at": "2026-10-03T05:43:08.034901+00:00",
+        "log_sha256": "244bf8e455227d4d1577a4d83bc040a52aad01430dc0707216416d97363a83f0"
+      },
+      {
+        "session_id": 37840,
+        "log": "/tmp/gw_table_certificate_bl2_code_coverage_final_20261003.log",
+        "reason": "The coordinate-image set-equality probe remained expensive; switch to the mathematically equivalent nodup/inclusion/cardinality proof.",
+        "exit_code": 130,
+        "observed_at": "2026-10-03T05:43:08.035201+00:00",
+        "log_sha256": "dd5a40ab148baed028357cdcae39cf68df5f17832fb59728f9c29dac55906840"
+      },
+      {
+        "session_id": 37319,
+        "exit_code": 130,
+        "observed_at": "2026-10-03T05:57:41.660369+00:00",
+        "reason": "Switch scalar splitting sums to the proved injective-first-component formula, eliminating redundant Finset.image comparisons; also adopt the lower-memory adjacent-key coverage proof. The isolated largest balanced Bl2 energy-twelve row passed with the new sum.",
+        "log": "/tmp/gw_table_certificate_benchmarks_final_20261003.log",
+        "successful_row": "/tmp/gw_table_scalar_box_20261003.json",
+        "successful_coverage": "/tmp/gw_table_certificate_bl2_chain_coverage_20261003.json",
+        "bl2_table_accepted": false,
+        "log_sha256": "51f544df35df8b18ca011a0eeb77aedd6031a7bdde95db97f5a104ed997fe996"
+      }
+    ],
+    "failed_then_repaired": [
+      {
+        "command": [
+          "lake",
+          "build",
+          "AxiomaticGW.Surfaces.GenusZeroBenchmarks"
+        ],
+        "exit_code": 1,
+        "elapsed_seconds": 609.484,
+        "children_ru_maxrss_raw": 3221651456,
+        "log": "/tmp/gw_table_certificate_benchmarks_final_rows_20261003.log",
+        "log_sha256": "b3cf59ed12f2b650b27b08f59a3c47eb063a9014c3b38e39efc429c7889c7fd1",
+        "resolution": "All three fixture modules completed successfully, including the 455-row Bl2 certificate (800 seconds reported by Lake). The public lookup proof had one redundant impossible branch and a long docstring; both were corrected before the final successful build."
+      },
+      {
+        "command": [
+          "lake",
+          "build",
+          "AxiomaticGW.Surfaces.GenusZeroBenchmarks"
+        ],
+        "exit_code": 1,
+        "elapsed_seconds": 613.747,
+        "children_ru_maxrss_raw": 3195224064,
+        "log": "/tmp/gw_table_certificate_benchmarks_box_20261003.log",
+        "log_sha256": "807434213f789d0baaed67176d2a0eb16228806de3add45d87410d0c127c33f2",
+        "resolution": "All 455 row declarations were reached without reported equation failures; final list simp exceeded recursion depth. A local maxRecDepth 4096 assembly passes, followed by full successful replay."
+      },
+      {
+        "command": [
+          "python3",
+          "-m",
+          "unittest",
+          "scripts.test_surface_genus_zero_tables",
+          "-v"
+        ],
+        "exit_code": 1,
+        "elapsed_seconds": 0.051,
+        "children_ru_maxrss_raw": 16859136,
+        "log": "/tmp/gw_table_certificate_python_final_20261003.log",
+        "log_sha256": "517cdbabd0c8c4b7fe69530ebd8561418919a5db35984c0807fab242c8a31b4f",
+        "resolution": "Package-style unittest invocation did not provide the sibling-script import path. Direct documented script invocation passes all ten tests."
+      }
+    ],
+    "development_repairs": [
+      "Replaced a private executable helper that could not appear in an exposed definition with equivalent inline zero branches.",
+      "Used a proved dimension iff through simp only to avoid a dependent Decidable rewrite motive.",
+      "Abandoned a coordinate-image set-equality probe after correcting a nonexistent List API; final coverage uses strict adjacent keys."
+    ],
+    "interpretation": [
+      "Native candidate results are exploration, not proof acceptance.",
+      "Interrupted runs have no complete accepted result and are not counted as successful builds.",
+      "Host VM figures are host-wide; children_ru_maxrss_raw is the reported per-child high-water value, not aggregate parallel memory.",
+      "On this macOS host ru_maxrss is reported in bytes. Timings include startup/imports and concurrent work; no controlled speed ratio is claimed."
+    ]
+  },
+  "source_sha256": {
+    "AxiomaticGW.lean": "18a529cf137eb7309fcb15d1294e7ba5d274b5d812a481c8484ba38b7c142731",
+    "AxiomaticGW/Coefficients/DescendantVariables.lean": "2997f88ee1cd6e4fc76168e3e7c73ba804ccdafb02a9a0c511d623662a716471",
+    "AxiomaticGW/Coefficients/EffectiveCurveClass.lean": "d68ce5d44f0158b8df4cac5f347871e387ce5d17c937a04a702b5b94588819e0",
+    "AxiomaticGW/Coefficients/GenusExpansion.lean": "3a62d0084f52e32870be6a14388faff41d368a7ca3ec63f2dba7da805d06f93f",
+    "AxiomaticGW/Coefficients/Novikov.lean": "3b438f570a09a602592499a9deab983dd86c1b086688d9d60ad7bb3ed9dbdc04",
+    "AxiomaticGW/Coefficients/RationalTerms.lean": "608137c1ea3feb9a44dd4867ac4e2bcb0080b55cb8032f5a5de38b72c645ebe0",
+    "AxiomaticGW/Coefficients/WeightedCurveClass.lean": "3bc8645d07e903dd01653f88d301d745828566a60b2434d667fa894998bc79ca",
+    "AxiomaticGW/CohFT/Ancestors.lean": "d04f17b0a9a465e89d7c054a94b096cf81bf7ef22b931c61fdf73419e988c4a4",
+    "AxiomaticGW/CohFT/Basic.lean": "8e42e96505c84bea43ada16ddc0d54644c0f4416a56db03a5baf4aace2117b66",
+    "AxiomaticGW/CohFT/Constant.lean": "2e88098c585d69f20c1ed77691298ee48c994cb3b13ab53dc7fb138677690721",
+    "AxiomaticGW/CohFT/GluingForgetful.lean": "702223851ca54f654842ef12eb14bb7d15ce7e0659e95a8ff71ad79653727e79",
+    "AxiomaticGW/CohFT/NonseparatingPushforward.lean": "6f5b1137ee901aa7b3a7db1d6a919023cd78fe2b9ff4c22cb709fc3e8d910121",
+    "AxiomaticGW/CohFT/PsiGluing.lean": "a10c0f8999f009e69dcc0755d3f6b33b3b577106c9e58c11fa7f58c162e73cfc",
+    "AxiomaticGW/CohFT/SeparatingPushforward.lean": "7ef46b53841cad087888a34bfbcd0a089488a8f46f0d9048576c43e2c83c5000",
+    "AxiomaticGW/CohFT/StableCurve.lean": "3102914691877889a1a67e76d8dd17897ba6474e2837247d8d9c9241d269a674",
+    "AxiomaticGW/CohFT/Tautological.lean": "09a580ac3e481df0ba90bc30637e6bed2741dfc0e6599d8463a48b42861635ed",
+    "AxiomaticGW/CohFT/Topological.lean": "41a27b98a4df8c38f0dd256c404ad6f45ed28c3cddf91c20eb1fa4048d62186a",
+    "AxiomaticGW/Combinatorics/StableArity.lean": "078a0d2cf8d7a31ed89429e6661cbd469fe4e8cc412adc3b55cccd3335724052",
+    "AxiomaticGW/Combinatorics/StableGraph.lean": "8ce882e57be59078d2aff6f58df1a9a280c807805f7eb1d600e47e89bc01ca2a",
+    "AxiomaticGW/Frobenius/Basic.lean": "c219c9f98197d6430b5a96fb0c9088fabfcd5e343008769d9da6a471f1f0472d",
+    "AxiomaticGW/Frobenius/Constructions.lean": "85353e37abba56fb40802acd39a922a2f45a6a93727c8f6518ce864db3fa501e",
+    "AxiomaticGW/GW/Basic.lean": "f55ca302b1bd3f7c09abd4c1a2b989dc04acf977be697e2776c3fddd77bd5420",
+    "AxiomaticGW/GW/Descendants/Basic.lean": "a2654d08f7cc4ae32953835a4e680a55a5d6d35b5e23c3bf57c15513c87c4d8d",
+    "AxiomaticGW/GW/Descendants/Comparison.lean": "c844012ec6e6ee26d0e3f856fa0e1512e789a15e8bc4633b5d2549fe8669f08b",
+    "AxiomaticGW/GW/Descendants/Equations.lean": "eca74e3828eadfec5c27f83608de2b27e1c77bd94f9c0eb049667013efd40652",
+    "AxiomaticGW/GW/Descendants/Exceptional.lean": "f58e46499486487f53c96d8f3dbb0356bbd4bb2406647ffab453d31a8334c3f8",
+    "AxiomaticGW/GW/Descendants/FullDivisor.lean": "2c2fa88b78111df6633a913991901378510fe023c75834466719db91295cdb94",
+    "AxiomaticGW/GW/Descendants/FullPotential.lean": "6b4bfc4585413f3bb181f1454c2b45f62e06b75dedcdbbdd5b7de9a207a2f85e",
+    "AxiomaticGW/GW/Descendants/Potentials.lean": "b86e2b7aa05c0c260fca980174093b7b2071a153d4ddf51fe3afb7cc9659c8a0",
+    "AxiomaticGW/GW/NonseparatingBoundary.lean": "ddc777c76b70f0c057da39995a99f2ffdc1e1d71f37df684fdea9a6c33dcd8a4",
+    "AxiomaticGW/GW/SeparatingBoundary.lean": "455b91bbce74cac444d04395ab0fa3673cd095e2ee30202796f355add8d66bfc",
+    "AxiomaticGW/Linear/Contraction.lean": "fc378491866b7bfc81751957f5fa904a62d46d6d0b67b69e580eeb9e774fb1aa",
+    "AxiomaticGW/Linear/Copairing.lean": "bd2ff186a8c185f6549a3b52f3f15e1e7cbc4c8dbe71af46dc7515ef1cb5d787",
+    "AxiomaticGW/Linear/PerfectPairing.lean": "f79e560a89494afd439038f9dd4915f08c827db023b0dd51c5fad1c281fc13bf",
+    "AxiomaticGW/Linear/SeparatingContraction.lean": "7c3ff5fc077e70ca058764271c21f355d0fea12cea12957a8c562583cb1e63f8",
+    "AxiomaticGW/Surfaces/AncestorPolynomial.lean": "680199089723296447b32a727da29e85942eb0648ec4bc7ac827f293b767e288",
+    "AxiomaticGW/Surfaces/BlowupGenusZero.lean": "c4f150fe38150aa78cf7a5860677e7c8385a34b17f805dcebad1f4ab2c6e6161",
+    "AxiomaticGW/Surfaces/Cohomology.lean": "7555f04a59f7594547ae85f73787534b94df2023ccfe61b78699ff28c5876d35",
+    "AxiomaticGW/Surfaces/Contraction.lean": "de70519312e1ea02ce82e16ec7bba33c4b1d60e8cccd12b66c4e086a346e68c1",
+    "AxiomaticGW/Surfaces/CurveClasses.lean": "30814002532e28140557e4f4d2b60a45665b31de95e5288a5cca4f6211073fb3",
+    "AxiomaticGW/Surfaces/DegreeZero.lean": "25d9529b192523273e5d0d572d4a54eff063995de22fbcc1611a6287d3bb06bf",
+    "AxiomaticGW/Surfaces/DegreeZeroPolynomial.lean": "66874b3d87ffa459e48dc4f2f646e6cd3f68ea22473de4b377c962973191ffd3",
+    "AxiomaticGW/Surfaces/Fixtures/BlowupWDVV.lean": "3e47a8441795be559f22a82204f2800ba8b31cc46bf096a0d9376bb0840c3971",
+    "AxiomaticGW/Surfaces/Fixtures/GenusZeroBl2Table.lean": "2308cd65862225c7a78fafc59af9f9be977c18d44aaef099ad4ce36a811c5709",
+    "AxiomaticGW/Surfaces/Fixtures/GenusZeroF1Table.lean": "3dcf45bfeecb0567f790a5759b24bae1bf6bfc3675a2ac56406bec0e0c8b1fd4",
+    "AxiomaticGW/Surfaces/Fixtures/GenusZeroPlaneTable.lean": "e8192a29ca8e79a0ce2e0106d480db3f92a4f9ad73dede729eb6a8763c8b0671",
+    "AxiomaticGW/Surfaces/Fixtures/PlaneQuartic.lean": "3614dd99fe065baf43b566c198facbc88ec3355c1b5a52f2927962776eea89c1",
+    "AxiomaticGW/Surfaces/Fixtures/StrictLineGetzler.lean": "84c7d93e46117e710b69e6c4267a5e41593ca58d79cfbdf360d96de51c162057",
+    "AxiomaticGW/Surfaces/GenusZeroBenchmarks.lean": "7e1948e938a8754115177c15bb358ceefb596a822d53c176639e003ffb413cf2",
+    "AxiomaticGW/Surfaces/GenusZeroCertificate.lean": "aa2db88746aa16194bef309362c58c6359cc439a617ac276752c43f7a21a1ea0",
+    "AxiomaticGW/Surfaces/GenusZeroCompactStep.lean": "f3bcae5dfd0db874ce31edbe10cbb7e96bb753862759eddebb334bf460553716",
+    "AxiomaticGW/Surfaces/GenusZeroExpansion.lean": "02dbc25679d7aed2efb1760c375b2b100330be91fae19c13a5c95105982402c4",
+    "AxiomaticGW/Surfaces/GenusZeroMarkings.lean": "d254d81521297a5b7448d34c17c6111a3202de0b8d52e5e9d425f581049132d8",
+    "AxiomaticGW/Surfaces/GenusZeroPivot.lean": "4e1a60477bdaf0ce5aba64d01f91f9ab8875ad9de70f265128a2926dc6937595",
+    "AxiomaticGW/Surfaces/GenusZeroReconstruction.lean": "3d4d1ab42a3b00787db402f82e586b75e264943c1cba237beb1a71bb26fa9f54",
+    "AxiomaticGW/Surfaces/GenusZeroRecursion.lean": "b178d2141128d839d416629fcfe26a039a847a71c0797df52089b7848bbe3093",
+    "AxiomaticGW/Surfaces/GenusZeroScalar.lean": "458725961b468f0c2d49d58b351134e0a9bdce811d6e7bde9cb7b7e9166cbad2",
+    "AxiomaticGW/Surfaces/GenusZeroStep.lean": "40dac816bad51c0cc49d04e15a9e040ea2fbd0e10c0d90148940841121dadc50",
+    "AxiomaticGW/Surfaces/GenusZeroSupport.lean": "275c1a3defea4df6903b683d6d47575c6f4f045f050e86d4c1da9df2f924f16b",
+    "AxiomaticGW/Surfaces/GenusZeroTable.lean": "5018031bf69a68e37b333d3d266c29971a8c3042f0ac236721f5e528ecc3e968",
+    "AxiomaticGW/Surfaces/GenusZeroUniform.lean": "8e1d311cd3e13d673cff6745dd45aa598b5af3677a88966cbfec057e5bef6b52",
+    "AxiomaticGW/Surfaces/GluingEvaluation.lean": "874ab320372c34647a5a5edcc06ec0da2d5e1d7d86bd92e58d8484d25821dc76",
+    "AxiomaticGW/Surfaces/PlaneGenusZero.lean": "7bc9338c37ecc8a8325b06876c5f21e2dd62d3c0e013cb415fb9b1210c669bd9",
+    "AxiomaticGW/Surfaces/PlanePrimaryBenchmarks.lean": "194e6cec5f7a97e6537f023089b5e94252092d446f42b1c93e1a15d8467c8f42",
+    "AxiomaticGW/Surfaces/PolynomialReduction.lean": "26fa29ad42621599bc51e52d6c40709b72c790aad86a0481d586429ea9e717a6",
+    "AxiomaticGW/Surfaces/PrimaryReduction.lean": "3685edd1fe22b43086883e67cf03f4faa0ad891c347f01dd75ac4358c9909273",
+    "AxiomaticGW/Surfaces/Queries.lean": "20f6ed05012601dab184156903938d789d328733dc22bc3279aea6195102d88d",
+    "AxiomaticGW/Surfaces/StrictLine.lean": "8cac8754060af5d435484383be8b0e7a7356771fef472681b5a9411560624f49",
+    "AxiomaticGW/Surfaces/TargetData.lean": "8f89f978fce57a80983a65aa46b91087ed9f2ad22aad16d7e3f9c8b190d13517",
+    "AxiomaticGW/Surfaces/TermExpansion.lean": "e91b19bde4ae930d4a1514ac10782272dcf9a396f02c48aff83656d757cb5c6e",
+    "AxiomaticGW/Surfaces/WDVV.lean": "e51f314d3fdca39ec9fadadab49703e36a43c75785200ff5d7271d30ffbb33a6",
+    "AxiomaticGW/TFT/Basic.lean": "546dd0d8236ca564f589ed910058d47807cafb3c952b37d5600dddc87c04a794",
+    "AxiomaticGW/TFT/Correlator.lean": "5d5866bfc13ff00feaa53ceda514347595d0a6dd37b3d8129dc05ce6551ddb9b",
+    "AxiomaticGW/TFT/FiniteProduct.lean": "ee36e5a4a4e982fe4996dac2511d1b92142f324578a1bed9887af52cdb7a8ff2",
+    "AxiomaticGW/TFT/Frobenius.lean": "fdfcd37bf3b6bb9003b941e1048d06756ebd704c8907b08d58c69a050737c564",
+    "AxiomaticGW/TFT/Sewing.lean": "8c40554b9cff20461b50623160997e95d785dbf62d873a3d9be23af33a1ed4d5",
+    "AxiomaticGW/Tautological/BasicStrata.lean": "aaff11f4110657b96e99a223e8cea032126e21f3f12f37226d7d8094bcbc2159",
+    "AxiomaticGW/Tautological/DecoratedStableGraph.lean": "b4d0408b1cfddafe145230aad311a76577b8feafe6f2ac187cd1524a07247b60",
+    "AxiomaticGW/Tautological/Getzler.lean": "a18166e27b5c95f77c9eaa44afe59e4e5a53a6d17fa2994429239b53e04470a1",
+    "AxiomaticGW/Tautological/GetzlerAncestors.lean": "b55bebbb46947d4893b73c782905a2bf967f2a1a598a1344547f7ee251894c60",
+    "AxiomaticGW/Tautological/GetzlerForgetful.lean": "4b12803bac6e8de8fee1673ebdd103da6853d432b2e78855f8330c4db223d772",
+    "AxiomaticGW/Tautological/GetzlerGW.lean": "1bad4e6f07612c853f9d58dcc42b0983f3c479aca6220d32e17dfd097fe26275",
+    "AxiomaticGW/Tautological/GetzlerGluing.lean": "026c9e76249ba5bb47aa21dab6c8f41d5d97d7e2acb862addd16143ca638b083",
+    "AxiomaticGW/Tautological/GetzlerGraphs.lean": "3caca7fd4cf0d0e3366b5229015eb9756ec4fe9d019cb805748071b48eaf52e3",
+    "AxiomaticGW/Tautological/GetzlerRealization.lean": "2cc561bb53679eb6235adad35f3b57a5195c8c6898e8c4ae6e765b9d2a089ab4",
+    "AxiomaticGW/Tautological/GluingAncestors.lean": "2953e2715238bc0737786a08e7a9101a601d72de0195d1e37ba0fa5dacf6bbec",
+    "AxiomaticGW/Tautological/GluingEvaluation.lean": "79fa292114eb8499c2186d5bbd71bdfb6d15891a9ec5e00cd0eb4e5061fba67d",
+    "AxiomaticGW/Tautological/GluingExpression.lean": "36c5e908f9d13273c739102d0d7c21363776db58d92e5fd49a363661fedc0db5",
+    "AxiomaticGW/Tautological/GluingForgetful.lean": "9a1fb2b1be6198912dfccfa1dcd5b02f7aa9c2e406576443520ad670dd217b53",
+    "AxiomaticGW/Tautological/GluingMarking.lean": "a5afbbcb83fe40f662022b59d76c93884350a216b7849de7fb40889ca9c8ff9d",
+    "AxiomaticGW/Tautological/GraphBounds.lean": "69d1b5fe492e41ed328bc3d19797727f1cd1dc3885ba25de2d4fcb6decbcc679",
+    "AxiomaticGW/Tautological/GraphEnumeration.lean": "bbf9e878dc80e94b3e214e68b14e06dd370da516eb850b1c851d767cb7b01c6e",
+    "AxiomaticGW/Tautological/GraphIsomorphisms.lean": "5cd10ac37ec3390443ac5db4ef38bba59327491fa9f4708d13ea883ca258d0bf",
+    "AxiomaticGW/Tautological/LegPsi.lean": "9ca882b29db8f6dec38c510283aa9f4484839a8f1620232d20b65c61ecf3cb56",
+    "AxiomaticGW/Tautological/LegPsiRealization.lean": "e8d6bff52045adf408f2d4439b5df73b44328a88d1f51d1807ff70da58a6b95a",
+    "AxiomaticGW/Tautological/NonseparatingGluing.lean": "441bea8bc9e4935147b1b78ee29ae716006b5dba927add803941e837e3d66765",
+    "AxiomaticGW/Tautological/NonseparatingRealization.lean": "17d0072a0de621e5164ea39dfc46498b6d11388b0f5f278737a4f5baf1d89fda",
+    "AxiomaticGW/Tautological/Relabel.lean": "cff8eaef48a5789c21a85d3b7f74072538494c0505069911963e85a58c0ea020",
+    "AxiomaticGW/Tautological/RelabelRealization.lean": "3d61514b0b4d21ecb807f82b8c66794c47de46408b3eae5b0d7bbb7fe2f48152",
+    "AxiomaticGW/Tautological/RelationCertificate.lean": "665e0e9ed9aa8d16d8b86b30546623d4980a07a6add20dc771aafebaceee13d4",
+    "AxiomaticGW/Tautological/SeparatingGluing.lean": "05b43b110eb97c226e07ab7e898d1e2da1d90dcabbe59bd5726c45889933cb78",
+    "AxiomaticGW/Tautological/SeparatingRealization.lean": "e5ae34a58171024a17780469beafe6bd541e282ffc8537c562415e798659bfd0",
+    "AxiomaticGW/Tautological/StrataModule.lean": "4cbd41c258dd6e0e03a691d8de21fd9021788e03b67d1df0127742553f53112f",
+    "AxiomaticGW/Tautological/StrataRealization.lean": "ddf59186e35a331415f9cbb8713dbcfda209fbf9bf5530123a1ab87964cd308c",
+    "AxiomaticGW/Tautological/WDVV.lean": "fc09895cdaf341156ec36f152b4de544d1f8fea80b5957e4bde43d7eb87566d2",
+    "AxiomaticGW/Tautological/WDVVForgetful.lean": "8fc3a4da159b3b142ed233bb8051e9b4c9e93dd5ecd3829491243c521c057308",
+    "AxiomaticGW/Tautological/WDVVRealization.lean": "95dabaaf51282938a94b9b0915a7086e9c4f9824621313acaf6345497e105af7",
+    "AxiomaticGWTest/Surfaces/GenusZeroCertificate.lean": "af51883731729e44467ee1cbb527c02a8fda7eac306ec8545f315176d4ab7d69",
+    "AxiomaticGWTest/Surfaces/GenusZeroCompression.lean": "cc37e785f7f6a0a278a00cbfbf7676ec8f906308125d59efa8075bd22dd8fd87",
+    "AxiomaticGWTest/Surfaces/GenusZeroPivot.lean": "04a52affcb278c844f8863fae1b147e0766e278cc7493662c7bd476b50f56cdd",
+    "AxiomaticGWTest/Surfaces/GenusZeroReconstruction.lean": "1eedf90fb608e3a5c099f6d52325639243a822ec936fdc49b8c2cfbe612e32a5",
+    "AxiomaticGWTest/Surfaces/GenusZeroStep.lean": "541f869eac26aabb8600822de81de72675998ca3d04975636b31897aec388175",
+    "AxiomaticGWTest/Surfaces/GenusZeroUniform.lean": "b3d8f00f7a790101d2f88d917ea0243b34901d564082903cfa27db9a0d44066a",
+    "AxiomaticGWTest/Surfaces/WDVVBaseCases.lean": "49148b22e4d6ef5b16e63b8a2ac3efd447abc2be1d994cc5005391e8840e9c44",
+    "AxiomaticGWTest/Tautological/GetzlerReplay.lean": "7b91d9e3ac47d934f418aa112dbc153f374e41e3f149ca9fee1202769f1ccbec",
+    "AxiomaticGWTest/Tautological/WDVVForgetful.lean": "fd8c901334406f7e604ac1f5a45b3d1d0cb9768b07a2d7fb7818c33e60b58dff",
+    "AxiomaticGWTest/Tautological/WDVVReplay.lean": "e98c44829aec5e40417419e3c35483ac72f5b2f6a672445b9c63f2840abccc88",
+    "README.md": "dc714619b16b8e65731f5f0c957c6a9e2a89addbbf1e89895c91e01259795149",
+    "environments/getzler-candidate-osx-arm64.json": "ccd8a8f941e9d2d503ec91e29b2be527bf0c91ce111599e6ec56118f6994ecb7",
+    "environments/gkm-inputs-osx-arm64.json": "062a32a9919fa5ddf806c353f5bb56256ca5dca31d170c246b9bfa39c3b11376",
+    "environments/plane-primary-genus-zero-benchmarks.json": "db6cc339e4c7a3d447e163dae13137f9a7a0a06555c5906a4082850406229600",
+    "environments/surface-genus-zero-primary-tables.json": "d710f97e36fee1f9a30b2e5993af87ee6fb6674c3447b5097c1137d41790ebff",
+    "environments/surface-wdvv-base-cases.json": "fd09b7623ab3778fcb9ad5245201b6b8964a228c66ca34967b38ae10abd47d04",
+    "environments/surface-wdvv-pivot-exploration.json": "fb02e2607cd082df59b7479f4d6656c744eec699b390849de180b433b24eae78",
+    "environments/wdvv-candidate-osx-arm64.json": "44ba7410c29fd82126c188d52e0203f7aaa38139c315c7317e6221a6d905284d",
+    "lake-manifest.json": "e9d145b9e7338c66d20f6039ba5937818c5a1c3e085465391d3723315fec453d",
+    "lakefile.toml": "58517e8c961d4a4fab407f323a7caa650f935a1202b30bd5becd0335fa0dafe1",
+    "lean-toolchain": "2773c517aa90b66ea8a2c52bddddf84393157797f8341be0df45294fff7fd32e",
+    "notes/MathematicsToLean.md": "c1e443bfe2155b3b3d357cbfc47fb184d02777fcdbe9deecd7456b5082ed6be5",
+    "notes/mathematics/SurfaceReconstructionInputs.md": "dd37cf6ba2bd3feb5aa61881fcd4190251189456db7543ab34123b307371a8fa",
+    "notes/milestones/GWReconstructionPlan.md": "983b97f367005d124ca2c27adfbbb8be27f96c2387bf30ebf31b68a91b61a157",
+    "notes/milestones/ImplementationProgress.md": "e87973694f2190f0cfc312daf659d84ff02aad385309895e0789772ae6595dbb",
+    "notes/references/AdmcyclesEnvironment.md": "96e56a4e556946be1724f8bbf3c871d31004d7da6ff376965fea12cc9982a329",
+    "scripts/explore_surface_degree_zero.py": "65afcfe6fa0017a6bc5f1f1627a18c17d144b20ec4566d6e0283b972d122ba61",
+    "scripts/explore_surface_getzler.py": "f34f5288ef6b3a3b0a5417038f3d5e6b3f3f24c683c359431e7f0e39816fdd37",
+    "scripts/explore_surface_reduction.py": "a0e96453cb0063df446ae9f3ddd6416e6308a8466a0d52d1a6316fb4fcf8e5e4",
+    "scripts/explore_wdvv_base_cases.py": "e96fbc53fef2e76e1250c94d731299e0b24a4fa1c6e03af47617af8bc953b85c",
+    "scripts/explore_wdvv_pivots.py": "6e336e0acbe87ad7f6b95e86eabe43c902d8f258b8e8fcb67acb11a6f511ac6d",
+    "scripts/export_surface_equations.py": "820f45d308a9c8bb2f002e35a5e215646e3764c2d169686ffe4882f5cdb08a52",
+    "scripts/export_surface_genus_zero_tables.py": "bfd8ad3605fae9cddf9149a18f829facff9244cddd0d5007acae7cd18636db93",
+    "scripts/test_surface_equations.py": "d5b78c7addb20e8d983cec017340997cc26134bd8f184349e0a4462d27a62f60",
+    "scripts/test_surface_genus_zero_tables.py": "78b98a0a4419984eb97d828d2552189fdf4e3f816c4590f628392f83788086e8"
+  },
+  "remaining": [
+    "Arbitrary descendants and genus-one/two reconstruction with the fixed numerical suites.",
+    "Actual semisimple GKM CohFT import, checked geometric comparisons, R-matrix/translation and ordinary specialization gates.",
+    "Outstanding R1 and R3–R8 obligations; geometric model validity remains explicit input."
+  ],
+  "next_priority": "Prove genus-one Getzler support and a nonzero solved coefficient, derive the required low-energy sector, then prove termination and soundness before filling the fixed tables.",
+  "goal_status": "active",
+  "review": {
+    "baseline_files": 314,
+    "final_files": 325,
+    "modified_existing": [
+      "AxiomaticGW.lean",
+      "README.md",
+      "notes/MathematicsToLean.md",
+      "notes/mathematics/SurfaceReconstructionInputs.md",
+      "notes/milestones/GWReconstructionPlan.md",
+      "notes/milestones/ImplementationProgress.md"
+    ],
+    "new_files": [
+      "AxiomaticGW/Surfaces/Fixtures/GenusZeroBl2Table.lean",
+      "AxiomaticGW/Surfaces/Fixtures/GenusZeroF1Table.lean",
+      "AxiomaticGW/Surfaces/Fixtures/GenusZeroPlaneTable.lean",
+      "AxiomaticGW/Surfaces/GenusZeroBenchmarks.lean",
+      "AxiomaticGW/Surfaces/GenusZeroCertificate.lean",
+      "AxiomaticGW/Surfaces/GenusZeroScalar.lean",
+      "AxiomaticGWTest/Surfaces/GenusZeroCertificate.lean",
+      "environments/surface-genus-zero-certificate-validation.json",
+      "environments/surface-genus-zero-primary-tables.json",
+      "scripts/export_surface_genus_zero_tables.py",
+      "scripts/test_surface_genus_zero_tables.py"
+    ],
+    "unrelated_files_unchanged": 308,
+    "baseline_source_pins_matched": 131,
+    "backup_hashes_match_baseline": true,
+    "baseline_hashes": "/tmp/gw_table_certificate_start_hashes_20261003.json",
+    "baseline_hashes_sha256": "c5a7f3c2bd73e8335bb5431bafde3ca5f8d3c5abfaa60330a3b0c1547661eb5e",
+    "incremental_diff": "/tmp/gw_table_certificate_incremental_20261003.diff",
+    "incremental_diff_sha256": "3ee47a61683593ad00039a18e1c7267c48dd7d5db03ce9b23fac0fa98910e6ed",
+    "incremental_diff_excludes_self_referential_validation_manifest": true,
+    "placeholder_scan": {
+      "command": [
+        "rg",
+        "-n",
+        "\\b(sorry|admit|native_decide)\\b|^axiom\\b|trace_state",
+        "AxiomaticGW.lean",
+        "AxiomaticGW/Surfaces/Fixtures/GenusZeroBl2Table.lean",
+        "AxiomaticGW/Surfaces/Fixtures/GenusZeroF1Table.lean",
+        "AxiomaticGW/Surfaces/Fixtures/GenusZeroPlaneTable.lean",
+        "AxiomaticGW/Surfaces/GenusZeroBenchmarks.lean",
+        "AxiomaticGW/Surfaces/GenusZeroCertificate.lean",
+        "AxiomaticGW/Surfaces/GenusZeroScalar.lean",
+        "AxiomaticGWTest/Surfaces/GenusZeroCertificate.lean"
+      ],
+      "exit_code": 1,
+      "meaning": "no matches"
+    },
+    "new_and_changed_file_whitespace": "passed",
+    "source_pins": 142,
+    "source_pin_mismatches": [],
+    "local_documentation_links_checked": 405,
+    "committed_or_pushed": false
+  }
+}

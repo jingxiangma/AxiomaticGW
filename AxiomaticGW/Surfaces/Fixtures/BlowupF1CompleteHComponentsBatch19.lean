@@ -1,0 +1,8 @@
+/- Exact original batch19, including the separately checked TRR repair of component315. -/
+module
+
+public import AxiomaticGW.Surfaces.Fixtures.BlowupF1CompleteHComponentsBatch19A
+public import AxiomaticGW.Surfaces.Fixtures.BlowupF1CompleteHComponentsBatch19BAA
+public import AxiomaticGW.Surfaces.Fixtures.BlowupF1CompleteHComponentsBatch19BABA
+public import AxiomaticGW.Surfaces.Fixtures.BlowupF1CompleteHComponentsBatch19Repair315
+public import AxiomaticGW.Surfaces.Fixtures.BlowupF1CompleteHComponentsBatch19BB
