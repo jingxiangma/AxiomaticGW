@@ -17,6 +17,9 @@ concurrency:
 jobs:
   docs:
     runs-on: ubuntu-latest
+    # Several independent certificate modules each use multiple GiB during elaboration.
+    env:
+      LEAN_NUM_THREADS: "2"
     steps:
       - name: Check out repository
         uses: actions/checkout@v7
