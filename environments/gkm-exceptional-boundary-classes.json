@@ -1,0 +1,667 @@
+[
+  {
+    "admcycles": "1.4",
+    "common_refinement": [
+      [
+        1,
+        2
+      ],
+      [
+        5
+      ],
+      [
+        3,
+        4
+      ]
+    ],
+    "curve": [
+      1,
+      0
+    ],
+    "equivariant_insertions": [
+      [
+        "-x",
+        "0",
+        "1",
+        "0"
+      ],
+      [
+        "-x",
+        "0",
+        "1",
+        "0"
+      ],
+      [
+        "-y",
+        "0",
+        "1",
+        "0"
+      ],
+      [
+        "y",
+        "1",
+        "-1",
+        "0"
+      ]
+    ],
+    "equivariant_tail": [
+      [
+        "0",
+        "0",
+        "-1",
+        "-x"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0"
+      ]
+    ],
+    "fixed_points": [
+      [
+        0,
+        3
+      ],
+      [
+        1,
+        3
+      ]
+    ],
+    "genus": 0,
+    "lifts": [
+      "D3-D3(q)",
+      "D3-D3(q)",
+      "D3-D3(p)",
+      "D1"
+    ],
+    "loci": {
+      "4": {
+        "enumerated": 16,
+        "nonzero_loci": [
+          {
+            "automorphism": 1,
+            "boundary": "-1",
+            "edge": "(-1)/(x^2 - 2*x*y + y^2)",
+            "eulers": [
+              "x*y - y^2",
+              "-x^2 + x*y"
+            ],
+            "flags": [
+              "x - y",
+              "-x + y"
+            ],
+            "insertions": "-x^4 + 4*x^3*y - 6*x^2*y^2 + 4*x*y^3 - y^4",
+            "marks": [
+              [
+                1,
+                2
+              ],
+              [
+                3,
+                4
+              ]
+            ],
+            "tangent": "-x^3*y + 2*x^2*y^2 - x*y^3"
+          }
+        ]
+      },
+      "5": {
+        "enumerated": 32,
+        "nonzero_loci": [
+          {
+            "automorphism": 1,
+            "boundary": "-1",
+            "edge": "(-1)/(x^2 - 2*x*y + y^2)",
+            "eulers": [
+              "x*y - y^2",
+              "-x^2 + x*y"
+            ],
+            "flags": [
+              "x - y",
+              "-x + y"
+            ],
+            "insertions": "-x^4 + 4*x^3*y - 6*x^2*y^2 + 4*x*y^3 - y^4",
+            "marks": [
+              [
+                1,
+                2
+              ],
+              [
+                3,
+                4,
+                5
+              ]
+            ],
+            "node_psi": "(-1)/(-x + y)",
+            "tangent": "-x^3*y + 2*x^2*y^2 - x*y^3"
+          },
+          {
+            "automorphism": 1,
+            "boundary": "-1",
+            "edge": "(-1)/(x^2 - 2*x*y + y^2)",
+            "eulers": [
+              "x*y - y^2",
+              "-x^2 + x*y"
+            ],
+            "flags": [
+              "x - y",
+              "-x + y"
+            ],
+            "insertions": "-x^4 + 4*x^3*y - 6*x^2*y^2 + 4*x*y^3 - y^4",
+            "marks": [
+              [
+                1,
+                2,
+                5
+              ],
+              [
+                3,
+                4
+              ]
+            ],
+            "node_psi": "(-1)/(x - y)",
+            "tangent": "-x^3*y + 2*x^2*y^2 - x*y^3"
+          }
+        ]
+      }
+    },
+    "normal_degree": -1,
+    "ordinary_insertions": [
+      [
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        1,
+        -1,
+        0
+      ]
+    ],
+    "sage": "10.9",
+    "source": "a09c6625b280312721c5e0f2f915791781339aa5",
+    "tail_primary": [
+      [
+        0,
+        0,
+        -1,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0
+      ]
+    ],
+    "target": "hirzebruchOne",
+    "unit_mark": 5
+  },
+  {
+    "admcycles": "1.4",
+    "common_refinement": [
+      [
+        1,
+        2
+      ],
+      [
+        5
+      ],
+      [
+        3,
+        4
+      ]
+    ],
+    "curve": [
+      1,
+      0,
+      0
+    ],
+    "equivariant_insertions": [
+      [
+        "-x",
+        "0",
+        "1",
+        "0",
+        "0"
+      ],
+      [
+        "-x",
+        "0",
+        "1",
+        "0",
+        "0"
+      ],
+      [
+        "-y",
+        "0",
+        "1",
+        "0",
+        "0"
+      ],
+      [
+        "-x + y",
+        "1",
+        "-1",
+        "-1",
+        "0"
+      ]
+    ],
+    "equivariant_tail": [
+      [
+        "0",
+        "0",
+        "-1",
+        "0",
+        "-x"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ]
+    ],
+    "fixed_points": [
+      [
+        0,
+        3
+      ],
+      [
+        1,
+        3
+      ]
+    ],
+    "genus": 0,
+    "lifts": [
+      "D3-D3(q)",
+      "D3-D3(q)",
+      "D3-D3(p)",
+      "D1"
+    ],
+    "loci": {
+      "4": {
+        "enumerated": 16,
+        "nonzero_loci": [
+          {
+            "automorphism": 1,
+            "boundary": "-1",
+            "edge": "(-1)/(x^2 - 2*x*y + y^2)",
+            "eulers": [
+              "x*y - y^2",
+              "-x^2 + x*y"
+            ],
+            "flags": [
+              "x - y",
+              "-x + y"
+            ],
+            "insertions": "-x^4 + 4*x^3*y - 6*x^2*y^2 + 4*x*y^3 - y^4",
+            "marks": [
+              [
+                1,
+                2
+              ],
+              [
+                3,
+                4
+              ]
+            ],
+            "tangent": "-x^3*y + 2*x^2*y^2 - x*y^3"
+          }
+        ]
+      },
+      "5": {
+        "enumerated": 32,
+        "nonzero_loci": [
+          {
+            "automorphism": 1,
+            "boundary": "-1",
+            "edge": "(-1)/(x^2 - 2*x*y + y^2)",
+            "eulers": [
+              "x*y - y^2",
+              "-x^2 + x*y"
+            ],
+            "flags": [
+              "x - y",
+              "-x + y"
+            ],
+            "insertions": "-x^4 + 4*x^3*y - 6*x^2*y^2 + 4*x*y^3 - y^4",
+            "marks": [
+              [
+                1,
+                2
+              ],
+              [
+                3,
+                4,
+                5
+              ]
+            ],
+            "node_psi": "(-1)/(-x + y)",
+            "tangent": "-x^3*y + 2*x^2*y^2 - x*y^3"
+          },
+          {
+            "automorphism": 1,
+            "boundary": "-1",
+            "edge": "(-1)/(x^2 - 2*x*y + y^2)",
+            "eulers": [
+              "x*y - y^2",
+              "-x^2 + x*y"
+            ],
+            "flags": [
+              "x - y",
+              "-x + y"
+            ],
+            "insertions": "-x^4 + 4*x^3*y - 6*x^2*y^2 + 4*x*y^3 - y^4",
+            "marks": [
+              [
+                1,
+                2,
+                5
+              ],
+              [
+                3,
+                4
+              ]
+            ],
+            "node_psi": "(-1)/(x - y)",
+            "tangent": "-x^3*y + 2*x^2*y^2 - x*y^3"
+          }
+        ]
+      }
+    },
+    "normal_degree": -1,
+    "ordinary_insertions": [
+      [
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        -1,
+        -1,
+        0
+      ]
+    ],
+    "sage": "10.9",
+    "source": "a09c6625b280312721c5e0f2f915791781339aa5",
+    "tail_primary": [
+      [
+        0,
+        0,
+        -1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    ],
+    "target": "blowupTwo",
+    "unit_mark": 5
+  },
+  {
+    "admcycles": "1.4",
+    "common_refinement": [
+      [
+        1,
+        2
+      ],
+      [
+        5
+      ],
+      [
+        3,
+        4
+      ]
+    ],
+    "curve": [
+      0,
+      1,
+      0
+    ],
+    "equivariant_insertions": [
+      [
+        "x - y",
+        "0",
+        "0",
+        "1",
+        "0"
+      ],
+      [
+        "x - y",
+        "0",
+        "0",
+        "1",
+        "0"
+      ],
+      [
+        "x",
+        "0",
+        "0",
+        "1",
+        "0"
+      ],
+      [
+        "-x",
+        "1",
+        "0",
+        "-1",
+        "0"
+      ]
+    ],
+    "equivariant_tail": [
+      [
+        "0",
+        "0",
+        "0",
+        "-1",
+        "x - y"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ]
+    ],
+    "fixed_points": [
+      [
+        1,
+        4
+      ],
+      [
+        2,
+        4
+      ]
+    ],
+    "genus": 0,
+    "lifts": [
+      "D4-D4(q)",
+      "D4-D4(q)",
+      "D4-D4(p)",
+      "D2"
+    ],
+    "loci": {
+      "4": {
+        "enumerated": 16,
+        "nonzero_loci": [
+          {
+            "automorphism": 1,
+            "boundary": "-1",
+            "edge": "(-1)/y^2",
+            "eulers": [
+              "-x*y",
+              "x*y - y^2"
+            ],
+            "flags": [
+              "y",
+              "-y"
+            ],
+            "insertions": "-y^4",
+            "marks": [
+              [
+                1,
+                2
+              ],
+              [
+                3,
+                4
+              ]
+            ],
+            "tangent": "-x^2*y^2 + x*y^3"
+          }
+        ]
+      },
+      "5": {
+        "enumerated": 32,
+        "nonzero_loci": [
+          {
+            "automorphism": 1,
+            "boundary": "-1",
+            "edge": "(-1)/y^2",
+            "eulers": [
+              "-x*y",
+              "x*y - y^2"
+            ],
+            "flags": [
+              "y",
+              "-y"
+            ],
+            "insertions": "-y^4",
+            "marks": [
+              [
+                1,
+                2
+              ],
+              [
+                3,
+                4,
+                5
+              ]
+            ],
+            "node_psi": "(-1)/(-y)",
+            "tangent": "-x^2*y^2 + x*y^3"
+          },
+          {
+            "automorphism": 1,
+            "boundary": "-1",
+            "edge": "(-1)/y^2",
+            "eulers": [
+              "-x*y",
+              "x*y - y^2"
+            ],
+            "flags": [
+              "y",
+              "-y"
+            ],
+            "insertions": "-y^4",
+            "marks": [
+              [
+                1,
+                2,
+                5
+              ],
+              [
+                3,
+                4
+              ]
+            ],
+            "node_psi": "(-1)/y",
+            "tangent": "-x^2*y^2 + x*y^3"
+          }
+        ]
+      }
+    },
+    "normal_degree": -1,
+    "ordinary_insertions": [
+      [
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        1,
+        0,
+        -1,
+        0
+      ]
+    ],
+    "sage": "10.9",
+    "source": "a09c6625b280312721c5e0f2f915791781339aa5",
+    "tail_primary": [
+      [
+        0,
+        0,
+        0,
+        -1,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    ],
+    "target": "blowupTwo",
+    "unit_mark": 5
+  }
+]

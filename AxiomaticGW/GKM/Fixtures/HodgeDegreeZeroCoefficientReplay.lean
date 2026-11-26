@@ -62,7 +62,7 @@ theorem tangent_eq_replay : tangent = CurveReplay.Plane.tables.tangent := by
   decide +kernel
 
 /-- Exact incoming sparse polynomial, without changing its fraction representative. -/
-def c00_numerator : Fin 3 → Polynomial :=
+def c00Numerator : Fin 3 → Polynomial :=
   ![
     (MvPolynomial.C (1 : ℚ))*(MvPolynomial.X 0)*(MvPolynomial.X 1),
     (MvPolynomial.C (1 : ℚ))*(MvPolynomial.X 1)^2
@@ -71,7 +71,7 @@ def c00_numerator : Fin 3 → Polynomial :=
     + (MvPolynomial.C (1 : ℚ))*(MvPolynomial.X 0)^2]
 
 /-- Exact incoming sparse polynomial, without changing its fraction representative. -/
-def c00_denominator : Fin 3 → Polynomial :=
+def c00Denominator : Fin 3 → Polynomial :=
   ![
     (MvPolynomial.C (1 : ℚ)),
     (MvPolynomial.C (1 : ℚ)),
@@ -79,13 +79,13 @@ def c00_denominator : Fin 3 → Polynomial :=
 
 /-- The actual serialized numerator divided by its serialized denominator. -/
 def coefficient00 (p : Fin 3) : Coefficient :=
-  embed (c00_numerator p) / embed (c00_denominator p)
+  embed (c00Numerator p) / embed (c00Denominator p)
 
 /-- Every serialized denominator is checked nonzero in the genuine coefficient field. -/
 theorem c00_denominator_ne_zero (p : Fin 3) :
-    embed (c00_denominator p) ≠ 0 := by
+    embed (c00Denominator p) ≠ 0 := by
   fin_cases p
-  all_goals norm_num only [c00_denominator, map_zero, map_one, map_add, map_mul, map_pow,
+  all_goals norm_num only [c00Denominator, map_zero, map_one, map_add, map_mul, map_pow,
       embed_C, embed_X_zero, embed_X_one, one_mul, mul_one, zero_mul,
       mul_zero, zero_add, add_zero, div_one, pow_zero, pow_one,
       neg_one_mul, neg_zero, sub_zero, zero_sub, sub_self,
@@ -97,7 +97,7 @@ theorem c00_denominator_ne_zero (p : Fin 3) :
   all_goals exact one_ne_zero
 
 /-- Exact incoming sparse polynomial, without changing its fraction representative. -/
-def serializedEuler_numerator : Fin 3 → Polynomial :=
+def serializedEulerNumerator : Fin 3 → Polynomial :=
   ![
     (MvPolynomial.C (1 : ℚ))*(MvPolynomial.X 0)*(MvPolynomial.X 1),
     (MvPolynomial.C (1 : ℚ))*(MvPolynomial.X 1)^2
@@ -106,7 +106,7 @@ def serializedEuler_numerator : Fin 3 → Polynomial :=
     + (MvPolynomial.C (1 : ℚ))*(MvPolynomial.X 0)^2]
 
 /-- Exact incoming sparse polynomial, without changing its fraction representative. -/
-def serializedEuler_denominator : Fin 3 → Polynomial :=
+def serializedEulerDenominator : Fin 3 → Polynomial :=
   ![
     (MvPolynomial.C (1 : ℚ)),
     (MvPolynomial.C (1 : ℚ)),
@@ -114,13 +114,13 @@ def serializedEuler_denominator : Fin 3 → Polynomial :=
 
 /-- The actual serialized numerator divided by its serialized denominator. -/
 def serializedTangentEuler (p : Fin 3) : Coefficient :=
-  embed (serializedEuler_numerator p) / embed (serializedEuler_denominator p)
+  embed (serializedEulerNumerator p) / embed (serializedEulerDenominator p)
 
 /-- Every serialized denominator is checked nonzero in the genuine coefficient field. -/
 theorem serializedEuler_denominator_ne_zero (p : Fin 3) :
-    embed (serializedEuler_denominator p) ≠ 0 := by
+    embed (serializedEulerDenominator p) ≠ 0 := by
   fin_cases p
-  all_goals norm_num only [serializedEuler_denominator, map_zero, map_one, map_add, map_mul,
+  all_goals norm_num only [serializedEulerDenominator, map_zero, map_one, map_add, map_mul,
       map_pow, embed_C, embed_X_zero, embed_X_one, one_mul, mul_one,
       zero_mul, mul_zero, zero_add, add_zero, div_one, pow_zero, pow_one,
       neg_one_mul, neg_zero, sub_zero, zero_sub, sub_self,
@@ -132,14 +132,14 @@ theorem serializedEuler_denominator_ne_zero (p : Fin 3) :
   all_goals exact one_ne_zero
 
 /-- Exact incoming sparse polynomial, without changing its fraction representative. -/
-def unit_numerator : Fin 3 → Polynomial :=
+def unitNumerator : Fin 3 → Polynomial :=
   ![
     (MvPolynomial.C (1 : ℚ)),
     (MvPolynomial.C (1 : ℚ)),
     (MvPolynomial.C (1 : ℚ))]
 
 /-- Exact incoming sparse polynomial, without changing its fraction representative. -/
-def unit_denominator : Fin 3 → Polynomial :=
+def unitDenominator : Fin 3 → Polynomial :=
   ![
     (MvPolynomial.C (1 : ℚ)),
     (MvPolynomial.C (1 : ℚ)),
@@ -147,13 +147,13 @@ def unit_denominator : Fin 3 → Polynomial :=
 
 /-- The actual serialized numerator divided by its serialized denominator. -/
 def unitRestriction (p : Fin 3) : Coefficient :=
-  embed (unit_numerator p) / embed (unit_denominator p)
+  embed (unitNumerator p) / embed (unitDenominator p)
 
 /-- Every serialized denominator is checked nonzero in the genuine coefficient field. -/
 theorem unit_denominator_ne_zero (p : Fin 3) :
-    embed (unit_denominator p) ≠ 0 := by
+    embed (unitDenominator p) ≠ 0 := by
   fin_cases p
-  all_goals norm_num only [unit_denominator, map_zero, map_one, map_add, map_mul, map_pow,
+  all_goals norm_num only [unitDenominator, map_zero, map_one, map_add, map_mul, map_pow,
       embed_C, embed_X_zero, embed_X_one, one_mul, mul_one, zero_mul,
       mul_zero, zero_add, add_zero, div_one, pow_zero, pow_one,
       neg_one_mul, neg_zero, sub_zero, zero_sub, sub_self,
@@ -173,7 +173,7 @@ theorem coefficient00_eq_serializedEuler (p : Fin 3) :
 theorem coefficient00_eq_tangentProduct (p : Fin 3) :
     coefficient00 p = character (tangent p 0) * character (tangent p 1) := by
   fin_cases p
-  all_goals norm_num only [coefficient00, c00_numerator, c00_denominator, tangent, character,
+  all_goals norm_num only [coefficient00, c00Numerator, c00Denominator, tangent, character,
       map_zero, map_one, map_add, map_mul, map_pow, embed_C,
       embed_X_zero, embed_X_one, one_mul, mul_one, zero_mul, mul_zero,
       zero_add, add_zero, div_one, pow_zero, pow_one, neg_one_mul,
@@ -188,15 +188,15 @@ theorem coefficient00_eq_tangentProduct (p : Fin 3) :
 /-- The incoming unit restriction is exactly one at every fixed point. -/
 theorem unitRestriction_eq_one (p : Fin 3) : unitRestriction p = 1 := by
   fin_cases p
-  all_goals norm_num only [unitRestriction, unit_numerator, unit_denominator, map_zero,
-      map_one, map_add, map_mul, map_pow, embed_C, embed_X_zero,
-      embed_X_one, one_mul, mul_one, zero_mul, mul_zero, zero_add,
-      add_zero, div_one, pow_zero, pow_one, neg_one_mul, neg_zero,
-      sub_zero, zero_sub, sub_self, Matrix.cons_val, Matrix.of_apply,
-      Matrix.cons_val_zero', Matrix.cons_val_succ', Matrix.cons_val_zero,
-      Matrix.cons_val_succ, Matrix.cons_val_fin_one, Matrix.cons_val_one,
-      Fin.mk.injEq, Fin.ext_iff, Fin.val_succ, Fin.val_zero,
-      Fin.val_natCast, Fin.val_one', ite_true, ite_false]
+  all_goals norm_num only [unitRestriction, unitNumerator, unitDenominator, map_zero, map_one,
+      map_add, map_mul, map_pow, embed_C, embed_X_zero, embed_X_one,
+      one_mul, mul_one, zero_mul, mul_zero, zero_add, add_zero, div_one,
+      pow_zero, pow_one, neg_one_mul, neg_zero, sub_zero, zero_sub,
+      sub_self, Matrix.cons_val, Matrix.of_apply, Matrix.cons_val_zero',
+      Matrix.cons_val_succ', Matrix.cons_val_zero, Matrix.cons_val_succ,
+      Matrix.cons_val_fin_one, Matrix.cons_val_one, Fin.mk.injEq,
+      Fin.ext_iff, Fin.val_succ, Fin.val_zero, Fin.val_natCast,
+      Fin.val_one', ite_true, ite_false]
 
 /-- The checked producer tangent pair gives the independently held Euler factor. -/
 theorem coefficient00_eq_requestEuler (p : Fin 3) :
@@ -258,7 +258,7 @@ theorem tangent_eq_replay : tangent = CurveReplay.OneBlowup.tables.tangent := by
   decide +kernel
 
 /-- Exact incoming sparse polynomial, without changing its fraction representative. -/
-def c00_numerator : Fin 4 → Polynomial :=
+def c00Numerator : Fin 4 → Polynomial :=
   ![
     (MvPolynomial.C (1 : ℚ))*(MvPolynomial.X 1)^2
     + (MvPolynomial.C (-1 : ℚ))*(MvPolynomial.X 0)*(MvPolynomial.X 1),
@@ -270,7 +270,7 @@ def c00_numerator : Fin 4 → Polynomial :=
     + (MvPolynomial.C (-1 : ℚ))*(MvPolynomial.X 0)^2]
 
 /-- Exact incoming sparse polynomial, without changing its fraction representative. -/
-def c00_denominator : Fin 4 → Polynomial :=
+def c00Denominator : Fin 4 → Polynomial :=
   ![
     (MvPolynomial.C (1 : ℚ)),
     (MvPolynomial.C (1 : ℚ)),
@@ -279,13 +279,13 @@ def c00_denominator : Fin 4 → Polynomial :=
 
 /-- The actual serialized numerator divided by its serialized denominator. -/
 def coefficient00 (p : Fin 4) : Coefficient :=
-  embed (c00_numerator p) / embed (c00_denominator p)
+  embed (c00Numerator p) / embed (c00Denominator p)
 
 /-- Every serialized denominator is checked nonzero in the genuine coefficient field. -/
 theorem c00_denominator_ne_zero (p : Fin 4) :
-    embed (c00_denominator p) ≠ 0 := by
+    embed (c00Denominator p) ≠ 0 := by
   fin_cases p
-  all_goals norm_num only [c00_denominator, map_zero, map_one, map_add, map_mul, map_pow,
+  all_goals norm_num only [c00Denominator, map_zero, map_one, map_add, map_mul, map_pow,
       embed_C, embed_X_zero, embed_X_one, one_mul, mul_one, zero_mul,
       mul_zero, zero_add, add_zero, div_one, pow_zero, pow_one,
       neg_one_mul, neg_zero, sub_zero, zero_sub, sub_self,
@@ -297,7 +297,7 @@ theorem c00_denominator_ne_zero (p : Fin 4) :
   all_goals exact one_ne_zero
 
 /-- Exact incoming sparse polynomial, without changing its fraction representative. -/
-def serializedEuler_numerator : Fin 4 → Polynomial :=
+def serializedEulerNumerator : Fin 4 → Polynomial :=
   ![
     (MvPolynomial.C (1 : ℚ))*(MvPolynomial.X 1)^2
     + (MvPolynomial.C (-1 : ℚ))*(MvPolynomial.X 0)*(MvPolynomial.X 1),
@@ -309,7 +309,7 @@ def serializedEuler_numerator : Fin 4 → Polynomial :=
     + (MvPolynomial.C (-1 : ℚ))*(MvPolynomial.X 0)^2]
 
 /-- Exact incoming sparse polynomial, without changing its fraction representative. -/
-def serializedEuler_denominator : Fin 4 → Polynomial :=
+def serializedEulerDenominator : Fin 4 → Polynomial :=
   ![
     (MvPolynomial.C (1 : ℚ)),
     (MvPolynomial.C (1 : ℚ)),
@@ -318,13 +318,13 @@ def serializedEuler_denominator : Fin 4 → Polynomial :=
 
 /-- The actual serialized numerator divided by its serialized denominator. -/
 def serializedTangentEuler (p : Fin 4) : Coefficient :=
-  embed (serializedEuler_numerator p) / embed (serializedEuler_denominator p)
+  embed (serializedEulerNumerator p) / embed (serializedEulerDenominator p)
 
 /-- Every serialized denominator is checked nonzero in the genuine coefficient field. -/
 theorem serializedEuler_denominator_ne_zero (p : Fin 4) :
-    embed (serializedEuler_denominator p) ≠ 0 := by
+    embed (serializedEulerDenominator p) ≠ 0 := by
   fin_cases p
-  all_goals norm_num only [serializedEuler_denominator, map_zero, map_one, map_add, map_mul,
+  all_goals norm_num only [serializedEulerDenominator, map_zero, map_one, map_add, map_mul,
       map_pow, embed_C, embed_X_zero, embed_X_one, one_mul, mul_one,
       zero_mul, mul_zero, zero_add, add_zero, div_one, pow_zero, pow_one,
       neg_one_mul, neg_zero, sub_zero, zero_sub, sub_self,
@@ -336,7 +336,7 @@ theorem serializedEuler_denominator_ne_zero (p : Fin 4) :
   all_goals exact one_ne_zero
 
 /-- Exact incoming sparse polynomial, without changing its fraction representative. -/
-def unit_numerator : Fin 4 → Polynomial :=
+def unitNumerator : Fin 4 → Polynomial :=
   ![
     (MvPolynomial.C (1 : ℚ)),
     (MvPolynomial.C (1 : ℚ)),
@@ -344,7 +344,7 @@ def unit_numerator : Fin 4 → Polynomial :=
     (MvPolynomial.C (1 : ℚ))]
 
 /-- Exact incoming sparse polynomial, without changing its fraction representative. -/
-def unit_denominator : Fin 4 → Polynomial :=
+def unitDenominator : Fin 4 → Polynomial :=
   ![
     (MvPolynomial.C (1 : ℚ)),
     (MvPolynomial.C (1 : ℚ)),
@@ -353,13 +353,13 @@ def unit_denominator : Fin 4 → Polynomial :=
 
 /-- The actual serialized numerator divided by its serialized denominator. -/
 def unitRestriction (p : Fin 4) : Coefficient :=
-  embed (unit_numerator p) / embed (unit_denominator p)
+  embed (unitNumerator p) / embed (unitDenominator p)
 
 /-- Every serialized denominator is checked nonzero in the genuine coefficient field. -/
 theorem unit_denominator_ne_zero (p : Fin 4) :
-    embed (unit_denominator p) ≠ 0 := by
+    embed (unitDenominator p) ≠ 0 := by
   fin_cases p
-  all_goals norm_num only [unit_denominator, map_zero, map_one, map_add, map_mul, map_pow,
+  all_goals norm_num only [unitDenominator, map_zero, map_one, map_add, map_mul, map_pow,
       embed_C, embed_X_zero, embed_X_one, one_mul, mul_one, zero_mul,
       mul_zero, zero_add, add_zero, div_one, pow_zero, pow_one,
       neg_one_mul, neg_zero, sub_zero, zero_sub, sub_self,
@@ -379,7 +379,7 @@ theorem coefficient00_eq_serializedEuler (p : Fin 4) :
 theorem coefficient00_eq_tangentProduct (p : Fin 4) :
     coefficient00 p = character (tangent p 0) * character (tangent p 1) := by
   fin_cases p
-  all_goals norm_num only [coefficient00, c00_numerator, c00_denominator, tangent, character,
+  all_goals norm_num only [coefficient00, c00Numerator, c00Denominator, tangent, character,
       map_zero, map_one, map_add, map_mul, map_pow, embed_C,
       embed_X_zero, embed_X_one, one_mul, mul_one, zero_mul, mul_zero,
       zero_add, add_zero, div_one, pow_zero, pow_one, neg_one_mul,
@@ -394,15 +394,15 @@ theorem coefficient00_eq_tangentProduct (p : Fin 4) :
 /-- The incoming unit restriction is exactly one at every fixed point. -/
 theorem unitRestriction_eq_one (p : Fin 4) : unitRestriction p = 1 := by
   fin_cases p
-  all_goals norm_num only [unitRestriction, unit_numerator, unit_denominator, map_zero,
-      map_one, map_add, map_mul, map_pow, embed_C, embed_X_zero,
-      embed_X_one, one_mul, mul_one, zero_mul, mul_zero, zero_add,
-      add_zero, div_one, pow_zero, pow_one, neg_one_mul, neg_zero,
-      sub_zero, zero_sub, sub_self, Matrix.cons_val, Matrix.of_apply,
-      Matrix.cons_val_zero', Matrix.cons_val_succ', Matrix.cons_val_zero,
-      Matrix.cons_val_succ, Matrix.cons_val_fin_one, Matrix.cons_val_one,
-      Fin.mk.injEq, Fin.ext_iff, Fin.val_succ, Fin.val_zero,
-      Fin.val_natCast, Fin.val_one', ite_true, ite_false]
+  all_goals norm_num only [unitRestriction, unitNumerator, unitDenominator, map_zero, map_one,
+      map_add, map_mul, map_pow, embed_C, embed_X_zero, embed_X_one,
+      one_mul, mul_one, zero_mul, mul_zero, zero_add, add_zero, div_one,
+      pow_zero, pow_one, neg_one_mul, neg_zero, sub_zero, zero_sub,
+      sub_self, Matrix.cons_val, Matrix.of_apply, Matrix.cons_val_zero',
+      Matrix.cons_val_succ', Matrix.cons_val_zero, Matrix.cons_val_succ,
+      Matrix.cons_val_fin_one, Matrix.cons_val_one, Fin.mk.injEq,
+      Fin.ext_iff, Fin.val_succ, Fin.val_zero, Fin.val_natCast,
+      Fin.val_one', ite_true, ite_false]
 
 /-- The checked producer tangent pair gives the independently held Euler factor. -/
 theorem coefficient00_eq_requestEuler (p : Fin 4) :
@@ -471,7 +471,7 @@ theorem tangent_eq_replay : tangent = CurveReplay.TwoBlowups.tables.tangent := b
   decide +kernel
 
 /-- Exact incoming sparse polynomial, without changing its fraction representative. -/
-def c00_numerator : Fin 5 → Polynomial :=
+def c00Numerator : Fin 5 → Polynomial :=
   ![
     (MvPolynomial.C (1 : ℚ))*(MvPolynomial.X 1)^2
     + (MvPolynomial.C (-1 : ℚ))*(MvPolynomial.X 0)*(MvPolynomial.X 1),
@@ -484,7 +484,7 @@ def c00_numerator : Fin 5 → Polynomial :=
     + (MvPolynomial.C (1 : ℚ))*(MvPolynomial.X 0)*(MvPolynomial.X 1)]
 
 /-- Exact incoming sparse polynomial, without changing its fraction representative. -/
-def c00_denominator : Fin 5 → Polynomial :=
+def c00Denominator : Fin 5 → Polynomial :=
   ![
     (MvPolynomial.C (1 : ℚ)),
     (MvPolynomial.C (1 : ℚ)),
@@ -494,13 +494,13 @@ def c00_denominator : Fin 5 → Polynomial :=
 
 /-- The actual serialized numerator divided by its serialized denominator. -/
 def coefficient00 (p : Fin 5) : Coefficient :=
-  embed (c00_numerator p) / embed (c00_denominator p)
+  embed (c00Numerator p) / embed (c00Denominator p)
 
 /-- Every serialized denominator is checked nonzero in the genuine coefficient field. -/
 theorem c00_denominator_ne_zero (p : Fin 5) :
-    embed (c00_denominator p) ≠ 0 := by
+    embed (c00Denominator p) ≠ 0 := by
   fin_cases p
-  all_goals norm_num only [c00_denominator, map_zero, map_one, map_add, map_mul, map_pow,
+  all_goals norm_num only [c00Denominator, map_zero, map_one, map_add, map_mul, map_pow,
       embed_C, embed_X_zero, embed_X_one, one_mul, mul_one, zero_mul,
       mul_zero, zero_add, add_zero, div_one, pow_zero, pow_one,
       neg_one_mul, neg_zero, sub_zero, zero_sub, sub_self,
@@ -512,7 +512,7 @@ theorem c00_denominator_ne_zero (p : Fin 5) :
   all_goals exact one_ne_zero
 
 /-- Exact incoming sparse polynomial, without changing its fraction representative. -/
-def serializedEuler_numerator : Fin 5 → Polynomial :=
+def serializedEulerNumerator : Fin 5 → Polynomial :=
   ![
     (MvPolynomial.C (1 : ℚ))*(MvPolynomial.X 1)^2
     + (MvPolynomial.C (-1 : ℚ))*(MvPolynomial.X 0)*(MvPolynomial.X 1),
@@ -525,7 +525,7 @@ def serializedEuler_numerator : Fin 5 → Polynomial :=
     + (MvPolynomial.C (1 : ℚ))*(MvPolynomial.X 0)*(MvPolynomial.X 1)]
 
 /-- Exact incoming sparse polynomial, without changing its fraction representative. -/
-def serializedEuler_denominator : Fin 5 → Polynomial :=
+def serializedEulerDenominator : Fin 5 → Polynomial :=
   ![
     (MvPolynomial.C (1 : ℚ)),
     (MvPolynomial.C (1 : ℚ)),
@@ -535,13 +535,13 @@ def serializedEuler_denominator : Fin 5 → Polynomial :=
 
 /-- The actual serialized numerator divided by its serialized denominator. -/
 def serializedTangentEuler (p : Fin 5) : Coefficient :=
-  embed (serializedEuler_numerator p) / embed (serializedEuler_denominator p)
+  embed (serializedEulerNumerator p) / embed (serializedEulerDenominator p)
 
 /-- Every serialized denominator is checked nonzero in the genuine coefficient field. -/
 theorem serializedEuler_denominator_ne_zero (p : Fin 5) :
-    embed (serializedEuler_denominator p) ≠ 0 := by
+    embed (serializedEulerDenominator p) ≠ 0 := by
   fin_cases p
-  all_goals norm_num only [serializedEuler_denominator, map_zero, map_one, map_add, map_mul,
+  all_goals norm_num only [serializedEulerDenominator, map_zero, map_one, map_add, map_mul,
       map_pow, embed_C, embed_X_zero, embed_X_one, one_mul, mul_one,
       zero_mul, mul_zero, zero_add, add_zero, div_one, pow_zero, pow_one,
       neg_one_mul, neg_zero, sub_zero, zero_sub, sub_self,
@@ -553,7 +553,7 @@ theorem serializedEuler_denominator_ne_zero (p : Fin 5) :
   all_goals exact one_ne_zero
 
 /-- Exact incoming sparse polynomial, without changing its fraction representative. -/
-def unit_numerator : Fin 5 → Polynomial :=
+def unitNumerator : Fin 5 → Polynomial :=
   ![
     (MvPolynomial.C (1 : ℚ)),
     (MvPolynomial.C (1 : ℚ)),
@@ -562,7 +562,7 @@ def unit_numerator : Fin 5 → Polynomial :=
     (MvPolynomial.C (1 : ℚ))]
 
 /-- Exact incoming sparse polynomial, without changing its fraction representative. -/
-def unit_denominator : Fin 5 → Polynomial :=
+def unitDenominator : Fin 5 → Polynomial :=
   ![
     (MvPolynomial.C (1 : ℚ)),
     (MvPolynomial.C (1 : ℚ)),
@@ -572,13 +572,13 @@ def unit_denominator : Fin 5 → Polynomial :=
 
 /-- The actual serialized numerator divided by its serialized denominator. -/
 def unitRestriction (p : Fin 5) : Coefficient :=
-  embed (unit_numerator p) / embed (unit_denominator p)
+  embed (unitNumerator p) / embed (unitDenominator p)
 
 /-- Every serialized denominator is checked nonzero in the genuine coefficient field. -/
 theorem unit_denominator_ne_zero (p : Fin 5) :
-    embed (unit_denominator p) ≠ 0 := by
+    embed (unitDenominator p) ≠ 0 := by
   fin_cases p
-  all_goals norm_num only [unit_denominator, map_zero, map_one, map_add, map_mul, map_pow,
+  all_goals norm_num only [unitDenominator, map_zero, map_one, map_add, map_mul, map_pow,
       embed_C, embed_X_zero, embed_X_one, one_mul, mul_one, zero_mul,
       mul_zero, zero_add, add_zero, div_one, pow_zero, pow_one,
       neg_one_mul, neg_zero, sub_zero, zero_sub, sub_self,
@@ -598,7 +598,7 @@ theorem coefficient00_eq_serializedEuler (p : Fin 5) :
 theorem coefficient00_eq_tangentProduct (p : Fin 5) :
     coefficient00 p = character (tangent p 0) * character (tangent p 1) := by
   fin_cases p
-  all_goals norm_num only [coefficient00, c00_numerator, c00_denominator, tangent, character,
+  all_goals norm_num only [coefficient00, c00Numerator, c00Denominator, tangent, character,
       map_zero, map_one, map_add, map_mul, map_pow, embed_C,
       embed_X_zero, embed_X_one, one_mul, mul_one, zero_mul, mul_zero,
       zero_add, add_zero, div_one, pow_zero, pow_one, neg_one_mul,
@@ -613,15 +613,15 @@ theorem coefficient00_eq_tangentProduct (p : Fin 5) :
 /-- The incoming unit restriction is exactly one at every fixed point. -/
 theorem unitRestriction_eq_one (p : Fin 5) : unitRestriction p = 1 := by
   fin_cases p
-  all_goals norm_num only [unitRestriction, unit_numerator, unit_denominator, map_zero,
-      map_one, map_add, map_mul, map_pow, embed_C, embed_X_zero,
-      embed_X_one, one_mul, mul_one, zero_mul, mul_zero, zero_add,
-      add_zero, div_one, pow_zero, pow_one, neg_one_mul, neg_zero,
-      sub_zero, zero_sub, sub_self, Matrix.cons_val, Matrix.of_apply,
-      Matrix.cons_val_zero', Matrix.cons_val_succ', Matrix.cons_val_zero,
-      Matrix.cons_val_succ, Matrix.cons_val_fin_one, Matrix.cons_val_one,
-      Fin.mk.injEq, Fin.ext_iff, Fin.val_succ, Fin.val_zero,
-      Fin.val_natCast, Fin.val_one', ite_true, ite_false]
+  all_goals norm_num only [unitRestriction, unitNumerator, unitDenominator, map_zero, map_one,
+      map_add, map_mul, map_pow, embed_C, embed_X_zero, embed_X_one,
+      one_mul, mul_one, zero_mul, mul_zero, zero_add, add_zero, div_one,
+      pow_zero, pow_one, neg_one_mul, neg_zero, sub_zero, zero_sub,
+      sub_self, Matrix.cons_val, Matrix.of_apply, Matrix.cons_val_zero',
+      Matrix.cons_val_succ', Matrix.cons_val_zero, Matrix.cons_val_succ,
+      Matrix.cons_val_fin_one, Matrix.cons_val_one, Fin.mk.injEq,
+      Fin.ext_iff, Fin.val_succ, Fin.val_zero, Fin.val_natCast,
+      Fin.val_one', ite_true, ite_false]
 
 /-- The checked producer tangent pair gives the independently held Euler factor. -/
 theorem coefficient00_eq_requestEuler (p : Fin 5) :

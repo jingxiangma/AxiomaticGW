@@ -26,7 +26,7 @@ open AxiomaticGW AdmcyclesHodgeStrataCandidates
 /-- The actual weighted packet column is the corrected finite pushforward,
 without identifying its realization with a class until compatibility is given. -/
 theorem weighted_actual_column :
-    raw_1_1_degree2Coordinates 16 • StrataModule.basis (raw_1_1_degree2Columns 16) =
+    raw11Degree2Coordinates 16 • StrataModule.basis (raw11Degree2Columns 16) =
       (1 / 144 : ℚ) •
         (CorollaForgetful.push 2 (Fin 1) GKM.HodgeDegreeOneRealization.stable
           (Finsupp.single 1 1) 1 -

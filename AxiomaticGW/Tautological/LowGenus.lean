@@ -17,9 +17,9 @@ In genus zero the top psi-class intersections are multinomial coefficients:
 `integral_(Mbar_(0,n)) prod_i psi_i^(k_i) = (n-3)! / prod_i k_i!`
 
 when the exponents sum to `n - 3`, and they vanish otherwise. The rational
-function below makes this formula executable. `GenusZeroPsiFormula` remains a
-separate geometric certificate connecting the numerical formula to a chosen
-`StableCurveCohomology` realization.
+function below makes this formula executable. `GenusZeroPsiFormula` connects it
+to a chosen realization. `AxiomaticGW.PointTarget.GenusZeroMultinomial` derives
+that certificate from the universal-curve string equation and the three-point volume.
 -/
 
 @[expose] public section

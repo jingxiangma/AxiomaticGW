@@ -52,21 +52,21 @@ theorem refinementExpression_eq :
 
 /-- Retain the original five positions; other packet terms remain outside this claim. -/
 noncomputable def packetPart : StrataModule 2 (Fin 1) :=
-  raw_1_1_degree2Coordinates 3 • StrataModule.basis (raw_1_1_degree2Columns 3) +
-    raw_1_1_degree2Coordinates 4 • StrataModule.basis (raw_1_1_degree2Columns 4) +
-    raw_1_1_degree2Coordinates 18 • StrataModule.basis (raw_1_1_degree2Columns 18) +
-    raw_1_1_degree2Coordinates 21 • StrataModule.basis (raw_1_1_degree2Columns 21) +
-    raw_1_1_degree2Coordinates 23 • StrataModule.basis (raw_1_1_degree2Columns 23)
+  raw11Degree2Coordinates 3 • StrataModule.basis (raw11Degree2Columns 3) +
+    raw11Degree2Coordinates 4 • StrataModule.basis (raw11Degree2Columns 4) +
+    raw11Degree2Coordinates 18 • StrataModule.basis (raw11Degree2Columns 18) +
+    raw11Degree2Coordinates 21 • StrataModule.basis (raw11Degree2Columns 21) +
+    raw11Degree2Coordinates 23 • StrataModule.basis (raw11Degree2Columns 23)
 
 /-- The actual loop coefficient is 1/24 and all five output coefficients are held. -/
 theorem source_coefficients :
-    raw_0_1_degree1Columns 2 = rawGraph3 ∧
-    raw_0_1_degree1Coordinates 2 = (1 / 24 : ℚ) ∧
-    raw_1_1_degree2Coordinates 3 = (-1 / 288 : ℚ) ∧
-    raw_1_1_degree2Coordinates 4 = (-1 / 288 : ℚ) ∧
-    raw_1_1_degree2Coordinates 18 = (1 / 288 : ℚ) ∧
-    raw_1_1_degree2Coordinates 21 = (1 / 288 : ℚ) ∧
-    raw_1_1_degree2Coordinates 23 = (1 / 576 : ℚ) := by
+    raw01Degree1Columns 2 = rawGraph3 ∧
+    raw01Degree1Coordinates 2 = (1 / 24 : ℚ) ∧
+    raw11Degree2Coordinates 3 = (-1 / 288 : ℚ) ∧
+    raw11Degree2Coordinates 4 = (-1 / 288 : ℚ) ∧
+    raw11Degree2Coordinates 18 = (1 / 288 : ℚ) ∧
+    raw11Degree2Coordinates 21 = (1 / 288 : ℚ) ∧
+    raw11Degree2Coordinates 23 = (1 / 576 : ℚ) := by
   exact ⟨rfl, rfl, rfl, rfl, rfl, rfl, rfl⟩
 
 /-- Source-bound equality in the existing free strata module. The expression

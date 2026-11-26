@@ -11,7 +11,7 @@ public import AxiomaticGW.GKM.Fixtures.HodgeDegreeZeroRawAssembly
 # A checked relation between two fixed raw degree-two expressions
 
 Witness SHA256: a68d166f6b3063ac4295b8104304e0644f2caca47d6f1a869a5d846fb591cef1
-Decoded source SHA256: 244eaf08f741057b92113ee4b0c4a48b2185b55350473bc28286460ea07b651c
+Decoded source SHA256: 423a3b07dc5bf612d824472708ad0cf79a5f445f5280a4ad0f649958770d83ed
 All 28/16 actual occurrences and their rational coefficients are retained.
 Finite decorated graph isomorphisms and rational linearity prove the equality.
 This is not a geometric Mumford relation, a product-realization law, or a
@@ -79,7 +79,7 @@ def rawHint0 : GraphIsomorphismHint where
   swaps := [false]
 
 /-- Kernel-checked preservation of every source decoration. -/
-theorem rawGraphIso0 : rawGraph8 = rawGraph8 :=
+theorem rawGraphIso0 : rawGraph8 = representatives 2 :=
   TautologicalStratum.mk_eq_mk_of_isomorphic?
     (DecoratedStableGraph.toDecoration_totalGenus
       rawIncidence1Candidate rawIncidence1Valid rawGraph8Exponents)
@@ -95,7 +95,7 @@ def rawHint1 : GraphIsomorphismHint where
   swaps := [false]
 
 /-- Kernel-checked preservation of every source decoration. -/
-theorem rawGraphIso1 : rawGraph6 = rawGraph6 :=
+theorem rawGraphIso1 : rawGraph6 = representatives 0 :=
   TautologicalStratum.mk_eq_mk_of_isomorphic?
     (DecoratedStableGraph.toDecoration_totalGenus
       rawIncidence2Candidate rawIncidence2Valid rawGraph6Exponents)
@@ -143,7 +143,7 @@ def rawHint4 : GraphIsomorphismHint where
   swaps := [false]
 
 /-- Kernel-checked preservation of every source decoration. -/
-theorem rawGraphIso4 : rawGraph9 = rawGraph9 :=
+theorem rawGraphIso4 : rawGraph9 = representatives 3 :=
   TautologicalStratum.mk_eq_mk_of_isomorphic?
     (DecoratedStableGraph.toDecoration_totalGenus
       rawIncidence1Candidate rawIncidence1Valid rawGraph9Exponents)
@@ -191,7 +191,7 @@ def rawHint7 : GraphIsomorphismHint where
   swaps := [false]
 
 /-- Kernel-checked preservation of every source decoration. -/
-theorem rawGraphIso7 : rawGraph10 = rawGraph10 :=
+theorem rawGraphIso7 : rawGraph10 = representatives 4 :=
   TautologicalStratum.mk_eq_mk_of_isomorphic?
     (DecoratedStableGraph.toDecoration_totalGenus
       rawIncidence2Candidate rawIncidence2Valid rawGraph10Exponents)
@@ -207,7 +207,7 @@ def rawHint8 : GraphIsomorphismHint where
   swaps := [false]
 
 /-- Kernel-checked preservation of every source decoration. -/
-theorem rawGraphIso8 : rawGraph11 = rawGraph11 :=
+theorem rawGraphIso8 : rawGraph11 = representatives 5 :=
   TautologicalStratum.mk_eq_mk_of_isomorphic?
     (DecoratedStableGraph.toDecoration_totalGenus
       rawIncidence3Candidate rawIncidence3Valid rawGraph11Exponents)
@@ -223,7 +223,7 @@ def rawHint9 : GraphIsomorphismHint where
   swaps := []
 
 /-- Kernel-checked preservation of every source decoration. -/
-theorem rawGraphIso9 : rawGraph7 = rawGraph7 :=
+theorem rawGraphIso9 : rawGraph7 = representatives 1 :=
   TautologicalStratum.mk_eq_mk_of_isomorphic?
     (DecoratedStableGraph.toDecoration_totalGenus
       rawIncidence0Candidate rawIncidence0Valid rawGraph7Exponents)
@@ -239,7 +239,7 @@ def rawHint10 : GraphIsomorphismHint where
   swaps := [false]
 
 /-- Kernel-checked preservation of every source decoration. -/
-theorem rawGraphIso10 : rawGraph17 = rawGraph17 :=
+theorem rawGraphIso10 : rawGraph17 = representatives 11 :=
   TautologicalStratum.mk_eq_mk_of_isomorphic?
     (DecoratedStableGraph.toDecoration_totalGenus
       rawIncidence1Candidate rawIncidence1Valid rawGraph17Exponents)
@@ -287,7 +287,7 @@ def rawHint13 : GraphIsomorphismHint where
   swaps := [false]
 
 /-- Kernel-checked preservation of every source decoration. -/
-theorem rawGraphIso13 : rawGraph13 = rawGraph13 :=
+theorem rawGraphIso13 : rawGraph13 = representatives 7 :=
   TautologicalStratum.mk_eq_mk_of_isomorphic?
     (DecoratedStableGraph.toDecoration_totalGenus
       rawIncidence2Candidate rawIncidence2Valid rawGraph13Exponents)
@@ -303,7 +303,7 @@ def rawHint14 : GraphIsomorphismHint where
   swaps := [false]
 
 /-- Kernel-checked preservation of every source decoration. -/
-theorem rawGraphIso14 : rawGraph14 = rawGraph14 :=
+theorem rawGraphIso14 : rawGraph14 = representatives 8 :=
   TautologicalStratum.mk_eq_mk_of_isomorphic?
     (DecoratedStableGraph.toDecoration_totalGenus
       rawIncidence3Candidate rawIncidence3Valid rawGraph14Exponents)
@@ -319,7 +319,7 @@ def rawHint15 : GraphIsomorphismHint where
   swaps := []
 
 /-- Kernel-checked preservation of every source decoration. -/
-theorem rawGraphIso15 : rawGraph20 = rawGraph20 :=
+theorem rawGraphIso15 : rawGraph20 = representatives 14 :=
   TautologicalStratum.mk_eq_mk_of_isomorphic?
     (DecoratedStableGraph.toDecoration_totalGenus
       rawIncidence0Candidate rawIncidence0Valid rawGraph20Exponents)
@@ -335,7 +335,7 @@ def rawHint16 : GraphIsomorphismHint where
   swaps := []
 
 /-- Kernel-checked preservation of every source decoration. -/
-theorem rawGraphIso16 : rawGraph21 = rawGraph21 :=
+theorem rawGraphIso16 : rawGraph21 = representatives 15 :=
   TautologicalStratum.mk_eq_mk_of_isomorphic?
     (DecoratedStableGraph.toDecoration_totalGenus
       rawIncidence0Candidate rawIncidence0Valid rawGraph21Exponents)
@@ -351,7 +351,7 @@ def rawHint17 : GraphIsomorphismHint where
   swaps := [false, false]
 
 /-- Kernel-checked preservation of every source decoration. -/
-theorem rawGraphIso17 : rawGraph18 = rawGraph18 :=
+theorem rawGraphIso17 : rawGraph18 = representatives 12 :=
   TautologicalStratum.mk_eq_mk_of_isomorphic?
     (DecoratedStableGraph.toDecoration_totalGenus
       rawIncidence7Candidate rawIncidence7Valid rawGraph18Exponents)
@@ -447,7 +447,7 @@ def rawHint23 : GraphIsomorphismHint where
   swaps := [false, false]
 
 /-- Kernel-checked preservation of every source decoration. -/
-theorem rawGraphIso23 : rawGraph12 = rawGraph12 :=
+theorem rawGraphIso23 : rawGraph12 = representatives 6 :=
   TautologicalStratum.mk_eq_mk_of_isomorphic?
     (DecoratedStableGraph.toDecoration_totalGenus
       rawIncidence4Candidate rawIncidence4Valid rawGraph12Exponents)
@@ -527,7 +527,7 @@ def rawHint28 : GraphIsomorphismHint where
   swaps := [false, false]
 
 /-- Kernel-checked preservation of every source decoration. -/
-theorem rawGraphIso28 : rawGraph15 = rawGraph15 :=
+theorem rawGraphIso28 : rawGraph15 = representatives 9 :=
   TautologicalStratum.mk_eq_mk_of_isomorphic?
     (DecoratedStableGraph.toDecoration_totalGenus
       rawIncidence5Candidate rawIncidence5Valid rawGraph15Exponents)
@@ -543,7 +543,7 @@ def rawHint29 : GraphIsomorphismHint where
   swaps := [false, false]
 
 /-- Kernel-checked preservation of every source decoration. -/
-theorem rawGraphIso29 : rawGraph16 = rawGraph16 :=
+theorem rawGraphIso29 : rawGraph16 = representatives 10 :=
   TautologicalStratum.mk_eq_mk_of_isomorphic?
     (DecoratedStableGraph.toDecoration_totalGenus
       rawIncidence6Candidate rawIncidence6Valid rawGraph16Exponents)
@@ -559,7 +559,7 @@ def rawHint30 : GraphIsomorphismHint where
   swaps := [false, false]
 
 /-- Kernel-checked preservation of every source decoration. -/
-theorem rawGraphIso30 : rawGraph19 = rawGraph19 :=
+theorem rawGraphIso30 : rawGraph19 = representatives 13 :=
   TautologicalStratum.mk_eq_mk_of_isomorphic?
     (DecoratedStableGraph.toDecoration_totalGenus
       rawIncidence8Candidate rawIncidence8Valid rawGraph19Exponents)
@@ -601,7 +601,7 @@ def index_1_1 : Fin 28 → Fin 16 :=
 
 /-- Bind the full original column vector to checked source isomorphisms. -/
 theorem columns_1_1_eq :
-    ∀ i, raw_1_1_degree2Columns i = representatives (index_1_1 i) := by
+    ∀ i, raw11Degree2Columns i = representatives (index_1_1 i) := by
   intro i
   fin_cases i
   · exact rawGraphIso0
@@ -635,7 +635,7 @@ theorem columns_1_1_eq :
 
 /-- All actual source coefficients are collected, without dropping repetitions. -/
 def grouped_1_1 : RelationCertificate.Coordinates 16 :=
-  ∑ i, Pi.single (index_1_1 i) (raw_1_1_degree2Coordinates i)
+  ∑ i, Pi.single (index_1_1 i) (raw11Degree2Coordinates i)
 
 /-- Exact rational arithmetic in all sixteen coordinates. -/
 theorem grouped_1_1_eq : grouped_1_1 = (2 : ℚ) • collectedCoordinates := by
@@ -643,10 +643,10 @@ theorem grouped_1_1_eq : grouped_1_1 = (2 : ℚ) • collectedCoordinates := by
   fin_cases i <;> decide +kernel
 
 /-- The previously decoded complete raw expression has these coordinates. -/
-theorem raw_1_1_eq_collected : raw_1_1_degree2 =
+theorem raw_1_1_eq_collected : raw11Degree2 =
     RelationCertificate.interpret representatives ((2 : ℚ) • collectedCoordinates) := by
   calc
-    raw_1_1_degree2 = RelationCertificate.interpret representatives grouped_1_1 :=
+    raw11Degree2 = RelationCertificate.interpret representatives grouped_1_1 :=
       AdmcyclesHodgeStrataIsomorphisms.interpret_grouped
         _ _ _ _ columns_1_1_eq
     _ = _ := congrArg (RelationCertificate.interpret representatives)
@@ -673,7 +673,7 @@ def index_0_2 : Fin 16 → Fin 16 :=
 
 /-- Bind the full original column vector to checked source isomorphisms. -/
 theorem columns_0_2_eq :
-    ∀ i, raw_0_2_degree2Columns i = representatives (index_0_2 i) := by
+    ∀ i, raw02Degree2Columns i = representatives (index_0_2 i) := by
   intro i
   fin_cases i
   · exact rawGraphIso1
@@ -695,7 +695,7 @@ theorem columns_0_2_eq :
 
 /-- All actual source coefficients are collected, without dropping repetitions. -/
 def grouped_0_2 : RelationCertificate.Coordinates 16 :=
-  ∑ i, Pi.single (index_0_2 i) (raw_0_2_degree2Coordinates i)
+  ∑ i, Pi.single (index_0_2 i) (raw02Degree2Coordinates i)
 
 /-- Exact rational arithmetic in all sixteen coordinates. -/
 theorem grouped_0_2_eq : grouped_0_2 = collectedCoordinates := by
@@ -703,31 +703,31 @@ theorem grouped_0_2_eq : grouped_0_2 = collectedCoordinates := by
   fin_cases i <;> decide +kernel
 
 /-- The previously decoded complete raw expression has these coordinates. -/
-theorem raw_0_2_eq_collected : raw_0_2_degree2 =
+theorem raw_0_2_eq_collected : raw02Degree2 =
     RelationCertificate.interpret representatives (collectedCoordinates) := by
   calc
-    raw_0_2_degree2 = RelationCertificate.interpret representatives grouped_0_2 :=
+    raw02Degree2 = RelationCertificate.interpret representatives grouped_0_2 :=
       AdmcyclesHodgeStrataIsomorphisms.interpret_grouped
         _ _ _ _ columns_0_2_eq
     _ = _ := congrArg (RelationCertificate.interpret representatives)
       grouped_0_2_eq
 
 /-- Equality of these two actual raw expressions, before any relation quotient. -/
-theorem raw_degree_two_equal : raw_1_1_degree2 = (2 : ℚ) • raw_0_2_degree2 := by
+theorem raw_degree_two_equal : raw11Degree2 = (2 : ℚ) • raw02Degree2 := by
   rw [raw_1_1_eq_collected, raw_0_2_eq_collected, map_smul]
 
 /-- Rational linearity transfers the exact equality to the existing realization. -/
 theorem map_raw_degree_two_equal {C : StableCurveCohomology Coefficient}
     (A : StrataRealization C 2 (Fin 1)) :
-    A.map raw_1_1_degree2 = (2 : Coefficient) • A.map raw_0_2_degree2 := by
+    A.map raw11Degree2 = (2 : Coefficient) • A.map raw02Degree2 := by
   rw [raw_degree_two_equal, two_smul, map_add, two_smul]
 
 /-- The complete plane assembly needs only the original raw unit and (0,2) classes. -/
 theorem plane_candidateClass_eq_raw_degree_two
     {C : StableCurveCohomology Coefficient} (A : StrataRealization C 2 (Fin 1)) :
     HodgeDegreeZeroFullCoefficientReplay.Plane.candidateClass A =
-      (x ^ 2 - x * y + y ^ 2) • A.map raw_0_0_degree0 +
-      (9 : Coefficient) • A.map raw_0_2_degree2 := by
+      (x ^ 2 - x * y + y ^ 2) • A.map raw00Degree0 +
+      (9 : Coefficient) • A.map raw02Degree2 := by
   rw [HodgeDegreeZeroRawAssembly.plane_candidateClass_eq_raw_regular,
     map_raw_degree_two_equal, smul_smul, add_assoc, ← add_smul]
   norm_num only
@@ -736,7 +736,7 @@ theorem plane_candidateClass_eq_raw_degree_two
 theorem oneBlowup_candidateClass_eq_raw_degree_two
     {C : StableCurveCohomology Coefficient} (A : StrataRealization C 2 (Fin 1)) :
     HodgeDegreeZeroFullCoefficientReplay.OneBlowup.candidateClass A =
-      (8 : Coefficient) • A.map raw_0_2_degree2 := by
+      (8 : Coefficient) • A.map raw02Degree2 := by
   rw [HodgeDegreeZeroRawAssembly.oneBlowup_candidateClass_eq_raw_regular,
     map_raw_degree_two_equal, smul_smul]
   norm_num only
@@ -745,8 +745,8 @@ theorem oneBlowup_candidateClass_eq_raw_degree_two
 theorem twoBlowups_candidateClass_eq_raw_degree_two
     {C : StableCurveCohomology Coefficient} (A : StrataRealization C 2 (Fin 1)) :
     HodgeDegreeZeroFullCoefficientReplay.TwoBlowups.candidateClass A =
-      (-(x ^ 2 - x * y + y ^ 2)) • A.map raw_0_0_degree0 +
-      (7 : Coefficient) • A.map raw_0_2_degree2 := by
+      (-(x ^ 2 - x * y + y ^ 2)) • A.map raw00Degree0 +
+      (7 : Coefficient) • A.map raw02Degree2 := by
   rw [HodgeDegreeZeroRawAssembly.twoBlowups_candidateClass_eq_raw_regular,
     map_raw_degree_two_equal, smul_smul, add_assoc, ← add_smul]
   norm_num only

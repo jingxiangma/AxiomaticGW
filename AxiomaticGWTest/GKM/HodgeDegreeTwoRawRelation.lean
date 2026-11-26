@@ -17,7 +17,7 @@ noncomputable section
 theorem exact_relation_under_linear_map
     (M : Type) [AddCommGroup M] [Module ℚ M]
     (f : StrataModule 2 (Fin 1) →ₗ[ℚ] M) :
-    f raw_1_1_degree2 = (2 : ℚ) • f raw_0_2_degree2 := by
+    f raw11Degree2 = (2 : ℚ) • f raw02Degree2 := by
   rw [raw_degree_two_equal, map_smul]
 
 /-- The original degree-two expression is retained, rather than replaced by zero. -/
@@ -33,19 +33,19 @@ attribute [local instance] strataRealizationModule
 theorem oneBlowup_complete_class {C : StableCurveCohomology Coefficient}
     (A : StrataRealization C 2 (Fin 1)) :
     HodgeDegreeZeroFullCoefficientReplay.OneBlowup.candidateClass A =
-      (8 : Coefficient) • A.map raw_0_2_degree2 :=
+      (8 : Coefficient) • A.map raw02Degree2 :=
   oneBlowup_candidateClass_eq_raw_degree_two A
 
 /-- The two surfaces differ by the actual unit term and one copy of the degree-two class. -/
 theorem blowup_complete_class_difference {C : StableCurveCohomology Coefficient}
     (A : StrataRealization C 2 (Fin 1)) :
     HodgeDegreeZeroFullCoefficientReplay.TwoBlowups.candidateClass A +
-      (x ^ 2 - x * y + y ^ 2) • A.map raw_0_0_degree0 -
+      (x ^ 2 - x * y + y ^ 2) • A.map raw00Degree0 -
       HodgeDegreeZeroFullCoefficientReplay.OneBlowup.candidateClass A =
-      -A.map raw_0_2_degree2 := by
+      -A.map raw02Degree2 := by
   rw [twoBlowups_candidateClass_eq_raw_degree_two, oneBlowup_candidateClass_eq_raw_degree_two]
   rw [show (8 : Coefficient) = (7 : Coefficient) + 1 by norm_num only,
-    add_smul (7 : Coefficient) 1 (A.map raw_0_2_degree2), one_smul]
+    add_smul (7 : Coefficient) 1 (A.map raw02Degree2), one_smul]
   simp only [neg_smul]
   abel
 

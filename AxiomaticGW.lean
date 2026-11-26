@@ -15,6 +15,11 @@ public import AxiomaticGW.CohFT.SeparatingPushforward
 public import AxiomaticGW.CohFT.Transport
 public import AxiomaticGW.Combinatorics.StableGraph
 public import AxiomaticGW.GKM.CurveConventionCertificate
+public import AxiomaticGW.GKM.SurfaceEdgeNonvanishing
+public import AxiomaticGW.GKM.SurfaceLocalizationVertex
+public import AxiomaticGW.GKM.GenusTwoHodgeProducts
+public import AxiomaticGW.GKM.HomogeneousSpecialization
+public import AxiomaticGW.GKM.RegularSpecialization
 public import AxiomaticGW.GKM.Fixtures.AdmcyclesHodgeStrataCandidates
 public import AxiomaticGW.GKM.Fixtures.AdmcyclesHodgeStrataIsomorphisms
 public import AxiomaticGW.GKM.AdmcyclesHodgeStrataNormalization
@@ -24,8 +29,10 @@ public import AxiomaticGW.GKM.Fixtures.HodgeDegreeZeroCoefficientFormula
 public import AxiomaticGW.GKM.Fixtures.HodgeDegreeZeroRegularity
 public import AxiomaticGW.GKM.Fixtures.HodgeDegreeZeroRawAssembly
 public import AxiomaticGW.GKM.Fixtures.HodgeDegreeTwoRawRelation
+public import AxiomaticGW.GKM.Fixtures.HodgeVertexDegreeTwo
 public import AxiomaticGW.GKM.Fixtures.HodgeDegreeOneRealization
 public import AxiomaticGW.GKM.Fixtures.CurveReplay
+public import AxiomaticGW.GKM.Fixtures.SurfaceFixedGraphSupport
 public import AxiomaticGW.GKM.Fixtures.GenusTwoDegreeZeroReplay
 public import AxiomaticGW.GKM.Fixtures.PlaneGenusTwoLineReplay
 public import AxiomaticGW.GKM.Fixtures.SurfaceReplay
@@ -99,6 +106,7 @@ public import AxiomaticGW.Surfaces.GenusTwoBlowupRecursion
 public import AxiomaticGW.Surfaces.GenusTwoBlowupLowPsi
 public import AxiomaticGW.Surfaces.GenusTwoBlowupReconstruction
 public import AxiomaticGW.Surfaces.GenusTwoBlowupDescendants
+public import AxiomaticGW.Surfaces.GenusTwoZeroDivisorPairs
 public import AxiomaticGW.Surfaces.GenusTwoBlowupDescendantReconstruction
 public import AxiomaticGW.Surfaces.GenusTwoBlowupCertificate
 public import AxiomaticGW.Surfaces.GenusTwoL24ConstantGuard
@@ -147,11 +155,14 @@ public import AxiomaticGW.Surfaces.GenusTwoDerivedInitialValues
 public import AxiomaticGW.Surfaces.GenusTwoExceptionalInitialValues
 public import AxiomaticGW.Linear.Contraction
 public import AxiomaticGW.Linear.SeparatingContraction
-public import AxiomaticGW.PointTarget.Descendants
+public import AxiomaticGW.PointTarget.DVVGluing
+public import AxiomaticGW.PointTarget.DVVTermination
+public import AxiomaticGW.PointTarget.GenusZeroMultinomial
 public import AxiomaticGW.Surfaces.Cohomology
 public import AxiomaticGW.Surfaces.CurveClasses
 public import AxiomaticGW.Surfaces.TargetData
 public import AxiomaticGW.Surfaces.Queries
+public import AxiomaticGW.Surfaces.DimensionVanishing
 public import AxiomaticGW.Surfaces.Contraction
 public import AxiomaticGW.Surfaces.GluingEvaluation
 public import AxiomaticGW.Surfaces.AncestorPolynomial

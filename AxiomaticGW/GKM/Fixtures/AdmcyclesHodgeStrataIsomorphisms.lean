@@ -12,7 +12,7 @@ public import AxiomaticGW.Tautological.GraphIsomorphismHint
 # Exact isomorphism regrouping of two raw strata expressions
 
 Witness SHA256: 04896b6d8492352593c7281ca2433bef43de2b9960cc14fe6e4700d4f1d3d0db
-Decoded source SHA256: 244eaf08f741057b92113ee4b0c4a48b2185b55350473bc28286460ea07b651c
+Decoded source SHA256: 423a3b07dc5bf612d824472708ad0cf79a5f445f5280a4ad0f649958770d83ed
 The digests record provenance; the proofs reference the actual source definitions.
 All 122/108 source occurrences and their exact coefficients are retained.
 Only decorated graph isomorphisms and rational addition are used.
@@ -131,7 +131,7 @@ def rawHint0 : GraphIsomorphismHint where
   swaps := [false]
 
 /-- A checked decorated isomorphism identifies these actual source strata. -/
-theorem rawGraphIso0 : rawGraph37 = rawGraph37 :=
+theorem rawGraphIso0 : rawGraph37 = representatives 37 :=
   TautologicalStratum.mk_eq_mk_of_isomorphic?
     (DecoratedStableGraph.toDecoration_totalGenus
       rawIncidence1Candidate rawIncidence1Valid rawGraph37Exponents)
@@ -147,7 +147,7 @@ def rawHint1 : GraphIsomorphismHint where
   swaps := [false]
 
 /-- A checked decorated isomorphism identifies these actual source strata. -/
-theorem rawGraphIso1 : rawGraph38 = rawGraph38 :=
+theorem rawGraphIso1 : rawGraph38 = representatives 31 :=
   TautologicalStratum.mk_eq_mk_of_isomorphic?
     (DecoratedStableGraph.toDecoration_totalGenus
       rawIncidence2Candidate rawIncidence2Valid rawGraph38Exponents)
@@ -179,7 +179,7 @@ def rawHint3 : GraphIsomorphismHint where
   swaps := []
 
 /-- A checked decorated isomorphism identifies these actual source strata. -/
-theorem rawGraphIso3 : rawGraph40 = rawGraph40 :=
+theorem rawGraphIso3 : rawGraph40 = representatives 42 :=
   TautologicalStratum.mk_eq_mk_of_isomorphic?
     (DecoratedStableGraph.toDecoration_totalGenus
       rawIncidence0Candidate rawIncidence0Valid rawGraph40Exponents)
@@ -195,7 +195,7 @@ def rawHint4 : GraphIsomorphismHint where
   swaps := [false, false]
 
 /-- A checked decorated isomorphism identifies these actual source strata. -/
-theorem rawGraphIso4 : rawGraph41 = rawGraph41 :=
+theorem rawGraphIso4 : rawGraph41 = representatives 1 :=
   TautologicalStratum.mk_eq_mk_of_isomorphic?
     (DecoratedStableGraph.toDecoration_totalGenus
       rawIncidence4Candidate rawIncidence4Valid rawGraph41Exponents)
@@ -211,7 +211,7 @@ def rawHint5 : GraphIsomorphismHint where
   swaps := [false, false]
 
 /-- A checked decorated isomorphism identifies these actual source strata. -/
-theorem rawGraphIso5 : rawGraph42 = rawGraph42 :=
+theorem rawGraphIso5 : rawGraph42 = representatives 0 :=
   TautologicalStratum.mk_eq_mk_of_isomorphic?
     (DecoratedStableGraph.toDecoration_totalGenus
       rawIncidence4Candidate rawIncidence4Valid rawGraph42Exponents)
@@ -275,7 +275,7 @@ def rawHint9 : GraphIsomorphismHint where
   swaps := [false]
 
 /-- A checked decorated isomorphism identifies these actual source strata. -/
-theorem rawGraphIso9 : rawGraph46 = rawGraph46 :=
+theorem rawGraphIso9 : rawGraph46 = representatives 36 :=
   TautologicalStratum.mk_eq_mk_of_isomorphic?
     (DecoratedStableGraph.toDecoration_totalGenus
       rawIncidence1Candidate rawIncidence1Valid rawGraph46Exponents)
@@ -291,7 +291,7 @@ def rawHint10 : GraphIsomorphismHint where
   swaps := [false]
 
 /-- A checked decorated isomorphism identifies these actual source strata. -/
-theorem rawGraphIso10 : rawGraph47 = rawGraph47 :=
+theorem rawGraphIso10 : rawGraph47 = representatives 30 :=
   TautologicalStratum.mk_eq_mk_of_isomorphic?
     (DecoratedStableGraph.toDecoration_totalGenus
       rawIncidence2Candidate rawIncidence2Valid rawGraph47Exponents)
@@ -307,7 +307,7 @@ def rawHint11 : GraphIsomorphismHint where
   swaps := [false]
 
 /-- A checked decorated isomorphism identifies these actual source strata. -/
-theorem rawGraphIso11 : rawGraph48 = rawGraph48 :=
+theorem rawGraphIso11 : rawGraph48 = representatives 33 :=
   TautologicalStratum.mk_eq_mk_of_isomorphic?
     (DecoratedStableGraph.toDecoration_totalGenus
       rawIncidence3Candidate rawIncidence3Valid rawGraph48Exponents)
@@ -323,7 +323,7 @@ def rawHint12 : GraphIsomorphismHint where
   swaps := [false]
 
 /-- A checked decorated isomorphism identifies these actual source strata. -/
-theorem rawGraphIso12 : rawGraph49 = rawGraph49 :=
+theorem rawGraphIso12 : rawGraph49 = representatives 32 :=
   TautologicalStratum.mk_eq_mk_of_isomorphic?
     (DecoratedStableGraph.toDecoration_totalGenus
       rawIncidence2Candidate rawIncidence2Valid rawGraph49Exponents)
@@ -339,7 +339,7 @@ def rawHint13 : GraphIsomorphismHint where
   swaps := [false, false]
 
 /-- A checked decorated isomorphism identifies these actual source strata. -/
-theorem rawGraphIso13 : rawGraph50 = rawGraph50 :=
+theorem rawGraphIso13 : rawGraph50 = representatives 11 :=
   TautologicalStratum.mk_eq_mk_of_isomorphic?
     (DecoratedStableGraph.toDecoration_totalGenus
       rawIncidence7Candidate rawIncidence7Valid rawGraph50Exponents)
@@ -355,7 +355,7 @@ def rawHint14 : GraphIsomorphismHint where
   swaps := [false, false]
 
 /-- A checked decorated isomorphism identifies these actual source strata. -/
-theorem rawGraphIso14 : rawGraph51 = rawGraph51 :=
+theorem rawGraphIso14 : rawGraph51 = representatives 10 :=
   TautologicalStratum.mk_eq_mk_of_isomorphic?
     (DecoratedStableGraph.toDecoration_totalGenus
       rawIncidence5Candidate rawIncidence5Valid rawGraph51Exponents)
@@ -387,7 +387,7 @@ def rawHint16 : GraphIsomorphismHint where
   swaps := [false, false]
 
 /-- A checked decorated isomorphism identifies these actual source strata. -/
-theorem rawGraphIso16 : rawGraph53 = rawGraph53 :=
+theorem rawGraphIso16 : rawGraph53 = representatives 13 :=
   TautologicalStratum.mk_eq_mk_of_isomorphic?
     (DecoratedStableGraph.toDecoration_totalGenus
       rawIncidence13Candidate rawIncidence13Valid rawGraph53Exponents)
@@ -403,7 +403,7 @@ def rawHint17 : GraphIsomorphismHint where
   swaps := [false, false]
 
 /-- A checked decorated isomorphism identifies these actual source strata. -/
-theorem rawGraphIso17 : rawGraph54 = rawGraph54 :=
+theorem rawGraphIso17 : rawGraph54 = representatives 14 :=
   TautologicalStratum.mk_eq_mk_of_isomorphic?
     (DecoratedStableGraph.toDecoration_totalGenus
       rawIncidence6Candidate rawIncidence6Valid rawGraph54Exponents)
@@ -451,7 +451,7 @@ def rawHint20 : GraphIsomorphismHint where
   swaps := [false]
 
 /-- A checked decorated isomorphism identifies these actual source strata. -/
-theorem rawGraphIso20 : rawGraph57 = rawGraph57 :=
+theorem rawGraphIso20 : rawGraph57 = representatives 34 :=
   TautologicalStratum.mk_eq_mk_of_isomorphic?
     (DecoratedStableGraph.toDecoration_totalGenus
       rawIncidence3Candidate rawIncidence3Valid rawGraph57Exponents)
@@ -531,7 +531,7 @@ def rawHint25 : GraphIsomorphismHint where
   swaps := [false, false]
 
 /-- A checked decorated isomorphism identifies these actual source strata. -/
-theorem rawGraphIso25 : rawGraph62 = rawGraph62 :=
+theorem rawGraphIso25 : rawGraph62 = representatives 7 :=
   TautologicalStratum.mk_eq_mk_of_isomorphic?
     (DecoratedStableGraph.toDecoration_totalGenus
       rawIncidence7Candidate rawIncidence7Valid rawGraph62Exponents)
@@ -547,7 +547,7 @@ def rawHint26 : GraphIsomorphismHint where
   swaps := [false, false]
 
 /-- A checked decorated isomorphism identifies these actual source strata. -/
-theorem rawGraphIso26 : rawGraph63 = rawGraph63 :=
+theorem rawGraphIso26 : rawGraph63 = representatives 12 :=
   TautologicalStratum.mk_eq_mk_of_isomorphic?
     (DecoratedStableGraph.toDecoration_totalGenus
       rawIncidence8Candidate rawIncidence8Valid rawGraph63Exponents)
@@ -563,7 +563,7 @@ def rawHint27 : GraphIsomorphismHint where
   swaps := [false, false]
 
 /-- A checked decorated isomorphism identifies these actual source strata. -/
-theorem rawGraphIso27 : rawGraph64 = rawGraph64 :=
+theorem rawGraphIso27 : rawGraph64 = representatives 8 :=
   TautologicalStratum.mk_eq_mk_of_isomorphic?
     (DecoratedStableGraph.toDecoration_totalGenus
       rawIncidence7Candidate rawIncidence7Valid rawGraph64Exponents)
@@ -579,7 +579,7 @@ def rawHint28 : GraphIsomorphismHint where
   swaps := [false, false]
 
 /-- A checked decorated isomorphism identifies these actual source strata. -/
-theorem rawGraphIso28 : rawGraph65 = rawGraph65 :=
+theorem rawGraphIso28 : rawGraph65 = representatives 9 :=
   TautologicalStratum.mk_eq_mk_of_isomorphic?
     (DecoratedStableGraph.toDecoration_totalGenus
       rawIncidence7Candidate rawIncidence7Valid rawGraph65Exponents)
@@ -611,7 +611,7 @@ def rawHint30 : GraphIsomorphismHint where
   swaps := []
 
 /-- A checked decorated isomorphism identifies these actual source strata. -/
-theorem rawGraphIso30 : rawGraph67 = rawGraph67 :=
+theorem rawGraphIso30 : rawGraph67 = representatives 40 :=
   TautologicalStratum.mk_eq_mk_of_isomorphic?
     (DecoratedStableGraph.toDecoration_totalGenus
       rawIncidence0Candidate rawIncidence0Valid rawGraph67Exponents)
@@ -819,7 +819,7 @@ def rawHint43 : GraphIsomorphismHint where
   swaps := [false]
 
 /-- A checked decorated isomorphism identifies these actual source strata. -/
-theorem rawGraphIso43 : rawGraph80 = rawGraph80 :=
+theorem rawGraphIso43 : rawGraph80 = representatives 38 :=
   TautologicalStratum.mk_eq_mk_of_isomorphic?
     (DecoratedStableGraph.toDecoration_totalGenus
       rawIncidence2Candidate rawIncidence2Valid rawGraph80Exponents)
@@ -851,7 +851,7 @@ def rawHint45 : GraphIsomorphismHint where
   swaps := []
 
 /-- A checked decorated isomorphism identifies these actual source strata. -/
-theorem rawGraphIso45 : rawGraph82 = rawGraph82 :=
+theorem rawGraphIso45 : rawGraph82 = representatives 41 :=
   TautologicalStratum.mk_eq_mk_of_isomorphic?
     (DecoratedStableGraph.toDecoration_totalGenus
       rawIncidence0Candidate rawIncidence0Valid rawGraph82Exponents)
@@ -867,7 +867,7 @@ def rawHint46 : GraphIsomorphismHint where
   swaps := [false, false, false]
 
 /-- A checked decorated isomorphism identifies these actual source strata. -/
-theorem rawGraphIso46 : rawGraph83 = rawGraph83 :=
+theorem rawGraphIso46 : rawGraph83 = representatives 2 :=
   TautologicalStratum.mk_eq_mk_of_isomorphic?
     (DecoratedStableGraph.toDecoration_totalGenus
       rawIncidence18Candidate rawIncidence18Valid rawGraph83Exponents)
@@ -899,7 +899,7 @@ def rawHint48 : GraphIsomorphismHint where
   swaps := [false, false]
 
 /-- A checked decorated isomorphism identifies these actual source strata. -/
-theorem rawGraphIso48 : rawGraph85 = rawGraph85 :=
+theorem rawGraphIso48 : rawGraph85 = representatives 19 :=
   TautologicalStratum.mk_eq_mk_of_isomorphic?
     (DecoratedStableGraph.toDecoration_totalGenus
       rawIncidence4Candidate rawIncidence4Valid rawGraph85Exponents)
@@ -915,7 +915,7 @@ def rawHint49 : GraphIsomorphismHint where
   swaps := [false]
 
 /-- A checked decorated isomorphism identifies these actual source strata. -/
-theorem rawGraphIso49 : rawGraph86 = rawGraph86 :=
+theorem rawGraphIso49 : rawGraph86 = representatives 23 :=
   TautologicalStratum.mk_eq_mk_of_isomorphic?
     (DecoratedStableGraph.toDecoration_totalGenus
       rawIncidence1Candidate rawIncidence1Valid rawGraph86Exponents)
@@ -931,7 +931,7 @@ def rawHint50 : GraphIsomorphismHint where
   swaps := [false]
 
 /-- A checked decorated isomorphism identifies these actual source strata. -/
-theorem rawGraphIso50 : rawGraph87 = rawGraph87 :=
+theorem rawGraphIso50 : rawGraph87 = representatives 28 :=
   TautologicalStratum.mk_eq_mk_of_isomorphic?
     (DecoratedStableGraph.toDecoration_totalGenus
       rawIncidence2Candidate rawIncidence2Valid rawGraph87Exponents)
@@ -947,7 +947,7 @@ def rawHint51 : GraphIsomorphismHint where
   swaps := [false]
 
 /-- A checked decorated isomorphism identifies these actual source strata. -/
-theorem rawGraphIso51 : rawGraph88 = rawGraph88 :=
+theorem rawGraphIso51 : rawGraph88 = representatives 27 :=
   TautologicalStratum.mk_eq_mk_of_isomorphic?
     (DecoratedStableGraph.toDecoration_totalGenus
       rawIncidence3Candidate rawIncidence3Valid rawGraph88Exponents)
@@ -963,7 +963,7 @@ def rawHint52 : GraphIsomorphismHint where
   swaps := [false]
 
 /-- A checked decorated isomorphism identifies these actual source strata. -/
-theorem rawGraphIso52 : rawGraph89 = rawGraph89 :=
+theorem rawGraphIso52 : rawGraph89 = representatives 24 :=
   TautologicalStratum.mk_eq_mk_of_isomorphic?
     (DecoratedStableGraph.toDecoration_totalGenus
       rawIncidence1Candidate rawIncidence1Valid rawGraph89Exponents)
@@ -979,7 +979,7 @@ def rawHint53 : GraphIsomorphismHint where
   swaps := [false]
 
 /-- A checked decorated isomorphism identifies these actual source strata. -/
-theorem rawGraphIso53 : rawGraph90 = rawGraph90 :=
+theorem rawGraphIso53 : rawGraph90 = representatives 39 :=
   TautologicalStratum.mk_eq_mk_of_isomorphic?
     (DecoratedStableGraph.toDecoration_totalGenus
       rawIncidence1Candidate rawIncidence1Valid rawGraph90Exponents)
@@ -995,7 +995,7 @@ def rawHint54 : GraphIsomorphismHint where
   swaps := [false, false, false]
 
 /-- A checked decorated isomorphism identifies these actual source strata. -/
-theorem rawGraphIso54 : rawGraph91 = rawGraph91 :=
+theorem rawGraphIso54 : rawGraph91 = representatives 3 :=
   TautologicalStratum.mk_eq_mk_of_isomorphic?
     (DecoratedStableGraph.toDecoration_totalGenus
       rawIncidence20Candidate rawIncidence20Valid rawGraph91Exponents)
@@ -1027,7 +1027,7 @@ def rawHint56 : GraphIsomorphismHint where
   swaps := [false, false, false]
 
 /-- A checked decorated isomorphism identifies these actual source strata. -/
-theorem rawGraphIso56 : rawGraph93 = rawGraph93 :=
+theorem rawGraphIso56 : rawGraph93 = representatives 4 :=
   TautologicalStratum.mk_eq_mk_of_isomorphic?
     (DecoratedStableGraph.toDecoration_totalGenus
       rawIncidence22Candidate rawIncidence22Valid rawGraph93Exponents)
@@ -1123,7 +1123,7 @@ def rawHint62 : GraphIsomorphismHint where
   swaps := [false, false, false]
 
 /-- A checked decorated isomorphism identifies these actual source strata. -/
-theorem rawGraphIso62 : rawGraph99 = rawGraph99 :=
+theorem rawGraphIso62 : rawGraph99 = representatives 5 :=
   TautologicalStratum.mk_eq_mk_of_isomorphic?
     (DecoratedStableGraph.toDecoration_totalGenus
       rawIncidence28Candidate rawIncidence28Valid rawGraph99Exponents)
@@ -1139,7 +1139,7 @@ def rawHint63 : GraphIsomorphismHint where
   swaps := [false, false]
 
 /-- A checked decorated isomorphism identifies these actual source strata. -/
-theorem rawGraphIso63 : rawGraph100 = rawGraph100 :=
+theorem rawGraphIso63 : rawGraph100 = representatives 16 :=
   TautologicalStratum.mk_eq_mk_of_isomorphic?
     (DecoratedStableGraph.toDecoration_totalGenus
       rawIncidence7Candidate rawIncidence7Valid rawGraph100Exponents)
@@ -1155,7 +1155,7 @@ def rawHint64 : GraphIsomorphismHint where
   swaps := [false, false]
 
 /-- A checked decorated isomorphism identifies these actual source strata. -/
-theorem rawGraphIso64 : rawGraph101 = rawGraph101 :=
+theorem rawGraphIso64 : rawGraph101 = representatives 20 :=
   TautologicalStratum.mk_eq_mk_of_isomorphic?
     (DecoratedStableGraph.toDecoration_totalGenus
       rawIncidence7Candidate rawIncidence7Valid rawGraph101Exponents)
@@ -1171,7 +1171,7 @@ def rawHint65 : GraphIsomorphismHint where
   swaps := [false, false]
 
 /-- A checked decorated isomorphism identifies these actual source strata. -/
-theorem rawGraphIso65 : rawGraph102 = rawGraph102 :=
+theorem rawGraphIso65 : rawGraph102 = representatives 17 :=
   TautologicalStratum.mk_eq_mk_of_isomorphic?
     (DecoratedStableGraph.toDecoration_totalGenus
       rawIncidence9Candidate rawIncidence9Valid rawGraph102Exponents)
@@ -1187,7 +1187,7 @@ def rawHint66 : GraphIsomorphismHint where
   swaps := [false, false]
 
 /-- A checked decorated isomorphism identifies these actual source strata. -/
-theorem rawGraphIso66 : rawGraph103 = rawGraph103 :=
+theorem rawGraphIso66 : rawGraph103 = representatives 15 :=
   TautologicalStratum.mk_eq_mk_of_isomorphic?
     (DecoratedStableGraph.toDecoration_totalGenus
       rawIncidence10Candidate rawIncidence10Valid rawGraph103Exponents)
@@ -1283,7 +1283,7 @@ def rawHint72 : GraphIsomorphismHint where
   swaps := [false, false]
 
 /-- A checked decorated isomorphism identifies these actual source strata. -/
-theorem rawGraphIso72 : rawGraph109 = rawGraph109 :=
+theorem rawGraphIso72 : rawGraph109 = representatives 18 :=
   TautologicalStratum.mk_eq_mk_of_isomorphic?
     (DecoratedStableGraph.toDecoration_totalGenus
       rawIncidence13Candidate rawIncidence13Valid rawGraph109Exponents)
@@ -1347,7 +1347,7 @@ def rawHint76 : GraphIsomorphismHint where
   swaps := [false]
 
 /-- A checked decorated isomorphism identifies these actual source strata. -/
-theorem rawGraphIso76 : rawGraph113 = rawGraph113 :=
+theorem rawGraphIso76 : rawGraph113 = representatives 22 :=
   TautologicalStratum.mk_eq_mk_of_isomorphic?
     (DecoratedStableGraph.toDecoration_totalGenus
       rawIncidence1Candidate rawIncidence1Valid rawGraph113Exponents)
@@ -1395,7 +1395,7 @@ def rawHint79 : GraphIsomorphismHint where
   swaps := [false]
 
 /-- A checked decorated isomorphism identifies these actual source strata. -/
-theorem rawGraphIso79 : rawGraph116 = rawGraph116 :=
+theorem rawGraphIso79 : rawGraph116 = representatives 25 :=
   TautologicalStratum.mk_eq_mk_of_isomorphic?
     (DecoratedStableGraph.toDecoration_totalGenus
       rawIncidence2Candidate rawIncidence2Valid rawGraph116Exponents)
@@ -1427,7 +1427,7 @@ def rawHint81 : GraphIsomorphismHint where
   swaps := [false, false, false]
 
 /-- A checked decorated isomorphism identifies these actual source strata. -/
-theorem rawGraphIso81 : rawGraph118 = rawGraph118 :=
+theorem rawGraphIso81 : rawGraph118 = representatives 6 :=
   TautologicalStratum.mk_eq_mk_of_isomorphic?
     (DecoratedStableGraph.toDecoration_totalGenus
       rawIncidence29Candidate rawIncidence29Valid rawGraph118Exponents)
@@ -1507,7 +1507,7 @@ def rawHint86 : GraphIsomorphismHint where
   swaps := []
 
 /-- A checked decorated isomorphism identifies these actual source strata. -/
-theorem rawGraphIso86 : rawGraph123 = rawGraph123 :=
+theorem rawGraphIso86 : rawGraph123 = representatives 43 :=
   TautologicalStratum.mk_eq_mk_of_isomorphic?
     (DecoratedStableGraph.toDecoration_totalGenus
       rawIncidence0Candidate rawIncidence0Valid rawGraph123Exponents)
@@ -1667,7 +1667,7 @@ def rawHint96 : GraphIsomorphismHint where
   swaps := [false]
 
 /-- A checked decorated isomorphism identifies these actual source strata. -/
-theorem rawGraphIso96 : rawGraph133 = rawGraph133 :=
+theorem rawGraphIso96 : rawGraph133 = representatives 21 :=
   TautologicalStratum.mk_eq_mk_of_isomorphic?
     (DecoratedStableGraph.toDecoration_totalGenus
       rawIncidence1Candidate rawIncidence1Valid rawGraph133Exponents)
@@ -1699,7 +1699,7 @@ def rawHint98 : GraphIsomorphismHint where
   swaps := [false]
 
 /-- A checked decorated isomorphism identifies these actual source strata. -/
-theorem rawGraphIso98 : rawGraph135 = rawGraph135 :=
+theorem rawGraphIso98 : rawGraph135 = representatives 29 :=
   TautologicalStratum.mk_eq_mk_of_isomorphic?
     (DecoratedStableGraph.toDecoration_totalGenus
       rawIncidence3Candidate rawIncidence3Valid rawGraph135Exponents)
@@ -1715,7 +1715,7 @@ def rawHint99 : GraphIsomorphismHint where
   swaps := [false]
 
 /-- A checked decorated isomorphism identifies these actual source strata. -/
-theorem rawGraphIso99 : rawGraph136 = rawGraph136 :=
+theorem rawGraphIso99 : rawGraph136 = representatives 35 :=
   TautologicalStratum.mk_eq_mk_of_isomorphic?
     (DecoratedStableGraph.toDecoration_totalGenus
       rawIncidence3Candidate rawIncidence3Valid rawGraph136Exponents)
@@ -1731,7 +1731,7 @@ def rawHint100 : GraphIsomorphismHint where
   swaps := [false]
 
 /-- A checked decorated isomorphism identifies these actual source strata. -/
-theorem rawGraphIso100 : rawGraph137 = rawGraph137 :=
+theorem rawGraphIso100 : rawGraph137 = representatives 26 :=
   TautologicalStratum.mk_eq_mk_of_isomorphic?
     (DecoratedStableGraph.toDecoration_totalGenus
       rawIncidence3Candidate rawIncidence3Valid rawGraph137Exponents)
@@ -2027,7 +2027,7 @@ def index_1_2 : Fin 122 → Fin 44 :=
 
 /-- Every lookup is bound to the complete previously decoded column vector. -/
 theorem columns_1_2_eq :
-    ∀ i, raw_1_2_degree3Columns i = representatives (index_1_2 i) := by
+    ∀ i, raw12Degree3Columns i = representatives (index_1_2 i) := by
   intro i
   fin_cases i
   · exact rawGraphIso0
@@ -2155,7 +2155,7 @@ theorem columns_1_2_eq :
 
 /-- All coefficients from the actual input coordinate vector, with repetitions. -/
 def grouped_1_2 : RelationCertificate.Coordinates 44 :=
-  ∑ i, Pi.single (index_1_2 i) (raw_1_2_degree3Coordinates i)
+  ∑ i, Pi.single (index_1_2 i) (raw12Degree3Coordinates i)
 
 /-- Exact rational sums agree at every one of the 44 held coordinates. -/
 theorem grouped_1_2_eq : grouped_1_2 = collectedCoordinates := by
@@ -2275,7 +2275,7 @@ def index_2_1 : Fin 108 → Fin 44 :=
 
 /-- Every lookup is bound to the complete previously decoded column vector. -/
 theorem columns_2_1_eq :
-    ∀ i, raw_2_1_degree3Columns i = representatives (index_2_1 i) := by
+    ∀ i, raw21Degree3Columns i = representatives (index_2_1 i) := by
   intro i
   fin_cases i
   · exact rawGraphIso0
@@ -2389,7 +2389,7 @@ theorem columns_2_1_eq :
 
 /-- All coefficients from the actual input coordinate vector, with repetitions. -/
 def grouped_2_1 : RelationCertificate.Coordinates 44 :=
-  ∑ i, Pi.single (index_2_1 i) (raw_2_1_degree3Coordinates i)
+  ∑ i, Pi.single (index_2_1 i) (raw21Degree3Coordinates i)
 
 /-- Exact rational sums agree at every one of the 44 held coordinates. -/
 theorem grouped_2_1_eq : grouped_2_1 = collectedCoordinates := by
@@ -2419,23 +2419,23 @@ theorem interpret_grouped {m n : ℕ}
         Fintype.linearCombination_apply_single]
 
 /-- The first complete raw expression has the certified collected coordinates. -/
-theorem raw_1_2_eq_collected : raw_1_2_degree3 =
+theorem raw_1_2_eq_collected : raw12Degree3 =
     RelationCertificate.interpret representatives collectedCoordinates := by
   calc
-    raw_1_2_degree3 = RelationCertificate.interpret representatives grouped_1_2 :=
+    raw12Degree3 = RelationCertificate.interpret representatives grouped_1_2 :=
       interpret_grouped _ _ _ _ columns_1_2_eq
     _ = _ := congrArg (RelationCertificate.interpret representatives) grouped_1_2_eq
 
 /-- The second complete raw expression has the same certified coordinates. -/
-theorem raw_2_1_eq_collected : raw_2_1_degree3 =
+theorem raw_2_1_eq_collected : raw21Degree3 =
     RelationCertificate.interpret representatives collectedCoordinates := by
   calc
-    raw_2_1_degree3 = RelationCertificate.interpret representatives grouped_2_1 :=
+    raw21Degree3 = RelationCertificate.interpret representatives grouped_2_1 :=
       interpret_grouped _ _ _ _ columns_2_1_eq
     _ = _ := congrArg (RelationCertificate.interpret representatives) grouped_2_1_eq
 
 /-- These two actual finite raw sums agree before imposing tautological relations. -/
-theorem raw_ordered_degree3_equal : raw_1_2_degree3 = raw_2_1_degree3 :=
+theorem raw_ordered_degree3_equal : raw12Degree3 = raw21Degree3 :=
   raw_1_2_eq_collected.trans raw_2_1_eq_collected.symm
 
 end AxiomaticGW.AdmcyclesHodgeStrataIsomorphisms

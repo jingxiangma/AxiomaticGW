@@ -35,10 +35,10 @@ theorem ordered_branch_powers :
 
 /-- Source positions are checked explicitly, rather than inferred from names. -/
 theorem original_two_occurrences :
-    raw_1_1_degree2Columns 3 = rawGraph23 ∧
-    raw_1_1_degree2Columns 4 = rawGraph9 ∧
-    raw_1_1_degree2Coordinates 3 = (-1 / 288 : ℚ) ∧
-    raw_1_1_degree2Coordinates 4 = (-1 / 288 : ℚ) := by
+    raw11Degree2Columns 3 = rawGraph23 ∧
+    raw11Degree2Columns 4 = rawGraph9 ∧
+    raw11Degree2Coordinates 3 = (-1 / 288 : ℚ) ∧
+    raw11Degree2Coordinates 4 = (-1 / 288 : ℚ) := by
   exact ⟨rfl, rfl, rfl, rfl⟩
 
 /-- Swapping the two loop branches identifies the underlying quotient classes. -/

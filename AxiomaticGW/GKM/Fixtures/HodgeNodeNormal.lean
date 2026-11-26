@@ -49,8 +49,8 @@ theorem rawGraph23_eq_second :
 
 /-- The original two slots and coefficients, without merging their occurrences. -/
 noncomputable def packetNodePair : StrataModule 2 (Fin 1) :=
-  raw_1_1_degree2Coordinates 3 • StrataModule.basis (raw_1_1_degree2Columns 3) +
-    raw_1_1_degree2Coordinates 4 • StrataModule.basis (raw_1_1_degree2Columns 4)
+  raw11Degree2Coordinates 3 • StrataModule.basis (raw11Degree2Columns 3) +
+    raw11Degree2Coordinates 4 • StrataModule.basis (raw11Degree2Columns 4)
 
 /-- The exact packet occurrences are a fixed rational multiple of the constructed
 normal expression. No assumption about multiplication of raw classes is used. -/

@@ -40,9 +40,9 @@ theorem corolla_has_no_pairs :
 
 /-- Both differently presented parallel occurrences retain their original slots. -/
 theorem actual_parallel_slots :
-    raw_1_1_degree2Columns 18 = rawGraph28 ∧
-    raw_1_1_degree2Columns 21 = rawGraph31 ∧
-    raw_1_1_degree2Columns 23 = rawGraph12 := by
+    raw11Degree2Columns 18 = rawGraph28 ∧
+    raw11Degree2Columns 21 = rawGraph31 ∧
+    raw11Degree2Columns 23 = rawGraph12 := by
   exact ⟨rfl, rfl, rfl⟩
 
 end AxiomaticGWTest.GKM.LoopSquareRefinements

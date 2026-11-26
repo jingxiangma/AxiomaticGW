@@ -19,9 +19,9 @@ attribute [local instance] strataRealizationModule
 theorem plane_full_class {C : StableCurveCohomology Coefficient}
     (A : StrataRealization C 2 (Fin 1)) :
     HodgeDegreeZeroFullCoefficientReplay.Plane.candidateClass A -
-      (x ^ 2 - x * y + y ^ 2) • A.map raw_0_0_degree0 =
-      (3 : Coefficient) • A.map raw_1_1_degree2 +
-      (3 : Coefficient) • A.map raw_0_2_degree2 := by
+      (x ^ 2 - x * y + y ^ 2) • A.map raw00Degree0 =
+      (3 : Coefficient) • A.map raw11Degree2 +
+      (3 : Coefficient) • A.map raw02Degree2 := by
   rw [plane_candidateClass_eq_raw_regular]
   abel
 
@@ -29,9 +29,9 @@ theorem plane_full_class {C : StableCurveCohomology Coefficient}
 theorem blowup_full_class_comparison {C : StableCurveCohomology Coefficient}
     (A : StrataRealization C 2 (Fin 1)) :
     HodgeDegreeZeroFullCoefficientReplay.TwoBlowups.candidateClass A +
-      (x ^ 2 - x * y + y ^ 2) • A.map raw_0_0_degree0 -
+      (x ^ 2 - x * y + y ^ 2) • A.map raw00Degree0 -
       HodgeDegreeZeroFullCoefficientReplay.OneBlowup.candidateClass A =
-      A.map raw_1_1_degree2 - (3 : Coefficient) • A.map raw_0_2_degree2 := by
+      A.map raw11Degree2 - (3 : Coefficient) • A.map raw02Degree2 := by
   rw [twoBlowups_candidateClass_eq_raw_regular, oneBlowup_candidateClass_eq_raw_regular]
   rw [show (5 : Coefficient) = (4 : Coefficient) + 1 by norm_num only, add_smul, one_smul]
   simp only [neg_smul]
@@ -40,7 +40,7 @@ theorem blowup_full_class_comparison {C : StableCurveCohomology Coefficient}
 /-- The original degree-four packet expression is retained by the raw component reduction. -/
 theorem degree_four_input_retained :
     (∑ d : Fin 5, AdmcyclesHodgeStrataNormalization.rawComponent 2 2 d) =
-      raw_2_2_degree4 := by
+      raw22Degree4 := by
   simpa only [Matrix.cons_val_two, Matrix.head_cons, Matrix.tail_cons] using
     sum_rawComponent 2 2
 

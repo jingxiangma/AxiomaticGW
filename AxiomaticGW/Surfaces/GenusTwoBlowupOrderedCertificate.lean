@@ -28,6 +28,7 @@ open SurfacePolynomialReduction SurfaceGenusTwoBlowupOrder
 variable {X : SurfaceTarget}
 set_option maxRecDepth 20000
 
+/-- Decide the reconstruction order using its explicit lexicographic criterion. -/
 local instance earlierDecidable : DecidableRel (Earlier X) :=
   fun s t ↦ decidable_of_iff _ (earlier_iff X s t).symm
 

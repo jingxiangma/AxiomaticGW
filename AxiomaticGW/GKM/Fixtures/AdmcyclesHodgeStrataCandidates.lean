@@ -9143,146 +9143,146 @@ theorem rawGraph372Codimension : rawGraph372.codimension = 4 := by
   decide +kernel
 
 /-- Raw source columns for ordered pair (0,0), degree 0; repetitions remain. -/
-def raw_0_0_degree0Columns : Fin 1 → TautologicalStratum 2 (Fin 1) :=
+def raw00Degree0Columns : Fin 1 → TautologicalStratum 2 (Fin 1) :=
   ![rawGraph0]
 
 /-- Exact raw-gluing coefficients, without an additional automorphism division. -/
-def raw_0_0_degree0Coordinates : RelationCertificate.Coordinates 1 :=
+def raw00Degree0Coordinates : RelationCertificate.Coordinates 1 :=
   ![1]
 
 /-- Every source column has the recorded edge-plus-decoration degree. -/
 theorem raw_0_0_degree0ColumnsCodimension :
-    ∀ i, (raw_0_0_degree0Columns i).codimension = 0 := by
+    ∀ i, (raw00Degree0Columns i).codimension = 0 := by
   intro i
   fin_cases i
   · exact rawGraph0Codimension
 
 /-- Formal raw representative only; its name does not identify a geometric Hodge class. -/
-noncomputable def raw_0_0_degree0 : StrataModule 2 (Fin 1) :=
-  RelationCertificate.interpret raw_0_0_degree0Columns raw_0_0_degree0Coordinates
+noncomputable def raw00Degree0 : StrataModule 2 (Fin 1) :=
+  RelationCertificate.interpret raw00Degree0Columns raw00Degree0Coordinates
 
 /-- Homogeneity in the existing free rational strata module. -/
-theorem raw_0_0_degree0_mem_degree : raw_0_0_degree0 ∈ StrataModule.degree 0 :=
+theorem raw_0_0_degree0_mem_degree : raw00Degree0 ∈ StrataModule.degree 0 :=
   RelationCertificate.interpret_mem_degree
-    raw_0_0_degree0Columns raw_0_0_degree0ColumnsCodimension raw_0_0_degree0Coordinates
+    raw00Degree0Columns raw_0_0_degree0ColumnsCodimension raw00Degree0Coordinates
 
 /-- Raw source columns for ordered pair (0,0), degree 1; repetitions remain. -/
-def raw_0_0_degree1Columns : Fin 0 → TautologicalStratum 2 (Fin 1) :=
+def raw00Degree1Columns : Fin 0 → TautologicalStratum 2 (Fin 1) :=
   Fin.elim0
 
 /-- Exact raw-gluing coefficients, without an additional automorphism division. -/
-def raw_0_0_degree1Coordinates : RelationCertificate.Coordinates 0 :=
+def raw00Degree1Coordinates : RelationCertificate.Coordinates 0 :=
   Fin.elim0
 
 /-- Every source column has the recorded edge-plus-decoration degree. -/
 theorem raw_0_0_degree1ColumnsCodimension :
-    ∀ i, (raw_0_0_degree1Columns i).codimension = 1 := by
+    ∀ i, (raw00Degree1Columns i).codimension = 1 := by
   intro i
   exact Fin.elim0 i
 
 /-- Formal raw representative only; its name does not identify a geometric Hodge class. -/
-noncomputable def raw_0_0_degree1 : StrataModule 2 (Fin 1) :=
-  RelationCertificate.interpret raw_0_0_degree1Columns raw_0_0_degree1Coordinates
+noncomputable def raw00Degree1 : StrataModule 2 (Fin 1) :=
+  RelationCertificate.interpret raw00Degree1Columns raw00Degree1Coordinates
 
 /-- Homogeneity in the existing free rational strata module. -/
-theorem raw_0_0_degree1_mem_degree : raw_0_0_degree1 ∈ StrataModule.degree 1 :=
+theorem raw_0_0_degree1_mem_degree : raw00Degree1 ∈ StrataModule.degree 1 :=
   RelationCertificate.interpret_mem_degree
-    raw_0_0_degree1Columns raw_0_0_degree1ColumnsCodimension raw_0_0_degree1Coordinates
+    raw00Degree1Columns raw_0_0_degree1ColumnsCodimension raw00Degree1Coordinates
 
 /-- Raw source columns for ordered pair (0,0), degree 2; repetitions remain. -/
-def raw_0_0_degree2Columns : Fin 0 → TautologicalStratum 2 (Fin 1) :=
+def raw00Degree2Columns : Fin 0 → TautologicalStratum 2 (Fin 1) :=
   Fin.elim0
 
 /-- Exact raw-gluing coefficients, without an additional automorphism division. -/
-def raw_0_0_degree2Coordinates : RelationCertificate.Coordinates 0 :=
+def raw00Degree2Coordinates : RelationCertificate.Coordinates 0 :=
   Fin.elim0
 
 /-- Every source column has the recorded edge-plus-decoration degree. -/
 theorem raw_0_0_degree2ColumnsCodimension :
-    ∀ i, (raw_0_0_degree2Columns i).codimension = 2 := by
+    ∀ i, (raw00Degree2Columns i).codimension = 2 := by
   intro i
   exact Fin.elim0 i
 
 /-- Formal raw representative only; its name does not identify a geometric Hodge class. -/
-noncomputable def raw_0_0_degree2 : StrataModule 2 (Fin 1) :=
-  RelationCertificate.interpret raw_0_0_degree2Columns raw_0_0_degree2Coordinates
+noncomputable def raw00Degree2 : StrataModule 2 (Fin 1) :=
+  RelationCertificate.interpret raw00Degree2Columns raw00Degree2Coordinates
 
 /-- Homogeneity in the existing free rational strata module. -/
-theorem raw_0_0_degree2_mem_degree : raw_0_0_degree2 ∈ StrataModule.degree 2 :=
+theorem raw_0_0_degree2_mem_degree : raw00Degree2 ∈ StrataModule.degree 2 :=
   RelationCertificate.interpret_mem_degree
-    raw_0_0_degree2Columns raw_0_0_degree2ColumnsCodimension raw_0_0_degree2Coordinates
+    raw00Degree2Columns raw_0_0_degree2ColumnsCodimension raw00Degree2Coordinates
 
 /-- Raw source columns for ordered pair (0,0), degree 3; repetitions remain. -/
-def raw_0_0_degree3Columns : Fin 0 → TautologicalStratum 2 (Fin 1) :=
+def raw00Degree3Columns : Fin 0 → TautologicalStratum 2 (Fin 1) :=
   Fin.elim0
 
 /-- Exact raw-gluing coefficients, without an additional automorphism division. -/
-def raw_0_0_degree3Coordinates : RelationCertificate.Coordinates 0 :=
+def raw00Degree3Coordinates : RelationCertificate.Coordinates 0 :=
   Fin.elim0
 
 /-- Every source column has the recorded edge-plus-decoration degree. -/
 theorem raw_0_0_degree3ColumnsCodimension :
-    ∀ i, (raw_0_0_degree3Columns i).codimension = 3 := by
+    ∀ i, (raw00Degree3Columns i).codimension = 3 := by
   intro i
   exact Fin.elim0 i
 
 /-- Formal raw representative only; its name does not identify a geometric Hodge class. -/
-noncomputable def raw_0_0_degree3 : StrataModule 2 (Fin 1) :=
-  RelationCertificate.interpret raw_0_0_degree3Columns raw_0_0_degree3Coordinates
+noncomputable def raw00Degree3 : StrataModule 2 (Fin 1) :=
+  RelationCertificate.interpret raw00Degree3Columns raw00Degree3Coordinates
 
 /-- Homogeneity in the existing free rational strata module. -/
-theorem raw_0_0_degree3_mem_degree : raw_0_0_degree3 ∈ StrataModule.degree 3 :=
+theorem raw_0_0_degree3_mem_degree : raw00Degree3 ∈ StrataModule.degree 3 :=
   RelationCertificate.interpret_mem_degree
-    raw_0_0_degree3Columns raw_0_0_degree3ColumnsCodimension raw_0_0_degree3Coordinates
+    raw00Degree3Columns raw_0_0_degree3ColumnsCodimension raw00Degree3Coordinates
 
 /-- Raw source columns for ordered pair (0,0), degree 4; repetitions remain. -/
-def raw_0_0_degree4Columns : Fin 0 → TautologicalStratum 2 (Fin 1) :=
+def raw00Degree4Columns : Fin 0 → TautologicalStratum 2 (Fin 1) :=
   Fin.elim0
 
 /-- Exact raw-gluing coefficients, without an additional automorphism division. -/
-def raw_0_0_degree4Coordinates : RelationCertificate.Coordinates 0 :=
+def raw00Degree4Coordinates : RelationCertificate.Coordinates 0 :=
   Fin.elim0
 
 /-- Every source column has the recorded edge-plus-decoration degree. -/
 theorem raw_0_0_degree4ColumnsCodimension :
-    ∀ i, (raw_0_0_degree4Columns i).codimension = 4 := by
+    ∀ i, (raw00Degree4Columns i).codimension = 4 := by
   intro i
   exact Fin.elim0 i
 
 /-- Formal raw representative only; its name does not identify a geometric Hodge class. -/
-noncomputable def raw_0_0_degree4 : StrataModule 2 (Fin 1) :=
-  RelationCertificate.interpret raw_0_0_degree4Columns raw_0_0_degree4Coordinates
+noncomputable def raw00Degree4 : StrataModule 2 (Fin 1) :=
+  RelationCertificate.interpret raw00Degree4Columns raw00Degree4Coordinates
 
 /-- Homogeneity in the existing free rational strata module. -/
-theorem raw_0_0_degree4_mem_degree : raw_0_0_degree4 ∈ StrataModule.degree 4 :=
+theorem raw_0_0_degree4_mem_degree : raw00Degree4 ∈ StrataModule.degree 4 :=
   RelationCertificate.interpret_mem_degree
-    raw_0_0_degree4Columns raw_0_0_degree4ColumnsCodimension raw_0_0_degree4Coordinates
+    raw00Degree4Columns raw_0_0_degree4ColumnsCodimension raw00Degree4Coordinates
 
 /-- Raw source columns for ordered pair (0,1), degree 0; repetitions remain. -/
-def raw_0_1_degree0Columns : Fin 0 → TautologicalStratum 2 (Fin 1) :=
+def raw01Degree0Columns : Fin 0 → TautologicalStratum 2 (Fin 1) :=
   Fin.elim0
 
 /-- Exact raw-gluing coefficients, without an additional automorphism division. -/
-def raw_0_1_degree0Coordinates : RelationCertificate.Coordinates 0 :=
+def raw01Degree0Coordinates : RelationCertificate.Coordinates 0 :=
   Fin.elim0
 
 /-- Every source column has the recorded edge-plus-decoration degree. -/
 theorem raw_0_1_degree0ColumnsCodimension :
-    ∀ i, (raw_0_1_degree0Columns i).codimension = 0 := by
+    ∀ i, (raw01Degree0Columns i).codimension = 0 := by
   intro i
   exact Fin.elim0 i
 
 /-- Formal raw representative only; its name does not identify a geometric Hodge class. -/
-noncomputable def raw_0_1_degree0 : StrataModule 2 (Fin 1) :=
-  RelationCertificate.interpret raw_0_1_degree0Columns raw_0_1_degree0Coordinates
+noncomputable def raw01Degree0 : StrataModule 2 (Fin 1) :=
+  RelationCertificate.interpret raw01Degree0Columns raw01Degree0Coordinates
 
 /-- Homogeneity in the existing free rational strata module. -/
-theorem raw_0_1_degree0_mem_degree : raw_0_1_degree0 ∈ StrataModule.degree 0 :=
+theorem raw_0_1_degree0_mem_degree : raw01Degree0 ∈ StrataModule.degree 0 :=
   RelationCertificate.interpret_mem_degree
-    raw_0_1_degree0Columns raw_0_1_degree0ColumnsCodimension raw_0_1_degree0Coordinates
+    raw01Degree0Columns raw_0_1_degree0ColumnsCodimension raw01Degree0Coordinates
 
 /-- Raw source columns for ordered pair (0,1), degree 1; repetitions remain. -/
-def raw_0_1_degree1Columns : Fin 5 → TautologicalStratum 2 (Fin 1) :=
+def raw01Degree1Columns : Fin 5 → TautologicalStratum 2 (Fin 1) :=
   ![rawGraph1,
     rawGraph2,
     rawGraph3,
@@ -9290,7 +9290,7 @@ def raw_0_1_degree1Columns : Fin 5 → TautologicalStratum 2 (Fin 1) :=
     rawGraph5]
 
 /-- Exact raw-gluing coefficients, without an additional automorphism division. -/
-def raw_0_1_degree1Coordinates : RelationCertificate.Coordinates 5 :=
+def raw01Degree1Coordinates : RelationCertificate.Coordinates 5 :=
   ![(-1 / 12),
     (1 / 12),
     (1 / 24),
@@ -9299,7 +9299,7 @@ def raw_0_1_degree1Coordinates : RelationCertificate.Coordinates 5 :=
 
 /-- Every source column has the recorded edge-plus-decoration degree. -/
 theorem raw_0_1_degree1ColumnsCodimension :
-    ∀ i, (raw_0_1_degree1Columns i).codimension = 1 := by
+    ∀ i, (raw01Degree1Columns i).codimension = 1 := by
   intro i
   fin_cases i
   · exact rawGraph1Codimension
@@ -9309,131 +9309,131 @@ theorem raw_0_1_degree1ColumnsCodimension :
   · exact rawGraph5Codimension
 
 /-- Formal raw representative only; its name does not identify a geometric Hodge class. -/
-noncomputable def raw_0_1_degree1 : StrataModule 2 (Fin 1) :=
-  RelationCertificate.interpret raw_0_1_degree1Columns raw_0_1_degree1Coordinates
+noncomputable def raw01Degree1 : StrataModule 2 (Fin 1) :=
+  RelationCertificate.interpret raw01Degree1Columns raw01Degree1Coordinates
 
 /-- Homogeneity in the existing free rational strata module. -/
-theorem raw_0_1_degree1_mem_degree : raw_0_1_degree1 ∈ StrataModule.degree 1 :=
+theorem raw_0_1_degree1_mem_degree : raw01Degree1 ∈ StrataModule.degree 1 :=
   RelationCertificate.interpret_mem_degree
-    raw_0_1_degree1Columns raw_0_1_degree1ColumnsCodimension raw_0_1_degree1Coordinates
+    raw01Degree1Columns raw_0_1_degree1ColumnsCodimension raw01Degree1Coordinates
 
 /-- Raw source columns for ordered pair (0,1), degree 2; repetitions remain. -/
-def raw_0_1_degree2Columns : Fin 0 → TautologicalStratum 2 (Fin 1) :=
+def raw01Degree2Columns : Fin 0 → TautologicalStratum 2 (Fin 1) :=
   Fin.elim0
 
 /-- Exact raw-gluing coefficients, without an additional automorphism division. -/
-def raw_0_1_degree2Coordinates : RelationCertificate.Coordinates 0 :=
+def raw01Degree2Coordinates : RelationCertificate.Coordinates 0 :=
   Fin.elim0
 
 /-- Every source column has the recorded edge-plus-decoration degree. -/
 theorem raw_0_1_degree2ColumnsCodimension :
-    ∀ i, (raw_0_1_degree2Columns i).codimension = 2 := by
+    ∀ i, (raw01Degree2Columns i).codimension = 2 := by
   intro i
   exact Fin.elim0 i
 
 /-- Formal raw representative only; its name does not identify a geometric Hodge class. -/
-noncomputable def raw_0_1_degree2 : StrataModule 2 (Fin 1) :=
-  RelationCertificate.interpret raw_0_1_degree2Columns raw_0_1_degree2Coordinates
+noncomputable def raw01Degree2 : StrataModule 2 (Fin 1) :=
+  RelationCertificate.interpret raw01Degree2Columns raw01Degree2Coordinates
 
 /-- Homogeneity in the existing free rational strata module. -/
-theorem raw_0_1_degree2_mem_degree : raw_0_1_degree2 ∈ StrataModule.degree 2 :=
+theorem raw_0_1_degree2_mem_degree : raw01Degree2 ∈ StrataModule.degree 2 :=
   RelationCertificate.interpret_mem_degree
-    raw_0_1_degree2Columns raw_0_1_degree2ColumnsCodimension raw_0_1_degree2Coordinates
+    raw01Degree2Columns raw_0_1_degree2ColumnsCodimension raw01Degree2Coordinates
 
 /-- Raw source columns for ordered pair (0,1), degree 3; repetitions remain. -/
-def raw_0_1_degree3Columns : Fin 0 → TautologicalStratum 2 (Fin 1) :=
+def raw01Degree3Columns : Fin 0 → TautologicalStratum 2 (Fin 1) :=
   Fin.elim0
 
 /-- Exact raw-gluing coefficients, without an additional automorphism division. -/
-def raw_0_1_degree3Coordinates : RelationCertificate.Coordinates 0 :=
+def raw01Degree3Coordinates : RelationCertificate.Coordinates 0 :=
   Fin.elim0
 
 /-- Every source column has the recorded edge-plus-decoration degree. -/
 theorem raw_0_1_degree3ColumnsCodimension :
-    ∀ i, (raw_0_1_degree3Columns i).codimension = 3 := by
+    ∀ i, (raw01Degree3Columns i).codimension = 3 := by
   intro i
   exact Fin.elim0 i
 
 /-- Formal raw representative only; its name does not identify a geometric Hodge class. -/
-noncomputable def raw_0_1_degree3 : StrataModule 2 (Fin 1) :=
-  RelationCertificate.interpret raw_0_1_degree3Columns raw_0_1_degree3Coordinates
+noncomputable def raw01Degree3 : StrataModule 2 (Fin 1) :=
+  RelationCertificate.interpret raw01Degree3Columns raw01Degree3Coordinates
 
 /-- Homogeneity in the existing free rational strata module. -/
-theorem raw_0_1_degree3_mem_degree : raw_0_1_degree3 ∈ StrataModule.degree 3 :=
+theorem raw_0_1_degree3_mem_degree : raw01Degree3 ∈ StrataModule.degree 3 :=
   RelationCertificate.interpret_mem_degree
-    raw_0_1_degree3Columns raw_0_1_degree3ColumnsCodimension raw_0_1_degree3Coordinates
+    raw01Degree3Columns raw_0_1_degree3ColumnsCodimension raw01Degree3Coordinates
 
 /-- Raw source columns for ordered pair (0,1), degree 4; repetitions remain. -/
-def raw_0_1_degree4Columns : Fin 0 → TautologicalStratum 2 (Fin 1) :=
+def raw01Degree4Columns : Fin 0 → TautologicalStratum 2 (Fin 1) :=
   Fin.elim0
 
 /-- Exact raw-gluing coefficients, without an additional automorphism division. -/
-def raw_0_1_degree4Coordinates : RelationCertificate.Coordinates 0 :=
+def raw01Degree4Coordinates : RelationCertificate.Coordinates 0 :=
   Fin.elim0
 
 /-- Every source column has the recorded edge-plus-decoration degree. -/
 theorem raw_0_1_degree4ColumnsCodimension :
-    ∀ i, (raw_0_1_degree4Columns i).codimension = 4 := by
+    ∀ i, (raw01Degree4Columns i).codimension = 4 := by
   intro i
   exact Fin.elim0 i
 
 /-- Formal raw representative only; its name does not identify a geometric Hodge class. -/
-noncomputable def raw_0_1_degree4 : StrataModule 2 (Fin 1) :=
-  RelationCertificate.interpret raw_0_1_degree4Columns raw_0_1_degree4Coordinates
+noncomputable def raw01Degree4 : StrataModule 2 (Fin 1) :=
+  RelationCertificate.interpret raw01Degree4Columns raw01Degree4Coordinates
 
 /-- Homogeneity in the existing free rational strata module. -/
-theorem raw_0_1_degree4_mem_degree : raw_0_1_degree4 ∈ StrataModule.degree 4 :=
+theorem raw_0_1_degree4_mem_degree : raw01Degree4 ∈ StrataModule.degree 4 :=
   RelationCertificate.interpret_mem_degree
-    raw_0_1_degree4Columns raw_0_1_degree4ColumnsCodimension raw_0_1_degree4Coordinates
+    raw01Degree4Columns raw_0_1_degree4ColumnsCodimension raw01Degree4Coordinates
 
 /-- Raw source columns for ordered pair (0,2), degree 0; repetitions remain. -/
-def raw_0_2_degree0Columns : Fin 0 → TautologicalStratum 2 (Fin 1) :=
+def raw02Degree0Columns : Fin 0 → TautologicalStratum 2 (Fin 1) :=
   Fin.elim0
 
 /-- Exact raw-gluing coefficients, without an additional automorphism division. -/
-def raw_0_2_degree0Coordinates : RelationCertificate.Coordinates 0 :=
+def raw02Degree0Coordinates : RelationCertificate.Coordinates 0 :=
   Fin.elim0
 
 /-- Every source column has the recorded edge-plus-decoration degree. -/
 theorem raw_0_2_degree0ColumnsCodimension :
-    ∀ i, (raw_0_2_degree0Columns i).codimension = 0 := by
+    ∀ i, (raw02Degree0Columns i).codimension = 0 := by
   intro i
   exact Fin.elim0 i
 
 /-- Formal raw representative only; its name does not identify a geometric Hodge class. -/
-noncomputable def raw_0_2_degree0 : StrataModule 2 (Fin 1) :=
-  RelationCertificate.interpret raw_0_2_degree0Columns raw_0_2_degree0Coordinates
+noncomputable def raw02Degree0 : StrataModule 2 (Fin 1) :=
+  RelationCertificate.interpret raw02Degree0Columns raw02Degree0Coordinates
 
 /-- Homogeneity in the existing free rational strata module. -/
-theorem raw_0_2_degree0_mem_degree : raw_0_2_degree0 ∈ StrataModule.degree 0 :=
+theorem raw_0_2_degree0_mem_degree : raw02Degree0 ∈ StrataModule.degree 0 :=
   RelationCertificate.interpret_mem_degree
-    raw_0_2_degree0Columns raw_0_2_degree0ColumnsCodimension raw_0_2_degree0Coordinates
+    raw02Degree0Columns raw_0_2_degree0ColumnsCodimension raw02Degree0Coordinates
 
 /-- Raw source columns for ordered pair (0,2), degree 1; repetitions remain. -/
-def raw_0_2_degree1Columns : Fin 0 → TautologicalStratum 2 (Fin 1) :=
+def raw02Degree1Columns : Fin 0 → TautologicalStratum 2 (Fin 1) :=
   Fin.elim0
 
 /-- Exact raw-gluing coefficients, without an additional automorphism division. -/
-def raw_0_2_degree1Coordinates : RelationCertificate.Coordinates 0 :=
+def raw02Degree1Coordinates : RelationCertificate.Coordinates 0 :=
   Fin.elim0
 
 /-- Every source column has the recorded edge-plus-decoration degree. -/
 theorem raw_0_2_degree1ColumnsCodimension :
-    ∀ i, (raw_0_2_degree1Columns i).codimension = 1 := by
+    ∀ i, (raw02Degree1Columns i).codimension = 1 := by
   intro i
   exact Fin.elim0 i
 
 /-- Formal raw representative only; its name does not identify a geometric Hodge class. -/
-noncomputable def raw_0_2_degree1 : StrataModule 2 (Fin 1) :=
-  RelationCertificate.interpret raw_0_2_degree1Columns raw_0_2_degree1Coordinates
+noncomputable def raw02Degree1 : StrataModule 2 (Fin 1) :=
+  RelationCertificate.interpret raw02Degree1Columns raw02Degree1Coordinates
 
 /-- Homogeneity in the existing free rational strata module. -/
-theorem raw_0_2_degree1_mem_degree : raw_0_2_degree1 ∈ StrataModule.degree 1 :=
+theorem raw_0_2_degree1_mem_degree : raw02Degree1 ∈ StrataModule.degree 1 :=
   RelationCertificate.interpret_mem_degree
-    raw_0_2_degree1Columns raw_0_2_degree1ColumnsCodimension raw_0_2_degree1Coordinates
+    raw02Degree1Columns raw_0_2_degree1ColumnsCodimension raw02Degree1Coordinates
 
 /-- Raw source columns for ordered pair (0,2), degree 2; repetitions remain. -/
-def raw_0_2_degree2Columns : Fin 16 → TautologicalStratum 2 (Fin 1) :=
+def raw02Degree2Columns : Fin 16 → TautologicalStratum 2 (Fin 1) :=
   ![rawGraph6,
     rawGraph7,
     rawGraph8,
@@ -9452,7 +9452,7 @@ def raw_0_2_degree2Columns : Fin 16 → TautologicalStratum 2 (Fin 1) :=
     rawGraph21]
 
 /-- Exact raw-gluing coefficients, without an additional automorphism division. -/
-def raw_0_2_degree2Coordinates : RelationCertificate.Coordinates 16 :=
+def raw02Degree2Coordinates : RelationCertificate.Coordinates 16 :=
   ![(-1 / 144),
     (-1 / 144),
     (-1 / 288),
@@ -9472,7 +9472,7 @@ def raw_0_2_degree2Coordinates : RelationCertificate.Coordinates 16 :=
 
 /-- Every source column has the recorded edge-plus-decoration degree. -/
 theorem raw_0_2_degree2ColumnsCodimension :
-    ∀ i, (raw_0_2_degree2Columns i).codimension = 2 := by
+    ∀ i, (raw02Degree2Columns i).codimension = 2 := by
   intro i
   fin_cases i
   · exact rawGraph6Codimension
@@ -9493,85 +9493,85 @@ theorem raw_0_2_degree2ColumnsCodimension :
   · exact rawGraph21Codimension
 
 /-- Formal raw representative only; its name does not identify a geometric Hodge class. -/
-noncomputable def raw_0_2_degree2 : StrataModule 2 (Fin 1) :=
-  RelationCertificate.interpret raw_0_2_degree2Columns raw_0_2_degree2Coordinates
+noncomputable def raw02Degree2 : StrataModule 2 (Fin 1) :=
+  RelationCertificate.interpret raw02Degree2Columns raw02Degree2Coordinates
 
 /-- Homogeneity in the existing free rational strata module. -/
-theorem raw_0_2_degree2_mem_degree : raw_0_2_degree2 ∈ StrataModule.degree 2 :=
+theorem raw_0_2_degree2_mem_degree : raw02Degree2 ∈ StrataModule.degree 2 :=
   RelationCertificate.interpret_mem_degree
-    raw_0_2_degree2Columns raw_0_2_degree2ColumnsCodimension raw_0_2_degree2Coordinates
+    raw02Degree2Columns raw_0_2_degree2ColumnsCodimension raw02Degree2Coordinates
 
 /-- Raw source columns for ordered pair (0,2), degree 3; repetitions remain. -/
-def raw_0_2_degree3Columns : Fin 0 → TautologicalStratum 2 (Fin 1) :=
+def raw02Degree3Columns : Fin 0 → TautologicalStratum 2 (Fin 1) :=
   Fin.elim0
 
 /-- Exact raw-gluing coefficients, without an additional automorphism division. -/
-def raw_0_2_degree3Coordinates : RelationCertificate.Coordinates 0 :=
+def raw02Degree3Coordinates : RelationCertificate.Coordinates 0 :=
   Fin.elim0
 
 /-- Every source column has the recorded edge-plus-decoration degree. -/
 theorem raw_0_2_degree3ColumnsCodimension :
-    ∀ i, (raw_0_2_degree3Columns i).codimension = 3 := by
+    ∀ i, (raw02Degree3Columns i).codimension = 3 := by
   intro i
   exact Fin.elim0 i
 
 /-- Formal raw representative only; its name does not identify a geometric Hodge class. -/
-noncomputable def raw_0_2_degree3 : StrataModule 2 (Fin 1) :=
-  RelationCertificate.interpret raw_0_2_degree3Columns raw_0_2_degree3Coordinates
+noncomputable def raw02Degree3 : StrataModule 2 (Fin 1) :=
+  RelationCertificate.interpret raw02Degree3Columns raw02Degree3Coordinates
 
 /-- Homogeneity in the existing free rational strata module. -/
-theorem raw_0_2_degree3_mem_degree : raw_0_2_degree3 ∈ StrataModule.degree 3 :=
+theorem raw_0_2_degree3_mem_degree : raw02Degree3 ∈ StrataModule.degree 3 :=
   RelationCertificate.interpret_mem_degree
-    raw_0_2_degree3Columns raw_0_2_degree3ColumnsCodimension raw_0_2_degree3Coordinates
+    raw02Degree3Columns raw_0_2_degree3ColumnsCodimension raw02Degree3Coordinates
 
 /-- Raw source columns for ordered pair (0,2), degree 4; repetitions remain. -/
-def raw_0_2_degree4Columns : Fin 0 → TautologicalStratum 2 (Fin 1) :=
+def raw02Degree4Columns : Fin 0 → TautologicalStratum 2 (Fin 1) :=
   Fin.elim0
 
 /-- Exact raw-gluing coefficients, without an additional automorphism division. -/
-def raw_0_2_degree4Coordinates : RelationCertificate.Coordinates 0 :=
+def raw02Degree4Coordinates : RelationCertificate.Coordinates 0 :=
   Fin.elim0
 
 /-- Every source column has the recorded edge-plus-decoration degree. -/
 theorem raw_0_2_degree4ColumnsCodimension :
-    ∀ i, (raw_0_2_degree4Columns i).codimension = 4 := by
+    ∀ i, (raw02Degree4Columns i).codimension = 4 := by
   intro i
   exact Fin.elim0 i
 
 /-- Formal raw representative only; its name does not identify a geometric Hodge class. -/
-noncomputable def raw_0_2_degree4 : StrataModule 2 (Fin 1) :=
-  RelationCertificate.interpret raw_0_2_degree4Columns raw_0_2_degree4Coordinates
+noncomputable def raw02Degree4 : StrataModule 2 (Fin 1) :=
+  RelationCertificate.interpret raw02Degree4Columns raw02Degree4Coordinates
 
 /-- Homogeneity in the existing free rational strata module. -/
-theorem raw_0_2_degree4_mem_degree : raw_0_2_degree4 ∈ StrataModule.degree 4 :=
+theorem raw_0_2_degree4_mem_degree : raw02Degree4 ∈ StrataModule.degree 4 :=
   RelationCertificate.interpret_mem_degree
-    raw_0_2_degree4Columns raw_0_2_degree4ColumnsCodimension raw_0_2_degree4Coordinates
+    raw02Degree4Columns raw_0_2_degree4ColumnsCodimension raw02Degree4Coordinates
 
 /-- Raw source columns for ordered pair (1,0), degree 0; repetitions remain. -/
-def raw_1_0_degree0Columns : Fin 0 → TautologicalStratum 2 (Fin 1) :=
+def raw10Degree0Columns : Fin 0 → TautologicalStratum 2 (Fin 1) :=
   Fin.elim0
 
 /-- Exact raw-gluing coefficients, without an additional automorphism division. -/
-def raw_1_0_degree0Coordinates : RelationCertificate.Coordinates 0 :=
+def raw10Degree0Coordinates : RelationCertificate.Coordinates 0 :=
   Fin.elim0
 
 /-- Every source column has the recorded edge-plus-decoration degree. -/
 theorem raw_1_0_degree0ColumnsCodimension :
-    ∀ i, (raw_1_0_degree0Columns i).codimension = 0 := by
+    ∀ i, (raw10Degree0Columns i).codimension = 0 := by
   intro i
   exact Fin.elim0 i
 
 /-- Formal raw representative only; its name does not identify a geometric Hodge class. -/
-noncomputable def raw_1_0_degree0 : StrataModule 2 (Fin 1) :=
-  RelationCertificate.interpret raw_1_0_degree0Columns raw_1_0_degree0Coordinates
+noncomputable def raw10Degree0 : StrataModule 2 (Fin 1) :=
+  RelationCertificate.interpret raw10Degree0Columns raw10Degree0Coordinates
 
 /-- Homogeneity in the existing free rational strata module. -/
-theorem raw_1_0_degree0_mem_degree : raw_1_0_degree0 ∈ StrataModule.degree 0 :=
+theorem raw_1_0_degree0_mem_degree : raw10Degree0 ∈ StrataModule.degree 0 :=
   RelationCertificate.interpret_mem_degree
-    raw_1_0_degree0Columns raw_1_0_degree0ColumnsCodimension raw_1_0_degree0Coordinates
+    raw10Degree0Columns raw_1_0_degree0ColumnsCodimension raw10Degree0Coordinates
 
 /-- Raw source columns for ordered pair (1,0), degree 1; repetitions remain. -/
-def raw_1_0_degree1Columns : Fin 5 → TautologicalStratum 2 (Fin 1) :=
+def raw10Degree1Columns : Fin 5 → TautologicalStratum 2 (Fin 1) :=
   ![rawGraph1,
     rawGraph2,
     rawGraph3,
@@ -9579,7 +9579,7 @@ def raw_1_0_degree1Columns : Fin 5 → TautologicalStratum 2 (Fin 1) :=
     rawGraph5]
 
 /-- Exact raw-gluing coefficients, without an additional automorphism division. -/
-def raw_1_0_degree1Coordinates : RelationCertificate.Coordinates 5 :=
+def raw10Degree1Coordinates : RelationCertificate.Coordinates 5 :=
   ![(-1 / 12),
     (1 / 12),
     (1 / 24),
@@ -9588,7 +9588,7 @@ def raw_1_0_degree1Coordinates : RelationCertificate.Coordinates 5 :=
 
 /-- Every source column has the recorded edge-plus-decoration degree. -/
 theorem raw_1_0_degree1ColumnsCodimension :
-    ∀ i, (raw_1_0_degree1Columns i).codimension = 1 := by
+    ∀ i, (raw10Degree1Columns i).codimension = 1 := by
   intro i
   fin_cases i
   · exact rawGraph1Codimension
@@ -9598,131 +9598,131 @@ theorem raw_1_0_degree1ColumnsCodimension :
   · exact rawGraph5Codimension
 
 /-- Formal raw representative only; its name does not identify a geometric Hodge class. -/
-noncomputable def raw_1_0_degree1 : StrataModule 2 (Fin 1) :=
-  RelationCertificate.interpret raw_1_0_degree1Columns raw_1_0_degree1Coordinates
+noncomputable def raw10Degree1 : StrataModule 2 (Fin 1) :=
+  RelationCertificate.interpret raw10Degree1Columns raw10Degree1Coordinates
 
 /-- Homogeneity in the existing free rational strata module. -/
-theorem raw_1_0_degree1_mem_degree : raw_1_0_degree1 ∈ StrataModule.degree 1 :=
+theorem raw_1_0_degree1_mem_degree : raw10Degree1 ∈ StrataModule.degree 1 :=
   RelationCertificate.interpret_mem_degree
-    raw_1_0_degree1Columns raw_1_0_degree1ColumnsCodimension raw_1_0_degree1Coordinates
+    raw10Degree1Columns raw_1_0_degree1ColumnsCodimension raw10Degree1Coordinates
 
 /-- Raw source columns for ordered pair (1,0), degree 2; repetitions remain. -/
-def raw_1_0_degree2Columns : Fin 0 → TautologicalStratum 2 (Fin 1) :=
+def raw10Degree2Columns : Fin 0 → TautologicalStratum 2 (Fin 1) :=
   Fin.elim0
 
 /-- Exact raw-gluing coefficients, without an additional automorphism division. -/
-def raw_1_0_degree2Coordinates : RelationCertificate.Coordinates 0 :=
+def raw10Degree2Coordinates : RelationCertificate.Coordinates 0 :=
   Fin.elim0
 
 /-- Every source column has the recorded edge-plus-decoration degree. -/
 theorem raw_1_0_degree2ColumnsCodimension :
-    ∀ i, (raw_1_0_degree2Columns i).codimension = 2 := by
+    ∀ i, (raw10Degree2Columns i).codimension = 2 := by
   intro i
   exact Fin.elim0 i
 
 /-- Formal raw representative only; its name does not identify a geometric Hodge class. -/
-noncomputable def raw_1_0_degree2 : StrataModule 2 (Fin 1) :=
-  RelationCertificate.interpret raw_1_0_degree2Columns raw_1_0_degree2Coordinates
+noncomputable def raw10Degree2 : StrataModule 2 (Fin 1) :=
+  RelationCertificate.interpret raw10Degree2Columns raw10Degree2Coordinates
 
 /-- Homogeneity in the existing free rational strata module. -/
-theorem raw_1_0_degree2_mem_degree : raw_1_0_degree2 ∈ StrataModule.degree 2 :=
+theorem raw_1_0_degree2_mem_degree : raw10Degree2 ∈ StrataModule.degree 2 :=
   RelationCertificate.interpret_mem_degree
-    raw_1_0_degree2Columns raw_1_0_degree2ColumnsCodimension raw_1_0_degree2Coordinates
+    raw10Degree2Columns raw_1_0_degree2ColumnsCodimension raw10Degree2Coordinates
 
 /-- Raw source columns for ordered pair (1,0), degree 3; repetitions remain. -/
-def raw_1_0_degree3Columns : Fin 0 → TautologicalStratum 2 (Fin 1) :=
+def raw10Degree3Columns : Fin 0 → TautologicalStratum 2 (Fin 1) :=
   Fin.elim0
 
 /-- Exact raw-gluing coefficients, without an additional automorphism division. -/
-def raw_1_0_degree3Coordinates : RelationCertificate.Coordinates 0 :=
+def raw10Degree3Coordinates : RelationCertificate.Coordinates 0 :=
   Fin.elim0
 
 /-- Every source column has the recorded edge-plus-decoration degree. -/
 theorem raw_1_0_degree3ColumnsCodimension :
-    ∀ i, (raw_1_0_degree3Columns i).codimension = 3 := by
+    ∀ i, (raw10Degree3Columns i).codimension = 3 := by
   intro i
   exact Fin.elim0 i
 
 /-- Formal raw representative only; its name does not identify a geometric Hodge class. -/
-noncomputable def raw_1_0_degree3 : StrataModule 2 (Fin 1) :=
-  RelationCertificate.interpret raw_1_0_degree3Columns raw_1_0_degree3Coordinates
+noncomputable def raw10Degree3 : StrataModule 2 (Fin 1) :=
+  RelationCertificate.interpret raw10Degree3Columns raw10Degree3Coordinates
 
 /-- Homogeneity in the existing free rational strata module. -/
-theorem raw_1_0_degree3_mem_degree : raw_1_0_degree3 ∈ StrataModule.degree 3 :=
+theorem raw_1_0_degree3_mem_degree : raw10Degree3 ∈ StrataModule.degree 3 :=
   RelationCertificate.interpret_mem_degree
-    raw_1_0_degree3Columns raw_1_0_degree3ColumnsCodimension raw_1_0_degree3Coordinates
+    raw10Degree3Columns raw_1_0_degree3ColumnsCodimension raw10Degree3Coordinates
 
 /-- Raw source columns for ordered pair (1,0), degree 4; repetitions remain. -/
-def raw_1_0_degree4Columns : Fin 0 → TautologicalStratum 2 (Fin 1) :=
+def raw10Degree4Columns : Fin 0 → TautologicalStratum 2 (Fin 1) :=
   Fin.elim0
 
 /-- Exact raw-gluing coefficients, without an additional automorphism division. -/
-def raw_1_0_degree4Coordinates : RelationCertificate.Coordinates 0 :=
+def raw10Degree4Coordinates : RelationCertificate.Coordinates 0 :=
   Fin.elim0
 
 /-- Every source column has the recorded edge-plus-decoration degree. -/
 theorem raw_1_0_degree4ColumnsCodimension :
-    ∀ i, (raw_1_0_degree4Columns i).codimension = 4 := by
+    ∀ i, (raw10Degree4Columns i).codimension = 4 := by
   intro i
   exact Fin.elim0 i
 
 /-- Formal raw representative only; its name does not identify a geometric Hodge class. -/
-noncomputable def raw_1_0_degree4 : StrataModule 2 (Fin 1) :=
-  RelationCertificate.interpret raw_1_0_degree4Columns raw_1_0_degree4Coordinates
+noncomputable def raw10Degree4 : StrataModule 2 (Fin 1) :=
+  RelationCertificate.interpret raw10Degree4Columns raw10Degree4Coordinates
 
 /-- Homogeneity in the existing free rational strata module. -/
-theorem raw_1_0_degree4_mem_degree : raw_1_0_degree4 ∈ StrataModule.degree 4 :=
+theorem raw_1_0_degree4_mem_degree : raw10Degree4 ∈ StrataModule.degree 4 :=
   RelationCertificate.interpret_mem_degree
-    raw_1_0_degree4Columns raw_1_0_degree4ColumnsCodimension raw_1_0_degree4Coordinates
+    raw10Degree4Columns raw_1_0_degree4ColumnsCodimension raw10Degree4Coordinates
 
 /-- Raw source columns for ordered pair (1,1), degree 0; repetitions remain. -/
-def raw_1_1_degree0Columns : Fin 0 → TautologicalStratum 2 (Fin 1) :=
+def raw11Degree0Columns : Fin 0 → TautologicalStratum 2 (Fin 1) :=
   Fin.elim0
 
 /-- Exact raw-gluing coefficients, without an additional automorphism division. -/
-def raw_1_1_degree0Coordinates : RelationCertificate.Coordinates 0 :=
+def raw11Degree0Coordinates : RelationCertificate.Coordinates 0 :=
   Fin.elim0
 
 /-- Every source column has the recorded edge-plus-decoration degree. -/
 theorem raw_1_1_degree0ColumnsCodimension :
-    ∀ i, (raw_1_1_degree0Columns i).codimension = 0 := by
+    ∀ i, (raw11Degree0Columns i).codimension = 0 := by
   intro i
   exact Fin.elim0 i
 
 /-- Formal raw representative only; its name does not identify a geometric Hodge class. -/
-noncomputable def raw_1_1_degree0 : StrataModule 2 (Fin 1) :=
-  RelationCertificate.interpret raw_1_1_degree0Columns raw_1_1_degree0Coordinates
+noncomputable def raw11Degree0 : StrataModule 2 (Fin 1) :=
+  RelationCertificate.interpret raw11Degree0Columns raw11Degree0Coordinates
 
 /-- Homogeneity in the existing free rational strata module. -/
-theorem raw_1_1_degree0_mem_degree : raw_1_1_degree0 ∈ StrataModule.degree 0 :=
+theorem raw_1_1_degree0_mem_degree : raw11Degree0 ∈ StrataModule.degree 0 :=
   RelationCertificate.interpret_mem_degree
-    raw_1_1_degree0Columns raw_1_1_degree0ColumnsCodimension raw_1_1_degree0Coordinates
+    raw11Degree0Columns raw_1_1_degree0ColumnsCodimension raw11Degree0Coordinates
 
 /-- Raw source columns for ordered pair (1,1), degree 1; repetitions remain. -/
-def raw_1_1_degree1Columns : Fin 0 → TautologicalStratum 2 (Fin 1) :=
+def raw11Degree1Columns : Fin 0 → TautologicalStratum 2 (Fin 1) :=
   Fin.elim0
 
 /-- Exact raw-gluing coefficients, without an additional automorphism division. -/
-def raw_1_1_degree1Coordinates : RelationCertificate.Coordinates 0 :=
+def raw11Degree1Coordinates : RelationCertificate.Coordinates 0 :=
   Fin.elim0
 
 /-- Every source column has the recorded edge-plus-decoration degree. -/
 theorem raw_1_1_degree1ColumnsCodimension :
-    ∀ i, (raw_1_1_degree1Columns i).codimension = 1 := by
+    ∀ i, (raw11Degree1Columns i).codimension = 1 := by
   intro i
   exact Fin.elim0 i
 
 /-- Formal raw representative only; its name does not identify a geometric Hodge class. -/
-noncomputable def raw_1_1_degree1 : StrataModule 2 (Fin 1) :=
-  RelationCertificate.interpret raw_1_1_degree1Columns raw_1_1_degree1Coordinates
+noncomputable def raw11Degree1 : StrataModule 2 (Fin 1) :=
+  RelationCertificate.interpret raw11Degree1Columns raw11Degree1Coordinates
 
 /-- Homogeneity in the existing free rational strata module. -/
-theorem raw_1_1_degree1_mem_degree : raw_1_1_degree1 ∈ StrataModule.degree 1 :=
+theorem raw_1_1_degree1_mem_degree : raw11Degree1 ∈ StrataModule.degree 1 :=
   RelationCertificate.interpret_mem_degree
-    raw_1_1_degree1Columns raw_1_1_degree1ColumnsCodimension raw_1_1_degree1Coordinates
+    raw11Degree1Columns raw_1_1_degree1ColumnsCodimension raw11Degree1Coordinates
 
 /-- Raw source columns for ordered pair (1,1), degree 2; repetitions remain. -/
-def raw_1_1_degree2Columns : Fin 28 → TautologicalStratum 2 (Fin 1) :=
+def raw11Degree2Columns : Fin 28 → TautologicalStratum 2 (Fin 1) :=
   ![rawGraph8,
     rawGraph6,
     rawGraph22,
@@ -9753,7 +9753,7 @@ def raw_1_1_degree2Columns : Fin 28 → TautologicalStratum 2 (Fin 1) :=
     rawGraph36]
 
 /-- Exact raw-gluing coefficients, without an additional automorphism division. -/
-def raw_1_1_degree2Coordinates : RelationCertificate.Coordinates 28 :=
+def raw11Degree2Coordinates : RelationCertificate.Coordinates 28 :=
   ![(-1 / 144),
     (-1 / 144),
     (-1 / 144),
@@ -9785,7 +9785,7 @@ def raw_1_1_degree2Coordinates : RelationCertificate.Coordinates 28 :=
 
 /-- Every source column has the recorded edge-plus-decoration degree. -/
 theorem raw_1_1_degree2ColumnsCodimension :
-    ∀ i, (raw_1_1_degree2Columns i).codimension = 2 := by
+    ∀ i, (raw11Degree2Columns i).codimension = 2 := by
   intro i
   fin_cases i
   · exact rawGraph8Codimension
@@ -9818,131 +9818,131 @@ theorem raw_1_1_degree2ColumnsCodimension :
   · exact rawGraph36Codimension
 
 /-- Formal raw representative only; its name does not identify a geometric Hodge class. -/
-noncomputable def raw_1_1_degree2 : StrataModule 2 (Fin 1) :=
-  RelationCertificate.interpret raw_1_1_degree2Columns raw_1_1_degree2Coordinates
+noncomputable def raw11Degree2 : StrataModule 2 (Fin 1) :=
+  RelationCertificate.interpret raw11Degree2Columns raw11Degree2Coordinates
 
 /-- Homogeneity in the existing free rational strata module. -/
-theorem raw_1_1_degree2_mem_degree : raw_1_1_degree2 ∈ StrataModule.degree 2 :=
+theorem raw_1_1_degree2_mem_degree : raw11Degree2 ∈ StrataModule.degree 2 :=
   RelationCertificate.interpret_mem_degree
-    raw_1_1_degree2Columns raw_1_1_degree2ColumnsCodimension raw_1_1_degree2Coordinates
+    raw11Degree2Columns raw_1_1_degree2ColumnsCodimension raw11Degree2Coordinates
 
 /-- Raw source columns for ordered pair (1,1), degree 3; repetitions remain. -/
-def raw_1_1_degree3Columns : Fin 0 → TautologicalStratum 2 (Fin 1) :=
+def raw11Degree3Columns : Fin 0 → TautologicalStratum 2 (Fin 1) :=
   Fin.elim0
 
 /-- Exact raw-gluing coefficients, without an additional automorphism division. -/
-def raw_1_1_degree3Coordinates : RelationCertificate.Coordinates 0 :=
+def raw11Degree3Coordinates : RelationCertificate.Coordinates 0 :=
   Fin.elim0
 
 /-- Every source column has the recorded edge-plus-decoration degree. -/
 theorem raw_1_1_degree3ColumnsCodimension :
-    ∀ i, (raw_1_1_degree3Columns i).codimension = 3 := by
+    ∀ i, (raw11Degree3Columns i).codimension = 3 := by
   intro i
   exact Fin.elim0 i
 
 /-- Formal raw representative only; its name does not identify a geometric Hodge class. -/
-noncomputable def raw_1_1_degree3 : StrataModule 2 (Fin 1) :=
-  RelationCertificate.interpret raw_1_1_degree3Columns raw_1_1_degree3Coordinates
+noncomputable def raw11Degree3 : StrataModule 2 (Fin 1) :=
+  RelationCertificate.interpret raw11Degree3Columns raw11Degree3Coordinates
 
 /-- Homogeneity in the existing free rational strata module. -/
-theorem raw_1_1_degree3_mem_degree : raw_1_1_degree3 ∈ StrataModule.degree 3 :=
+theorem raw_1_1_degree3_mem_degree : raw11Degree3 ∈ StrataModule.degree 3 :=
   RelationCertificate.interpret_mem_degree
-    raw_1_1_degree3Columns raw_1_1_degree3ColumnsCodimension raw_1_1_degree3Coordinates
+    raw11Degree3Columns raw_1_1_degree3ColumnsCodimension raw11Degree3Coordinates
 
 /-- Raw source columns for ordered pair (1,1), degree 4; repetitions remain. -/
-def raw_1_1_degree4Columns : Fin 0 → TautologicalStratum 2 (Fin 1) :=
+def raw11Degree4Columns : Fin 0 → TautologicalStratum 2 (Fin 1) :=
   Fin.elim0
 
 /-- Exact raw-gluing coefficients, without an additional automorphism division. -/
-def raw_1_1_degree4Coordinates : RelationCertificate.Coordinates 0 :=
+def raw11Degree4Coordinates : RelationCertificate.Coordinates 0 :=
   Fin.elim0
 
 /-- Every source column has the recorded edge-plus-decoration degree. -/
 theorem raw_1_1_degree4ColumnsCodimension :
-    ∀ i, (raw_1_1_degree4Columns i).codimension = 4 := by
+    ∀ i, (raw11Degree4Columns i).codimension = 4 := by
   intro i
   exact Fin.elim0 i
 
 /-- Formal raw representative only; its name does not identify a geometric Hodge class. -/
-noncomputable def raw_1_1_degree4 : StrataModule 2 (Fin 1) :=
-  RelationCertificate.interpret raw_1_1_degree4Columns raw_1_1_degree4Coordinates
+noncomputable def raw11Degree4 : StrataModule 2 (Fin 1) :=
+  RelationCertificate.interpret raw11Degree4Columns raw11Degree4Coordinates
 
 /-- Homogeneity in the existing free rational strata module. -/
-theorem raw_1_1_degree4_mem_degree : raw_1_1_degree4 ∈ StrataModule.degree 4 :=
+theorem raw_1_1_degree4_mem_degree : raw11Degree4 ∈ StrataModule.degree 4 :=
   RelationCertificate.interpret_mem_degree
-    raw_1_1_degree4Columns raw_1_1_degree4ColumnsCodimension raw_1_1_degree4Coordinates
+    raw11Degree4Columns raw_1_1_degree4ColumnsCodimension raw11Degree4Coordinates
 
 /-- Raw source columns for ordered pair (1,2), degree 0; repetitions remain. -/
-def raw_1_2_degree0Columns : Fin 0 → TautologicalStratum 2 (Fin 1) :=
+def raw12Degree0Columns : Fin 0 → TautologicalStratum 2 (Fin 1) :=
   Fin.elim0
 
 /-- Exact raw-gluing coefficients, without an additional automorphism division. -/
-def raw_1_2_degree0Coordinates : RelationCertificate.Coordinates 0 :=
+def raw12Degree0Coordinates : RelationCertificate.Coordinates 0 :=
   Fin.elim0
 
 /-- Every source column has the recorded edge-plus-decoration degree. -/
 theorem raw_1_2_degree0ColumnsCodimension :
-    ∀ i, (raw_1_2_degree0Columns i).codimension = 0 := by
+    ∀ i, (raw12Degree0Columns i).codimension = 0 := by
   intro i
   exact Fin.elim0 i
 
 /-- Formal raw representative only; its name does not identify a geometric Hodge class. -/
-noncomputable def raw_1_2_degree0 : StrataModule 2 (Fin 1) :=
-  RelationCertificate.interpret raw_1_2_degree0Columns raw_1_2_degree0Coordinates
+noncomputable def raw12Degree0 : StrataModule 2 (Fin 1) :=
+  RelationCertificate.interpret raw12Degree0Columns raw12Degree0Coordinates
 
 /-- Homogeneity in the existing free rational strata module. -/
-theorem raw_1_2_degree0_mem_degree : raw_1_2_degree0 ∈ StrataModule.degree 0 :=
+theorem raw_1_2_degree0_mem_degree : raw12Degree0 ∈ StrataModule.degree 0 :=
   RelationCertificate.interpret_mem_degree
-    raw_1_2_degree0Columns raw_1_2_degree0ColumnsCodimension raw_1_2_degree0Coordinates
+    raw12Degree0Columns raw_1_2_degree0ColumnsCodimension raw12Degree0Coordinates
 
 /-- Raw source columns for ordered pair (1,2), degree 1; repetitions remain. -/
-def raw_1_2_degree1Columns : Fin 0 → TautologicalStratum 2 (Fin 1) :=
+def raw12Degree1Columns : Fin 0 → TautologicalStratum 2 (Fin 1) :=
   Fin.elim0
 
 /-- Exact raw-gluing coefficients, without an additional automorphism division. -/
-def raw_1_2_degree1Coordinates : RelationCertificate.Coordinates 0 :=
+def raw12Degree1Coordinates : RelationCertificate.Coordinates 0 :=
   Fin.elim0
 
 /-- Every source column has the recorded edge-plus-decoration degree. -/
 theorem raw_1_2_degree1ColumnsCodimension :
-    ∀ i, (raw_1_2_degree1Columns i).codimension = 1 := by
+    ∀ i, (raw12Degree1Columns i).codimension = 1 := by
   intro i
   exact Fin.elim0 i
 
 /-- Formal raw representative only; its name does not identify a geometric Hodge class. -/
-noncomputable def raw_1_2_degree1 : StrataModule 2 (Fin 1) :=
-  RelationCertificate.interpret raw_1_2_degree1Columns raw_1_2_degree1Coordinates
+noncomputable def raw12Degree1 : StrataModule 2 (Fin 1) :=
+  RelationCertificate.interpret raw12Degree1Columns raw12Degree1Coordinates
 
 /-- Homogeneity in the existing free rational strata module. -/
-theorem raw_1_2_degree1_mem_degree : raw_1_2_degree1 ∈ StrataModule.degree 1 :=
+theorem raw_1_2_degree1_mem_degree : raw12Degree1 ∈ StrataModule.degree 1 :=
   RelationCertificate.interpret_mem_degree
-    raw_1_2_degree1Columns raw_1_2_degree1ColumnsCodimension raw_1_2_degree1Coordinates
+    raw12Degree1Columns raw_1_2_degree1ColumnsCodimension raw12Degree1Coordinates
 
 /-- Raw source columns for ordered pair (1,2), degree 2; repetitions remain. -/
-def raw_1_2_degree2Columns : Fin 0 → TautologicalStratum 2 (Fin 1) :=
+def raw12Degree2Columns : Fin 0 → TautologicalStratum 2 (Fin 1) :=
   Fin.elim0
 
 /-- Exact raw-gluing coefficients, without an additional automorphism division. -/
-def raw_1_2_degree2Coordinates : RelationCertificate.Coordinates 0 :=
+def raw12Degree2Coordinates : RelationCertificate.Coordinates 0 :=
   Fin.elim0
 
 /-- Every source column has the recorded edge-plus-decoration degree. -/
 theorem raw_1_2_degree2ColumnsCodimension :
-    ∀ i, (raw_1_2_degree2Columns i).codimension = 2 := by
+    ∀ i, (raw12Degree2Columns i).codimension = 2 := by
   intro i
   exact Fin.elim0 i
 
 /-- Formal raw representative only; its name does not identify a geometric Hodge class. -/
-noncomputable def raw_1_2_degree2 : StrataModule 2 (Fin 1) :=
-  RelationCertificate.interpret raw_1_2_degree2Columns raw_1_2_degree2Coordinates
+noncomputable def raw12Degree2 : StrataModule 2 (Fin 1) :=
+  RelationCertificate.interpret raw12Degree2Columns raw12Degree2Coordinates
 
 /-- Homogeneity in the existing free rational strata module. -/
-theorem raw_1_2_degree2_mem_degree : raw_1_2_degree2 ∈ StrataModule.degree 2 :=
+theorem raw_1_2_degree2_mem_degree : raw12Degree2 ∈ StrataModule.degree 2 :=
   RelationCertificate.interpret_mem_degree
-    raw_1_2_degree2Columns raw_1_2_degree2ColumnsCodimension raw_1_2_degree2Coordinates
+    raw12Degree2Columns raw_1_2_degree2ColumnsCodimension raw12Degree2Coordinates
 
 /-- Raw source columns for ordered pair (1,2), degree 3; repetitions remain. -/
-def raw_1_2_degree3Columns : Fin 122 → TautologicalStratum 2 (Fin 1) :=
+def raw12Degree3Columns : Fin 122 → TautologicalStratum 2 (Fin 1) :=
   ![rawGraph37,
     rawGraph38,
     rawGraph39,
@@ -10067,7 +10067,7 @@ def raw_1_2_degree3Columns : Fin 122 → TautologicalStratum 2 (Fin 1) :=
     rawGraph142]
 
 /-- Exact raw-gluing coefficients, without an additional automorphism division. -/
-def raw_1_2_degree3Coordinates : RelationCertificate.Coordinates 122 :=
+def raw12Degree3Coordinates : RelationCertificate.Coordinates 122 :=
   ![(-1 / 1152),
     (-1 / 1152),
     (-1 / 1152),
@@ -10193,7 +10193,7 @@ def raw_1_2_degree3Coordinates : RelationCertificate.Coordinates 122 :=
 
 /-- Every source column has the recorded edge-plus-decoration degree. -/
 theorem raw_1_2_degree3ColumnsCodimension :
-    ∀ i, (raw_1_2_degree3Columns i).codimension = 3 := by
+    ∀ i, (raw12Degree3Columns i).codimension = 3 := by
   intro i
   fin_cases i
   · exact rawGraph37Codimension
@@ -10320,85 +10320,85 @@ theorem raw_1_2_degree3ColumnsCodimension :
   · exact rawGraph142Codimension
 
 /-- Formal raw representative only; its name does not identify a geometric Hodge class. -/
-noncomputable def raw_1_2_degree3 : StrataModule 2 (Fin 1) :=
-  RelationCertificate.interpret raw_1_2_degree3Columns raw_1_2_degree3Coordinates
+noncomputable def raw12Degree3 : StrataModule 2 (Fin 1) :=
+  RelationCertificate.interpret raw12Degree3Columns raw12Degree3Coordinates
 
 /-- Homogeneity in the existing free rational strata module. -/
-theorem raw_1_2_degree3_mem_degree : raw_1_2_degree3 ∈ StrataModule.degree 3 :=
+theorem raw_1_2_degree3_mem_degree : raw12Degree3 ∈ StrataModule.degree 3 :=
   RelationCertificate.interpret_mem_degree
-    raw_1_2_degree3Columns raw_1_2_degree3ColumnsCodimension raw_1_2_degree3Coordinates
+    raw12Degree3Columns raw_1_2_degree3ColumnsCodimension raw12Degree3Coordinates
 
 /-- Raw source columns for ordered pair (1,2), degree 4; repetitions remain. -/
-def raw_1_2_degree4Columns : Fin 0 → TautologicalStratum 2 (Fin 1) :=
+def raw12Degree4Columns : Fin 0 → TautologicalStratum 2 (Fin 1) :=
   Fin.elim0
 
 /-- Exact raw-gluing coefficients, without an additional automorphism division. -/
-def raw_1_2_degree4Coordinates : RelationCertificate.Coordinates 0 :=
+def raw12Degree4Coordinates : RelationCertificate.Coordinates 0 :=
   Fin.elim0
 
 /-- Every source column has the recorded edge-plus-decoration degree. -/
 theorem raw_1_2_degree4ColumnsCodimension :
-    ∀ i, (raw_1_2_degree4Columns i).codimension = 4 := by
+    ∀ i, (raw12Degree4Columns i).codimension = 4 := by
   intro i
   exact Fin.elim0 i
 
 /-- Formal raw representative only; its name does not identify a geometric Hodge class. -/
-noncomputable def raw_1_2_degree4 : StrataModule 2 (Fin 1) :=
-  RelationCertificate.interpret raw_1_2_degree4Columns raw_1_2_degree4Coordinates
+noncomputable def raw12Degree4 : StrataModule 2 (Fin 1) :=
+  RelationCertificate.interpret raw12Degree4Columns raw12Degree4Coordinates
 
 /-- Homogeneity in the existing free rational strata module. -/
-theorem raw_1_2_degree4_mem_degree : raw_1_2_degree4 ∈ StrataModule.degree 4 :=
+theorem raw_1_2_degree4_mem_degree : raw12Degree4 ∈ StrataModule.degree 4 :=
   RelationCertificate.interpret_mem_degree
-    raw_1_2_degree4Columns raw_1_2_degree4ColumnsCodimension raw_1_2_degree4Coordinates
+    raw12Degree4Columns raw_1_2_degree4ColumnsCodimension raw12Degree4Coordinates
 
 /-- Raw source columns for ordered pair (2,0), degree 0; repetitions remain. -/
-def raw_2_0_degree0Columns : Fin 0 → TautologicalStratum 2 (Fin 1) :=
+def raw20Degree0Columns : Fin 0 → TautologicalStratum 2 (Fin 1) :=
   Fin.elim0
 
 /-- Exact raw-gluing coefficients, without an additional automorphism division. -/
-def raw_2_0_degree0Coordinates : RelationCertificate.Coordinates 0 :=
+def raw20Degree0Coordinates : RelationCertificate.Coordinates 0 :=
   Fin.elim0
 
 /-- Every source column has the recorded edge-plus-decoration degree. -/
 theorem raw_2_0_degree0ColumnsCodimension :
-    ∀ i, (raw_2_0_degree0Columns i).codimension = 0 := by
+    ∀ i, (raw20Degree0Columns i).codimension = 0 := by
   intro i
   exact Fin.elim0 i
 
 /-- Formal raw representative only; its name does not identify a geometric Hodge class. -/
-noncomputable def raw_2_0_degree0 : StrataModule 2 (Fin 1) :=
-  RelationCertificate.interpret raw_2_0_degree0Columns raw_2_0_degree0Coordinates
+noncomputable def raw20Degree0 : StrataModule 2 (Fin 1) :=
+  RelationCertificate.interpret raw20Degree0Columns raw20Degree0Coordinates
 
 /-- Homogeneity in the existing free rational strata module. -/
-theorem raw_2_0_degree0_mem_degree : raw_2_0_degree0 ∈ StrataModule.degree 0 :=
+theorem raw_2_0_degree0_mem_degree : raw20Degree0 ∈ StrataModule.degree 0 :=
   RelationCertificate.interpret_mem_degree
-    raw_2_0_degree0Columns raw_2_0_degree0ColumnsCodimension raw_2_0_degree0Coordinates
+    raw20Degree0Columns raw_2_0_degree0ColumnsCodimension raw20Degree0Coordinates
 
 /-- Raw source columns for ordered pair (2,0), degree 1; repetitions remain. -/
-def raw_2_0_degree1Columns : Fin 0 → TautologicalStratum 2 (Fin 1) :=
+def raw20Degree1Columns : Fin 0 → TautologicalStratum 2 (Fin 1) :=
   Fin.elim0
 
 /-- Exact raw-gluing coefficients, without an additional automorphism division. -/
-def raw_2_0_degree1Coordinates : RelationCertificate.Coordinates 0 :=
+def raw20Degree1Coordinates : RelationCertificate.Coordinates 0 :=
   Fin.elim0
 
 /-- Every source column has the recorded edge-plus-decoration degree. -/
 theorem raw_2_0_degree1ColumnsCodimension :
-    ∀ i, (raw_2_0_degree1Columns i).codimension = 1 := by
+    ∀ i, (raw20Degree1Columns i).codimension = 1 := by
   intro i
   exact Fin.elim0 i
 
 /-- Formal raw representative only; its name does not identify a geometric Hodge class. -/
-noncomputable def raw_2_0_degree1 : StrataModule 2 (Fin 1) :=
-  RelationCertificate.interpret raw_2_0_degree1Columns raw_2_0_degree1Coordinates
+noncomputable def raw20Degree1 : StrataModule 2 (Fin 1) :=
+  RelationCertificate.interpret raw20Degree1Columns raw20Degree1Coordinates
 
 /-- Homogeneity in the existing free rational strata module. -/
-theorem raw_2_0_degree1_mem_degree : raw_2_0_degree1 ∈ StrataModule.degree 1 :=
+theorem raw_2_0_degree1_mem_degree : raw20Degree1 ∈ StrataModule.degree 1 :=
   RelationCertificate.interpret_mem_degree
-    raw_2_0_degree1Columns raw_2_0_degree1ColumnsCodimension raw_2_0_degree1Coordinates
+    raw20Degree1Columns raw_2_0_degree1ColumnsCodimension raw20Degree1Coordinates
 
 /-- Raw source columns for ordered pair (2,0), degree 2; repetitions remain. -/
-def raw_2_0_degree2Columns : Fin 16 → TautologicalStratum 2 (Fin 1) :=
+def raw20Degree2Columns : Fin 16 → TautologicalStratum 2 (Fin 1) :=
   ![rawGraph6,
     rawGraph7,
     rawGraph8,
@@ -10417,7 +10417,7 @@ def raw_2_0_degree2Columns : Fin 16 → TautologicalStratum 2 (Fin 1) :=
     rawGraph21]
 
 /-- Exact raw-gluing coefficients, without an additional automorphism division. -/
-def raw_2_0_degree2Coordinates : RelationCertificate.Coordinates 16 :=
+def raw20Degree2Coordinates : RelationCertificate.Coordinates 16 :=
   ![(-1 / 144),
     (-1 / 144),
     (-1 / 288),
@@ -10437,7 +10437,7 @@ def raw_2_0_degree2Coordinates : RelationCertificate.Coordinates 16 :=
 
 /-- Every source column has the recorded edge-plus-decoration degree. -/
 theorem raw_2_0_degree2ColumnsCodimension :
-    ∀ i, (raw_2_0_degree2Columns i).codimension = 2 := by
+    ∀ i, (raw20Degree2Columns i).codimension = 2 := by
   intro i
   fin_cases i
   · exact rawGraph6Codimension
@@ -10458,131 +10458,131 @@ theorem raw_2_0_degree2ColumnsCodimension :
   · exact rawGraph21Codimension
 
 /-- Formal raw representative only; its name does not identify a geometric Hodge class. -/
-noncomputable def raw_2_0_degree2 : StrataModule 2 (Fin 1) :=
-  RelationCertificate.interpret raw_2_0_degree2Columns raw_2_0_degree2Coordinates
+noncomputable def raw20Degree2 : StrataModule 2 (Fin 1) :=
+  RelationCertificate.interpret raw20Degree2Columns raw20Degree2Coordinates
 
 /-- Homogeneity in the existing free rational strata module. -/
-theorem raw_2_0_degree2_mem_degree : raw_2_0_degree2 ∈ StrataModule.degree 2 :=
+theorem raw_2_0_degree2_mem_degree : raw20Degree2 ∈ StrataModule.degree 2 :=
   RelationCertificate.interpret_mem_degree
-    raw_2_0_degree2Columns raw_2_0_degree2ColumnsCodimension raw_2_0_degree2Coordinates
+    raw20Degree2Columns raw_2_0_degree2ColumnsCodimension raw20Degree2Coordinates
 
 /-- Raw source columns for ordered pair (2,0), degree 3; repetitions remain. -/
-def raw_2_0_degree3Columns : Fin 0 → TautologicalStratum 2 (Fin 1) :=
+def raw20Degree3Columns : Fin 0 → TautologicalStratum 2 (Fin 1) :=
   Fin.elim0
 
 /-- Exact raw-gluing coefficients, without an additional automorphism division. -/
-def raw_2_0_degree3Coordinates : RelationCertificate.Coordinates 0 :=
+def raw20Degree3Coordinates : RelationCertificate.Coordinates 0 :=
   Fin.elim0
 
 /-- Every source column has the recorded edge-plus-decoration degree. -/
 theorem raw_2_0_degree3ColumnsCodimension :
-    ∀ i, (raw_2_0_degree3Columns i).codimension = 3 := by
+    ∀ i, (raw20Degree3Columns i).codimension = 3 := by
   intro i
   exact Fin.elim0 i
 
 /-- Formal raw representative only; its name does not identify a geometric Hodge class. -/
-noncomputable def raw_2_0_degree3 : StrataModule 2 (Fin 1) :=
-  RelationCertificate.interpret raw_2_0_degree3Columns raw_2_0_degree3Coordinates
+noncomputable def raw20Degree3 : StrataModule 2 (Fin 1) :=
+  RelationCertificate.interpret raw20Degree3Columns raw20Degree3Coordinates
 
 /-- Homogeneity in the existing free rational strata module. -/
-theorem raw_2_0_degree3_mem_degree : raw_2_0_degree3 ∈ StrataModule.degree 3 :=
+theorem raw_2_0_degree3_mem_degree : raw20Degree3 ∈ StrataModule.degree 3 :=
   RelationCertificate.interpret_mem_degree
-    raw_2_0_degree3Columns raw_2_0_degree3ColumnsCodimension raw_2_0_degree3Coordinates
+    raw20Degree3Columns raw_2_0_degree3ColumnsCodimension raw20Degree3Coordinates
 
 /-- Raw source columns for ordered pair (2,0), degree 4; repetitions remain. -/
-def raw_2_0_degree4Columns : Fin 0 → TautologicalStratum 2 (Fin 1) :=
+def raw20Degree4Columns : Fin 0 → TautologicalStratum 2 (Fin 1) :=
   Fin.elim0
 
 /-- Exact raw-gluing coefficients, without an additional automorphism division. -/
-def raw_2_0_degree4Coordinates : RelationCertificate.Coordinates 0 :=
+def raw20Degree4Coordinates : RelationCertificate.Coordinates 0 :=
   Fin.elim0
 
 /-- Every source column has the recorded edge-plus-decoration degree. -/
 theorem raw_2_0_degree4ColumnsCodimension :
-    ∀ i, (raw_2_0_degree4Columns i).codimension = 4 := by
+    ∀ i, (raw20Degree4Columns i).codimension = 4 := by
   intro i
   exact Fin.elim0 i
 
 /-- Formal raw representative only; its name does not identify a geometric Hodge class. -/
-noncomputable def raw_2_0_degree4 : StrataModule 2 (Fin 1) :=
-  RelationCertificate.interpret raw_2_0_degree4Columns raw_2_0_degree4Coordinates
+noncomputable def raw20Degree4 : StrataModule 2 (Fin 1) :=
+  RelationCertificate.interpret raw20Degree4Columns raw20Degree4Coordinates
 
 /-- Homogeneity in the existing free rational strata module. -/
-theorem raw_2_0_degree4_mem_degree : raw_2_0_degree4 ∈ StrataModule.degree 4 :=
+theorem raw_2_0_degree4_mem_degree : raw20Degree4 ∈ StrataModule.degree 4 :=
   RelationCertificate.interpret_mem_degree
-    raw_2_0_degree4Columns raw_2_0_degree4ColumnsCodimension raw_2_0_degree4Coordinates
+    raw20Degree4Columns raw_2_0_degree4ColumnsCodimension raw20Degree4Coordinates
 
 /-- Raw source columns for ordered pair (2,1), degree 0; repetitions remain. -/
-def raw_2_1_degree0Columns : Fin 0 → TautologicalStratum 2 (Fin 1) :=
+def raw21Degree0Columns : Fin 0 → TautologicalStratum 2 (Fin 1) :=
   Fin.elim0
 
 /-- Exact raw-gluing coefficients, without an additional automorphism division. -/
-def raw_2_1_degree0Coordinates : RelationCertificate.Coordinates 0 :=
+def raw21Degree0Coordinates : RelationCertificate.Coordinates 0 :=
   Fin.elim0
 
 /-- Every source column has the recorded edge-plus-decoration degree. -/
 theorem raw_2_1_degree0ColumnsCodimension :
-    ∀ i, (raw_2_1_degree0Columns i).codimension = 0 := by
+    ∀ i, (raw21Degree0Columns i).codimension = 0 := by
   intro i
   exact Fin.elim0 i
 
 /-- Formal raw representative only; its name does not identify a geometric Hodge class. -/
-noncomputable def raw_2_1_degree0 : StrataModule 2 (Fin 1) :=
-  RelationCertificate.interpret raw_2_1_degree0Columns raw_2_1_degree0Coordinates
+noncomputable def raw21Degree0 : StrataModule 2 (Fin 1) :=
+  RelationCertificate.interpret raw21Degree0Columns raw21Degree0Coordinates
 
 /-- Homogeneity in the existing free rational strata module. -/
-theorem raw_2_1_degree0_mem_degree : raw_2_1_degree0 ∈ StrataModule.degree 0 :=
+theorem raw_2_1_degree0_mem_degree : raw21Degree0 ∈ StrataModule.degree 0 :=
   RelationCertificate.interpret_mem_degree
-    raw_2_1_degree0Columns raw_2_1_degree0ColumnsCodimension raw_2_1_degree0Coordinates
+    raw21Degree0Columns raw_2_1_degree0ColumnsCodimension raw21Degree0Coordinates
 
 /-- Raw source columns for ordered pair (2,1), degree 1; repetitions remain. -/
-def raw_2_1_degree1Columns : Fin 0 → TautologicalStratum 2 (Fin 1) :=
+def raw21Degree1Columns : Fin 0 → TautologicalStratum 2 (Fin 1) :=
   Fin.elim0
 
 /-- Exact raw-gluing coefficients, without an additional automorphism division. -/
-def raw_2_1_degree1Coordinates : RelationCertificate.Coordinates 0 :=
+def raw21Degree1Coordinates : RelationCertificate.Coordinates 0 :=
   Fin.elim0
 
 /-- Every source column has the recorded edge-plus-decoration degree. -/
 theorem raw_2_1_degree1ColumnsCodimension :
-    ∀ i, (raw_2_1_degree1Columns i).codimension = 1 := by
+    ∀ i, (raw21Degree1Columns i).codimension = 1 := by
   intro i
   exact Fin.elim0 i
 
 /-- Formal raw representative only; its name does not identify a geometric Hodge class. -/
-noncomputable def raw_2_1_degree1 : StrataModule 2 (Fin 1) :=
-  RelationCertificate.interpret raw_2_1_degree1Columns raw_2_1_degree1Coordinates
+noncomputable def raw21Degree1 : StrataModule 2 (Fin 1) :=
+  RelationCertificate.interpret raw21Degree1Columns raw21Degree1Coordinates
 
 /-- Homogeneity in the existing free rational strata module. -/
-theorem raw_2_1_degree1_mem_degree : raw_2_1_degree1 ∈ StrataModule.degree 1 :=
+theorem raw_2_1_degree1_mem_degree : raw21Degree1 ∈ StrataModule.degree 1 :=
   RelationCertificate.interpret_mem_degree
-    raw_2_1_degree1Columns raw_2_1_degree1ColumnsCodimension raw_2_1_degree1Coordinates
+    raw21Degree1Columns raw_2_1_degree1ColumnsCodimension raw21Degree1Coordinates
 
 /-- Raw source columns for ordered pair (2,1), degree 2; repetitions remain. -/
-def raw_2_1_degree2Columns : Fin 0 → TautologicalStratum 2 (Fin 1) :=
+def raw21Degree2Columns : Fin 0 → TautologicalStratum 2 (Fin 1) :=
   Fin.elim0
 
 /-- Exact raw-gluing coefficients, without an additional automorphism division. -/
-def raw_2_1_degree2Coordinates : RelationCertificate.Coordinates 0 :=
+def raw21Degree2Coordinates : RelationCertificate.Coordinates 0 :=
   Fin.elim0
 
 /-- Every source column has the recorded edge-plus-decoration degree. -/
 theorem raw_2_1_degree2ColumnsCodimension :
-    ∀ i, (raw_2_1_degree2Columns i).codimension = 2 := by
+    ∀ i, (raw21Degree2Columns i).codimension = 2 := by
   intro i
   exact Fin.elim0 i
 
 /-- Formal raw representative only; its name does not identify a geometric Hodge class. -/
-noncomputable def raw_2_1_degree2 : StrataModule 2 (Fin 1) :=
-  RelationCertificate.interpret raw_2_1_degree2Columns raw_2_1_degree2Coordinates
+noncomputable def raw21Degree2 : StrataModule 2 (Fin 1) :=
+  RelationCertificate.interpret raw21Degree2Columns raw21Degree2Coordinates
 
 /-- Homogeneity in the existing free rational strata module. -/
-theorem raw_2_1_degree2_mem_degree : raw_2_1_degree2 ∈ StrataModule.degree 2 :=
+theorem raw_2_1_degree2_mem_degree : raw21Degree2 ∈ StrataModule.degree 2 :=
   RelationCertificate.interpret_mem_degree
-    raw_2_1_degree2Columns raw_2_1_degree2ColumnsCodimension raw_2_1_degree2Coordinates
+    raw21Degree2Columns raw_2_1_degree2ColumnsCodimension raw21Degree2Coordinates
 
 /-- Raw source columns for ordered pair (2,1), degree 3; repetitions remain. -/
-def raw_2_1_degree3Columns : Fin 108 → TautologicalStratum 2 (Fin 1) :=
+def raw21Degree3Columns : Fin 108 → TautologicalStratum 2 (Fin 1) :=
   ![rawGraph37,
     rawGraph38,
     rawGraph39,
@@ -10693,7 +10693,7 @@ def raw_2_1_degree3Columns : Fin 108 → TautologicalStratum 2 (Fin 1) :=
     rawGraph142]
 
 /-- Exact raw-gluing coefficients, without an additional automorphism division. -/
-def raw_2_1_degree3Coordinates : RelationCertificate.Coordinates 108 :=
+def raw21Degree3Coordinates : RelationCertificate.Coordinates 108 :=
   ![(-1 / 1152),
     (-1 / 1152),
     (-1 / 1152),
@@ -10805,7 +10805,7 @@ def raw_2_1_degree3Coordinates : RelationCertificate.Coordinates 108 :=
 
 /-- Every source column has the recorded edge-plus-decoration degree. -/
 theorem raw_2_1_degree3ColumnsCodimension :
-    ∀ i, (raw_2_1_degree3Columns i).codimension = 3 := by
+    ∀ i, (raw21Degree3Columns i).codimension = 3 := by
   intro i
   fin_cases i
   · exact rawGraph37Codimension
@@ -10918,131 +10918,131 @@ theorem raw_2_1_degree3ColumnsCodimension :
   · exact rawGraph142Codimension
 
 /-- Formal raw representative only; its name does not identify a geometric Hodge class. -/
-noncomputable def raw_2_1_degree3 : StrataModule 2 (Fin 1) :=
-  RelationCertificate.interpret raw_2_1_degree3Columns raw_2_1_degree3Coordinates
+noncomputable def raw21Degree3 : StrataModule 2 (Fin 1) :=
+  RelationCertificate.interpret raw21Degree3Columns raw21Degree3Coordinates
 
 /-- Homogeneity in the existing free rational strata module. -/
-theorem raw_2_1_degree3_mem_degree : raw_2_1_degree3 ∈ StrataModule.degree 3 :=
+theorem raw_2_1_degree3_mem_degree : raw21Degree3 ∈ StrataModule.degree 3 :=
   RelationCertificate.interpret_mem_degree
-    raw_2_1_degree3Columns raw_2_1_degree3ColumnsCodimension raw_2_1_degree3Coordinates
+    raw21Degree3Columns raw_2_1_degree3ColumnsCodimension raw21Degree3Coordinates
 
 /-- Raw source columns for ordered pair (2,1), degree 4; repetitions remain. -/
-def raw_2_1_degree4Columns : Fin 0 → TautologicalStratum 2 (Fin 1) :=
+def raw21Degree4Columns : Fin 0 → TautologicalStratum 2 (Fin 1) :=
   Fin.elim0
 
 /-- Exact raw-gluing coefficients, without an additional automorphism division. -/
-def raw_2_1_degree4Coordinates : RelationCertificate.Coordinates 0 :=
+def raw21Degree4Coordinates : RelationCertificate.Coordinates 0 :=
   Fin.elim0
 
 /-- Every source column has the recorded edge-plus-decoration degree. -/
 theorem raw_2_1_degree4ColumnsCodimension :
-    ∀ i, (raw_2_1_degree4Columns i).codimension = 4 := by
+    ∀ i, (raw21Degree4Columns i).codimension = 4 := by
   intro i
   exact Fin.elim0 i
 
 /-- Formal raw representative only; its name does not identify a geometric Hodge class. -/
-noncomputable def raw_2_1_degree4 : StrataModule 2 (Fin 1) :=
-  RelationCertificate.interpret raw_2_1_degree4Columns raw_2_1_degree4Coordinates
+noncomputable def raw21Degree4 : StrataModule 2 (Fin 1) :=
+  RelationCertificate.interpret raw21Degree4Columns raw21Degree4Coordinates
 
 /-- Homogeneity in the existing free rational strata module. -/
-theorem raw_2_1_degree4_mem_degree : raw_2_1_degree4 ∈ StrataModule.degree 4 :=
+theorem raw_2_1_degree4_mem_degree : raw21Degree4 ∈ StrataModule.degree 4 :=
   RelationCertificate.interpret_mem_degree
-    raw_2_1_degree4Columns raw_2_1_degree4ColumnsCodimension raw_2_1_degree4Coordinates
+    raw21Degree4Columns raw_2_1_degree4ColumnsCodimension raw21Degree4Coordinates
 
 /-- Raw source columns for ordered pair (2,2), degree 0; repetitions remain. -/
-def raw_2_2_degree0Columns : Fin 0 → TautologicalStratum 2 (Fin 1) :=
+def raw22Degree0Columns : Fin 0 → TautologicalStratum 2 (Fin 1) :=
   Fin.elim0
 
 /-- Exact raw-gluing coefficients, without an additional automorphism division. -/
-def raw_2_2_degree0Coordinates : RelationCertificate.Coordinates 0 :=
+def raw22Degree0Coordinates : RelationCertificate.Coordinates 0 :=
   Fin.elim0
 
 /-- Every source column has the recorded edge-plus-decoration degree. -/
 theorem raw_2_2_degree0ColumnsCodimension :
-    ∀ i, (raw_2_2_degree0Columns i).codimension = 0 := by
+    ∀ i, (raw22Degree0Columns i).codimension = 0 := by
   intro i
   exact Fin.elim0 i
 
 /-- Formal raw representative only; its name does not identify a geometric Hodge class. -/
-noncomputable def raw_2_2_degree0 : StrataModule 2 (Fin 1) :=
-  RelationCertificate.interpret raw_2_2_degree0Columns raw_2_2_degree0Coordinates
+noncomputable def raw22Degree0 : StrataModule 2 (Fin 1) :=
+  RelationCertificate.interpret raw22Degree0Columns raw22Degree0Coordinates
 
 /-- Homogeneity in the existing free rational strata module. -/
-theorem raw_2_2_degree0_mem_degree : raw_2_2_degree0 ∈ StrataModule.degree 0 :=
+theorem raw_2_2_degree0_mem_degree : raw22Degree0 ∈ StrataModule.degree 0 :=
   RelationCertificate.interpret_mem_degree
-    raw_2_2_degree0Columns raw_2_2_degree0ColumnsCodimension raw_2_2_degree0Coordinates
+    raw22Degree0Columns raw_2_2_degree0ColumnsCodimension raw22Degree0Coordinates
 
 /-- Raw source columns for ordered pair (2,2), degree 1; repetitions remain. -/
-def raw_2_2_degree1Columns : Fin 0 → TautologicalStratum 2 (Fin 1) :=
+def raw22Degree1Columns : Fin 0 → TautologicalStratum 2 (Fin 1) :=
   Fin.elim0
 
 /-- Exact raw-gluing coefficients, without an additional automorphism division. -/
-def raw_2_2_degree1Coordinates : RelationCertificate.Coordinates 0 :=
+def raw22Degree1Coordinates : RelationCertificate.Coordinates 0 :=
   Fin.elim0
 
 /-- Every source column has the recorded edge-plus-decoration degree. -/
 theorem raw_2_2_degree1ColumnsCodimension :
-    ∀ i, (raw_2_2_degree1Columns i).codimension = 1 := by
+    ∀ i, (raw22Degree1Columns i).codimension = 1 := by
   intro i
   exact Fin.elim0 i
 
 /-- Formal raw representative only; its name does not identify a geometric Hodge class. -/
-noncomputable def raw_2_2_degree1 : StrataModule 2 (Fin 1) :=
-  RelationCertificate.interpret raw_2_2_degree1Columns raw_2_2_degree1Coordinates
+noncomputable def raw22Degree1 : StrataModule 2 (Fin 1) :=
+  RelationCertificate.interpret raw22Degree1Columns raw22Degree1Coordinates
 
 /-- Homogeneity in the existing free rational strata module. -/
-theorem raw_2_2_degree1_mem_degree : raw_2_2_degree1 ∈ StrataModule.degree 1 :=
+theorem raw_2_2_degree1_mem_degree : raw22Degree1 ∈ StrataModule.degree 1 :=
   RelationCertificate.interpret_mem_degree
-    raw_2_2_degree1Columns raw_2_2_degree1ColumnsCodimension raw_2_2_degree1Coordinates
+    raw22Degree1Columns raw_2_2_degree1ColumnsCodimension raw22Degree1Coordinates
 
 /-- Raw source columns for ordered pair (2,2), degree 2; repetitions remain. -/
-def raw_2_2_degree2Columns : Fin 0 → TautologicalStratum 2 (Fin 1) :=
+def raw22Degree2Columns : Fin 0 → TautologicalStratum 2 (Fin 1) :=
   Fin.elim0
 
 /-- Exact raw-gluing coefficients, without an additional automorphism division. -/
-def raw_2_2_degree2Coordinates : RelationCertificate.Coordinates 0 :=
+def raw22Degree2Coordinates : RelationCertificate.Coordinates 0 :=
   Fin.elim0
 
 /-- Every source column has the recorded edge-plus-decoration degree. -/
 theorem raw_2_2_degree2ColumnsCodimension :
-    ∀ i, (raw_2_2_degree2Columns i).codimension = 2 := by
+    ∀ i, (raw22Degree2Columns i).codimension = 2 := by
   intro i
   exact Fin.elim0 i
 
 /-- Formal raw representative only; its name does not identify a geometric Hodge class. -/
-noncomputable def raw_2_2_degree2 : StrataModule 2 (Fin 1) :=
-  RelationCertificate.interpret raw_2_2_degree2Columns raw_2_2_degree2Coordinates
+noncomputable def raw22Degree2 : StrataModule 2 (Fin 1) :=
+  RelationCertificate.interpret raw22Degree2Columns raw22Degree2Coordinates
 
 /-- Homogeneity in the existing free rational strata module. -/
-theorem raw_2_2_degree2_mem_degree : raw_2_2_degree2 ∈ StrataModule.degree 2 :=
+theorem raw_2_2_degree2_mem_degree : raw22Degree2 ∈ StrataModule.degree 2 :=
   RelationCertificate.interpret_mem_degree
-    raw_2_2_degree2Columns raw_2_2_degree2ColumnsCodimension raw_2_2_degree2Coordinates
+    raw22Degree2Columns raw_2_2_degree2ColumnsCodimension raw22Degree2Coordinates
 
 /-- Raw source columns for ordered pair (2,2), degree 3; repetitions remain. -/
-def raw_2_2_degree3Columns : Fin 0 → TautologicalStratum 2 (Fin 1) :=
+def raw22Degree3Columns : Fin 0 → TautologicalStratum 2 (Fin 1) :=
   Fin.elim0
 
 /-- Exact raw-gluing coefficients, without an additional automorphism division. -/
-def raw_2_2_degree3Coordinates : RelationCertificate.Coordinates 0 :=
+def raw22Degree3Coordinates : RelationCertificate.Coordinates 0 :=
   Fin.elim0
 
 /-- Every source column has the recorded edge-plus-decoration degree. -/
 theorem raw_2_2_degree3ColumnsCodimension :
-    ∀ i, (raw_2_2_degree3Columns i).codimension = 3 := by
+    ∀ i, (raw22Degree3Columns i).codimension = 3 := by
   intro i
   exact Fin.elim0 i
 
 /-- Formal raw representative only; its name does not identify a geometric Hodge class. -/
-noncomputable def raw_2_2_degree3 : StrataModule 2 (Fin 1) :=
-  RelationCertificate.interpret raw_2_2_degree3Columns raw_2_2_degree3Coordinates
+noncomputable def raw22Degree3 : StrataModule 2 (Fin 1) :=
+  RelationCertificate.interpret raw22Degree3Columns raw22Degree3Coordinates
 
 /-- Homogeneity in the existing free rational strata module. -/
-theorem raw_2_2_degree3_mem_degree : raw_2_2_degree3 ∈ StrataModule.degree 3 :=
+theorem raw_2_2_degree3_mem_degree : raw22Degree3 ∈ StrataModule.degree 3 :=
   RelationCertificate.interpret_mem_degree
-    raw_2_2_degree3Columns raw_2_2_degree3ColumnsCodimension raw_2_2_degree3Coordinates
+    raw22Degree3Columns raw_2_2_degree3ColumnsCodimension raw22Degree3Coordinates
 
 /-- Raw source columns for ordered pair (2,2), degree 4; repetitions remain. -/
-def raw_2_2_degree4Columns : Fin 252 → TautologicalStratum 2 (Fin 1) :=
+def raw22Degree4Columns : Fin 252 → TautologicalStratum 2 (Fin 1) :=
   ![rawGraph148,
     rawGraph149,
     rawGraph150,
@@ -11297,7 +11297,7 @@ def raw_2_2_degree4Columns : Fin 252 → TautologicalStratum 2 (Fin 1) :=
     rawGraph372]
 
 /-- Exact raw-gluing coefficients, without an additional automorphism division. -/
-def raw_2_2_degree4Coordinates : RelationCertificate.Coordinates 252 :=
+def raw22Degree4Coordinates : RelationCertificate.Coordinates 252 :=
   ![(-1 / 10368),
     (-1 / 10368),
     (-1 / 13824),
@@ -11553,7 +11553,7 @@ def raw_2_2_degree4Coordinates : RelationCertificate.Coordinates 252 :=
 
 /-- Every source column has the recorded edge-plus-decoration degree. -/
 theorem raw_2_2_degree4ColumnsCodimension :
-    ∀ i, (raw_2_2_degree4Columns i).codimension = 4 := by
+    ∀ i, (raw22Degree4Columns i).codimension = 4 := by
   intro i
   fin_cases i
   · exact rawGraph148Codimension
@@ -11810,12 +11810,12 @@ theorem raw_2_2_degree4ColumnsCodimension :
   · exact rawGraph372Codimension
 
 /-- Formal raw representative only; its name does not identify a geometric Hodge class. -/
-noncomputable def raw_2_2_degree4 : StrataModule 2 (Fin 1) :=
-  RelationCertificate.interpret raw_2_2_degree4Columns raw_2_2_degree4Coordinates
+noncomputable def raw22Degree4 : StrataModule 2 (Fin 1) :=
+  RelationCertificate.interpret raw22Degree4Columns raw22Degree4Coordinates
 
 /-- Homogeneity in the existing free rational strata module. -/
-theorem raw_2_2_degree4_mem_degree : raw_2_2_degree4 ∈ StrataModule.degree 4 :=
+theorem raw_2_2_degree4_mem_degree : raw22Degree4 ∈ StrataModule.degree 4 :=
   RelationCertificate.interpret_mem_degree
-    raw_2_2_degree4Columns raw_2_2_degree4ColumnsCodimension raw_2_2_degree4Coordinates
+    raw22Degree4Columns raw_2_2_degree4ColumnsCodimension raw22Degree4Coordinates
 
 end AxiomaticGW.AdmcyclesHodgeStrataCandidates

@@ -18,11 +18,11 @@ namespace AxiomaticGWTest.GKM.HodgeKappaSquare
 open AxiomaticGW AdmcyclesHodgeStrataCandidates
 
 theorem actual_positions :
-    raw_0_1_degree1Columns 1 = rawGraph2 ∧
-    raw_1_1_degree2Columns 16 = rawGraph21 := ⟨rfl, rfl⟩
+    raw01Degree1Columns 1 = rawGraph2 ∧
+    raw11Degree2Columns 16 = rawGraph21 := ⟨rfl, rfl⟩
 
 theorem actual_square_coefficient :
-    raw_1_1_degree2Coordinates 16 = raw_0_1_degree1Coordinates 1 ^ 2 := by
+    raw11Degree2Coordinates 16 = raw01Degree1Coordinates 1 ^ 2 := by
   decide +kernel
 
 theorem kappa_one_twice_ne_kappa_two :

@@ -29,6 +29,7 @@ variable {X : SurfaceTarget}
 -- The selected H equation retains the complete 815-column L24 dispatch.
 set_option maxRecDepth 20000
 
+/-- Decide the reconstruction order using its explicit lexicographic criterion. -/
 local instance earlierDecidable : DecidableRel (Earlier X) :=
   fun s t ↦ decidable_of_iff _ (earlier_iff X s t).symm
 

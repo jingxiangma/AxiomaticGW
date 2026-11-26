@@ -24,9 +24,9 @@ RAW_VALUE_DIGEST = '22c4f504e440270f1fc3592dddbde32b4b5a050203ce0339ccbfe381c8f6
 WITNESS = REPOSITORY / 'environments/admcycles-hodge-strata-isomorphism-witness.json'
 WITNESS_SHA = '04896b6d8492352593c7281ca2433bef43de2b9960cc14fe6e4700d4f1d3d0db'
 DECODER = REPOSITORY / 'scripts/export_admcycles_hodge_certificate.py'
-DECODER_SHA = 'adce4b8eaf05e29b952aa23d5c0528446653eb6c0d7f24fec16dbafaf954646d'
+DECODER_SHA = '78697c31d8b9336984c79d78066f87c4fe90743db9828fed90a7ce480ef5895d'
 RAW_LEAN = REPOSITORY / 'AxiomaticGW/GKM/Fixtures/AdmcyclesHodgeStrataCandidates.lean'
-RAW_LEAN_SHA = '244eaf08f741057b92113ee4b0c4a48b2185b55350473bc28286460ea07b651c'
+RAW_LEAN_SHA = '423a3b07dc5bf612d824472708ad0cf79a5f445f5280a4ad0f649958770d83ed'
 
 
 def require(ok, message):
@@ -183,6 +183,8 @@ def emit(witness, decoder, shared, mappings):
             G, H = [m['graph_declaration'] for m in [original, representative]]
             I, J = [m['incidence_declaration'] for m in [original, representative]]
             h = record['hint']
+            # An identity hint must still identify its independently indexed witness representative.
+            rhs = f"representatives {record['representative_index']}" if G == H else H
             source.extend([
                 '/-- Proposed finite vertex, edge and ordered branch maps. -/',
                 f'def {hint} : GraphIsomorphismHint where',
@@ -190,7 +192,7 @@ def emit(witness, decoder, shared, mappings):
                 f"  edges := {list_text(h['edges'])}",
                 f"  swaps := {list_text(h['swaps'])}", '',
                 '/-- A checked decorated isomorphism identifies these actual source strata. -/',
-                f'theorem {theorem} : {G} = {H} :=',
+                f'theorem {theorem} : {G} = {rhs} :=',
                 '  TautologicalStratum.mk_eq_mk_of_isomorphic?',
                 '    (DecoratedStableGraph.toDecoration_totalGenus',
                 f'      {I}Candidate {I}Valid {G}Exponents)',
@@ -208,7 +210,7 @@ def emit(witness, decoder, shared, mappings):
                     if witness['raw_hodge_packet']['pairs'][record['source']['pair_index']]
                     ['lambda_indices'] == [a, b]]
         count = len(selected)
-        name = f'raw_{a}_{b}_degree3'
+        name = f'raw{a}{b}Degree3'
         index = f'index_{a}_{b}'
         source.extend([
             '/-- Every occurrence selects one fixed representative; no term is dropped. -/',
@@ -250,21 +252,21 @@ def emit(witness, decoder, shared, mappings):
         '      simp only [map_sum, RelationCertificate.interpret,',
         '        Fintype.linearCombination_apply_single]', '',
         '/-- The first complete raw expression has the certified collected coordinates. -/',
-        'theorem raw_1_2_eq_collected : raw_1_2_degree3 =',
+        'theorem raw_1_2_eq_collected : raw12Degree3 =',
         '    RelationCertificate.interpret representatives collectedCoordinates := by',
         '  calc',
-        '    raw_1_2_degree3 = RelationCertificate.interpret representatives grouped_1_2 :=',
+        '    raw12Degree3 = RelationCertificate.interpret representatives grouped_1_2 :=',
         '      interpret_grouped _ _ _ _ columns_1_2_eq',
         '    _ = _ := congrArg (RelationCertificate.interpret representatives) grouped_1_2_eq', '',
         '/-- The second complete raw expression has the same certified coordinates. -/',
-        'theorem raw_2_1_eq_collected : raw_2_1_degree3 =',
+        'theorem raw_2_1_eq_collected : raw21Degree3 =',
         '    RelationCertificate.interpret representatives collectedCoordinates := by',
         '  calc',
-        '    raw_2_1_degree3 = RelationCertificate.interpret representatives grouped_2_1 :=',
+        '    raw21Degree3 = RelationCertificate.interpret representatives grouped_2_1 :=',
         '      interpret_grouped _ _ _ _ columns_2_1_eq',
         '    _ = _ := congrArg (RelationCertificate.interpret representatives) grouped_2_1_eq', '',
         '/-- These two actual finite raw sums agree before imposing tautological relations. -/',
-        'theorem raw_ordered_degree3_equal : raw_1_2_degree3 = raw_2_1_degree3 :=',
+        'theorem raw_ordered_degree3_equal : raw12Degree3 = raw21Degree3 :=',
         '  raw_1_2_eq_collected.trans raw_2_1_eq_collected.symm', '',
         f'end {NAMESPACE}', '',
     ])
@@ -282,7 +284,7 @@ def consumer_source():
         'open AxiomaticGW', 'open AxiomaticGW.AdmcyclesHodgeStrataCandidates',
         'open AxiomaticGW.AdmcyclesHodgeStrataIsomorphisms', '',
         '/-- Public consumers get equality of the exact two decoded raw expressions. -/',
-        'theorem exact_raw_inputs_equal : raw_1_2_degree3 = raw_2_1_degree3 :=',
+        'theorem exact_raw_inputs_equal : raw12Degree3 = raw21Degree3 :=',
         '  raw_ordered_degree3_equal', '',
         '/-- The common expression remains in degree three of the free strata module. -/',
         'theorem common_expression_degree :',
@@ -294,7 +296,7 @@ def consumer_source():
         'theorem equality_under_linear_map',
         '    (M : Type) [AddCommGroup M] [Module ℚ M]',
         '    (f : StrataModule 2 (Fin 1) →ₗ[ℚ] M) :',
-        '    f raw_1_2_degree3 = f raw_2_1_degree3 :=',
+        '    f raw12Degree3 = f raw21Degree3 :=',
         '  congrArg f raw_ordered_degree3_equal', '',
         'end AxiomaticGWTest.AdmcyclesHodgeStrataIsomorphisms', '',
     ])
@@ -352,7 +354,7 @@ def main():
         'occurrence_to_actual_declarations': bindings,
         'source_lines': len(source.splitlines()),
         'elapsed_seconds': round(time.monotonic() - started, 6),
-        'mathematical_scope': 'Equality of the existing raw_1_2_degree3 and raw_2_1_degree3 '
+        'mathematical_scope': 'Equality of the existing raw12Degree3 and raw21Degree3 '
             'in StrataModule 2 (Fin 1), by finite decorated graph isomorphisms and rational '
             'addition; no Hodge identification, geometric product or CohFT/GW theorem'}
     with args.ledger.open('x') as output:

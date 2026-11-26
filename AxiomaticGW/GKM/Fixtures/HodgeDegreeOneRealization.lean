@@ -131,7 +131,7 @@ theorem map_raw_degree_one
     (hloop : loop.Compatible A Fsep N)
     (hleft : separatingMarkedLeft.Compatible A Fsep N)
     (hright : separatingMarkedRight.Compatible A Fsep N) :
-    (A 2 (Fin 1)).map raw_0_1_degree1 =
+    (A 2 (Fin 1)).map raw01Degree1 =
       (-1 / 12 : ℚ) • P.psi 2 (Fin 1) stable 0 +
       (1 / 12 : ℚ) • P.kappa Fforget 2 (Fin 1) stable 1 +
       (1 / 24 : ℚ) • loop.classValue Fsep N +
@@ -147,9 +147,9 @@ theorem map_raw_degree_one
     rw [rawGraph2_eq_kappa]
     exact (A 2 (Fin 1)).map_kappaGenerator
       (A 2 (Option (Fin 1))) Fforget P stable 1 hκ hnewPsi hnewFund
-  simp only [raw_0_1_degree1, RelationCertificate.interpret_apply,
-    Fin.sum_univ_succ, Fin.sum_univ_zero, raw_0_1_degree1Columns,
-    raw_0_1_degree1Coordinates, Matrix.cons_val_zero, Matrix.cons_val_succ,
+  simp only [raw01Degree1, RelationCertificate.interpret_apply,
+    Fin.sum_univ_succ, Fin.sum_univ_zero, raw01Degree1Columns,
+    raw01Degree1Coordinates, Matrix.cons_val_zero, Matrix.cons_val_succ,
     Matrix.cons_val_fin_one, map_add, map_smul, add_zero,
     hpsi, hkappa, rawGraph3_eq_loop, rawGraph4_eq_left, rawGraph5_eq_right,
     loop.map_stratum_eq_classValue A Fsep N hloop,

@@ -1,0 +1,428 @@
+{
+  "comparison": {
+    "native_kind": "gkm_localization.surface_research_query",
+    "native_report_sha256": "f6abaecbd19a065f72b2dcf8e9e1330d48ff8916a482a2af57bcb078ce15dd29"
+  },
+  "direct_controls": [
+    {
+      "lambda": [
+        0,
+        0
+      ],
+      "psi": [
+        0,
+        3,
+        3
+      ]
+    },
+    {
+      "lambda": [
+        0,
+        0
+      ],
+      "psi": [
+        1,
+        4
+      ]
+    },
+    {
+      "lambda": [
+        1,
+        0
+      ],
+      "psi": [
+        0,
+        4
+      ]
+    },
+    {
+      "lambda": [
+        2,
+        1
+      ],
+      "psi": [
+        1
+      ]
+    },
+    {
+      "lambda": [
+        0,
+        2
+      ],
+      "psi": [
+        0,
+        1,
+        3
+      ]
+    },
+    {
+      "lambda": [
+        0,
+        1
+      ],
+      "psi": [
+        2,
+        1,
+        2
+      ]
+    }
+  ],
+  "environment": {
+    "admcycles": "1.4",
+    "sage": "10.9"
+  },
+  "kind": "axiomatic_gw.exploration.genus_two_vertex_string_dilaton.v1",
+  "localization": {
+    "cache_ephemeral": true,
+    "cases": [
+      {
+        "class": [
+          1,
+          0,
+          0
+        ],
+        "equivariant": {
+          "denominator": [
+            [
+              [
+                0,
+                0
+              ],
+              [
+                1,
+                1
+              ]
+            ]
+          ],
+          "numerator": [
+            [
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                240
+              ]
+            ],
+            [
+              [
+                1,
+                0
+              ],
+              [
+                1,
+                240
+              ]
+            ]
+          ]
+        },
+        "genus": 2,
+        "labels": [
+          "E1"
+        ],
+        "ordinary": [
+          0,
+          1
+        ],
+        "powers": [
+          3
+        ],
+        "target": "X2"
+      }
+    ],
+    "environment": {
+      "admcycles": "1.4",
+      "sage": "10.9"
+    },
+    "input_sha256": "062a32a9919fa5ddf806c353f5bb56256ca5dca31d170c246b9bfa39c3b11376",
+    "kind": "axiomatic_gw.exploration.genus_two_vertex_string_dilaton.v1",
+    "online_lookup": false,
+    "schema_version": 1,
+    "source": {
+      "project": "gkm_localization",
+      "python_sources": {
+        "gkm_localization/__init__.py": "00d7e7813c8d1d60adc432430d35fa6a4806bceee008984c2b754091354375ec",
+        "gkm_localization/hodge_integral.py": "862d4f8c9b4915b96ce9f62c789f079ea82c8fecdb43d5f1c407a00ba424d043",
+        "gkm_localization/stable_map.py": "4e88e18487577642f86bcf1d8762c8ac117d4bfe4329c095bbb6fdd38258c53a",
+        "gkm_localization/target.py": "e0466e4ea6ba1db8c584051147831f2b11e59102fba533107623549b28bfc4e5",
+        "gkm_localization/target_builders.py": "b17fb2cfb2f9db8453601bf5e7e5a571a313f58bae7755915e890206fc06b9b5"
+      },
+      "reuse_license": "not established; no producer code is vendored",
+      "revision": "a09c6625b280312721c5e0f2f915791781339aa5",
+      "schema_version": 1
+    }
+  },
+  "query": {
+    "class": [
+      1,
+      0,
+      0
+    ],
+    "genus": 2,
+    "insertions": [
+      [
+        "E1",
+        3
+      ]
+    ],
+    "target": "X2"
+  },
+  "seeds": [
+    {
+      "lambda": [
+        0,
+        0
+      ],
+      "psi": [
+        4
+      ],
+      "value": [
+        1,
+        1152
+      ]
+    },
+    {
+      "lambda": [
+        0,
+        0
+      ],
+      "psi": [
+        2,
+        3
+      ],
+      "value": [
+        29,
+        5760
+      ]
+    },
+    {
+      "lambda": [
+        0,
+        0
+      ],
+      "psi": [
+        2,
+        2,
+        2
+      ],
+      "value": [
+        7,
+        240
+      ]
+    },
+    {
+      "lambda": [
+        0,
+        1
+      ],
+      "psi": [
+        3
+      ],
+      "value": [
+        1,
+        480
+      ]
+    },
+    {
+      "lambda": [
+        0,
+        1
+      ],
+      "psi": [
+        2,
+        2
+      ],
+      "value": [
+        5,
+        576
+      ]
+    },
+    {
+      "lambda": [
+        0,
+        2
+      ],
+      "psi": [
+        2
+      ],
+      "value": [
+        7,
+        5760
+      ]
+    },
+    {
+      "lambda": [
+        1,
+        1
+      ],
+      "psi": [
+        2
+      ],
+      "value": [
+        7,
+        2880
+      ]
+    },
+    {
+      "lambda": [
+        1,
+        2
+      ],
+      "psi": [],
+      "value": [
+        1,
+        5760
+      ]
+    }
+  ],
+  "source": {
+    "project": "gkm_localization",
+    "python_sources": {
+      "gkm_localization/__init__.py": "00d7e7813c8d1d60adc432430d35fa6a4806bceee008984c2b754091354375ec",
+      "gkm_localization/hodge_integral.py": "862d4f8c9b4915b96ce9f62c789f079ea82c8fecdb43d5f1c407a00ba424d043",
+      "gkm_localization/stable_map.py": "4e88e18487577642f86bcf1d8762c8ac117d4bfe4329c095bbb6fdd38258c53a",
+      "gkm_localization/target.py": "e0466e4ea6ba1db8c584051147831f2b11e59102fba533107623549b28bfc4e5",
+      "gkm_localization/target_builders.py": "b17fb2cfb2f9db8453601bf5e7e5a571a313f58bae7755915e890206fc06b9b5"
+    },
+    "reuse_license": "not established; no producer code is vendored",
+    "revision": "a09c6625b280312721c5e0f2f915791781339aa5",
+    "schema_version": 1
+  },
+  "vertices": [
+    {
+      "lambda": [
+        0,
+        0
+      ],
+      "psi": [
+        2,
+        3
+      ],
+      "value": [
+        29,
+        5760
+      ]
+    },
+    {
+      "lambda": [
+        0,
+        0
+      ],
+      "psi": [
+        4
+      ],
+      "value": [
+        1,
+        1152
+      ]
+    },
+    {
+      "lambda": [
+        0,
+        1
+      ],
+      "psi": [
+        1,
+        3
+      ],
+      "value": [
+        1,
+        160
+      ]
+    },
+    {
+      "lambda": [
+        0,
+        1
+      ],
+      "psi": [
+        3
+      ],
+      "value": [
+        1,
+        480
+      ]
+    },
+    {
+      "lambda": [
+        0,
+        2
+      ],
+      "psi": [
+        0,
+        3
+      ],
+      "value": [
+        7,
+        5760
+      ]
+    },
+    {
+      "lambda": [
+        0,
+        2
+      ],
+      "psi": [
+        2
+      ],
+      "value": [
+        7,
+        5760
+      ]
+    },
+    {
+      "lambda": [
+        1,
+        1
+      ],
+      "psi": [
+        0,
+        3
+      ],
+      "value": [
+        7,
+        2880
+      ]
+    },
+    {
+      "lambda": [
+        1,
+        1
+      ],
+      "psi": [
+        2
+      ],
+      "value": [
+        7,
+        2880
+      ]
+    },
+    {
+      "lambda": [
+        1,
+        2
+      ],
+      "psi": [
+        1
+      ],
+      "value": [
+        1,
+        2880
+      ]
+    },
+    {
+      "lambda": [
+        2,
+        2
+      ],
+      "psi": [
+        0
+      ],
+      "value": [
+        0,
+        1
+      ]
+    }
+  ]
+}

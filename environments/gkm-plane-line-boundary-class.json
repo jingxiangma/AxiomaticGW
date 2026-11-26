@@ -1,0 +1,133 @@
+{
+  "admcycles": "1.4",
+  "common_refinement": [
+    [
+      1,
+      2
+    ],
+    [
+      5
+    ],
+    [
+      3,
+      4
+    ]
+  ],
+  "curve": [
+    1
+  ],
+  "genus": 0,
+  "lifts": [
+    "D0*D1",
+    "D1",
+    "D0*D2",
+    "D2"
+  ],
+  "loci": {
+    "4": {
+      "enumerated": 48,
+      "nonzero_loci": [
+        {
+          "automorphism": 1,
+          "boundary": "1",
+          "edge": "(-1)/(x^2*y^2 - x*y^3)",
+          "eulers": [
+            "x*y",
+            "-x*y + y^2"
+          ],
+          "flags": [
+            "y",
+            "-y"
+          ],
+          "insertions": "x^2*y^4 - x*y^5",
+          "marks": [
+            [
+              1,
+              2
+            ],
+            [
+              3,
+              4
+            ]
+          ],
+          "tangent": "-x^2*y^2 + x*y^3"
+        }
+      ]
+    },
+    "5": {
+      "enumerated": 96,
+      "nonzero_loci": [
+        {
+          "automorphism": 1,
+          "boundary": "1",
+          "edge": "(-1)/(x^2*y^2 - x*y^3)",
+          "eulers": [
+            "x*y",
+            "-x*y + y^2"
+          ],
+          "flags": [
+            "y",
+            "-y"
+          ],
+          "insertions": "x^2*y^4 - x*y^5",
+          "marks": [
+            [
+              1,
+              2
+            ],
+            [
+              3,
+              4,
+              5
+            ]
+          ],
+          "node_psi": "1/(-y)",
+          "tangent": "-x^2*y^2 + x*y^3"
+        },
+        {
+          "automorphism": 1,
+          "boundary": "1",
+          "edge": "(-1)/(x^2*y^2 - x*y^3)",
+          "eulers": [
+            "x*y",
+            "-x*y + y^2"
+          ],
+          "flags": [
+            "y",
+            "-y"
+          ],
+          "insertions": "x^2*y^4 - x*y^5",
+          "marks": [
+            [
+              1,
+              2,
+              5
+            ],
+            [
+              3,
+              4
+            ]
+          ],
+          "node_psi": "1/y",
+          "tangent": "-x^2*y^2 + x*y^3"
+        }
+      ]
+    }
+  },
+  "sage": "10.9",
+  "source": "a09c6625b280312721c5e0f2f915791781339aa5",
+  "tail_primary": [
+    [
+      1,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0
+    ]
+  ],
+  "target": "plane",
+  "unit_mark": 5
+}

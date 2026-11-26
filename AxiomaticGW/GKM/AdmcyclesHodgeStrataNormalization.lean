@@ -45,19 +45,19 @@ theorem stable : StableArity 2 (Fin 1) := by
 noncomputable def rawComponent : Fin 3 → Fin 3 → Fin 5 → StrataModule 2 (Fin 1) :=
   ![
     ![
-      ![raw_0_0_degree0, raw_0_0_degree1, raw_0_0_degree2, raw_0_0_degree3, raw_0_0_degree4],
-      ![raw_0_1_degree0, raw_0_1_degree1, raw_0_1_degree2, raw_0_1_degree3, raw_0_1_degree4],
-      ![raw_0_2_degree0, raw_0_2_degree1, raw_0_2_degree2, raw_0_2_degree3, raw_0_2_degree4]
+      ![raw00Degree0, raw00Degree1, raw00Degree2, raw00Degree3, raw00Degree4],
+      ![raw01Degree0, raw01Degree1, raw01Degree2, raw01Degree3, raw01Degree4],
+      ![raw02Degree0, raw02Degree1, raw02Degree2, raw02Degree3, raw02Degree4]
     ],
     ![
-      ![raw_1_0_degree0, raw_1_0_degree1, raw_1_0_degree2, raw_1_0_degree3, raw_1_0_degree4],
-      ![raw_1_1_degree0, raw_1_1_degree1, raw_1_1_degree2, raw_1_1_degree3, raw_1_1_degree4],
-      ![raw_1_2_degree0, raw_1_2_degree1, raw_1_2_degree2, raw_1_2_degree3, raw_1_2_degree4]
+      ![raw10Degree0, raw10Degree1, raw10Degree2, raw10Degree3, raw10Degree4],
+      ![raw11Degree0, raw11Degree1, raw11Degree2, raw11Degree3, raw11Degree4],
+      ![raw12Degree0, raw12Degree1, raw12Degree2, raw12Degree3, raw12Degree4]
     ],
     ![
-      ![raw_2_0_degree0, raw_2_0_degree1, raw_2_0_degree2, raw_2_0_degree3, raw_2_0_degree4],
-      ![raw_2_1_degree0, raw_2_1_degree1, raw_2_1_degree2, raw_2_1_degree3, raw_2_1_degree4],
-      ![raw_2_2_degree0, raw_2_2_degree1, raw_2_2_degree2, raw_2_2_degree3, raw_2_2_degree4]
+      ![raw20Degree0, raw20Degree1, raw20Degree2, raw20Degree3, raw20Degree4],
+      ![raw21Degree0, raw21Degree1, raw21Degree2, raw21Degree3, raw21Degree4],
+      ![raw22Degree0, raw22Degree1, raw22Degree2, raw22Degree3, raw22Degree4]
     ]
   ]
 
@@ -122,9 +122,9 @@ theorem rawGraph0_eq_fundamental :
 
 /-- The complete raw (0,0), degree-zero expression is one fundamental basis vector. -/
 theorem raw_0_0_degree0_eq_fundamental :
-    raw_0_0_degree0 =
+    raw00Degree0 =
       StrataModule.basis (TautologicalStratum.fundamental 2 (Fin 1) stable) := by
-  rw [raw_0_0_degree0, RelationCertificate.interpret_apply,
+  rw [raw00Degree0, RelationCertificate.interpret_apply,
     Fin.sum_univ_succ, Fin.sum_univ_zero]
   change (1 : ℚ) • StrataModule.basis rawGraph0 + 0 = _
   rw [one_smul, add_zero, rawGraph0_eq_fundamental]
@@ -135,29 +135,29 @@ theorem rawComponent_degree_zero (a b : Fin 3) :
       StrataModule.basis (TautologicalStratum.fundamental 2 (Fin 1) stable) else 0 := by
   fin_cases a <;> fin_cases b
   · exact raw_0_0_degree0_eq_fundamental
-  · change raw_0_1_degree0 = 0
-    rw [raw_0_1_degree0, RelationCertificate.interpret_apply]
+  · change raw01Degree0 = 0
+    rw [raw01Degree0, RelationCertificate.interpret_apply]
     exact Fin.sum_univ_zero _
-  · change raw_0_2_degree0 = 0
-    rw [raw_0_2_degree0, RelationCertificate.interpret_apply]
+  · change raw02Degree0 = 0
+    rw [raw02Degree0, RelationCertificate.interpret_apply]
     exact Fin.sum_univ_zero _
-  · change raw_1_0_degree0 = 0
-    rw [raw_1_0_degree0, RelationCertificate.interpret_apply]
+  · change raw10Degree0 = 0
+    rw [raw10Degree0, RelationCertificate.interpret_apply]
     exact Fin.sum_univ_zero _
-  · change raw_1_1_degree0 = 0
-    rw [raw_1_1_degree0, RelationCertificate.interpret_apply]
+  · change raw11Degree0 = 0
+    rw [raw11Degree0, RelationCertificate.interpret_apply]
     exact Fin.sum_univ_zero _
-  · change raw_1_2_degree0 = 0
-    rw [raw_1_2_degree0, RelationCertificate.interpret_apply]
+  · change raw12Degree0 = 0
+    rw [raw12Degree0, RelationCertificate.interpret_apply]
     exact Fin.sum_univ_zero _
-  · change raw_2_0_degree0 = 0
-    rw [raw_2_0_degree0, RelationCertificate.interpret_apply]
+  · change raw20Degree0 = 0
+    rw [raw20Degree0, RelationCertificate.interpret_apply]
     exact Fin.sum_univ_zero _
-  · change raw_2_1_degree0 = 0
-    rw [raw_2_1_degree0, RelationCertificate.interpret_apply]
+  · change raw21Degree0 = 0
+    rw [raw21Degree0, RelationCertificate.interpret_apply]
     exact Fin.sum_univ_zero _
-  · change raw_2_2_degree0 = 0
-    rw [raw_2_2_degree0, RelationCertificate.interpret_apply]
+  · change raw22Degree0 = 0
+    rw [raw22Degree0, RelationCertificate.interpret_apply]
     exact Fin.sum_univ_zero _
 
 variable {K : Type u} [Field K] [Algebra ℚ K]

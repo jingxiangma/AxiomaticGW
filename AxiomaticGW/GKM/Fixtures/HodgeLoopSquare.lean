@@ -81,8 +81,8 @@ theorem map_packetPart_eq_actual_loop_square
     (hparallel : parallelFirstExpression.Compatible A F N)
     (hloop : HodgeDegreeOneRealization.loop.Compatible A F N) :
     (A 2 (Fin 1)).map LoopSquarePacketBinding.packetPart =
-      (raw_0_1_degree1Coordinates 2 •
-        (A 2 (Fin 1)).map (StrataModule.basis (raw_0_1_degree1Columns 2))) ^ 2 := by
+      (raw01Degree1Coordinates 2 •
+        (A 2 (Fin 1)).map (StrataModule.basis (raw01Degree1Columns 2))) ^ 2 := by
   change (A 2 (Fin 1)).map LoopSquarePacketBinding.packetPart =
     ((1 / 24 : ℚ) • (A 2 (Fin 1)).map (StrataModule.basis rawGraph3)) ^ 2
   rw [HodgeDegreeOneRealization.rawGraph3_eq_loop,

@@ -7,6 +7,7 @@ module
 
 public import AxiomaticGW.Surfaces.GenusTwoBlowupReconstruction
 public import AxiomaticGW.Surfaces.GenusTwoBlowupDescendants
+public import AxiomaticGW.Surfaces.GenusTwoBlowupUnitPairs
 
 /-!
 # Primitive geometric soundness for all genus-two blowup descendants
@@ -166,6 +167,76 @@ theorem queryValue?_eq_checkedEval_from_geometry (i : Fin X.blowups)
     pPsi hpPsi hpsi hfund hrows hloop hzeroTerms honeTerms hline hEzero hH hE hWoutput
     hGoutput HF V hV RT hHtwo hEtwo hBP hL pS hpS hSEL hSLB hSUA hSrows hinS houtS
     pP hpP hcP (fun b ↦ hsource (GenusTwoPsiProduct.sourceIndex b)) hProws hinP houtP q hg
+
+/-- A mixed, marked-equation or exceptional-support certificate gives the geometric value
+of its exact ordered request. The original BP and L24 equations are derived here. -/
+theorem checkedDescendant_from_geometry (i : Fin X.blowups) (q : SurfaceQuery X)
+    (hg : q.genus = 2) {v : ℚ} (hv : SurfaceGenusTwoBlowupDescendants.CheckedDescendant i q v) :
+    q.checkedEval U = some v := by
+  obtain ⟨hBP, hL⟩ := SurfaceGenusTwoBlowupReconstruction.equation_families_from_geometry
+    U P T laws H hpair Z F N J hWsource hboundary pW hpW hGsource GG hcycle pG hpG K hK
+    pPsi hpPsi hpsi hfund hrows hloop hzeroTerms honeTerms hline hEzero hH hE hWoutput
+    hGoutput HF pB hpB hlB hcB hinterior hsource hglue hcotangent RT houtB pS hpS hSEL
+    hSLB hSUA hSrows hinS (fun r ↦ houtS (r.val + 1)) hlS pP hpP hcP hProws hinP
+    (houtP 1) hlP hRpsi hRfund hRlabels hlL hpL hsL hhigh hrational hwdvv htermsL haddedL
+  exact (SurfaceGenusTwoBlowupDescendants.CheckedDescendant.from_original_equations
+    i U P T laws H hpair Z F N J hWsource hboundary pW hpW hGsource GG hcycle pG hpG K hK
+    pPsi hpPsi hpsi hfund hrows hloop hzeroTerms honeTerms hline hEzero hH hE hWoutput
+    hGoutput HF V hV RT hHtwo hEtwo hBP hL pS hpS hSEL hSLB hSUA hSrows hinS houtS
+    pP hpP hcP (fun b ↦ hsource (GenusTwoPsiProduct.sourceIndex b)) hProws hinP houtP q hg hv).2
+
+/-- For a zero result it suffices to check the dimension-compatible cotangent powers.
+The signed grading equation deals with all other powers, including at empty arity. -/
+theorem checkedZero_from_geometry (i : Fin X.blowups) (q : SurfaceQuery X) (hg : q.genus = 2)
+    (h : q.DimensionCompatible → SurfaceGenusTwoBlowupDescendants.CheckedDescendant i q 0) :
+    q.checkedEval U = some 0 := by
+  by_cases hd : q.DimensionCompatible
+  · exact checkedDescendant_from_geometry U P T laws H hpair Z F N J hWsource hboundary
+      pW hpW hGsource GG hcycle pG hpG K hK pPsi hpPsi hpsi hfund hrows hloop hzeroTerms
+      honeTerms hline hEzero hH hE hWoutput hGoutput HF pB hpB hlB hcB hinterior hsource
+      hglue hcotangent V RT houtB pS hpS hSEL hSLB hSUA hSrows hinS houtS hlS pP hpP hcP
+      hProws hinP houtP hlP hRpsi hRfund hRlabels hlL hpL hsL hhigh hrational hwdvv htermsL
+      haddedL hV hHtwo hEtwo i q hg (h hd)
+  · have hdom : q.GeometricDomain := Or.inr (by
+      simp only [StableArity, hg, Fintype.card_fin]
+      omega)
+    rw [SurfaceQuery.checkedEval_of_geometricDomain U q hdom,
+      SurfaceQuery.eval_eq_zero_of_dimension_incompatible U T q hd]
+
+/-- A verified zero on the dimension-compatible ordered basis at a given arity extends to
+arbitrary cohomology states and powers on every finite marking type of that cardinality. -/
+theorem stateZero_from_geometry (i : Fin X.blowups) (S : Type) [Fintype S] (beta : X.Curve)
+    (k : S → ℕ) (a : S → SurfaceCohomology X.blowups)
+    (h : ∀ q : SurfaceQuery X, q.genus = 2 → q.beta = beta → q.insertions.length = Fintype.card S →
+      q.DimensionCompatible → SurfaceGenusTwoBlowupDescendants.CheckedDescendant i q 0) :
+    U.invariant 2 S beta k a = 0 := by
+  classical
+  rw [← U.invariantMap_apply 2 S beta k a, SurfaceBasisLabel.multilinear_eq_sum]
+  apply Finset.sum_eq_zero
+  intro b _
+  have hs : StableArity 2 S := by simp only [StableArity]; omega
+  let key := SurfaceAncestorKey.ofLabels 2 S hs beta k b
+  let q : SurfaceQuery X := ⟨2, beta, key.orderedInsertions⟩
+  have hn : q.insertions.length = Fintype.card S := by
+    change key.orderedInsertions.length = _
+    rw [key.orderedInsertions_length]
+    simp only [key, SurfaceAncestorKey.ofLabels, Multiset.card_map,
+      Finset.card_val, Finset.card_univ]
+  have hz := checkedZero_from_geometry U P T laws H hpair Z F N J hWsource hboundary
+    pW hpW hGsource GG hcycle pG hpG K hK pPsi hpPsi hpsi hfund hrows hloop hzeroTerms
+    honeTerms hline hEzero hH hE hWoutput hGoutput HF pB hpB hlB hcB hinterior hsource
+    hglue hcotangent V RT houtB pS hpS hSEL hSLB hSUA hSrows hinS houtS hlS pP hpP hcP
+    hProws hinP houtP hlP hRpsi hRfund hRlabels hlL hpL hsL hhigh hrational hwdvv htermsL
+    haddedL hV hHtwo hEtwo i q rfl (h q rfl rfl hn)
+  have hdom : q.GeometricDomain := Or.inr (by
+    change StableArity 2 _
+    simp only [StableArity]
+    omega)
+  rw [SurfaceQuery.checkedEval_of_geometricDomain U q hdom, Option.some.injEq] at hz
+  have he : U.invariant 2 S beta k (fun s ↦ (b s).value) = q.eval U :=
+    (SurfaceAncestorKey.descendantEval_ofLabels U 2 S hs beta k b).symm.trans
+      (SurfaceAncestorKey.descendantEval_eq_ordered U key)
+  rw [U.invariantMap_apply, he, hz, mul_zero]
 
 /-- Arbitrary cohomology-state descendants at every finite marking type follow
 from the same primitive inputs. Every power and full curve class is retained. -/

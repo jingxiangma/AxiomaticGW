@@ -36,24 +36,24 @@ def externalPowers : Fin 1 → ℕ := fun _ ↦ 1
 
 /-- The four original degree-one occurrences other than the external-psi term. -/
 noncomputable def nonPsiSource : StrataModule 2 (Fin 1) :=
-  raw_0_1_degree1Coordinates 1 • StrataModule.basis (raw_0_1_degree1Columns 1) +
-    raw_0_1_degree1Coordinates 2 • StrataModule.basis (raw_0_1_degree1Columns 2) +
-    raw_0_1_degree1Coordinates 3 • StrataModule.basis (raw_0_1_degree1Columns 3) +
-    raw_0_1_degree1Coordinates 4 • StrataModule.basis (raw_0_1_degree1Columns 4)
+  raw01Degree1Coordinates 1 • StrataModule.basis (raw01Degree1Columns 1) +
+    raw01Degree1Coordinates 2 • StrataModule.basis (raw01Degree1Columns 2) +
+    raw01Degree1Coordinates 3 • StrataModule.basis (raw01Degree1Columns 3) +
+    raw01Degree1Coordinates 4 • StrataModule.basis (raw01Degree1Columns 4)
 
 /-- Retain the actual source coefficient and double only the mixed terms. -/
 noncomputable def constructedPsiPart : StrataModule 2 (Fin 1) :=
-  raw_0_1_degree1Coordinates 0 • StrataModule.mulLegPsi externalPowers
-    (raw_0_1_degree1Coordinates 0 • StrataModule.basis (raw_0_1_degree1Columns 0) +
+  raw01Degree1Coordinates 0 • StrataModule.mulLegPsi externalPowers
+    (raw01Degree1Coordinates 0 • StrataModule.basis (raw01Degree1Columns 0) +
       (2 : ℚ) • nonPsiSource)
 
 /-- The five actual target occurrences, in their original packet order. -/
 noncomputable def packetPsiPart : StrataModule 2 (Fin 1) :=
-  raw_1_1_degree2Coordinates 0 • StrataModule.basis (raw_1_1_degree2Columns 0) +
-    raw_1_1_degree2Coordinates 1 • StrataModule.basis (raw_1_1_degree2Columns 1) +
-    raw_1_1_degree2Coordinates 2 • StrataModule.basis (raw_1_1_degree2Columns 2) +
-    raw_1_1_degree2Coordinates 9 • StrataModule.basis (raw_1_1_degree2Columns 9) +
-    raw_1_1_degree2Coordinates 15 • StrataModule.basis (raw_1_1_degree2Columns 15)
+  raw11Degree2Coordinates 0 • StrataModule.basis (raw11Degree2Columns 0) +
+    raw11Degree2Coordinates 1 • StrataModule.basis (raw11Degree2Columns 1) +
+    raw11Degree2Coordinates 2 • StrataModule.basis (raw11Degree2Columns 2) +
+    raw11Degree2Coordinates 9 • StrataModule.basis (raw11Degree2Columns 9) +
+    raw11Degree2Coordinates 15 • StrataModule.basis (raw11Degree2Columns 15)
 
 /-- The original external psi column acquires its second, rather than a node, psi. -/
 theorem rawGraph20_eq_psiSquare : rawGraph20 = rawGraph1.addLegPsi externalPowers := by
@@ -87,15 +87,15 @@ theorem rawGraph22_eq_psiMarkedRight : rawGraph22 = rawGraph5.addLegPsi external
 
 /-- Bind the square coefficient once and each mixed coefficient with multiplicity two. -/
 theorem actual_coefficients :
-    raw_1_1_degree2Coordinates 15 = raw_0_1_degree1Coordinates 0 ^ 2 ∧
-      raw_1_1_degree2Coordinates 9 =
-        2 * raw_0_1_degree1Coordinates 0 * raw_0_1_degree1Coordinates 1 ∧
-      raw_1_1_degree2Coordinates 0 =
-        2 * raw_0_1_degree1Coordinates 0 * raw_0_1_degree1Coordinates 2 ∧
-      raw_1_1_degree2Coordinates 1 =
-        2 * raw_0_1_degree1Coordinates 0 * raw_0_1_degree1Coordinates 3 ∧
-      raw_1_1_degree2Coordinates 2 =
-        2 * raw_0_1_degree1Coordinates 0 * raw_0_1_degree1Coordinates 4 := by
+    raw11Degree2Coordinates 15 = raw01Degree1Coordinates 0 ^ 2 ∧
+      raw11Degree2Coordinates 9 =
+        2 * raw01Degree1Coordinates 0 * raw01Degree1Coordinates 1 ∧
+      raw11Degree2Coordinates 0 =
+        2 * raw01Degree1Coordinates 0 * raw01Degree1Coordinates 2 ∧
+      raw11Degree2Coordinates 1 =
+        2 * raw01Degree1Coordinates 0 * raw01Degree1Coordinates 3 ∧
+      raw11Degree2Coordinates 2 =
+        2 * raw01Degree1Coordinates 0 * raw01Degree1Coordinates 4 := by
   decide +kernel
 
 /-- The graph operation constructs exactly the original five target occurrences. -/
@@ -122,14 +122,14 @@ def remainderIndices : Fin 23 → Fin 28 :=
 
 /-- The remainder retains its original columns and exact coefficients. -/
 noncomputable def packetRemainder : StrataModule 2 (Fin 1) :=
-  RelationCertificate.interpret (fun i ↦ raw_1_1_degree2Columns (remainderIndices i))
-    (fun i ↦ raw_1_1_degree2Coordinates (remainderIndices i))
+  RelationCertificate.interpret (fun i ↦ raw11Degree2Columns (remainderIndices i))
+    (fun i ↦ raw11Degree2Coordinates (remainderIndices i))
 
 /-- All 28 occurrences are retained; this decomposition assumes no product validity. -/
 theorem original_packet_decomposition :
-    raw_1_1_degree2 = packetPsiPart + packetRemainder := by
+    raw11Degree2 = packetPsiPart + packetRemainder := by
   let f : Fin 28 → StrataModule 2 (Fin 1) := fun i ↦
-    raw_1_1_degree2Coordinates i • StrataModule.basis (raw_1_1_degree2Columns i)
+    raw11Degree2Coordinates i • StrataModule.basis (raw11Degree2Columns i)
   have hrest :
       (∑ j ∈ ({0, 1, 2, 9, 15} : Finset (Fin 28))ᶜ, f j) =
         ∑ i : Fin 23, f (remainderIndices i) := by
@@ -146,7 +146,7 @@ theorem original_packet_decomposition :
       Finset.sum_insert (by decide : (9 : Fin 28) ∉ ({15} : Finset (Fin 28))), Finset.sum_singleton]
     change f 0 + (f 1 + (f 2 + (f 9 + f 15))) = (((f 0 + f 1) + f 2) + f 9) + f 15
     abel
-  simp only [raw_1_1_degree2, packetRemainder, RelationCertificate.interpret_apply]
+  simp only [raw11Degree2, packetRemainder, RelationCertificate.interpret_apply]
   change (∑ i, f i) = packetPsiPart + ∑ i : Fin 23, f (remainderIndices i)
   rw [← Finset.sum_add_sum_compl ({0, 1, 2, 9, 15} : Finset (Fin 28)) f, hpsi, hrest]
 
@@ -159,9 +159,9 @@ attribute [local instance] strataRealizationModule
 /-- The constructed operation is actual multiplication by the external psi class. -/
 theorem map_packetPsiPart (A : StrataRealization C 2 (Fin 1)) (P : PsiClasses C)
     (hpsi : A.LegPsiCompatible P HodgeDegreeOneRealization.stable) :
-    A.map packetPsiPart = raw_0_1_degree1Coordinates 0 •
-      ((raw_0_1_degree1Coordinates 0 •
-          A.map (StrataModule.basis (raw_0_1_degree1Columns 0)) +
+    A.map packetPsiPart = raw01Degree1Coordinates 0 •
+      ((raw01Degree1Coordinates 0 •
+          A.map (StrataModule.basis (raw01Degree1Columns 0)) +
         (2 : ℚ) • A.map nonPsiSource) *
         P.psi 2 (Fin 1) HodgeDegreeOneRealization.stable 0) := by
   rw [packetPsiPart_eq_constructed, constructedPsiPart, map_smul,

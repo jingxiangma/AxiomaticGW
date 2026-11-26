@@ -80,19 +80,19 @@ theorem three_target_assemblies
     (hmixedRight : LoopSeparatingGysin.rightRefinement.Compatible A F N)
     (hchain : SeparatingSquareGysin.chainExpression.Compatible A F N) :
     HodgeDegreeZeroFullCoefficientReplay.Plane.candidateClass (A 2 (Fin 1)) =
-      (x ^ 2 - x * y + y ^ 2) • (A 2 (Fin 1)).map raw_0_0_degree0 +
-        (9 / 2 : Coefficient) • ((A 2 (Fin 1)).map raw_0_1_degree1) ^ 2 ∧
+      (x ^ 2 - x * y + y ^ 2) • (A 2 (Fin 1)).map raw00Degree0 +
+        (9 / 2 : Coefficient) • ((A 2 (Fin 1)).map raw01Degree1) ^ 2 ∧
     HodgeDegreeZeroFullCoefficientReplay.OneBlowup.candidateClass (A 2 (Fin 1)) =
-      (4 : Coefficient) • ((A 2 (Fin 1)).map raw_0_1_degree1) ^ 2 ∧
+      (4 : Coefficient) • ((A 2 (Fin 1)).map raw01Degree1) ^ 2 ∧
     HodgeDegreeZeroFullCoefficientReplay.TwoBlowups.candidateClass (A 2 (Fin 1)) =
-      (-(x ^ 2 - x * y + y ^ 2)) • (A 2 (Fin 1)).map raw_0_0_degree0 +
-        (7 / 2 : Coefficient) • ((A 2 (Fin 1)).map raw_0_1_degree1) ^ 2 := by
+      (-(x ^ 2 - x * y + y ^ 2)) • (A 2 (Fin 1)).map raw00Degree0 +
+        (7 / 2 : Coefficient) • ((A 2 (Fin 1)).map raw01Degree1) ^ 2 := by
   have hh := HodgeFullSquare.map_raw_0_2_eq_half_square A Fforget F N P K Qsquare Qloop Qsep Hforget hTail hTailForget
     hLoopGysin hMixedGysin hSepGysin hbasePsi hbaseFund hcorolla hκUp hpsiUp hpsiUpUp
     hfundUp hfundUpUp hloop hleft hright hκLoop hpsiLoopUp hfundLoopUp hκM hκU
     hpsiMnew hpsiUnew hfundUnew hpsiM hpsiU hdouble hparallel hmixedLeft hmixedRight hchain
-  change (A 2 (Fin 1)).map raw_0_2_degree2 =
-    (algebraMap ℚ Coefficient (1 / 2 : ℚ)) • ((A 2 (Fin 1)).map raw_0_1_degree1) ^ 2 at hh
+  change (A 2 (Fin 1)).map raw02Degree2 =
+    (algebraMap ℚ Coefficient (1 / 2 : ℚ)) • ((A 2 (Fin 1)).map raw01Degree1) ^ 2 at hh
   norm_num only [map_div₀, map_one, map_ofNat] at hh
   have h9 : (9 : Coefficient) * (1 / 2) = 9 / 2 := by ring
   have h8 : (8 : Coefficient) * (1 / 2) = 4 := by

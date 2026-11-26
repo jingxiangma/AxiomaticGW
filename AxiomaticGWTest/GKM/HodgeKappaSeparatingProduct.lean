@@ -17,20 +17,20 @@ namespace AxiomaticGWTest.GKM.HodgeKappaSeparatingProduct
 open AxiomaticGW AdmcyclesHodgeStrataCandidates TensorProduct
 
 theorem four_original_positions :
-    raw_1_1_degree2Columns 11 = rawGraph26 ∧
-    raw_1_1_degree2Columns 12 = rawGraph27 ∧
-    raw_1_1_degree2Columns 13 = rawGraph13 ∧
-    raw_1_1_degree2Columns 14 = rawGraph14 := ⟨rfl, rfl, rfl, rfl⟩
+    raw11Degree2Columns 11 = rawGraph26 ∧
+    raw11Degree2Columns 12 = rawGraph27 ∧
+    raw11Degree2Columns 13 = rawGraph13 ∧
+    raw11Degree2Columns 14 = rawGraph14 := ⟨rfl, rfl, rfl, rfl⟩
 
 theorem four_mixed_weights :
-    raw_1_1_degree2Coordinates 11 =
-        2 * raw_0_1_degree1Coordinates 1 * raw_0_1_degree1Coordinates 3 ∧
-    raw_1_1_degree2Coordinates 13 =
-        2 * raw_0_1_degree1Coordinates 1 * raw_0_1_degree1Coordinates 3 ∧
-    raw_1_1_degree2Coordinates 12 =
-        2 * raw_0_1_degree1Coordinates 1 * raw_0_1_degree1Coordinates 4 ∧
-    raw_1_1_degree2Coordinates 14 =
-        2 * raw_0_1_degree1Coordinates 1 * raw_0_1_degree1Coordinates 4 := by
+    raw11Degree2Coordinates 11 =
+        2 * raw01Degree1Coordinates 1 * raw01Degree1Coordinates 3 ∧
+    raw11Degree2Coordinates 13 =
+        2 * raw01Degree1Coordinates 1 * raw01Degree1Coordinates 3 ∧
+    raw11Degree2Coordinates 12 =
+        2 * raw01Degree1Coordinates 1 * raw01Degree1Coordinates 4 ∧
+    raw11Degree2Coordinates 14 =
+        2 * raw01Degree1Coordinates 1 * raw01Degree1Coordinates 4 := by
   decide +kernel
 
 theorem left_new_marking (S T : Type) :

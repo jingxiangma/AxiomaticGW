@@ -157,6 +157,7 @@ end AxiomaticGW.SurfaceGenusTwo
 
 namespace AxiomaticGW.L24Relation
 
+/-- Evaluate the L24 constant point contraction with the supplied lower-genus point lookups. -/
 def pointConstantWithPointLookup (X : SurfaceTarget) (cache : SurfaceGenusTwo.ResidualCache X)
     (v₀ v₁ : X.Curve → ℚ) (n : ℕ) (beta : X.Curve)
     (a : Fin 4 → SurfaceBasisLabel X) : ℚ :=

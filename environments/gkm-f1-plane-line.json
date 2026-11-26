@@ -1,0 +1,180 @@
+{
+  "cache_ephemeral": true,
+  "cases": [
+    {
+      "class": [
+        1,
+        1
+      ],
+      "equivariant": {
+        "denominator": [
+          [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ]
+        ],
+        "numerator": []
+      },
+      "genus": 2,
+      "labels": [
+        "H",
+        "pt",
+        "pt",
+        "pt"
+      ],
+      "ordinary": [
+        0,
+        1
+      ],
+      "powers": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "target": "X1"
+    },
+    {
+      "class": [
+        1,
+        1
+      ],
+      "equivariant": {
+        "denominator": [
+          [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ]
+        ],
+        "numerator": []
+      },
+      "genus": 2,
+      "labels": [
+        "pt",
+        "pt",
+        "pt"
+      ],
+      "ordinary": [
+        0,
+        1
+      ],
+      "powers": [
+        1,
+        0,
+        0
+      ],
+      "target": "X1"
+    },
+    {
+      "class": [
+        1,
+        1
+      ],
+      "equivariant": {
+        "denominator": [
+          [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ]
+        ],
+        "numerator": []
+      },
+      "genus": 2,
+      "labels": [
+        "pt",
+        "pt",
+        "pt",
+        "pt"
+      ],
+      "ordinary": [
+        0,
+        1
+      ],
+      "powers": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "target": "X1"
+    },
+    {
+      "class": [
+        1,
+        1
+      ],
+      "equivariant": {
+        "denominator": [
+          [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ]
+        ],
+        "numerator": []
+      },
+      "genus": 2,
+      "labels": [
+        "E1",
+        "pt",
+        "pt",
+        "pt"
+      ],
+      "ordinary": [
+        0,
+        1
+      ],
+      "powers": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "target": "X1"
+    }
+  ],
+  "environment": {
+    "admcycles": "1.4",
+    "sage": "10.9"
+  },
+  "input_sha256": "062a32a9919fa5ddf806c353f5bb56256ca5dca31d170c246b9bfa39c3b11376",
+  "kind": "gkm_localization.f1_plane_line",
+  "online_lookup": false,
+  "schema_version": 1,
+  "source": {
+    "project": "gkm_localization",
+    "python_sources": {
+      "gkm_localization/__init__.py": "00d7e7813c8d1d60adc432430d35fa6a4806bceee008984c2b754091354375ec",
+      "gkm_localization/hodge_integral.py": "862d4f8c9b4915b96ce9f62c789f079ea82c8fecdb43d5f1c407a00ba424d043",
+      "gkm_localization/stable_map.py": "4e88e18487577642f86bcf1d8762c8ac117d4bfe4329c095bbb6fdd38258c53a",
+      "gkm_localization/target.py": "e0466e4ea6ba1db8c584051147831f2b11e59102fba533107623549b28bfc4e5",
+      "gkm_localization/target_builders.py": "b17fb2cfb2f9db8453601bf5e7e5a571a313f58bae7755915e890206fc06b9b5"
+    },
+    "reuse_license": "not established; no producer code is vendored",
+    "revision": "a09c6625b280312721c5e0f2f915791781339aa5",
+    "schema_version": 1
+  }
+}

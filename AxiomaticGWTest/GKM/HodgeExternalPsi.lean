@@ -19,11 +19,11 @@ open AxiomaticGW.AdmcyclesHodgeStrataCandidates
 
 /-- The square occurs once, while psi-kappa and each psi-boundary term occur twice. -/
 theorem exact_target_weights :
-    raw_1_1_degree2Coordinates 15 = (1 / 144 : ℚ) ∧
-      raw_1_1_degree2Coordinates 9 = (-1 / 72 : ℚ) ∧
-      raw_1_1_degree2Coordinates 0 = (-1 / 144 : ℚ) ∧
-      raw_1_1_degree2Coordinates 1 = (-1 / 144 : ℚ) ∧
-      raw_1_1_degree2Coordinates 2 = (-1 / 144 : ℚ) := by
+    raw11Degree2Coordinates 15 = (1 / 144 : ℚ) ∧
+      raw11Degree2Coordinates 9 = (-1 / 72 : ℚ) ∧
+      raw11Degree2Coordinates 0 = (-1 / 144 : ℚ) ∧
+      raw11Degree2Coordinates 1 = (-1 / 144 : ℚ) ∧
+      raw11Degree2Coordinates 2 = (-1 / 144 : ℚ) := by
   exact ⟨rfl, rfl, rfl, rfl, rfl⟩
 
 /-- Every remainder index is distinct. -/

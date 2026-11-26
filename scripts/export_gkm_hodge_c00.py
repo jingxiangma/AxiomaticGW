@@ -183,18 +183,18 @@ def emit(packet, shared):
             for part in ['numerator', 'denominator']:
                 lines.extend([
                     '/-- Exact incoming sparse polynomial, without changing its fraction representative. -/',
-                    f'def {stem}_{part} : Fin {size} → Polynomial :=',
+                    f'def {stem}{part.capitalize()} : Fin {size} → Polynomial :=',
                     '  ' + vector([shared.polynomial_text(select(l)[part], ring=True) for l in loci]), ''])
             value_name = {'c00': 'coefficient00', 'serializedEuler': 'serializedTangentEuler',
                           'unit': 'unitRestriction'}[stem]
             lines.extend(['/-- The actual serialized numerator divided by its serialized denominator. -/',
                 f'def {value_name} (p : Fin {size}) : Coefficient :=',
-                f'  embed ({stem}_numerator p) / embed ({stem}_denominator p)', '',
+                f'  embed ({stem}Numerator p) / embed ({stem}Denominator p)', '',
                 '/-- Every serialized denominator is checked nonzero in the genuine coefficient field. -/',
                 f'theorem {stem}_denominator_ne_zero (p : Fin {size}) :',
-                f'    embed ({stem}_denominator p) ≠ 0 := by',
+                f'    embed ({stem}Denominator p) ≠ 0 := by',
                 '  fin_cases p',
-                '  all_goals norm_num only [' + simp_text([f'{stem}_denominator'] +
+                '  all_goals norm_num only [' + simp_text([f'{stem}Denominator'] +
                     shared.MAP_SIMP + shared.VECTOR_SIMP) + ']',
                 '  all_goals exact one_ne_zero', ''])
         lines.extend([
@@ -207,14 +207,14 @@ def emit(packet, shared):
             '    coefficient00 p = character (tangent p 0) * character (tangent p 1) := by',
             '  fin_cases p',
             '  all_goals norm_num only [' + simp_text([
-                'coefficient00','c00_numerator','c00_denominator','tangent','character'] +
+                'coefficient00','c00Numerator','c00Denominator','tangent','character'] +
                 shared.MAP_SIMP + shared.VECTOR_SIMP) + ']',
             '  all_goals ring', '',
             '/-- The incoming unit restriction is exactly one at every fixed point. -/',
             f'theorem unitRestriction_eq_one (p : Fin {size}) : unitRestriction p = 1 := by',
             '  fin_cases p',
             '  all_goals norm_num only [' + simp_text([
-                'unitRestriction','unit_numerator','unit_denominator'] + shared.MAP_SIMP +
+                'unitRestriction','unitNumerator','unitDenominator'] + shared.MAP_SIMP +
                 shared.VECTOR_SIMP) + ']', '',
             '/-- The checked producer tangent pair gives the independently held Euler factor. -/',
             f'theorem coefficient00_eq_requestEuler (p : Fin {size}) :',

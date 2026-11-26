@@ -18,10 +18,10 @@ namespace AxiomaticGWTest.GKM.CorollaForgetful
 open AxiomaticGW AdmcyclesHodgeStrataCandidates
 
 /-- The actual finite pushforward targets position sixteen's graph. -/
-theorem actual_packet_column : raw_1_1_degree2Columns 16 = rawGraph21 := rfl
+theorem actual_packet_column : raw11Degree2Columns 16 = rawGraph21 := rfl
 
 /-- No mixed-term factor two is introduced for this square coefficient. -/
-theorem actual_packet_coefficient : raw_1_1_degree2Coordinates 16 = (1 / 144 : ℚ) := rfl
+theorem actual_packet_coefficient : raw11Degree2Coordinates 16 = (1 / 144 : ℚ) := rfl
 
 /-- Both output terms are bound to the actual square column and the existing
 kappa-two generator, with neither class value supplied. -/

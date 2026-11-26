@@ -14,11 +14,11 @@ open scoped BigOperators
 universe u
 
 /-- The frame includes the complete top-degree expression before scalar projection. -/
-theorem top_component_retained : rawComponent 2 2 4 = raw_2_2_degree4 := rfl
+theorem top_component_retained : rawComponent 2 2 4 = raw22Degree4 := rfl
 
 /-- Both complete ordered mixed expressions remain separate source entries. -/
 theorem ordered_components_retained :
-    rawComponent 1 2 3 = raw_1_2_degree3 ∧ rawComponent 2 1 3 = raw_2_1_degree3 :=
+    rawComponent 1 2 3 = raw12Degree3 ∧ rawComponent 2 1 3 = raw21Degree3 :=
   ⟨rfl, rfl⟩
 
 /-- All 45 source expressions carry their checked stable-curve codimension. -/
@@ -32,7 +32,7 @@ attribute [local instance] strataRealizationModule
 /-- The nontrivial 122-term raw expression has zero scalar projection by its degree alone. -/
 theorem mixed_positive_scalar_zero (D : ConnectedDegreeZero C)
     (A : StrataRealization C 2 (Fin 1)) :
-    D.scalar 2 (Fin 1) stable (A.map raw_1_2_degree3) = 0 :=
+    D.scalar 2 (Fin 1) stable (A.map raw12Degree3) = 0 :=
   D.scalar_map_eq_zero_of_mem_degree A stable (by decide) raw_1_2_degree3_mem_degree
 
 /-- Rational linear combinations, not only individual basis graphs, realize in the same degree. -/

@@ -23,10 +23,10 @@ ASSEMBLY = 'AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroRawAssembly.lean'
 DECODER = 'scripts/export_admcycles_hodge_certificate.py'
 PINS = {
     RAW: '1ec7e5df068bd9edbe896dc5bf6f20f59b0e42e81896d2e4364f11efc0c6ec32',
-    RAW_LEAN: '244eaf08f741057b92113ee4b0c4a48b2185b55350473bc28286460ea07b651c',
-    ISO_LEAN: 'ddb7e9cfb94ced658a96883782aed3072ae8d7fe1763ff4390e021dcafe3f26a',
-    ASSEMBLY: 'a3d9c5ef4e56e42f246add66295653b2698974c9f16874e6a3b15bc5a9275e8b',
-    DECODER: 'adce4b8eaf05e29b952aa23d5c0528446653eb6c0d7f24fec16dbafaf954646d',
+    RAW_LEAN: '423a3b07dc5bf612d824472708ad0cf79a5f445f5280a4ad0f649958770d83ed',
+    ISO_LEAN: 'deeb0b19889b266faddfac1fce8981ca7ccda04bb220806d10459571116389fc',
+    ASSEMBLY: 'b0c2ebe480c81ee7288b302e3cfcbac6f10778caf4765eb6770c6d3a37fcfa51',
+    DECODER: '78697c31d8b9336984c79d78066f87c4fe90743db9828fed90a7ce480ef5895d',
 }
 WITNESS_SHA = 'a68d166f6b3063ac4295b8104304e0644f2caca47d6f1a869a5d846fb591cef1'
 NS = 'AxiomaticGW.GKM.HodgeDegreeTwoRawRelation'
@@ -178,13 +178,15 @@ def emit(raw, w, shared, mappings):
             proofs[key] = name
             I, J = original['incidence_declaration'], representative['incidence_declaration']
             h = r['hint']
+            # An identity hint must still identify its independently indexed witness representative.
+            rhs = f"representatives {r['representative_index']}" if G == H else H
             txt = lambda x: str(x).lower()
             lines += ['/-- Proposed vertex, edge and ordered-branch bijections. -/',
                 f'def {hname} : GraphIsomorphismHint where',
                 f"  vertices := {txt(h['vertices'])}", f"  edges := {txt(h['edges'])}",
                 f"  swaps := {txt(h['swaps'])}", '',
                 '/-- Kernel-checked preservation of every source decoration. -/',
-                f'theorem {name} : {G} = {H} :=',
+                f'theorem {name} : {G} = {rhs} :=',
                 '  TautologicalStratum.mk_eq_mk_of_isomorphic?',
                 '    (DecoratedStableGraph.toDecoration_totalGenus',
                 f'      {I}Candidate {I}Valid {G}Exponents)',
@@ -197,7 +199,7 @@ def emit(raw, w, shared, mappings):
             'isomorphism_theorem': proofs[key]})
     for a, b, pair_index in [(1, 1, 4), (0, 2, 2)]:
         selected = [r for r in bindings if r['source']['pair_index'] == pair_index]
-        name, index = f'raw_{a}_{b}_degree2', f'index_{a}_{b}'
+        name, index = f'raw{a}{b}Degree2', f'index_{a}_{b}'
         target = '(2 : ℚ) • collectedCoordinates' if pair_index == 4 else 'collectedCoordinates'
         lines += ['/-- One representative lookup for every original occurrence. -/',
             f'def {index} : Fin {len(selected)} → Fin 16 :=',
@@ -225,19 +227,19 @@ def emit(raw, w, shared, mappings):
             f'grouped_{a}_{b}_eq', f'raw_{a}_{b}_eq_collected']]
     lines += [
         '/-- Equality of these two actual raw expressions, before any relation quotient. -/',
-        'theorem raw_degree_two_equal : raw_1_1_degree2 = (2 : ℚ) • raw_0_2_degree2 := by',
+        'theorem raw_degree_two_equal : raw11Degree2 = (2 : ℚ) • raw02Degree2 := by',
         '  rw [raw_1_1_eq_collected, raw_0_2_eq_collected, map_smul]', '',
         '/-- Rational linearity transfers the exact equality to the existing realization. -/',
         'theorem map_raw_degree_two_equal {C : StableCurveCohomology Coefficient}',
         '    (A : StrataRealization C 2 (Fin 1)) :',
-        '    A.map raw_1_1_degree2 = (2 : Coefficient) • A.map raw_0_2_degree2 := by',
+        '    A.map raw11Degree2 = (2 : Coefficient) • A.map raw02Degree2 := by',
         '  rw [raw_degree_two_equal, two_smul, map_add, two_smul]', '',
         '/-- The complete plane assembly needs only the original raw unit and (0,2) classes. -/',
         'theorem plane_candidateClass_eq_raw_degree_two',
         '    {C : StableCurveCohomology Coefficient} (A : StrataRealization C 2 (Fin 1)) :',
         '    HodgeDegreeZeroFullCoefficientReplay.Plane.candidateClass A =',
-        '      (x ^ 2 - x * y + y ^ 2) • A.map raw_0_0_degree0 +',
-        '      (9 : Coefficient) • A.map raw_0_2_degree2 := by',
+        '      (x ^ 2 - x * y + y ^ 2) • A.map raw00Degree0 +',
+        '      (9 : Coefficient) • A.map raw02Degree2 := by',
         '  rw [HodgeDegreeZeroRawAssembly.plane_candidateClass_eq_raw_regular,',
         '    map_raw_degree_two_equal, smul_smul, add_assoc, ← add_smul]',
         '  norm_num only', '',
@@ -245,15 +247,15 @@ def emit(raw, w, shared, mappings):
         'theorem oneBlowup_candidateClass_eq_raw_degree_two',
         '    {C : StableCurveCohomology Coefficient} (A : StrataRealization C 2 (Fin 1)) :',
         '    HodgeDegreeZeroFullCoefficientReplay.OneBlowup.candidateClass A =',
-        '      (8 : Coefficient) • A.map raw_0_2_degree2 := by',
+        '      (8 : Coefficient) • A.map raw02Degree2 := by',
         '  rw [HodgeDegreeZeroRawAssembly.oneBlowup_candidateClass_eq_raw_regular,',
         '    map_raw_degree_two_equal, smul_smul]', '  norm_num only', '',
         '/-- The complete second blowup assembly preserves its signed raw unit term. -/',
         'theorem twoBlowups_candidateClass_eq_raw_degree_two',
         '    {C : StableCurveCohomology Coefficient} (A : StrataRealization C 2 (Fin 1)) :',
         '    HodgeDegreeZeroFullCoefficientReplay.TwoBlowups.candidateClass A =',
-        '      (-(x ^ 2 - x * y + y ^ 2)) • A.map raw_0_0_degree0 +',
-        '      (7 : Coefficient) • A.map raw_0_2_degree2 := by',
+        '      (-(x ^ 2 - x * y + y ^ 2)) • A.map raw00Degree0 +',
+        '      (7 : Coefficient) • A.map raw02Degree2 := by',
         '  rw [HodgeDegreeZeroRawAssembly.twoBlowups_candidateClass_eq_raw_regular,',
         '    map_raw_degree_two_equal, smul_smul, add_assoc, ← add_smul]',
         '  norm_num only', '', 'end', '', f'end {NS}', '']
@@ -283,7 +285,7 @@ noncomputable section
 theorem exact_relation_under_linear_map
     (M : Type) [AddCommGroup M] [Module ℚ M]
     (f : StrataModule 2 (Fin 1) →ₗ[ℚ] M) :
-    f raw_1_1_degree2 = (2 : ℚ) • f raw_0_2_degree2 := by
+    f raw11Degree2 = (2 : ℚ) • f raw02Degree2 := by
   rw [raw_degree_two_equal, map_smul]
 
 /-- The original degree-two expression is retained, rather than replaced by zero. -/
@@ -299,19 +301,19 @@ attribute [local instance] strataRealizationModule
 theorem oneBlowup_complete_class {C : StableCurveCohomology Coefficient}
     (A : StrataRealization C 2 (Fin 1)) :
     HodgeDegreeZeroFullCoefficientReplay.OneBlowup.candidateClass A =
-      (8 : Coefficient) • A.map raw_0_2_degree2 :=
+      (8 : Coefficient) • A.map raw02Degree2 :=
   oneBlowup_candidateClass_eq_raw_degree_two A
 
 /-- The two surfaces differ by the actual unit term and one copy of the degree-two class. -/
 theorem blowup_complete_class_difference {C : StableCurveCohomology Coefficient}
     (A : StrataRealization C 2 (Fin 1)) :
     HodgeDegreeZeroFullCoefficientReplay.TwoBlowups.candidateClass A +
-      (x ^ 2 - x * y + y ^ 2) • A.map raw_0_0_degree0 -
+      (x ^ 2 - x * y + y ^ 2) • A.map raw00Degree0 -
       HodgeDegreeZeroFullCoefficientReplay.OneBlowup.candidateClass A =
-      -A.map raw_0_2_degree2 := by
+      -A.map raw02Degree2 := by
   rw [twoBlowups_candidateClass_eq_raw_degree_two, oneBlowup_candidateClass_eq_raw_degree_two]
   rw [show (8 : Coefficient) = (7 : Coefficient) + 1 by norm_num only,
-    add_smul (7 : Coefficient) 1 (A.map raw_0_2_degree2), one_smul]
+    add_smul (7 : Coefficient) 1 (A.map raw02Degree2), one_smul]
   simp only [neg_smul]
   abel
 

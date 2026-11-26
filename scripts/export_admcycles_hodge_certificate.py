@@ -163,7 +163,8 @@ def long_vector(items):
 
 
 def component_source(a, b, degree, terms, indices, shared):
-    name = f'raw_{a}_{b}_degree{degree}'
+    name = f'raw{a}{b}Degree{degree}'
+    theorem_stem = f'raw_{a}_{b}_degree{degree}'
     n = len(terms)
     column_names = [f'rawGraph{indices[graph_key(t["graph"])]}' for t in terms]
     coordinate_text = [shared.rational_text(shared.rational(t['coefficient'])) for t in terms]
@@ -178,16 +179,16 @@ def component_source(a, b, degree, terms, indices, shared):
         f'def {name}Coordinates : RelationCertificate.Coordinates {n} :=',
         long_vector(coordinate_text), '',
         '/-- Every source column has the recorded edge-plus-decoration degree. -/',
-        f'theorem {name}ColumnsCodimension :',
+        f'theorem {theorem_stem}ColumnsCodimension :',
         f'    ∀ i, ({name}Columns i).codimension = {degree} := by',
         *proofs, '',
         '/-- Formal raw representative only; its name does not identify a geometric Hodge class. -/',
         f'noncomputable def {name} : StrataModule 2 (Fin 1) :=',
         f'  RelationCertificate.interpret {name}Columns {name}Coordinates', '',
         '/-- Homogeneity in the existing free rational strata module. -/',
-        f'theorem {name}_mem_degree : {name} ∈ StrataModule.degree {degree} :=',
+        f'theorem {theorem_stem}_mem_degree : {name} ∈ StrataModule.degree {degree} :=',
         '  RelationCertificate.interpret_mem_degree',
-        f'    {name}Columns {name}ColumnsCodimension {name}Coordinates', '',
+        f'    {name}Columns {theorem_stem}ColumnsCodimension {name}Coordinates', '',
     ])
 
 
@@ -253,19 +254,19 @@ def consumer_source():
         'namespace AxiomaticGWTest.AdmcyclesHodgeStrataCandidates', '',
         'open AxiomaticGW', 'open AxiomaticGW.AdmcyclesHodgeStrataCandidates', '',
         '/-- The highest nonempty component uses all node/kappa/psi degree accounting. -/',
-        'theorem raw_top_degree : raw_2_2_degree4 ∈ StrataModule.degree 4 :=',
+        'theorem raw_top_degree : raw22Degree4 ∈ StrataModule.degree 4 :=',
         '  raw_2_2_degree4_mem_degree', '',
         '/-- Both ordered mixed representatives are retained independently. -/',
         'theorem ordered_mixed_degrees :',
-        '    raw_1_2_degree3 ∈ StrataModule.degree 3 ∧',
-        '      raw_2_1_degree3 ∈ StrataModule.degree 3 :=',
+        '    raw12Degree3 ∈ StrataModule.degree 3 ∧',
+        '      raw21Degree3 ∈ StrataModule.degree 3 :=',
         '  ⟨raw_1_2_degree3_mem_degree, raw_2_1_degree3_mem_degree⟩', '',
         '/-- An explicit empty degree component is the zero formal expression. -/',
-        'theorem empty_component_zero : raw_0_0_degree4 = 0 := by',
-        '  rw [raw_0_0_degree4, RelationCertificate.interpret_apply]',
+        'theorem empty_component_zero : raw00Degree4 = 0 := by',
+        '  rw [raw00Degree4, RelationCertificate.interpret_apply]',
         '  exact Fin.sum_univ_zero _', '',
         '/-- The empty component remains in its recorded degree subspace. -/',
-        'theorem empty_component_degree : raw_0_0_degree4 ∈ StrataModule.degree 4 :=',
+        'theorem empty_component_degree : raw00Degree4 ∈ StrataModule.degree 4 :=',
         '  raw_0_0_degree4_mem_degree', '',
         '/-- The degree-zero input is a stable genus-two marked vertex. -/',
         'theorem degree_zero_column_valid : rawIncidence0Candidate.Valid 2 := rawIncidence0Valid', '',

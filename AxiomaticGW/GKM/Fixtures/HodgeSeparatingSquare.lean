@@ -57,12 +57,12 @@ theorem rawGraph16_eq_chain : rawGraph16 = chainExpression.stratum := by
 
 /-- All six incoming positions, including both equal chain occurrences. -/
 noncomputable def packetPart : StrataModule 2 (Fin 1) :=
-  raw_1_1_degree2Coordinates 5 • StrataModule.basis (raw_1_1_degree2Columns 5) +
-  raw_1_1_degree2Coordinates 6 • StrataModule.basis (raw_1_1_degree2Columns 6) +
-  raw_1_1_degree2Coordinates 7 • StrataModule.basis (raw_1_1_degree2Columns 7) +
-  raw_1_1_degree2Coordinates 8 • StrataModule.basis (raw_1_1_degree2Columns 8) +
-  raw_1_1_degree2Coordinates 19 • StrataModule.basis (raw_1_1_degree2Columns 19) +
-  raw_1_1_degree2Coordinates 20 • StrataModule.basis (raw_1_1_degree2Columns 20)
+  raw11Degree2Coordinates 5 • StrataModule.basis (raw11Degree2Columns 5) +
+  raw11Degree2Coordinates 6 • StrataModule.basis (raw11Degree2Columns 6) +
+  raw11Degree2Coordinates 7 • StrataModule.basis (raw11Degree2Columns 7) +
+  raw11Degree2Coordinates 8 • StrataModule.basis (raw11Degree2Columns 8) +
+  raw11Degree2Coordinates 19 • StrataModule.basis (raw11Degree2Columns 19) +
+  raw11Degree2Coordinates 20 • StrataModule.basis (raw11Degree2Columns 20)
 
 theorem packetPart_eq_raw_sum :
     packetPart = (1 / 144 : ℚ) •
@@ -144,10 +144,10 @@ theorem map_packetPart_eq_actual_separating_square
     (hpsiU : (A 1 UnmarkedLabels).LegPsiCompatible P unmarkedStable)
     (hchain : chainExpression.Compatible A F N) :
     (A 2 (Fin 1)).map packetPart =
-      ((raw_0_1_degree1Coordinates 3 •
-        (A 2 (Fin 1)).map (StrataModule.basis (raw_0_1_degree1Columns 3))) +
-       (raw_0_1_degree1Coordinates 4 •
-        (A 2 (Fin 1)).map (StrataModule.basis (raw_0_1_degree1Columns 4)))) ^ 2 := by
+      ((raw01Degree1Coordinates 3 •
+        (A 2 (Fin 1)).map (StrataModule.basis (raw01Degree1Columns 3))) +
+       (raw01Degree1Coordinates 4 •
+        (A 2 (Fin 1)).map (StrataModule.basis (raw01Degree1Columns 4)))) ^ 2 := by
   rw [map_packetPart_eq_raw_square A F N P H hsep hpsiM hpsiU hchain]
   change (1 / 144 : ℚ) • (A 2 (Fin 1)).map (StrataModule.basis rawGraph4) ^ 2 =
     ((1 / 24 : ℚ) • (A 2 (Fin 1)).map (StrataModule.basis rawGraph4) +

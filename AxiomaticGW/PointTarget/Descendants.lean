@@ -178,6 +178,22 @@ def dvvMergeWeight (k d : ℕ) : ℚ :=
   (oddDoubleFactorial (k + d) : ℚ) /
     if d = 0 then 1 else oddDoubleFactorial (d - 1)
 
+/-- The merged, nonseparating and separating terms of a DVV row. Every splitting
+uses the actual subset of surviving marking labels and its complement. -/
+def dvvContractions {A : Type*} [AddCommMonoid A]
+    (scale : ℚ → A → A) (product : A → A → A)
+    (J : (g : ℕ) → (S : Type) → [Fintype S] → (S → ℕ) → A)
+    (g k : ℕ) (S : Type) [Fintype S] [DecidableEq S] (d : S → ℕ) : A :=
+  (∑ s, scale (dvvMergeWeight k (d s)) (J g S (Function.update d s (d s + k)))) +
+    scale (1 / 2) (if k = 0 then 0 else ∑ ab ∈ Finset.antidiagonal (k - 1),
+      scale ((oddDoubleFactorial ab.1 : ℚ) * oddDoubleFactorial ab.2)
+        ((if g = 0 then 0 else J (g - 1) (Option (Option S)) (fun x ↦ match x with
+          | none => ab.1 | some none => ab.2 | some (some s) => d s)) +
+          ∑ T ∈ (Finset.univ : Finset S).powerset, ∑ g₁ ∈ Finset.range (g + 1),
+            product (J g₁ (Option {s // s ∈ T}) (fun | none => ab.1 | some s => d s.1))
+              (J (g - g₁) (Option {s // s ∈ (Finset.univ : Finset S) \ T})
+                (fun | none => ab.2 | some s => d s.1))))
+
 /-- The all-genus DVV recursion for point-target psi-class intersections.
 
 The intersection-number definition supplies the unstable value `0`; the
@@ -190,27 +206,7 @@ def DVVRecursion (P : PsiClasses C) (I : StableCurveIntegration C) : Prop :=
     algebraMap ℚ R (oddDoubleFactorial (k + 1) : ℚ) *
         intersectionNumber P I g (Option S)
           (fun | none => k + 1 | some s => d s) =
-      (∑ s, algebraMap ℚ R (dvvMergeWeight k (d s)) *
-        intersectionNumber P I g S (Function.update d s (d s + k))) +
-      algebraMap ℚ R (1 / 2 : ℚ) *
-        (if _hk : k = 0 then (0 : R) else
-          ∑ ab ∈ Finset.antidiagonal (k - 1),
-            algebraMap ℚ R
-                ((oddDoubleFactorial ab.1 : ℚ) *
-                  oddDoubleFactorial ab.2) *
-              ((if _hg : g = 0 then (0 : R) else
-                  intersectionNumber P I (g - 1) (Option (Option S))
-                    (fun x ↦ match x with
-                      | none => ab.1
-                      | some none => ab.2
-                      | some (some s) => d s)) +
-                ∑ T ∈ (Finset.univ : Finset S).powerset,
-                  ∑ g₁ ∈ Finset.range (g + 1),
-                    intersectionNumber P I g₁ (Option {s // s ∈ T})
-                        (fun | none => ab.1 | some s => d s.1) *
-                      intersectionNumber P I (g - g₁)
-                        (Option {s // s ∈ (Finset.univ : Finset S) \ T})
-                        (fun | none => ab.2 | some s => d s.1)))
+      dvvContractions (fun c x ↦ algebraMap ℚ R c * x) (· * ·) (intersectionNumber P I) g k S d
 
 end PointTarget
 

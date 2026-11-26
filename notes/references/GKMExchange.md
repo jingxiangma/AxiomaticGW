@@ -144,6 +144,61 @@ These finite checks do not prove the fans' identification with geometric surface
 
 `transport_correct`, `transport_injective`, `transport_add`, and `energy_correct` hold for arbitrary effective classes, including exceptional components; they do not merely test energy-twelve samples. `edge_firstChern` connects the normal degree to the existing actual divisor pairing. `intersection_trace` uses the accepted state-space restrictions and Euler factors, and `intersections_specialize` proves regular ordinary values for the complete sums. Closed finite checks use ordinary kernel-checked `decide`, and field identities use symbolic arithmetic. The certificate supplies no stable-map localization formula.
 
+## Connected graph support on the exceptional face
+
+For the two-point blowup write the full effective class as \((a,b,c)\) in \((E_1,E_2,L)\), where \(L=H-E_1-E_2\). At \(c=0\), connected fixed-graph support exists **if and only if** \(a=0\) or \(b=0\). The accepted edge table has just two edges on this face. Edge index 2 joins fixed points 1 and 2 and carries \(E_1\). Edge index 4 joins fixed points 3 and 4 and carries \(E_2\). Each source edge contributes its positive covering degree times the full target edge class. A vanishing coordinate forces every source edge onto the same face, and connectivity keeps every vertex image on one side of the cut. The origin has a contracted-vertex support. Each positive axis has a single covered edge in either orientation. These existence statements concern decorated incidence before genus and marking constraints. [Pinned edge table](../../AxiomaticGW/GKM/Fixtures/CurveReplay.lean) · [General support lemma](../../AxiomaticGW/GKM/FixedGraphSupport.lean) · [Exact face classification](../../AxiomaticGW/GKM/Fixtures/BlowupTwoExceptionalGraphSupport.lean)
+
+In particular \((1,1,0)\) has empty connected support at every genus and number of markings. Any finite sum of contributions indexed by such supports is zero in every additive coefficient group or monoid, including a class-valued sum before integration. Identification of an actual geometric CohFT class with a virtual-localization sum still requires the geometric localization and stabilization comparison. Adding \(L\) allows a connected three-edge path at \((1,1,1)\). [Class-sum theorem](../../AxiomaticGW/GKM/Fixtures/BlowupTwoExceptionalGraphSupport.lean) · [Covered-edge and connecting-path controls](../../AxiomaticGWTest/GKM/BlowupTwoExceptionalGraphSupport.lean)
+
+The pinned `StableMapsGKM.fixed_loci` returns decorated fixed graphs before integration. For \((1,1,0)\), its nine enumerations at \(g,n\in\{0,1,2\}\) all return the empty set. The same check replays both pure exceptional endpoints and a connected graph through \(L\). The raw `StableMapGKM` constructor accepts the disconnected union of the two exceptional edges, so testing its `check()` in isolation would miss the connected-domain requirement. The enumerator grows connected graphs from a vertex or a tree. Its `localization_contribution` method returns a rational function after evaluating the vertex factors. [Pinned-source graph check](../../scripts/check_gkm_exceptional_graph_support.py)
+
+```bash
+lake build AxiomaticGWTest.GKM.BlowupTwoExceptionalGraphSupport
+/opt/homebrew/Caskroom/miniforge/base/envs/axiomatic-gw-sage/bin/python -B \
+  scripts/check_gkm_exceptional_graph_support.py --producer /Users/jma/Documents/gitlab/gkm_localisation
+```
+
+For a \(d\)-sheeted exceptional cover, write \(w\) for the primitive oriented tangent weight and \(t\) for the normal weight at that endpoint. The native normal obstruction is \(\prod_{j=1}^{d-1}(t+jw/d)\). The edge factor multiplies it by \((-1)^d/((d!)^2(w/d)^{2d})\). Reversing the edge sends \((w,t)\) to \((-w,t+w)\) and reverses the product indices. The resulting field element is identical. Every individual edge and every vertex tangent normalization in a connected exceptional support transports under the appropriate character substitution. On the unmarked single-cover graph the two unstable vertices and the order-\(d\) deck group give a total of \(-(w/d)^2/d\) times the edge factor. The pinned producer checks both orientations in degrees one through six on all three exceptional curves. [Multiple-cover proof](../../AxiomaticGW/GKM/Fixtures/ExceptionalCoverFactors.lean) · [Native check](../../scripts/check_gkm_exceptional_genus_two.py)
+
+At a genus-two surface vertex, all incident flag powers are enumerated by their exact sum after subtracting the marked powers and both Hodge indices. The eight seeded Hodge recurrences then determine the complete source factor at arbitrary valence. It respects changes of characters and permutations of the two tangent directions. For the graph in class \(2E\) with two unramified rational leaves and a genus-two center, Lean identifies the full curve coordinates and the two-element symmetry group. At \((x,y)=(2,5)\) on the first exceptional axis, putting \(\tau_3(E)\) on the center gives the vertex value \(-199/466560\) and signed graph value \(-199/116640\). Putting \(\tau_1(E),\tau_2(E)\) on the center gives \(1/2916\) and \(2/729\). These individual contributions retain their exact rational functions before choosing torus weights. Geometric interpretation requires the Hodge input and virtual localization. [Vertex formula](../../AxiomaticGW/GKM/GenusTwoLocalizationVertex.lean) · [Transport on the exceptional axes](../../AxiomaticGW/GKM/Fixtures/ExceptionalGenusTwoVertexTransport.lean) · [Bivalent fixed locus](../../AxiomaticGW/GKM/Fixtures/ExceptionalDoubleCoverChain.lean)
+
+For an arbitrary number of flags, the source curve now has a class in rational stable-curve cohomology tensored with the character field. At tangent weight $u$ its rank-two Hodge factor is $u-\lambda_1+\lambda_2/u$. The flag series at nonzero weight $w$ is a genuine inverse of $w-\psi$ because the next cotangent power beyond the dimension vanishes. Multiplication and integration of these factors give exactly the finite Hodge sum, including the sign and the order of the markings. The calculation requires stable-curve cohomology and the two Hodge classes as geometric inputs. Assembling the global fixed-locus pushforward still requires the virtual localization comparison. [Class-level proof](../../AxiomaticGW/GKM/GenusTwoLocalizationIntegrand.lean) · [Integrated bivalent example](../../AxiomaticGWTest/GKM/GenusTwoLocalizationIntegrand.lean) · [Liu–Sheshmani localization formula](https://arxiv.org/abs/1407.1370)
+
+The forgetful pushforward derives the string and dilaton equations for integrals of a pulled-back Hodge class times any cotangent monomial. The string sum counts repeated markings separately. With the three-point volume normalized to one and $\kappa_0=2$ on the unmarked genus-two curve, dilaton gives $2+n$ with $n$ surviving markings. Hodge naturality also forces every Hodge monomial of codimension greater than three to vanish on each marked space. A one-marked identification $\lambda_1^2=2\lambda_2$ therefore determines the square at every arity and eliminates one of the eight numerical seed comparisons. The bivalent source $-199/466560$ follows from the factored class and the remaining seven seed evaluations. Identifying the actual Hodge classes with the decoded admcycles classes still requires geometric input. [Forgetful integral identities](../../AxiomaticGW/Tautological/ForgetfulIntegrals.lean) · [Class identities](../../AxiomaticGW/GKM/GenusTwoHodgeProducts.lean) · [Seven-seed integration theorem](../../AxiomaticGW/GKM/Fixtures/GenusTwoHodgeSeedGeometry.lean)
+
+The point-target DVV relation gives three of those seven numbers. The finite expansions of $\langle\tau_4\rangle_2$, $\langle\tau_2\tau_3\rangle_2$ and $\langle\tau_2^3\rangle_2$ collect to constant polynomials $1/1152$, $29/5760$ and $7/240$. Every term retains the genus and the powers at its own marks, and each separating term retains its labeled subset. The geometric inputs for these deductions are DVV, the three-point volume one and $\langle\tau_1\rangle_1=1/24$. The four remaining integrands are $\lambda_1\psi^3$, $\lambda_1\psi_1^2\psi_2^2$, $\lambda_2\psi^2$ and the unmarked $\lambda_1\lambda_2$. At opposite nonzero tangent characters the rank-two Euler factors multiply to $-u^2$ before integration under the same one-marked square identification. [Point-target calculation](../../AxiomaticGW/PointTarget/DVVCalculation.lean) · [Four-input vertex theorem](../../AxiomaticGW/GKM/Fixtures/GenusTwoHodgeDVV.lean) · [Opposite tangent factors](../../AxiomaticGW/GKM/GenusTwoHodgeProducts.lean)
+
+A second route derives all eight genus-two numbers from class identities. The genus-two Picard row gives $10\lambda_1=\tfrac12\xi_{\rm irr,*}1+2\xi_{1,*}1$. The two graph integrals against $\psi^3$ are $1/24$ and zero. After adding a marking, the corresponding integrals against $\psi_1^2\psi_2^2$ are $1/6$ and $1/576$. The Hodge restriction on the nonseparating normalization has a trivial quotient. On the separating normalization its two elliptic lines give a sum for the first Chern class and a product for the second. Identifying each elliptic line with $1/24$ of the labeled rational self-gluing, together with the one-marked rank-two square, gives $\int\lambda_2\psi^2=7/5760$ and $\int\lambda_1\lambda_2=1/5760$. The original genus-one cotangent relation fixes the elliptic normalization from the three-point volume. The realization of these identities in the chosen curve model and virtual localization for the target remain geometric inputs. [Picard computation](../../AxiomaticGW/GKM/Fixtures/GenusTwoHodgePicardMoments.lean) · [Boundary restrictions](../../AxiomaticGW/GKM/Fixtures/GenusTwoHodgeNormalization.lean) · [Geometric vertex](../../AxiomaticGW/GKM/Fixtures/GenusTwoHodgeGeometricVertex.lean)
+
+On the doubled strict line, the original GKM producer independently gives $-107/38720$ at $(x,y)=(11,3)$ for the bivalent graph with a central $\tau_3(E_2)$ insertion. Lean checks its signed field expression and the factor of two from interchanging the leaves. For the doubled exceptional curves, the native transport checker compares the individual factors, incidence and all graph symmetries across 318 fixed loci on three curves. [Strict-line graph](../../AxiomaticGW/GKM/Fixtures/StrictLineDoubleCoverChain.lean) · [Native transport checker](../../scripts/check_gkm_double_exceptional_transport.py)
+
+The second Chern packet has a direct codimension-two certificate. Eleven of the fourteen original PPZ rows prove \(960\lambda_2=\xi_{\mathrm{dbl},*}1+4(\xi_{\mathrm{marked},*}1+\xi_{\mathrm{unmarked},*}1)\) in the seventeen-column presentation. The first term is the labeled double loop. The two mixed graphs put a self-gluing on opposite sides of the separating node. Multiplying the Picard relation by \(\lambda_1\) and restricting to the boundary gives twice the same \(\lambda_2\). Thus the source identification of the two Chern packets, the PPZ rows and the Hodge restrictions suffice for the one-marked square. The formula for the primitive cubic exceptional descendant uses this proof and integrates all six signed loci. Its equivariant value is \((x+y)/240\) on either first exceptional axis and \((y-2x)/240\) on the second axis of the two-point blowup. Each specializes to zero. [Second Chern certificate](../../AxiomaticGW/GKM/Fixtures/GenusTwoHodgeNormalizedPacket.lean) · [Six integrated loci](../../AxiomaticGW/GKM/Fixtures/ExceptionalCubicGeometricLoci.lean) · [Replayable query](../../environments/gkm-research-bl2-exceptional-cubic.lean)
+
+### Surface covers and source vertices
+
+For a cover of degree $d$, write $u=w/d$ for the outgoing tangent, $n$ for the transverse character, and $k=da$ for the pullback of the normal degree $a$. If $k\ge0$, the normal contribution is the reciprocal of $\prod_{j=0}^{k}(n-ju)$. If $k<0$, it is $\prod_{j=1}^{-k-1}(n+ju)$. Reversing the cover sends $(u,n)$ to $(-u,n-ku)$ and preserves the entire edge factor, including the tangent deformation. The two integral characters are independent on each of the twelve invariant curves of the fixed fans. This gives nonzero denominators over the original field for every covering degree. Sage independently evaluated every wall at one, two and three sheets. [Orientation and edge weights](../../AxiomaticGW/GKM/SurfaceLocalizationEdge.lean) · [Denominator proof](../../AxiomaticGW/GKM/SurfaceEdgeNonvanishing.lean) · [All three fans](../../AxiomaticGW/GKM/Fixtures/SurfaceEdgeReplay.lean)
+
+At a stable rational vertex let \(D=n-3\), where \(n\) counts both marks and flags. Write \(d_i\) for the marked powers, \(r=D-\sum_i d_i\), \(u,v\) for the two tangent characters and \(w_s\) for the incident flag characters after division by each covering degree. When \(r\ge 0\) the complete source factor is
+
+\[
+  \frac{D!}{uv\,r!\prod_i d_i!}
+  \left(\prod_s w_s^{-1}\right)
+  \left(\sum_s w_s^{-1}\right)^r .
+\]
+
+Excess marked degree gives zero. The proof integrates the ordered marked and flag powers with the genus-zero string equation and three-point volume, then sums the flag profiles with the multinomial theorem. It also covers degree-zero contracted vertices with no flags. At \(u=2,v=3\), markings \((0,1)\) and flags \((2,3/2,1)\) give \(13/54\). [Vertex integral and closed formula](../../AxiomaticGW/GKM/RationalLocalizationVertex.lean) · [Mixed-cover and empty-flag tests](../../AxiomaticGWTest/GKM/RationalLocalizationVertex.lean)
+
+At a stable elliptic vertex the two Hodge indices give four ordered pairs. The rational cotangent recursion handles \((0,0)\). One positive index gives \((n-1)!/(24\prod_i d_i!)\) in top degree from the raw nonseparating boundary. The two-positive-index term vanishes by the square of the elliptic Hodge class. For an unmarked end with one flag \(w\), summing all terms gives \(1/(24w^2)-(1/u+1/v)/(24w)\). This reduces to \(-1/(24uv)\) for an unramified flag \(w=u\). A cubic descendant on the opposite one-flag elliptic vertex exceeds its dimension and kills both elliptic splits of the primitive exceptional graph. [All marked powers](../../AxiomaticGW/GKM/EllipticHodgeEvaluation.lean) · [Signed flag expansion](../../AxiomaticGW/GKM/EllipticLocalizationVertex.lean) · [Exceptional endpoints](../../AxiomaticGW/GKM/Fixtures/ExceptionalEllipticVertex.lean)
+
+The common genus-zero through genus-two evaluator takes its marking powers and oriented flag characters directly from the imported graph support. Distinct incident covers retain their own half-edge labels. The evaluator rejects vanishing denominators, including a balanced unstable node. On the doubled strict line it reconstructs all three vertices, both edges, the marked insertion and the order-two automorphism factor, giving the complete signed contribution of that locus. [Graph evaluator](../../AxiomaticGW/GKM/SurfaceLocalizationVertex.lean) · [Doubled strict-line replay](../../AxiomaticGW/GKM/Fixtures/StrictLineGraphVertices.lean)
+
+The pinned producer exposes these factors on actual decorated stable maps. The following check compares the 36 multiple-cover edge values and five rational and three elliptic vertices on each target fan. It exercises unequal characters, multiple covers and excess marked degree, and checks the full curve coordinate of each graph. [Native comparison](../../scripts/check_gkm_stable_vertices.py)
+
+```bash
+sage -python scripts/check_gkm_stable_vertices.py --producer /path/to/gkm_localisation
+lake build AxiomaticGWTest.GKM.SurfaceLocalizationEdge AxiomaticGWTest.GKM.RationalLocalizationVertex AxiomaticGWTest.GKM.EllipticHodgeEvaluation
+```
+
 ## Checked mathematics and validation boundaries
 
 `AxiomaticGW/GKM/FixedPointAlgebra.lean` constructs the actual commutative Frobenius algebra on fixed-point functions. Its trace is `sum_p a(p)/E_p`; nonzero Euler factors prove perfectness. Its inverse metric is derived from the same factors, and contraction recovers a state. No independent metric inverse or semisimplicity assertion is inserted as an assumption.
@@ -305,7 +360,7 @@ The [full three-target request manifest](../../environments/genus-two-few-markin
 
 The [frozen raw packet](../../environments/admcycles-hodge-strata-candidates.json) contains nine ordered lambda-index products on the full stable genus-two, one-marked locus, extracted from pinned Sage 10.9/admcycles 1.4 raw decorated strata. All 553 nonzero source occurrences and 45 explicit degree components remain, including zeros. The [decoder](../../AxiomaticGW/GKM/Fixtures/AdmcyclesHodgeStrataCandidates.lean) checks 61 incidence presentations and 373 decorated encodings, using exact rational coefficients, all kappa powers at indices 1 through 4, leg and node psi, ordered branches and the marking map from source label 1 to `Fin 1` index 0. No extra automorphism divisor or tautological relation quotient is introduced.
 
-The two mixed source products have 122 and 108 terms. The [fixed isomorphism witness](../../environments/admcycles-hodge-strata-isomorphism-witness.json) retains every occurrence. Its [Lean replay](../../AxiomaticGW/GKM/Fixtures/AdmcyclesHodgeStrataIsomorphisms.lean) checks 111 decorated-graph identifications, regroups both actual coordinate vectors into 44 columns, and proves `raw_1_2_degree3 = raw_2_1_degree3` in the free strata module. The equality is consequently preserved by any given rational linear realization. This proves consistency of these two fixed expressions; it does not identify them with Hodge classes or construct a general geometric product.
+The two mixed source products have 122 and 108 terms. The [fixed isomorphism witness](../../environments/admcycles-hodge-strata-isomorphism-witness.json) retains every occurrence. Its [Lean replay](../../AxiomaticGW/GKM/Fixtures/AdmcyclesHodgeStrataIsomorphisms.lean) checks 111 decorated-graph identifications, regroups both actual coordinate vectors into 44 columns, and proves `raw12Degree3 = raw21Degree3` in the free strata module. The equality is consequently preserved by any given rational linear realization. This proves consistency of these two fixed expressions; it does not identify them with Hodge classes or construct a general geometric product.
 
 The two offline proof exporters verify their helper source pins before execution. A fresh pinned Sage run of the portable raw exporter passes in 4.747 seconds. Its complete packet agrees with the frozen original except for the recorded exporter digest; all 553 occurrences and 45 components are unchanged. The two upstream `Algebras` deprecation warnings are retained in the record, and the frozen provenance is preserved. Pure offline tests reproduce both sets of Lean sources byte-for-byte and reject corrupted coefficients, graph decorations, permutations, branch maps, occurrence lists and source bindings:
 
@@ -359,13 +414,13 @@ For each row, `map_embed_regularLift` identifies the lift's coefficientwise imag
 
 The [regularity validation record](../../environments/gkm-hodge-regularity-validation.json) contains the warning-free actual two-target build, eight portable checks, all 28 standard-only axiom results and both failed development probes. Run `python3 scripts/test_gkm_hodge_regularity.py` and `lake build AxiomaticGW.GKM.Fixtures.HodgeDegreeZeroRegularity AxiomaticGWTest.GKM.HodgeDegreeZeroRegularity` to repeat the source-preservation and compilation checks.
 
-The [raw assembly bridge](../../AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroRawAssembly.lean) now transports these complete coefficient sums through the actual 45-component class. Write U = `A.map raw_0_0_degree0`, V = `A.map raw_1_1_degree2` and W = `A.map raw_0_2_degree2`. The complete candidates are Q·U + 3V + 3W for P², 4V for F₁ and −Q·U + 5V − 3W for Bl₂P². These are equalities of the full assembled class, proved by module linearity, explicit empty-component reduction and the accepted raw mixed-pair graph isomorphisms. Only the existing realization `A` is required; `D`, `hfund` and multiplication compatibility are not premises. In particular, V is not replaced by a square of a single-factor image.
+The [raw assembly bridge](../../AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroRawAssembly.lean) now transports these complete coefficient sums through the actual 45-component class. Write U = `A.map raw00Degree0`, V = `A.map raw11Degree2` and W = `A.map raw02Degree2`. The complete candidates are Q·U + 3V + 3W for P², 4V for F₁ and −Q·U + 5V − 3W for Bl₂P². These are equalities of the full assembled class, proved by module linearity, explicit empty-component reduction and the accepted raw mixed-pair graph isomorphisms. Only the existing realization `A` is required; `D`, `hfund` and multiplication compatibility are not premises. In particular, V is not replaced by a square of a single-factor image.
 
 The [raw assembly validation record](../../environments/gkm-hodge-raw-assembly-validation.json) retains the warning-free actual build, ten standard-only public audits, exact source/data pins and proof-development history. The subsequent [repository checkpoint](../../environments/genus-two-blowup-reconstruction-validation.json) includes its public umbrella export in the successful 3,018-job default build; lint remains open. The raw assembly still carries stable-curve codimension over the coefficient field. Total equivariant grading, geometric ordinary comparison, identification of raw products with geometric Hodge classes, Hodge/GRR, virtual Euler/stabilization and an actual semisimple CohFT remain required.
 
 ## Exact raw degree-two reduction and the geometric input boundary
 
-The [degree-two raw certificate](../../AxiomaticGW/GKM/Fixtures/HodgeDegreeTwoRawRelation.lean) retains all 28 `(1,1)` and 16 `(0,2)` occurrences. Its checked graph bijections and rational regrouping establish `raw_1_1_degree2 = (2 : ℚ) • raw_0_2_degree2` in the free strata module. Combined with the complete raw assembly bridge, this gives Q·A(raw₀₀) + 9·A(raw₀₂), 8·A(raw₀₂), and −Q·A(raw₀₀) + 7·A(raw₀₂) for P², F₁ and Bl₂P². All 46 actual public audits and eleven portable tests pass; exact source pins, complete logs, the original consumer failure and the then-pending umbrella export are in the [validation record](../../environments/gkm-hodge-degree-two-validation.json). The subsequent default build includes that export; the current lint gate remains open. No geometric Mumford relation or multiplicative realization premise is used.
+The [degree-two raw certificate](../../AxiomaticGW/GKM/Fixtures/HodgeDegreeTwoRawRelation.lean) retains all 28 `(1,1)` and 16 `(0,2)` occurrences. Its checked graph bijections and rational regrouping establish `raw11Degree2 = (2 : ℚ) • raw02Degree2` in the free strata module. Combined with the complete raw assembly bridge, this gives Q·A(raw₀₀) + 9·A(raw₀₂), 8·A(raw₀₂), and −Q·A(raw₀₀) + 7·A(raw₀₂) for P², F₁ and Bl₂P². All 46 actual public audits and eleven portable tests pass; exact source pins, complete logs, the original consumer failure and the then-pending umbrella export are in the [validation record](../../environments/gkm-hodge-degree-two-validation.json). The subsequent default build includes that export; the current lint gate remains open. No geometric Mumford relation or multiplicative realization premise is used.
 
 The [existing realization](../../AxiomaticGW/Tautological/StrataRealization.lean) has only a rational linear map and `map_basis_degree`. It does not imply that the fundamental class maps to one, preserve products, or interpret κ decorations. [PsiClasses.kappa](../../AxiomaticGW/CohFT/Tautological.lean) already defines κ as the pushforward of an extra ψ power. [map_mulLegPsi](../../AxiomaticGW/Tautological/LegPsiRealization.lean), [map_stratum_eq_classValue](../../AxiomaticGW/Tautological/GluingForgetful.lean) and [map_decoratedStratum_eq_classValue](../../AxiomaticGW/Tautological/DecoratedGluingRealization.lean) derive ψ/gluing interpretation under their named compatibility laws, but the decorated gluing syntax includes no κ constructor. [CertifiedStrataProduct](../../AxiomaticGW/Tautological/StrataAlgebra.lean) remains an algebraic contract, not an implemented geometric excess-intersection product.
 
@@ -411,6 +466,25 @@ The [first positive-class F₁ genus-two query](../../AxiomaticGW/Surfaces/Fixtu
 
 The same [37-target/161-audit checkpoint](../../environments/reconstruction-first-f1-fiber-h-validation.json) includes the mixed and separating-square consumers and the [complete raw-square assembly](../../AxiomaticGW/GKM/Fixtures/HodgeFullSquare.lean). With L the actual five-term degree-one image and Q = x² − xy + y², its three complete candidate classes become Q·A(raw₀₀) + (9/2)L², 4L² and −Q·A(raw₀₀) + (7/2)L². These are conditional on the named all-source-class Gysin laws and existing realization/forgetful/psi inputs; the raw unit terms remain explicit. No such geometric model or identification of L with lambda one is constructed. Final configured checks cover 182 roots, three new style warnings remain recorded, and the post-success stdout-check failure is preserved. The fixed benchmark bounds, nonzero shared genus-two cases, actual semisimple CohFT data and geometric comparison remain required.
 
+For the genus-two, one-marked unit at curve degree zero, Lean now specializes the full saved class candidate in the free rational strata module. It sums all 540 fixed-point, ordered Hodge-pair and degree-component references before setting both torus weights to zero in each decorated-graph coordinate. For \(\mathbb P^2\), \(F_1\) and \(\operatorname{Bl}_2\mathbb P^2\), the resulting cycles are respectively 9, 8 and 7 times the same sixteen-term degree-two packet. The coefficient sum of that packet is \(13/1152\), so each ordinary representative is nonzero in the free module. Its image in geometric cohomology and its identification with a GW class require a realization and a virtual-localization comparison. The pinned producer itself evaluates the Hodge monomials at each contracted vertex. [Specialization proof](../../AxiomaticGW/GKM/Fixtures/HodgeDegreeZeroStrataSpecialization.lean) · [Saved fixed-point packet](../../environments/gkm-degree-zero-hodge-strata-factored-candidate.json)
+
+### Original relations for the genus-two Hodge packet
+
+Write \(L\) for the held five-term degree-one packet and \(B=\frac12\xi_{\rm irr,*}(1)+2\xi_{1,*}(1)\) for the raw ordered loop and marked separating pushforwards. The original full-stable codimension-one 3-spin row has coordinates \((-30,30,42,3)\) on \((\kappa_1,\psi,\xi_{1,*}(1),\xi_{\rm irr,*}(1))\). Lean checks the free-strata identity \(10L-B=-R/36\). Thus \(L=B/10\) holds in the quotient by this row, and in any linear realization killing it. The loop factor accounts for its two ordered branches. [Picard certificate](../../AxiomaticGW/GKM/Fixtures/HodgeGenusTwoPicard.lean) · [Original-row check](../../scripts/check_admcycles_hodge_picard.py) · [3-spin relations](https://arxiv.org/abs/1303.1043)
+
+An independent codimension-two certificate compares the sixteen-term packet \(P\) directly to the boundary square. The exporter regenerates all 14 original PPZ rows (six interior, eight boundary), their 17 ordered monomial columns and the 16 and 28 occurrences of the two held packets. Lean matches every occurrence up to decorated graph isomorphism. The residual \(200P-B^2\) is exactly a linear combination of 12 original rows, including the negative node-psi excess terms in the square. The auxiliary \(\kappa_2\) coordinate cancels. The quotient statement requires no geometric hypotheses. [Source rows](../../AxiomaticGW/GKM/Fixtures/HodgeBoundarySquareRows.lean) · [Certificate and quotient theorem](../../AxiomaticGW/GKM/Fixtures/HodgeBoundarySquareCertificate.lean)
+
+For \(r=0,1,2\) blowups the realization of the ordinary packet is \((9-r)B^2/200\). This proof requires the 12 contributing rows to vanish, the loop self-intersection, mixed and separating self-intersection Gysin laws, the listed fundamental and node-psi compatibilities, and realization of the loop, separating and refined gluing graphs. It requires no independent identification of a kappa or Hodge class and no forgetful pushforward. A geometric GW comparison still requires virtual localization and identification of stabilization of the virtual class with these graph pushforwards. [Realization theorem with full hypotheses](../../AxiomaticGW/GKM/Fixtures/HodgeBoundarySquareRealization.lean) · [Regression tests](../../AxiomaticGWTest/GKM/HodgeBoundarySquareCertificate.lean)
+
+In the pinned Sage environment these commands regenerate the source rows and check both certificates.
+
+```bash
+python -B scripts/check_admcycles_hodge_picard.py
+python -B scripts/export_gkm_hodge_boundary_square.py --check
+lake build AxiomaticGWTest.GKM.HodgeGenusTwoPicard AxiomaticGWTest.GKM.HodgeBoundarySquareCertificate
+```
+
+
 From the repository root, the saved first-H report can be checked offline and its public replay path rebuilt with:
 
 ```bash
@@ -421,10 +495,202 @@ python3 -B -m unittest discover -s scripts -p test_gkm_f1_fiber_h.py -v
 
 The test command includes the three negative Lean claims; it requires the accepted local Lean dependencies and runs no Sage exploration.
 
+## F₁ canonical fiber comparisons through energy two
+
+For the fiber class \(F=(0,1)\) in the effective basis \((E,F)\), the genus-two P, N and K requests are respectively \(\langle\tau_1(\mathrm{pt}),\mathrm{pt}\rangle\), \(\langle\mathrm{pt},\mathrm{pt},\mathrm{pt}\rangle\), and \(\langle\tau_1(E),\mathrm{pt},\mathrm{pt}\rangle\). Each ordinary localization value is zero. Together with the H comparison above these cover every canonical family at the fiber. The Lean proofs use the sixteen-state table at \(0,E,2E,F\). Interpretation as geometric GW invariants uses the original BP and L24 equations, the finite seeds, and exceptional point support. [Saved localization report](../../environments/gkm-f1-fiber-remaining.json) · [Lean comparison](../../AxiomaticGW/GKM/Fixtures/BlowupF1FiberRemainingReplay.lean) · [Table proof](../../AxiomaticGW/Surfaces/Fixtures/BlowupF1FiberTable.lean).
+
+The following commands replay the saved report offline and check the ordered query and value against Lean. Regression cases change each incoming value in turn, substitute the equal-energy class \(2E\), switch the exceptional divisor, and move the cotangent power to a different marking.
+
+```bash
+python3 -B scripts/gkm_f1_fiber_remaining.py replay environments/gkm-f1-fiber-remaining.json --output AxiomaticGW/GKM/Fixtures/BlowupF1FiberRemainingReplay.lean --check
+lake build AxiomaticGW.GKM.Fixtures.BlowupF1FiberRemainingReplay AxiomaticGWTest.GKM.BlowupF1FiberRemainingReplay
+python3 -B -m unittest discover -s scripts -p test_gkm_f1_fiber_remaining.py -v
+```
+
+To repeat the exploration, run the following command with the pinned Sage/admcycles environment active and set `GKM_PRODUCER` to the pinned producer checkout. The exporter checks the exact equivariant functions at ordinary specialization. The Lean comparison checks the resulting ordinary values.
+
+```bash
+python -B scripts/gkm_f1_fiber_remaining.py explore --producer "$GKM_PRODUCER" --output /tmp/gkm-f1-fiber-remaining.json
+```
+
+## The strict-transform line on the two-point blowup
+
+The pinned producer returns ordinary value zero for the five canonical
+genus-two requests at \(L=H-E_1-E_2\), in effective coordinates \((0,0,1)\).
+In order, the insertions are \((\tau_1 H,\mathrm{pt})\),
+\(\tau_1\mathrm{pt}\), \((\mathrm{pt},\mathrm{pt})\),
+\((\tau_1 E_1,\mathrm{pt})\), and \((\tau_1 E_2,\mathrm{pt})\).
+The importer uses the complete ordered descendant key for each row.
+[Producer report](../../environments/gkm-bl2-line-canonical.json) ·
+[Importer](../../scripts/gkm_bl2_line_canonical.py) ·
+[Lean request identities](../../AxiomaticGW/GKM/Fixtures/BlowupTwoLineCanonical.lean)
+
+The reconstruction uses the original hyperplane equation at \(L+E_1\).
+The coefficients of the degree-zero columns \(H_0,K_{1,0},K_{2,0}\) are
+\(3,1,-3\). Their boundary values contribute \(-7/2880\).
+The lower-genus constant uses all 815 positions in the original L24 frame.
+[Divisor contributions](../../AxiomaticGW/Surfaces/Fixtures/BlowupTwoLineHDivisors.lean) ·
+[Original lower-genus sum](../../AxiomaticGW/Surfaces/Fixtures/BlowupTwoLineHConstant.lean)
+
+The complete lower-genus sum is \(7/2880\), giving \(H_L=0\).
+The point, exceptional and primary equations give the same value for the
+other four families. All 20 states through effective energy one pass the
+original bounded checker, including the five at \(L\). The five incoming
+GKM coefficients agree with the reconstruction. Each coherent change of
+one ordinary and equivariant coefficient to \(1/19\) fails comparison.
+[Full graph certificate and bounded table](../../AxiomaticGW/Surfaces/Fixtures/BlowupTwoLineL24/Assembly.lean) ·
+[Five GKM equalities](../../AxiomaticGW/GKM/Fixtures/BlowupTwoLineCanonicalReplay.lean) ·
+[Mutation tests](../../scripts/test_gkm_bl2_line_canonical.py)
+
+Of the 815 positions, 121 satisfy the original zero-weight or higher-genus
+guard. Lean evaluates 280 decorated representatives and transports 414
+others by equality of the four pulled-back labels on the original graph.
+Each transport retains its two original rational weights. In total, 180
+weighted positions are nonzero. The 458 one-cotangent component values
+used in these evaluations are checked at their complete ancestor keys.
+The frame, constant, hyperplane value, bounded table and GKM replay all
+audit to `propext`, `Classical.choice` and `Quot.sound`.
+
+Run `lake env lean --run scripts/explore_bl2_line_l24.lean` to produce the
+815 indexed rational contributions and cumulative sums from the original
+component functions. The structural certificate generator compares graph
+cores, decorations, decision procedures for labels, and pulled-back
+insertions. It regenerates the assignment of every position using only the
+original L24 data and the checked set of positions with a genus-two vertex.
+
+```sh
+python3 scripts/export_bl2_line_l24_frame.py --check
+python3 scripts/gkm_bl2_line_canonical.py replay environments/gkm-bl2-line-canonical.json \
+  --output AxiomaticGW/GKM/Fixtures/BlowupTwoLineCanonical.lean --check
+lake build AxiomaticGWTest.GKM.BlowupTwoLineCanonical
+python3 scripts/test_gkm_bl2_line_canonical.py
+```
+
+## A positive-degree fixed-locus class and its unit pullback
+
+On \(\overline M_{0,4}\), take the degree-one plane class with ordered primary insertions \((\mathrm{pt},H,\mathrm{pt},H)\). For the plane fan in the exchange choose toric lifts \((D_0D_1,D_1,D_0D_2,D_2)\). The two point lifts are supported at distinct fixed points, the cones \((0,1)\) and \((0,2)\). This choice forces markings \(1,2\) onto the first endpoint and \(3,4\) onto the second. Exactly one of the 48 fixed loci survives. Both contracted components have three special points. Forgetting the map contracts the unmarked moving line between them to a single node. With the incident flags retained before integration the result is the raw boundary class \(D_{12|34}\) with equivariant coefficient exactly one. [Fixed-locus report](../../environments/gkm-plane-line-boundary-class.json) · [Lean class, coefficient and graph identification](../../AxiomaticGW/GKM/Fixtures/PlaneLineBoundaryClass.lean)
+
+Adding a fifth unit leaves two of the 96 five-marked loci. The two undecorated terms have coefficient one. Their node-psi terms carry coefficients \(+1/y\) and \(-1/y\). At either four-point contracted component the original rational psi relation replaces the flagged psi term by the same labelled tree \(12|5|34\). Lean checks both graph attachments and cancellation, so every rational functional annihilating the two attached relations has a regular ordinary value. Each surviving undecorated graph is one placement in the universal pullback of \(D_{12|34}\). The resulting five-point class is \(D_{125|34}+D_{12|345}\). The Sage run verifies these identities on the source tautological classes and checks that the central tree has degree one. [Class and flat-unit checks](../../AxiomaticGW/GKM/Fixtures/PlaneLineBoundaryClass.lean) · [Missing-pole-partner and marking regressions](../../AxiomaticGWTest/GKM/PlaneLineBoundaryClass.lean)
+
+On the section that bubbles the fifth unit together with the first point, the ordinary restriction gives the original four-point boundary class on the main factor. The incoming three-point tail rows for degrees 0 and 1 are \((1,0,0)\) and \((0,0,0)\) on the node states \((1,H,\mathrm{pt})\). Lean compares all six entries with its genus-zero primary reconstruction. Contracting the complete ordinary inverse metric and both ordered effective degree splits leaves the degree-one main class with node insertion \(\mathrm{pt}\). The class realization uses the sector's graph-map, universal-curve base-change and rational-tail section compatibilities. [Separating restriction and inverse-metric contraction](../../AxiomaticGW/GKM/Fixtures/PlaneLineBoundarySplitting.lean)
+
+The pinned producer at revision `a09c6625b280312721c5e0f2f915791781339aa5` enumerates the maps in `StableMapsGKM.fixed_loci`. Its `StableMapGKM._localization_factors` returns the actual edge, tangent, insertion and automorphism factors and lists the ordered tangent and flag weights of each supported vertex. Its stable-vertex loop selects only total degree \(3g-3+n\) and calls `hodge_integral`, which evaluates a number. The companion exporter uses those pre-integration factors and retains both powers of the flag on the four-point vertex, including the constant term that the integral would discard. General identification with stabilized virtual GW classes still requires class-level virtual localization, the actual stabilization pushforward on every supported map type and its compatibility with gluing and units. The three certified loci use a degree-one bridge with two stable endpoints. [Exporter](../../scripts/gkm_plane_line_boundary_class.py) · [Source pin](../../environments/gkm-localization-source.json) · [Liu–Sheshmani, §4](https://arxiv.org/abs/1407.1370) · [Graber–Pandharipande](https://arxiv.org/abs/alg-geom/9708001)
+
+The first command checks native enumeration, the source factors, the tautological classes, both comparisons and byte-for-byte regeneration. The second replays the saved exchange without Sage.
+
+```bash
+python -B scripts/gkm_plane_line_boundary_class.py --producer "$GKM_PRODUCER" --check
+python3 -B scripts/gkm_plane_line_boundary_class.py --replay environments/gkm-plane-line-boundary-class.json --check
+lake build AxiomaticGWTest.GKM.PlaneLineBoundaryClass
+```
+
+## Primitive exceptional classes on the two blowups
+
+The same positive-degree construction gives the ordinary class \(-D_{12|34}\) on \(\overline M_{0,4}\) in each of the following three cases. The first three insertions are lifts of the indicated exceptional divisor. Shifting each lift by a torus character forces the two stable endpoints and leaves its ordinary class unchanged.
+
+| Target | Full class | Fourth ordinary divisor | Flag weight on the first endpoint |
+| --- | --- | --- | --- |
+| \(F_1\) | \(E=(1,0)\) | \(H-E\) | \(x-y\) |
+| \(\mathrm{Bl}_2\mathbb P^2\) | \(E_1=(1,0,0)\) | \(H-E_1-E_2\) | \(x-y\) |
+| \(\mathrm{Bl}_2\mathbb P^2\) | \(E_2=(0,1,0)\) | \(H-E_2\) | \(y\) |
+
+The pinned producer enumerates 16 four-marked and 32 five-marked loci for each primitive class. The invariant line has normal degree \(-1\). One four-point locus and two five-point loci support the restrictions. Lean specializes each insertion in the surface basis, multiplies the incoming factors to \(-1\), and checks that integrating the signed divisor gives the value from the surface primary reconstruction. The five-point class with one unit is \(-D_{125|34}-D_{12|345}\) after the two opposite flag-psi residues cancel on the common refinement. [Native exceptional packets](../../environments/gkm-exceptional-boundary-classes.json) · [Signed class and regularity proofs](../../AxiomaticGW/GKM/Fixtures/ExceptionalBoundaryClass.lean)
+
+On the \(15|234\) section the degree-zero tail has coefficient \(-1\) at its own exceptional node and zero at every other node state. The inverse metric contributes the second minus sign. The positive-degree tail vanishes. The original primary reconstruction checks all 28 incoming tail entries across both degrees and the actual target bases. The class formula requires the four-point cotangent relation, graph realization, the universal-curve gluing compatibility and the rational-tail section identity. Virtual localization and comparison of the stabilized virtual class with these finite fixed-locus expressions remain geometric inputs. [Boundary splitting](../../AxiomaticGW/GKM/Fixtures/ExceptionalBoundarySplitting.lean) · [Sign and equal-energy regressions](../../AxiomaticGWTest/GKM/ExceptionalBoundaryClass.lean)
+
+```bash
+python -B scripts/gkm_exceptional_boundary_classes.py --producer "$GKM_PRODUCER" --check
+python3 -B scripts/gkm_exceptional_boundary_classes.py --replay environments/gkm-exceptional-boundary-classes.json --check
+lake build AxiomaticGWTest.GKM.ExceptionalBoundaryClass
+```
+
+## Positive-degree small quantum products and the plane idempotents
+
+The pinned producer computes 155 genus-zero primary three-point tensors up to permutation on the six primitive effective generators. The classes are \(H\) on the plane, \(E,F\) on \(F_1\), and \(E_1,E_2,L=H-E_1-E_2\) on the two-point blowup. Every coefficient is regular at the torus origin. The exchange keeps the exact polynomial in the two characters, including zero coefficients. Lean evaluates all 530 ordered basis entries at the ordinary origin and compares them with the established primary reconstruction. Raising the third index uses the actual ordinary inverse pairing. The unit, commutativity and coefficientwise associativity checks retain both ordered splittings of each individual generator. This covers the ordinary augmentation quotient modulo products of positive Novikov monomials. [Native three-point report](../../environments/gkm-small-quantum-generators.json) · [Ordinary reconstruction comparison](../../AxiomaticGW/GKM/Fixtures/SmallQuantumGeneratorComparison.lean) · [First-order multiplication](../../AxiomaticGW/GKM/Fixtures/OrdinarySmallQuantumGenerators.lean)
+
+On the plane write \(P\) for the held point lift, \(P=H(H+x)\), and \(q\) for the full line class. The nonzero degree-one three-point coefficients, up to permutation, are \(\langle H,P,P\rangle=1\) and \(\langle P,P,P\rangle=x-2y\). Lowering the proposed product recovers both values and every zero entry on the original frame. Its degree-zero term is the previously accepted localized product. In this basis \(H\star P=-yP+q\) and \(P\star P=(y^2-xy)P+q(H+x-y)\). Lean verifies the unit, associativity and invariance of the accepted classical metric. The cubic \(H(H+x)(H+y)=q\) represents these coefficients. Identifying them with the formal GW product requires an equivariant GW realization with the named metric and the three-point inputs; the comparison with actual incoming GW data here reaches line degree. [Plane product and GW coefficient interface](../../AxiomaticGW/GKM/Fixtures/PlaneSmallQuantumProduct.lean)
+
+Over \(K=\mathbb Q(x,y)\), work in \(K[q]/(q^2)\). At fixed point \(i\) the hyperplane root moves from \(r_i\in\{0,-y,-x\}\) to \(r_i+q/e_i\), with \(e_i\) the accepted tangent Euler class. Evaluating a state at the three lifted roots is bijective. The inverse images of the three coordinate units are mutually orthogonal primitive idempotents, sum to the flat unit, and reduce to the accepted classical fixed-point projectors. The inverse restriction matrix gives their first-order coefficients explicitly; Lean proves the first projector's correction is nonzero. Higher Novikov orders and an all-genus semisimple reconstruction action remain open. [Idempotent lift and nonvanishing proof](../../AxiomaticGW/GKM/Fixtures/PlaneQuantumIdempotents.lean) · [Regression tests](../../AxiomaticGWTest/GKM/SmallQuantumGenerators.lean)
+
+```bash
+python -B scripts/gkm_small_quantum_generators.py explore --producer "$GKM_PRODUCER" --output /tmp/gkm-small-quantum-generators.json
+python3 -B scripts/gkm_small_quantum_generators.py replay environments/gkm-small-quantum-generators.json --output AxiomaticGW/GKM/Fixtures/SmallQuantumGeneratorData.lean --check
+lake build AxiomaticGWTest.GKM.SmallQuantumGenerators
+```
+
+## First-order equivariant primitive bases of the blowups
+
+For each blowup let \(D\) index the primitive effective curve generators and set \(A=K[q_d:d\in D]/(q_d q_{d'}:d,d'\in D)\), where \(K=\mathbb Q(x,y)\). The square-zero algebra retains each full curve label. For an ordered pair \((l,r)\) in the accepted fixed-point order, put \(\Delta a=a_r-a_l\). Its contribution to the three-point tensor is \(k\,\Delta a\,\Delta b\,\Delta c\). Lean checks the following six contributions against every one of the 128 ordered entries on \(F_1\) and 375 on the two-point blowup. The two fixed fibers both contribute to the single class \(F\). [Blowup presentations and native comparison](../../AxiomaticGW/GKM/Fixtures/BlowupQuantumIdempotents.lean)
+
+| Surface | Full class | Fixed-point pair | Cubic weight \(k\) |
+| --- | --- | --- | --- |
+| \(F_1\) | \(E=(1,0)\) | \((1,3)\) | \(-1/(x-y)^3\) |
+| \(F_1\) | \(F=(0,1)\) | \((0,1)\) | \(1/[y^3(x-y)]\) |
+| \(F_1\) | \(F=(0,1)\) | \((2,3)\) | \(-1/[x^3(x-y)]\) |
+| \(\operatorname{Bl}_2\) | \(E_1=(1,0,0)\) | \((1,2)\) | \(-1/(x-y)^3\) |
+| \(\operatorname{Bl}_2\) | \(E_2=(0,1,0)\) | \((3,4)\) | \(-1/y^3\) |
+| \(\operatorname{Bl}_2\) | \(L=(0,0,1)\) | \((2,3)\) | \(-1/x^3\) |
+
+For each pair in class \(d\), add \(k\,\Delta a\,(e_l\delta_l+e_r\delta_r)\) to \(T_d(a)\), using the accepted Euler factors. The map \(1+\sum_d q_d T_d\) identifies multiplication with coordinatewise multiplication over \(A\). Hence the lifted projector is \(p_i=\delta_i-\sum_d q_d T_d(\delta_i)\). These projectors form a basis over the full square-zero ring. They are primitive, multiply orthogonally, and sum to the flat unit. The original flat pairing lowers each product coefficient to its incoming three-point tensor. The theorem for a geometric GW theory requires its toric metric and native three-point values to agree. All five directions have an explicitly tested nonzero projector correction. [Square-zero product and projectors](../../AxiomaticGW/GKM/FirstOrderFixedPoints.lean) · [Nonvanishing tests](../../AxiomaticGWTest/GKM/BlowupQuantumIdempotents.lean)
+
+Put \(u_i=\sum_d q_d T_d(\delta_i)_i\). In the primitive basis the Gram diagonal and its inverse are \(g_i=e_i^{-1}(1-2u_i)\) and \(g_i^{-1}=e_i(1+2u_i)\). After choosing \(s_i^2=e_i\) in a field extension, the diagonal scale \(s_i(1+u_i)\) gives unit Gram entries. Lean proves that such a choice exists over an algebraically closed extension and checks the inverse matrix before any root choice. These data fix the normalization for a candidate first loop coefficient \(B\), whose self-adjointness test is \(g_i B_{ij}=B_{ji}g_j\). The pinned producer exposes fixed loci, localization contributions and integrated correlators. Its package supplies no calibrated \(R(z)\) series. Determining positive-loop coefficients and proving their all-genus class action requires additional input. [Metric, scalar extension and adjoint test](../../AxiomaticGW/GKM/Fixtures/BlowupQuantumIdempotents.lean)
+
+```bash
+lake build AxiomaticGWTest.GKM.BlowupQuantumIdempotents
+```
+
+## Equivariant two-point calibration in the primitive basis
+
+The first and higher calibration archives retain the exact equivariant two-point correlators. For the six primitive generators the retained marking has cotangent powers \(m=0,1,2\), the node has power zero, and \(S\) uses inverse-loop power \(m+1\) at zero primary deformation. These 18 matrices have 348 ordered entries. The exchange computes both the classical anticanonical matrix \(C\) and its divisor coordinates from the pinned surface products. Restriction conjugates \(C\) to the accepted tangent sums \(\chi_i\). Writing \(n=\int_\beta c_1\) and \(F_m(a,b)=\langle a,\tau_m(b)\rangle_{0,\beta}\), the identities checked on the reports are
+
+\[
+  nF_0(a,b)=\langle c_1,a,b\rangle_{0,\beta},\qquad
+  nF_{m+1}=C^{\mathsf T} F_m-F_m C\quad(m=0,1).
+\]
+
+The positive sign is attached to \(C\) at the node and the negative sign to \(C\) at the retained marking. The equivariant divisor comparison uses the original three-point packet at each full class. An identified GW theory recovers the same raised column by contracting the node with its inverse metric. The positive tail then inserts that column into the main component's linear functional. [Incoming coefficient extractor](../../scripts/gkm_equivariant_calibration.py) · [Source matrix comparison](../../AxiomaticGW/GKM/Fixtures/EquivariantCalibrationReplay.lean)
+
+In classical fixed-point coordinates let \(A_{ij}\) be the raised native coefficient at \(z^{-1}q^\beta\) and \(t_{ij}=(\chi_i-\chi_j)/n\). The three checked coefficients are \(A_{ij},t_{ij}A_{ij},t_{ij}^2A_{ij}\). At primitive degree their continuation under the anticanonical commutator is the expansion of \(A_{ij}/(z-t_{ij})\) at infinity. The source comparison reaches the three reported powers. On the diagonal the expression is \(A_{ii}/z\). For \(i\ne j\) the tangent sums are distinct, and expansion at zero begins with \(-A_{ij}/t_{ij}\) and \(-A_{ij}/t_{ij}^2\). The constant term equals the \(i\)-entry of the actual degree-\(\beta\) correction to the primitive projector \(p_j\). For the plane entry \((0,1)\), the primary inverse-loop coefficient is \(-1/[y(x-y)]\) and the gap is \(y\), giving the constant projector correction \(1/[y^2(x-y)]\). In the same coordinate pair \((1,2)\) on the two-point blowup, the raised primary coefficient is \(-y/(x-y)\) along \(E_1\) and zero along \(E_2\). Alternating signed transpose gives the primitive-class sewing identity for the three source powers. [Transition and sewing proofs](../../AxiomaticGW/GKM/Fixtures/SemisimpleCalibration.lean)
+
+This comparison determines a small-\(z\) off-diagonal term of the primitive-degree resolvent. Identifying a complete calibrated positive-loop \(R(z)\) still needs an asymptotic normalization and the higher-order, all-genus comparison. Adding an arbitrary diagonal to a candidate first coefficient preserves the linear symplecticity equation and commutes with the classical spectrum. Under \(T(z)=z(1-R(z)^{-1})\mathbf 1\) it changes the \(z^2\) translation by that diagonal vector. The pinned exchange explicitly leaves its \(R\)-matrix and translation fields empty. [Loop expansion and gauge calculation](../../AxiomaticGW/GKM/CalibrationSpectrum.lean) · [Pinned exchange fields](../../environments/gkm-inputs-osx-arm64.json)
+
+```bash
+python3 -B scripts/gkm_equivariant_calibration.py --check
+lake build AxiomaticGWTest.GKM.SemisimpleCalibration
+```
+
+For each of the six primitive curve directions, choose a translation coefficient $u_d$ and put $C_{ij}=-A_{ij}/t_{ij}^2$ for $i\ne j$, with $C_{ii}=0$. The unique matrix with these off-diagonal coefficients and row sums $u_d$ is $B_d=C+\operatorname{diag}(u_d-C\mathbf 1)$. In the square-zero Novikov ring $B=\sum_d q_dB_d$ is self-adjoint for the actual Gram matrix $G$ of the lifted projectors. With $R(z)=1+zB$, Lean checks both inverse identities, $R(-z)^tGR(z)=G$, and $z(1-R(z)^{-1})\mathbf1=z^2\sum_d q_du_d$. The plane entry $(0,1)$ is $1/[y^3(x-y)]$. The entry $(1,2)$ on the two-point blowup is $y/(x-y)^3$ along $E_1$ and zero along $E_2$. This loop coefficient has zero classical Novikov part. The geometric translation, higher Taylor coefficients and higher Novikov degrees remain to be determined. [Primitive coefficient, metric and translation proofs](../../AxiomaticGW/GKM/Fixtures/PrimitiveLoopTranslation.lean) · [Sign and curve-class checks](../../AxiomaticGWTest/GKM/SemisimpleCalibration.lean)
+
+The full primitive-degree resolvent also has higher powers of $z$. Its Taylor coefficient at power $m$ is $-A_{ij}/t_{ij}^{m+1}$. Lean proves the exact remainder for every truncation order and the reciprocal-Euler transpose sign $(-1)^{m+1}$. On the plane, the $(0,1)$ quadratic coefficient is $1/[y^4(x-y)]$, which is nonzero in the coefficient field. Thus the linear polynomial above supplies only the first Taylor coefficient of the off-diagonal comparison. [Exact Taylor remainder](../../AxiomaticGW/GKM/CalibrationSpectrum.lean) · [All-power native sewing sign](../../AxiomaticGW/GKM/Fixtures/SemisimpleCalibration.lean)
+
+At any finite set of positive Taylor powers the square-zero construction has a precise translation test. At odd powers the diagonal is free and the translation vector fixes it uniquely. At even powers the metric equation forces zero diagonal, so the only admissible translation is the row sum of the native off-diagonal matrix. Under these conditions the finite loop is normalized at zero, has an explicit inverse, preserves the lifted projector metric at opposite parameters, and induces the indicated flat-unit translation. The regression combines the native quadratic and cubic terms and rejects a shifted even-power row. [Finite Taylor loops](../../AxiomaticGW/GKM/Fixtures/PrimitiveTaylorTranslation.lean) · [Regression](../../AxiomaticGWTest/GKM/PrimitiveTaylorTranslation.lean)
+
+## Sewing at composite curve classes
+
+The higher-calibration archive contains 13 requests at sums of two primitive curves. The plane contributes \(2H\) at inverse-loop power 4. On \(\mathbb F_1\), \(E+F\) and \(2E\) occur at powers 2 and 3. On the two-point blowup, \(E_2+L,E_1+L,2E_1,2E_2\) occur at powers 2 and 3, where \(L=H-E_1-E_2\). Each row retains its native toric basis, full effective coordinates and inverse-loop power. [Source requests](../../environments/gkm-higher-calibration-comparison.json) · [Formal request and cut binding](../../AxiomaticGW/GKM/Fixtures/CalibrationSewingFrame.lean)
+
+Write \(F_{k,\beta}(a,b)=\langle a,\tau_{k-1}(b)\rangle_{0,\beta}\) for \(k>0\). For every listed \((p,\beta)\), the following identity holds over \(\mathbb Q(x,y)\):
+
+\[
+F_{p,\beta}+(-1)^pF_{p,\beta}^{\mathsf T}
++\sum_{\substack{c+d=\beta\\c,d>0}}\sum_{k=1}^{p-1}
+ (-1)^k F_{k,c}^{\mathsf T}\eta^{-1} F_{p-k,d}=0.
+\]
+
+The curve sum uses the full effective monoid. Mixed directions occur in both orders and equal directions give one ordered pair. Of 273 toric basis entries, 48 have a nonzero endpoint sum. In the plane point/point entry at \(2H\), both endpoints are \(1/2\), and the three signed interior contributions are \(-1,+1,-1\). On \(\mathbb F_1\), the interior is \(+1\) at the \(E,E\) entry for \(2E\) and power 2. The two-point blowup distinguishes the \(H,E_1\) entry at \(E_2+L\) and \(E_1+L\), with interior contributions 0 and 1. [Matrix proof](../../AxiomaticGW/GKM/Fixtures/CalibrationSewing.lean) · [Nonzero regression cases](../../AxiomaticGWTest/GKM/CalibrationSewing.lean)
+
+For a GW theory with the identified toric metric, primitive two-point descendants at inverse powers 1 through 3 and the specified composite two-point row, the actual coefficient of \(S(-z)^*S(z)\) vanishes on arbitrary states. The proof uses the two-point calibration's unstable conventions for the zero class and zero power, exhaustive effective and loop splittings, and bilinearity. It assumes neither a sewing relation nor an equivariant localization theorem. The positive-loop \(R\)-matrix, flat-unit translation and all-degree symplecticity remain open. [Geometric theorem](../../AxiomaticGW/GKM/Fixtures/CalibrationSewingGeometry.lean)
+
+```bash
+python3 -B scripts/gkm_calibration_sewing.py --check
+python3 -B scripts/test_gkm_calibration_sewing.py -v
+lake build AxiomaticGWTest.GKM.CalibrationSewing
+```
+
 ## Next required bridge
 
 The ordinary rational blowup equations now have a [uniform H pivot and cross-column cancellation](../../AxiomaticGW/Surfaces/GenusTwoBlowupHContributions.lean), [decreasing H-family coefficient support](../../AxiomaticGW/Surfaces/GenusTwoBlowupHCoupling.lean), and [complete canonical P-row support](../../AxiomaticGW/Surfaces/GenusTwoBlowupPPrimarySupport.lean), including strict lower-plane support of every surviving primary coefficient. These are exact identities of the existing normalized BP/L24 algorithms at full curve classes. They do not import localized CohFT classes, prove equivariant localization or ordinary specialization, or certify either complete blowup numerical suite. No producer source or exchange schema is changed.
 
 The [ordinary exceptional support interface](../../AxiomaticGW/Surfaces/ExceptionalEvaluationSupport.lean) now gives point-supported zero values at positive zero-hyperplane-degree classes and helps derive the [F₁ degree-zero primary point](../../AxiomaticGW/Surfaces/GenusTwoExceptionalInitialValues.lean) from original BP geometry. It concerns the ordinary rational point class in the existing surface theory. A chosen equivariant point lift need not restrict to zero on an exceptional curve, so these theorems require the ordinary comparison before use with localized GKM data. They provide no localization derivation or imported CohFT classes, and full blowup reconstruction and benchmark replay remain open.
 
-Extend kernel replay from the classical state, curve, and invariant-edge data to stable-map localization graphs and relation-to-GW derivations. Export actual CohFT class expressions or an identified semisimple reconstruction action, prove its formal action laws, and retain the geometric comparison hypotheses explicitly. Geometric instantiation of the mixed comparison inputs, full descendant--ancestor potential comparison, quantum product and R-matrix inputs, graph normalization/stabilization, all fixed benchmark query round-trips, and the full shared release corpus remain required. The present target-data certificates and algebraic transport do not discharge those obligations.
+Extend kernel replay from the classical state, curve, and invariant-edge data to stable-map localization graphs and relation-to-GW derivations. Export actual CohFT class expressions or an identified semisimple reconstruction action, prove its formal action laws, and retain the geometric comparison hypotheses explicitly. Geometric instantiation of the mixed comparison inputs, full descendant--ancestor potential comparison, higher Novikov product coefficients and a calibrated R-matrix, graph normalization/stabilization, all fixed benchmark query round-trips, and the full shared release corpus remain required. The present target-data certificates and algebraic transport do not discharge those obligations.

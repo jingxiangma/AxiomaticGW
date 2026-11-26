@@ -42,12 +42,12 @@ theorem pieceOrder_bijective : Function.Bijective pieceOrder := by
 
 /-- Six original kappa positions, including both two-component separating sums. -/
 noncomputable def packetKappaPart : StrataModule 2 (Fin 1) :=
-  raw_1_1_degree2Coordinates 10 • StrataModule.basis (raw_1_1_degree2Columns 10) +
-  raw_1_1_degree2Coordinates 11 • StrataModule.basis (raw_1_1_degree2Columns 11) +
-  raw_1_1_degree2Coordinates 12 • StrataModule.basis (raw_1_1_degree2Columns 12) +
-  raw_1_1_degree2Coordinates 13 • StrataModule.basis (raw_1_1_degree2Columns 13) +
-  raw_1_1_degree2Coordinates 14 • StrataModule.basis (raw_1_1_degree2Columns 14) +
-  raw_1_1_degree2Coordinates 16 • StrataModule.basis (raw_1_1_degree2Columns 16)
+  raw11Degree2Coordinates 10 • StrataModule.basis (raw11Degree2Columns 10) +
+  raw11Degree2Coordinates 11 • StrataModule.basis (raw11Degree2Columns 11) +
+  raw11Degree2Coordinates 12 • StrataModule.basis (raw11Degree2Columns 12) +
+  raw11Degree2Coordinates 13 • StrataModule.basis (raw11Degree2Columns 13) +
+  raw11Degree2Coordinates 14 • StrataModule.basis (raw11Degree2Columns 14) +
+  raw11Degree2Coordinates 16 • StrataModule.basis (raw11Degree2Columns 16)
 
 theorem packetKappaPart_eq_raw_sum :
     packetKappaPart = (1 / 144 : ℚ) •
@@ -67,11 +67,11 @@ theorem packetKappaPart_eq_raw_sum :
 set_option maxRecDepth 4000 in
 /-- This is an equality of the complete incoming expression before realization. -/
 theorem original_packet_partition :
-    raw_1_1_degree2 = HodgeExternalPsi.packetPsiPart + packetKappaPart +
+    raw11Degree2 = HodgeExternalPsi.packetPsiPart + packetKappaPart +
       LoopSquarePacketBinding.packetPart + HodgeLoopSeparatingProduct.packetPart +
         HodgeSeparatingSquare.packetPart := by
   let f : Fin 28 → StrataModule 2 (Fin 1) := fun i ↦
-    raw_1_1_degree2Coordinates i • StrataModule.basis (raw_1_1_degree2Columns i)
+    raw11Degree2Coordinates i • StrataModule.basis (raw11Degree2Columns i)
   change (∑ i : Fin 28, f i) =
     (f 0 + f 1 + f 2 + f 9 + f 15) +
     (f 10 + f 11 + f 12 + f 13 + f 14 + f 16) +
@@ -166,7 +166,7 @@ theorem map_raw_1_1_eq_square
     (hmixedLeft : LoopSeparatingGysin.leftRefinement.Compatible A F N)
     (hmixedRight : LoopSeparatingGysin.rightRefinement.Compatible A F N)
     (hchain : SeparatingSquareGysin.chainExpression.Compatible A F N) :
-    (A 2 (Fin 1)).map raw_1_1_degree2 = ((A 2 (Fin 1)).map raw_0_1_degree1) ^ 2 := by
+    (A 2 (Fin 1)).map raw11Degree2 = ((A 2 (Fin 1)).map raw01Degree1) ^ 2 := by
   have hp : (A 2 (Fin 1)).map (StrataModule.basis rawGraph1) =
       P.psi 2 (Fin 1) HodgeDegreeOneRealization.stable 0 := by
     rw [HodgeDegreeOneRealization.rawGraph1_eq_psi,
@@ -178,14 +178,14 @@ theorem map_raw_1_1_eq_square
     rw [HodgeDegreeOneRealization.rawGraph2_eq_kappa]
     exact (A 2 (Fin 1)).map_kappaGenerator (A 2 (Option (Fin 1))) Fforget P
       HodgeDegreeOneRealization.stable 1 (hcorolla.kappaGenerator 1) hpsiUp hfundUp
-  have hsource : (A 2 (Fin 1)).map raw_0_1_degree1 =
+  have hsource : (A 2 (Fin 1)).map raw01Degree1 =
       (-1 / 12 : ℚ) • P.psi 2 (Fin 1) HodgeDegreeOneRealization.stable 0 +
       (1 / 12 : ℚ) • P.kappa Fforget 2 (Fin 1) HodgeDegreeOneRealization.stable 1 +
       (1 / 24 : ℚ) • (A 2 (Fin 1)).map (StrataModule.basis rawGraph3) +
       (1 / 24 : ℚ) • (A 2 (Fin 1)).map (StrataModule.basis rawGraph4) +
       (1 / 24 : ℚ) • (A 2 (Fin 1)).map (StrataModule.basis rawGraph5) := by
-    simp only [raw_0_1_degree1, RelationCertificate.interpret_apply, Fin.sum_univ_succ,
-      Fin.sum_univ_zero, raw_0_1_degree1Columns, raw_0_1_degree1Coordinates,
+    simp only [raw01Degree1, RelationCertificate.interpret_apply, Fin.sum_univ_succ,
+      Fin.sum_univ_zero, raw01Degree1Columns, raw01Degree1Coordinates,
       Matrix.cons_val_zero, Matrix.cons_val_succ, Matrix.cons_val_fin_one,
       map_add, map_smul, add_zero, hp, hk]
     abel
@@ -291,15 +291,15 @@ theorem map_raw_0_2_eq_half_square
     (hmixedLeft : LoopSeparatingGysin.leftRefinement.Compatible A F N)
     (hmixedRight : LoopSeparatingGysin.rightRefinement.Compatible A F N)
     (hchain : SeparatingSquareGysin.chainExpression.Compatible A F N) :
-    (A 2 (Fin 1)).map raw_0_2_degree2 =
-      (1 / 2 : ℚ) • ((A 2 (Fin 1)).map raw_0_1_degree1) ^ 2 := by
+    (A 2 (Fin 1)).map raw02Degree2 =
+      (1 / 2 : ℚ) • ((A 2 (Fin 1)).map raw01Degree1) ^ 2 := by
   have hs := map_raw_1_1_eq_square A Fforget F N P K Qsquare Qloop Qsep Hforget hTail hTailForget
     hLoopGysin hMixedGysin hSepGysin hbasePsi hbaseFund hcorolla hκUp hpsiUp hpsiUpUp
     hfundUp hfundUpUp hloop hleft hright hκLoop hpsiLoopUp hfundLoopUp hκM hκU
     hpsiMnew hpsiUnew hfundUnew hpsiM hpsiU hdouble hparallel hmixedLeft hmixedRight hchain
   rw [HodgeDegreeTwoRawRelation.raw_degree_two_equal, map_smul] at hs
   calc
-    _ = (1 / 2 : ℚ) • ((2 : ℚ) • (A 2 (Fin 1)).map raw_0_2_degree2) := by
+    _ = (1 / 2 : ℚ) • ((2 : ℚ) • (A 2 (Fin 1)).map raw02Degree2) := by
       rw [smul_smul]
       norm_num only [one_smul]
     _ = _ := congrArg (fun x : C.H 2 (Fin 1) ↦ (1 / 2 : ℚ) • x) hs

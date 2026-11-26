@@ -16,11 +16,11 @@ namespace AxiomaticGWTest.GKM.HodgeKappaLoopProduct
 
 open AxiomaticGW AdmcyclesHodgeStrataCandidates
 
-theorem exact_position10 : raw_1_1_degree2Columns 10 = rawGraph17 := rfl
+theorem exact_position10 : raw11Degree2Columns 10 = rawGraph17 := rfl
 
 theorem actual_mixed_coefficient :
-    raw_1_1_degree2Coordinates 10 =
-      2 * raw_0_1_degree1Coordinates 1 * raw_0_1_degree1Coordinates 2 := by
+    raw11Degree2Coordinates 10 =
+      2 * raw01Degree1Coordinates 1 * raw01Degree1Coordinates 2 := by
   decide +kernel
 
 theorem transport_new_marking (S : Type) :

@@ -1,0 +1,108 @@
+"""Emit Lean checks for regular bivariate GKM fractions expected to be constant."""
+
+import hashlib
+from textwrap import fill
+
+from export_admcycles_certificate import rational, rational_text
+from export_gkm_certificate import EVAL_SIMP, has_variable_denominator, key, polynomial_text
+
+
+def indexed_array(items, typ, width):
+    rows = [", ".join(items[j:j + width]) for j in range(0, len(items), width)]
+    return "  (#[" + ",\n    ".join(rows) + f"] : Array ({typ}))[i.val]'i.isLt"
+
+
+def fraction_table(fractions, *, constants_per_line=8, proof_heartbeats=None):
+    """Preserve each literal pair of polynomials and prove both its specialization and field value."""
+    budget = [] if proof_heartbeats is None else [
+        f"set_option maxHeartbeats {proof_heartbeats} in",
+        "-- The proof normalizes both polynomials for every distinct reported fraction."]
+    count = len(fractions)
+    single = count == 1
+    split = "  fin_cases i" + ("" if single else " <;>")
+    normalize = "  norm_num" if single else split + " norm_num"
+    variable_denominator = any(has_variable_denominator(f) for f, _ in fractions)
+    lines = ["namespace FractionTable", "", "noncomputable section", ""]
+    for name, field in (("numerators", "numerator"), ("denominators", "denominator")):
+        polynomials = [polynomial_text(f[field], ring=True) for f, _ in fractions]
+        uniform = len(set(polynomials)) == 1
+        argument = "_" if uniform else "i"
+        lines += [f"/-- Sparse polynomial {name} in the two torus characters. -/",
+                  f"def {name} ({argument} : Fin {count}) : Polynomial :=",
+                  "  " + polynomials[0] if uniform else indexed_array(polynomials, "Polynomial", 1),
+                  ""]
+    lines += ["/-- Ordinary rational constants attached to the dictionary entries. -/",
+              f"def constants (i : Fin {count}) : ℚ :=",
+              indexed_array([rational_text(q) for _, q in fractions], "ℚ", constants_per_line), "",
+              "/-- The exact quotient of the two incoming polynomials. -/",
+              f"def fraction (i : Fin {count}) : Coefficient :=",
+              "  embed (numerators i) / embed (denominators i)", "",
+              "/-- The actual denominator of every reported entry is regular at zero. -/",
+              f"theorem regular (i : Fin {count}) : atZero (denominators i) ≠ 0 := by",
+              *([split] if single else []),
+              fill(normalize + " [denominators, " + ", ".join(EVAL_SIMP) + "]",
+                   width=96, subsequent_indent="    "), "",
+              *budget, "/-- Specialization uses the literal numerator and denominator of each entry. -/",
+              f"theorem specializes (i : Fin {count}) : Specializes (fraction i) (constants i) := by",
+              "  refine ⟨numerators i, denominators i, regular i, rfl, ?_⟩",
+              *([split] if single else []),
+              fill(normalize + " [numerators, denominators, constants, " +
+                   ", ".join(EVAL_SIMP) + "]", width=96, subsequent_indent="    "), "",
+              *budget, "/-- Cancellation in the full fraction field gives the indicated constant. -/",
+              f"theorem fraction_eq_constant (i : Fin {count}) :",
+              "    fraction i = (constants i : Coefficient) := by",
+              "  apply (div_eq_iff (embed_ne_zero_of_atZero _ (regular i))).mpr",
+              split,
+              ("  " if single else "    ") + "norm_num [numerators, denominators, constants, map_add, map_mul, map_pow, embed_C]"
+              + (" <;> ring" if variable_denominator else ""), "", "end", "", "end FractionTable", ""]
+    return lines
+
+
+def ordered_surface_frame(raw, cases, *, lean_target, namespace, title, generator):
+    """Emit full ordered surface requests with shared exact fraction and specialization proofs."""
+    from gkm_genus_two_degree_zero import query_text
+
+    size = len(cases)
+    # Elaborating the length proof for a long literal array exceeds Lean's default depth.
+    array_depth = ["set_option maxRecDepth 4096 in"] if size >= 256 else []
+    fractions = []
+    indices = []
+    seen = {}
+    for case in cases:
+        fraction = case["equivariant"]
+        ordinary = rational(case["ordinary"])
+        literal = (key(fraction), ordinary)
+        if literal not in seen:
+            seen[literal] = len(fractions)
+            fractions.append((fraction, ordinary))
+        indices.append(str(seen[literal]))
+    count = len(fractions)
+    variable = any(has_variable_denominator(f) for f, _ in fractions)
+    lines = ["module", "", "public import AxiomaticGW.GKM.EquivariantCoefficients",
+             "public import AxiomaticGW.Surfaces.Queries",
+             "public import Mathlib.Tactic.FinCases", "public import Mathlib.Tactic.NormNum",
+             *(["public import Mathlib.Tactic.Ring"] if variable else []), "",
+             f"/-! # {title}", "",
+             f"Generated by `scripts/{generator}`.",
+             "Report SHA256: " + hashlib.sha256(raw).hexdigest(), "-/", "",
+             "@[expose] public section", "", f"namespace AxiomaticGW.GKM.{namespace}",
+             "open EquivariantCoefficients", "", *array_depth,
+             "/-- Effective classes and ordered descendants from the native report. -/",
+             f"def requests (i : Fin {size}) : SurfaceQuery {lean_target} :=",
+             indexed_array([query_text(c) for c in cases], f"SurfaceQuery {lean_target}", 1), "",
+             *fraction_table(fractions, constants_per_line=5, proof_heartbeats=800000 if count > 16 else None),
+             *array_depth, "/-- Index of the reported polynomial pair and its regular ordinary value. -/",
+             f"def fractionIndex (i : Fin {size}) : Fin {count} :=",
+             indexed_array(indices, f"Fin {count}", 16), "",
+             "/-- Reported ordinary values in request order. -/",
+             f"def values (i : Fin {size}) : ℚ := FractionTable.constants (fractionIndex i)", "",
+             "/-- Full two-character coefficient in request order. -/",
+             f"noncomputable def equivariant (i : Fin {size}) : Coefficient :=",
+             "  FractionTable.fraction (fractionIndex i)", "",
+             "/-- The full rational function equals the ordinary value in this dimension. -/",
+             f"theorem equivariant_eq_ordinary (i : Fin {size}) :",
+             "    equivariant i = (values i : Coefficient) := FractionTable.fraction_eq_constant _", "",
+             "/-- The reported representative has regular specialization at zero. -/",
+             f"theorem specializes (i : Fin {size}) : Specializes (equivariant i) (values i) :=",
+             "  FractionTable.specializes _", "", f"end AxiomaticGW.GKM.{namespace}", ""]
+    return "\n".join(lines)

@@ -17,7 +17,7 @@ sys.dont_write_bytecode = True
 ROOT = Path(__file__).resolve().parents[1]
 INPUT = ROOT / 'environments/gkm-degree-zero-hodge-strata-factored-candidate.json'
 INPUT_SHA = '5be60671ddc68304610987123f048a6c010504cf27f3b690cd1e4d4e39227399'
-C00_SHA = '40a111318d8fd8c42cfec82157690c60822df1fb23f12adb6062f7b6939d3cbe'
+C00_SHA = '0ee2f4d7aa4e44a4b81434e289bd18850e987ae5f63d3f87a35819b563308870'
 NAMESPACE = 'AxiomaticGW.GKM.HodgeDegreeZeroFullCoefficientReplay'
 
 
