@@ -6,7 +6,8 @@ These are candidate computations until this Lean module compiles.
 -/
 module
 
-public import AxiomaticGW.Surfaces.PlaneGenusTwoScalarParts
+public import AxiomaticGW.Surfaces.PlaneGenusTwoScalarSymmetry
+public import AxiomaticGW.Surfaces.PlaneGenusTwoFirstCoefficients
 
 @[expose] public section
 set_option Elab.async false
@@ -14,6 +15,10 @@ set_option maxRecDepth 20000
 
 namespace AxiomaticGW.GenusTwoPlaneDegree3Scalars
 open BelorousskiPandharipande
+
+-- Select the actual finite-vector branch before evaluating its contents.
+attribute [local cbv_eval] Matrix.cons_val_zero Matrix.cons_val_succ
+attribute [local cbv_eval] Matrix.cons_val_zero' Matrix.cons_val_succ'
 
 private def constant_0_parts : Fin 16 → Fin 6 → ℚ :=
   ![
@@ -35,198 +40,446 @@ private def constant_0_parts : Fin 16 → Fin 6 → ℚ :=
     ![(-81 / 2), (-81 / 2), (-81 / 2), (-963 / 4), (-81 / 2), (-963 / 4)]
   ]
 
+private theorem constant_0_marking (k : Fin 16) (e f : Fin 6)
+    (h : (![.hyperplane, .hyperplane, .point] : Fin 3 → SurfaceBasisLabel .plane) ∘
+      labelPermutation e =
+      ![.hyperplane, .hyperplane, .point] ∘ labelPermutation f) :
+    planeShiftedConstantPart 3 0 k e = planeShiftedConstantPart 3 0 k f := by
+  exact planePointConstantPart_eq_of_labels 10 ![4]
+    ![.hyperplane, .hyperplane, .point] k e f h
+
+set_option maxHeartbeats 1000000 in
+-- Kernel replay of one complete finite graph contribution.
+set_option cbv.maxSteps 1000000 in
 private theorem constant_0_part_0_0 : planeShiftedConstantPart 3 0 0 0 =
-    (989 / 2) := by decide +kernel
+    (989 / 2) := by cbv
+set_option maxHeartbeats 1000000 in
+-- Kernel replay of one complete finite graph contribution.
+set_option cbv.maxSteps 1000000 in
 private theorem constant_0_part_0_1 : planeShiftedConstantPart 3 0 0 1 =
-    (989 / 2) := by decide +kernel
+    (989 / 2) := by cbv
 private theorem constant_0_part_0_2 : planeShiftedConstantPart 3 0 0 2 =
-    (989 / 2) := by decide +kernel
+    (989 / 2) := by
+  exact (constant_0_marking 0 2 0 (by decide +kernel)).trans
+    constant_0_part_0_0
+set_option maxHeartbeats 1000000 in
+-- Kernel replay of one complete finite graph contribution.
+set_option cbv.maxSteps 1000000 in
 private theorem constant_0_part_0_3 : planeShiftedConstantPart 3 0 0 3 =
-    (989 / 2) := by decide +kernel
+    (989 / 2) := by cbv
 private theorem constant_0_part_0_4 : planeShiftedConstantPart 3 0 0 4 =
-    (989 / 2) := by decide +kernel
+    (989 / 2) := by
+  exact (constant_0_marking 0 4 1 (by decide +kernel)).trans
+    constant_0_part_0_1
 private theorem constant_0_part_0_5 : planeShiftedConstantPart 3 0 0 5 =
-    (989 / 2) := by decide +kernel
+    (989 / 2) := by
+  exact (constant_0_marking 0 5 3 (by decide +kernel)).trans
+    constant_0_part_0_3
+set_option maxHeartbeats 1000000 in
+-- Kernel replay of one complete finite graph contribution.
+set_option cbv.maxSteps 1000000 in
 private theorem constant_0_part_1_0 : planeShiftedConstantPart 3 0 1 0 =
-    (81 / 4) := by decide +kernel
+    (81 / 4) := by cbv
+set_option maxHeartbeats 1000000 in
+-- Kernel replay of one complete finite graph contribution.
+set_option cbv.maxSteps 1000000 in
 private theorem constant_0_part_1_1 : planeShiftedConstantPart 3 0 1 1 =
-    (27 / 2) := by decide +kernel
+    (27 / 2) := by cbv
 private theorem constant_0_part_1_2 : planeShiftedConstantPart 3 0 1 2 =
-    (81 / 4) := by decide +kernel
+    (81 / 4) := by
+  exact (constant_0_marking 1 2 0 (by decide +kernel)).trans
+    constant_0_part_1_0
+set_option maxHeartbeats 1000000 in
+-- Kernel replay of one complete finite graph contribution.
+set_option cbv.maxSteps 1000000 in
 private theorem constant_0_part_1_3 : planeShiftedConstantPart 3 0 1 3 =
-    (27 / 2) := by decide +kernel
+    (27 / 2) := by cbv
 private theorem constant_0_part_1_4 : planeShiftedConstantPart 3 0 1 4 =
-    (27 / 2) := by decide +kernel
+    (27 / 2) := by
+  exact (constant_0_marking 1 4 1 (by decide +kernel)).trans
+    constant_0_part_1_1
 private theorem constant_0_part_1_5 : planeShiftedConstantPart 3 0 1 5 =
-    (27 / 2) := by decide +kernel
+    (27 / 2) := by
+  exact (constant_0_marking 1 5 3 (by decide +kernel)).trans
+    constant_0_part_1_3
+set_option maxHeartbeats 1000000 in
+-- Kernel replay of one complete finite graph contribution.
+set_option cbv.maxSteps 1000000 in
 private theorem constant_0_part_2_0 : planeShiftedConstantPart 3 0 2 0 =
-    (-783 / 2) := by decide +kernel
+    (-783 / 2) := by cbv
+set_option maxHeartbeats 1000000 in
+-- Kernel replay of one complete finite graph contribution.
+set_option cbv.maxSteps 1000000 in
 private theorem constant_0_part_2_1 : planeShiftedConstantPart 3 0 2 1 =
-    (-783 / 2) := by decide +kernel
+    (-783 / 2) := by cbv
 private theorem constant_0_part_2_2 : planeShiftedConstantPart 3 0 2 2 =
-    (-783 / 2) := by decide +kernel
+    (-783 / 2) := by
+  exact (constant_0_marking 2 2 0 (by decide +kernel)).trans
+    constant_0_part_2_0
+set_option maxHeartbeats 1000000 in
+-- Kernel replay of one complete finite graph contribution.
+set_option cbv.maxSteps 1000000 in
 private theorem constant_0_part_2_3 : planeShiftedConstantPart 3 0 2 3 =
-    -81 := by decide +kernel
+    -81 := by cbv
 private theorem constant_0_part_2_4 : planeShiftedConstantPart 3 0 2 4 =
-    (-783 / 2) := by decide +kernel
+    (-783 / 2) := by
+  exact (constant_0_marking 2 4 1 (by decide +kernel)).trans
+    constant_0_part_2_1
 private theorem constant_0_part_2_5 : planeShiftedConstantPart 3 0 2 5 =
-    -81 := by decide +kernel
+    -81 := by
+  exact (constant_0_marking 2 5 3 (by decide +kernel)).trans
+    constant_0_part_2_3
+set_option maxHeartbeats 1000000 in
+-- Kernel replay of one complete finite graph contribution.
+set_option cbv.maxSteps 1000000 in
 private theorem constant_0_part_3_0 : planeShiftedConstantPart 3 0 3 0 =
-    0 := by decide +kernel
+    0 := by cbv
+set_option maxHeartbeats 1000000 in
+-- Kernel replay of one complete finite graph contribution.
+set_option cbv.maxSteps 1000000 in
 private theorem constant_0_part_3_1 : planeShiftedConstantPart 3 0 3 1 =
-    0 := by decide +kernel
+    0 := by cbv
 private theorem constant_0_part_3_2 : planeShiftedConstantPart 3 0 3 2 =
-    0 := by decide +kernel
+    0 := by
+  exact (constant_0_marking 3 2 0 (by decide +kernel)).trans
+    constant_0_part_3_0
+set_option maxHeartbeats 1000000 in
+-- Kernel replay of one complete finite graph contribution.
+set_option cbv.maxSteps 1000000 in
 private theorem constant_0_part_3_3 : planeShiftedConstantPart 3 0 3 3 =
-    0 := by decide +kernel
+    0 := by cbv
 private theorem constant_0_part_3_4 : planeShiftedConstantPart 3 0 3 4 =
-    0 := by decide +kernel
+    0 := by
+  exact (constant_0_marking 3 4 1 (by decide +kernel)).trans
+    constant_0_part_3_1
 private theorem constant_0_part_3_5 : planeShiftedConstantPart 3 0 3 5 =
-    0 := by decide +kernel
+    0 := by
+  exact (constant_0_marking 3 5 3 (by decide +kernel)).trans
+    constant_0_part_3_3
+set_option maxHeartbeats 1000000 in
+-- Kernel replay of one complete finite graph contribution.
+set_option cbv.maxSteps 1000000 in
 private theorem constant_0_part_4_0 : planeShiftedConstantPart 3 0 4 0 =
-    (27 / 2) := by decide +kernel
+    (27 / 2) := by cbv
+set_option maxHeartbeats 1000000 in
+-- Kernel replay of one complete finite graph contribution.
+set_option cbv.maxSteps 1000000 in
 private theorem constant_0_part_4_1 : planeShiftedConstantPart 3 0 4 1 =
-    (27 / 2) := by decide +kernel
+    (27 / 2) := by cbv
 private theorem constant_0_part_4_2 : planeShiftedConstantPart 3 0 4 2 =
-    (27 / 2) := by decide +kernel
+    (27 / 2) := by
+  exact (constant_0_marking 4 2 0 (by decide +kernel)).trans
+    constant_0_part_4_0
+set_option maxHeartbeats 1000000 in
+-- Kernel replay of one complete finite graph contribution.
+set_option cbv.maxSteps 1000000 in
 private theorem constant_0_part_4_3 : planeShiftedConstantPart 3 0 4 3 =
-    (27 / 2) := by decide +kernel
+    (27 / 2) := by cbv
 private theorem constant_0_part_4_4 : planeShiftedConstantPart 3 0 4 4 =
-    (27 / 2) := by decide +kernel
+    (27 / 2) := by
+  exact (constant_0_marking 4 4 1 (by decide +kernel)).trans
+    constant_0_part_4_1
 private theorem constant_0_part_4_5 : planeShiftedConstantPart 3 0 4 5 =
-    (27 / 2) := by decide +kernel
+    (27 / 2) := by
+  exact (constant_0_marking 4 5 3 (by decide +kernel)).trans
+    constant_0_part_4_3
+set_option maxHeartbeats 1000000 in
+-- Kernel replay of one complete finite graph contribution.
+set_option cbv.maxSteps 1000000 in
 private theorem constant_0_part_5_0 : planeShiftedConstantPart 3 0 5 0 =
-    0 := by decide +kernel
+    0 := by cbv
+set_option maxHeartbeats 1000000 in
+-- Kernel replay of one complete finite graph contribution.
+set_option cbv.maxSteps 1000000 in
 private theorem constant_0_part_5_1 : planeShiftedConstantPart 3 0 5 1 =
-    0 := by decide +kernel
+    0 := by cbv
 private theorem constant_0_part_5_2 : planeShiftedConstantPart 3 0 5 2 =
-    0 := by decide +kernel
+    0 := by
+  exact (constant_0_marking 5 2 0 (by decide +kernel)).trans
+    constant_0_part_5_0
+set_option maxHeartbeats 1000000 in
+-- Kernel replay of one complete finite graph contribution.
+set_option cbv.maxSteps 1000000 in
 private theorem constant_0_part_5_3 : planeShiftedConstantPart 3 0 5 3 =
-    0 := by decide +kernel
+    0 := by cbv
 private theorem constant_0_part_5_4 : planeShiftedConstantPart 3 0 5 4 =
-    0 := by decide +kernel
+    0 := by
+  exact (constant_0_marking 5 4 1 (by decide +kernel)).trans
+    constant_0_part_5_1
 private theorem constant_0_part_5_5 : planeShiftedConstantPart 3 0 5 5 =
-    0 := by decide +kernel
+    0 := by
+  exact (constant_0_marking 5 5 3 (by decide +kernel)).trans
+    constant_0_part_5_3
+set_option maxHeartbeats 1000000 in
+-- Kernel replay of one complete finite graph contribution.
+set_option cbv.maxSteps 1000000 in
 private theorem constant_0_part_6_0 : planeShiftedConstantPart 3 0 6 0 =
-    (81 / 2) := by decide +kernel
+    (81 / 2) := by cbv
+set_option maxHeartbeats 1000000 in
+-- Kernel replay of one complete finite graph contribution.
+set_option cbv.maxSteps 1000000 in
 private theorem constant_0_part_6_1 : planeShiftedConstantPart 3 0 6 1 =
-    (81 / 2) := by decide +kernel
+    (81 / 2) := by cbv
 private theorem constant_0_part_6_2 : planeShiftedConstantPart 3 0 6 2 =
-    (81 / 2) := by decide +kernel
+    (81 / 2) := by
+  exact (constant_0_marking 6 2 0 (by decide +kernel)).trans
+    constant_0_part_6_0
+set_option maxHeartbeats 1000000 in
+-- Kernel replay of one complete finite graph contribution.
+set_option cbv.maxSteps 1000000 in
 private theorem constant_0_part_6_3 : planeShiftedConstantPart 3 0 6 3 =
-    (783 / 4) := by decide +kernel
+    (783 / 4) := by cbv
 private theorem constant_0_part_6_4 : planeShiftedConstantPart 3 0 6 4 =
-    (81 / 2) := by decide +kernel
+    (81 / 2) := by
+  exact (constant_0_marking 6 4 1 (by decide +kernel)).trans
+    constant_0_part_6_1
 private theorem constant_0_part_6_5 : planeShiftedConstantPart 3 0 6 5 =
-    (783 / 4) := by decide +kernel
+    (783 / 4) := by
+  exact (constant_0_marking 6 5 3 (by decide +kernel)).trans
+    constant_0_part_6_3
+set_option maxHeartbeats 1000000 in
+-- Kernel replay of one complete finite graph contribution.
+set_option cbv.maxSteps 1000000 in
 private theorem constant_0_part_7_0 : planeShiftedConstantPart 3 0 7 0 =
-    (-7933 / 12) := by decide +kernel
+    (-7933 / 12) := by cbv
+set_option maxHeartbeats 1000000 in
+-- Kernel replay of one complete finite graph contribution.
+set_option cbv.maxSteps 1000000 in
 private theorem constant_0_part_7_1 : planeShiftedConstantPart 3 0 7 1 =
-    (-7933 / 12) := by decide +kernel
+    (-7933 / 12) := by cbv
 private theorem constant_0_part_7_2 : planeShiftedConstantPart 3 0 7 2 =
-    (-7933 / 12) := by decide +kernel
+    (-7933 / 12) := by
+  exact (constant_0_marking 7 2 0 (by decide +kernel)).trans
+    constant_0_part_7_0
+set_option maxHeartbeats 1000000 in
+-- Kernel replay of one complete finite graph contribution.
+set_option cbv.maxSteps 1000000 in
 private theorem constant_0_part_7_3 : planeShiftedConstantPart 3 0 7 3 =
-    (-7933 / 12) := by decide +kernel
+    (-7933 / 12) := by cbv
 private theorem constant_0_part_7_4 : planeShiftedConstantPart 3 0 7 4 =
-    (-7933 / 12) := by decide +kernel
+    (-7933 / 12) := by
+  exact (constant_0_marking 7 4 1 (by decide +kernel)).trans
+    constant_0_part_7_1
 private theorem constant_0_part_7_5 : planeShiftedConstantPart 3 0 7 5 =
-    (-7933 / 12) := by decide +kernel
+    (-7933 / 12) := by
+  exact (constant_0_marking 7 5 3 (by decide +kernel)).trans
+    constant_0_part_7_3
+set_option maxHeartbeats 1000000 in
+-- Kernel replay of one complete finite graph contribution.
+set_option cbv.maxSteps 1000000 in
 private theorem constant_0_part_8_0 : planeShiftedConstantPart 3 0 8 0 =
-    (-81 / 8) := by decide +kernel
+    (-81 / 8) := by cbv
+set_option maxHeartbeats 1000000 in
+-- Kernel replay of one complete finite graph contribution.
+set_option cbv.maxSteps 1000000 in
 private theorem constant_0_part_8_1 : planeShiftedConstantPart 3 0 8 1 =
-    (-27 / 4) := by decide +kernel
+    (-27 / 4) := by cbv
 private theorem constant_0_part_8_2 : planeShiftedConstantPart 3 0 8 2 =
-    (-81 / 8) := by decide +kernel
+    (-81 / 8) := by
+  exact (constant_0_marking 8 2 0 (by decide +kernel)).trans
+    constant_0_part_8_0
+set_option maxHeartbeats 1000000 in
+-- Kernel replay of one complete finite graph contribution.
+set_option cbv.maxSteps 1000000 in
 private theorem constant_0_part_8_3 : planeShiftedConstantPart 3 0 8 3 =
-    (-27 / 4) := by decide +kernel
+    (-27 / 4) := by cbv
 private theorem constant_0_part_8_4 : planeShiftedConstantPart 3 0 8 4 =
-    (-27 / 4) := by decide +kernel
+    (-27 / 4) := by
+  exact (constant_0_marking 8 4 1 (by decide +kernel)).trans
+    constant_0_part_8_1
 private theorem constant_0_part_8_5 : planeShiftedConstantPart 3 0 8 5 =
-    (-27 / 4) := by decide +kernel
+    (-27 / 4) := by
+  exact (constant_0_marking 8 5 3 (by decide +kernel)).trans
+    constant_0_part_8_3
+set_option maxHeartbeats 1000000 in
+-- Kernel replay of one complete finite graph contribution.
+set_option cbv.maxSteps 1000000 in
 private theorem constant_0_part_9_0 : planeShiftedConstantPart 3 0 9 0 =
-    (243 / 8) := by decide +kernel
+    (243 / 8) := by cbv
+set_option maxHeartbeats 1000000 in
+-- Kernel replay of one complete finite graph contribution.
+set_option cbv.maxSteps 1000000 in
 private theorem constant_0_part_9_1 : planeShiftedConstantPart 3 0 9 1 =
-    (243 / 8) := by decide +kernel
+    (243 / 8) := by cbv
 private theorem constant_0_part_9_2 : planeShiftedConstantPart 3 0 9 2 =
-    (243 / 8) := by decide +kernel
+    (243 / 8) := by
+  exact (constant_0_marking 9 2 0 (by decide +kernel)).trans
+    constant_0_part_9_0
+set_option maxHeartbeats 1000000 in
+-- Kernel replay of one complete finite graph contribution.
+set_option cbv.maxSteps 1000000 in
 private theorem constant_0_part_9_3 : planeShiftedConstantPart 3 0 9 3 =
-    (81 / 4) := by decide +kernel
+    (81 / 4) := by cbv
 private theorem constant_0_part_9_4 : planeShiftedConstantPart 3 0 9 4 =
-    (243 / 8) := by decide +kernel
+    (243 / 8) := by
+  exact (constant_0_marking 9 4 1 (by decide +kernel)).trans
+    constant_0_part_9_1
 private theorem constant_0_part_9_5 : planeShiftedConstantPart 3 0 9 5 =
-    (81 / 4) := by decide +kernel
+    (81 / 4) := by
+  exact (constant_0_marking 9 5 3 (by decide +kernel)).trans
+    constant_0_part_9_3
+set_option maxHeartbeats 1000000 in
+-- Kernel replay of one complete finite graph contribution.
+set_option cbv.maxSteps 1000000 in
 private theorem constant_0_part_10_0 : planeShiftedConstantPart 3 0 10 0 =
-    (-801 / 8) := by decide +kernel
+    (-801 / 8) := by cbv
+set_option maxHeartbeats 1000000 in
+-- Kernel replay of one complete finite graph contribution.
+set_option cbv.maxSteps 1000000 in
 private theorem constant_0_part_10_1 : planeShiftedConstantPart 3 0 10 1 =
-    (-801 / 8) := by decide +kernel
+    (-801 / 8) := by cbv
 private theorem constant_0_part_10_2 : planeShiftedConstantPart 3 0 10 2 =
-    (-801 / 8) := by decide +kernel
+    (-801 / 8) := by
+  exact (constant_0_marking 10 2 0 (by decide +kernel)).trans
+    constant_0_part_10_0
+set_option maxHeartbeats 1000000 in
+-- Kernel replay of one complete finite graph contribution.
+set_option cbv.maxSteps 1000000 in
 private theorem constant_0_part_10_3 : planeShiftedConstantPart 3 0 10 3 =
-    (-801 / 8) := by decide +kernel
+    (-801 / 8) := by cbv
 private theorem constant_0_part_10_4 : planeShiftedConstantPart 3 0 10 4 =
-    (-801 / 8) := by decide +kernel
+    (-801 / 8) := by
+  exact (constant_0_marking 10 4 1 (by decide +kernel)).trans
+    constant_0_part_10_1
 private theorem constant_0_part_10_5 : planeShiftedConstantPart 3 0 10 5 =
-    (-801 / 8) := by decide +kernel
+    (-801 / 8) := by
+  exact (constant_0_marking 10 5 3 (by decide +kernel)).trans
+    constant_0_part_10_3
+set_option maxHeartbeats 1000000 in
+-- Kernel replay of one complete finite graph contribution.
+set_option cbv.maxSteps 1000000 in
 private theorem constant_0_part_11_0 : planeShiftedConstantPart 3 0 11 0 =
-    9 := by decide +kernel
+    9 := by cbv
+set_option maxHeartbeats 1000000 in
+-- Kernel replay of one complete finite graph contribution.
+set_option cbv.maxSteps 1000000 in
 private theorem constant_0_part_11_1 : planeShiftedConstantPart 3 0 11 1 =
-    9 := by decide +kernel
+    9 := by cbv
 private theorem constant_0_part_11_2 : planeShiftedConstantPart 3 0 11 2 =
-    9 := by decide +kernel
+    9 := by
+  exact (constant_0_marking 11 2 0 (by decide +kernel)).trans
+    constant_0_part_11_0
+set_option maxHeartbeats 1000000 in
+-- Kernel replay of one complete finite graph contribution.
+set_option cbv.maxSteps 1000000 in
 private theorem constant_0_part_11_3 : planeShiftedConstantPart 3 0 11 3 =
-    9 := by decide +kernel
+    9 := by cbv
 private theorem constant_0_part_11_4 : planeShiftedConstantPart 3 0 11 4 =
-    9 := by decide +kernel
+    9 := by
+  exact (constant_0_marking 11 4 1 (by decide +kernel)).trans
+    constant_0_part_11_1
 private theorem constant_0_part_11_5 : planeShiftedConstantPart 3 0 11 5 =
-    9 := by decide +kernel
+    9 := by
+  exact (constant_0_marking 11 5 3 (by decide +kernel)).trans
+    constant_0_part_11_3
+set_option maxHeartbeats 1000000 in
+-- Kernel replay of one complete finite graph contribution.
+set_option cbv.maxSteps 1000000 in
 private theorem constant_0_part_12_0 : planeShiftedConstantPart 3 0 12 0 =
-    (-243 / 2) := by decide +kernel
+    (-243 / 2) := by cbv
+set_option maxHeartbeats 1000000 in
+-- Kernel replay of one complete finite graph contribution.
+set_option cbv.maxSteps 1000000 in
 private theorem constant_0_part_12_1 : planeShiftedConstantPart 3 0 12 1 =
-    -81 := by decide +kernel
+    -81 := by cbv
 private theorem constant_0_part_12_2 : planeShiftedConstantPart 3 0 12 2 =
-    (-243 / 2) := by decide +kernel
+    (-243 / 2) := by
+  exact (constant_0_marking 12 2 0 (by decide +kernel)).trans
+    constant_0_part_12_0
+set_option maxHeartbeats 1000000 in
+-- Kernel replay of one complete finite graph contribution.
+set_option cbv.maxSteps 1000000 in
 private theorem constant_0_part_12_3 : planeShiftedConstantPart 3 0 12 3 =
-    -81 := by decide +kernel
+    -81 := by cbv
 private theorem constant_0_part_12_4 : planeShiftedConstantPart 3 0 12 4 =
-    -81 := by decide +kernel
+    -81 := by
+  exact (constant_0_marking 12 4 1 (by decide +kernel)).trans
+    constant_0_part_12_1
 private theorem constant_0_part_12_5 : planeShiftedConstantPart 3 0 12 5 =
-    -81 := by decide +kernel
+    -81 := by
+  exact (constant_0_marking 12 5 3 (by decide +kernel)).trans
+    constant_0_part_12_3
+set_option maxHeartbeats 1000000 in
+-- Kernel replay of one complete finite graph contribution.
+set_option cbv.maxSteps 1000000 in
 private theorem constant_0_part_13_0 : planeShiftedConstantPart 3 0 13 0 =
-    (1683 / 2) := by decide +kernel
+    (1683 / 2) := by cbv
+set_option maxHeartbeats 1000000 in
+-- Kernel replay of one complete finite graph contribution.
+set_option cbv.maxSteps 1000000 in
 private theorem constant_0_part_13_1 : planeShiftedConstantPart 3 0 13 1 =
-    (1683 / 2) := by decide +kernel
+    (1683 / 2) := by cbv
 private theorem constant_0_part_13_2 : planeShiftedConstantPart 3 0 13 2 =
-    (1683 / 2) := by decide +kernel
+    (1683 / 2) := by
+  exact (constant_0_marking 13 2 0 (by decide +kernel)).trans
+    constant_0_part_13_0
+set_option maxHeartbeats 1000000 in
+-- Kernel replay of one complete finite graph contribution.
+set_option cbv.maxSteps 1000000 in
 private theorem constant_0_part_13_3 : planeShiftedConstantPart 3 0 13 3 =
-    441 := by decide +kernel
+    441 := by cbv
 private theorem constant_0_part_13_4 : planeShiftedConstantPart 3 0 13 4 =
-    (1683 / 2) := by decide +kernel
+    (1683 / 2) := by
+  exact (constant_0_marking 13 4 1 (by decide +kernel)).trans
+    constant_0_part_13_1
 private theorem constant_0_part_13_5 : planeShiftedConstantPart 3 0 13 5 =
-    441 := by decide +kernel
+    441 := by
+  exact (constant_0_marking 13 5 3 (by decide +kernel)).trans
+    constant_0_part_13_3
+set_option maxHeartbeats 1000000 in
+-- Kernel replay of one complete finite graph contribution.
+set_option cbv.maxSteps 1000000 in
 private theorem constant_0_part_14_0 : planeShiftedConstantPart 3 0 14 0 =
-    (-27 / 2) := by decide +kernel
+    (-27 / 2) := by cbv
+set_option maxHeartbeats 1000000 in
+-- Kernel replay of one complete finite graph contribution.
+set_option cbv.maxSteps 1000000 in
 private theorem constant_0_part_14_1 : planeShiftedConstantPart 3 0 14 1 =
-    (-27 / 2) := by decide +kernel
+    (-27 / 2) := by cbv
 private theorem constant_0_part_14_2 : planeShiftedConstantPart 3 0 14 2 =
-    (-27 / 2) := by decide +kernel
+    (-27 / 2) := by
+  exact (constant_0_marking 14 2 0 (by decide +kernel)).trans
+    constant_0_part_14_0
+set_option maxHeartbeats 1000000 in
+-- Kernel replay of one complete finite graph contribution.
+set_option cbv.maxSteps 1000000 in
 private theorem constant_0_part_14_3 : planeShiftedConstantPart 3 0 14 3 =
-    (-27 / 2) := by decide +kernel
+    (-27 / 2) := by cbv
 private theorem constant_0_part_14_4 : planeShiftedConstantPart 3 0 14 4 =
-    (-27 / 2) := by decide +kernel
+    (-27 / 2) := by
+  exact (constant_0_marking 14 4 1 (by decide +kernel)).trans
+    constant_0_part_14_1
 private theorem constant_0_part_14_5 : planeShiftedConstantPart 3 0 14 5 =
-    (-27 / 2) := by decide +kernel
+    (-27 / 2) := by
+  exact (constant_0_marking 14 5 3 (by decide +kernel)).trans
+    constant_0_part_14_3
+set_option maxHeartbeats 1000000 in
+-- Kernel replay of one complete finite graph contribution.
+set_option cbv.maxSteps 1000000 in
 private theorem constant_0_part_15_0 : planeShiftedConstantPart 3 0 15 0 =
-    (-81 / 2) := by decide +kernel
+    (-81 / 2) := by cbv
+set_option maxHeartbeats 1000000 in
+-- Kernel replay of one complete finite graph contribution.
+set_option cbv.maxSteps 1000000 in
 private theorem constant_0_part_15_1 : planeShiftedConstantPart 3 0 15 1 =
-    (-81 / 2) := by decide +kernel
+    (-81 / 2) := by cbv
 private theorem constant_0_part_15_2 : planeShiftedConstantPart 3 0 15 2 =
-    (-81 / 2) := by decide +kernel
+    (-81 / 2) := by
+  exact (constant_0_marking 15 2 0 (by decide +kernel)).trans
+    constant_0_part_15_0
+set_option maxHeartbeats 1000000 in
+-- Kernel replay of one complete finite graph contribution.
+set_option cbv.maxSteps 1000000 in
 private theorem constant_0_part_15_3 : planeShiftedConstantPart 3 0 15 3 =
-    (-963 / 4) := by decide +kernel
+    (-963 / 4) := by cbv
 private theorem constant_0_part_15_4 : planeShiftedConstantPart 3 0 15 4 =
-    (-81 / 2) := by decide +kernel
+    (-81 / 2) := by
+  exact (constant_0_marking 15 4 1 (by decide +kernel)).trans
+    constant_0_part_15_1
 private theorem constant_0_part_15_5 : planeShiftedConstantPart 3 0 15 5 =
-    (-963 / 4) := by decide +kernel
+    (-963 / 4) := by
+  exact (constant_0_marking 15 5 3 (by decide +kernel)).trans
+    constant_0_part_15_3
 
 private theorem constant_0_parts_checked (k : Fin 16) (e : Fin 6) :
     planeShiftedConstantPart 3 0 k e = constant_0_parts k e := by
@@ -342,54 +595,146 @@ private def coefficient_0_0_1_parts : Fin 4 → Fin 6 → ℚ :=
     ![0, 0, 0, 0, 0, 0]
   ]
 
+private theorem coefficient_0_0_1_marking (k : Fin 4) (e f : Fin 6)
+    (h : (![.hyperplane, .hyperplane, .point] : Fin 3 → SurfaceBasisLabel .plane) ∘
+      labelPermutation e =
+      ![.hyperplane, .hyperplane, .point] ∘ labelPermutation f) :
+    planeEarlierCoefficientPart 3 0 0 1 k e = planeEarlierCoefficientPart 3 0 0 1 k f := by
+  exact planePointCoefficientPart_eq_of_labels 10 4
+    ![.hyperplane, .hyperplane, .point] (Sum.inr (planeCanonicalQueries 0 1)) k e f h
+
+set_option maxHeartbeats 1000000 in
+-- Kernel replay of one complete finite graph contribution.
+set_option cbv.maxSteps 1000000 in
 private theorem coefficient_0_0_1_part_0_0 : planeEarlierCoefficientPart 3 0 0 1 0 0 =
-    0 := by decide +kernel
+    0 := by
+  rw [← planeEarlierCoefficientPartFast_eq]
+  decide +kernel
+set_option maxHeartbeats 1000000 in
+-- Kernel replay of one complete finite graph contribution.
+set_option cbv.maxSteps 1000000 in
 private theorem coefficient_0_0_1_part_0_1 : planeEarlierCoefficientPart 3 0 0 1 0 1 =
-    0 := by decide +kernel
+    0 := by
+  rw [← planeEarlierCoefficientPartFast_eq]
+  decide +kernel
 private theorem coefficient_0_0_1_part_0_2 : planeEarlierCoefficientPart 3 0 0 1 0 2 =
-    0 := by decide +kernel
+    0 := by
+  exact (coefficient_0_0_1_marking 0 2 0 (by decide +kernel)).trans
+    coefficient_0_0_1_part_0_0
+set_option maxHeartbeats 1000000 in
+-- Kernel replay of one complete finite graph contribution.
+set_option cbv.maxSteps 1000000 in
 private theorem coefficient_0_0_1_part_0_3 : planeEarlierCoefficientPart 3 0 0 1 0 3 =
-    0 := by decide +kernel
+    0 := by
+  rw [← planeEarlierCoefficientPartFast_eq]
+  decide +kernel
 private theorem coefficient_0_0_1_part_0_4 : planeEarlierCoefficientPart 3 0 0 1 0 4 =
-    0 := by decide +kernel
+    0 := by
+  exact (coefficient_0_0_1_marking 0 4 1 (by decide +kernel)).trans
+    coefficient_0_0_1_part_0_1
 private theorem coefficient_0_0_1_part_0_5 : planeEarlierCoefficientPart 3 0 0 1 0 5 =
-    0 := by decide +kernel
+    0 := by
+  exact (coefficient_0_0_1_marking 0 5 3 (by decide +kernel)).trans
+    coefficient_0_0_1_part_0_3
+set_option maxHeartbeats 1000000 in
+-- Kernel replay of one complete finite graph contribution.
+set_option cbv.maxSteps 1000000 in
 private theorem coefficient_0_0_1_part_1_0 : planeEarlierCoefficientPart 3 0 0 1 1 0 =
-    79360 := by decide +kernel
+    79360 := by
+  rw [← planeEarlierCoefficientPartFast_eq]
+  decide +kernel
+set_option maxHeartbeats 1000000 in
+-- Kernel replay of one complete finite graph contribution.
+set_option cbv.maxSteps 1000000 in
 private theorem coefficient_0_0_1_part_1_1 : planeEarlierCoefficientPart 3 0 0 1 1 1 =
-    79360 := by decide +kernel
+    79360 := by
+  rw [← planeEarlierCoefficientPartFast_eq]
+  decide +kernel
 private theorem coefficient_0_0_1_part_1_2 : planeEarlierCoefficientPart 3 0 0 1 1 2 =
-    79360 := by decide +kernel
+    79360 := by
+  exact (coefficient_0_0_1_marking 1 2 0 (by decide +kernel)).trans
+    coefficient_0_0_1_part_1_0
+set_option maxHeartbeats 1000000 in
+-- Kernel replay of one complete finite graph contribution.
+set_option cbv.maxSteps 1000000 in
 private theorem coefficient_0_0_1_part_1_3 : planeEarlierCoefficientPart 3 0 0 1 1 3 =
-    79360 := by decide +kernel
+    79360 := by
+  rw [← planeEarlierCoefficientPartFast_eq]
+  decide +kernel
 private theorem coefficient_0_0_1_part_1_4 : planeEarlierCoefficientPart 3 0 0 1 1 4 =
-    79360 := by decide +kernel
+    79360 := by
+  exact (coefficient_0_0_1_marking 1 4 1 (by decide +kernel)).trans
+    coefficient_0_0_1_part_1_1
 private theorem coefficient_0_0_1_part_1_5 : planeEarlierCoefficientPart 3 0 0 1 1 5 =
-    79360 := by decide +kernel
+    79360 := by
+  exact (coefficient_0_0_1_marking 1 5 3 (by decide +kernel)).trans
+    coefficient_0_0_1_part_1_3
+set_option maxHeartbeats 1000000 in
+-- Kernel replay of one complete finite graph contribution.
+set_option cbv.maxSteps 1000000 in
 private theorem coefficient_0_0_1_part_2_0 : planeEarlierCoefficientPart 3 0 0 1 2 0 =
-    0 := by decide +kernel
+    0 := by
+  rw [← planeEarlierCoefficientPartFast_eq]
+  decide +kernel
+set_option maxHeartbeats 1000000 in
+-- Kernel replay of one complete finite graph contribution.
+set_option cbv.maxSteps 1000000 in
 private theorem coefficient_0_0_1_part_2_1 : planeEarlierCoefficientPart 3 0 0 1 2 1 =
-    0 := by decide +kernel
+    0 := by
+  rw [← planeEarlierCoefficientPartFast_eq]
+  decide +kernel
 private theorem coefficient_0_0_1_part_2_2 : planeEarlierCoefficientPart 3 0 0 1 2 2 =
-    0 := by decide +kernel
+    0 := by
+  exact (coefficient_0_0_1_marking 2 2 0 (by decide +kernel)).trans
+    coefficient_0_0_1_part_2_0
+set_option maxHeartbeats 1000000 in
+-- Kernel replay of one complete finite graph contribution.
+set_option cbv.maxSteps 1000000 in
 private theorem coefficient_0_0_1_part_2_3 : planeEarlierCoefficientPart 3 0 0 1 2 3 =
-    0 := by decide +kernel
+    0 := by
+  rw [← planeEarlierCoefficientPartFast_eq]
+  decide +kernel
 private theorem coefficient_0_0_1_part_2_4 : planeEarlierCoefficientPart 3 0 0 1 2 4 =
-    0 := by decide +kernel
+    0 := by
+  exact (coefficient_0_0_1_marking 2 4 1 (by decide +kernel)).trans
+    coefficient_0_0_1_part_2_1
 private theorem coefficient_0_0_1_part_2_5 : planeEarlierCoefficientPart 3 0 0 1 2 5 =
-    0 := by decide +kernel
+    0 := by
+  exact (coefficient_0_0_1_marking 2 5 3 (by decide +kernel)).trans
+    coefficient_0_0_1_part_2_3
+set_option maxHeartbeats 1000000 in
+-- Kernel replay of one complete finite graph contribution.
+set_option cbv.maxSteps 1000000 in
 private theorem coefficient_0_0_1_part_3_0 : planeEarlierCoefficientPart 3 0 0 1 3 0 =
-    0 := by decide +kernel
+    0 := by
+  rw [← planeEarlierCoefficientPartFast_eq]
+  decide +kernel
+set_option maxHeartbeats 1000000 in
+-- Kernel replay of one complete finite graph contribution.
+set_option cbv.maxSteps 1000000 in
 private theorem coefficient_0_0_1_part_3_1 : planeEarlierCoefficientPart 3 0 0 1 3 1 =
-    0 := by decide +kernel
+    0 := by
+  rw [← planeEarlierCoefficientPartFast_eq]
+  decide +kernel
 private theorem coefficient_0_0_1_part_3_2 : planeEarlierCoefficientPart 3 0 0 1 3 2 =
-    0 := by decide +kernel
+    0 := by
+  exact (coefficient_0_0_1_marking 3 2 0 (by decide +kernel)).trans
+    coefficient_0_0_1_part_3_0
+set_option maxHeartbeats 1000000 in
+-- Kernel replay of one complete finite graph contribution.
+set_option cbv.maxSteps 1000000 in
 private theorem coefficient_0_0_1_part_3_3 : planeEarlierCoefficientPart 3 0 0 1 3 3 =
-    0 := by decide +kernel
+    0 := by
+  rw [← planeEarlierCoefficientPartFast_eq]
+  decide +kernel
 private theorem coefficient_0_0_1_part_3_4 : planeEarlierCoefficientPart 3 0 0 1 3 4 =
-    0 := by decide +kernel
+    0 := by
+  exact (coefficient_0_0_1_marking 3 4 1 (by decide +kernel)).trans
+    coefficient_0_0_1_part_3_1
 private theorem coefficient_0_0_1_part_3_5 : planeEarlierCoefficientPart 3 0 0 1 3 5 =
-    0 := by decide +kernel
+    0 := by
+  exact (coefficient_0_0_1_marking 3 5 3 (by decide +kernel)).trans
+    coefficient_0_0_1_part_3_3
 
 private theorem coefficient_0_0_1_parts_checked (k : Fin 4) (e : Fin 6) :
     planeEarlierCoefficientPart 3 0 0 1 k e = coefficient_0_0_1_parts k e := by
@@ -446,198 +791,446 @@ private def constant_1_parts : Fin 16 → Fin 6 → ℚ :=
     ![(-81 / 20), (-81 / 20), (-243 / 20), (-243 / 20), (-243 / 20), (-243 / 20)]
   ]
 
+private theorem constant_1_marking (k : Fin 16) (e f : Fin 6)
+    (h : (![.hyperplane, .point, .point] : Fin 3 → SurfaceBasisLabel .plane) ∘
+      labelPermutation e =
+      ![.hyperplane, .point, .point] ∘ labelPermutation f) :
+    planeShiftedConstantPart 3 1 k e = planeShiftedConstantPart 3 1 k f := by
+  exact planePointConstantPart_eq_of_labels 9 ![4]
+    ![.hyperplane, .point, .point] k e f h
+
+set_option maxHeartbeats 1000000 in
+-- Kernel replay of one complete finite graph contribution.
+set_option cbv.maxSteps 1000000 in
 private theorem constant_1_part_0_0 : planeShiftedConstantPart 3 1 0 0 =
-    (2477 / 20) := by decide +kernel
+    (2477 / 20) := by cbv
 private theorem constant_1_part_0_1 : planeShiftedConstantPart 3 1 0 1 =
-    (2477 / 20) := by decide +kernel
+    (2477 / 20) := by
+  exact (constant_1_marking 0 1 0 (by decide +kernel)).trans
+    constant_1_part_0_0
+set_option maxHeartbeats 1000000 in
+-- Kernel replay of one complete finite graph contribution.
+set_option cbv.maxSteps 1000000 in
 private theorem constant_1_part_0_2 : planeShiftedConstantPart 3 1 0 2 =
-    (2477 / 20) := by decide +kernel
+    (2477 / 20) := by cbv
 private theorem constant_1_part_0_3 : planeShiftedConstantPart 3 1 0 3 =
-    (2477 / 20) := by decide +kernel
+    (2477 / 20) := by
+  exact (constant_1_marking 0 3 2 (by decide +kernel)).trans
+    constant_1_part_0_2
+set_option maxHeartbeats 1000000 in
+-- Kernel replay of one complete finite graph contribution.
+set_option cbv.maxSteps 1000000 in
 private theorem constant_1_part_0_4 : planeShiftedConstantPart 3 1 0 4 =
-    (2477 / 20) := by decide +kernel
+    (2477 / 20) := by cbv
 private theorem constant_1_part_0_5 : planeShiftedConstantPart 3 1 0 5 =
-    (2477 / 20) := by decide +kernel
+    (2477 / 20) := by
+  exact (constant_1_marking 0 5 4 (by decide +kernel)).trans
+    constant_1_part_0_4
+set_option maxHeartbeats 1000000 in
+-- Kernel replay of one complete finite graph contribution.
+set_option cbv.maxSteps 1000000 in
 private theorem constant_1_part_1_0 : planeShiftedConstantPart 3 1 1 0 =
-    (81 / 20) := by decide +kernel
+    (81 / 20) := by cbv
 private theorem constant_1_part_1_1 : planeShiftedConstantPart 3 1 1 1 =
-    (81 / 20) := by decide +kernel
+    (81 / 20) := by
+  exact (constant_1_marking 1 1 0 (by decide +kernel)).trans
+    constant_1_part_1_0
+set_option maxHeartbeats 1000000 in
+-- Kernel replay of one complete finite graph contribution.
+set_option cbv.maxSteps 1000000 in
 private theorem constant_1_part_1_2 : planeShiftedConstantPart 3 1 1 2 =
-    (81 / 20) := by decide +kernel
+    (81 / 20) := by cbv
 private theorem constant_1_part_1_3 : planeShiftedConstantPart 3 1 1 3 =
-    (81 / 20) := by decide +kernel
+    (81 / 20) := by
+  exact (constant_1_marking 1 3 2 (by decide +kernel)).trans
+    constant_1_part_1_2
+set_option maxHeartbeats 1000000 in
+-- Kernel replay of one complete finite graph contribution.
+set_option cbv.maxSteps 1000000 in
 private theorem constant_1_part_1_4 : planeShiftedConstantPart 3 1 1 4 =
-    (27 / 20) := by decide +kernel
+    (27 / 20) := by cbv
 private theorem constant_1_part_1_5 : planeShiftedConstantPart 3 1 1 5 =
-    (27 / 20) := by decide +kernel
+    (27 / 20) := by
+  exact (constant_1_marking 1 5 4 (by decide +kernel)).trans
+    constant_1_part_1_4
+set_option maxHeartbeats 1000000 in
+-- Kernel replay of one complete finite graph contribution.
+set_option cbv.maxSteps 1000000 in
 private theorem constant_1_part_2_0 : planeShiftedConstantPart 3 1 2 0 =
-    (-999 / 10) := by decide +kernel
+    (-999 / 10) := by cbv
 private theorem constant_1_part_2_1 : planeShiftedConstantPart 3 1 2 1 =
-    (-999 / 10) := by decide +kernel
+    (-999 / 10) := by
+  exact (constant_1_marking 2 1 0 (by decide +kernel)).trans
+    constant_1_part_2_0
+set_option maxHeartbeats 1000000 in
+-- Kernel replay of one complete finite graph contribution.
+set_option cbv.maxSteps 1000000 in
 private theorem constant_1_part_2_2 : planeShiftedConstantPart 3 1 2 2 =
-    (-243 / 10) := by decide +kernel
+    (-243 / 10) := by cbv
 private theorem constant_1_part_2_3 : planeShiftedConstantPart 3 1 2 3 =
-    (-243 / 10) := by decide +kernel
+    (-243 / 10) := by
+  exact (constant_1_marking 2 3 2 (by decide +kernel)).trans
+    constant_1_part_2_2
+set_option maxHeartbeats 1000000 in
+-- Kernel replay of one complete finite graph contribution.
+set_option cbv.maxSteps 1000000 in
 private theorem constant_1_part_2_4 : planeShiftedConstantPart 3 1 2 4 =
-    (-243 / 10) := by decide +kernel
+    (-243 / 10) := by cbv
 private theorem constant_1_part_2_5 : planeShiftedConstantPart 3 1 2 5 =
-    (-243 / 10) := by decide +kernel
+    (-243 / 10) := by
+  exact (constant_1_marking 2 5 4 (by decide +kernel)).trans
+    constant_1_part_2_4
+set_option maxHeartbeats 1000000 in
+-- Kernel replay of one complete finite graph contribution.
+set_option cbv.maxSteps 1000000 in
 private theorem constant_1_part_3_0 : planeShiftedConstantPart 3 1 3 0 =
-    0 := by decide +kernel
+    0 := by cbv
 private theorem constant_1_part_3_1 : planeShiftedConstantPart 3 1 3 1 =
-    0 := by decide +kernel
+    0 := by
+  exact (constant_1_marking 3 1 0 (by decide +kernel)).trans
+    constant_1_part_3_0
+set_option maxHeartbeats 1000000 in
+-- Kernel replay of one complete finite graph contribution.
+set_option cbv.maxSteps 1000000 in
 private theorem constant_1_part_3_2 : planeShiftedConstantPart 3 1 3 2 =
-    0 := by decide +kernel
+    0 := by cbv
 private theorem constant_1_part_3_3 : planeShiftedConstantPart 3 1 3 3 =
-    0 := by decide +kernel
+    0 := by
+  exact (constant_1_marking 3 3 2 (by decide +kernel)).trans
+    constant_1_part_3_2
+set_option maxHeartbeats 1000000 in
+-- Kernel replay of one complete finite graph contribution.
+set_option cbv.maxSteps 1000000 in
 private theorem constant_1_part_3_4 : planeShiftedConstantPart 3 1 3 4 =
-    0 := by decide +kernel
+    0 := by cbv
 private theorem constant_1_part_3_5 : planeShiftedConstantPart 3 1 3 5 =
-    0 := by decide +kernel
+    0 := by
+  exact (constant_1_marking 3 5 4 (by decide +kernel)).trans
+    constant_1_part_3_4
+set_option maxHeartbeats 1000000 in
+-- Kernel replay of one complete finite graph contribution.
+set_option cbv.maxSteps 1000000 in
 private theorem constant_1_part_4_0 : planeShiftedConstantPart 3 1 4 0 =
-    (27 / 20) := by decide +kernel
+    (27 / 20) := by cbv
 private theorem constant_1_part_4_1 : planeShiftedConstantPart 3 1 4 1 =
-    (27 / 20) := by decide +kernel
+    (27 / 20) := by
+  exact (constant_1_marking 4 1 0 (by decide +kernel)).trans
+    constant_1_part_4_0
+set_option maxHeartbeats 1000000 in
+-- Kernel replay of one complete finite graph contribution.
+set_option cbv.maxSteps 1000000 in
 private theorem constant_1_part_4_2 : planeShiftedConstantPart 3 1 4 2 =
-    (27 / 20) := by decide +kernel
+    (27 / 20) := by cbv
 private theorem constant_1_part_4_3 : planeShiftedConstantPart 3 1 4 3 =
-    (27 / 20) := by decide +kernel
+    (27 / 20) := by
+  exact (constant_1_marking 4 3 2 (by decide +kernel)).trans
+    constant_1_part_4_2
+set_option maxHeartbeats 1000000 in
+-- Kernel replay of one complete finite graph contribution.
+set_option cbv.maxSteps 1000000 in
 private theorem constant_1_part_4_4 : planeShiftedConstantPart 3 1 4 4 =
-    (27 / 20) := by decide +kernel
+    (27 / 20) := by cbv
 private theorem constant_1_part_4_5 : planeShiftedConstantPart 3 1 4 5 =
-    (27 / 20) := by decide +kernel
+    (27 / 20) := by
+  exact (constant_1_marking 4 5 4 (by decide +kernel)).trans
+    constant_1_part_4_4
+set_option maxHeartbeats 1000000 in
+-- Kernel replay of one complete finite graph contribution.
+set_option cbv.maxSteps 1000000 in
 private theorem constant_1_part_5_0 : planeShiftedConstantPart 3 1 5 0 =
-    0 := by decide +kernel
+    0 := by cbv
 private theorem constant_1_part_5_1 : planeShiftedConstantPart 3 1 5 1 =
-    0 := by decide +kernel
+    0 := by
+  exact (constant_1_marking 5 1 0 (by decide +kernel)).trans
+    constant_1_part_5_0
+set_option maxHeartbeats 1000000 in
+-- Kernel replay of one complete finite graph contribution.
+set_option cbv.maxSteps 1000000 in
 private theorem constant_1_part_5_2 : planeShiftedConstantPart 3 1 5 2 =
-    0 := by decide +kernel
+    0 := by cbv
 private theorem constant_1_part_5_3 : planeShiftedConstantPart 3 1 5 3 =
-    0 := by decide +kernel
+    0 := by
+  exact (constant_1_marking 5 3 2 (by decide +kernel)).trans
+    constant_1_part_5_2
+set_option maxHeartbeats 1000000 in
+-- Kernel replay of one complete finite graph contribution.
+set_option cbv.maxSteps 1000000 in
 private theorem constant_1_part_5_4 : planeShiftedConstantPart 3 1 5 4 =
-    0 := by decide +kernel
+    0 := by cbv
 private theorem constant_1_part_5_5 : planeShiftedConstantPart 3 1 5 5 =
-    0 := by decide +kernel
+    0 := by
+  exact (constant_1_marking 5 5 4 (by decide +kernel)).trans
+    constant_1_part_5_4
+set_option maxHeartbeats 1000000 in
+-- Kernel replay of one complete finite graph contribution.
+set_option cbv.maxSteps 1000000 in
 private theorem constant_1_part_6_0 : planeShiftedConstantPart 3 1 6 0 =
-    (81 / 20) := by decide +kernel
+    (81 / 20) := by cbv
 private theorem constant_1_part_6_1 : planeShiftedConstantPart 3 1 6 1 =
-    (81 / 20) := by decide +kernel
+    (81 / 20) := by
+  exact (constant_1_marking 6 1 0 (by decide +kernel)).trans
+    constant_1_part_6_0
+set_option maxHeartbeats 1000000 in
+-- Kernel replay of one complete finite graph contribution.
+set_option cbv.maxSteps 1000000 in
 private theorem constant_1_part_6_2 : planeShiftedConstantPart 3 1 6 2 =
-    (243 / 20) := by decide +kernel
+    (243 / 20) := by cbv
 private theorem constant_1_part_6_3 : planeShiftedConstantPart 3 1 6 3 =
-    (243 / 20) := by decide +kernel
+    (243 / 20) := by
+  exact (constant_1_marking 6 3 2 (by decide +kernel)).trans
+    constant_1_part_6_2
+set_option maxHeartbeats 1000000 in
+-- Kernel replay of one complete finite graph contribution.
+set_option cbv.maxSteps 1000000 in
 private theorem constant_1_part_6_4 : planeShiftedConstantPart 3 1 6 4 =
-    (243 / 20) := by decide +kernel
+    (243 / 20) := by cbv
 private theorem constant_1_part_6_5 : planeShiftedConstantPart 3 1 6 5 =
-    (243 / 20) := by decide +kernel
+    (243 / 20) := by
+  exact (constant_1_marking 6 5 4 (by decide +kernel)).trans
+    constant_1_part_6_4
+set_option maxHeartbeats 1000000 in
+-- Kernel replay of one complete finite graph contribution.
+set_option cbv.maxSteps 1000000 in
 private theorem constant_1_part_7_0 : planeShiftedConstantPart 3 1 7 0 =
-    (-19837 / 120) := by decide +kernel
+    (-19837 / 120) := by cbv
 private theorem constant_1_part_7_1 : planeShiftedConstantPart 3 1 7 1 =
-    (-19837 / 120) := by decide +kernel
+    (-19837 / 120) := by
+  exact (constant_1_marking 7 1 0 (by decide +kernel)).trans
+    constant_1_part_7_0
+set_option maxHeartbeats 1000000 in
+-- Kernel replay of one complete finite graph contribution.
+set_option cbv.maxSteps 1000000 in
 private theorem constant_1_part_7_2 : planeShiftedConstantPart 3 1 7 2 =
-    (-19837 / 120) := by decide +kernel
+    (-19837 / 120) := by cbv
 private theorem constant_1_part_7_3 : planeShiftedConstantPart 3 1 7 3 =
-    (-19837 / 120) := by decide +kernel
+    (-19837 / 120) := by
+  exact (constant_1_marking 7 3 2 (by decide +kernel)).trans
+    constant_1_part_7_2
+set_option maxHeartbeats 1000000 in
+-- Kernel replay of one complete finite graph contribution.
+set_option cbv.maxSteps 1000000 in
 private theorem constant_1_part_7_4 : planeShiftedConstantPart 3 1 7 4 =
-    (-19837 / 120) := by decide +kernel
+    (-19837 / 120) := by cbv
 private theorem constant_1_part_7_5 : planeShiftedConstantPart 3 1 7 5 =
-    (-19837 / 120) := by decide +kernel
+    (-19837 / 120) := by
+  exact (constant_1_marking 7 5 4 (by decide +kernel)).trans
+    constant_1_part_7_4
+set_option maxHeartbeats 1000000 in
+-- Kernel replay of one complete finite graph contribution.
+set_option cbv.maxSteps 1000000 in
 private theorem constant_1_part_8_0 : planeShiftedConstantPart 3 1 8 0 =
-    (-81 / 40) := by decide +kernel
+    (-81 / 40) := by cbv
 private theorem constant_1_part_8_1 : planeShiftedConstantPart 3 1 8 1 =
-    (-81 / 40) := by decide +kernel
+    (-81 / 40) := by
+  exact (constant_1_marking 8 1 0 (by decide +kernel)).trans
+    constant_1_part_8_0
+set_option maxHeartbeats 1000000 in
+-- Kernel replay of one complete finite graph contribution.
+set_option cbv.maxSteps 1000000 in
 private theorem constant_1_part_8_2 : planeShiftedConstantPart 3 1 8 2 =
-    (-81 / 40) := by decide +kernel
+    (-81 / 40) := by cbv
 private theorem constant_1_part_8_3 : planeShiftedConstantPart 3 1 8 3 =
-    (-81 / 40) := by decide +kernel
+    (-81 / 40) := by
+  exact (constant_1_marking 8 3 2 (by decide +kernel)).trans
+    constant_1_part_8_2
+set_option maxHeartbeats 1000000 in
+-- Kernel replay of one complete finite graph contribution.
+set_option cbv.maxSteps 1000000 in
 private theorem constant_1_part_8_4 : planeShiftedConstantPart 3 1 8 4 =
-    (-27 / 40) := by decide +kernel
+    (-27 / 40) := by cbv
 private theorem constant_1_part_8_5 : planeShiftedConstantPart 3 1 8 5 =
-    (-27 / 40) := by decide +kernel
+    (-27 / 40) := by
+  exact (constant_1_marking 8 5 4 (by decide +kernel)).trans
+    constant_1_part_8_4
+set_option maxHeartbeats 1000000 in
+-- Kernel replay of one complete finite graph contribution.
+set_option cbv.maxSteps 1000000 in
 private theorem constant_1_part_9_0 : planeShiftedConstantPart 3 1 9 0 =
-    (81 / 10) := by decide +kernel
+    (81 / 10) := by cbv
 private theorem constant_1_part_9_1 : planeShiftedConstantPart 3 1 9 1 =
-    (81 / 10) := by decide +kernel
+    (81 / 10) := by
+  exact (constant_1_marking 9 1 0 (by decide +kernel)).trans
+    constant_1_part_9_0
+set_option maxHeartbeats 1000000 in
+-- Kernel replay of one complete finite graph contribution.
+set_option cbv.maxSteps 1000000 in
 private theorem constant_1_part_9_2 : planeShiftedConstantPart 3 1 9 2 =
-    (243 / 40) := by decide +kernel
+    (243 / 40) := by cbv
 private theorem constant_1_part_9_3 : planeShiftedConstantPart 3 1 9 3 =
-    (243 / 40) := by decide +kernel
+    (243 / 40) := by
+  exact (constant_1_marking 9 3 2 (by decide +kernel)).trans
+    constant_1_part_9_2
+set_option maxHeartbeats 1000000 in
+-- Kernel replay of one complete finite graph contribution.
+set_option cbv.maxSteps 1000000 in
 private theorem constant_1_part_9_4 : planeShiftedConstantPart 3 1 9 4 =
-    (243 / 40) := by decide +kernel
+    (243 / 40) := by cbv
 private theorem constant_1_part_9_5 : planeShiftedConstantPart 3 1 9 5 =
-    (243 / 40) := by decide +kernel
+    (243 / 40) := by
+  exact (constant_1_marking 9 5 4 (by decide +kernel)).trans
+    constant_1_part_9_4
+set_option maxHeartbeats 1000000 in
+-- Kernel replay of one complete finite graph contribution.
+set_option cbv.maxSteps 1000000 in
 private theorem constant_1_part_10_0 : planeShiftedConstantPart 3 1 10 0 =
-    (-126 / 5) := by decide +kernel
+    (-126 / 5) := by cbv
 private theorem constant_1_part_10_1 : planeShiftedConstantPart 3 1 10 1 =
-    (-126 / 5) := by decide +kernel
+    (-126 / 5) := by
+  exact (constant_1_marking 10 1 0 (by decide +kernel)).trans
+    constant_1_part_10_0
+set_option maxHeartbeats 1000000 in
+-- Kernel replay of one complete finite graph contribution.
+set_option cbv.maxSteps 1000000 in
 private theorem constant_1_part_10_2 : planeShiftedConstantPart 3 1 10 2 =
-    (-126 / 5) := by decide +kernel
+    (-126 / 5) := by cbv
 private theorem constant_1_part_10_3 : planeShiftedConstantPart 3 1 10 3 =
-    (-126 / 5) := by decide +kernel
+    (-126 / 5) := by
+  exact (constant_1_marking 10 3 2 (by decide +kernel)).trans
+    constant_1_part_10_2
+set_option maxHeartbeats 1000000 in
+-- Kernel replay of one complete finite graph contribution.
+set_option cbv.maxSteps 1000000 in
 private theorem constant_1_part_10_4 : planeShiftedConstantPart 3 1 10 4 =
-    (-126 / 5) := by decide +kernel
+    (-126 / 5) := by cbv
 private theorem constant_1_part_10_5 : planeShiftedConstantPart 3 1 10 5 =
-    (-126 / 5) := by decide +kernel
+    (-126 / 5) := by
+  exact (constant_1_marking 10 5 4 (by decide +kernel)).trans
+    constant_1_part_10_4
+set_option maxHeartbeats 1000000 in
+-- Kernel replay of one complete finite graph contribution.
+set_option cbv.maxSteps 1000000 in
 private theorem constant_1_part_11_0 : planeShiftedConstantPart 3 1 11 0 =
-    (9 / 10) := by decide +kernel
+    (9 / 10) := by cbv
 private theorem constant_1_part_11_1 : planeShiftedConstantPart 3 1 11 1 =
-    (9 / 10) := by decide +kernel
+    (9 / 10) := by
+  exact (constant_1_marking 11 1 0 (by decide +kernel)).trans
+    constant_1_part_11_0
+set_option maxHeartbeats 1000000 in
+-- Kernel replay of one complete finite graph contribution.
+set_option cbv.maxSteps 1000000 in
 private theorem constant_1_part_11_2 : planeShiftedConstantPart 3 1 11 2 =
-    (9 / 10) := by decide +kernel
+    (9 / 10) := by cbv
 private theorem constant_1_part_11_3 : planeShiftedConstantPart 3 1 11 3 =
-    (9 / 10) := by decide +kernel
+    (9 / 10) := by
+  exact (constant_1_marking 11 3 2 (by decide +kernel)).trans
+    constant_1_part_11_2
+set_option maxHeartbeats 1000000 in
+-- Kernel replay of one complete finite graph contribution.
+set_option cbv.maxSteps 1000000 in
 private theorem constant_1_part_11_4 : planeShiftedConstantPart 3 1 11 4 =
-    (9 / 10) := by decide +kernel
+    (9 / 10) := by cbv
 private theorem constant_1_part_11_5 : planeShiftedConstantPart 3 1 11 5 =
-    (9 / 10) := by decide +kernel
+    (9 / 10) := by
+  exact (constant_1_marking 11 5 4 (by decide +kernel)).trans
+    constant_1_part_11_4
+set_option maxHeartbeats 1000000 in
+-- Kernel replay of one complete finite graph contribution.
+set_option cbv.maxSteps 1000000 in
 private theorem constant_1_part_12_0 : planeShiftedConstantPart 3 1 12 0 =
-    (-243 / 10) := by decide +kernel
+    (-243 / 10) := by cbv
 private theorem constant_1_part_12_1 : planeShiftedConstantPart 3 1 12 1 =
-    (-243 / 10) := by decide +kernel
+    (-243 / 10) := by
+  exact (constant_1_marking 12 1 0 (by decide +kernel)).trans
+    constant_1_part_12_0
+set_option maxHeartbeats 1000000 in
+-- Kernel replay of one complete finite graph contribution.
+set_option cbv.maxSteps 1000000 in
 private theorem constant_1_part_12_2 : planeShiftedConstantPart 3 1 12 2 =
-    (-243 / 10) := by decide +kernel
+    (-243 / 10) := by cbv
 private theorem constant_1_part_12_3 : planeShiftedConstantPart 3 1 12 3 =
-    (-243 / 10) := by decide +kernel
+    (-243 / 10) := by
+  exact (constant_1_marking 12 3 2 (by decide +kernel)).trans
+    constant_1_part_12_2
+set_option maxHeartbeats 1000000 in
+-- Kernel replay of one complete finite graph contribution.
+set_option cbv.maxSteps 1000000 in
 private theorem constant_1_part_12_4 : planeShiftedConstantPart 3 1 12 4 =
-    (-81 / 10) := by decide +kernel
+    (-81 / 10) := by cbv
 private theorem constant_1_part_12_5 : planeShiftedConstantPart 3 1 12 5 =
-    (-81 / 10) := by decide +kernel
+    (-81 / 10) := by
+  exact (constant_1_marking 12 5 4 (by decide +kernel)).trans
+    constant_1_part_12_4
+set_option maxHeartbeats 1000000 in
+-- Kernel replay of one complete finite graph contribution.
+set_option cbv.maxSteps 1000000 in
 private theorem constant_1_part_13_0 : planeShiftedConstantPart 3 1 13 0 =
-    (1062 / 5) := by decide +kernel
+    (1062 / 5) := by cbv
 private theorem constant_1_part_13_1 : planeShiftedConstantPart 3 1 13 1 =
-    (1062 / 5) := by decide +kernel
+    (1062 / 5) := by
+  exact (constant_1_marking 13 1 0 (by decide +kernel)).trans
+    constant_1_part_13_0
+set_option maxHeartbeats 1000000 in
+-- Kernel replay of one complete finite graph contribution.
+set_option cbv.maxSteps 1000000 in
 private theorem constant_1_part_13_2 : planeShiftedConstantPart 3 1 13 2 =
-    (1143 / 10) := by decide +kernel
+    (1143 / 10) := by cbv
 private theorem constant_1_part_13_3 : planeShiftedConstantPart 3 1 13 3 =
-    (1143 / 10) := by decide +kernel
+    (1143 / 10) := by
+  exact (constant_1_marking 13 3 2 (by decide +kernel)).trans
+    constant_1_part_13_2
+set_option maxHeartbeats 1000000 in
+-- Kernel replay of one complete finite graph contribution.
+set_option cbv.maxSteps 1000000 in
 private theorem constant_1_part_13_4 : planeShiftedConstantPart 3 1 13 4 =
-    (1143 / 10) := by decide +kernel
+    (1143 / 10) := by cbv
 private theorem constant_1_part_13_5 : planeShiftedConstantPart 3 1 13 5 =
-    (1143 / 10) := by decide +kernel
+    (1143 / 10) := by
+  exact (constant_1_marking 13 5 4 (by decide +kernel)).trans
+    constant_1_part_13_4
+set_option maxHeartbeats 1000000 in
+-- Kernel replay of one complete finite graph contribution.
+set_option cbv.maxSteps 1000000 in
 private theorem constant_1_part_14_0 : planeShiftedConstantPart 3 1 14 0 =
-    (-27 / 20) := by decide +kernel
+    (-27 / 20) := by cbv
 private theorem constant_1_part_14_1 : planeShiftedConstantPart 3 1 14 1 =
-    (-27 / 20) := by decide +kernel
+    (-27 / 20) := by
+  exact (constant_1_marking 14 1 0 (by decide +kernel)).trans
+    constant_1_part_14_0
+set_option maxHeartbeats 1000000 in
+-- Kernel replay of one complete finite graph contribution.
+set_option cbv.maxSteps 1000000 in
 private theorem constant_1_part_14_2 : planeShiftedConstantPart 3 1 14 2 =
-    (-27 / 20) := by decide +kernel
+    (-27 / 20) := by cbv
 private theorem constant_1_part_14_3 : planeShiftedConstantPart 3 1 14 3 =
-    (-27 / 20) := by decide +kernel
+    (-27 / 20) := by
+  exact (constant_1_marking 14 3 2 (by decide +kernel)).trans
+    constant_1_part_14_2
+set_option maxHeartbeats 1000000 in
+-- Kernel replay of one complete finite graph contribution.
+set_option cbv.maxSteps 1000000 in
 private theorem constant_1_part_14_4 : planeShiftedConstantPart 3 1 14 4 =
-    (-27 / 20) := by decide +kernel
+    (-27 / 20) := by cbv
 private theorem constant_1_part_14_5 : planeShiftedConstantPart 3 1 14 5 =
-    (-27 / 20) := by decide +kernel
+    (-27 / 20) := by
+  exact (constant_1_marking 14 5 4 (by decide +kernel)).trans
+    constant_1_part_14_4
+set_option maxHeartbeats 1000000 in
+-- Kernel replay of one complete finite graph contribution.
+set_option cbv.maxSteps 1000000 in
 private theorem constant_1_part_15_0 : planeShiftedConstantPart 3 1 15 0 =
-    (-81 / 20) := by decide +kernel
+    (-81 / 20) := by cbv
 private theorem constant_1_part_15_1 : planeShiftedConstantPart 3 1 15 1 =
-    (-81 / 20) := by decide +kernel
+    (-81 / 20) := by
+  exact (constant_1_marking 15 1 0 (by decide +kernel)).trans
+    constant_1_part_15_0
+set_option maxHeartbeats 1000000 in
+-- Kernel replay of one complete finite graph contribution.
+set_option cbv.maxSteps 1000000 in
 private theorem constant_1_part_15_2 : planeShiftedConstantPart 3 1 15 2 =
-    (-243 / 20) := by decide +kernel
+    (-243 / 20) := by cbv
 private theorem constant_1_part_15_3 : planeShiftedConstantPart 3 1 15 3 =
-    (-243 / 20) := by decide +kernel
+    (-243 / 20) := by
+  exact (constant_1_marking 15 3 2 (by decide +kernel)).trans
+    constant_1_part_15_2
+set_option maxHeartbeats 1000000 in
+-- Kernel replay of one complete finite graph contribution.
+set_option cbv.maxSteps 1000000 in
 private theorem constant_1_part_15_4 : planeShiftedConstantPart 3 1 15 4 =
-    (-243 / 20) := by decide +kernel
+    (-243 / 20) := by cbv
 private theorem constant_1_part_15_5 : planeShiftedConstantPart 3 1 15 5 =
-    (-243 / 20) := by decide +kernel
+    (-243 / 20) := by
+  exact (constant_1_marking 15 5 4 (by decide +kernel)).trans
+    constant_1_part_15_4
 
 private theorem constant_1_parts_checked (k : Fin 16) (e : Fin 6) :
     planeShiftedConstantPart 3 1 k e = constant_1_parts k e := by
@@ -753,54 +1346,146 @@ private def coefficient_1_0_1_parts : Fin 4 → Fin 6 → ℚ :=
     ![0, 0, 0, 0, 0, 0]
   ]
 
+private theorem coefficient_1_0_1_marking (k : Fin 4) (e f : Fin 6)
+    (h : (![.hyperplane, .point, .point] : Fin 3 → SurfaceBasisLabel .plane) ∘
+      labelPermutation e =
+      ![.hyperplane, .point, .point] ∘ labelPermutation f) :
+    planeEarlierCoefficientPart 3 1 0 1 k e = planeEarlierCoefficientPart 3 1 0 1 k f := by
+  exact planePointCoefficientPart_eq_of_labels 9 4
+    ![.hyperplane, .point, .point] (Sum.inr (planeCanonicalQueries 0 1)) k e f h
+
+set_option maxHeartbeats 1000000 in
+-- Kernel replay of one complete finite graph contribution.
+set_option cbv.maxSteps 1000000 in
 private theorem coefficient_1_0_1_part_0_0 : planeEarlierCoefficientPart 3 1 0 1 0 0 =
-    0 := by decide +kernel
+    0 := by
+  rw [← planeEarlierCoefficientPartFast_eq]
+  decide +kernel
 private theorem coefficient_1_0_1_part_0_1 : planeEarlierCoefficientPart 3 1 0 1 0 1 =
-    0 := by decide +kernel
+    0 := by
+  exact (coefficient_1_0_1_marking 0 1 0 (by decide +kernel)).trans
+    coefficient_1_0_1_part_0_0
+set_option maxHeartbeats 1000000 in
+-- Kernel replay of one complete finite graph contribution.
+set_option cbv.maxSteps 1000000 in
 private theorem coefficient_1_0_1_part_0_2 : planeEarlierCoefficientPart 3 1 0 1 0 2 =
-    0 := by decide +kernel
+    0 := by
+  rw [← planeEarlierCoefficientPartFast_eq]
+  decide +kernel
 private theorem coefficient_1_0_1_part_0_3 : planeEarlierCoefficientPart 3 1 0 1 0 3 =
-    0 := by decide +kernel
+    0 := by
+  exact (coefficient_1_0_1_marking 0 3 2 (by decide +kernel)).trans
+    coefficient_1_0_1_part_0_2
+set_option maxHeartbeats 1000000 in
+-- Kernel replay of one complete finite graph contribution.
+set_option cbv.maxSteps 1000000 in
 private theorem coefficient_1_0_1_part_0_4 : planeEarlierCoefficientPart 3 1 0 1 0 4 =
-    0 := by decide +kernel
+    0 := by
+  rw [← planeEarlierCoefficientPartFast_eq]
+  decide +kernel
 private theorem coefficient_1_0_1_part_0_5 : planeEarlierCoefficientPart 3 1 0 1 0 5 =
-    0 := by decide +kernel
+    0 := by
+  exact (coefficient_1_0_1_marking 0 5 4 (by decide +kernel)).trans
+    coefficient_1_0_1_part_0_4
+set_option maxHeartbeats 1000000 in
+-- Kernel replay of one complete finite graph contribution.
+set_option cbv.maxSteps 1000000 in
 private theorem coefficient_1_0_1_part_1_0 : planeEarlierCoefficientPart 3 1 0 1 1 0 =
-    19840 := by decide +kernel
+    19840 := by
+  rw [← planeEarlierCoefficientPartFast_eq]
+  decide +kernel
 private theorem coefficient_1_0_1_part_1_1 : planeEarlierCoefficientPart 3 1 0 1 1 1 =
-    19840 := by decide +kernel
+    19840 := by
+  exact (coefficient_1_0_1_marking 1 1 0 (by decide +kernel)).trans
+    coefficient_1_0_1_part_1_0
+set_option maxHeartbeats 1000000 in
+-- Kernel replay of one complete finite graph contribution.
+set_option cbv.maxSteps 1000000 in
 private theorem coefficient_1_0_1_part_1_2 : planeEarlierCoefficientPart 3 1 0 1 1 2 =
-    19840 := by decide +kernel
+    19840 := by
+  rw [← planeEarlierCoefficientPartFast_eq]
+  decide +kernel
 private theorem coefficient_1_0_1_part_1_3 : planeEarlierCoefficientPart 3 1 0 1 1 3 =
-    19840 := by decide +kernel
+    19840 := by
+  exact (coefficient_1_0_1_marking 1 3 2 (by decide +kernel)).trans
+    coefficient_1_0_1_part_1_2
+set_option maxHeartbeats 1000000 in
+-- Kernel replay of one complete finite graph contribution.
+set_option cbv.maxSteps 1000000 in
 private theorem coefficient_1_0_1_part_1_4 : planeEarlierCoefficientPart 3 1 0 1 1 4 =
-    19840 := by decide +kernel
+    19840 := by
+  rw [← planeEarlierCoefficientPartFast_eq]
+  decide +kernel
 private theorem coefficient_1_0_1_part_1_5 : planeEarlierCoefficientPart 3 1 0 1 1 5 =
-    19840 := by decide +kernel
+    19840 := by
+  exact (coefficient_1_0_1_marking 1 5 4 (by decide +kernel)).trans
+    coefficient_1_0_1_part_1_4
+set_option maxHeartbeats 1000000 in
+-- Kernel replay of one complete finite graph contribution.
+set_option cbv.maxSteps 1000000 in
 private theorem coefficient_1_0_1_part_2_0 : planeEarlierCoefficientPart 3 1 0 1 2 0 =
-    0 := by decide +kernel
+    0 := by
+  rw [← planeEarlierCoefficientPartFast_eq]
+  decide +kernel
 private theorem coefficient_1_0_1_part_2_1 : planeEarlierCoefficientPart 3 1 0 1 2 1 =
-    0 := by decide +kernel
+    0 := by
+  exact (coefficient_1_0_1_marking 2 1 0 (by decide +kernel)).trans
+    coefficient_1_0_1_part_2_0
+set_option maxHeartbeats 1000000 in
+-- Kernel replay of one complete finite graph contribution.
+set_option cbv.maxSteps 1000000 in
 private theorem coefficient_1_0_1_part_2_2 : planeEarlierCoefficientPart 3 1 0 1 2 2 =
-    0 := by decide +kernel
+    0 := by
+  rw [← planeEarlierCoefficientPartFast_eq]
+  decide +kernel
 private theorem coefficient_1_0_1_part_2_3 : planeEarlierCoefficientPart 3 1 0 1 2 3 =
-    0 := by decide +kernel
+    0 := by
+  exact (coefficient_1_0_1_marking 2 3 2 (by decide +kernel)).trans
+    coefficient_1_0_1_part_2_2
+set_option maxHeartbeats 1000000 in
+-- Kernel replay of one complete finite graph contribution.
+set_option cbv.maxSteps 1000000 in
 private theorem coefficient_1_0_1_part_2_4 : planeEarlierCoefficientPart 3 1 0 1 2 4 =
-    0 := by decide +kernel
+    0 := by
+  rw [← planeEarlierCoefficientPartFast_eq]
+  decide +kernel
 private theorem coefficient_1_0_1_part_2_5 : planeEarlierCoefficientPart 3 1 0 1 2 5 =
-    0 := by decide +kernel
+    0 := by
+  exact (coefficient_1_0_1_marking 2 5 4 (by decide +kernel)).trans
+    coefficient_1_0_1_part_2_4
+set_option maxHeartbeats 1000000 in
+-- Kernel replay of one complete finite graph contribution.
+set_option cbv.maxSteps 1000000 in
 private theorem coefficient_1_0_1_part_3_0 : planeEarlierCoefficientPart 3 1 0 1 3 0 =
-    0 := by decide +kernel
+    0 := by
+  rw [← planeEarlierCoefficientPartFast_eq]
+  decide +kernel
 private theorem coefficient_1_0_1_part_3_1 : planeEarlierCoefficientPart 3 1 0 1 3 1 =
-    0 := by decide +kernel
+    0 := by
+  exact (coefficient_1_0_1_marking 3 1 0 (by decide +kernel)).trans
+    coefficient_1_0_1_part_3_0
+set_option maxHeartbeats 1000000 in
+-- Kernel replay of one complete finite graph contribution.
+set_option cbv.maxSteps 1000000 in
 private theorem coefficient_1_0_1_part_3_2 : planeEarlierCoefficientPart 3 1 0 1 3 2 =
-    0 := by decide +kernel
+    0 := by
+  rw [← planeEarlierCoefficientPartFast_eq]
+  decide +kernel
 private theorem coefficient_1_0_1_part_3_3 : planeEarlierCoefficientPart 3 1 0 1 3 3 =
-    0 := by decide +kernel
+    0 := by
+  exact (coefficient_1_0_1_marking 3 3 2 (by decide +kernel)).trans
+    coefficient_1_0_1_part_3_2
+set_option maxHeartbeats 1000000 in
+-- Kernel replay of one complete finite graph contribution.
+set_option cbv.maxSteps 1000000 in
 private theorem coefficient_1_0_1_part_3_4 : planeEarlierCoefficientPart 3 1 0 1 3 4 =
-    0 := by decide +kernel
+    0 := by
+  rw [← planeEarlierCoefficientPartFast_eq]
+  decide +kernel
 private theorem coefficient_1_0_1_part_3_5 : planeEarlierCoefficientPart 3 1 0 1 3 5 =
-    0 := by decide +kernel
+    0 := by
+  exact (coefficient_1_0_1_marking 3 5 4 (by decide +kernel)).trans
+    coefficient_1_0_1_part_3_4
 
 private theorem coefficient_1_0_1_parts_checked (k : Fin 4) (e : Fin 6) :
     planeEarlierCoefficientPart 3 1 0 1 k e = coefficient_1_0_1_parts k e := by
@@ -856,198 +1541,414 @@ private def constant_2_parts : Fin 16 → Fin 6 → ℚ :=
     ![(-27 / 20), (-27 / 20), (-27 / 20), (-27 / 20), (-27 / 20), (-27 / 20)]
   ]
 
+private theorem constant_2_marking (k : Fin 16) (e f : Fin 6)
+    (h : (![.point, .point, .point] : Fin 3 → SurfaceBasisLabel .plane) ∘
+      labelPermutation e =
+      ![.point, .point, .point] ∘ labelPermutation f) :
+    planeShiftedConstantPart 3 2 k e = planeShiftedConstantPart 3 2 k f := by
+  exact planePointConstantPart_eq_of_labels 8 ![4]
+    ![.point, .point, .point] k e f h
+
+set_option maxHeartbeats 1000000 in
+-- Kernel replay of one complete finite graph contribution.
+set_option cbv.maxSteps 1000000 in
 private theorem constant_2_part_0_0 : planeShiftedConstantPart 3 2 0 0 =
-    31 := by decide +kernel
+    31 := by cbv
 private theorem constant_2_part_0_1 : planeShiftedConstantPart 3 2 0 1 =
-    31 := by decide +kernel
+    31 := by
+  exact (constant_2_marking 0 1 0 (by decide +kernel)).trans
+    constant_2_part_0_0
 private theorem constant_2_part_0_2 : planeShiftedConstantPart 3 2 0 2 =
-    31 := by decide +kernel
+    31 := by
+  exact (constant_2_marking 0 2 0 (by decide +kernel)).trans
+    constant_2_part_0_0
 private theorem constant_2_part_0_3 : planeShiftedConstantPart 3 2 0 3 =
-    31 := by decide +kernel
+    31 := by
+  exact (constant_2_marking 0 3 0 (by decide +kernel)).trans
+    constant_2_part_0_0
 private theorem constant_2_part_0_4 : planeShiftedConstantPart 3 2 0 4 =
-    31 := by decide +kernel
+    31 := by
+  exact (constant_2_marking 0 4 0 (by decide +kernel)).trans
+    constant_2_part_0_0
 private theorem constant_2_part_0_5 : planeShiftedConstantPart 3 2 0 5 =
-    31 := by decide +kernel
+    31 := by
+  exact (constant_2_marking 0 5 0 (by decide +kernel)).trans
+    constant_2_part_0_0
+set_option maxHeartbeats 1000000 in
+-- Kernel replay of one complete finite graph contribution.
+set_option cbv.maxSteps 1000000 in
 private theorem constant_2_part_1_0 : planeShiftedConstantPart 3 2 1 0 =
-    (9 / 20) := by decide +kernel
+    (9 / 20) := by cbv
 private theorem constant_2_part_1_1 : planeShiftedConstantPart 3 2 1 1 =
-    (9 / 20) := by decide +kernel
+    (9 / 20) := by
+  exact (constant_2_marking 1 1 0 (by decide +kernel)).trans
+    constant_2_part_1_0
 private theorem constant_2_part_1_2 : planeShiftedConstantPart 3 2 1 2 =
-    (9 / 20) := by decide +kernel
+    (9 / 20) := by
+  exact (constant_2_marking 1 2 0 (by decide +kernel)).trans
+    constant_2_part_1_0
 private theorem constant_2_part_1_3 : planeShiftedConstantPart 3 2 1 3 =
-    (9 / 20) := by decide +kernel
+    (9 / 20) := by
+  exact (constant_2_marking 1 3 0 (by decide +kernel)).trans
+    constant_2_part_1_0
 private theorem constant_2_part_1_4 : planeShiftedConstantPart 3 2 1 4 =
-    (9 / 20) := by decide +kernel
+    (9 / 20) := by
+  exact (constant_2_marking 1 4 0 (by decide +kernel)).trans
+    constant_2_part_1_0
 private theorem constant_2_part_1_5 : planeShiftedConstantPart 3 2 1 5 =
-    (9 / 20) := by decide +kernel
+    (9 / 20) := by
+  exact (constant_2_marking 1 5 0 (by decide +kernel)).trans
+    constant_2_part_1_0
+set_option maxHeartbeats 1000000 in
+-- Kernel replay of one complete finite graph contribution.
+set_option cbv.maxSteps 1000000 in
 private theorem constant_2_part_2_0 : planeShiftedConstantPart 3 2 2 0 =
-    (-36 / 5) := by decide +kernel
+    (-36 / 5) := by cbv
 private theorem constant_2_part_2_1 : planeShiftedConstantPart 3 2 2 1 =
-    (-36 / 5) := by decide +kernel
+    (-36 / 5) := by
+  exact (constant_2_marking 2 1 0 (by decide +kernel)).trans
+    constant_2_part_2_0
 private theorem constant_2_part_2_2 : planeShiftedConstantPart 3 2 2 2 =
-    (-36 / 5) := by decide +kernel
+    (-36 / 5) := by
+  exact (constant_2_marking 2 2 0 (by decide +kernel)).trans
+    constant_2_part_2_0
 private theorem constant_2_part_2_3 : planeShiftedConstantPart 3 2 2 3 =
-    (-36 / 5) := by decide +kernel
+    (-36 / 5) := by
+  exact (constant_2_marking 2 3 0 (by decide +kernel)).trans
+    constant_2_part_2_0
 private theorem constant_2_part_2_4 : planeShiftedConstantPart 3 2 2 4 =
-    (-36 / 5) := by decide +kernel
+    (-36 / 5) := by
+  exact (constant_2_marking 2 4 0 (by decide +kernel)).trans
+    constant_2_part_2_0
 private theorem constant_2_part_2_5 : planeShiftedConstantPart 3 2 2 5 =
-    (-36 / 5) := by decide +kernel
+    (-36 / 5) := by
+  exact (constant_2_marking 2 5 0 (by decide +kernel)).trans
+    constant_2_part_2_0
+set_option maxHeartbeats 1000000 in
+-- Kernel replay of one complete finite graph contribution.
+set_option cbv.maxSteps 1000000 in
 private theorem constant_2_part_3_0 : planeShiftedConstantPart 3 2 3 0 =
-    0 := by decide +kernel
+    0 := by cbv
 private theorem constant_2_part_3_1 : planeShiftedConstantPart 3 2 3 1 =
-    0 := by decide +kernel
+    0 := by
+  exact (constant_2_marking 3 1 0 (by decide +kernel)).trans
+    constant_2_part_3_0
 private theorem constant_2_part_3_2 : planeShiftedConstantPart 3 2 3 2 =
-    0 := by decide +kernel
+    0 := by
+  exact (constant_2_marking 3 2 0 (by decide +kernel)).trans
+    constant_2_part_3_0
 private theorem constant_2_part_3_3 : planeShiftedConstantPart 3 2 3 3 =
-    0 := by decide +kernel
+    0 := by
+  exact (constant_2_marking 3 3 0 (by decide +kernel)).trans
+    constant_2_part_3_0
 private theorem constant_2_part_3_4 : planeShiftedConstantPart 3 2 3 4 =
-    0 := by decide +kernel
+    0 := by
+  exact (constant_2_marking 3 4 0 (by decide +kernel)).trans
+    constant_2_part_3_0
 private theorem constant_2_part_3_5 : planeShiftedConstantPart 3 2 3 5 =
-    0 := by decide +kernel
+    0 := by
+  exact (constant_2_marking 3 5 0 (by decide +kernel)).trans
+    constant_2_part_3_0
+set_option maxHeartbeats 1000000 in
+-- Kernel replay of one complete finite graph contribution.
+set_option cbv.maxSteps 1000000 in
 private theorem constant_2_part_4_0 : planeShiftedConstantPart 3 2 4 0 =
-    0 := by decide +kernel
+    0 := by cbv
 private theorem constant_2_part_4_1 : planeShiftedConstantPart 3 2 4 1 =
-    0 := by decide +kernel
+    0 := by
+  exact (constant_2_marking 4 1 0 (by decide +kernel)).trans
+    constant_2_part_4_0
 private theorem constant_2_part_4_2 : planeShiftedConstantPart 3 2 4 2 =
-    0 := by decide +kernel
+    0 := by
+  exact (constant_2_marking 4 2 0 (by decide +kernel)).trans
+    constant_2_part_4_0
 private theorem constant_2_part_4_3 : planeShiftedConstantPart 3 2 4 3 =
-    0 := by decide +kernel
+    0 := by
+  exact (constant_2_marking 4 3 0 (by decide +kernel)).trans
+    constant_2_part_4_0
 private theorem constant_2_part_4_4 : planeShiftedConstantPart 3 2 4 4 =
-    0 := by decide +kernel
+    0 := by
+  exact (constant_2_marking 4 4 0 (by decide +kernel)).trans
+    constant_2_part_4_0
 private theorem constant_2_part_4_5 : planeShiftedConstantPart 3 2 4 5 =
-    0 := by decide +kernel
+    0 := by
+  exact (constant_2_marking 4 5 0 (by decide +kernel)).trans
+    constant_2_part_4_0
+set_option maxHeartbeats 1000000 in
+-- Kernel replay of one complete finite graph contribution.
+set_option cbv.maxSteps 1000000 in
 private theorem constant_2_part_5_0 : planeShiftedConstantPart 3 2 5 0 =
-    0 := by decide +kernel
+    0 := by cbv
 private theorem constant_2_part_5_1 : planeShiftedConstantPart 3 2 5 1 =
-    0 := by decide +kernel
+    0 := by
+  exact (constant_2_marking 5 1 0 (by decide +kernel)).trans
+    constant_2_part_5_0
 private theorem constant_2_part_5_2 : planeShiftedConstantPart 3 2 5 2 =
-    0 := by decide +kernel
+    0 := by
+  exact (constant_2_marking 5 2 0 (by decide +kernel)).trans
+    constant_2_part_5_0
 private theorem constant_2_part_5_3 : planeShiftedConstantPart 3 2 5 3 =
-    0 := by decide +kernel
+    0 := by
+  exact (constant_2_marking 5 3 0 (by decide +kernel)).trans
+    constant_2_part_5_0
 private theorem constant_2_part_5_4 : planeShiftedConstantPart 3 2 5 4 =
-    0 := by decide +kernel
+    0 := by
+  exact (constant_2_marking 5 4 0 (by decide +kernel)).trans
+    constant_2_part_5_0
 private theorem constant_2_part_5_5 : planeShiftedConstantPart 3 2 5 5 =
-    0 := by decide +kernel
+    0 := by
+  exact (constant_2_marking 5 5 0 (by decide +kernel)).trans
+    constant_2_part_5_0
+set_option maxHeartbeats 1000000 in
+-- Kernel replay of one complete finite graph contribution.
+set_option cbv.maxSteps 1000000 in
 private theorem constant_2_part_6_0 : planeShiftedConstantPart 3 2 6 0 =
-    (27 / 20) := by decide +kernel
+    (27 / 20) := by cbv
 private theorem constant_2_part_6_1 : planeShiftedConstantPart 3 2 6 1 =
-    (27 / 20) := by decide +kernel
+    (27 / 20) := by
+  exact (constant_2_marking 6 1 0 (by decide +kernel)).trans
+    constant_2_part_6_0
 private theorem constant_2_part_6_2 : planeShiftedConstantPart 3 2 6 2 =
-    (27 / 20) := by decide +kernel
+    (27 / 20) := by
+  exact (constant_2_marking 6 2 0 (by decide +kernel)).trans
+    constant_2_part_6_0
 private theorem constant_2_part_6_3 : planeShiftedConstantPart 3 2 6 3 =
-    (27 / 20) := by decide +kernel
+    (27 / 20) := by
+  exact (constant_2_marking 6 3 0 (by decide +kernel)).trans
+    constant_2_part_6_0
 private theorem constant_2_part_6_4 : planeShiftedConstantPart 3 2 6 4 =
-    (27 / 20) := by decide +kernel
+    (27 / 20) := by
+  exact (constant_2_marking 6 4 0 (by decide +kernel)).trans
+    constant_2_part_6_0
 private theorem constant_2_part_6_5 : planeShiftedConstantPart 3 2 6 5 =
-    (27 / 20) := by decide +kernel
+    (27 / 20) := by
+  exact (constant_2_marking 6 5 0 (by decide +kernel)).trans
+    constant_2_part_6_0
+set_option maxHeartbeats 1000000 in
+-- Kernel replay of one complete finite graph contribution.
+set_option cbv.maxSteps 1000000 in
 private theorem constant_2_part_7_0 : planeShiftedConstantPart 3 2 7 0 =
-    (-124 / 3) := by decide +kernel
+    (-124 / 3) := by cbv
 private theorem constant_2_part_7_1 : planeShiftedConstantPart 3 2 7 1 =
-    (-124 / 3) := by decide +kernel
+    (-124 / 3) := by
+  exact (constant_2_marking 7 1 0 (by decide +kernel)).trans
+    constant_2_part_7_0
 private theorem constant_2_part_7_2 : planeShiftedConstantPart 3 2 7 2 =
-    (-124 / 3) := by decide +kernel
+    (-124 / 3) := by
+  exact (constant_2_marking 7 2 0 (by decide +kernel)).trans
+    constant_2_part_7_0
 private theorem constant_2_part_7_3 : planeShiftedConstantPart 3 2 7 3 =
-    (-124 / 3) := by decide +kernel
+    (-124 / 3) := by
+  exact (constant_2_marking 7 3 0 (by decide +kernel)).trans
+    constant_2_part_7_0
 private theorem constant_2_part_7_4 : planeShiftedConstantPart 3 2 7 4 =
-    (-124 / 3) := by decide +kernel
+    (-124 / 3) := by
+  exact (constant_2_marking 7 4 0 (by decide +kernel)).trans
+    constant_2_part_7_0
 private theorem constant_2_part_7_5 : planeShiftedConstantPart 3 2 7 5 =
-    (-124 / 3) := by decide +kernel
+    (-124 / 3) := by
+  exact (constant_2_marking 7 5 0 (by decide +kernel)).trans
+    constant_2_part_7_0
+set_option maxHeartbeats 1000000 in
+-- Kernel replay of one complete finite graph contribution.
+set_option cbv.maxSteps 1000000 in
 private theorem constant_2_part_8_0 : planeShiftedConstantPart 3 2 8 0 =
-    (-9 / 40) := by decide +kernel
+    (-9 / 40) := by cbv
 private theorem constant_2_part_8_1 : planeShiftedConstantPart 3 2 8 1 =
-    (-9 / 40) := by decide +kernel
+    (-9 / 40) := by
+  exact (constant_2_marking 8 1 0 (by decide +kernel)).trans
+    constant_2_part_8_0
 private theorem constant_2_part_8_2 : planeShiftedConstantPart 3 2 8 2 =
-    (-9 / 40) := by decide +kernel
+    (-9 / 40) := by
+  exact (constant_2_marking 8 2 0 (by decide +kernel)).trans
+    constant_2_part_8_0
 private theorem constant_2_part_8_3 : planeShiftedConstantPart 3 2 8 3 =
-    (-9 / 40) := by decide +kernel
+    (-9 / 40) := by
+  exact (constant_2_marking 8 3 0 (by decide +kernel)).trans
+    constant_2_part_8_0
 private theorem constant_2_part_8_4 : planeShiftedConstantPart 3 2 8 4 =
-    (-9 / 40) := by decide +kernel
+    (-9 / 40) := by
+  exact (constant_2_marking 8 4 0 (by decide +kernel)).trans
+    constant_2_part_8_0
 private theorem constant_2_part_8_5 : planeShiftedConstantPart 3 2 8 5 =
-    (-9 / 40) := by decide +kernel
+    (-9 / 40) := by
+  exact (constant_2_marking 8 5 0 (by decide +kernel)).trans
+    constant_2_part_8_0
+set_option maxHeartbeats 1000000 in
+-- Kernel replay of one complete finite graph contribution.
+set_option cbv.maxSteps 1000000 in
 private theorem constant_2_part_9_0 : planeShiftedConstantPart 3 2 9 0 =
-    (9 / 5) := by decide +kernel
+    (9 / 5) := by cbv
 private theorem constant_2_part_9_1 : planeShiftedConstantPart 3 2 9 1 =
-    (9 / 5) := by decide +kernel
+    (9 / 5) := by
+  exact (constant_2_marking 9 1 0 (by decide +kernel)).trans
+    constant_2_part_9_0
 private theorem constant_2_part_9_2 : planeShiftedConstantPart 3 2 9 2 =
-    (9 / 5) := by decide +kernel
+    (9 / 5) := by
+  exact (constant_2_marking 9 2 0 (by decide +kernel)).trans
+    constant_2_part_9_0
 private theorem constant_2_part_9_3 : planeShiftedConstantPart 3 2 9 3 =
-    (9 / 5) := by decide +kernel
+    (9 / 5) := by
+  exact (constant_2_marking 9 3 0 (by decide +kernel)).trans
+    constant_2_part_9_0
 private theorem constant_2_part_9_4 : planeShiftedConstantPart 3 2 9 4 =
-    (9 / 5) := by decide +kernel
+    (9 / 5) := by
+  exact (constant_2_marking 9 4 0 (by decide +kernel)).trans
+    constant_2_part_9_0
 private theorem constant_2_part_9_5 : planeShiftedConstantPart 3 2 9 5 =
-    (9 / 5) := by decide +kernel
+    (9 / 5) := by
+  exact (constant_2_marking 9 5 0 (by decide +kernel)).trans
+    constant_2_part_9_0
+set_option maxHeartbeats 1000000 in
+-- Kernel replay of one complete finite graph contribution.
+set_option cbv.maxSteps 1000000 in
 private theorem constant_2_part_10_0 : planeShiftedConstantPart 3 2 10 0 =
-    (-253 / 40) := by decide +kernel
+    (-253 / 40) := by cbv
 private theorem constant_2_part_10_1 : planeShiftedConstantPart 3 2 10 1 =
-    (-253 / 40) := by decide +kernel
+    (-253 / 40) := by
+  exact (constant_2_marking 10 1 0 (by decide +kernel)).trans
+    constant_2_part_10_0
 private theorem constant_2_part_10_2 : planeShiftedConstantPart 3 2 10 2 =
-    (-253 / 40) := by decide +kernel
+    (-253 / 40) := by
+  exact (constant_2_marking 10 2 0 (by decide +kernel)).trans
+    constant_2_part_10_0
 private theorem constant_2_part_10_3 : planeShiftedConstantPart 3 2 10 3 =
-    (-253 / 40) := by decide +kernel
+    (-253 / 40) := by
+  exact (constant_2_marking 10 3 0 (by decide +kernel)).trans
+    constant_2_part_10_0
 private theorem constant_2_part_10_4 : planeShiftedConstantPart 3 2 10 4 =
-    (-253 / 40) := by decide +kernel
+    (-253 / 40) := by
+  exact (constant_2_marking 10 4 0 (by decide +kernel)).trans
+    constant_2_part_10_0
 private theorem constant_2_part_10_5 : planeShiftedConstantPart 3 2 10 5 =
-    (-253 / 40) := by decide +kernel
+    (-253 / 40) := by
+  exact (constant_2_marking 10 5 0 (by decide +kernel)).trans
+    constant_2_part_10_0
+set_option maxHeartbeats 1000000 in
+-- Kernel replay of one complete finite graph contribution.
+set_option cbv.maxSteps 1000000 in
 private theorem constant_2_part_11_0 : planeShiftedConstantPart 3 2 11 0 =
-    0 := by decide +kernel
+    0 := by cbv
 private theorem constant_2_part_11_1 : planeShiftedConstantPart 3 2 11 1 =
-    0 := by decide +kernel
+    0 := by
+  exact (constant_2_marking 11 1 0 (by decide +kernel)).trans
+    constant_2_part_11_0
 private theorem constant_2_part_11_2 : planeShiftedConstantPart 3 2 11 2 =
-    0 := by decide +kernel
+    0 := by
+  exact (constant_2_marking 11 2 0 (by decide +kernel)).trans
+    constant_2_part_11_0
 private theorem constant_2_part_11_3 : planeShiftedConstantPart 3 2 11 3 =
-    0 := by decide +kernel
+    0 := by
+  exact (constant_2_marking 11 3 0 (by decide +kernel)).trans
+    constant_2_part_11_0
 private theorem constant_2_part_11_4 : planeShiftedConstantPart 3 2 11 4 =
-    0 := by decide +kernel
+    0 := by
+  exact (constant_2_marking 11 4 0 (by decide +kernel)).trans
+    constant_2_part_11_0
 private theorem constant_2_part_11_5 : planeShiftedConstantPart 3 2 11 5 =
-    0 := by decide +kernel
+    0 := by
+  exact (constant_2_marking 11 5 0 (by decide +kernel)).trans
+    constant_2_part_11_0
+set_option maxHeartbeats 1000000 in
+-- Kernel replay of one complete finite graph contribution.
+set_option cbv.maxSteps 1000000 in
 private theorem constant_2_part_12_0 : planeShiftedConstantPart 3 2 12 0 =
-    (-27 / 10) := by decide +kernel
+    (-27 / 10) := by cbv
 private theorem constant_2_part_12_1 : planeShiftedConstantPart 3 2 12 1 =
-    (-27 / 10) := by decide +kernel
+    (-27 / 10) := by
+  exact (constant_2_marking 12 1 0 (by decide +kernel)).trans
+    constant_2_part_12_0
 private theorem constant_2_part_12_2 : planeShiftedConstantPart 3 2 12 2 =
-    (-27 / 10) := by decide +kernel
+    (-27 / 10) := by
+  exact (constant_2_marking 12 2 0 (by decide +kernel)).trans
+    constant_2_part_12_0
 private theorem constant_2_part_12_3 : planeShiftedConstantPart 3 2 12 3 =
-    (-27 / 10) := by decide +kernel
+    (-27 / 10) := by
+  exact (constant_2_marking 12 3 0 (by decide +kernel)).trans
+    constant_2_part_12_0
 private theorem constant_2_part_12_4 : planeShiftedConstantPart 3 2 12 4 =
-    (-27 / 10) := by decide +kernel
+    (-27 / 10) := by
+  exact (constant_2_marking 12 4 0 (by decide +kernel)).trans
+    constant_2_part_12_0
 private theorem constant_2_part_12_5 : planeShiftedConstantPart 3 2 12 5 =
-    (-27 / 10) := by decide +kernel
+    (-27 / 10) := by
+  exact (constant_2_marking 12 5 0 (by decide +kernel)).trans
+    constant_2_part_12_0
+set_option maxHeartbeats 1000000 in
+-- Kernel replay of one complete finite graph contribution.
+set_option cbv.maxSteps 1000000 in
 private theorem constant_2_part_13_0 : planeShiftedConstantPart 3 2 13 0 =
-    (297 / 10) := by decide +kernel
+    (297 / 10) := by cbv
 private theorem constant_2_part_13_1 : planeShiftedConstantPart 3 2 13 1 =
-    (297 / 10) := by decide +kernel
+    (297 / 10) := by
+  exact (constant_2_marking 13 1 0 (by decide +kernel)).trans
+    constant_2_part_13_0
 private theorem constant_2_part_13_2 : planeShiftedConstantPart 3 2 13 2 =
-    (297 / 10) := by decide +kernel
+    (297 / 10) := by
+  exact (constant_2_marking 13 2 0 (by decide +kernel)).trans
+    constant_2_part_13_0
 private theorem constant_2_part_13_3 : planeShiftedConstantPart 3 2 13 3 =
-    (297 / 10) := by decide +kernel
+    (297 / 10) := by
+  exact (constant_2_marking 13 3 0 (by decide +kernel)).trans
+    constant_2_part_13_0
 private theorem constant_2_part_13_4 : planeShiftedConstantPart 3 2 13 4 =
-    (297 / 10) := by decide +kernel
+    (297 / 10) := by
+  exact (constant_2_marking 13 4 0 (by decide +kernel)).trans
+    constant_2_part_13_0
 private theorem constant_2_part_13_5 : planeShiftedConstantPart 3 2 13 5 =
-    (297 / 10) := by decide +kernel
+    (297 / 10) := by
+  exact (constant_2_marking 13 5 0 (by decide +kernel)).trans
+    constant_2_part_13_0
+set_option maxHeartbeats 1000000 in
+-- Kernel replay of one complete finite graph contribution.
+set_option cbv.maxSteps 1000000 in
 private theorem constant_2_part_14_0 : planeShiftedConstantPart 3 2 14 0 =
-    0 := by decide +kernel
+    0 := by cbv
 private theorem constant_2_part_14_1 : planeShiftedConstantPart 3 2 14 1 =
-    0 := by decide +kernel
+    0 := by
+  exact (constant_2_marking 14 1 0 (by decide +kernel)).trans
+    constant_2_part_14_0
 private theorem constant_2_part_14_2 : planeShiftedConstantPart 3 2 14 2 =
-    0 := by decide +kernel
+    0 := by
+  exact (constant_2_marking 14 2 0 (by decide +kernel)).trans
+    constant_2_part_14_0
 private theorem constant_2_part_14_3 : planeShiftedConstantPart 3 2 14 3 =
-    0 := by decide +kernel
+    0 := by
+  exact (constant_2_marking 14 3 0 (by decide +kernel)).trans
+    constant_2_part_14_0
 private theorem constant_2_part_14_4 : planeShiftedConstantPart 3 2 14 4 =
-    0 := by decide +kernel
+    0 := by
+  exact (constant_2_marking 14 4 0 (by decide +kernel)).trans
+    constant_2_part_14_0
 private theorem constant_2_part_14_5 : planeShiftedConstantPart 3 2 14 5 =
-    0 := by decide +kernel
+    0 := by
+  exact (constant_2_marking 14 5 0 (by decide +kernel)).trans
+    constant_2_part_14_0
+set_option maxHeartbeats 1000000 in
+-- Kernel replay of one complete finite graph contribution.
+set_option cbv.maxSteps 1000000 in
 private theorem constant_2_part_15_0 : planeShiftedConstantPart 3 2 15 0 =
-    (-27 / 20) := by decide +kernel
+    (-27 / 20) := by cbv
 private theorem constant_2_part_15_1 : planeShiftedConstantPart 3 2 15 1 =
-    (-27 / 20) := by decide +kernel
+    (-27 / 20) := by
+  exact (constant_2_marking 15 1 0 (by decide +kernel)).trans
+    constant_2_part_15_0
 private theorem constant_2_part_15_2 : planeShiftedConstantPart 3 2 15 2 =
-    (-27 / 20) := by decide +kernel
+    (-27 / 20) := by
+  exact (constant_2_marking 15 2 0 (by decide +kernel)).trans
+    constant_2_part_15_0
 private theorem constant_2_part_15_3 : planeShiftedConstantPart 3 2 15 3 =
-    (-27 / 20) := by decide +kernel
+    (-27 / 20) := by
+  exact (constant_2_marking 15 3 0 (by decide +kernel)).trans
+    constant_2_part_15_0
 private theorem constant_2_part_15_4 : planeShiftedConstantPart 3 2 15 4 =
-    (-27 / 20) := by decide +kernel
+    (-27 / 20) := by
+  exact (constant_2_marking 15 4 0 (by decide +kernel)).trans
+    constant_2_part_15_0
 private theorem constant_2_part_15_5 : planeShiftedConstantPart 3 2 15 5 =
-    (-27 / 20) := by decide +kernel
+    (-27 / 20) := by
+  exact (constant_2_marking 15 5 0 (by decide +kernel)).trans
+    constant_2_part_15_0
 
 private theorem constant_2_parts_checked (k : Fin 16) (e : Fin 6) :
     planeShiftedConstantPart 3 2 k e = constant_2_parts k e := by
@@ -1163,54 +2064,122 @@ private def coefficient_2_0_1_parts : Fin 4 → Fin 6 → ℚ :=
     ![0, 0, 0, 0, 0, 0]
   ]
 
+private theorem coefficient_2_0_1_marking (k : Fin 4) (e f : Fin 6)
+    (h : (![.point, .point, .point] : Fin 3 → SurfaceBasisLabel .plane) ∘
+      labelPermutation e =
+      ![.point, .point, .point] ∘ labelPermutation f) :
+    planeEarlierCoefficientPart 3 2 0 1 k e = planeEarlierCoefficientPart 3 2 0 1 k f := by
+  exact planePointCoefficientPart_eq_of_labels 8 4
+    ![.point, .point, .point] (Sum.inr (planeCanonicalQueries 0 1)) k e f h
+
+set_option maxHeartbeats 1000000 in
+-- Kernel replay of one complete finite graph contribution.
+set_option cbv.maxSteps 1000000 in
 private theorem coefficient_2_0_1_part_0_0 : planeEarlierCoefficientPart 3 2 0 1 0 0 =
-    0 := by decide +kernel
+    0 := by
+  rw [← planeEarlierCoefficientPartFast_eq]
+  decide +kernel
 private theorem coefficient_2_0_1_part_0_1 : planeEarlierCoefficientPart 3 2 0 1 0 1 =
-    0 := by decide +kernel
+    0 := by
+  exact (coefficient_2_0_1_marking 0 1 0 (by decide +kernel)).trans
+    coefficient_2_0_1_part_0_0
 private theorem coefficient_2_0_1_part_0_2 : planeEarlierCoefficientPart 3 2 0 1 0 2 =
-    0 := by decide +kernel
+    0 := by
+  exact (coefficient_2_0_1_marking 0 2 0 (by decide +kernel)).trans
+    coefficient_2_0_1_part_0_0
 private theorem coefficient_2_0_1_part_0_3 : planeEarlierCoefficientPart 3 2 0 1 0 3 =
-    0 := by decide +kernel
+    0 := by
+  exact (coefficient_2_0_1_marking 0 3 0 (by decide +kernel)).trans
+    coefficient_2_0_1_part_0_0
 private theorem coefficient_2_0_1_part_0_4 : planeEarlierCoefficientPart 3 2 0 1 0 4 =
-    0 := by decide +kernel
+    0 := by
+  exact (coefficient_2_0_1_marking 0 4 0 (by decide +kernel)).trans
+    coefficient_2_0_1_part_0_0
 private theorem coefficient_2_0_1_part_0_5 : planeEarlierCoefficientPart 3 2 0 1 0 5 =
-    0 := by decide +kernel
+    0 := by
+  exact (coefficient_2_0_1_marking 0 5 0 (by decide +kernel)).trans
+    coefficient_2_0_1_part_0_0
+set_option maxHeartbeats 1000000 in
+-- Kernel replay of one complete finite graph contribution.
+set_option cbv.maxSteps 1000000 in
 private theorem coefficient_2_0_1_part_1_0 : planeEarlierCoefficientPart 3 2 0 1 1 0 =
-    4960 := by decide +kernel
+    4960 := by
+  rw [← planeEarlierCoefficientPartFast_eq]
+  decide +kernel
 private theorem coefficient_2_0_1_part_1_1 : planeEarlierCoefficientPart 3 2 0 1 1 1 =
-    4960 := by decide +kernel
+    4960 := by
+  exact (coefficient_2_0_1_marking 1 1 0 (by decide +kernel)).trans
+    coefficient_2_0_1_part_1_0
 private theorem coefficient_2_0_1_part_1_2 : planeEarlierCoefficientPart 3 2 0 1 1 2 =
-    4960 := by decide +kernel
+    4960 := by
+  exact (coefficient_2_0_1_marking 1 2 0 (by decide +kernel)).trans
+    coefficient_2_0_1_part_1_0
 private theorem coefficient_2_0_1_part_1_3 : planeEarlierCoefficientPart 3 2 0 1 1 3 =
-    4960 := by decide +kernel
+    4960 := by
+  exact (coefficient_2_0_1_marking 1 3 0 (by decide +kernel)).trans
+    coefficient_2_0_1_part_1_0
 private theorem coefficient_2_0_1_part_1_4 : planeEarlierCoefficientPart 3 2 0 1 1 4 =
-    4960 := by decide +kernel
+    4960 := by
+  exact (coefficient_2_0_1_marking 1 4 0 (by decide +kernel)).trans
+    coefficient_2_0_1_part_1_0
 private theorem coefficient_2_0_1_part_1_5 : planeEarlierCoefficientPart 3 2 0 1 1 5 =
-    4960 := by decide +kernel
+    4960 := by
+  exact (coefficient_2_0_1_marking 1 5 0 (by decide +kernel)).trans
+    coefficient_2_0_1_part_1_0
+set_option maxHeartbeats 1000000 in
+-- Kernel replay of one complete finite graph contribution.
+set_option cbv.maxSteps 1000000 in
 private theorem coefficient_2_0_1_part_2_0 : planeEarlierCoefficientPart 3 2 0 1 2 0 =
-    0 := by decide +kernel
+    0 := by
+  rw [← planeEarlierCoefficientPartFast_eq]
+  decide +kernel
 private theorem coefficient_2_0_1_part_2_1 : planeEarlierCoefficientPart 3 2 0 1 2 1 =
-    0 := by decide +kernel
+    0 := by
+  exact (coefficient_2_0_1_marking 2 1 0 (by decide +kernel)).trans
+    coefficient_2_0_1_part_2_0
 private theorem coefficient_2_0_1_part_2_2 : planeEarlierCoefficientPart 3 2 0 1 2 2 =
-    0 := by decide +kernel
+    0 := by
+  exact (coefficient_2_0_1_marking 2 2 0 (by decide +kernel)).trans
+    coefficient_2_0_1_part_2_0
 private theorem coefficient_2_0_1_part_2_3 : planeEarlierCoefficientPart 3 2 0 1 2 3 =
-    0 := by decide +kernel
+    0 := by
+  exact (coefficient_2_0_1_marking 2 3 0 (by decide +kernel)).trans
+    coefficient_2_0_1_part_2_0
 private theorem coefficient_2_0_1_part_2_4 : planeEarlierCoefficientPart 3 2 0 1 2 4 =
-    0 := by decide +kernel
+    0 := by
+  exact (coefficient_2_0_1_marking 2 4 0 (by decide +kernel)).trans
+    coefficient_2_0_1_part_2_0
 private theorem coefficient_2_0_1_part_2_5 : planeEarlierCoefficientPart 3 2 0 1 2 5 =
-    0 := by decide +kernel
+    0 := by
+  exact (coefficient_2_0_1_marking 2 5 0 (by decide +kernel)).trans
+    coefficient_2_0_1_part_2_0
+set_option maxHeartbeats 1000000 in
+-- Kernel replay of one complete finite graph contribution.
+set_option cbv.maxSteps 1000000 in
 private theorem coefficient_2_0_1_part_3_0 : planeEarlierCoefficientPart 3 2 0 1 3 0 =
-    0 := by decide +kernel
+    0 := by
+  rw [← planeEarlierCoefficientPartFast_eq]
+  decide +kernel
 private theorem coefficient_2_0_1_part_3_1 : planeEarlierCoefficientPart 3 2 0 1 3 1 =
-    0 := by decide +kernel
+    0 := by
+  exact (coefficient_2_0_1_marking 3 1 0 (by decide +kernel)).trans
+    coefficient_2_0_1_part_3_0
 private theorem coefficient_2_0_1_part_3_2 : planeEarlierCoefficientPart 3 2 0 1 3 2 =
-    0 := by decide +kernel
+    0 := by
+  exact (coefficient_2_0_1_marking 3 2 0 (by decide +kernel)).trans
+    coefficient_2_0_1_part_3_0
 private theorem coefficient_2_0_1_part_3_3 : planeEarlierCoefficientPart 3 2 0 1 3 3 =
-    0 := by decide +kernel
+    0 := by
+  exact (coefficient_2_0_1_marking 3 3 0 (by decide +kernel)).trans
+    coefficient_2_0_1_part_3_0
 private theorem coefficient_2_0_1_part_3_4 : planeEarlierCoefficientPart 3 2 0 1 3 4 =
-    0 := by decide +kernel
+    0 := by
+  exact (coefficient_2_0_1_marking 3 4 0 (by decide +kernel)).trans
+    coefficient_2_0_1_part_3_0
 private theorem coefficient_2_0_1_part_3_5 : planeEarlierCoefficientPart 3 2 0 1 3 5 =
-    0 := by decide +kernel
+    0 := by
+  exact (coefficient_2_0_1_marking 3 5 0 (by decide +kernel)).trans
+    coefficient_2_0_1_part_3_0
 
 private theorem coefficient_2_0_1_parts_checked (k : Fin 4) (e : Fin 6) :
     planeEarlierCoefficientPart 3 2 0 1 k e = coefficient_2_0_1_parts k e := by
